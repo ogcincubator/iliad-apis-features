@@ -19,17 +19,8 @@ $defs:
               - Swarm
               - Few
               x-jsonld-id: http://w3id.org/iliad/jellyfish/property/densityOfJF
+              x-jsonld-type: '@id'
               x-jsonld-base: http://w3id.org/iliad/jellyfish/property/densityOfJF/
-            sampleSizeValue:
-              type: string
-              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/sampleSizeValue
-            speciesScientificName:
-              type: string
-              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/speciesScientificName
-            wormsConcept:
-              type: string
-              pattern: ^https://marinespecies\.org/.*
-              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/wormsConcept
             stingByJF:
               type: string
               x-jsonld-id: http://w3id.org/iliad/jellyfish/property/stingByJF
@@ -37,6 +28,10 @@ $defs:
               type: string
               x-jsonld-id: http://w3id.org/iliad/jellyfish/property/beachedJF
           x-jsonld-id: sosa:hasResult
+        hasFeatureOfInterest:
+          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+          x-jsonld-id: sosa:hasFeatureOfInterest
+          x-jsonld-base: http://w3id.org/iliad/jellyfish/feature/
   OIMObsFeature:
     allOf:
     - $ref: ../oim-obs-cs/schema.yaml#/$defs/OIMObsFeature
@@ -57,11 +52,10 @@ anyOf:
 - $ref: '#/$defs/OIMObsFeature'
 - $ref: '#/$defs/OIMObsCollection'
 x-jsonld-extra-terms:
+  jf-density: http://w3id.org/iliad/jellyfish/property/densityOfJF/
   observedProperty:
     x-jsonld-id: sosa:observedProperty
     x-jsonld-context:
       '@base': http://w3id.org/iliad/jellyfish/property/
-  hasFeatureOfInterest:
-    x-jsonld-id: sosa:hasFeatureOfInterest
-    x-jsonld-context:
-      '@base': http://w3id.org/iliad/jellyfish/feature/
+x-jsonld-prefixes:
+  jf-property: http://w3id.org/iliad/jellyfish/property/

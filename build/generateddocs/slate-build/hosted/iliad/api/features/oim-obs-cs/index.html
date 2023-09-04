@@ -374,6 +374,18 @@ This building block is <strong>valid</strong>
   <span class="na">OIMObsProps</span><span class="pi">:</span>
     <span class="na">allOf</span><span class="pi">:</span>
     <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">../oim-obs/schema.yaml#/$defs/OIMObsProps</span>
+    <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">sampleSizeValue</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://w3id.org/iliad/property/sampleSizeValue</span>
+        <span class="na">speciesScientificName</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://w3id.org/iliad/property/speciesScientificName</span>
+        <span class="na">wormsConcept</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">pattern</span><span class="pi">:</span> <span class="s">^https://marinespecies\.org/.*</span>
+          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://w3id.org/iliad/property/wormsConcept</span>
+          <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
   <span class="na">OIMObsFeature</span><span class="pi">:</span>
     <span class="na">allOf</span><span class="pi">:</span>
     <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">../oim-obs/schema.yaml#/$defs/OIMObsFeature</span>
@@ -393,11 +405,8 @@ This building block is <strong>valid</strong>
 <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/OIMObsProps'</span>
 <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/OIMObsFeature'</span>
 <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/OIMObsCollection'</span>
-<span class="na">x-jsonld-extra-terms</span><span class="pi">:</span>
-  <span class="na">a</span><span class="pi">:</span>
-    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://example.org/my-bb-model/a</span>
-    <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-  <span class="na">b</span><span class="pi">:</span> <span class="s">https://example.org/my-bb-model/b</span>
+<span class="na">x-jsonld-prefixes</span><span class="pi">:</span>
+  <span class="na">iliad</span><span class="pi">:</span> <span class="s">http://w3id.org/iliad/property/</span>
 
 </code></pre></div>
 <blockquote>
@@ -572,6 +581,12 @@ This building block is <strong>valid</strong>
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:label"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@language"</span><span class="w">
     </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"sampleSizeValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iliad:sampleSizeValue"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"speciesScientificName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iliad:speciesScientificName"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"wormsConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iliad:wormsConcept"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@type"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -612,11 +627,6 @@ This building block is <strong>valid</strong>
       </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:coordinates"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"a"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.org/my-bb-model/a"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"b"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.org/my-bb-model/b"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"sosa"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"ssn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/ssn/"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"ssn-system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/"</span><span class="p">,</span><span class="w">
@@ -624,6 +634,7 @@ This building block is <strong>valid</strong>
     </span><span class="nl">"oa"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/oa#"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"rdfs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2000/01/rdf-schema#"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"dct"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/dc/terms/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"iliad"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://w3id.org/iliad/property/"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"@version"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">

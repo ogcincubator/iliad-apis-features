@@ -89,6 +89,7 @@ anyOf:
 - $ref: '#/$defs/OIMObsFeature'
 - $ref: '#/$defs/OIMObsCollection'
 x-jsonld-extra-terms:
+  iliad: http://w3id.org/iliad/property/
   observedProperty:
     x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty
     x-jsonld-context:
@@ -312,6 +313,7 @@ Links to the schema:
       "@container": "@list",
       "@id": "geojson:coordinates"
     },
+    "iliad": "http://w3id.org/iliad/property/",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "ssn-system": "ssn:systems/",

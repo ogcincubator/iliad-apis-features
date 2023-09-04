@@ -7,6 +7,24 @@
       "allOf": [
         {
           "$ref": "../oim-obs/schema.json#/$defs/OIMObsProps"
+        },
+        {
+          "properties": {
+            "sampleSizeValue": {
+              "type": "string",
+              "x-jsonld-id": "http://w3id.org/iliad/property/sampleSizeValue"
+            },
+            "speciesScientificName": {
+              "type": "string",
+              "x-jsonld-id": "http://w3id.org/iliad/property/speciesScientificName"
+            },
+            "wormsConcept": {
+              "type": "string",
+              "pattern": "^https://marinespecies\\.org/.*",
+              "x-jsonld-id": "http://w3id.org/iliad/property/wormsConcept",
+              "x-jsonld-type": "@id"
+            }
+          }
         }
       ]
     },
@@ -57,11 +75,7 @@
       "$ref": "#/$defs/OIMObsCollection"
     }
   ],
-  "x-jsonld-extra-terms": {
-    "a": {
-      "x-jsonld-id": "https://example.org/my-bb-model/a",
-      "x-jsonld-type": "@id"
-    },
-    "b": "https://example.org/my-bb-model/b"
+  "x-jsonld-prefixes": {
+    "iliad": "http://w3id.org/iliad/property/"
   }
 }

@@ -200,6 +200,7 @@
       "@container": "@list",
       "@id": "geojson:coordinates"
     },
+    "iliad": "http://w3id.org/iliad/property/",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "ssn-system": "ssn:systems/",

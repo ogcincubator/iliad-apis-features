@@ -29,6 +29,18 @@ $defs:
   OIMObsProps:
     allOf:
     - $ref: ../oim-obs/schema.yaml#/$defs/OIMObsProps
+    - properties:
+        sampleSizeValue:
+          type: string
+          x-jsonld-id: http://w3id.org/iliad/property/sampleSizeValue
+        speciesScientificName:
+          type: string
+          x-jsonld-id: http://w3id.org/iliad/property/speciesScientificName
+        wormsConcept:
+          type: string
+          pattern: ^https://marinespecies\.org/.*
+          x-jsonld-id: http://w3id.org/iliad/property/wormsConcept
+          x-jsonld-type: '@id'
   OIMObsFeature:
     allOf:
     - $ref: ../oim-obs/schema.yaml#/$defs/OIMObsFeature
@@ -48,11 +60,8 @@ anyOf:
 - $ref: '#/$defs/OIMObsProps'
 - $ref: '#/$defs/OIMObsFeature'
 - $ref: '#/$defs/OIMObsCollection'
-x-jsonld-extra-terms:
-  a:
-    x-jsonld-id: https://example.org/my-bb-model/a
-    x-jsonld-type: '@id'
-  b: https://example.org/my-bb-model/b
+x-jsonld-prefixes:
+  iliad: http://w3id.org/iliad/property/
 
 ```
 
@@ -227,6 +236,12 @@ Links to the schema:
       "@id": "rdfs:label",
       "@container": "@language"
     },
+    "sampleSizeValue": "iliad:sampleSizeValue",
+    "speciesScientificName": "iliad:speciesScientificName",
+    "wormsConcept": {
+      "@id": "iliad:wormsConcept",
+      "@type": "@id"
+    },
     "type": "@type",
     "id": "@id",
     "geometry": {
@@ -267,11 +282,6 @@ Links to the schema:
       "@container": "@list",
       "@id": "geojson:coordinates"
     },
-    "a": {
-      "@id": "https://example.org/my-bb-model/a",
-      "@type": "@id"
-    },
-    "b": "https://example.org/my-bb-model/b",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "ssn-system": "ssn:systems/",
@@ -279,6 +289,7 @@ Links to the schema:
     "oa": "http://www.w3.org/ns/oa#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "dct": "http://purl.org/dc/terms/",
+    "iliad": "http://w3id.org/iliad/property/",
     "@version": 1.1
   }
 }
