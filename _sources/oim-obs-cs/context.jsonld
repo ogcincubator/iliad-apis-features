@@ -1,9 +1,11 @@
 {
   "@context": {
-    "a": {
-      "@id": "https://example.org/my-bb-model/a",
+    "iliad": "http://w3id.org/iliad/property/",
+    "sampleSizeValue": "iliad:sampleSizeValue",
+    "speciesScientificName": "iliad:speciesScientificName",
+    "wormsConcept": {
+      "@id": "iliad:wormsConcept",
       "@type": "@id"
-    },
-    "b": "https://example.org/my-bb-model/b"
+    }
   }
 }

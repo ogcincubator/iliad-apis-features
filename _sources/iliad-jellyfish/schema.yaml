@@ -13,17 +13,12 @@ $defs:
             densityOfJF:
               type: string
               enum: [None, Some, Swarm, Few]
-            sampleSizeValue:
-              type: string
-            speciesScientificName:
-              type: string
-            wormsConcept:
-              type: string
-              pattern: '^https://marinespecies\.org/.*'
             stingByJF:
               type: string
             beachedJF:
               type: string
+        hasFeatureOfInterest:
+          $ref: bblocks://ogc.ogc-utils.iri-or-curie
   OIMObsFeature:
     allOf:
     - $ref: '../oim-obs-cs/schema.yaml#/$defs/OIMObsFeature'

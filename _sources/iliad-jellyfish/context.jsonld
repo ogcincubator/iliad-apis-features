@@ -1,5 +1,8 @@
 {
   "@context": {
+    "jf-property": "http://w3id.org/iliad/jellyfish/property/",
+    "jf-density": "http://w3id.org/iliad/jellyfish/property/densityOfJF/",
+    "@base": "http://w3id.org/iliad/jellyfish/observation/",
     "observedProperty": {
       "@id": "sosa:observedProperty",
       "@context": {
@@ -9,13 +12,16 @@
     "hasResult": {
       "@id": "sosa:hasResult",
       "@context": {
-        "@vocab": "http://w3id.org/iliad/jellyfish/property/",
         "densityOfJF": {
           "@id": "http://w3id.org/iliad/jellyfish/property/densityOfJF",
+          "@type": "@id",
           "@context": {
             "@base": "http://w3id.org/iliad/jellyfish/property/densityOfJF/"
           }
-        }
+        },
+        "quantityOfJF": "jf-property:quantityOfJF",
+        "stingByJF": "jf-property:stingByJF",
+        "beachedJF": "jf-property:beachedJF"
       }
     },
     "hasFeatureOfInterest": {
