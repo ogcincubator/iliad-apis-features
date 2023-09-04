@@ -34,13 +34,13 @@ $defs:
           x-jsonld-vocab: http://w3id.org/iliad/jellyfish/property/
   OIMObsFeature:
     allOf:
-    - $ref: ../oim-obs-cs/schema.yaml#/$defs/OIMObsProps
+    - $ref: ../oim-obs-cs/schema.yaml#/$defs/OIMObsFeature
     - properties:
         properties:
           $ref: '#/$defs/OIMObsProps'
   OIMObsCollection:
     allOf:
-    - $ref: ../oim-obs-cs/schema.yaml#/$defs/OIMObsProps
+    - $ref: ../oim-obs-cs/schema.yaml#/$defs/OIMObsCollection
     - properties:
         features:
           type: array
