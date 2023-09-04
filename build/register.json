@@ -26,24 +26,24 @@
     "itemIdentifier": "ogc.hosted.iliad.api.features.oim-obs",
     "shaclRules": [],
     "schema": {
-      "application/yaml": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml",
-      "application/json": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/annotated/hosted/iliad/api/features/oim-obs/schema.json"
+      "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml",
+      "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.json"
     },
-    "ldContext": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
-    "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/_sources/oim-obs/",
+    "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
+    "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/",
     "validationPassed": true,
     "documentation": {
       "markdown": {
         "mediatype": "text/markdown",
-        "url": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs/index.md"
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs/index.md"
       },
       "json-full": {
         "mediatype": "application/json",
-        "url": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs/index.json"
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs/index.json"
       },
       "slate": {
         "mediatype": "text/html",
-        "url": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/generateddocs/slate-build/hosted/iliad/api/features/oim-obs/"
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/oim-obs/"
       }
     }
   },
@@ -77,24 +77,24 @@
       "ogc.hosted.iliad.api.features.oim-obs"
     ],
     "schema": {
-      "application/yaml": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml",
-      "application/json": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.json"
+      "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml",
+      "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.json"
     },
-    "ldContext": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld",
-    "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/_sources/oim-obs-cs/",
+    "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld",
+    "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/",
     "validationPassed": true,
     "documentation": {
       "markdown": {
         "mediatype": "text/markdown",
-        "url": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs-cs/index.md"
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs-cs/index.md"
       },
       "json-full": {
         "mediatype": "application/json",
-        "url": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs-cs/index.json"
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs-cs/index.json"
       },
       "slate": {
         "mediatype": "text/html",
-        "url": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/generateddocs/slate-build/hosted/iliad/api/features/oim-obs-cs/"
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/oim-obs-cs/"
       }
     }
   },
@@ -130,25 +130,25 @@
       "ogc.hosted.iliad.api.features.oim-obs-cs"
     ],
     "schema": {
-      "application/yaml": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema.yaml",
-      "application/json": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema.json"
+      "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema.yaml",
+      "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema.json"
     },
-    "ldContext": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld",
-    "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/_sources/iliad-jellyfish/",
+    "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld",
+    "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/",
     "validationPassed": false,
     "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/iliad-jellyfish/",
     "documentation": {
       "markdown": {
         "mediatype": "text/markdown",
-        "url": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish/index.md"
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish/index.md"
       },
       "json-full": {
         "mediatype": "application/json",
-        "url": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/generateddocs/json-full/hosted/iliad/api/features/iliad-jellyfish/index.json"
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/iliad-jellyfish/index.json"
       },
       "slate": {
         "mediatype": "text/html",
-        "url": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/generateddocs/slate-build/hosted/iliad/api/features/iliad-jellyfish/"
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/iliad-jellyfish/"
       }
     }
   }

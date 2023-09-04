@@ -84,7 +84,7 @@ Currently this is a stub
       "beachedJF": "1"
     }
   },
-  "@context": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld"
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld"
 }
 ```
 
@@ -164,8 +164,8 @@ x-jsonld-extra-terms:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema.yaml)
+* YAML version: [schema.yaml](https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema.json)
+* JSON version: [schema.json](https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema.yaml)
 
 
 # JSON-LD Context
@@ -299,7 +299,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld)
+[context.jsonld](https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld)
 
 ## Sources
 

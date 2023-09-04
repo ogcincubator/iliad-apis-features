@@ -27,5 +27,5 @@
       "beachedJF": "1"
     }
   },
-  "@context": "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/master/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld"
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld"
 }
