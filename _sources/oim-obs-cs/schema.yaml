@@ -1,0 +1,26 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+description: 'Schemas for Ocean Information Model Observations'
+comment: This is a stub for now - with simple proxies for each object where schemas can be specialised.
+$defs:
+  OIM-CS-ObsProps:
+    allOf:
+    - $ref: ../oim-obs/schema.json
+  OIM-CS-ObsFeature:
+    allOf:
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observation/schema.json
+    - properties:
+        properties:
+          $ref: '#/$defs/OIM-CS-ObsProps'
+  OIM-CS-ObsCollection:
+    allOf:
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observationCollection/schema.json
+    - properties:
+      features:
+        type: array
+        items:
+          allOf:
+            - $ref: '#/$defs/OIM-CS-ObsFeature'
+anyOf:
+- $ref: '#/$defs/OIMObsProps'
+- $ref: '#/$defs/OIMObsFeature'
+- $ref: '#/$defs/OIMObsCollection'

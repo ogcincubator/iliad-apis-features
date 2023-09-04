@@ -1,0 +1,25 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+description: 'Schemas for Observations'
+$defs:
+  OIMObsProps:
+    allOf:
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/properties/observation/schema.json
+  OIMObsFeature:
+    allOf:
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observation/schema.json
+    - properties:
+        properties:
+          $ref: '#/$defs/OIMObsProps'
+  OIMObsCollection:
+    allOf:
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observationCollection/schema.json
+    - properties:
+      features:
+        type: array
+        items:
+          allOf:
+            - $ref: '#/$defs/OIMObsFeature'
+anyOf:
+- $ref: '#/$defs/OIMObsProps'
+- $ref: '#/$defs/OIMObsFeature'
+- $ref: '#/$defs/OIMObsCollection'

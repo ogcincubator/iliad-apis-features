@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "observedProperty": {
+          "@id": "sosa:observedProperty",
+          "@context": {
+            "@base": "http://example.com/iliad-data-access/meta-model/observable-properties/",
+            "id": "@id",
+            "label": {
+              "@id": "rdfs:label",
+              "@container": "@language"
+            }
+          }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Observations - ILIAD Jellyfish Pilot for Citizen Science",
+  "abstract": "Defines a project profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model",
+  "status": "under-development",
+  "dateTimeAddition": "2023-04-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2023-04-05",
+  "link": "https://github.com/opengeospatial/bblock-template",
+  "sources": [
+    {
+      "title": "Reference to ILIAD",
+      "link": "https://example.com/sources/1"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": ["iliad", "oim", "sosa", "ditto", "citizen-science", "project"]
+}

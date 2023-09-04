@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "observedProperty": {
+      "@id": "sosa:observedProperty",
+      "@context": {
+        "@base": "http://example.com/iliad-data-access/meta-model/observable-properties/",
+        "id": "@id",
+        "label": {
+          "@id": "rdfs:label",
+          "@container": "@language"
+        }
+      }
+    }
+  }
+}
