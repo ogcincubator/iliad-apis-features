@@ -5,7 +5,7 @@
     "observedProperty": {
       "@id": "sosa:observedProperty",
       "@context": {
-        "@base": "http://example.com/iliad-data-access/meta-model/observable-properties/",
+        "@base": "http://w3id.org/iliad/jellyfish/property/",
         "id": "@id",
         "label": {
           "@id": "rdfs:label",
