@@ -13,7 +13,8 @@
               "type": "object",
               "properties": {
                 "quantityOfJF": {
-                  "type": "integer"
+                  "type": "integer",
+                  "x-jsonld-id": "http://w3id.org/iliad/jellyfish/property/quantityOfJF"
                 },
                 "densityOfJF": {
                   "type": "string",
@@ -27,24 +28,28 @@
                   "x-jsonld-base": "http://w3id.org/iliad/jellyfish/property/densityOfJF/"
                 },
                 "sampleSizeValue": {
-                  "type": "string"
+                  "type": "string",
+                  "x-jsonld-id": "http://w3id.org/iliad/jellyfish/property/sampleSizeValue"
                 },
                 "speciesScientificName": {
-                  "type": "string"
+                  "type": "string",
+                  "x-jsonld-id": "http://w3id.org/iliad/jellyfish/property/speciesScientificName"
                 },
                 "wormsConcept": {
                   "type": "string",
-                  "pattern": "^https://marinespecies\\.org/.*"
+                  "pattern": "^https://marinespecies\\.org/.*",
+                  "x-jsonld-id": "http://w3id.org/iliad/jellyfish/property/wormsConcept"
                 },
                 "stingByJF": {
-                  "type": "string"
+                  "type": "string",
+                  "x-jsonld-id": "http://w3id.org/iliad/jellyfish/property/stingByJF"
                 },
                 "beachedJF": {
-                  "type": "string"
+                  "type": "string",
+                  "x-jsonld-id": "http://w3id.org/iliad/jellyfish/property/beachedJF"
                 }
               },
-              "x-jsonld-id": "sosa:hasResult",
-              "x-jsonld-vocab": "http://w3id.org/iliad/jellyfish/property/"
+              "x-jsonld-id": "sosa:hasResult"
             }
           }
         }

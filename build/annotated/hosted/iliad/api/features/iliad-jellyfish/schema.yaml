@@ -10,6 +10,7 @@ $defs:
           properties:
             quantityOfJF:
               type: integer
+              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/quantityOfJF
             densityOfJF:
               type: string
               enum:
@@ -21,17 +22,21 @@ $defs:
               x-jsonld-base: http://w3id.org/iliad/jellyfish/property/densityOfJF/
             sampleSizeValue:
               type: string
+              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/sampleSizeValue
             speciesScientificName:
               type: string
+              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/speciesScientificName
             wormsConcept:
               type: string
               pattern: ^https://marinespecies\.org/.*
+              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/wormsConcept
             stingByJF:
               type: string
+              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/stingByJF
             beachedJF:
               type: string
+              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/beachedJF
           x-jsonld-id: sosa:hasResult
-          x-jsonld-vocab: http://w3id.org/iliad/jellyfish/property/
   OIMObsFeature:
     allOf:
     - $ref: ../oim-obs-cs/schema.yaml#/$defs/OIMObsFeature

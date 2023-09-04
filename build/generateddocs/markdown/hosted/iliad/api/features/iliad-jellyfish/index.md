@@ -109,6 +109,7 @@ $defs:
           properties:
             quantityOfJF:
               type: integer
+              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/quantityOfJF
             densityOfJF:
               type: string
               enum:
@@ -120,17 +121,21 @@ $defs:
               x-jsonld-base: http://w3id.org/iliad/jellyfish/property/densityOfJF/
             sampleSizeValue:
               type: string
+              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/sampleSizeValue
             speciesScientificName:
               type: string
+              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/speciesScientificName
             wormsConcept:
               type: string
               pattern: ^https://marinespecies\.org/.*
+              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/wormsConcept
             stingByJF:
               type: string
+              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/stingByJF
             beachedJF:
               type: string
+              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/beachedJF
           x-jsonld-id: sosa:hasResult
-          x-jsonld-vocab: http://w3id.org/iliad/jellyfish/property/
   OIMObsFeature:
     allOf:
     - $ref: ../oim-obs-cs/schema.yaml#/$defs/OIMObsFeature
@@ -190,16 +195,19 @@ Links to the schema:
     },
     "hasResult": {
       "@id": "sosa:hasResult",
-      "@vocab": "http://w3id.org/iliad/jellyfish/property/",
       "@context": {
+        "quantityOfJF": "http://w3id.org/iliad/jellyfish/property/quantityOfJF",
         "densityOfJF": {
           "@id": "http://w3id.org/iliad/jellyfish/property/densityOfJF",
           "@context": {
-            "@base": {
-              "@id": "http://w3id.org/iliad/jellyfish/property/densityOfJF/"
-            }
+            "@base": "http://w3id.org/iliad/jellyfish/property/densityOfJF/"
           }
-        }
+        },
+        "sampleSizeValue": "http://w3id.org/iliad/jellyfish/property/sampleSizeValue",
+        "speciesScientificName": "http://w3id.org/iliad/jellyfish/property/speciesScientificName",
+        "wormsConcept": "http://w3id.org/iliad/jellyfish/property/wormsConcept",
+        "stingByJF": "http://w3id.org/iliad/jellyfish/property/stingByJF",
+        "beachedJF": "http://w3id.org/iliad/jellyfish/property/beachedJF"
       }
     },
     "hasSimpleResult": "sosa:hasSimpleResult",
@@ -287,11 +295,52 @@ Links to the schema:
       "@id": "sosa:hasMember",
       "@container": "@set",
       "@context": {
+        "properties": {
+          "@id": "@nest",
+          "@context": {
+            "hasResult": "sosa:hasResult",
+            "features": "sosa:hasMember",
+            "properties": "@nest"
+          }
+        },
         "features": {
           "@container": "@set",
           "@id": "geojson:features"
         },
-        "hasResult": "sosa:hasResult"
+        "Observation": "sosa:Observation",
+        "Sample": "sosa:Sample",
+        "observedProperty": "sosa:observedProperty",
+        "phenomenonTime": "sosa:phenomenonTime",
+        "hasResult": "sosa:hasResult",
+        "isResultOf": "sosa:isResultOf",
+        "hasSimpleResult": "sosa:hasSimpleResult",
+        "resultTime": "sosa:resultTime",
+        "isHostedBy": "sosa:isHostedBy",
+        "isProxyFor": "ssn:isProxyFor",
+        "wasOriginatedBy": "ssn:wasOriginatedBy",
+        "detects": "ssn:detects",
+        "hasProperty": "ssn:hasProperty",
+        "isPropertyOf": "ssn:isPropertyOf",
+        "forProperty": "ssn:forProperty",
+        "implements": "ssn:implements",
+        "implementedBy": "ssn:implementedBy",
+        "hasInput": "ssn:hasInput",
+        "hasOutput": "ssn:hasOutput",
+        "hasSubSystem": "ssn:hasSubSystem",
+        "deployedSystem": "ssn:deployedSystem",
+        "hasDeployment": "ssn:hasDeployment",
+        "deployedOnPlatform": "ssn:deployedOnPlatform",
+        "inDeployment": "ssn:inDeployment",
+        "inCondition": "ssn:systems/inCondition",
+        "hasSystemCapability": "ssn:systems/hasSystemCapability",
+        "hasSystemProperty": "ssn:systems/hasSystemProperty",
+        "hasOperatingRange": "ssn:systems/hasOperatingRange",
+        "hasOperatingProperty": "ssn:systems/hasOperatingProperty",
+        "hasSurvivalRange": "ssn:systems/hasSurvivalRange",
+        "hasSurvivalProperty": "ssn:systems/hasSurvivalProperty",
+        "qualityOfObservation": "ssn:systems/qualityOfObservation",
+        "hasMember": "sosa:hasMember",
+        "featureType": "@type"
       }
     },
     "properties": {
@@ -334,9 +383,7 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id",
           "@context": {
-            "@base": {
-              "@id": "http://www.iana.org/assignments/relation/"
-            }
+            "@base": "http://www.iana.org/assignments/relation/"
           }
         },
         "type": "dct:type",
