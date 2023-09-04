@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Schemas for Ocean Information Model Observations",
+  "$defs": {
+    "OIMObsProps": {
+      "allOf": [
+        {
+          "$ref": "../oim-obs-cs/schema.yaml#/$defs/OIMObsProps"
+        },
+        {
+          "properties": {
+            "hasResult": {
+              "type": "object",
+              "properties": {
+                "quantityOfJF": {
+                  "type": "integer"
+                },
+                "densityOfJF": {
+                  "type": "string",
+                  "enum": [
+                    "None",
+                    "Some",
+                    "Swarm",
+                    "Few"
+                  ],
+                  "x-jsonld-id": "http://w3id.org/iliad/jellyfish/property/densityOfJF",
+                  "x-jsonld-base": "http://w3id.org/iliad/jellyfish/property/densityOfJF/"
+                },
+                "sampleSizeValue": {
+                  "type": "string"
+                },
+                "speciesScientificName": {
+                  "type": "string"
+                },
+                "wormsConcept": {
+                  "type": "string",
+                  "pattern": "^https://marinespecies\\.org/.*"
+                },
+                "stingByJF": {
+                  "type": "string"
+                },
+                "beachedJF": {
+                  "type": "string"
+                }
+              },
+              "x-jsonld-id": "sosa:hasResult",
+              "x-jsonld-vocab": "http://w3id.org/iliad/jellyfish/property/"
+            }
+          }
+        }
+      ]
+    },
+    "OIMObsFeature": {
+      "allOf": [
+        {
+          "$ref": "../oim-obs-cs/schema.yaml#/$defs/OIMObsProps"
+        },
+        {
+          "properties": {
+            "properties": {
+              "$ref": "#/$defs/OIMObsProps"
+            }
+          }
+        }
+      ]
+    },
+    "OIMObsCollection": {
+      "allOf": [
+        {
+          "$ref": "../oim-obs-cs/schema.yaml#/$defs/OIMObsProps"
+        },
+        {
+          "properties": {
+            "features": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/OIMObsFeature"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "anyOf": [
+    {
+      "$ref": "#/$defs/OIMObsProps"
+    },
+    {
+      "$ref": "#/$defs/OIMObsFeature"
+    },
+    {
+      "$ref": "#/$defs/OIMObsCollection"
+    }
+  ],
+  "x-jsonld-extra-terms": {
+    "observedProperty": {
+      "x-jsonld-id": "sosa:observedProperty",
+      "x-jsonld-context": {
+        "@base": "http://w3id.org/iliad/jellyfish/property/"
+      }
+    },
+    "hasFeatureOfInterest": {
+      "x-jsonld-id": "sosa:hasFeatureOfInterest",
+      "x-jsonld-context": {
+        "@base": "http://w3id.org/iliad/jellyfish/feature/"
+      }
+    }
+  }
+}

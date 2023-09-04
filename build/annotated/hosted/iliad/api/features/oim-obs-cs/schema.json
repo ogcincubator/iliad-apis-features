@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Schemas for Ocean Information Model Observations",
+  "comment": "This is a stub for now - with simple proxies for each object where schemas can be specialised.",
+  "$defs": {
+    "OIMObsProps": {
+      "allOf": [
+        {
+          "$ref": "../oim-obs/schema.yaml#/$defs/OIMObsProps"
+        }
+      ]
+    },
+    "OIMObsFeature": {
+      "allOf": [
+        {
+          "$ref": "../oim-obs/schema.yaml#/$defs/OIMObsFeature"
+        },
+        {
+          "properties": {
+            "properties": {
+              "$ref": "#/$defs/OIMObsProps"
+            }
+          }
+        }
+      ]
+    },
+    "OIMObsCollection": {
+      "allOf": [
+        {
+          "$ref": "../oim-obs/schema.yaml#/$defs/OIMObsCollection"
+        },
+        {
+          "properties": {
+            "features": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/OIMObsFeature"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "anyOf": [
+    {
+      "$ref": "#/$defs/OIMObsProps"
+    },
+    {
+      "$ref": "#/$defs/OIMObsFeature"
+    },
+    {
+      "$ref": "#/$defs/OIMObsCollection"
+    }
+  ],
+  "x-jsonld-extra-terms": {
+    "a": {
+      "x-jsonld-id": "https://example.org/my-bb-model/a",
+      "x-jsonld-type": "@id"
+    },
+    "b": "https://example.org/my-bb-model/b"
+  }
+}

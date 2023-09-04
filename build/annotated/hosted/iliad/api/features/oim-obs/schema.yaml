@@ -1,0 +1,40 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Schemas for Observations
+$defs:
+  OIMObsProps:
+    allOf:
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/properties/observation/schema.json
+    - properties:
+        label:
+          oneOf:
+          - type: string
+          - type: object
+          x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label
+          x-jsonld-container: '@language'
+  OIMObsFeature:
+    allOf:
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observation/schema.json
+    - properties:
+        properties:
+          $ref: '#/$defs/OIMObsProps'
+  OIMObsCollection:
+    allOf:
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observationCollection/schema.json
+    - properties:
+        features:
+          type: array
+          items:
+            allOf:
+            - $ref: '#/$defs/OIMObsFeature'
+anyOf:
+- $ref: '#/$defs/OIMObsProps'
+- $ref: '#/$defs/OIMObsFeature'
+- $ref: '#/$defs/OIMObsCollection'
+x-jsonld-extra-terms:
+  observedProperty:
+    x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty
+    x-jsonld-context:
+      '@base': http://w3id.org/iliad/jellyfish/property/
+x-jsonld-prefixes:
+  sosa: http://www.w3.org/ns/sosa/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#

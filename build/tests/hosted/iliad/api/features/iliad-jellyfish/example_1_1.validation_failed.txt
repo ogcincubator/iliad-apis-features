@@ -1,0 +1,68 @@
+=== Files ===
+Using example_1_1.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+*Empty* output Turtle example_1_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: {'@id': '1-18-527-Phyllorhiza punctata', 'type': 'Feature', 'featureType': 'sosa:Observation', 'geometry': {'type': 'Point', 'coordinates': [31.80691, 34.634776]}, 'properties': {'label': {'en': 'Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata'}, 'phenomenonTime': '2011-07-01T09:00:00', 'resultTime': '2011-07-01T09:00:00', 'observedProperty': 'jellyFishAbundanceProperty', 'hasFeatureOfInterest': '1-18', 'hasResult': {'densityOfJF': 'Some', 'quantityOfJF': 50, 'sampleSizeValue': '10-30', 'speciesScientificName': 'Phyllorhiza punctata', 'wormsConcept': 'https://marinespecies.org/aphia.php?p=taxdetails&id=135298', 'stingByJF': 'Unspecified', 'beachedJF': '1'}}} is not valid under any of the given schemas
+
+Failed validating 'anyOf' in schema:
+    {'$defs': {'OIMObsCollection': {'allOf': [{'$ref': '../oim-obs-cs/schema.yaml#/$defs/OIMObsProps'},
+                                              {'properties': {'features': {'items': {'allOf': [{'$ref': '#/$defs/OIMObsFeature'}]},
+                                                                           'type': 'array'}}}]},
+               'OIMObsFeature': {'allOf': [{'$ref': '../oim-obs-cs/schema.yaml#/$defs/OIMObsProps'},
+                                           {'properties': {'properties': {'$ref': '#/$defs/OIMObsProps'}}}]},
+               'OIMObsProps': {'allOf': [{'$ref': '../oim-obs-cs/schema.yaml#/$defs/OIMObsProps'},
+                                         {'properties': {'hasResult': {'properties': {'beachedJF': {'type': 'string'},
+                                                                                      'densityOfJF': {'enum': ['None',
+                                                                                                               'Some',
+                                                                                                               'Swarm',
+                                                                                                               'Few'],
+                                                                                                      'type': 'string',
+                                                                                                      'x-jsonld-base': 'http://w3id.org/iliad/jellyfish/property/densityOfJF/',
+                                                                                                      'x-jsonld-id': 'http://w3id.org/iliad/jellyfish/property/densityOfJF'},
+                                                                                      'quantityOfJF': {'type': 'integer'},
+                                                                                      'sampleSizeValue': {'type': 'string'},
+                                                                                      'speciesScientificName': {'type': 'string'},
+                                                                                      'stingByJF': {'type': 'string'},
+                                                                                      'wormsConcept': {'pattern': '^https://marinespecies\\.org/.*',
+                                                                                                       'type': 'string'}},
+                                                                       'type': 'object',
+                                                                       'x-jsonld-id': 'sosa:hasResult',
+                                                                       'x-jsonld-vocab': 'http://w3id.org/iliad/jellyfish/property/'}}}]}},
+     '$schema': 'https://json-schema.org/draft/2020-12/schema',
+     'anyOf': [{'$ref': '#/$defs/OIMObsProps'},
+               {'$ref': '#/$defs/OIMObsFeature'},
+               {'$ref': '#/$defs/OIMObsCollection'}],
+     'description': 'Schemas for Ocean Information Model Observations',
+     'x-jsonld-extra-terms': {'hasFeatureOfInterest': {'x-jsonld-context': {'@base': 'http://w3id.org/iliad/jellyfish/feature/'},
+                                                       'x-jsonld-id': 'sosa:hasFeatureOfInterest'},
+                              'observedProperty': {'x-jsonld-context': {'@base': 'http://w3id.org/iliad/jellyfish/property/'},
+                                                   'x-jsonld-id': 'sosa:observedProperty'}}}
+
+On instance:
+    {'@id': '1-18-527-Phyllorhiza punctata',
+     'featureType': 'sosa:Observation',
+     'geometry': {'coordinates': [31.80691, 34.634776], 'type': 'Point'},
+     'properties': {'hasFeatureOfInterest': '1-18',
+                    'hasResult': {'beachedJF': '1',
+                                  'densityOfJF': 'Some',
+                                  'quantityOfJF': 50,
+                                  'sampleSizeValue': '10-30',
+                                  'speciesScientificName': 'Phyllorhiza '
+                                                           'punctata',
+                                  'stingByJF': 'Unspecified',
+                                  'wormsConcept': 'https://marinespecies.org/aphia.php?p=taxdetails&id=135298'},
+                    'label': {'en': 'Jelly fish observation #1 location '
+                                    'id: 18 sensor: 527 species: '
+                                    'Phyllorhiza punctata'},
+                    'observedProperty': 'jellyFishAbundanceProperty',
+                    'phenomenonTime': '2011-07-01T09:00:00',
+                    'resultTime': '2011-07-01T09:00:00'},
+     'type': 'Feature'}
+=== End JSON Schema ===
+
