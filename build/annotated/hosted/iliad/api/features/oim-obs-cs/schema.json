@@ -6,14 +6,14 @@
     "OIMObsProps": {
       "allOf": [
         {
-          "$ref": "../oim-obs/schema.yaml#/$defs/OIMObsProps"
+          "$ref": "../oim-obs/schema.json#/$defs/OIMObsProps"
         }
       ]
     },
     "OIMObsFeature": {
       "allOf": [
         {
-          "$ref": "../oim-obs/schema.yaml#/$defs/OIMObsFeature"
+          "$ref": "../oim-obs/schema.json#/$defs/OIMObsFeature"
         },
         {
           "properties": {
@@ -27,7 +27,7 @@
     "OIMObsCollection": {
       "allOf": [
         {
-          "$ref": "../oim-obs/schema.yaml#/$defs/OIMObsCollection"
+          "$ref": "../oim-obs/schema.json#/$defs/OIMObsCollection"
         },
         {
           "properties": {
