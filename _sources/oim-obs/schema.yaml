@@ -4,6 +4,11 @@ $defs:
   OIMObsProps:
     allOf:
     - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/properties/observation/schema.json
+    - properties:
+        label:
+          oneOf:
+            - type: string
+            - type: object
   OIMObsFeature:
     allOf:
     - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observation/schema.json
@@ -14,11 +19,11 @@ $defs:
     allOf:
     - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observationCollection/schema.json
     - properties:
-      features:
-        type: array
-        items:
-          allOf:
-            - $ref: '#/$defs/OIMObsFeature'
+        features:
+          type: array
+          items:
+            allOf:
+              - $ref: '#/$defs/OIMObsFeature'
 anyOf:
 - $ref: '#/$defs/OIMObsProps'
 - $ref: '#/$defs/OIMObsFeature'

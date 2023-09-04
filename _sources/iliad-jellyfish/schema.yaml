@@ -1,25 +1,44 @@
 "$schema": https://json-schema.org/draft/2020-12/schema
 description: 'Schemas for Ocean Information Model Observations'
-comment: This is a stub for now - with simple proxies for each object where schemas can be specialised.
 $defs:
-  OIM-CS-ObsProps:
+  OIMObsProps:
     allOf:
-    - $ref: ../oim-obs/schema.json
-  OIM-CS-ObsFeature:
+    - $ref: '../oim-obs-cs/schema.yaml#/$defs/OIMObsProps'
+    - properties:
+        hasResult:
+          type: object
+          properties:
+            quantityOfJF:
+              type: integer
+            densityOfJF:
+              type: string
+              enum: [None, Some, Swarm, Few]
+            sampleSizeValue:
+              type: string
+            speciesScientificName:
+              type: string
+            wormsConcept:
+              type: string
+              pattern: '^https://marinespecies\.org/.*'
+            stingByJF:
+              type: string
+            beachedJF:
+              type: string
+  OIMObsFeature:
     allOf:
-    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observation/schema.json
+    - $ref: '../oim-obs-cs/schema.yaml#/$defs/OIMObsProps'
     - properties:
         properties:
-          $ref: '#/$defs/OIM-CS-ObsProps'
-  OIM-CS-ObsCollection:
+          $ref: '#/$defs/OIMObsProps'
+  OIMObsCollection:
     allOf:
-    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observationCollection/schema.json
+    - $ref: '../oim-obs-cs/schema.yaml#/$defs/OIMObsProps'
     - properties:
-      features:
-        type: array
-        items:
-          allOf:
-            - $ref: '#/$defs/OIM-CS-ObsFeature'
+        features:
+          type: array
+          items:
+            allOf:
+              - $ref: '#/$defs/OIMObsFeature'
 anyOf:
 - $ref: '#/$defs/OIMObsProps'
 - $ref: '#/$defs/OIMObsFeature'

@@ -2,24 +2,24 @@
 description: 'Schemas for Ocean Information Model Observations'
 comment: This is a stub for now - with simple proxies for each object where schemas can be specialised.
 $defs:
-  OIM-CS-ObsProps:
+  OIMObsProps:
     allOf:
-    - $ref: ../oim-obs/schema.json
-  OIM-CS-ObsFeature:
+    - $ref: '../oim-obs/schema.yaml#/$defs/OIMObsProps'
+  OIMObsFeature:
     allOf:
-    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observation/schema.json
+    - $ref: '../oim-obs/schema.yaml#/$defs/OIMObsFeature'
     - properties:
         properties:
-          $ref: '#/$defs/OIM-CS-ObsProps'
-  OIM-CS-ObsCollection:
+          $ref: '#/$defs/OIMObsProps'
+  OIMObsCollection:
     allOf:
-    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observationCollection/schema.json
+    - $ref: '../oim-obs/schema.yaml#/$defs/OIMObsCollection'
     - properties:
-      features:
-        type: array
-        items:
-          allOf:
-            - $ref: '#/$defs/OIM-CS-ObsFeature'
+        features:
+          type: array
+          items:
+            allOf:
+              - $ref: '#/$defs/OIMObsFeature'
 anyOf:
 - $ref: '#/$defs/OIMObsProps'
 - $ref: '#/$defs/OIMObsFeature'

@@ -5,13 +5,12 @@
     "observedProperty": {
       "@id": "sosa:observedProperty",
       "@context": {
-        "@base": "http://w3id.org/iliad/jellyfish/property/",
-        "id": "@id",
-        "label": {
-          "@id": "rdfs:label",
-          "@container": "@language"
-        }
+        "@base": "http://w3id.org/iliad/jellyfish/property/"
       }
+    },
+    "label": {
+      "@id": "rdfs:label",
+      "@container": "@language"
     }
   }
 }

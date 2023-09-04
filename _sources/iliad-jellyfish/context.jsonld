@@ -1,14 +1,28 @@
 {
   "@context": {
     "observedProperty": {
-          "@id": "sosa:observedProperty",
+      "@id": "sosa:observedProperty",
+      "@context": {
+        "@base": "http://w3id.org/iliad/jellyfish/property/"
+      }
+    },
+    "hasResult": {
+      "@id": "sosa:hasResult",
+      "@vocab": "http://w3id.org/iliad/jellyfish/property/",
+      "@context": {
+        "densityOfJF": {
+          "@id": "http://w3id.org/iliad/jellyfish/property/densityOfJF",
           "@context": {
-            "@base": "http://example.com/iliad-data-access/meta-model/observable-properties/",
-            "id": "@id",
-            "label": {
-              "@id": "rdfs:label",
-              "@container": "@language"
-            }
+            "@base": "http://w3id.org/iliad/jellyfish/property/densityOfJF/"
           }
+        }
+      }
+    },
+    "hasFeatureOfInterest": {
+      "@id": "sosa:hasFeatureOfInterest",
+      "@context": {
+        "@base": "http://w3id.org/iliad/jellyfish/feature/"
+      }
+    }
   }
 }

@@ -1,4 +1,6 @@
-- title: Oceans Information Model examples
-  content: |-
-    TBD - see specific sub-profile for examples.
+- title: Example of Jellyfish abundance observation
+  base-uri: http://w3id.org/iliad/jellyfish/observation/
+  snippets:
+    - language: json
+      ref: example.json
 

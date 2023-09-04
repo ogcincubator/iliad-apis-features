@@ -1,20 +1,30 @@
 {
-  "name": "Observations - ILIAD Jellyfish Pilot for Citizen Science",
-  "abstract": "Defines a project profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model",
-  "status": "under-development",
-  "dateTimeAddition": "2023-04-05T00:00:00Z",
-  "itemClass": "schema",
-  "register": "iliad-apis",
-  "version": "0.1",
-  "dateOfLastChange": "2023-04-05",
-  "link": "https://github.com/opengeospatial/bblock-template",
-  "sources": [
-    {
-      "title": "Reference to ILIAD",
-      "link": "https://example.com/sources/1"
+  "@id": "1-18-527-Phyllorhiza punctata",
+  "type": "Feature",
+  "featureType": "sosa:Observation",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      31.806910,
+      34.634776
+    ]
+  },
+  "properties": {
+    "label": {
+      "en": "Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"
+    },
+    "phenomenonTime": "2011-07-01T09:00:00",
+    "resultTime": "2011-07-01T09:00:00",
+    "observedProperty": "jellyFishAbundanceProperty",
+    "hasFeatureOfInterest": "1-18",
+    "hasResult": {
+      "densityOfJF": "Some",
+      "quantityOfJF": 50,
+      "sampleSizeValue": "10-30",
+      "speciesScientificName": "Phyllorhiza punctata",
+      "wormsConcept": "https://marinespecies.org/aphia.php?p=taxdetails&id=135298",
+      "stingByJF": "Unspecified",
+      "beachedJF": "1"
     }
-  ],
-  "maturity": "development",
-  "scope": "unstable",
-  "tags": ["iliad", "oim", "sosa", "ditto", "citizen-science", "project"]
+  }
 }
