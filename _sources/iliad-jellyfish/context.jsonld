@@ -8,8 +8,8 @@
     },
     "hasResult": {
       "@id": "sosa:hasResult",
-      "@vocab": "http://w3id.org/iliad/jellyfish/property/",
       "@context": {
+        "@vocab": "http://w3id.org/iliad/jellyfish/property/",
         "densityOfJF": {
           "@id": "http://w3id.org/iliad/jellyfish/property/densityOfJF",
           "@context": {
