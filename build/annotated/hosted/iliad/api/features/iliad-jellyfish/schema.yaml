@@ -55,6 +55,7 @@ x-jsonld-extra-terms:
   jf-density: http://w3id.org/iliad/jellyfish/property/densityOfJF/
   observedProperty:
     x-jsonld-id: sosa:observedProperty
+    x-jsonld-type: '@id'
     x-jsonld-context:
       '@base': http://w3id.org/iliad/jellyfish/property/
 x-jsonld-prefixes:
