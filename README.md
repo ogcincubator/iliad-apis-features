@@ -2,6 +2,8 @@
 
 Profiles of the OGC API Features to support interoperability in the ILIAD Digital Twin of the Ocean context.
 
+The compiled (ready to use) elements and documentation are available here: (https://ogcincubator.github.io/iliad-apis-features/)
+
 These profiles demonstrate a scalable and extensible approach to creating different levels of interoperability for different sub-domains. 
 
 The core of this profile is the SOSA component of the Oceans Information Model using a standardised JSON schema, JSON-LD context and SHACL rules regarding disposition of metadata across ObservationCollections and individual observations.
