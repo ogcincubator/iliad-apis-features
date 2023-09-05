@@ -110,7 +110,7 @@ Currently this is a stub
             ns1:sampleSizeValue "10-30" ;
             ns1:speciesScientificName "Phyllorhiza punctata" ;
             ns1:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
-    sosa:observedProperty "jellyFishAbundanceProperty" ;
+    sosa:observedProperty jf-property:jellyFishAbundanceProperty ;
     sosa:phenomenonTime "2011-07-01T09:00:00" ;
     sosa:resultTime "2011-07-01T09:00:00" ;
     geojson:geometry [ a geojson:Point ;
@@ -207,7 +207,13 @@ Links to the schema:
         "@base": "http://w3id.org/iliad/jellyfish/feature/"
       }
     },
-    "observedProperty": "sosa:observedProperty",
+    "observedProperty": {
+      "@id": "sosa:observedProperty",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://w3id.org/iliad/jellyfish/property/"
+      }
+    },
     "usedProcedure": {
       "@id": "sosa:usedProcedure",
       "@type": "@id"
@@ -319,6 +325,7 @@ Links to the schema:
         "properties": {
           "@id": "@nest",
           "@context": {
+            "observedProperty": "sosa:observedProperty",
             "hasResult": "sosa:hasResult",
             "features": "sosa:hasMember",
             "properties": "@nest"
@@ -375,6 +382,7 @@ Links to the schema:
           "@id": "sosa:hasFeatureOfInterest",
           "@type": "@id"
         },
+        "observedProperty": "sosa:observedProperty",
         "hasResult": "sosa:hasResult",
         "features": "sosa:hasMember",
         "properties": "@nest"

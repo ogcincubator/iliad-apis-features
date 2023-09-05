@@ -50,6 +50,11 @@ $defs:
     - properties:
         properties:
           $ref: '#/$defs/OIMObsProps'
+        observedProperty:
+          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+          x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty
+          x-jsonld-type: '@id'
+          x-jsonld-base: http://w3id.org/iliad/jellyfish/property/
   OIMObsCollection:
     allOf:
     - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observationCollection/schema.json
@@ -65,11 +70,6 @@ anyOf:
 - $ref: '#/$defs/OIMObsCollection'
 x-jsonld-extra-terms:
   iliad: http://w3id.org/iliad/property/
-  observedProperty:
-    x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty
-    x-jsonld-type: '@id'
-    x-jsonld-context:
-      '@base': http://w3id.org/iliad/jellyfish/property/
 x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   rdfs: http://www.w3.org/2000/01/rdf-schema#
@@ -93,7 +93,13 @@ Links to the schema:
       "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
     },
-    "observedProperty": "sosa:observedProperty",
+    "observedProperty": {
+      "@id": "sosa:observedProperty",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://w3id.org/iliad/jellyfish/property/"
+      }
+    },
     "usedProcedure": {
       "@id": "sosa:usedProcedure",
       "@type": "@id"
@@ -191,6 +197,7 @@ Links to the schema:
         "properties": {
           "@id": "@nest",
           "@context": {
+            "observedProperty": "sosa:observedProperty",
             "features": "sosa:hasMember",
             "properties": "@nest"
           }
@@ -238,6 +245,7 @@ Links to the schema:
     "properties": {
       "@id": "@nest",
       "@context": {
+        "observedProperty": "sosa:observedProperty",
         "features": "sosa:hasMember",
         "properties": "@nest"
       }

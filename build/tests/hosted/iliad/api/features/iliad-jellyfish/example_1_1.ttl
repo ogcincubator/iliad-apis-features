@@ -18,7 +18,7 @@
             ns1:sampleSizeValue "10-30" ;
             ns1:speciesScientificName "Phyllorhiza punctata" ;
             ns1:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
-    sosa:observedProperty "jellyFishAbundanceProperty" ;
+    sosa:observedProperty jf-property:jellyFishAbundanceProperty ;
     sosa:phenomenonTime "2011-07-01T09:00:00" ;
     sosa:resultTime "2011-07-01T09:00:00" ;
     geojson:geometry [ a geojson:Point ;

@@ -6,7 +6,13 @@
       "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
     },
-    "observedProperty": "sosa:observedProperty",
+    "observedProperty": {
+      "@id": "sosa:observedProperty",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://w3id.org/iliad/jellyfish/property/"
+      }
+    },
     "usedProcedure": {
       "@id": "sosa:usedProcedure",
       "@type": "@id"
@@ -104,6 +110,7 @@
         "properties": {
           "@id": "@nest",
           "@context": {
+            "observedProperty": "sosa:observedProperty",
             "features": "sosa:hasMember",
             "properties": "@nest"
           }
@@ -151,6 +158,7 @@
     "properties": {
       "@id": "@nest",
       "@context": {
+        "observedProperty": "sosa:observedProperty",
         "features": "sosa:hasMember",
         "properties": "@nest"
       }

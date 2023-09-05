@@ -97,6 +97,9 @@
       ],
       "itemIdentifier": "ogc.hosted.iliad.api.features.oim-obs",
       "shaclRules": [],
+      "dependsOn": [
+        "ogc.ogc-utils.iri-or-curie"
+      ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml",
         "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.json"

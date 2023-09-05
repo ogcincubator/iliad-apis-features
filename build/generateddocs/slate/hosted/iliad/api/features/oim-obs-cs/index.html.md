@@ -109,7 +109,13 @@ Links to the schema:
       "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
     },
-    "observedProperty": "sosa:observedProperty",
+    "observedProperty": {
+      "@id": "sosa:observedProperty",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://w3id.org/iliad/jellyfish/property/"
+      }
+    },
     "usedProcedure": {
       "@id": "sosa:usedProcedure",
       "@type": "@id"
@@ -207,6 +213,7 @@ Links to the schema:
         "properties": {
           "@id": "@nest",
           "@context": {
+            "observedProperty": "sosa:observedProperty",
             "features": "sosa:hasMember",
             "properties": "@nest"
           }
@@ -254,6 +261,7 @@ Links to the schema:
     "properties": {
       "@id": "@nest",
       "@context": {
+        "observedProperty": "sosa:observedProperty",
         "features": "sosa:hasMember",
         "properties": "@nest"
       }
