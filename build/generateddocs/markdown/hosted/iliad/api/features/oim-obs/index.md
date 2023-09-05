@@ -67,6 +67,7 @@ x-jsonld-extra-terms:
   iliad: http://w3id.org/iliad/property/
   observedProperty:
     x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty
+    x-jsonld-type: '@id'
     x-jsonld-context:
       '@base': http://w3id.org/iliad/jellyfish/property/
 x-jsonld-prefixes:
