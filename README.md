@@ -8,6 +8,8 @@ These profiles demonstrate a scalable and extensible approach to creating differ
 
 The core of this profile is the SOSA component of the Oceans Information Model using a standardised JSON schema, JSON-LD context and SHACL rules regarding disposition of metadata across ObservationCollections and individual observations.
 
+![Overview](https://lucid.app/publicSegments/view/bba7b5a1-722d-4046-aad9-08cc87735287/image.png)
+
 # Contents
 
 ## ILIAD Ocean Information Model - Observation Features
