@@ -124,31 +124,19 @@
       "@id": "sosa:hasMember",
       "@container": "@set",
       "@context": {
-        "properties": {
-          "@id": "@nest",
-          "@context": {
-            "observedProperty": "sosa:observedProperty",
-            "hasResult": "sosa:hasResult",
-            "features": "sosa:hasMember",
-            "properties": "@nest"
-          }
-        },
         "features": {
           "@container": "@set",
-          "@id": "geojson:features"
+          "@id": "sosa:hasMember"
         },
-        "Observation": "sosa:Observation",
-        "Sample": "sosa:Sample",
-        "observedProperty": "sosa:observedProperty",
-        "phenomenonTime": "sosa:phenomenonTime",
         "hasFeatureOfInterest": {
           "@id": "sosa:hasFeatureOfInterest",
           "@type": "@id"
         },
+        "observedProperty": "sosa:observedProperty",
         "hasResult": "sosa:hasResult",
+        "Observation": "sosa:Observation",
+        "Sample": "sosa:Sample",
         "isResultOf": "sosa:isResultOf",
-        "hasSimpleResult": "sosa:hasSimpleResult",
-        "resultTime": "sosa:resultTime",
         "isHostedBy": "sosa:isHostedBy",
         "isProxyFor": "ssn:isProxyFor",
         "wasOriginatedBy": "ssn:wasOriginatedBy",
@@ -177,28 +165,16 @@
         "featureType": "@type"
       }
     },
-    "properties": {
-      "@id": "@nest",
-      "@context": {
-        "hasFeatureOfInterest": {
-          "@id": "sosa:hasFeatureOfInterest",
-          "@type": "@id"
-        },
-        "observedProperty": "sosa:observedProperty",
-        "hasResult": "sosa:hasResult",
-        "features": "sosa:hasMember",
-        "properties": "@nest"
-      }
-    },
+    "properties": "@nest",
     "featureType": "@type",
     "label": {
       "@id": "rdfs:label",
       "@container": "@language"
     },
-    "sampleSizeValue": "http://w3id.org/iliad/property/sampleSizeValue",
-    "speciesScientificName": "http://w3id.org/iliad/property/speciesScientificName",
+    "sampleSizeValue": "iliad:sampleSizeValue",
+    "speciesScientificName": "iliad:speciesScientificName",
     "wormsConcept": {
-      "@id": "http://w3id.org/iliad/property/wormsConcept",
+      "@id": "iliad:wormsConcept",
       "@type": "@id"
     },
     "type": "@type",
@@ -241,15 +217,16 @@
       "@container": "@list",
       "@id": "geojson:coordinates"
     },
-    "jf-density": "jf-property:densityOfJF/",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "ssn-system": "ssn:systems/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "iliad": "http://w3id.org/iliad/property/",
+    "jf-property": "http://w3id.org/iliad/jellyfish/property/",
+    "jf-density": "jf-property:densityOfJF/",
     "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "dct": "http://purl.org/dc/terms/",
-    "jf-property": "http://w3id.org/iliad/jellyfish/property/",
     "@version": 1.1
   }
 }

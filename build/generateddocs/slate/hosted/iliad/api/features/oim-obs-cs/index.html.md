@@ -210,26 +210,14 @@ Links to the schema:
       "@id": "sosa:hasMember",
       "@container": "@set",
       "@context": {
-        "properties": {
-          "@id": "@nest",
-          "@context": {
-            "observedProperty": "sosa:observedProperty",
-            "features": "sosa:hasMember",
-            "properties": "@nest"
-          }
-        },
         "features": {
           "@container": "@set",
-          "@id": "geojson:features"
+          "@id": "sosa:hasMember"
         },
+        "observedProperty": "sosa:observedProperty",
         "Observation": "sosa:Observation",
         "Sample": "sosa:Sample",
-        "observedProperty": "sosa:observedProperty",
-        "phenomenonTime": "sosa:phenomenonTime",
-        "hasResult": "sosa:hasResult",
         "isResultOf": "sosa:isResultOf",
-        "hasSimpleResult": "sosa:hasSimpleResult",
-        "resultTime": "sosa:resultTime",
         "isHostedBy": "sosa:isHostedBy",
         "isProxyFor": "ssn:isProxyFor",
         "wasOriginatedBy": "ssn:wasOriginatedBy",
@@ -258,14 +246,7 @@ Links to the schema:
         "featureType": "@type"
       }
     },
-    "properties": {
-      "@id": "@nest",
-      "@context": {
-        "observedProperty": "sosa:observedProperty",
-        "features": "sosa:hasMember",
-        "properties": "@nest"
-      }
-    },
+    "properties": "@nest",
     "featureType": "@type",
     "label": {
       "@id": "rdfs:label",
@@ -320,11 +301,11 @@ Links to the schema:
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "ssn-system": "ssn:systems/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "iliad": "http://w3id.org/iliad/property/",
     "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "dct": "http://purl.org/dc/terms/",
-    "iliad": "http://w3id.org/iliad/property/",
     "@version": 1.1
   }
 }

@@ -35,8 +35,7 @@ anyOf:
 - $ref: '#/$defs/OIMObsProps'
 - $ref: '#/$defs/OIMObsFeature'
 - $ref: '#/$defs/OIMObsCollection'
-x-jsonld-extra-terms:
-  iliad: http://w3id.org/iliad/property/
 x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   rdfs: http://www.w3.org/2000/01/rdf-schema#
+  iliad: http://w3id.org/iliad/property/

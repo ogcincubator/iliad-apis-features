@@ -91,9 +91,9 @@ Currently this is a stub
 #### ttl
 ```ttl
 @prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix iliad: <http://w3id.org/iliad/property/> .
 @prefix jf-density: <http://w3id.org/iliad/jellyfish/property/densityOfJF/> .
 @prefix jf-property: <http://w3id.org/iliad/jellyfish/property/> .
-@prefix ns1: <http://w3id.org/iliad/property/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
@@ -107,9 +107,9 @@ Currently this is a stub
             jf-property:densityOfJF jf-density:Some ;
             jf-property:quantityOfJF 50 ;
             jf-property:stingByJF "Unspecified" ;
-            ns1:sampleSizeValue "10-30" ;
-            ns1:speciesScientificName "Phyllorhiza punctata" ;
-            ns1:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
+            iliad:sampleSizeValue "10-30" ;
+            iliad:speciesScientificName "Phyllorhiza punctata" ;
+            iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
     sosa:observedProperty jf-property:jellyFishAbundanceProperty ;
     sosa:phenomenonTime "2011-07-01T09:00:00" ;
     sosa:resultTime "2011-07-01T09:00:00" ;
@@ -176,7 +176,6 @@ anyOf:
 - $ref: '#/$defs/OIMObsFeature'
 - $ref: '#/$defs/OIMObsCollection'
 x-jsonld-extra-terms:
-  jf-density: http://w3id.org/iliad/jellyfish/property/densityOfJF/
   observedProperty:
     x-jsonld-id: sosa:observedProperty
     x-jsonld-type: '@id'
@@ -184,6 +183,7 @@ x-jsonld-extra-terms:
       '@base': http://w3id.org/iliad/jellyfish/property/
 x-jsonld-prefixes:
   jf-property: http://w3id.org/iliad/jellyfish/property/
+  jf-density: http://w3id.org/iliad/jellyfish/property/densityOfJF/
 
 ```
 
@@ -322,31 +322,19 @@ Links to the schema:
       "@id": "sosa:hasMember",
       "@container": "@set",
       "@context": {
-        "properties": {
-          "@id": "@nest",
-          "@context": {
-            "observedProperty": "sosa:observedProperty",
-            "hasResult": "sosa:hasResult",
-            "features": "sosa:hasMember",
-            "properties": "@nest"
-          }
-        },
         "features": {
           "@container": "@set",
-          "@id": "geojson:features"
+          "@id": "sosa:hasMember"
         },
-        "Observation": "sosa:Observation",
-        "Sample": "sosa:Sample",
-        "observedProperty": "sosa:observedProperty",
-        "phenomenonTime": "sosa:phenomenonTime",
         "hasFeatureOfInterest": {
           "@id": "sosa:hasFeatureOfInterest",
           "@type": "@id"
         },
+        "observedProperty": "sosa:observedProperty",
         "hasResult": "sosa:hasResult",
+        "Observation": "sosa:Observation",
+        "Sample": "sosa:Sample",
         "isResultOf": "sosa:isResultOf",
-        "hasSimpleResult": "sosa:hasSimpleResult",
-        "resultTime": "sosa:resultTime",
         "isHostedBy": "sosa:isHostedBy",
         "isProxyFor": "ssn:isProxyFor",
         "wasOriginatedBy": "ssn:wasOriginatedBy",
@@ -375,28 +363,16 @@ Links to the schema:
         "featureType": "@type"
       }
     },
-    "properties": {
-      "@id": "@nest",
-      "@context": {
-        "hasFeatureOfInterest": {
-          "@id": "sosa:hasFeatureOfInterest",
-          "@type": "@id"
-        },
-        "observedProperty": "sosa:observedProperty",
-        "hasResult": "sosa:hasResult",
-        "features": "sosa:hasMember",
-        "properties": "@nest"
-      }
-    },
+    "properties": "@nest",
     "featureType": "@type",
     "label": {
       "@id": "rdfs:label",
       "@container": "@language"
     },
-    "sampleSizeValue": "http://w3id.org/iliad/property/sampleSizeValue",
-    "speciesScientificName": "http://w3id.org/iliad/property/speciesScientificName",
+    "sampleSizeValue": "iliad:sampleSizeValue",
+    "speciesScientificName": "iliad:speciesScientificName",
     "wormsConcept": {
-      "@id": "http://w3id.org/iliad/property/wormsConcept",
+      "@id": "iliad:wormsConcept",
       "@type": "@id"
     },
     "type": "@type",
@@ -439,15 +415,16 @@ Links to the schema:
       "@container": "@list",
       "@id": "geojson:coordinates"
     },
-    "jf-density": "jf-property:densityOfJF/",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "ssn-system": "ssn:systems/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "iliad": "http://w3id.org/iliad/property/",
+    "jf-property": "http://w3id.org/iliad/jellyfish/property/",
+    "jf-density": "jf-property:densityOfJF/",
     "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "dct": "http://purl.org/dc/terms/",
-    "jf-property": "http://w3id.org/iliad/jellyfish/property/",
     "@version": 1.1
   }
 }

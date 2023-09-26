@@ -96,7 +96,6 @@
     }
   ],
   "x-jsonld-extra-terms": {
-    "jf-density": "http://w3id.org/iliad/jellyfish/property/densityOfJF/",
     "observedProperty": {
       "x-jsonld-id": "sosa:observedProperty",
       "x-jsonld-type": "@id",
@@ -106,6 +105,7 @@
     }
   },
   "x-jsonld-prefixes": {
-    "jf-property": "http://w3id.org/iliad/jellyfish/property/"
+    "jf-property": "http://w3id.org/iliad/jellyfish/property/",
+    "jf-density": "http://w3id.org/iliad/jellyfish/property/densityOfJF/"
   }
 }
