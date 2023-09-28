@@ -34,6 +34,16 @@ Applies the ILIAD Citizen Science Profile to the Citizen Science general profile
 Defines specific procedures and observable properties required.
 
 ## Oilspills Pilot
+(TBD)
+
+# Deployment and testing
+
+The interoperability specifications defined here will be tested and deployed as working examples and tested in context of alternative representations using other OGC APIs according to the following approach:
+
+![](
+https://lucid.app/publicSegments/view/77d9155c-1f93-4698-8168-94ad8adf8761/image.png)
+
+Note the common semantic model target achieved using the JSON-LD binding, inherited from the [ogcapi-sosa building block](https://github.com/opengeospatial/ogcapi-sosa)
 
 # How to use
 
