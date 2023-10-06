@@ -2,3 +2,8 @@ identifier-prefix: ogc.hosted.iliad.api.features.
 
 schema-mapping:
   default: https://opengeospatial.github.io/bblocks/annotated-schemas/
+
+imports:
+  - default
+  - https://opengeospatial.github.io/ogcapi-sosa/build/register.json
+  
