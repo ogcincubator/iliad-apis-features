@@ -1,6 +1,7 @@
 {
   "imports": [
-    "https://blocks.ogc.org/register.json"
+    "https://blocks.ogc.org/register.json",
+    "https://opengeospatial.github.io/ogcapi-sosa/build/register.json"
   ],
   "bblocks": [
     {
@@ -30,7 +31,10 @@
       "itemIdentifier": "ogc.hosted.iliad.api.features.oim-obs",
       "shaclRules": [],
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.unstable.sosa.features.observation",
+        "ogc.unstable.sosa.properties.observation",
+        "ogc.unstable.sosa.features.observationCollection"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml",
@@ -134,8 +138,8 @@
       "itemIdentifier": "ogc.hosted.iliad.api.features.iliad-jellyfish",
       "shaclRules": [],
       "dependsOn": [
-        "ogc.hosted.iliad.api.features.oim-obs-cs",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.hosted.iliad.api.features.oim-obs-cs"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema.yaml",

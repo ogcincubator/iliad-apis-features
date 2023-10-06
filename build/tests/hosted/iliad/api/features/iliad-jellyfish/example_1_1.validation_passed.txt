@@ -9,3 +9,22 @@ Output Turtle example_1_1.ttl created
 Validation passed
 === End JSON Schema ===
 
+=== SHACL ===
+Using SHACL files for validation:
+ - https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observationCollection/rules.shacl
+ - https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl
+Validation Report
+Conforms: True
+
+Focus nodes:
+ - Shape :testInCollectionOrMember-observedProperty: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <http://example.com/rules#testRequiredProperties>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape :testInCollectionOrMember-foi: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n183ab86afb64492f9a72786392cc1c44b26): *none*
+ - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n183ab86afb64492f9a72786392cc1c44b9): *none*
+ - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n183ab86afb64492f9a72786392cc1c44b14): *none*
+ - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n183ab86afb64492f9a72786392cc1c44b4): *none*
+ - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n183ab86afb64492f9a72786392cc1c44b23): *none*
+
+=== End SHACL ===
+
