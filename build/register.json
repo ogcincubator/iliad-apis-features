@@ -31,10 +31,10 @@
       "itemIdentifier": "ogc.hosted.iliad.api.features.oim-obs",
       "shaclRules": [],
       "dependsOn": [
+        "ogc.unstable.sosa.features.observationCollection",
         "ogc.ogc-utils.iri-or-curie",
-        "ogc.unstable.sosa.features.observation",
         "ogc.unstable.sosa.properties.observation",
-        "ogc.unstable.sosa.features.observationCollection"
+        "ogc.unstable.sosa.features.observation"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml",
