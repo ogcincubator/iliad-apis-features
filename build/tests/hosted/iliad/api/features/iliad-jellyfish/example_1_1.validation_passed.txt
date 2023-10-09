@@ -17,14 +17,14 @@ Validation Report
 Conforms: True
 
 Focus nodes:
- - Shape :testInCollectionOrMember-foi: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
  - Shape :testInCollectionOrMember-observedProperty: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
  - Shape <http://example.com/rules#testRequiredProperties>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
- - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n2430247514a04620afbcc6a415efa78bb14): *none*
- - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n2430247514a04620afbcc6a415efa78bb9): *none*
- - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n2430247514a04620afbcc6a415efa78bb4): *none*
- - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n2430247514a04620afbcc6a415efa78bb23): *none*
- - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n2430247514a04620afbcc6a415efa78bb26): *none*
+ - Shape :testInCollectionOrMember-foi: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n5688ee48ef1146b498fb80dd66c836b8b9): *none*
+ - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n5688ee48ef1146b498fb80dd66c836b8b14): *none*
+ - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n5688ee48ef1146b498fb80dd66c836b8b23): *none*
+ - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n5688ee48ef1146b498fb80dd66c836b8b4): *none*
+ - Shape <http://example.com/rules#testRequiredProperties>/sh:property (path _:n5688ee48ef1146b498fb80dd66c836b8b26): *none*
 
 === End SHACL ===
 

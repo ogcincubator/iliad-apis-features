@@ -322,6 +322,12 @@
                   <li>
                     <a href="#ocean-information-model-observations-profile-for-citizen-science-jellyfish-pilot" class="toc-h2 toc-link" data-title="Ocean Information Model Observations Profile for Citizen Science - Jellyfish Pilot">Ocean Information Model Observations Profile for Citizen Science - Jellyfish Pilot</a>
                   </li>
+                  <li>
+                    <a href="#key-features-of-this-profile" class="toc-h2 toc-link" data-title="Key features of this profile:">Key features of this profile:</a>
+                  </li>
+                  <li>
+                    <a href="#future-work" class="toc-h2 toc-link" data-title="Future work">Future work</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -368,9 +374,37 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
 <h1 id='description'>Description</h1><h2 id='ocean-information-model-observations-profile-for-citizen-science-jellyfish-pilot'>Ocean Information Model Observations Profile for Citizen Science - Jellyfish Pilot</h2>
 <p>This specification defines the specific requirements of the ILIAD Jellyfish Pilot as an implementation of the Oceans Information Model.</p>
 
-<p>Constraints that are not unique to the pilot should be described in one of the &quot;parent&quot; profiles in the chain.</p>
+<p>Constraints that are not unique to the pilot should be described in one of the &quot;parent&quot; profiles in the chain:</p>
 
-<p>Currently this is a stub </p>
+<ul>
+<li><a href="../oim-obs-cs/">OIM Observations for Citizen Science</a></li>
+<li><a href="../oim-obs/">OIM Observations</a></li>
+<li><a href="https://opengeospatial.github.io/ogcapi-sosa/">OGC-API SOSA</a></li>
+</ul>
+<h2 id='key-features-of-this-profile'>Key features of this profile:</h2>
+<ul>
+<li>a schema for the hasResult element of observations</li>
+<li>a JSON-LD context for this result schema</li>
+<li>JSON-LD context elements defining namespaces for values specific to the pilot context:</li>
+</ul>
+
+<p>e.g. 
+<code>&quot;observedProperty&quot;: {
+      &quot;@id&quot;: &quot;sosa:observedProperty&quot;,
+      &quot;@type&quot;: &quot;@id&quot;,
+      &quot;@context&quot;: {
+        &quot;@base&quot;: &quot;http://w3id.org/iliad/jellyfish/property/&quot;
+      }
+    },
+</code></p>
+<h2 id='future-work'>Future work</h2>
+<p>This profile defines Features for use in OGCAPI Features, and will be part of a suite of options bding alternative APIs to the same information model.</p>
+
+<p>The SHACL rules (and any other validators developed) will be tested against the semantic annotations of each alternative to demonstrate (and help develop) these to be consistent, thus achieving <strong>schema-agnostic semantic interoperability</strong>.</p>
+
+<ul>
+<li>see the <a href="https://github.com/ogcincubator/iliad-apis-features/blob/master/README.md">README</a> for more information.</li>
+</ul>
 <h1 id='examples'>Examples</h1><h2 id='example-of-jellyfish-abundance-observation'>Example of Jellyfish abundance observation</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1-18-527-Phyllorhiza_punctata"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
