@@ -5,6 +5,7 @@
   ],
   "bblocks": [
     {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.oim-obs",
       "name": "OIM Observations",
       "abstract": "Defines observations and collections to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model.",
       "status": "under-development",
@@ -28,13 +29,15 @@
         "sosa",
         "ditto"
       ],
-      "itemIdentifier": "ogc.hosted.iliad.api.features.oim-obs",
-      "shaclRules": [],
+      "shaclRules": [
+        "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
+        "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl"
+      ],
       "dependsOn": [
-        "ogc.unstable.sosa.properties.observation",
+        "ogc.unstable.sosa.features.observationCollection",
         "ogc.ogc-utils.iri-or-curie",
         "ogc.unstable.sosa.features.observation",
-        "ogc.unstable.sosa.features.observationCollection"
+        "ogc.unstable.sosa.properties.observation"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml",
@@ -59,6 +62,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.oim-obs-cs",
       "name": "OIM Observations - Citizen Science",
       "abstract": "Defines observations and collections to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model.",
       "status": "under-development",
@@ -82,8 +86,10 @@
         "sosa",
         "ditto"
       ],
-      "itemIdentifier": "ogc.hosted.iliad.api.features.oim-obs-cs",
-      "shaclRules": [],
+      "shaclRules": [
+        "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
+        "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl"
+      ],
       "dependsOn": [
         "ogc.hosted.iliad.api.features.oim-obs"
       ],
@@ -110,6 +116,7 @@
       }
     },
     {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.iliad-jellyfish",
       "name": "Observations - ILIAD Jellyfish Pilot for Citizen Science",
       "abstract": "Defines a project profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model",
       "status": "under-development",
@@ -135,11 +142,13 @@
         "citizen-science",
         "project"
       ],
-      "itemIdentifier": "ogc.hosted.iliad.api.features.iliad-jellyfish",
-      "shaclRules": [],
+      "shaclRules": [
+        "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
+        "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl"
+      ],
       "dependsOn": [
-        "ogc.hosted.iliad.api.features.oim-obs-cs",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.hosted.iliad.api.features.oim-obs-cs"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema.yaml",

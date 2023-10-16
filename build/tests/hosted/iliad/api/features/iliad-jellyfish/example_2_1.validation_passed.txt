@@ -1,15 +1,9 @@
 Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish - Observations - ILIAD Jellyfish Pilot for Citizen Science
-Generated 2023-10-16T19:16:49.637484+00:00
+Generated 2023-10-16T19:16:49.696379+00:00
 === Files ===
-Using example_1_1.json from examples
-JSON-LD context is present - uplifting
-Output JSON-LD example_1_1.jsonld created
-Output Turtle example_1_1.ttl created
+Using example_2_1.ttl from examples
+Output Turtle example_2_1.ttl created
 === End ValidationReportSection.FILES ===
-
-=== JSON Schema ===
-Validation passed
-=== End ValidationReportSection.JSON_SCHEMA ===
 
 === SHACL ===
 Using SHACL files for validation:

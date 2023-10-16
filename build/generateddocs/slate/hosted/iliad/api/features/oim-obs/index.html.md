@@ -215,7 +215,50 @@ Links to the schema:
     "hasSurvivalRange": "ssn:systems/hasSurvivalRange",
     "hasSurvivalProperty": "ssn:systems/hasSurvivalProperty",
     "qualityOfObservation": "ssn:systems/qualityOfObservation",
-    "hasMember": "sosa:hasMember",
+    "hasMember": {
+      "@id": "sosa:hasMember",
+      "@context": {
+        "observedProperty": {
+          "@id": "sosa:observedProperty",
+          "@type": "@id"
+        },
+        "hasMember": {
+          "@id": "sosa:hasMember",
+          "@context": {
+            "hasMember": "sosa:hasMember"
+          }
+        },
+        "Observation": "sosa:Observation",
+        "Sample": "sosa:Sample",
+        "isResultOf": "sosa:isResultOf",
+        "isHostedBy": "sosa:isHostedBy",
+        "isProxyFor": "ssn:isProxyFor",
+        "wasOriginatedBy": "ssn:wasOriginatedBy",
+        "detects": "ssn:detects",
+        "hasProperty": "ssn:hasProperty",
+        "isPropertyOf": "ssn:isPropertyOf",
+        "forProperty": "ssn:forProperty",
+        "implements": "ssn:implements",
+        "implementedBy": "ssn:implementedBy",
+        "hasInput": "ssn:hasInput",
+        "hasOutput": "ssn:hasOutput",
+        "hasSubSystem": "ssn:hasSubSystem",
+        "deployedSystem": "ssn:deployedSystem",
+        "hasDeployment": "ssn:hasDeployment",
+        "deployedOnPlatform": "ssn:deployedOnPlatform",
+        "inDeployment": "ssn:inDeployment",
+        "inCondition": "ssn:systems/inCondition",
+        "hasSystemCapability": "ssn:systems/hasSystemCapability",
+        "hasSystemProperty": "ssn:systems/hasSystemProperty",
+        "hasOperatingRange": "ssn:systems/hasOperatingRange",
+        "hasOperatingProperty": "ssn:systems/hasOperatingProperty",
+        "hasSurvivalRange": "ssn:systems/hasSurvivalRange",
+        "hasSurvivalProperty": "ssn:systems/hasSurvivalProperty",
+        "qualityOfObservation": "ssn:systems/qualityOfObservation",
+        "features": "sosa:hasMember",
+        "featureType": "@type"
+      }
+    },
     "features": {
       "@id": "sosa:hasMember",
       "@container": "@set",
@@ -224,7 +267,10 @@ Links to the schema:
           "@container": "@set",
           "@id": "sosa:hasMember"
         },
-        "observedProperty": "sosa:observedProperty",
+        "observedProperty": {
+          "@id": "sosa:observedProperty",
+          "@type": "@id"
+        },
         "Observation": "sosa:Observation",
         "Sample": "sosa:Sample",
         "isResultOf": "sosa:isResultOf",
@@ -319,6 +365,15 @@ Links to the schema:
 
 You can find the full JSON-LD context here:
 <a href="https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld" target="_blank">https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld</a>
+
+# Validation
+
+## SHACL Shapes
+
+The following SHACL shapes are used for validating this building block:
+
+* [https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl](https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl)
+* [https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl](https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl)
 
 # References
 

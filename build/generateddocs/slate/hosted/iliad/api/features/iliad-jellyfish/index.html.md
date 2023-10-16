@@ -196,6 +196,52 @@ The SHACL rules (and any other validators developed) will be tested against the 
 
 
 
+## Example of Jellyfish abundance observation ontology
+
+This TTL to be replaced by examples from the ontology development cycle.
+
+Note that the structure of a sosa:Observation is still relevant.
+
+
+
+
+```turtle
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix iliad: <http://w3id.org/iliad/property/> .
+@prefix jf-density: <http://w3id.org/iliad/jellyfish/property/densityOfJF/> .
+@prefix jf-property: <http://w3id.org/iliad/jellyfish/property/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,
+        geojson:Feature ;
+    rdfs:label "Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"@en ;
+    sosa:hasFeatureOfInterest <http://w3id.org/iliad/jellyfish/feature/1-18> ;
+    sosa:hasResult [ jf-property:beachedJF "1" ;
+            jf-property:densityOfJF jf-density:Some ;
+            jf-property:quantityOfJF 50 ;
+            jf-property:stingByJF "Unspecified" ;
+            iliad:sampleSizeValue "10-30" ;
+            iliad:speciesScientificName "Phyllorhiza punctata" ;
+            iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
+    sosa:observedProperty jf-property:jellyFishAbundanceProperty ;
+    sosa:phenomenonTime "2011-07-01T09:00:00" ;
+    sosa:resultTime "2011-07-01T09:00:00" ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ] .
+
+
+```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish/example_2_1.ttl">Open in new window</a>
+</blockquote>
+
+
+
 # JSON Schema
 
 ```yaml--schema
@@ -396,7 +442,55 @@ Links to the schema:
     "hasSurvivalRange": "ssn:systems/hasSurvivalRange",
     "hasSurvivalProperty": "ssn:systems/hasSurvivalProperty",
     "qualityOfObservation": "ssn:systems/qualityOfObservation",
-    "hasMember": "sosa:hasMember",
+    "hasMember": {
+      "@id": "sosa:hasMember",
+      "@context": {
+        "hasFeatureOfInterest": {
+          "@id": "sosa:hasFeatureOfInterest",
+          "@type": "@id"
+        },
+        "observedProperty": {
+          "@id": "sosa:observedProperty",
+          "@type": "@id"
+        },
+        "hasMember": {
+          "@id": "sosa:hasMember",
+          "@context": {
+            "hasMember": "sosa:hasMember"
+          }
+        },
+        "hasResult": "sosa:hasResult",
+        "Observation": "sosa:Observation",
+        "Sample": "sosa:Sample",
+        "isResultOf": "sosa:isResultOf",
+        "isHostedBy": "sosa:isHostedBy",
+        "isProxyFor": "ssn:isProxyFor",
+        "wasOriginatedBy": "ssn:wasOriginatedBy",
+        "detects": "ssn:detects",
+        "hasProperty": "ssn:hasProperty",
+        "isPropertyOf": "ssn:isPropertyOf",
+        "forProperty": "ssn:forProperty",
+        "implements": "ssn:implements",
+        "implementedBy": "ssn:implementedBy",
+        "hasInput": "ssn:hasInput",
+        "hasOutput": "ssn:hasOutput",
+        "hasSubSystem": "ssn:hasSubSystem",
+        "deployedSystem": "ssn:deployedSystem",
+        "hasDeployment": "ssn:hasDeployment",
+        "deployedOnPlatform": "ssn:deployedOnPlatform",
+        "inDeployment": "ssn:inDeployment",
+        "inCondition": "ssn:systems/inCondition",
+        "hasSystemCapability": "ssn:systems/hasSystemCapability",
+        "hasSystemProperty": "ssn:systems/hasSystemProperty",
+        "hasOperatingRange": "ssn:systems/hasOperatingRange",
+        "hasOperatingProperty": "ssn:systems/hasOperatingProperty",
+        "hasSurvivalRange": "ssn:systems/hasSurvivalRange",
+        "hasSurvivalProperty": "ssn:systems/hasSurvivalProperty",
+        "qualityOfObservation": "ssn:systems/qualityOfObservation",
+        "features": "sosa:hasMember",
+        "featureType": "@type"
+      }
+    },
     "features": {
       "@id": "sosa:hasMember",
       "@container": "@set",
@@ -409,7 +503,10 @@ Links to the schema:
           "@id": "sosa:hasFeatureOfInterest",
           "@type": "@id"
         },
-        "observedProperty": "sosa:observedProperty",
+        "observedProperty": {
+          "@id": "sosa:observedProperty",
+          "@type": "@id"
+        },
         "hasResult": "sosa:hasResult",
         "Observation": "sosa:Observation",
         "Sample": "sosa:Sample",
@@ -513,6 +610,15 @@ Links to the schema:
 
 You can find the full JSON-LD context here:
 <a href="https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld" target="_blank">https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld</a>
+
+# Validation
+
+## SHACL Shapes
+
+The following SHACL shapes are used for validating this building block:
+
+* [https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl](https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl)
+* [https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl](https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl)
 
 # References
 

@@ -336,6 +336,9 @@
                   <li>
                     <a href="#example-of-jellyfish-abundance-observation" class="toc-h2 toc-link" data-title="Example of Jellyfish abundance observation">Example of Jellyfish abundance observation</a>
                   </li>
+                  <li>
+                    <a href="#example-of-jellyfish-abundance-observation-ontology" class="toc-h2 toc-link" data-title="Example of Jellyfish abundance observation ontology">Example of Jellyfish abundance observation ontology</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -343,6 +346,14 @@
           </li>
           <li>
             <a href="#json-ld-context" class="toc-h1 toc-link" data-title="JSON-LD Context">JSON-LD Context</a>
+          </li>
+          <li>
+            <a href="#validation" class="toc-h1 toc-link" data-title="Validation">Validation</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#shacl-shapes" class="toc-h2 toc-link" data-title="SHACL Shapes">SHACL Shapes</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#references" class="toc-h1 toc-link" data-title="References">References</a>
@@ -509,6 +520,42 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
 <blockquote class="lang-specific turtle">
   <p class="example-links">
     <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish/example_1_1.ttl">Open in new window</a>
+</blockquote>
+<h2 id='example-of-jellyfish-abundance-observation-ontology'>Example of Jellyfish abundance observation ontology</h2>
+<p>This TTL to be replaced by examples from the ontology development cycle.</p>
+
+<p>Note that the structure of a sosa:Observation is still relevant.</p>
+<div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="kd">@prefix</span><span class="w"> </span><span class="nn">geojson:</span><span class="w"> </span><span class="nl">&lt;https://purl.org/geojson/vocab#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">iliad:</span><span class="w"> </span><span class="nl">&lt;http://w3id.org/iliad/property/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">jf-density:</span><span class="w"> </span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/property/densityOfJF/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">jf-property:</span><span class="w"> </span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/property/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">sosa:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/ns/sosa/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">sosa:</span><span class="n">Observation,
+</span><span class="w">        </span><span class="nn">geojson:</span><span class="n">Feature</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">rdfs:</span><span class="n">label</span><span class="w"> </span><span class="s">"Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"</span><span class="na">@en</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">hasFeatureOfInterest</span><span class="w"> </span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/feature/1-18&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">hasResult</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">jf-property:</span><span class="n">beachedJF</span><span class="w"> </span><span class="s">"1"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">jf-property:</span><span class="n">densityOfJF</span><span class="w"> </span><span class="nn">jf-density:</span><span class="n">Some</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">jf-property:</span><span class="n">quantityOfJF</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">jf-property:</span><span class="n">stingByJF</span><span class="w"> </span><span class="s">"Unspecified"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">iliad:</span><span class="n">sampleSizeValue</span><span class="w"> </span><span class="s">"10-30"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">iliad:</span><span class="n">speciesScientificName</span><span class="w"> </span><span class="s">"Phyllorhiza punctata"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">iliad:</span><span class="n">wormsConcept</span><span class="w"> </span><span class="nl">&lt;https://marinespecies.org/aphia.php?p=taxdetails&amp;id=135298&gt;</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">observedProperty</span><span class="w"> </span><span class="nn">jf-property:</span><span class="n">jellyFishAbundanceProperty</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">phenomenonTime</span><span class="w"> </span><span class="s">"2011-07-01T09:00:00"</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">resultTime</span><span class="w"> </span><span class="s">"2011-07-01T09:00:00"</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">geojson:</span><span class="n">geometry</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">geojson:</span><span class="n">Point</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">geojson:</span><span class="n">coordinates</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">3.1</span><span class="mi">80691</span><span class="n">e+01</span><span class="w"> </span><span class="mf">3.4</span><span class="mi">63478</span><span class="n">e+01</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+
+</span></code></pre></div>
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish/example_2_1.ttl">Open in new window</a>
 </blockquote>
 <h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2020-12/schema</span>
 <span class="na">description</span><span class="pi">:</span> <span class="s">Schemas for Ocean Information Model Observations</span>
@@ -705,7 +752,55 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
     </span><span class="nl">"hasSurvivalRange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/hasSurvivalRange"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"hasSurvivalProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/hasSurvivalProperty"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"qualityOfObservation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/qualityOfObservation"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"hasMember"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasMember"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasMember"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasMember"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasFeatureOfInterest"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:observedProperty"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"hasMember"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasMember"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"hasMember"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasMember"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasResult"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Observation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Observation"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Sample"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Sample"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"isResultOf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:isResultOf"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"isHostedBy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:isHostedBy"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"isProxyFor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:isProxyFor"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"wasOriginatedBy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:wasOriginatedBy"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"detects"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:detects"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:hasProperty"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"isPropertyOf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:isPropertyOf"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"forProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:forProperty"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"implements"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:implements"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"implementedBy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:implementedBy"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasInput"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:hasInput"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasOutput"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:hasOutput"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasSubSystem"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:hasSubSystem"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"deployedSystem"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:deployedSystem"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasDeployment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:hasDeployment"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"deployedOnPlatform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:deployedOnPlatform"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"inDeployment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:inDeployment"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"inCondition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/inCondition"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasSystemCapability"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/hasSystemCapability"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasSystemProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/hasSystemProperty"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasOperatingRange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/hasOperatingRange"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasOperatingProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/hasOperatingProperty"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasSurvivalRange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/hasSurvivalRange"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasSurvivalProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/hasSurvivalProperty"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"qualityOfObservation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/qualityOfObservation"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasMember"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@type"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasMember"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="p">,</span><span class="w">
@@ -718,7 +813,10 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
           </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasFeatureOfInterest"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:observedProperty"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:observedProperty"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
         </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasResult"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"Observation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Observation"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"Sample"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Sample"</span><span class="p">,</span><span class="w">
@@ -823,6 +921,13 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
 
 <p>You can find the full JSON-LD context here:
 <a href="https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld" target="_blank">https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld</a></p>
+<h1 id='validation'>Validation</h1><h2 id='shacl-shapes'>SHACL Shapes</h2>
+<p>The following SHACL shapes are used for validating this building block:</p>
+
+<ul>
+<li><a href="https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl">https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl</a></li>
+<li><a href="https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl">https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl</a></li>
+</ul>
 <h1 id='references'>References</h1>
 <ul>
 <li><a href="https://example.com/sources/1">Reference to ILIAD</a></li>
