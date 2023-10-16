@@ -2,5 +2,17 @@
   base-uri: http://w3id.org/iliad/jellyfish/observation/
   snippets:
     - language: json
-      ref: example.json
+      ref: examples/example.json
 
+
+- title: Example of Jellyfish abundance observation ontology
+  content: |
+    This TTL to be replaced by examples from the ontology development cycle.
+
+    Note that the structure of a sosa:Observation is still relevant.
+
+
+  base-uri: http://w3id.org/iliad/jellyfish/observation/
+  snippets:
+    - language: ttl
+      ref: examples/example.ttl
