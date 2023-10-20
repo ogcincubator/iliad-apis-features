@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.hosted.iliad.api.features.oim-obs-cs - OIM Observations - Citizen Science",
+  "bblockName": "OIM Observations - Citizen Science",
+  "bblockId": "ogc.hosted.iliad.api.features.oim-obs-cs",
+  "generated": "2023-10-20T10:53:45.595793+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}
