@@ -1,0 +1,35 @@
+Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish - Observations - ILIAD Jellyfish Pilot for Citizen Science
+Generated 2023-10-20T14:48:51.724639+00:00
+=== Files ===
+Using example_1_1.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+Output Turtle example_1_1.ttl created
+=== End ValidationReportSection.FILES ===
+
+=== JSON Schema ===
+Validation passed
+=== End ValidationReportSection.JSON_SCHEMA ===
+
+=== SHACL ===
+Using SHACL files for validation:
+ - https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl
+ - https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl
+Validation Report
+Conforms: True
+
+Focus nodes:
+ - Shape <http://example.com/rules#testRequiredTime>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape :testInCollectionOrMember-foi: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape :testInCollectionOrMember-observedProperty: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <http://example.com/rules#testFeatureOfInterest>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <http://example.com/rules#testObservedProperty>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <http://example.com/rules#testResult>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <http://example.com/rules#testResult>/sh:property (path _:n517d0595521d46c7a4c01bf133eb7b77b32): *none*
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n517d0595521d46c7a4c01bf133eb7b77b5): *none*
+ - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n517d0595521d46c7a4c01bf133eb7b77b19): *none*
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n517d0595521d46c7a4c01bf133eb7b77b11): *none*
+ - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n517d0595521d46c7a4c01bf133eb7b77b29): *none*
+
+=== End ValidationReportSection.SHACL ===
+
