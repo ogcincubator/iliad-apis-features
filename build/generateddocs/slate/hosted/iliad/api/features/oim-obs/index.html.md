@@ -118,6 +118,9 @@ Links to the schema:
       "@container": "@language"
     },
     "observedProperty": {
+      "@context": {
+        "@base": "http://w3id.org/iliad/jellyfish/property/"
+      },
       "@id": "sosa:observedProperty",
       "@type": "@id"
     },
@@ -218,11 +221,18 @@ Links to the schema:
     "qualityOfObservation": "ssn:systems/qualityOfObservation",
     "hasMember": "sosa:hasMember",
     "features": {
-      "@context": {},
-      "@container": "@set",
-      "@id": "geojson:features"
+      "@context": {
+        "features": "sosa:hasMember"
+      },
+      "@id": "geojson:features",
+      "@container": "@set"
     },
-    "properties": "@nest",
+    "properties": {
+      "@context": {
+        "features": "sosa:hasMember"
+      },
+      "@id": "@nest"
+    },
     "featureType": "@type",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
@@ -260,10 +270,7 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
-    "geometry": {
-      "@context": {},
-      "@id": "geojson:geometry"
-    },
+    "geometry": "geojson:geometry",
     "sosa": "http://www.w3.org/ns/sosa/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "iliad": "http://w3id.org/iliad/property/",
@@ -281,15 +288,6 @@ Links to the schema:
 
 You can find the full JSON-LD context here:
 <a href="https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld" target="_blank">https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld</a>
-
-# Validation
-
-## SHACL Shapes
-
-The following SHACL shapes are used for validating this building block:
-
-* [https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl](https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl)
-* [https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl](https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl)
 
 # References
 

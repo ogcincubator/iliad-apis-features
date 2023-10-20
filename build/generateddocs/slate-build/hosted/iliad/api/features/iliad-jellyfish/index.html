@@ -348,14 +348,6 @@
             <a href="#json-ld-context" class="toc-h1 toc-link" data-title="JSON-LD Context">JSON-LD Context</a>
           </li>
           <li>
-            <a href="#validation" class="toc-h1 toc-link" data-title="Validation">Validation</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#shacl-shapes" class="toc-h2 toc-link" data-title="SHACL Shapes">SHACL Shapes</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
             <a href="#references" class="toc-h1 toc-link" data-title="References">References</a>
           </li>
           <li>
@@ -376,11 +368,11 @@
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
-    <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
+    <a href="http://www.opengis.net/def/status/invalid" target="_blank" data-rainbow-uri>Invalid</a>
 </p>
 
-<aside class="success">
-This building block is <strong><a href="https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/iliad-jellyfish/" target="_blank">valid</a></strong>
+<aside class="warning">
+Validation for this building block has <strong><a href="https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/iliad-jellyfish/" target="_blank">failed</a></strong>
 </aside>
 <h1 id='description'>Description</h1><h2 id='ocean-information-model-observations-profile-for-citizen-science-jellyfish-pilot'>Ocean Information Model Observations Profile for Citizen Science - Jellyfish Pilot</h2>
 <p>This specification defines the specific requirements of the ILIAD Jellyfish Pilot as an implementation of the Oceans Information Model.</p>
@@ -491,6 +483,8 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
 </blockquote>
 <div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="kd">@prefix</span><span class="w"> </span><span class="nn">geojson:</span><span class="w"> </span><span class="nl">&lt;https://purl.org/geojson/vocab#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
 </span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">iliad:</span><span class="w"> </span><span class="nl">&lt;http://w3id.org/iliad/property/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">jf-density:</span><span class="w"> </span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/property/densityOfJF/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">jf-property:</span><span class="w"> </span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/property/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
 </span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
 </span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
 </span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">sosa:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/ns/sosa/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
@@ -499,11 +493,15 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
 </span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">sosa:</span><span class="n">Observation,
 </span><span class="w">        </span><span class="nn">geojson:</span><span class="n">Feature</span><span class="w"> </span><span class="p">;</span><span class="w">
     </span><span class="nn">rdfs:</span><span class="n">label</span><span class="w"> </span><span class="s">"Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"</span><span class="na">@en</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">sosa:</span><span class="n">hasFeatureOfInterest</span><span class="w"> </span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/observation/1-18&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">sosa:</span><span class="n">hasResult</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">iliad:</span><span class="n">sampleSizeValue</span><span class="w"> </span><span class="s">"10-30"</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">hasFeatureOfInterest</span><span class="w"> </span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/feature/1-18&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">hasResult</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">jf-property:</span><span class="n">beachedJF</span><span class="w"> </span><span class="s">"1"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">jf-property:</span><span class="n">densityOfJF</span><span class="w"> </span><span class="nn">jf-density:</span><span class="n">Some</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">jf-property:</span><span class="n">quantityOfJF</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">jf-property:</span><span class="n">stingByJF</span><span class="w"> </span><span class="s">"Unspecified"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">iliad:</span><span class="n">sampleSizeValue</span><span class="w"> </span><span class="s">"10-30"</span><span class="w"> </span><span class="p">;</span><span class="w">
             </span><span class="nn">iliad:</span><span class="n">speciesScientificName</span><span class="w"> </span><span class="s">"Phyllorhiza punctata"</span><span class="w"> </span><span class="p">;</span><span class="w">
             </span><span class="nn">iliad:</span><span class="n">wormsConcept</span><span class="w"> </span><span class="nl">&lt;https://marinespecies.org/aphia.php?p=taxdetails&amp;id=135298&gt;</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">sosa:</span><span class="n">observedProperty</span><span class="w"> </span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/observation/jellyFishAbundanceProperty&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">observedProperty</span><span class="w"> </span><span class="nn">jf-property:</span><span class="n">jellyFishAbundanceProperty</span><span class="w"> </span><span class="p">;</span><span class="w">
     </span><span class="nn">sosa:</span><span class="n">phenomenonTime</span><span class="w"> </span><span class="s">"2011-07-01T09:00:00"</span><span class="w"> </span><span class="p">;</span><span class="w">
     </span><span class="nn">sosa:</span><span class="n">resultTime</span><span class="w"> </span><span class="s">"2011-07-01T09:00:00"</span><span class="w"> </span><span class="p">;</span><span class="w">
     </span><span class="nn">geojson:</span><span class="n">geometry</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">geojson:</span><span class="n">Point</span><span class="w"> </span><span class="p">;</span><span class="w">
@@ -629,10 +627,30 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
   </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:observedProperty"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://w3id.org/iliad/jellyfish/property/"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasResult"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"quantityOfJF"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jf-property:quantityOfJF"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"densityOfJF"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"@base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://w3id.org/iliad/jellyfish/property/densityOfJF/"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jf-property:densityOfJF"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"stingByJF"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jf-property:stingByJF"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"beachedJF"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jf-property:beachedJF"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasResult"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://w3id.org/iliad/jellyfish/feature/"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasFeatureOfInterest"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
@@ -738,11 +756,18 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
     </span><span class="nl">"qualityOfObservation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/qualityOfObservation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"hasMember"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasMember"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:features"</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasMember"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:features"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@nest"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasMember"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@nest"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@type"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"Feature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Feature"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"FeatureCollection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:FeatureCollection"</span><span class="p">,</span><span class="w">
@@ -780,10 +805,7 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
       </span><span class="p">},</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:seeAlso"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:geometry"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:geometry"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"jf-property"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://w3id.org/iliad/jellyfish/property/"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"jf-density"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jf-property:densityOfJF/"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"iliad"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://w3id.org/iliad/property/"</span><span class="p">,</span><span class="w">
@@ -804,13 +826,6 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
 
 <p>You can find the full JSON-LD context here:
 <a href="https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld" target="_blank">https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld</a></p>
-<h1 id='validation'>Validation</h1><h2 id='shacl-shapes'>SHACL Shapes</h2>
-<p>The following SHACL shapes are used for validating this building block:</p>
-
-<ul>
-<li><a href="https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl">https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl</a></li>
-<li><a href="https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl">https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl</a></li>
-</ul>
 <h1 id='references'>References</h1>
 <ul>
 <li><a href="https://example.com/sources/1">Reference to ILIAD</a></li>

@@ -87,6 +87,9 @@ Links to the schema:
       "@container": "@language"
     },
     "observedProperty": {
+      "@context": {
+        "@base": "http://w3id.org/iliad/jellyfish/property/"
+      },
       "@id": "sosa:observedProperty",
       "@type": "@id"
     },
@@ -187,11 +190,18 @@ Links to the schema:
     "qualityOfObservation": "ssn:systems/qualityOfObservation",
     "hasMember": "sosa:hasMember",
     "features": {
-      "@context": {},
-      "@container": "@set",
-      "@id": "geojson:features"
+      "@context": {
+        "features": "sosa:hasMember"
+      },
+      "@id": "geojson:features",
+      "@container": "@set"
     },
-    "properties": "@nest",
+    "properties": {
+      "@context": {
+        "features": "sosa:hasMember"
+      },
+      "@id": "@nest"
+    },
     "featureType": "@type",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
@@ -229,10 +239,7 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
-    "geometry": {
-      "@context": {},
-      "@id": "geojson:geometry"
-    },
+    "geometry": "geojson:geometry",
     "iliad": "http://w3id.org/iliad/property/",
     "sosa": "http://www.w3.org/ns/sosa/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",

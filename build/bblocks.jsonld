@@ -96,15 +96,12 @@
         "sosa",
         "ditto"
       ],
-      "shaclRules": [
-        "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl",
-        "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
-      ],
+      "shaclRules": [],
       "dependsOn": [
         "ogc.unstable.sosa.properties.observation",
-        "ogc.unstable.sosa.features.observationCollection",
+        "ogc.ogc-utils.iri-or-curie",
         "ogc.unstable.sosa.features.observation",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.unstable.sosa.features.observationCollection"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml",
@@ -157,10 +154,7 @@
         "sosa",
         "ditto"
       ],
-      "shaclRules": [
-        "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl",
-        "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
-      ],
+      "shaclRules": [],
       "dependsOn": [
         "ogc.hosted.iliad.api.features.oim-obs"
       ],
@@ -194,7 +188,7 @@
       "itemIdentifier": "ogc.hosted.iliad.api.features.iliad-jellyfish",
       "name": "Observations - ILIAD Jellyfish Pilot for Citizen Science",
       "abstract": "Defines a project profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model",
-      "status": "under-development",
+      "status": "invalid",
       "dateTimeAddition": "2023-04-05T00:00:00Z",
       "itemClass": "schema",
       "register": "iliad-apis",
@@ -217,13 +211,10 @@
         "citizen-science",
         "project"
       ],
-      "shaclRules": [
-        "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl",
-        "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
-      ],
+      "shaclRules": [],
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.hosted.iliad.api.features.oim-obs-cs"
+        "ogc.hosted.iliad.api.features.oim-obs-cs",
+        "ogc.ogc-utils.iri-or-curie"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema.yaml",
@@ -231,7 +222,7 @@
       },
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/",
-      "validationPassed": true,
+      "validationPassed": false,
       "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/iliad-jellyfish/",
       "documentation": {
         "json-full": {
