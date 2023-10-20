@@ -1,6 +1,8 @@
-# OGC API Features Profiles
+# OGC API Profiles for ILIAD
 
-Profiles of the OGC API Features to support interoperability in the ILIAD Digital Twin of the Ocean context.
+This repository defines profiles of the OGC APIs to support interoperability in the ILIAD Digital Twin of the Ocean context. [About Profiles](PROFILES.md) 
+
+The profiles link OGC APIs such as OGC API Features to specific schemas supporting the Oceans Information Model used by ILIAD, and show how these can be used to define specific application profiles.
 
 The compiled (ready to use) elements and documentation are available here: (https://ogcincubator.github.io/iliad-apis-features/)
 
