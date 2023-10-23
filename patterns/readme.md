@@ -80,6 +80,6 @@ The data above can be encoded as shown in https://github.com/ogcincubator/iliad-
     sosa:hasSimpleResult "Unspecified" .
 ```
 
-While this may appear more verbose than the first example, note that each of the member `Observations` of the collection is essentially an `observedProperty`/`result` pair, which couples the definition of the component to the result component directly.
+While this may appear more verbose than the first example, note that each of the member `Observations` of the collection is merely an `observedProperty`/`result` pair, which couples the definition of the component to the result component directly.
 For one of the `observations` additional detail is included regarding the procedure related to the `count` observation. 
 All the other observation properties, including the geometry, are 'inherited' from the collection (a geometry element is required to satisfy GeoJSON requirements, so has a null value here).  
