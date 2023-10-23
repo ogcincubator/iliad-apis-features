@@ -30,14 +30,14 @@
         "ditto"
       ],
       "shaclRules": [
-        "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl",
-        "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
+        "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
+        "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl"
       ],
       "dependsOn": [
         "ogc.unstable.sosa.features.observation",
-        "ogc.unstable.sosa.properties.observation",
         "ogc.ogc-utils.iri-or-curie",
-        "ogc.unstable.sosa.features.observationCollection"
+        "ogc.unstable.sosa.features.observationCollection",
+        "ogc.unstable.sosa.properties.observation"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml",
@@ -87,8 +87,8 @@
         "ditto"
       ],
       "shaclRules": [
-        "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl",
-        "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
+        "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
+        "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl"
       ],
       "dependsOn": [
         "ogc.hosted.iliad.api.features.oim-obs"
@@ -143,8 +143,8 @@
         "project"
       ],
       "shaclRules": [
-        "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl",
-        "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
+        "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
+        "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl"
       ],
       "dependsOn": [
         "ogc.hosted.iliad.api.features.oim-obs-cs",
