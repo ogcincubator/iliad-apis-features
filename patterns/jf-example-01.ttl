@@ -1,0 +1,58 @@
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix iliad: <http://w3id.org/iliad/property/> .
+@prefix jf-density: <http://w3id.org/iliad/jellyfish/property/densityOfJF/> .
+@prefix jf-property: <http://w3id.org/iliad/jellyfish/property/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:ObservationCollection, geojson:FeatureCollection ;
+    rdfs:label "Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"@en ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ;
+            rdfs:comment "geometry is more strictly associated with the Feature Of Interest" ] ;
+    sosa:hasFeatureOfInterest <http://w3id.org/iliad/jellyfish/feature/1-18> ;
+    sosa:phenomenonTime "2011-07-01T09:00:00" ;
+    sosa:resultTime "2011-07-01T09:00:00" ;
+    sosa:madeBySensor <http://w3id.org/iliad/property/sensor/527> ;
+    sosa:hasMember <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata/taxon> ;
+    sosa:hasMember <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata/count> ;
+    sosa:hasMember <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata/density> ;
+    sosa:hasMember <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata/sting> .
+
+<http://w3id.org/iliad/jellyfish/feature/1-18> a geojson:Feature ;
+    rdfs:label "Jelly fish observation #1 location id: 18"@en ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ] .
+
+<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata/taxon> a sosa:Observation, geojson:Feature ;
+    rdfs:label "Jelly fish observation #1 location id: 18 property: taxon"@en ;
+    geojson:geometry [ a geojson:Point ; geojson:coordinates ( ) ;
+            rdfs:comment "geometry value is inherited from the containing collection" ] ;
+    sosa:observedProperty iliad:speciesScientificName ;
+    sosa:hasResult [
+        rdfs:label "Phyllorhiza punctata" ;
+        iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] .
+
+<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata/count> a sosa:Observation, geojson:Feature ;
+    rdfs:label "Jelly fish observation #1 location id: 18 property: count"@en ;
+    geojson:geometry [ a geojson:Point ; geojson:coordinates ( ) ] ;
+    sosa:observedProperty jf-property:quantityOfJF ;
+    sosa:usedProcedure [
+            jf-property:beachedJF "1" ;
+            iliad:sampleSizeValue "10-30" ;
+    ] ;
+    sosa:hasSimpleResult 50 .
+
+<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata/density> a sosa:Observation, geojson:Feature ;
+    rdfs:label "Jelly fish observation #1 location id: 18 property: density"@en ;
+    geojson:geometry [ a geojson:Point ; geojson:coordinates ( ) ] ;
+    sosa:observedProperty jf-property:densityOfJF ;
+    sosa:hasResult jf-density:Some .
+
+<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata/sting> a sosa:Observation, geojson:Feature ;
+    rdfs:label "Jelly fish observation #1 location id: 18 property: sting"@en ;
+    geojson:geometry [ a geojson:Point ; geojson:coordinates ( ) ] ;
+    sosa:observedProperty jf-property:stingByJF ;
+    sosa:hasSimpleResult "Unspecified" .
