@@ -35,6 +35,10 @@ Applies the ILIAD Citizen Science Profile to the Citizen Science general profile
 
 Defines specific procedures and observable properties required.
 
+### Note - this is a "straw man" 
+
+The schema and content of this are based on an draft implementation based on early analysis by PSNC and OGC and will be finalised as pilot design progresses.
+
 ## Oilspills Pilot
 (TBD)
 
