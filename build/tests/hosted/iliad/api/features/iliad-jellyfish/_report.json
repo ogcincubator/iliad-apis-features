@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish - Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "bblockName": "Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "bblockId": "ogc.hosted.iliad.api.features.iliad-jellyfish",
-  "generated": "2023-10-23T05:31:09.275465+00:00",
+  "generated": "2023-10-23T08:05:57.209307+00:00",
   "result": true,
   "items": [
     {
@@ -53,11 +53,11 @@
           {
             "op": "shacl-files",
             "files": [
-              "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
-              "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl"
+              "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl",
+              "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
             ],
             "isError": false,
-            "message": "Using SHACL files for validation:\n - https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl\n - https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl"
+            "message": "Using SHACL files for validation:\n - https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl\n - https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
           },
           {
             "op": "shacl-report",
@@ -77,17 +77,12 @@
                   "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
                 ]
               },
-              "<http://example.com/rules#testObservedProperty>": {
-                "nodes": [
-                  "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
-                ]
-              },
               "<http://example.com/rules#testResult>": {
                 "nodes": [
                   "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
                 ]
               },
-              ":testInCollectionOrMember-foi": {
+              "<http://example.com/rules#testObservedProperty>": {
                 "nodes": [
                   "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
                 ]
@@ -97,29 +92,34 @@
                   "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
                 ]
               },
-              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
-                "nodes": [],
-                "path": "_:n660ee251c9cd4a5b82e8c5f1e7d3c976b5"
-              },
-              "<http://example.com/rules#testObservedProperty>/sh:property": {
-                "nodes": [],
-                "path": "_:n660ee251c9cd4a5b82e8c5f1e7d3c976b19"
-              },
-              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
-                "nodes": [],
-                "path": "_:n660ee251c9cd4a5b82e8c5f1e7d3c976b11"
-              },
-              "<http://example.com/rules#testResult>/sh:property": {
-                "nodes": [],
-                "path": "_:n660ee251c9cd4a5b82e8c5f1e7d3c976b32"
+              ":testInCollectionOrMember-foi": {
+                "nodes": [
+                  "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
+                ]
               },
               "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
                 "nodes": [],
-                "path": "_:n660ee251c9cd4a5b82e8c5f1e7d3c976b29"
+                "path": "_:n09ae652e727c4675b3e35d817bbfd8c0b29"
+              },
+              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
+                "nodes": [],
+                "path": "_:n09ae652e727c4675b3e35d817bbfd8c0b11"
+              },
+              "<http://example.com/rules#testObservedProperty>/sh:property": {
+                "nodes": [],
+                "path": "_:n09ae652e727c4675b3e35d817bbfd8c0b19"
+              },
+              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
+                "nodes": [],
+                "path": "_:n09ae652e727c4675b3e35d817bbfd8c0b5"
+              },
+              "<http://example.com/rules#testResult>/sh:property": {
+                "nodes": [],
+                "path": "_:n09ae652e727c4675b3e35d817bbfd8c0b32"
               }
             },
             "isError": false,
-            "message": "Focus nodes:\n - Shape <http://example.com/rules#testFeatureOfInterest>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape :testInCollectionOrMember-observedProperty: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testObservedProperty>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testResult>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape :testInCollectionOrMember-foi: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testRequiredTime>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n660ee251c9cd4a5b82e8c5f1e7d3c976b5): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n660ee251c9cd4a5b82e8c5f1e7d3c976b19): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n660ee251c9cd4a5b82e8c5f1e7d3c976b11): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:n660ee251c9cd4a5b82e8c5f1e7d3c976b32): *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n660ee251c9cd4a5b82e8c5f1e7d3c976b29): *none*\n"
+            "message": "Focus nodes:\n - Shape <http://example.com/rules#testFeatureOfInterest>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape :testInCollectionOrMember-observedProperty: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testResult>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testObservedProperty>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testRequiredTime>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape :testInCollectionOrMember-foi: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n09ae652e727c4675b3e35d817bbfd8c0b29): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n09ae652e727c4675b3e35d817bbfd8c0b11): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n09ae652e727c4675b3e35d817bbfd8c0b19): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n09ae652e727c4675b3e35d817bbfd8c0b5): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:n09ae652e727c4675b3e35d817bbfd8c0b32): *none*\n"
           }
         ]
       }
@@ -153,11 +153,11 @@
           {
             "op": "shacl-files",
             "files": [
-              "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
-              "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl"
+              "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl",
+              "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
             ],
             "isError": false,
-            "message": "Using SHACL files for validation:\n - https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl\n - https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl"
+            "message": "Using SHACL files for validation:\n - https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl\n - https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
           },
           {
             "op": "shacl-report",
@@ -177,17 +177,12 @@
                   "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
                 ]
               },
-              "<http://example.com/rules#testObservedProperty>": {
-                "nodes": [
-                  "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
-                ]
-              },
               "<http://example.com/rules#testResult>": {
                 "nodes": [
                   "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
                 ]
               },
-              ":testInCollectionOrMember-foi": {
+              "<http://example.com/rules#testObservedProperty>": {
                 "nodes": [
                   "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
                 ]
@@ -197,29 +192,34 @@
                   "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
                 ]
               },
-              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
-                "nodes": [],
-                "path": "_:n660ee251c9cd4a5b82e8c5f1e7d3c976b5"
-              },
-              "<http://example.com/rules#testObservedProperty>/sh:property": {
-                "nodes": [],
-                "path": "_:n660ee251c9cd4a5b82e8c5f1e7d3c976b19"
-              },
-              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
-                "nodes": [],
-                "path": "_:n660ee251c9cd4a5b82e8c5f1e7d3c976b11"
-              },
-              "<http://example.com/rules#testResult>/sh:property": {
-                "nodes": [],
-                "path": "_:n660ee251c9cd4a5b82e8c5f1e7d3c976b32"
+              ":testInCollectionOrMember-foi": {
+                "nodes": [
+                  "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
+                ]
               },
               "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
                 "nodes": [],
-                "path": "_:n660ee251c9cd4a5b82e8c5f1e7d3c976b29"
+                "path": "_:n09ae652e727c4675b3e35d817bbfd8c0b29"
+              },
+              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
+                "nodes": [],
+                "path": "_:n09ae652e727c4675b3e35d817bbfd8c0b11"
+              },
+              "<http://example.com/rules#testObservedProperty>/sh:property": {
+                "nodes": [],
+                "path": "_:n09ae652e727c4675b3e35d817bbfd8c0b19"
+              },
+              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
+                "nodes": [],
+                "path": "_:n09ae652e727c4675b3e35d817bbfd8c0b5"
+              },
+              "<http://example.com/rules#testResult>/sh:property": {
+                "nodes": [],
+                "path": "_:n09ae652e727c4675b3e35d817bbfd8c0b32"
               }
             },
             "isError": false,
-            "message": "Focus nodes:\n - Shape <http://example.com/rules#testFeatureOfInterest>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape :testInCollectionOrMember-observedProperty: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testObservedProperty>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testResult>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape :testInCollectionOrMember-foi: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testRequiredTime>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n660ee251c9cd4a5b82e8c5f1e7d3c976b5): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n660ee251c9cd4a5b82e8c5f1e7d3c976b19): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n660ee251c9cd4a5b82e8c5f1e7d3c976b11): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:n660ee251c9cd4a5b82e8c5f1e7d3c976b32): *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n660ee251c9cd4a5b82e8c5f1e7d3c976b29): *none*\n"
+            "message": "Focus nodes:\n - Shape <http://example.com/rules#testFeatureOfInterest>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape :testInCollectionOrMember-observedProperty: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testResult>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testObservedProperty>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testRequiredTime>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape :testInCollectionOrMember-foi: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n09ae652e727c4675b3e35d817bbfd8c0b29): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n09ae652e727c4675b3e35d817bbfd8c0b11): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n09ae652e727c4675b3e35d817bbfd8c0b19): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n09ae652e727c4675b3e35d817bbfd8c0b5): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:n09ae652e727c4675b3e35d817bbfd8c0b32): *none*\n"
           }
         ]
       }
