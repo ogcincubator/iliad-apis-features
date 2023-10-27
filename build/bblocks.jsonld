@@ -97,14 +97,13 @@
         "ditto"
       ],
       "shaclRules": [
-        "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl",
         "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
       ],
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.unstable.sosa.features.observation",
+        "ogc.unstable.sosa.features.observationCollection",
         "ogc.unstable.sosa.properties.observation",
-        "ogc.unstable.sosa.features.observationCollection"
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.unstable.sosa.features.observation"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml",
@@ -158,7 +157,6 @@
         "ditto"
       ],
       "shaclRules": [
-        "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl",
         "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
       ],
       "dependsOn": [
@@ -218,7 +216,6 @@
         "project"
       ],
       "shaclRules": [
-        "https://opengeospatial.github.io/ogcapi-sosa/_sources/features/observationCollection/rules.shacl",
         "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
       ],
       "dependsOn": [

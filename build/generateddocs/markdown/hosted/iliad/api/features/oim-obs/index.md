@@ -192,7 +192,12 @@ Links to the schema:
     "hasSurvivalRange": "ssn:systems/hasSurvivalRange",
     "hasSurvivalProperty": "ssn:systems/hasSurvivalProperty",
     "qualityOfObservation": "ssn:systems/qualityOfObservation",
-    "hasMember": "sosa:hasMember",
+    "hasMember": {
+      "@context": {
+        "features": "sosa:hasMember"
+      },
+      "@id": "sosa:hasMember"
+    },
     "features": {
       "@context": {
         "features": "sosa:hasMember"
@@ -200,12 +205,7 @@ Links to the schema:
       "@id": "geojson:features",
       "@container": "@set"
     },
-    "properties": {
-      "@context": {
-        "features": "sosa:hasMember"
-      },
-      "@id": "@nest"
-    },
+    "properties": "@nest",
     "featureType": "@type",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
