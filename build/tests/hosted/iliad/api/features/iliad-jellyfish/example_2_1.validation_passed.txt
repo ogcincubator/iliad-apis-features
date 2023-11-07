@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish - Observations - ILIAD Jellyfish Pilot for Citizen Science
-Generated 2023-11-07T12:51:40.024058+00:00
+Generated 2023-11-07T14:51:08.922438+00:00
 === Files ===
 Using example_2_1.ttl from examples
 Output Turtle example_2_1.ttl created
@@ -12,15 +12,15 @@ Validation Report
 Conforms: True
 
 Focus nodes:
- - Shape <http://example.com/rules#testObservedProperty>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
  - Shape <http://example.com/rules#testRequiredTime>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
- - Shape <http://example.com/rules#testResult>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
  - Shape <http://example.com/rules#testFeatureOfInterest>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
- - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n93e60520df1c4782917c4bb3b2f2afbbb29): *none*
- - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n93e60520df1c4782917c4bb3b2f2afbbb19): *none*
- - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n93e60520df1c4782917c4bb3b2f2afbbb5): *none*
- - Shape <http://example.com/rules#testResult>/sh:property (path _:n93e60520df1c4782917c4bb3b2f2afbbb32): *none*
- - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n93e60520df1c4782917c4bb3b2f2afbbb11): *none*
+ - Shape <http://example.com/rules#testResult>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <http://example.com/rules#testObservedProperty>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:nd4b07da50dd349deb915d909a062092fb11): *none*
+ - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:nd4b07da50dd349deb915d909a062092fb19): *none*
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:nd4b07da50dd349deb915d909a062092fb5): *none*
+ - Shape <http://example.com/rules#testResult>/sh:property (path _:nd4b07da50dd349deb915d909a062092fb32): *none*
+ - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:nd4b07da50dd349deb915d909a062092fb29): *none*
 
 === End SHACL ===
 
