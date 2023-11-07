@@ -5,7 +5,7 @@
 
 Defines a project profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Invalid
 
 ## Description
 

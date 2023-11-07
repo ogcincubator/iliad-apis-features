@@ -1,0 +1,13 @@
+Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish - Observations - ILIAD Jellyfish Pilot for Citizen Science
+Generated 2023-11-07T09:21:13.492487+00:00
+=== Files ===
+Using example_2_1.ttl from examples
+Output Turtle example_2_1.ttl created
+=== End Files ===
+
+=== SHACL ===
+
+** Validation error **
+Error retrieving https://opengeospatial.github.io/github/workspace/_sources/properties/observation/rules.shacl: HTTP Error 404: Not Found
+=== End SHACL ===
+
