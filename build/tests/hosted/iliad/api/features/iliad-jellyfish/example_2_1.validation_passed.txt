@@ -1,0 +1,26 @@
+Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish - Observations - ILIAD Jellyfish Pilot for Citizen Science
+Generated 2023-11-07T10:14:25.072415+00:00
+=== Files ===
+Using example_2_1.ttl from examples
+Output Turtle example_2_1.ttl created
+=== End Files ===
+
+=== SHACL ===
+Using SHACL files for validation:
+ - https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl
+Validation Report
+Conforms: True
+
+Focus nodes:
+ - Shape <http://example.com/rules#testFeatureOfInterest>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <http://example.com/rules#testObservedProperty>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <http://example.com/rules#testRequiredTime>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <http://example.com/rules#testResult>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:nfe127a26d4dd49c59f32cc3d4e0bdf04b19): *none*
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:nfe127a26d4dd49c59f32cc3d4e0bdf04b5): *none*
+ - Shape <http://example.com/rules#testResult>/sh:property (path _:nfe127a26d4dd49c59f32cc3d4e0bdf04b32): *none*
+ - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:nfe127a26d4dd49c59f32cc3d4e0bdf04b11): *none*
+ - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:nfe127a26d4dd49c59f32cc3d4e0bdf04b29): *none*
+
+=== End SHACL ===
+
