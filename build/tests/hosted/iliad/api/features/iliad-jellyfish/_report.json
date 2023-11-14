@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish - Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "bblockName": "Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "bblockId": "ogc.hosted.iliad.api.features.iliad-jellyfish",
-  "generated": "2023-11-14T00:14:27.587378+00:00",
+  "generated": "2023-11-14T00:32:04.242012+00:00",
   "result": false,
   "items": [
     {
@@ -228,7 +228,7 @@
   "globalErrors": {
     "SHACL": {
       "isError": true,
-      "message": "at line 18 of <>:\nBad syntax (objectList expected) at ^ in:\n\"...b'] ;\\n                           sh:property         [ sh:path'^b'     usedProcedure;\\n                          sh:nodeKind sh'...\""
+      "message": "at line 18 of <>:\nBad syntax (objectList expected) at ^ in:\n\"...b' sh:nodeKind sh:URI ] ,\\n                           [ sh:path'^b'     usedProcedure;\\n                          sh:nodeKind sh'...\""
     }
   },
   "counts": {

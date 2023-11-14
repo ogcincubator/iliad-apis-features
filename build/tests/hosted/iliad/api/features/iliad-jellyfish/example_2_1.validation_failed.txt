@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish - Observations - ILIAD Jellyfish Pilot for Citizen Science
-Generated 2023-11-14T00:14:27.582664+00:00
+Generated 2023-11-14T00:32:04.238091+00:00
 === Files ===
 Using example_2_1.json from examples
 JSON-LD context is present - uplifting
@@ -16,6 +16,6 @@ Validation passed
 ** Validation error **
 at line 18 of <>:
 Bad syntax (objectList expected) at ^ in:
-"...b'] ;\n                           sh:property         [ sh:path'^b'     usedProcedure;\n                          sh:nodeKind sh'..."
+"...b' sh:nodeKind sh:URI ] ,\n                           [ sh:path'^b'     usedProcedure;\n                          sh:nodeKind sh'..."
 === End SHACL ===
 
