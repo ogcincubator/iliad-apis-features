@@ -14,9 +14,9 @@
     sh:message          "Observation properties must be valid URI";
     sh:name             "Observation properties as links" ;
     sh:property         [ sh:path     sosa:observedProperty;
-                          sh:nodeKind sh:URI ] ,
+                          sh:nodeKind sh:IRI ] ,
    [ sh:path     sosa:usedProcedure;
-                          sh:nodeKind sh:URI ] ;
+                          sh:nodeKind sh:IRI ] ;
 .
 
 
