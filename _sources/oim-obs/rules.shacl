@@ -1,0 +1,24 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix sosa:    <http://www.w3.org/ns/sosa/> .
+
+@prefix :        <http://example.com/rules> .
+
+:force-linked-data-observedProperty
+    a                   sh:NodeShape ;
+    sh:targetSubjectsOf sosa:observedProperty , sosa:usedProcedure;
+    sh:targetClass      sosa:Observation , sosa:ObservationCollection;
+    sh:message          "Observation properties must be valid URI";
+    sh:name             "Observation properties as links" ;
+    sh:property         [ sh:path     sosa:observedProperty;
+                          sh:nodeKind sh:URI ] ;
+                           sh:property         [ sh:path     usedProcedure;
+                          sh:nodeKind sh:URI ] ;
+.
+
+
+
+
