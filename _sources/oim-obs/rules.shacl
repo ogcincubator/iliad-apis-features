@@ -15,7 +15,7 @@
     sh:name             "Observation properties as links" ;
     sh:property         [ sh:path     sosa:observedProperty;
                           sh:nodeKind sh:URI ] ,
-                           [ sh:path     usedProcedure;
+   [ sh:path     sosa:usedProcedure;
                           sh:nodeKind sh:URI ] ;
 .
 
