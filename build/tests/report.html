@@ -26,9 +26,9 @@
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2023-11-14T00:40:53.310190+00:00</small>
-                <p class="summary fw-semibold text-danger">
-                    Number of passing building blocks: 2 / 3 (66.67%)
+            <small class="datetime">Generated at 2023-11-14T00:45:10.438827+00:00</small>
+                <p class="summary fw-semibold text-success">
+                    Number of passing building blocks: 3 / 3 (100%)
                 </p>
             <div class="text-end small" id="expand-collapse">
                 <a href="#" class="expand-all">Expand all</a>
@@ -77,22 +77,22 @@
                         </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.hosted.iliad.api.features.iliad-jellyfish" id="bblock-2">
                             <h2 class="accordion-header bblock-title">
-                                <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bblock-collapse-2">
                                     <div class="flex-fill">
                                         Observations - ILIAD Jellyfish Pilot for Citizen Science
                                         <small class="ms-2 bblock-id">ogc.hosted.iliad.api.features.iliad-jellyfish</small>
                                     </div>
 
-                                    <span class="badge text-bg-danger me-2">
-                                            Tests Failed
-                                            (0% passed)
+                                    <span class="badge text-bg-success me-2">
+                                            Passed
+                                            (100% passed)
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse show" id="bblock-collapse-2">
+                            <div class="accordion-collapse collapse " id="bblock-collapse-2">
                                 <div class="accordion-body">
-                                        <p class="summary fw-semibold text-danger">
-                                            Test passed: 0 / 3
+                                        <p class="summary fw-semibold text-success">
+                                            Test passed: 3 / 3
                                         </p>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
@@ -107,7 +107,7 @@
                                                     <a href="https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
-                                                            <span class="badge text-bg-danger me-2">Failed</span>
+                                                            <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-1">
@@ -123,30 +123,22 @@
                                                                     <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
  - _sources/oim-obs/rules.shacl
  - https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl</div>
-                                                                    <div class="font-monospace entry-message section-shacl text-danger">Validation Report
-Conforms: False
-Results (1):
-Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:nodeKind sh:URI ; sh:path sosa:observedProperty ]
-	Focus Node: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
-	Value Node: jf-property:jellyFishAbundanceProperty
-	Result Path: sosa:observedProperty
-	Message: Value is not of Node Kind sh:URI
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation Report
+Conforms: True
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes:
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
- - Shape :force-linked-data-observedProperty: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
  - Shape &lt;http://example.com/rules#testObservedProperty&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
  - Shape &lt;http://example.com/rules#testResult&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
- - Shape :force-linked-data-observedProperty/sh:property (path sosa:usedProcedure): *none*
- - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b32): *none*
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b29): *none*
- - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b19): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:ncc20f7951f46458184402cf994d19197b11): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:ncc20f7951f46458184402cf994d19197b5): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape :force-linked-data-observedProperty: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n05b2cf25c14543bba1187885a2833422b5): *none*
  - Shape :force-linked-data-observedProperty/sh:property (path sosa:observedProperty): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n05b2cf25c14543bba1187885a2833422b32): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n05b2cf25c14543bba1187885a2833422b19): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n05b2cf25c14543bba1187885a2833422b29): *none*
+ - Shape :force-linked-data-observedProperty/sh:property (path sosa:usedProcedure): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n05b2cf25c14543bba1187885a2833422b11): *none*
 </div>
                                                     </div>
                                                 </div>
@@ -165,7 +157,7 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
                                                     <a href="https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/example_2_1.json" target="_blank">example_2_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
-                                                            <span class="badge text-bg-danger me-2">Failed</span>
+                                                            <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-2">
@@ -181,37 +173,22 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
                                                                     <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
  - _sources/oim-obs/rules.shacl
  - https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl</div>
-                                                                    <div class="font-monospace entry-message section-shacl text-danger">Validation Report
-Conforms: False
-Results (2):
-Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:nodeKind sh:URI ; sh:path sosa:observedProperty ]
-	Focus Node: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
-	Value Node: jf-property:jellyFishAbundanceProperty
-	Result Path: sosa:observedProperty
-	Message: Value is not of Node Kind sh:URI
-Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:nodeKind sh:URI ; sh:path sosa:observedProperty ]
-	Focus Node: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
-	Value Node: jf-property:jellyFishAbundanceProperty
-	Result Path: sosa:observedProperty
-	Message: Value is not of Node Kind sh:URI
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation Report
+Conforms: True
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes:
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
- - Shape :force-linked-data-observedProperty: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;,_:N8f45e0a635b04fe9afe235ba068827f1
  - Shape &lt;http://example.com/rules#testObservedProperty&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
  - Shape &lt;http://example.com/rules#testResult&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
- - Shape :force-linked-data-observedProperty/sh:property (path sosa:usedProcedure): *none*
- - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b32): *none*
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b29): *none*
- - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b19): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:ncc20f7951f46458184402cf994d19197b11): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:ncc20f7951f46458184402cf994d19197b5): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
+ - Shape :force-linked-data-observedProperty: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,_:Nce19a86a4cc84ad9901cb9be603b80d5,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n05b2cf25c14543bba1187885a2833422b5): *none*
  - Shape :force-linked-data-observedProperty/sh:property (path sosa:observedProperty): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n05b2cf25c14543bba1187885a2833422b32): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n05b2cf25c14543bba1187885a2833422b19): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n05b2cf25c14543bba1187885a2833422b29): *none*
+ - Shape :force-linked-data-observedProperty/sh:property (path sosa:usedProcedure): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n05b2cf25c14543bba1187885a2833422b11): *none*
 </div>
                                                     </div>
                                                 </div>
@@ -230,7 +207,7 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
                                                     <a href="https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/example_3_1.ttl" target="_blank">example_3_1.ttl</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
-                                                            <span class="badge text-bg-danger me-2">Failed</span>
+                                                            <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-3">
@@ -242,30 +219,22 @@ Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#
                                                                     <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
  - _sources/oim-obs/rules.shacl
  - https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl</div>
-                                                                    <div class="font-monospace entry-message section-shacl text-danger">Validation Report
-Conforms: False
-Results (1):
-Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:nodeKind sh:URI ; sh:path sosa:observedProperty ]
-	Focus Node: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
-	Value Node: jf-property:jellyFishAbundanceProperty
-	Result Path: sosa:observedProperty
-	Message: Value is not of Node Kind sh:URI
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation Report
+Conforms: True
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes:
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
- - Shape :force-linked-data-observedProperty: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
  - Shape &lt;http://example.com/rules#testObservedProperty&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
  - Shape &lt;http://example.com/rules#testResult&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
- - Shape :force-linked-data-observedProperty/sh:property (path sosa:usedProcedure): *none*
- - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b32): *none*
- - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b29): *none*
- - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b19): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:ncc20f7951f46458184402cf994d19197b11): *none*
- - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:ncc20f7951f46458184402cf994d19197b5): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape :force-linked-data-observedProperty: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:n05b2cf25c14543bba1187885a2833422b5): *none*
  - Shape :force-linked-data-observedProperty/sh:property (path sosa:observedProperty): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:n05b2cf25c14543bba1187885a2833422b32): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:n05b2cf25c14543bba1187885a2833422b19): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:n05b2cf25c14543bba1187885a2833422b29): *none*
+ - Shape :force-linked-data-observedProperty/sh:property (path sosa:usedProcedure): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:n05b2cf25c14543bba1187885a2833422b11): *none*
 </div>
                                                     </div>
                                                 </div>

@@ -4,7 +4,7 @@
   "itemIdentifier": "ogc.hosted.iliad.api.features.iliad-jellyfish",
   "name": "Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "abstract": "Defines a project profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model",
-  "status": "invalid",
+  "status": "under-development",
   "dateTimeAddition": "2023-04-05T00:00:00Z",
   "itemClass": "schema",
   "register": "iliad-apis",
@@ -45,7 +45,7 @@
   },
   "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/",
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/iliad-jellyfish/",
   "description": "## Ocean Information Model Observations Profile for Citizen Science - Jellyfish Pilot\n\nThis specification defines the specific requirements of the ILIAD Jellyfish Pilot as an implementation of the Oceans Information Model.\n\nConstraints that are not unique to the pilot should be described in one of the \"parent\" profiles in the chain:\n\n- [OIM Observations for Citizen Science](../oim-obs-cs/)\n- [OIM Observations](../oim-obs/)\n- [OGC-API SOSA](https://opengeospatial.github.io/ogcapi-sosa/)\n\n## Key features of this profile:\n\n- a schema for the hasResult element of observations\n- a JSON-LD context for this result schema\n- JSON-LD context elements defining namespaces for values specific to the pilot context:\n\ne.g. \n```\"observedProperty\": {\n      \"@id\": \"sosa:observedProperty\",\n      \"@type\": \"@id\",\n      \"@context\": {\n        \"@base\": \"http://w3id.org/iliad/jellyfish/property/\"\n      }\n    },\n```\n\n## Future work\nThis profile defines Features for use in OGCAPI Features, and will be part of a suite of options bding alternative APIs to the same information model.\n\nThe SHACL rules (and any other validators developed) will be tested against the semantic annotations of each alternative to demonstrate (and help develop) these to be consistent, thus achieving **schema-agnostic semantic interoperability**.\n  \n  - see the [README](https://github.com/ogcincubator/iliad-apis-features/blob/master/README.md) for more information.\n",
   "examples": [
