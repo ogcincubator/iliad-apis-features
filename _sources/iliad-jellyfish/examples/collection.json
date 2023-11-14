@@ -1,6 +1,7 @@
 {
   "type": "FeatureCollection",
   "featureType": "sosa:ObservationCollection",
+
   "features": [
     {
       "@id": "1-18-527-Phyllorhiza_punctata",
@@ -39,8 +40,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          31.806910,
-          34.471274
+          35.643846, 34.273634
         ]
       },
       "properties": {
