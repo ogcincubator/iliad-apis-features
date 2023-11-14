@@ -35,8 +35,8 @@
   },
   "dependsOn": [
     "ogc.ogc-utils.iri-or-curie",
-    "ogc.unstable.sosa.properties.observation",
     "ogc.unstable.sosa.features.observationCollection",
+    "ogc.unstable.sosa.properties.observation",
     "ogc.unstable.sosa.features.observation"
   ],
   "schema": {
