@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish - Observations - ILIAD Jellyfish Pilot for Citizen Science
-Generated 2023-11-14T00:14:27.587308+00:00
+Generated 2023-11-14T00:32:04.241960+00:00
 === Files ===
 Using example_3_1.ttl from examples
 Output Turtle example_3_1.ttl created
@@ -10,6 +10,6 @@ Output Turtle example_3_1.ttl created
 ** Validation error **
 at line 18 of <>:
 Bad syntax (objectList expected) at ^ in:
-"...b'] ;\n                           sh:property         [ sh:path'^b'     usedProcedure;\n                          sh:nodeKind sh'..."
+"...b' sh:nodeKind sh:URI ] ,\n                           [ sh:path'^b'     usedProcedure;\n                          sh:nodeKind sh'..."
 === End SHACL ===
 
