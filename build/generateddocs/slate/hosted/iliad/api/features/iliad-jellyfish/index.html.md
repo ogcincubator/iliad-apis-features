@@ -242,8 +242,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
       "geometry": {
         "type": "Point",
         "coordinates": [
-          34.471274,
-          31.806910
+          31.806910,
+          34.471274
         ]
       },
       "properties": {
@@ -320,8 +320,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
       "geometry": {
         "type": "Point",
         "coordinates": [
-          34.471274,
-          31.80691
+          31.80691,
+          34.471274
         ]
       },
       "properties": {
@@ -399,7 +399,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
     sosa:phenomenonTime "2011-07-01T09:00:00" ;
     sosa:resultTime "2011-07-01T09:00:00" ;
     geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 3.447127e+01 3.180691e+01 ) ] .
+            geojson:coordinates ( 3.180691e+01 3.447127e+01 ) ] .
 
 [] a sosa:ObservationCollection,
         geojson:FeatureCollection ;
