@@ -27,17 +27,17 @@
   ],
   "shaclRules": {
     "ogc.hosted.iliad.api.features.oim-obs": [
-      "https://ogcincubator.github.io/github/workspace/_sources/oim-obs/rules.shacl"
+      "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
     ],
     "ogc.unstable.sosa.properties.observation": [
       "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
     ]
   },
   "dependsOn": [
-    "ogc.unstable.sosa.features.observation",
-    "ogc.unstable.sosa.features.observationCollection",
+    "ogc.ogc-utils.iri-or-curie",
     "ogc.unstable.sosa.properties.observation",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.unstable.sosa.features.observationCollection",
+    "ogc.unstable.sosa.features.observation"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml",

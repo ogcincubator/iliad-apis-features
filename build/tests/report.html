@@ -26,7 +26,7 @@
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2023-11-14T00:32:04.253779+00:00</small>
+            <small class="datetime">Generated at 2023-11-14T00:40:53.310190+00:00</small>
                 <p class="summary fw-semibold text-danger">
                     Number of passing building blocks: 2 / 3 (66.67%)
                 </p>
@@ -94,21 +94,6 @@
                                         <p class="summary fw-semibold text-danger">
                                             Test passed: 0 / 3
                                         </p>
-                                        <div class="card mb-2 global-validation-item validation-item">
-                                            <div class="card-body">
-                                                <div class="card-title">
-                                                    Building block global validation errors
-                                                    <div class="float-end">
-                                                        <span class="badge text-bg-danger me-2">Failed</span>
-                                                    </div>
-                                                </div>
-                                                <div class="card-text text-danger">
-                                                        <div class="font-monospace entry-message section-shacl">at line 18 of &lt;&gt;:
-Bad syntax (objectList expected) at ^ in:
-&quot;...b&#x27; sh:nodeKind sh:URI ] ,\n                           [ sh:path&#x27;^b&#x27;     usedProcedure;\n                          sh:nodeKind sh&#x27;...&quot;</div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
                                                 <div class="card-title mb-0">
@@ -127,7 +112,6 @@ Bad syntax (objectList expected) at ^ in:
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-1">
                                                     <div class="validation-text-inner">
-                                                            <div class="font-monospace entry-message text-danger">Note: Test failed because there are global validation errors.</div>
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
                                                                     <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
@@ -135,6 +119,35 @@ Bad syntax (objectList expected) at ^ in:
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
                                                                     <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+ - _sources/oim-obs/rules.shacl
+ - https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl</div>
+                                                                    <div class="font-monospace entry-message section-shacl text-danger">Validation Report
+Conforms: False
+Results (1):
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:nodeKind sh:URI ; sh:path sosa:observedProperty ]
+	Focus Node: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+	Value Node: jf-property:jellyFishAbundanceProperty
+	Result Path: sosa:observedProperty
+	Message: Value is not of Node Kind sh:URI
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes:
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape :force-linked-data-observedProperty: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape &lt;http://example.com/rules#testResult&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape :force-linked-data-observedProperty/sh:property (path sosa:usedProcedure): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b32): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b29): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b19): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:ncc20f7951f46458184402cf994d19197b11): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:ncc20f7951f46458184402cf994d19197b5): *none*
+ - Shape :force-linked-data-observedProperty/sh:property (path sosa:observedProperty): *none*
+</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -157,7 +170,6 @@ Bad syntax (objectList expected) at ^ in:
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-2">
                                                     <div class="validation-text-inner">
-                                                            <div class="font-monospace entry-message text-danger">Note: Test failed because there are global validation errors.</div>
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_2_1.json from examples</div>
                                                                     <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
@@ -165,6 +177,42 @@ Bad syntax (objectList expected) at ^ in:
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle example_2_1.ttl created</div>
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
                                                                     <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+ - _sources/oim-obs/rules.shacl
+ - https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl</div>
+                                                                    <div class="font-monospace entry-message section-shacl text-danger">Validation Report
+Conforms: False
+Results (2):
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:nodeKind sh:URI ; sh:path sosa:observedProperty ]
+	Focus Node: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
+	Value Node: jf-property:jellyFishAbundanceProperty
+	Result Path: sosa:observedProperty
+	Message: Value is not of Node Kind sh:URI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:nodeKind sh:URI ; sh:path sosa:observedProperty ]
+	Focus Node: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+	Value Node: jf-property:jellyFishAbundanceProperty
+	Result Path: sosa:observedProperty
+	Message: Value is not of Node Kind sh:URI
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes:
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
+ - Shape :force-linked-data-observedProperty: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;,_:N8f45e0a635b04fe9afe235ba068827f1
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
+ - Shape &lt;http://example.com/rules#testResult&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
+ - Shape :force-linked-data-observedProperty/sh:property (path sosa:usedProcedure): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b32): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b29): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b19): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:ncc20f7951f46458184402cf994d19197b11): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:ncc20f7951f46458184402cf994d19197b5): *none*
+ - Shape :force-linked-data-observedProperty/sh:property (path sosa:observedProperty): *none*
+</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -187,10 +235,38 @@ Bad syntax (objectList expected) at ^ in:
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-3">
                                                     <div class="validation-text-inner">
-                                                            <div class="font-monospace entry-message text-danger">Note: Test failed because there are global validation errors.</div>
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_3_1.ttl from examples</div>
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle example_3_1.ttl created</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Using SHACL files for validation:
+ - _sources/oim-obs/rules.shacl
+ - https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl</div>
+                                                                    <div class="font-monospace entry-message section-shacl text-danger">Validation Report
+Conforms: False
+Results (1):
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:nodeKind sh:URI ; sh:path sosa:observedProperty ]
+	Focus Node: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+	Value Node: jf-property:jellyFishAbundanceProperty
+	Result Path: sosa:observedProperty
+	Message: Value is not of Node Kind sh:URI
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes:
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape :force-linked-data-observedProperty: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape &lt;http://example.com/rules#testResult&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape :force-linked-data-observedProperty/sh:property (path sosa:usedProcedure): *none*
+ - Shape &lt;http://example.com/rules#testResult&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b32): *none*
+ - Shape &lt;http://example.com/rules#testFeatureOfInterest&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b29): *none*
+ - Shape &lt;http://example.com/rules#testObservedProperty&gt;/sh:property (path _:ncc20f7951f46458184402cf994d19197b19): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:rest/rdf:first (path _:ncc20f7951f46458184402cf994d19197b11): *none*
+ - Shape &lt;http://example.com/rules#testRequiredTime&gt;/sh:or/rdf:first (path _:ncc20f7951f46458184402cf994d19197b5): *none*
+ - Shape :force-linked-data-observedProperty/sh:property (path sosa:observedProperty): *none*
+</div>
                                                     </div>
                                                 </div>
                                             </div>

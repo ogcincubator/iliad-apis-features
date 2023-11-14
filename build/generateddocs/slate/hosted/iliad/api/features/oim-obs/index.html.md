@@ -296,7 +296,7 @@ You can find the full JSON-LD context here:
 The following sets of SHACL shapes are used for validating this building block:
 
 * OIM Observations <small><code>ogc.hosted.iliad.api.features.oim-obs</code></small>
-  * [https://ogcincubator.github.io/github/workspace/_sources/oim-obs/rules.shacl](https://ogcincubator.github.io/github/workspace/_sources/oim-obs/rules.shacl)
+  * [https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl](https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl)
 * SOSA Observation <small><code>ogc.unstable.sosa.properties.observation</code></small>
   * [https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl](https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl)
 
