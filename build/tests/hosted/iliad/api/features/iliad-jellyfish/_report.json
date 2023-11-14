@@ -2,8 +2,8 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish - Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "bblockName": "Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "bblockId": "ogc.hosted.iliad.api.features.iliad-jellyfish",
-  "generated": "2023-11-07T14:51:08.922492+00:00",
-  "result": true,
+  "generated": "2023-11-14T00:14:27.587378+00:00",
+  "result": false,
   "items": [
     {
       "source": {
@@ -14,199 +14,226 @@
         "snippetIndex": 1,
         "language": "json"
       },
-      "result": true,
-      "sections": {
-        "FILES": [
-          {
-            "isError": false,
-            "message": "Using example_1_1.json from examples"
-          },
-          {
-            "op": "jsonld-uplift",
-            "isError": false,
-            "message": "JSON-LD context is present - uplifting"
-          },
-          {
-            "op": "jsonld-create",
-            "filename": "example_1_1.jsonld",
-            "isError": false,
-            "message": "Output JSON-LD example_1_1.jsonld created"
-          },
-          {
-            "op": "ttl-create",
-            "empty": false,
-            "filename": "example_1_1.ttl",
-            "size": 22,
-            "isError": false,
-            "message": "Output Turtle example_1_1.ttl created"
-          }
-        ],
-        "JSON_SCHEMA": [
-          {
-            "op": "validation",
-            "result": true,
-            "isError": false,
-            "message": "Validation passed"
-          }
-        ],
-        "SHACL": [
-          {
-            "op": "shacl-files",
-            "files": [
-              "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
-            ],
-            "isError": false,
-            "message": "Using SHACL files for validation:\n - https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
-          },
-          {
-            "op": "shacl-report",
-            "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-            "isError": false,
-            "message": "Validation Report\nConforms: True\n"
-          },
-          {
-            "focusNodes": {
-              "<http://example.com/rules#testRequiredTime>": {
-                "nodes": [
-                  "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
-                ]
-              },
-              "<http://example.com/rules#testFeatureOfInterest>": {
-                "nodes": [
-                  "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
-                ]
-              },
-              "<http://example.com/rules#testResult>": {
-                "nodes": [
-                  "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
-                ]
-              },
-              "<http://example.com/rules#testObservedProperty>": {
-                "nodes": [
-                  "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
-                ]
-              },
-              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
-                "nodes": [],
-                "path": "_:nd4b07da50dd349deb915d909a062092fb11"
-              },
-              "<http://example.com/rules#testObservedProperty>/sh:property": {
-                "nodes": [],
-                "path": "_:nd4b07da50dd349deb915d909a062092fb19"
-              },
-              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
-                "nodes": [],
-                "path": "_:nd4b07da50dd349deb915d909a062092fb5"
-              },
-              "<http://example.com/rules#testResult>/sh:property": {
-                "nodes": [],
-                "path": "_:nd4b07da50dd349deb915d909a062092fb32"
-              },
-              "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
-                "nodes": [],
-                "path": "_:nd4b07da50dd349deb915d909a062092fb29"
-              }
+      "result": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": []
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_1_1.json from examples"
             },
-            "isError": false,
-            "message": "Focus nodes:\n - Shape <http://example.com/rules#testRequiredTime>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testFeatureOfInterest>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testResult>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testObservedProperty>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:nd4b07da50dd349deb915d909a062092fb11): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:nd4b07da50dd349deb915d909a062092fb19): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:nd4b07da50dd349deb915d909a062092fb5): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:nd4b07da50dd349deb915d909a062092fb32): *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:nd4b07da50dd349deb915d909a062092fb29): *none*\n"
-          }
-        ]
-      }
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_1_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_1_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_1_1.ttl",
+              "size": 22,
+              "isError": false,
+              "message": "Output Turtle example_1_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        },
+        {
+          "name": "JSON_LD",
+          "title": "JSON-LD",
+          "entries": []
+        },
+        {
+          "name": "TURTLE",
+          "title": "Turtle",
+          "entries": []
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": []
+        },
+        {
+          "name": "UNKNOWN",
+          "title": "Unknown errors",
+          "entries": []
+        }
+      ]
     },
     {
       "source": {
         "type": "EXAMPLE",
         "requireFail": false,
-        "filename": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/example_2_1.ttl",
+        "filename": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/example_2_1.json",
         "exampleIndex": 2,
+        "snippetIndex": 1,
+        "language": "json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": []
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_2_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_2_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_2_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_2_1.ttl",
+              "size": 48,
+              "isError": false,
+              "message": "Output Turtle example_2_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        },
+        {
+          "name": "JSON_LD",
+          "title": "JSON-LD",
+          "entries": []
+        },
+        {
+          "name": "TURTLE",
+          "title": "Turtle",
+          "entries": []
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": []
+        },
+        {
+          "name": "UNKNOWN",
+          "title": "Unknown errors",
+          "entries": []
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/example_3_1.ttl",
+        "exampleIndex": 3,
         "snippetIndex": 1,
         "language": "ttl"
       },
-      "result": true,
-      "sections": {
-        "FILES": [
-          {
-            "isError": false,
-            "message": "Using example_2_1.ttl from examples"
-          },
-          {
-            "op": "ttl-create",
-            "empty": false,
-            "filename": "example_2_1.ttl",
-            "size": 22,
-            "isError": false,
-            "message": "Output Turtle example_2_1.ttl created"
-          }
-        ],
-        "SHACL": [
-          {
-            "op": "shacl-files",
-            "files": [
-              "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
-            ],
-            "isError": false,
-            "message": "Using SHACL files for validation:\n - https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
-          },
-          {
-            "op": "shacl-report",
-            "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-            "isError": false,
-            "message": "Validation Report\nConforms: True\n"
-          },
-          {
-            "focusNodes": {
-              "<http://example.com/rules#testRequiredTime>": {
-                "nodes": [
-                  "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
-                ]
-              },
-              "<http://example.com/rules#testFeatureOfInterest>": {
-                "nodes": [
-                  "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
-                ]
-              },
-              "<http://example.com/rules#testResult>": {
-                "nodes": [
-                  "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
-                ]
-              },
-              "<http://example.com/rules#testObservedProperty>": {
-                "nodes": [
-                  "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
-                ]
-              },
-              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first": {
-                "nodes": [],
-                "path": "_:nd4b07da50dd349deb915d909a062092fb11"
-              },
-              "<http://example.com/rules#testObservedProperty>/sh:property": {
-                "nodes": [],
-                "path": "_:nd4b07da50dd349deb915d909a062092fb19"
-              },
-              "<http://example.com/rules#testRequiredTime>/sh:or/rdf:first": {
-                "nodes": [],
-                "path": "_:nd4b07da50dd349deb915d909a062092fb5"
-              },
-              "<http://example.com/rules#testResult>/sh:property": {
-                "nodes": [],
-                "path": "_:nd4b07da50dd349deb915d909a062092fb32"
-              },
-              "<http://example.com/rules#testFeatureOfInterest>/sh:property": {
-                "nodes": [],
-                "path": "_:nd4b07da50dd349deb915d909a062092fb29"
-              }
+      "result": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": []
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_3_1.ttl from examples"
             },
-            "isError": false,
-            "message": "Focus nodes:\n - Shape <http://example.com/rules#testRequiredTime>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testFeatureOfInterest>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testResult>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testObservedProperty>: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:nd4b07da50dd349deb915d909a062092fb11): *none*\n - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:nd4b07da50dd349deb915d909a062092fb19): *none*\n - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:nd4b07da50dd349deb915d909a062092fb5): *none*\n - Shape <http://example.com/rules#testResult>/sh:property (path _:nd4b07da50dd349deb915d909a062092fb32): *none*\n - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:nd4b07da50dd349deb915d909a062092fb29): *none*\n"
-          }
-        ]
-      }
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_3_1.ttl",
+              "size": 22,
+              "isError": false,
+              "message": "Output Turtle example_3_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": []
+        },
+        {
+          "name": "JSON_LD",
+          "title": "JSON-LD",
+          "entries": []
+        },
+        {
+          "name": "TURTLE",
+          "title": "Turtle",
+          "entries": []
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": []
+        },
+        {
+          "name": "UNKNOWN",
+          "title": "Unknown errors",
+          "entries": []
+        }
+      ]
     }
   ],
-  "globalErrors": {},
+  "globalErrors": {
+    "SHACL": {
+      "isError": true,
+      "message": "at line 18 of <>:\nBad syntax (objectList expected) at ^ in:\n\"...b'] ;\\n                           sh:property         [ sh:path'^b'     usedProcedure;\\n                          sh:nodeKind sh'...\""
+    }
+  },
   "counts": {
-    "total": 2,
-    "passed": 2,
-    "failed": 0
+    "total": 3,
+    "passed": 0,
+    "failed": 3
   }
 }

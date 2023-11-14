@@ -26,11 +26,11 @@ Defines a project profile of the ILIAD Citizen Science profile for Observations 
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
-    <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
+    <a href="http://www.opengis.net/def/status/invalid" target="_blank" data-rainbow-uri>Invalid</a>
 </p>
 
-<aside class="success">
-This building block is <strong><a href="https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/iliad-jellyfish/" target="_blank">valid</a></strong>
+<aside class="warning">
+Validation for this building block has <strong><a href="https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/iliad-jellyfish/" target="_blank">failed</a></strong>
 </aside>
 
 # Description
@@ -196,6 +196,226 @@ The SHACL rules (and any other validators developed) will be tested against the 
 
 
 
+## Example of Jellyfish abundance observation collection
+
+
+
+```json
+{
+  "type": "FeatureCollection",
+  "featureType": "sosa:ObservationCollection",
+  "features": [
+    {
+      "@id": "1-18-527-Phyllorhiza_punctata",
+      "type": "Feature",
+      "featureType": "sosa:Observation",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.806910,
+          34.634776
+        ]
+      },
+      "properties": {
+        "label": {
+          "en": "Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"
+        },
+        "phenomenonTime": "2011-07-01T09:00:00",
+        "resultTime": "2011-07-01T09:00:00",
+        "observedProperty": "jellyFishAbundanceProperty",
+        "hasFeatureOfInterest": "1-18",
+        "hasResult": {
+          "densityOfJF": "Some",
+          "quantityOfJF": 50,
+          "sampleSizeValue": "10-30",
+          "speciesScientificName": "Phyllorhiza punctata",
+          "wormsConcept": "https://marinespecies.org/aphia.php?p=taxdetails&id=135298",
+          "stingByJF": "Unspecified",
+          "beachedJF": "1"
+        }
+      }
+    },
+    {
+      "@id": "1-18-528-Phyllorhiza_punctata",
+      "type": "Feature",
+      "featureType": "sosa:Observation",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.471274,
+          31.806910
+        ]
+      },
+      "properties": {
+        "label": {
+          "en": "Jelly fish observation #1 location id: 18 sensor: 528 species: Phyllorhiza punctata"
+        },
+        "phenomenonTime": "2011-07-01T09:00:00",
+        "resultTime": "2011-07-01T09:00:00",
+        "observedProperty": "jellyFishAbundanceProperty",
+        "hasFeatureOfInterest": "1-18",
+        "hasResult": {
+          "densityOfJF": "Some",
+          "quantityOfJF": 30,
+          "sampleSizeValue": "1-10",
+          "speciesScientificName": "Phyllorhiza punctata",
+          "wormsConcept": "https://marinespecies.org/aphia.php?p=taxdetails&id=135298",
+          "stingByJF": "Unspecified",
+          "beachedJF": "0"
+        }
+      }
+    }
+  ]
+}
+```
+
+<blockquote class="lang-specific json">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish/example_2_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fogcincubator.github.io%2Filiad-apis-features%2Fbuild%2Ftests%2Fhosted%2Filiad%2Fapi%2Ffeatures%2Filiad-jellyfish%2Fexample_2_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+
+
+
+
+```jsonld
+{
+  "type": "FeatureCollection",
+  "featureType": "sosa:ObservationCollection",
+  "features": [
+    {
+      "@id": "1-18-527-Phyllorhiza_punctata",
+      "type": "Feature",
+      "featureType": "sosa:Observation",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.80691,
+          34.634776
+        ]
+      },
+      "properties": {
+        "label": {
+          "en": "Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"
+        },
+        "phenomenonTime": "2011-07-01T09:00:00",
+        "resultTime": "2011-07-01T09:00:00",
+        "observedProperty": "jellyFishAbundanceProperty",
+        "hasFeatureOfInterest": "1-18",
+        "hasResult": {
+          "densityOfJF": "Some",
+          "quantityOfJF": 50,
+          "sampleSizeValue": "10-30",
+          "speciesScientificName": "Phyllorhiza punctata",
+          "wormsConcept": "https://marinespecies.org/aphia.php?p=taxdetails&id=135298",
+          "stingByJF": "Unspecified",
+          "beachedJF": "1"
+        }
+      }
+    },
+    {
+      "@id": "1-18-528-Phyllorhiza_punctata",
+      "type": "Feature",
+      "featureType": "sosa:Observation",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.471274,
+          31.80691
+        ]
+      },
+      "properties": {
+        "label": {
+          "en": "Jelly fish observation #1 location id: 18 sensor: 528 species: Phyllorhiza punctata"
+        },
+        "phenomenonTime": "2011-07-01T09:00:00",
+        "resultTime": "2011-07-01T09:00:00",
+        "observedProperty": "jellyFishAbundanceProperty",
+        "hasFeatureOfInterest": "1-18",
+        "hasResult": {
+          "densityOfJF": "Some",
+          "quantityOfJF": 30,
+          "sampleSizeValue": "1-10",
+          "speciesScientificName": "Phyllorhiza punctata",
+          "wormsConcept": "https://marinespecies.org/aphia.php?p=taxdetails&id=135298",
+          "stingByJF": "Unspecified",
+          "beachedJF": "0"
+        }
+      }
+    }
+  ],
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld"
+}
+```
+
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish/example_2_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fogcincubator.github.io%2Filiad-apis-features%2Fbuild%2Ftests%2Fhosted%2Filiad%2Fapi%2Ffeatures%2Filiad-jellyfish%2Fexample_2_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+
+
+
+
+```turtle
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix iliad: <http://w3id.org/iliad/property/> .
+@prefix jf-density: <http://w3id.org/iliad/jellyfish/property/densityOfJF/> .
+@prefix jf-property: <http://w3id.org/iliad/jellyfish/property/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,
+        geojson:Feature ;
+    rdfs:label "Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"@en ;
+    sosa:hasFeatureOfInterest <http://w3id.org/iliad/jellyfish/feature/1-18> ;
+    sosa:hasResult [ jf-property:beachedJF "1" ;
+            jf-property:densityOfJF jf-density:Some ;
+            jf-property:quantityOfJF 50 ;
+            jf-property:stingByJF "Unspecified" ;
+            iliad:sampleSizeValue "10-30" ;
+            iliad:speciesScientificName "Phyllorhiza punctata" ;
+            iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
+    sosa:observedProperty jf-property:jellyFishAbundanceProperty ;
+    sosa:phenomenonTime "2011-07-01T09:00:00" ;
+    sosa:resultTime "2011-07-01T09:00:00" ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ] .
+
+<http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> a sosa:Observation,
+        geojson:Feature ;
+    rdfs:label "Jelly fish observation #1 location id: 18 sensor: 528 species: Phyllorhiza punctata"@en ;
+    sosa:hasFeatureOfInterest <http://w3id.org/iliad/jellyfish/feature/1-18> ;
+    sosa:hasResult [ jf-property:beachedJF "0" ;
+            jf-property:densityOfJF jf-density:Some ;
+            jf-property:quantityOfJF 30 ;
+            jf-property:stingByJF "Unspecified" ;
+            iliad:sampleSizeValue "1-10" ;
+            iliad:speciesScientificName "Phyllorhiza punctata" ;
+            iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
+    sosa:observedProperty jf-property:jellyFishAbundanceProperty ;
+    sosa:phenomenonTime "2011-07-01T09:00:00" ;
+    sosa:resultTime "2011-07-01T09:00:00" ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 3.447127e+01 3.180691e+01 ) ] .
+
+[] a sosa:ObservationCollection,
+        geojson:FeatureCollection ;
+    geojson:features <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,
+        <http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> .
+
+
+```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish/example_2_1.ttl">Open in new window</a>
+</blockquote>
+
+
+
 ## Example of Jellyfish abundance observation ontology
 
 This TTL to be replaced by examples from the ontology development cycle.
@@ -237,7 +457,7 @@ Note that the structure of a sosa:Observation is still relevant.
 
 <blockquote class="lang-specific turtle">
   <p class="example-links">
-    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish/example_2_1.ttl">Open in new window</a>
+    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish/example_3_1.ttl">Open in new window</a>
 </blockquote>
 
 
@@ -530,6 +750,8 @@ You can find the full JSON-LD context here:
 
 The following sets of SHACL shapes are used for validating this building block:
 
+* OIM Observations <small><code>ogc.hosted.iliad.api.features.oim-obs</code></small>
+  * [https://ogcincubator.github.io/github/workspace/_sources/oim-obs/rules.shacl](https://ogcincubator.github.io/github/workspace/_sources/oim-obs/rules.shacl)
 * SOSA Observation <small><code>ogc.unstable.sosa.properties.observation</code></small>
   * [https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl](https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl)
 

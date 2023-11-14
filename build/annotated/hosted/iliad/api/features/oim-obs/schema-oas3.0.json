@@ -591,9 +591,7 @@
               ],
               "x-jsonld-id": "@id"
             },
-            "featureType": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_featuretype.json"
-            },
+            "featureType": {},
             "links": {
               "type": "array",
               "items": {
@@ -677,9 +675,7 @@
               ],
               "x-jsonld-id": "@type"
             },
-            "featureType": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_featuretype.json"
-            },
+            "featureType": {},
             "geometryDimension": {
               "type": "integer",
               "minimum": 0,

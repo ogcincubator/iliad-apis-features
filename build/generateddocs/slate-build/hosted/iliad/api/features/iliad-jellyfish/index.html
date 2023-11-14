@@ -337,6 +337,9 @@
                     <a href="#example-of-jellyfish-abundance-observation" class="toc-h2 toc-link" data-title="Example of Jellyfish abundance observation">Example of Jellyfish abundance observation</a>
                   </li>
                   <li>
+                    <a href="#example-of-jellyfish-abundance-observation-collection" class="toc-h2 toc-link" data-title="Example of Jellyfish abundance observation collection">Example of Jellyfish abundance observation collection</a>
+                  </li>
+                  <li>
                     <a href="#example-of-jellyfish-abundance-observation-ontology" class="toc-h2 toc-link" data-title="Example of Jellyfish abundance observation ontology">Example of Jellyfish abundance observation ontology</a>
                   </li>
               </ul>
@@ -376,11 +379,11 @@
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
-    <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
+    <a href="http://www.opengis.net/def/status/invalid" target="_blank" data-rainbow-uri>Invalid</a>
 </p>
 
-<aside class="success">
-This building block is <strong><a href="https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/iliad-jellyfish/" target="_blank">valid</a></strong>
+<aside class="warning">
+Validation for this building block has <strong><a href="https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/iliad-jellyfish/" target="_blank">failed</a></strong>
 </aside>
 <h1 id='description'>Description</h1><h2 id='ocean-information-model-observations-profile-for-citizen-science-jellyfish-pilot'>Ocean Information Model Observations Profile for Citizen Science - Jellyfish Pilot</h2>
 <p>This specification defines the specific requirements of the ILIAD Jellyfish Pilot as an implementation of the Oceans Information Model.</p>
@@ -521,6 +524,205 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
   <p class="example-links">
     <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish/example_1_1.ttl">Open in new window</a>
 </blockquote>
+<h2 id='example-of-jellyfish-abundance-observation-collection'>Example of Jellyfish abundance observation collection</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FeatureCollection"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:ObservationCollection"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1-18-527-Phyllorhiza_punctata"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Observation"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Point"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="mf">31.806910</span><span class="p">,</span><span class="w">
+          </span><span class="mf">34.634776</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"phenomenonTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2011-07-01T09:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2011-07-01T09:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jellyFishAbundanceProperty"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1-18"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"densityOfJF"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Some"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"quantityOfJF"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"sampleSizeValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10-30"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"speciesScientificName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Phyllorhiza punctata"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"wormsConcept"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://marinespecies.org/aphia.php?p=taxdetails&amp;id=135298"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"stingByJF"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unspecified"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"beachedJF"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1-18-528-Phyllorhiza_punctata"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Observation"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Point"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="mf">34.471274</span><span class="p">,</span><span class="w">
+          </span><span class="mf">31.806910</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jelly fish observation #1 location id: 18 sensor: 528 species: Phyllorhiza punctata"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"phenomenonTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2011-07-01T09:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2011-07-01T09:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jellyFishAbundanceProperty"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1-18"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"densityOfJF"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Some"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"quantityOfJF"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"sampleSizeValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1-10"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"speciesScientificName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Phyllorhiza punctata"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"wormsConcept"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://marinespecies.org/aphia.php?p=taxdetails&amp;id=135298"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"stingByJF"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unspecified"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"beachedJF"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote class="lang-specific json">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish/example_2_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fogcincubator.github.io%2Filiad-apis-features%2Fbuild%2Ftests%2Fhosted%2Filiad%2Fapi%2Ffeatures%2Filiad-jellyfish%2Fexample_2_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FeatureCollection"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:ObservationCollection"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1-18-527-Phyllorhiza_punctata"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Observation"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Point"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="mf">31.80691</span><span class="p">,</span><span class="w">
+          </span><span class="mf">34.634776</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"phenomenonTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2011-07-01T09:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2011-07-01T09:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jellyFishAbundanceProperty"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1-18"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"densityOfJF"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Some"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"quantityOfJF"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"sampleSizeValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10-30"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"speciesScientificName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Phyllorhiza punctata"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"wormsConcept"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://marinespecies.org/aphia.php?p=taxdetails&amp;id=135298"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"stingByJF"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unspecified"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"beachedJF"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1-18-528-Phyllorhiza_punctata"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Observation"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Point"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="mf">34.471274</span><span class="p">,</span><span class="w">
+          </span><span class="mf">31.80691</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jelly fish observation #1 location id: 18 sensor: 528 species: Phyllorhiza punctata"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"phenomenonTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2011-07-01T09:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2011-07-01T09:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jellyFishAbundanceProperty"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasFeatureOfInterest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1-18"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"densityOfJF"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Some"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"quantityOfJF"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"sampleSizeValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1-10"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"speciesScientificName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Phyllorhiza punctata"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"wormsConcept"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://marinespecies.org/aphia.php?p=taxdetails&amp;id=135298"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"stingByJF"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unspecified"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"beachedJF"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish/example_2_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fogcincubator.github.io%2Filiad-apis-features%2Fbuild%2Ftests%2Fhosted%2Filiad%2Fapi%2Ffeatures%2Filiad-jellyfish%2Fexample_2_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+<div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="kd">@prefix</span><span class="w"> </span><span class="nn">geojson:</span><span class="w"> </span><span class="nl">&lt;https://purl.org/geojson/vocab#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">iliad:</span><span class="w"> </span><span class="nl">&lt;http://w3id.org/iliad/property/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">jf-density:</span><span class="w"> </span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/property/densityOfJF/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">jf-property:</span><span class="w"> </span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/property/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">sosa:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/ns/sosa/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">sosa:</span><span class="n">Observation,
+</span><span class="w">        </span><span class="nn">geojson:</span><span class="n">Feature</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">rdfs:</span><span class="n">label</span><span class="w"> </span><span class="s">"Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"</span><span class="na">@en</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">hasFeatureOfInterest</span><span class="w"> </span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/feature/1-18&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">hasResult</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">jf-property:</span><span class="n">beachedJF</span><span class="w"> </span><span class="s">"1"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">jf-property:</span><span class="n">densityOfJF</span><span class="w"> </span><span class="nn">jf-density:</span><span class="n">Some</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">jf-property:</span><span class="n">quantityOfJF</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">jf-property:</span><span class="n">stingByJF</span><span class="w"> </span><span class="s">"Unspecified"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">iliad:</span><span class="n">sampleSizeValue</span><span class="w"> </span><span class="s">"10-30"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">iliad:</span><span class="n">speciesScientificName</span><span class="w"> </span><span class="s">"Phyllorhiza punctata"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">iliad:</span><span class="n">wormsConcept</span><span class="w"> </span><span class="nl">&lt;https://marinespecies.org/aphia.php?p=taxdetails&amp;id=135298&gt;</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">observedProperty</span><span class="w"> </span><span class="nn">jf-property:</span><span class="n">jellyFishAbundanceProperty</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">phenomenonTime</span><span class="w"> </span><span class="s">"2011-07-01T09:00:00"</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">resultTime</span><span class="w"> </span><span class="s">"2011-07-01T09:00:00"</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">geojson:</span><span class="n">geometry</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">geojson:</span><span class="n">Point</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">geojson:</span><span class="n">coordinates</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">3.1</span><span class="mi">80691</span><span class="n">e+01</span><span class="w"> </span><span class="mf">3.4</span><span class="mi">63478</span><span class="n">e+01</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">sosa:</span><span class="n">Observation,
+</span><span class="w">        </span><span class="nn">geojson:</span><span class="n">Feature</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">rdfs:</span><span class="n">label</span><span class="w"> </span><span class="s">"Jelly fish observation #1 location id: 18 sensor: 528 species: Phyllorhiza punctata"</span><span class="na">@en</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">hasFeatureOfInterest</span><span class="w"> </span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/feature/1-18&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">hasResult</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">jf-property:</span><span class="n">beachedJF</span><span class="w"> </span><span class="s">"0"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">jf-property:</span><span class="n">densityOfJF</span><span class="w"> </span><span class="nn">jf-density:</span><span class="n">Some</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">jf-property:</span><span class="n">quantityOfJF</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">jf-property:</span><span class="n">stingByJF</span><span class="w"> </span><span class="s">"Unspecified"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">iliad:</span><span class="n">sampleSizeValue</span><span class="w"> </span><span class="s">"1-10"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">iliad:</span><span class="n">speciesScientificName</span><span class="w"> </span><span class="s">"Phyllorhiza punctata"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">iliad:</span><span class="n">wormsConcept</span><span class="w"> </span><span class="nl">&lt;https://marinespecies.org/aphia.php?p=taxdetails&amp;id=135298&gt;</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">observedProperty</span><span class="w"> </span><span class="nn">jf-property:</span><span class="n">jellyFishAbundanceProperty</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">phenomenonTime</span><span class="w"> </span><span class="s">"2011-07-01T09:00:00"</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">sosa:</span><span class="n">resultTime</span><span class="w"> </span><span class="s">"2011-07-01T09:00:00"</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">geojson:</span><span class="n">geometry</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">geojson:</span><span class="n">Point</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">geojson:</span><span class="n">coordinates</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">3.4</span><span class="mi">47127</span><span class="n">e+01</span><span class="w"> </span><span class="mf">3.1</span><span class="mi">80691</span><span class="n">e+01</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="p">[]</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">sosa:</span><span class="n">ObservationCollection,
+</span><span class="w">        </span><span class="nn">geojson:</span><span class="n">FeatureCollection</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">geojson:</span><span class="n">features</span><span class="w"> </span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+
+</span></code></pre></div>
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish/example_2_1.ttl">Open in new window</a>
+</blockquote>
 <h2 id='example-of-jellyfish-abundance-observation-ontology'>Example of Jellyfish abundance observation ontology</h2>
 <p>This TTL to be replaced by examples from the ontology development cycle.</p>
 
@@ -555,7 +757,7 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
 </span></code></pre></div>
 <blockquote class="lang-specific turtle">
   <p class="example-links">
-    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish/example_2_1.ttl">Open in new window</a>
+    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish/example_3_1.ttl">Open in new window</a>
 </blockquote>
 <h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2020-12/schema</span>
 <span class="na">description</span><span class="pi">:</span> <span class="s">Schemas for Ocean Information Model Observations</span>
@@ -838,6 +1040,11 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
 <p>The following sets of SHACL shapes are used for validating this building block:</p>
 
 <ul>
+<li>OIM Observations <small><code>ogc.hosted.iliad.api.features.oim-obs</code></small>
+
+<ul>
+<li><a href="https://ogcincubator.github.io/github/workspace/_sources/oim-obs/rules.shacl">https://ogcincubator.github.io/github/workspace/_sources/oim-obs/rules.shacl</a></li>
+</ul></li>
 <li>SOSA Observation <small><code>ogc.unstable.sosa.properties.observation</code></small>
 
 <ul>
