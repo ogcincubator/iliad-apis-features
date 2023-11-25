@@ -4,6 +4,8 @@ This repository defines profiles of the OGC APIs to support interoperability in 
 
 The profiles link OGC APIs such as OGC API Features to specific schemas supporting the Oceans Information Model used by ILIAD, and show how these can be used to define specific application profiles.
 
+[Here](https://drive.google.com/file/d/1kKC2Wx8wItdoH_ZVDQA-KW-f4wv46xcU/view?usp=sharing) is  a short (11mins) video describing this from a "Best Practices" perspective.
+
 The compiled (ready to use) elements and documentation are available here: (https://ogcincubator.github.io/iliad-apis-features/)
 
 These profiles demonstrate a scalable and extensible approach to creating different levels of interoperability for different sub-domains. 
