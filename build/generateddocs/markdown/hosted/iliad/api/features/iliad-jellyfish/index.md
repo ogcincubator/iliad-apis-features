@@ -492,10 +492,6 @@ Links to the schema:
       "@id": "iliad:wormsConcept",
       "@type": "@id"
     },
-    "label": {
-      "@id": "rdfs:label",
-      "@container": "@language"
-    },
     "resultTime": "sosa:resultTime",
     "phenomenonTime": "sosa:phenomenonTime",
     "usedProcedure": {
@@ -601,6 +597,10 @@ Links to the schema:
     },
     "properties": "@nest",
     "featureType": "@type",
+    "label": {
+      "@id": "rdfs:label",
+      "@container": "@language"
+    },
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",

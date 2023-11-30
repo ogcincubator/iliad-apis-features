@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish - Observations - ILIAD Jellyfish Pilot for Citizen Science
-Generated 2023-11-25T07:58:11.514223+00:00
+Generated 2023-11-30T13:02:40.862883+00:00
 === Files ===
 Using example_2_1.json from examples
 JSON-LD context is present - uplifting
@@ -12,25 +12,24 @@ Validation passed
 === End JSON Schema ===
 
 === SHACL ===
-Using SHACL files for validation:
- - _sources/oim-obs/rules.shacl
- - https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl
-Validation Report
-Conforms: True
+Validation result for _sources/oim-obs/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/oim-obs/rules.shacl:
+ - Shape :force-linked-data-observedProperty: _:Nefe18c8c3284434bb1039c01496b71de,<http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>,<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
 
-Focus nodes:
- - Shape <http://example.com/rules#testResult>: <http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>,<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
- - Shape :force-linked-data-observedProperty: _:Ndd71f0aae11047a0b19633ee36e2bc14,<http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>,<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
- - Shape <http://example.com/rules#testObservedProperty>: <http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>,<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
- - Shape <http://example.com/rules#testRequiredTime>: <http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>,<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
- - Shape <http://example.com/rules#testFeatureOfInterest>: <http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>,<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
- - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:rest/rdf:first (path _:n66c6e09a6c004de0b2d78008a668fc62b11): *none*
- - Shape <http://example.com/rules#testObservedProperty>/sh:property (path _:n66c6e09a6c004de0b2d78008a668fc62b19): *none*
- - Shape <http://example.com/rules#testResult>/sh:property (path _:n66c6e09a6c004de0b2d78008a668fc62b32): *none*
- - Shape :force-linked-data-observedProperty/sh:property (path sosa:usedProcedure): *none*
- - Shape <http://example.com/rules#testRequiredTime>/sh:or/rdf:first (path _:n66c6e09a6c004de0b2d78008a668fc62b5): *none*
- - Shape <http://example.com/rules#testFeatureOfInterest>/sh:property (path _:n66c6e09a6c004de0b2d78008a668fc62b29): *none*
- - Shape :force-linked-data-observedProperty/sh:property (path sosa:observedProperty): *none*
+Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>,<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>,<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>,<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: <http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>,<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: <http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>,<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
 
 === End SHACL ===
 

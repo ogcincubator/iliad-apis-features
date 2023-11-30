@@ -113,21 +113,17 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
-    "label": {
-      "@id": "rdfs:label",
-      "@container": "@language"
+    "resultTime": "sosa:resultTime",
+    "phenomenonTime": "sosa:phenomenonTime",
+    "hasFeatureOfInterest": {
+      "@id": "sosa:hasFeatureOfInterest",
+      "@type": "@id"
     },
     "observedProperty": {
       "@context": {
         "@base": "http://w3id.org/iliad/jellyfish/property/"
       },
       "@id": "sosa:observedProperty",
-      "@type": "@id"
-    },
-    "resultTime": "sosa:resultTime",
-    "phenomenonTime": "sosa:phenomenonTime",
-    "hasFeatureOfInterest": {
-      "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
     },
     "usedProcedure": {
@@ -234,6 +230,10 @@ Links to the schema:
     },
     "properties": "@nest",
     "featureType": "@type",
+    "label": {
+      "@id": "rdfs:label",
+      "@container": "@language"
+    },
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",
