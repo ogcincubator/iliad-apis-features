@@ -1,35 +1,8 @@
 {
-  "@context": {
-    "jf-property": "http://w3id.org/iliad/jellyfish/property/",
-    "jf-density": "http://w3id.org/iliad/jellyfish/property/densityOfJF/",
-    "@base": "http://w3id.org/iliad/jellyfish/observation/",
-    "observedProperty": {
-      "@id": "sosa:observedProperty",
-      "@type": "@id",
-      "@context": {
-        "@base": "http://w3id.org/iliad/jellyfish/property/"
-      }
-    },
-    "hasResult": {
-      "@id": "sosa:hasResult",
-      "@context": {
-        "densityOfJF": {
-          "@id": "http://w3id.org/iliad/jellyfish/property/densityOfJF",
-          "@type": "@id",
-          "@context": {
-            "@base": "http://w3id.org/iliad/jellyfish/property/densityOfJF/"
-          }
-        },
-        "quantityOfJF": "jf-property:quantityOfJF",
-        "stingByJF": "jf-property:stingByJF",
-        "beachedJF": "jf-property:beachedJF"
-      }
-    },
-    "hasFeatureOfInterest": {
-      "@id": "sosa:hasFeatureOfInterest",
-      "@context": {
-        "@base": "http://w3id.org/iliad/jellyfish/feature/"
-      }
-    }
-  }
+  "@context":["https://schemas.opengis.net/cis/1.1/rdf/coverage-context.json",
+              "https://schemas.opengis.net/cis/1.1/rdf/domainset-context.json",
+            "https://schemas.opengis.net/cis/1.1/rdf/envelope-context.json",
+          "https://schemas.opengis.net/cis/1.1/rdf/partitionset-context.json",
+        "https://schemas.opengis.net/cis/1.1/rdf/rangeset-context.json",
+      "https://schemas.opengis.net/cis/1.1/rdf/rangetype-context.json"]
 }
