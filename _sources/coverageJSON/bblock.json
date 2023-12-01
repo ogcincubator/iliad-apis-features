@@ -1,0 +1,33 @@
+{
+  "name": "OGC CoverageJSON",
+  "status": "under-development",
+  "dateTimeAddition": "2023-12-01",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2023-12-01",
+  "link": "https://github.com/opengeospatial/CoverageJSON",
+  "sources": [
+    {
+      "title": "CoverageJSON context",
+      "link": "https://docs.ogc.org/cs/21-069r2/21-069r2.html"
+    },
+    {
+      "title": "Coverage Implementation Schema that CoverageJSON is based on",
+      "link": "https://docs.ogc.org/is/09-146r8/09-146r8.html"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "Ogcdoc",
+    "OGC document",
+    "JSON",
+    "JSON-LD",
+    "CoverageJSON",
+    "CovJSON",
+    "coverage",
+    "spatiotemporal",
+    "linked-data"
+  ]
+}

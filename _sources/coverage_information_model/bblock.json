@@ -10,12 +10,8 @@
   "link": "https://github.com/opengeospatial/coverage-implementation-schema",
   "sources": [
     {
-      "title": "Reference to ILIAD",
-      "link": "https://docs.ogc.org/is/09-146r6/09-146r8.html"
-    },
-    {
-      "title": "CovJSON JSON-LD context",
-      "link": "http://tbd/"
+      "title": "Coverage Implementation Schema",
+      "link": "https://docs.ogc.org/is/09-146r8/09-146r8.html"
     }
   ],
   "maturity": "development",
