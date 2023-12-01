@@ -8,7 +8,7 @@
   base-uri: http://w3id.org/ogcincubator/cis/
   snippets:
     - language: jsonld
-      ref: examples/collection.json
+      ref: examples/example.jsonld
 
 
 - title: RDF encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html
