@@ -6,7 +6,7 @@
   ],
   "type": "CoverageByDomainAndRangeType",
   "id": "examples:CIS_05_2D",
-  "DomainSet": {
+  "domainSet": {
     "@context": "http://schemas.opengis.net/cis/1.1/json/domainset-context.json",
     "type": "DomainSetType",
     "id": "examples:CIS_DS_05_2D",
@@ -36,13 +36,14 @@
       ]
     }
   },
-  "RangeSet": {
+  "rangeSet": {
     "@context": "http://schemas.opengis.net/cis/1.1/json/rangeset-context.json",
     "type": "RangeSetType",
     "id": "examples:CIS_RS_05_2D",
-    "fileReference": "http://myserver.com/fileref.tiff"
+    "dataBlock":{"type":"VDataBlockType","values":[1,2,3]},
+    "fileReference": ["http://myserver.com/fileref.tiff"]
   },
-  "RangeType": {
+  "rangeType": {
     "@context": "http://schemas.opengis.net/cis/1.1/json/rangetype-context.json",
     "type": "DataRecordType",
     "id": "examples:CIS_RT_05_2D",

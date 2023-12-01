@@ -2,8 +2,8 @@
 	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
 	<http://www.opengis.net/cis/1.1/CoverageByDomainAndRangeType> .
 
-<http://www.opengis.net/cis/1.1/examples/CIS_05_2D> 
-	<http://www.opengis.net/cis/1.1/DomainSet>
+<http://www.opengis.net/cis/1.1/examples/CIS_05_2D>
+	<http://www.opengis.net/cis/1.1/domainSet>
 	<http://www.opengis.net/cis/1.1/examples/CIS_DS_05_2D> .
 <http://www.opengis.net/cis/1.1/examples/CIS_DS_05_2D>
 	<http://www.opengis.net/cis/1.1/generalGrid>
@@ -60,7 +60,7 @@
 	<http://www.opengis.net/cis/1.1/IndexAxisType> .
 
 <http://www.opengis.net/cis/1.1/examples/CIS_05_2D>
-	<http://www.opengis.net/cis/1.1/RangeSet>
+	<http://www.opengis.net/cis/1.1/rangeSet>
 	<http://www.opengis.net/cis/1.1/examples/CIS_RS_05_2D> .
 <http://www.opengis.net/cis/1.1/examples/CIS_RS_05_2D>
 	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
@@ -70,7 +70,7 @@
 	<http://myserver.com/fileref.tiff> .
 
 <http://www.opengis.net/cis/1.1/examples/CIS_05_2D>
-	<http://www.opengis.net/cis/1.1/RangeType>
+	<http://www.opengis.net/cis/1.1/rangeType>
 	<http://www.opengis.net/cis/1.1/examples/CIS_RT_05_2D> .
 <http://www.opengis.net/cis/1.1/examples/CIS_RT_05_2D>
 	<http://www.opengis.net/swe/2.0/field>
