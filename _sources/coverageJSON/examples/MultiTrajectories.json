@@ -4,7 +4,6 @@
   "domainType" : "MultiPoint",
 
   "parameters" : {
-    "@id": "parametersSet",
     "diameter": {
       "@id": "diameter definition",
       "type" : "Parameter",
