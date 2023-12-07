@@ -1,0 +1,13 @@
+Validation report for ogc.hosted.iliad.api.features.coverage_information_model - OGC Coverage Implementation Schema
+Generated 2023-12-07T11:37:30.336841+00:00
+=== Files ===
+Using example_1_1.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+Output Turtle example_1_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

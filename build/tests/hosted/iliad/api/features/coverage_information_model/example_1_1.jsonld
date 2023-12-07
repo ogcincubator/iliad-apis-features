@@ -1,0 +1,59 @@
+{
+  "type": "CoverageByDomainAndRangeType",
+  "domainSet": {
+    "type": "DomainSetType",
+    "generalGrid": {
+      "type": "GeneralGridCoverageType",
+      "srsName": "http://www.opengis.net/def/crs/OGC/0/Index2D",
+      "axisLabels": [
+        "i",
+        "j"
+      ],
+      "axis": [
+        {
+          "type": "IndexAxisType",
+          "axisLabel": "i",
+          "lowerBound": 0,
+          "upperBound": 2
+        },
+        {
+          "type": "IndexAxisType",
+          "axisLabel": "j",
+          "lowerBound": 0,
+          "upperBound": 2
+        }
+      ]
+    }
+  },
+  "rangeSet": {
+    "type": "RangeSetType",
+    "dataBlock": {
+      "type": "VDataBlockType",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  },
+  "rangeType": {
+    "type": "DataRecordType",
+    "field": [
+      {
+        "type": "QuantityType",
+        "definition": "ogcType:unsignedInt",
+        "uom": {
+          "type": "UnitReference",
+          "code": "10^0"
+        }
+      }
+    ]
+  },
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld"
+}

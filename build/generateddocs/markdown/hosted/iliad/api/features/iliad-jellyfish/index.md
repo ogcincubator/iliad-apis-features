@@ -505,6 +505,9 @@ Links to the schema:
     "hasSimpleResult": "sosa:hasSimpleResult",
     "Observation": "sosa:Observation",
     "Sample": "sosa:Sample",
+    "System": "sosa:System",
+    "Platform": "sosa:Platform",
+    "id": "@id",
     "observes": {
       "@id": "sosa:observes",
       "@type": "@id"
@@ -556,32 +559,37 @@ Links to the schema:
     "isResultOf": "sosa:isResultOf",
     "hosts": {
       "@id": "sosa:hosts",
-      "@type": "@id"
+      "@type": "@id",
+      "@container": "@set"
     },
     "isHostedBy": "sosa:isHostedBy",
-    "isProxyFor": "ssn:isProxyFor",
-    "wasOriginatedBy": "ssn:wasOriginatedBy",
-    "detects": "ssn:detects",
-    "hasProperty": "ssn:hasProperty",
-    "isPropertyOf": "ssn:isPropertyOf",
-    "forProperty": "ssn:forProperty",
-    "implements": "ssn:implements",
-    "implementedBy": "ssn:implementedBy",
-    "hasInput": "ssn:hasInput",
-    "hasOutput": "ssn:hasOutput",
-    "hasSubSystem": "ssn:hasSubSystem",
-    "deployedSystem": "ssn:deployedSystem",
-    "hasDeployment": "ssn:hasDeployment",
-    "deployedOnPlatform": "ssn:deployedOnPlatform",
-    "inDeployment": "ssn:inDeployment",
-    "inCondition": "ssn:systems/inCondition",
-    "hasSystemCapability": "ssn:systems/hasSystemCapability",
-    "hasSystemProperty": "ssn:systems/hasSystemProperty",
-    "hasOperatingRange": "ssn:systems/hasOperatingRange",
-    "hasOperatingProperty": "ssn:systems/hasOperatingProperty",
-    "hasSurvivalRange": "ssn:systems/hasSurvivalRange",
-    "hasSurvivalProperty": "ssn:systems/hasSurvivalProperty",
-    "qualityOfObservation": "ssn:systems/qualityOfObservation",
+    "isProxyFor": "sosa:isProxyFor",
+    "wasOriginatedBy": "sosa:wasOriginatedBy",
+    "detects": "sosa:detects",
+    "hasProperty": "sosa:hasProperty",
+    "isPropertyOf": "sosa:isPropertyOf",
+    "forProperty": "sosa:forProperty",
+    "implements": "sosa:implements",
+    "implementedBy": "sosa:implementedBy",
+    "hasInput": "sosa:hasInput",
+    "hasOutput": "sosa:hasOutput",
+    "hasSubSystem": {
+      "@id": "sosa:hasSubSystem",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "deployedSystem": "sosa:deployedSystem",
+    "hasDeployment": "sosa:hasDeployment",
+    "deployedOnPlatform": "sosa:deployedOnPlatform",
+    "inDeployment": "sosa:inDeployment",
+    "inCondition": "ssn-system:inCondition",
+    "hasSystemCapability": "ssn-system:hasSystemCapability",
+    "hasSystemProperty": "ssn-system:hasSystemProperty",
+    "hasOperatingRange": "ssn-system:hasOperatingRange",
+    "hasOperatingProperty": "ssn-system:hasOperatingProperty",
+    "hasSurvivalRange": "ssn-system:hasSurvivalRange",
+    "hasSurvivalProperty": "ssn-system:hasSurvivalProperty",
+    "qualityOfObservation": "ssn-system:qualityOfObservation",
     "hasMember": {
       "@context": {
         "features": "sosa:hasMember"
@@ -619,10 +627,12 @@ Links to the schema:
       "@id": "geojson:coordinates"
     },
     "type": "@type",
-    "id": "@id",
     "links": {
       "@context": {
-        "href": "oa:hasTarget",
+        "href": {
+          "@type": "@id",
+          "@id": "oa:hasTarget"
+        },
         "rel": {
           "@context": {
             "@base": "http://www.iana.org/assignments/relation/"
@@ -643,8 +653,8 @@ Links to the schema:
     "iliad": "http://w3id.org/iliad/property/",
     "sosa": "http://www.w3.org/ns/sosa/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "ssn": "http://www.w3.org/ns/ssn/",
     "ssn-system": "ssn:systems/",
+    "ssn": "http://www.w3.org/ns/ssn/",
     "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
