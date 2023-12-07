@@ -4,22 +4,8 @@
     - language: jsonld
       ref: examples/MultiTrajectories.json
 
-- title: RDF representation of the Coverage JSON PointCloud collection
-  description: Generated from herein MultiTrajectories.json version with https://json-ld.org/playground/
-  base-uri: http://w3id.org/ogcincubator/coverageJSON/
-  snippets:
-    - language: ttl
-      ref: examples/MultiTrajectories.ttl
-
 - title: Coverage JSON Collection representing collection of PointSeries with LD
   base-uri: http://w3id.org/ogcincubator/coverageJSON/
   snippets:
     - language: jsonld
       ref: examples/PointSeries.json
-
-- title: RDF representation of the Coverage JSON PointSeries collection
-  description: Generated from herein PointSeries.jsonld version with https://json-ld.org/playground/
-  base-uri: http://w3id.org/ogcincubator/coverageJSON/
-  snippets:
-    - language: ttl
-      ref: examples/PointSeries.ttl

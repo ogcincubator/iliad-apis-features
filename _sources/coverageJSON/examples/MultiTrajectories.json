@@ -1,5 +1,4 @@
 {
-  "@context":"https://covjson.org/context.jsonld",
   "@id":"CoverageCollection of Multipoints",
   "type" : "CoverageCollection",
   "domainType" : "MultiPoint",
