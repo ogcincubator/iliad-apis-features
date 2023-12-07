@@ -1,9 +1,5 @@
 {
-  "@context": [
-    {
-      "examples": "http://www.opengis.net/cis/1.1/examples/"
-    }
-  ],
+  "@context":"../context.jsonld",
   "type": "CoverageByDomainAndRangeType",
   "id": "examples:CIS_05_2D",
   "domainSet": {
