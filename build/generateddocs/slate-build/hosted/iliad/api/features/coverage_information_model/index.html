@@ -337,7 +337,7 @@
                     <a href="#json-encoded-coverage-from-https-docs-ogc-org-is-09-146r6-09-146r6-html" class="toc-h2 toc-link" data-title="JSON encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html">JSON encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html</a>
                   </li>
                   <li>
-                    <a href="#json-ld-encoded-coverage-from-https-docs-ogc-org-is-09-146r6-09-146r6-html" class="toc-h2 toc-link" data-title="JSON-LD encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html">JSON-LD encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html</a>
+                    <a href="#json-with-ids-encoded-coverage-from-https-docs-ogc-org-is-09-146r6-09-146r6-html" class="toc-h2 toc-link" data-title="JSON with Ids encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html">JSON with Ids encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html</a>
                   </li>
                   <li>
                     <a href="#rdf-encoded-coverage-from-https-docs-ogc-org-is-09-146r6-09-146r6-html" class="toc-h2 toc-link" data-title="RDF encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html">RDF encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html</a>
@@ -371,11 +371,11 @@
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
-    <a href="http://www.opengis.net/def/status/invalid" target="_blank" data-rainbow-uri>Invalid</a>
+    <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
 </p>
 
-<aside class="warning">
-Validation for this building block has <strong><a href="https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/coverage_information_model/" target="_blank">failed</a></strong>
+<aside class="success">
+This building block is <strong><a href="https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/coverage_information_model/" target="_blank">valid</a></strong>
 </aside>
 <h1 id='description'>Description</h1><h2 id='ogc-coverage-implementation-schema'>OGC Coverage Implementation Schema</h2>
 <p>Coverages represent homogeneous collections of values located in space/time, such as spatio-temporal sensor, image, simulation, and statistics data. Common examples include 1-D timeseries, 2-D imagery, 3-D x/y/t image timeseries and x/y/z geophysical voxel models, as well as 4-D x/y/z/t climate and ocean data. Generally, coverages encompass multi-dimen­sional regular and irregular grids, point clouds, and general meshes.</p>
@@ -530,11 +530,11 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
     </span><span class="nn">cis:</span><span class="n">domainSet</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">cis:</span><span class="n">DomainSetType</span><span class="w"> </span><span class="p">;</span><span class="w">
             </span><span class="nn">cis:</span><span class="n">generalGrid</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">cis:</span><span class="n">GeneralGridCoverageType</span><span class="w"> </span><span class="p">;</span><span class="w">
                     </span><span class="nn">cis:</span><span class="n">axis</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">cis:</span><span class="n">IndexAxisType</span><span class="w"> </span><span class="p">;</span><span class="w">
-                            </span><span class="nn">cis:</span><span class="n">axisLabel</span><span class="w"> </span><span class="s">"i"</span><span class="w"> </span><span class="p">;</span><span class="w">
+                            </span><span class="nn">cis:</span><span class="n">axisLabel</span><span class="w"> </span><span class="s">"j"</span><span class="w"> </span><span class="p">;</span><span class="w">
                             </span><span class="nn">cis:</span><span class="n">lowerBound</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">;</span><span class="w">
                             </span><span class="nn">cis:</span><span class="n">upperBound</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">],</span><span class="w">
                         </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">cis:</span><span class="n">IndexAxisType</span><span class="w"> </span><span class="p">;</span><span class="w">
-                            </span><span class="nn">cis:</span><span class="n">axisLabel</span><span class="w"> </span><span class="s">"j"</span><span class="w"> </span><span class="p">;</span><span class="w">
+                            </span><span class="nn">cis:</span><span class="n">axisLabel</span><span class="w"> </span><span class="s">"i"</span><span class="w"> </span><span class="p">;</span><span class="w">
                             </span><span class="nn">cis:</span><span class="n">lowerBound</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">;</span><span class="w">
                             </span><span class="nn">cis:</span><span class="n">upperBound</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
                     </span><span class="nn">cis:</span><span class="n">axisLabels</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s">"i"</span><span class="w"> </span><span class="s">"j"</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w">
@@ -553,16 +553,12 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
   <p class="example-links">
     <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverage_information_model/example_1_1.ttl">Open in new window</a>
 </blockquote>
-<h2 id='json-ld-encoded-coverage-from-https-docs-ogc-org-is-09-146r6-09-146r6-html'>JSON-LD encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html</h2><div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
+<h2 id='json-with-ids-encoded-coverage-from-https-docs-ogc-org-is-09-146r6-09-146r6-html'>JSON with Ids encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CoverageByDomainAndRangeType"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"examples:CIS_05_2D"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"domainSet"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://schemas.opengis.net/cis/1.1/json/domainset-context.json"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DomainSetType"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"examples:CIS_DS_05_2D"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"generalGrid"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GeneralGridCoverageType"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"examples:CIS_DS_GG_05_2D"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"srsName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/def/crs/OGC/0/Index2D"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"axisLabels"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="s2">"i"</span><span class="p">,</span><span class="w">
@@ -571,14 +567,12 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
       </span><span class="nl">"axis"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
           </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IndexAxisType"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"examples:CIS_DS_GG_I_05_2D"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"axisLabel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"i"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"lowerBound"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
           </span><span class="nl">"upperBound"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
           </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IndexAxisType"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"examples:CIS_DS_GG_J_05_2D"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"axisLabel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"j"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"lowerBound"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
           </span><span class="nl">"upperBound"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
@@ -587,24 +581,30 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
     </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"rangeSet"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://schemas.opengis.net/cis/1.1/json/rangeset-context.json"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RangeSetType"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"examples:CIS_RS_05_2D"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"dataBlock"</span><span class="p">:{</span><span class="nl">"type"</span><span class="p">:</span><span class="s2">"VDataBlockType"</span><span class="p">,</span><span class="nl">"values"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]},</span><span class="w">
-    </span><span class="nl">"fileReference"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"http://myserver.com/fileref.tiff"</span><span class="p">]</span><span class="w">
+    </span><span class="nl">"dataBlock"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VDataBlockType"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="mi">6</span><span class="p">,</span><span class="w">
+        </span><span class="mi">7</span><span class="p">,</span><span class="w">
+        </span><span class="mi">8</span><span class="p">,</span><span class="w">
+        </span><span class="mi">9</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"rangeType"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://schemas.opengis.net/cis/1.1/json/rangetype-context.json"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DataRecordType"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"examples:CIS_RT_05_2D"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"field"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
         </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuantityType"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"examples:CIS_RT_F_05_2D"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ogcType:unsignedInt"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UnitReference"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"examples:CIS_RT_F_UOM_05_2D"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10^0"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
@@ -613,10 +613,108 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre></div>
+<blockquote class="lang-specific json">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverage_information_model/example_2_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fogcincubator.github.io%2Filiad-apis-features%2Fbuild%2Ftests%2Fhosted%2Filiad%2Fapi%2Ffeatures%2Fcoverage_information_model%2Fexample_2_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CoverageByDomainAndRangeType"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"domainSet"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DomainSetType"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"generalGrid"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GeneralGridCoverageType"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"srsName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/def/crs/OGC/0/Index2D"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"axisLabels"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"i"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"j"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"axis"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IndexAxisType"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"axisLabel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"i"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"lowerBound"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"upperBound"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IndexAxisType"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"axisLabel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"j"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"lowerBound"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"upperBound"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"rangeSet"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RangeSetType"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dataBlock"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VDataBlockType"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="mi">6</span><span class="p">,</span><span class="w">
+        </span><span class="mi">7</span><span class="p">,</span><span class="w">
+        </span><span class="mi">8</span><span class="p">,</span><span class="w">
+        </span><span class="mi">9</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"rangeType"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DataRecordType"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"field"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuantityType"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ogcType:unsignedInt"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UnitReference"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10^0"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
 <blockquote class="lang-specific jsonld">
   <p class="example-links">
     <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverage_information_model/example_2_1.jsonld">Open in new window</a>
     <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fogcincubator.github.io%2Filiad-apis-features%2Fbuild%2Ftests%2Fhosted%2Filiad%2Fapi%2Ffeatures%2Fcoverage_information_model%2Fexample_2_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+<div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="kd">@prefix</span><span class="w"> </span><span class="nn">cis:</span><span class="w"> </span><span class="nl">&lt;http://www.opengis.net/cis/1.1/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">ogcType:</span><span class="w"> </span><span class="nl">&lt;http://www.opengis.net/def/dataType/OGC/0/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">swe:</span><span class="w"> </span><span class="nl">&lt;http://www.opengis.net/swe/2.0/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="p">[]</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">cis:</span><span class="n">CoverageByDomainAndRangeType</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">cis:</span><span class="n">domainSet</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">cis:</span><span class="n">DomainSetType</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">cis:</span><span class="n">generalGrid</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">cis:</span><span class="n">GeneralGridCoverageType</span><span class="w"> </span><span class="p">;</span><span class="w">
+                    </span><span class="nn">cis:</span><span class="n">axis</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">cis:</span><span class="n">IndexAxisType</span><span class="w"> </span><span class="p">;</span><span class="w">
+                            </span><span class="nn">cis:</span><span class="n">axisLabel</span><span class="w"> </span><span class="s">"j"</span><span class="w"> </span><span class="p">;</span><span class="w">
+                            </span><span class="nn">cis:</span><span class="n">lowerBound</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">;</span><span class="w">
+                            </span><span class="nn">cis:</span><span class="n">upperBound</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">],</span><span class="w">
+                        </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">cis:</span><span class="n">IndexAxisType</span><span class="w"> </span><span class="p">;</span><span class="w">
+                            </span><span class="nn">cis:</span><span class="n">axisLabel</span><span class="w"> </span><span class="s">"i"</span><span class="w"> </span><span class="p">;</span><span class="w">
+                            </span><span class="nn">cis:</span><span class="n">lowerBound</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">;</span><span class="w">
+                            </span><span class="nn">cis:</span><span class="n">upperBound</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+                    </span><span class="nn">cis:</span><span class="n">axisLabels</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s">"i"</span><span class="w"> </span><span class="s">"j"</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w">
+                    </span><span class="nn">cis:</span><span class="n">srsName</span><span class="w"> </span><span class="nl">&lt;http://www.opengis.net/def/crs/OGC/0/Index2D&gt;</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">cis:</span><span class="n">rangeSet</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">cis:</span><span class="n">RangeSetType</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">cis:</span><span class="n">dataBlock</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">cis:</span><span class="n">VDataBlockType</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">cis:</span><span class="n">rangeType</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">swe:</span><span class="n">DataRecordType</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">swe:</span><span class="n">field</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">swe:</span><span class="n">QuantityType</span><span class="w"> </span><span class="p">;</span><span class="w">
+                    </span><span class="nn">swe:</span><span class="n">definition</span><span class="w"> </span><span class="nn">ogcType:</span><span class="n">unsignedInt</span><span class="w"> </span><span class="p">;</span><span class="w">
+                    </span><span class="nn">swe:</span><span class="n">uom</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">swe:</span><span class="n">UnitReference</span><span class="w"> </span><span class="p">;</span><span class="w">
+                            </span><span class="nn">swe:</span><span class="n">code</span><span class="w"> </span><span class="s">"10^0"</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+
+</span></code></pre></div>
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverage_information_model/example_2_1.ttl">Open in new window</a>
 </blockquote>
 <h2 id='rdf-encoded-coverage-from-https-docs-ogc-org-is-09-146r6-09-146r6-html'>RDF encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html</h2><div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="nl">&lt;examples:CIS_05_2D&gt;</span><span class="w"> </span><span class="nl">&lt;http://www.opengis.net/cis/1.1/domainSet&gt;</span><span class="w"> </span><span class="nl">&lt;examples:CIS_DS_05_2D&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
 </span><span class="nl">&lt;examples:CIS_05_2D&gt;</span><span class="w"> </span><span class="nl">&lt;http://www.opengis.net/cis/1.1/rangeSet&gt;</span><span class="w"> </span><span class="nl">&lt;examples:CIS_RS_05_2D&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">

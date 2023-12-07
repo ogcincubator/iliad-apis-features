@@ -26,11 +26,11 @@ Coverages represent homogeneous collections of values located in space/time, suc
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
-    <a href="http://www.opengis.net/def/status/invalid" target="_blank" data-rainbow-uri>Invalid</a>
+    <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
 </p>
 
-<aside class="warning">
-Validation for this building block has <strong><a href="https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/coverage_information_model/" target="_blank">failed</a></strong>
+<aside class="success">
+This building block is <strong><a href="https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/coverage_information_model/" target="_blank">valid</a></strong>
 </aside>
 
 # Description
@@ -210,11 +210,11 @@ This schema is to be reused in the coverageJSON building block.
     cis:domainSet [ a cis:DomainSetType ;
             cis:generalGrid [ a cis:GeneralGridCoverageType ;
                     cis:axis [ a cis:IndexAxisType ;
-                            cis:axisLabel "i" ;
+                            cis:axisLabel "j" ;
                             cis:lowerBound 0 ;
                             cis:upperBound 2 ],
                         [ a cis:IndexAxisType ;
-                            cis:axisLabel "j" ;
+                            cis:axisLabel "i" ;
                             cis:lowerBound 0 ;
                             cis:upperBound 2 ] ;
                     cis:axisLabels ( "i" "j" ) ;
@@ -237,21 +237,17 @@ This schema is to be reused in the coverageJSON building block.
 
 
 
-## JSON-LD encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html
+## JSON with Ids encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html
 
 
 
-```jsonld
+```json
 {
   "type": "CoverageByDomainAndRangeType",
-  "id": "examples:CIS_05_2D",
   "domainSet": {
-    "@context": "http://schemas.opengis.net/cis/1.1/json/domainset-context.json",
     "type": "DomainSetType",
-    "id": "examples:CIS_DS_05_2D",
     "generalGrid": {
       "type": "GeneralGridCoverageType",
-      "id": "examples:CIS_DS_GG_05_2D",
       "srsName": "http://www.opengis.net/def/crs/OGC/0/Index2D",
       "axisLabels": [
         "i",
@@ -260,14 +256,12 @@ This schema is to be reused in the coverageJSON building block.
       "axis": [
         {
           "type": "IndexAxisType",
-          "id": "examples:CIS_DS_GG_I_05_2D",
           "axisLabel": "i",
           "lowerBound": 0,
           "upperBound": 2
         },
         {
           "type": "IndexAxisType",
-          "id": "examples:CIS_DS_GG_J_05_2D",
           "axisLabel": "j",
           "lowerBound": 0,
           "upperBound": 2
@@ -276,24 +270,30 @@ This schema is to be reused in the coverageJSON building block.
     }
   },
   "rangeSet": {
-    "@context": "http://schemas.opengis.net/cis/1.1/json/rangeset-context.json",
     "type": "RangeSetType",
-    "id": "examples:CIS_RS_05_2D",
-    "dataBlock":{"type":"VDataBlockType","values":[1,2,3]},
-    "fileReference": ["http://myserver.com/fileref.tiff"]
+    "dataBlock": {
+      "type": "VDataBlockType",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
   },
   "rangeType": {
-    "@context": "http://schemas.opengis.net/cis/1.1/json/rangetype-context.json",
     "type": "DataRecordType",
-    "id": "examples:CIS_RT_05_2D",
     "field": [
       {
         "type": "QuantityType",
-        "id": "examples:CIS_RT_F_05_2D",
         "definition": "ogcType:unsignedInt",
         "uom": {
           "type": "UnitReference",
-          "id": "examples:CIS_RT_F_UOM_05_2D",
           "code": "10^0"
         }
       }
@@ -303,12 +303,121 @@ This schema is to be reused in the coverageJSON building block.
 
 ```
 
+<blockquote class="lang-specific json">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverage_information_model/example_2_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fogcincubator.github.io%2Filiad-apis-features%2Fbuild%2Ftests%2Fhosted%2Filiad%2Fapi%2Ffeatures%2Fcoverage_information_model%2Fexample_2_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+
+
+
+
+```jsonld
+{
+  "type": "CoverageByDomainAndRangeType",
+  "domainSet": {
+    "type": "DomainSetType",
+    "generalGrid": {
+      "type": "GeneralGridCoverageType",
+      "srsName": "http://www.opengis.net/def/crs/OGC/0/Index2D",
+      "axisLabels": [
+        "i",
+        "j"
+      ],
+      "axis": [
+        {
+          "type": "IndexAxisType",
+          "axisLabel": "i",
+          "lowerBound": 0,
+          "upperBound": 2
+        },
+        {
+          "type": "IndexAxisType",
+          "axisLabel": "j",
+          "lowerBound": 0,
+          "upperBound": 2
+        }
+      ]
+    }
+  },
+  "rangeSet": {
+    "type": "RangeSetType",
+    "dataBlock": {
+      "type": "VDataBlockType",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  },
+  "rangeType": {
+    "type": "DataRecordType",
+    "field": [
+      {
+        "type": "QuantityType",
+        "definition": "ogcType:unsignedInt",
+        "uom": {
+          "type": "UnitReference",
+          "code": "10^0"
+        }
+      }
+    ]
+  },
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld"
+}
+```
+
 <blockquote class="lang-specific jsonld">
   <p class="example-links">
     <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverage_information_model/example_2_1.jsonld">Open in new window</a>
     <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fogcincubator.github.io%2Filiad-apis-features%2Fbuild%2Ftests%2Fhosted%2Filiad%2Fapi%2Ffeatures%2Fcoverage_information_model%2Fexample_2_1.jsonld">View on JSON-LD Playground</a>
 </blockquote>
 
+
+
+
+```turtle
+@prefix cis: <http://www.opengis.net/cis/1.1/> .
+@prefix ogcType: <http://www.opengis.net/def/dataType/OGC/0/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix swe: <http://www.opengis.net/swe/2.0/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a cis:CoverageByDomainAndRangeType ;
+    cis:domainSet [ a cis:DomainSetType ;
+            cis:generalGrid [ a cis:GeneralGridCoverageType ;
+                    cis:axis [ a cis:IndexAxisType ;
+                            cis:axisLabel "j" ;
+                            cis:lowerBound 0 ;
+                            cis:upperBound 2 ],
+                        [ a cis:IndexAxisType ;
+                            cis:axisLabel "i" ;
+                            cis:lowerBound 0 ;
+                            cis:upperBound 2 ] ;
+                    cis:axisLabels ( "i" "j" ) ;
+                    cis:srsName <http://www.opengis.net/def/crs/OGC/0/Index2D> ] ] ;
+    cis:rangeSet [ a cis:RangeSetType ;
+            cis:dataBlock [ a cis:VDataBlockType ] ] ;
+    cis:rangeType [ a swe:DataRecordType ;
+            swe:field [ a swe:QuantityType ;
+                    swe:definition ogcType:unsignedInt ;
+                    swe:uom [ a swe:UnitReference ;
+                            swe:code "10^0" ] ] ] .
+
+
+```
+
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverage_information_model/example_2_1.ttl">Open in new window</a>
+</blockquote>
 
 
 

@@ -5,7 +5,7 @@
 
 Coverages represent homogeneous collections of values located in space/time, such as spatio-temporal sensor, image, simulation, and statistics data. Common examples include 1-D timeseries, 2-D imagery, 3-D x/y/t image timeseries and x/y/z geophysical voxel models, as well as 4-D x/y/z/t climate and ocean data. Generally, coverages encompass multi-dimen­sional regular and irregular grids, point clouds, and general meshes. This Coverage Implementation Schema (CIS) specifies the OGC coverage model by establishing a concrete, interoperable, conformance-testable coverage structure. It is based on the abstract concepts of OGC Abstract Topic 6 [1] (which is identical to ISO 19123) which spec­i­fies an abstract model which is not per se interoperable – in other words, many different and incompatible implementations of the abstract model are possible. CIS, on the other hand, is interoperable in the sense that coverages can be conformance tested, regardless of their data format encoding, down to the level of single pixels or voxels.Coverages can be encoded in any suitable format (such as GML, JSON, GeoTIFF, or Net­CDF) and can be partitioned, e.g., for a time-interleaved representation. Coverages are independent from service definitions and, therefore, can be accessed through a variety of OGC services types, such as the Web Coverage Service (WCS) Standard [8]. The coverage structure can serve a wide range of coverage application domains, thereby contributing to harmon­ization and interoperability between and across these domains.
 
-[*Status*](http://www.opengis.net/def/status): Invalid
+[*Status*](http://www.opengis.net/def/status): Under development
 
 ## Description
 
@@ -166,11 +166,11 @@ This schema is to be reused in the coverageJSON building block.
     cis:domainSet [ a cis:DomainSetType ;
             cis:generalGrid [ a cis:GeneralGridCoverageType ;
                     cis:axis [ a cis:IndexAxisType ;
-                            cis:axisLabel "i" ;
+                            cis:axisLabel "j" ;
                             cis:lowerBound 0 ;
                             cis:upperBound 2 ],
                         [ a cis:IndexAxisType ;
-                            cis:axisLabel "j" ;
+                            cis:axisLabel "i" ;
                             cis:lowerBound 0 ;
                             cis:upperBound 2 ] ;
                     cis:axisLabels ( "i" "j" ) ;
@@ -187,19 +187,15 @@ This schema is to be reused in the coverageJSON building block.
 ```
 
 
-### JSON-LD encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html
-#### jsonld
-```jsonld
+### JSON with Ids encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html
+#### json
+```json
 {
   "type": "CoverageByDomainAndRangeType",
-  "id": "examples:CIS_05_2D",
   "domainSet": {
-    "@context": "http://schemas.opengis.net/cis/1.1/json/domainset-context.json",
     "type": "DomainSetType",
-    "id": "examples:CIS_DS_05_2D",
     "generalGrid": {
       "type": "GeneralGridCoverageType",
-      "id": "examples:CIS_DS_GG_05_2D",
       "srsName": "http://www.opengis.net/def/crs/OGC/0/Index2D",
       "axisLabels": [
         "i",
@@ -208,14 +204,12 @@ This schema is to be reused in the coverageJSON building block.
       "axis": [
         {
           "type": "IndexAxisType",
-          "id": "examples:CIS_DS_GG_I_05_2D",
           "axisLabel": "i",
           "lowerBound": 0,
           "upperBound": 2
         },
         {
           "type": "IndexAxisType",
-          "id": "examples:CIS_DS_GG_J_05_2D",
           "axisLabel": "j",
           "lowerBound": 0,
           "upperBound": 2
@@ -224,24 +218,30 @@ This schema is to be reused in the coverageJSON building block.
     }
   },
   "rangeSet": {
-    "@context": "http://schemas.opengis.net/cis/1.1/json/rangeset-context.json",
     "type": "RangeSetType",
-    "id": "examples:CIS_RS_05_2D",
-    "dataBlock":{"type":"VDataBlockType","values":[1,2,3]},
-    "fileReference": ["http://myserver.com/fileref.tiff"]
+    "dataBlock": {
+      "type": "VDataBlockType",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
   },
   "rangeType": {
-    "@context": "http://schemas.opengis.net/cis/1.1/json/rangetype-context.json",
     "type": "DataRecordType",
-    "id": "examples:CIS_RT_05_2D",
     "field": [
       {
         "type": "QuantityType",
-        "id": "examples:CIS_RT_F_05_2D",
         "definition": "ogcType:unsignedInt",
         "uom": {
           "type": "UnitReference",
-          "id": "examples:CIS_RT_F_UOM_05_2D",
           "code": "10^0"
         }
       }
@@ -251,8 +251,97 @@ This schema is to be reused in the coverageJSON building block.
 
 ```
 
+#### jsonld
+```jsonld
+{
+  "type": "CoverageByDomainAndRangeType",
+  "domainSet": {
+    "type": "DomainSetType",
+    "generalGrid": {
+      "type": "GeneralGridCoverageType",
+      "srsName": "http://www.opengis.net/def/crs/OGC/0/Index2D",
+      "axisLabels": [
+        "i",
+        "j"
+      ],
+      "axis": [
+        {
+          "type": "IndexAxisType",
+          "axisLabel": "i",
+          "lowerBound": 0,
+          "upperBound": 2
+        },
+        {
+          "type": "IndexAxisType",
+          "axisLabel": "j",
+          "lowerBound": 0,
+          "upperBound": 2
+        }
+      ]
+    }
+  },
+  "rangeSet": {
+    "type": "RangeSetType",
+    "dataBlock": {
+      "type": "VDataBlockType",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  },
+  "rangeType": {
+    "type": "DataRecordType",
+    "field": [
+      {
+        "type": "QuantityType",
+        "definition": "ogcType:unsignedInt",
+        "uom": {
+          "type": "UnitReference",
+          "code": "10^0"
+        }
+      }
+    ]
+  },
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld"
+}
+```
+
 #### ttl
 ```ttl
+@prefix cis: <http://www.opengis.net/cis/1.1/> .
+@prefix ogcType: <http://www.opengis.net/def/dataType/OGC/0/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix swe: <http://www.opengis.net/swe/2.0/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a cis:CoverageByDomainAndRangeType ;
+    cis:domainSet [ a cis:DomainSetType ;
+            cis:generalGrid [ a cis:GeneralGridCoverageType ;
+                    cis:axis [ a cis:IndexAxisType ;
+                            cis:axisLabel "j" ;
+                            cis:lowerBound 0 ;
+                            cis:upperBound 2 ],
+                        [ a cis:IndexAxisType ;
+                            cis:axisLabel "i" ;
+                            cis:lowerBound 0 ;
+                            cis:upperBound 2 ] ;
+                    cis:axisLabels ( "i" "j" ) ;
+                    cis:srsName <http://www.opengis.net/def/crs/OGC/0/Index2D> ] ] ;
+    cis:rangeSet [ a cis:RangeSetType ;
+            cis:dataBlock [ a cis:VDataBlockType ] ] ;
+    cis:rangeType [ a swe:DataRecordType ;
+            swe:field [ a swe:QuantityType ;
+                    swe:definition ogcType:unsignedInt ;
+                    swe:uom [ a swe:UnitReference ;
+                            swe:code "10^0" ] ] ] .
 
 
 ```
