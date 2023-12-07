@@ -1,5 +1,5 @@
 {
-  "@context":"../context.jsonld",
+  "@context":"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld",
   "type": "CoverageByDomainAndRangeType",
   "id": "examples:CIS_05_2D",
   "domainSet": {
