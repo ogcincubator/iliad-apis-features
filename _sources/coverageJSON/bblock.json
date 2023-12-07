@@ -6,7 +6,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2023-12-07T13:00:00Z",
+  "dateOfLastChange": "2023-12-07",
   "link": "https://github.com/opengeospatial/CoverageJSON",
   "sources": [
     {
