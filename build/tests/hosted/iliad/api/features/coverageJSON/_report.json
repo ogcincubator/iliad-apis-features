@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.coverageJSON - OGC CoverageJSON",
   "bblockName": "OGC CoverageJSON",
   "bblockId": "ogc.hosted.iliad.api.features.coverageJSON",
-  "generated": "2023-12-07T12:49:04.156857+00:00",
+  "generated": "2023-12-07T14:00:38.402926+00:00",
   "result": false,
   "items": [
     {
@@ -93,7 +93,7 @@
         "snippetIndex": 1,
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "GENERAL",
@@ -121,11 +121,11 @@
             },
             {
               "op": "ttl-create",
-              "empty": true,
+              "empty": false,
               "filename": "example_2_1.ttl",
-              "size": 0,
-              "isError": true,
-              "message": "**Empty** output Turtle example_2_1.ttl created"
+              "size": 88,
+              "isError": false,
+              "message": "Output Turtle example_2_1.ttl created"
             }
           ]
         },
@@ -167,7 +167,7 @@
   "globalErrors": {},
   "counts": {
     "total": 2,
-    "passed": 0,
-    "failed": 2
+    "passed": 1,
+    "failed": 1
   }
 }

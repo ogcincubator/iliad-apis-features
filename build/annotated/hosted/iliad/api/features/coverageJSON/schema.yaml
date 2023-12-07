@@ -4,15 +4,131 @@ description: 'Component of OGC Coverage Implementation Schema 1.0. Last updated:
   Copyright (c) 2023 Open Geospatial Consortium, Inc. All Rights Reserved. To obtain
   additional rights of use, visit http://www.opengeospatial.org/legal/.'
 $ref: https://schemas.opengis.net/covjson/1.0/coveragejson.json
+x-jsonld-extra-terms:
+  id: '@id'
+  type: '@type'
+  value: '@value'
+  label:
+    x-jsonld-id: http://www.w3.org/2004/02/skos/core#prefLabel
+    x-jsonld-container: '@language'
+  title:
+    x-jsonld-id: http://purl.org/dc/terms/title
+    x-jsonld-container: '@language'
+  description:
+    x-jsonld-id: http://purl.org/dc/terms/description
+    x-jsonld-container: '@language'
+  unit: http://qudt.org/schema/qudt#unit
+  symbol: http://qudt.org/schema/qudt#symbol
+  Domain: https://covjson.org/def/core#Domain
+  domain: https://covjson.org/def/core#domain
+  domainType:
+    x-jsonld-id: https://covjson.org/def/core#domainType
+    x-jsonld-type: '@vocab'
+  axes:
+    x-jsonld-id: https://covjson.org/def/core#axis
+    x-jsonld-container: '@index'
+  dataType:
+    x-jsonld-id: https://covjson.org/def/core#dataType
+    x-jsonld-type: '@vocab'
+  primitive: https://covjson.org/def/core#primitive
+  tuple: https://covjson.org/def/core#tuple
+  polygon: https://covjson.org/def/core#polygon
+  num: https://covjson.org/def/core#num
+  start: https://covjson.org/def/core#start
+  stop: https://covjson.org/def/core#stop
+  referencing:
+    x-jsonld-id: https://covjson.org/def/core#referencing
+    x-jsonld-container: '@set'
+  components:
+    x-jsonld-id: https://covjson.org/def/core#components
+    x-jsonld-container: '@list'
+  system: https://covjson.org/def/core#referenceSystem
+  RS: https://covjson.org/def/core#ReferenceSystem
+  CRS: https://covjson.org/def/core#CoordinateReferenceSystem
+  cs: http://data.ign.fr/def/ignf#coordinateSystem
+  CS: http://data.ign.fr/def/ignf#CoordinateSystem
+  TemporalRS: http://inspire.ec.europa.eu/glossary/TemporalReferenceSystem
+  TemporalCRS: https://covjson.org/def/core#TemporalCRS
+  calendar:
+    x-jsonld-id: https://covjson.org/def/core#calendar
+    x-jsonld-type: '@vocab'
+  Gregorian: http://www.opengis.net/def/uom/ISO-8601/0/Gregorian
+  timeScale: https://covjson.org/def/core#timeScale
+  SpatialRS: http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem
+  SpatialCRS: http://data.ign.fr/def/ignf#CRS
+  GeodeticCRS: http://data.ign.fr/def/ignf#GeodeticCRS
+  ProjectedCRS: http://data.ign.fr/def/ignf#ProjectedCRS
+  VerticalCRS: http://data.ign.fr/def/ignf#VerticalCRS
+  datum: http://data.ign.fr/def/ignf#datum
+  csAxes:
+    x-jsonld-id: https://covjson.org/def/core#coordinateSystemAxes
+    x-jsonld-container: '@list'
+  direction: http://data.ign.fr/def/ignf#axisDirection
+  IdentifierRS: https://covjson.org/def/core#IdentifierReferenceSystem
+  targetConcept: https://covjson.org/def/core#targetConcept
+  identifiers:
+    x-jsonld-id: https://covjson.org/def/core#identifier
+    x-jsonld-type: '@id'
+    x-jsonld-container: '@index'
+  Parameter: https://covjson.org/def/core#Parameter
+  parameters:
+    x-jsonld-id: https://covjson.org/def/core#parameter
+    x-jsonld-type: '@id'
+    x-jsonld-container: '@index'
+  observedProperty: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#observedProperty
+  categoryEncoding: https://covjson.org/def/core#categoryEncoding
+  ParameterGroup: https://covjson.org/def/core#ParameterGroup
+  members:
+    x-jsonld-id: https://covjson.org/def/core#member
+    x-jsonld-type: '@vocab'
+    x-jsonld-container: '@set'
+  ranges:
+    x-jsonld-id: https://covjson.org/def/core#range
+    x-jsonld-type: '@id'
+    x-jsonld-container: '@index'
+  NdArray: https://covjson.org/def/core#NdArray
+  TiledNdArray: https://covjson.org/def/core#TiledNdArray
+  shape:
+    x-jsonld-id: https://covjson.org/def/core#shape
+    x-jsonld-container: '@list'
+  tileShape:
+    x-jsonld-id: https://covjson.org/def/core#tileShape
+    x-jsonld-container: '@list'
+  axisNames:
+    x-jsonld-id: https://covjson.org/def/core#axisNames
+    x-jsonld-container: '@list'
+  urlTemplate: https://covjson.org/def/core#urlTemplate
+  tileSets:
+    x-jsonld-id: https://covjson.org/def/core#tileSet
+    x-jsonld-container: '@set'
+  float: http://www.w3.org/2001/XMLSchema#double
+  integer: http://www.w3.org/2001/XMLSchema#integer
+  string: http://www.w3.org/2001/XMLSchema#string
+  Coverage: https://covjson.org/def/core#Coverage
+  coverages:
+    x-jsonld-id: http://www.w3.org/ns/hydra/core#member
+    x-jsonld-container: '@set'
+  CoverageCollection: https://covjson.org/def/core#CoverageCollection
+  Grid: https://covjson.org/def/domainTypes#Grid
+  VerticalProfile: https://covjson.org/def/domainTypes#VerticalProfile
+  MultiPointSeries: https://covjson.org/def/domainTypes#MultiPointSeries
+  MultiPoint: https://covjson.org/def/domainTypes#MultiPoint
+  PointSeries: https://covjson.org/def/domainTypes#PointSeries
+  Point: https://covjson.org/def/domainTypes#Point
+  Trajectory: https://covjson.org/def/domainTypes#Trajectory
+  Section: https://covjson.org/def/domainTypes#Section
+  MultiPolygonSeries: https://covjson.org/def/domainTypes#MultiPolygonSeries
+  MultiPolygon: https://covjson.org/def/domainTypes#MultiPolygon
+  Polygon: https://covjson.org/def/domainTypes#Polygon
 x-jsonld-prefixes:
-  covjson: https://covjson.org/def/core#
-  covjsondt: https://covjson.org/def/domainTypes#
-  xsd: http://www.w3.org/2001/XMLSchema#
-  ssn: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#
   skos: http://www.w3.org/2004/02/skos/core#
   dct: http://purl.org/dc/terms/
-  hydra: http://www.w3.org/ns/hydra/core#
   qudt: http://qudt.org/schema/qudt#
+  covjson: https://covjson.org/def/core#
   ignf: http://data.ign.fr/def/ignf#
   inspiregloss: http://inspire.ec.europa.eu/glossary/
+  ssn: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  hydra: http://www.w3.org/ns/hydra/core#
+  covjsondt: https://covjson.org/def/domainTypes#
   rel: http://www.iana.org/assignments/relation/

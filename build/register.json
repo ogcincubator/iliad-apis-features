@@ -150,8 +150,8 @@
       },
       "dependsOn": [
         "ogc.unstable.sosa.features.observation",
-        "ogc.ogc-utils.iri-or-curie",
         "ogc.unstable.sosa.properties.observation",
+        "ogc.ogc-utils.iri-or-curie",
         "ogc.unstable.sosa.features.observationCollection"
       ],
       "schema": {
@@ -270,8 +270,8 @@
         ]
       },
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.hosted.iliad.api.features.oim-obs-cs"
+        "ogc.hosted.iliad.api.features.oim-obs-cs",
+        "ogc.ogc-utils.iri-or-curie"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema.yaml",
