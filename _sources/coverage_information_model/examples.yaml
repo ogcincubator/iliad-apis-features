@@ -4,11 +4,11 @@
     - language: json
       ref: examples/example.json
 
-- title: JSON-LD encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html
+- title: JSON with Ids encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html
   base-uri: http://w3id.org/ogcincubator/cis/
   snippets:
-    - language: jsonld
-      ref: examples/example.jsonld
+    - language: json
+      ref: examples/example.json
 
 
 - title: RDF encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html
