@@ -1,6 +1,9 @@
 ---
 title: OGC CoverageJSON (Schema)
 
+language_tabs:
+  - json: JSON
+  - jsonld: JSON-LD
 
 toc_footers:
   - Version 0.1
@@ -53,7 +56,7 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 
 
 
-```jsonld
+```json
 {
   "@id":"CoverageCollection of Multipoints",
   "type" : "CoverageCollection",
@@ -220,6 +223,263 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 
 ```
 
+<blockquote class="lang-specific json">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverageJSON/example_1_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fogcincubator.github.io%2Filiad-apis-features%2Fbuild%2Ftests%2Fhosted%2Filiad%2Fapi%2Ffeatures%2FcoverageJSON%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+
+
+
+
+```jsonld
+{
+  "@id": "CoverageCollection of Multipoints",
+  "type": "CoverageCollection",
+  "domainType": "MultiPoint",
+  "parameters": {
+    "diameter": {
+      "@id": "diameter definition",
+      "type": "Parameter",
+      "description": {
+        "en": "particle diameter"
+      },
+      "unit": {
+        "label": {
+          "en": "nanometers"
+        },
+        "symbol": {
+          "value": "nm",
+          "type": "http://www.opengis.net/def/uom/UCUM/"
+        }
+      },
+      "observedProperty": {
+        "id": "https://qudt.org/vocab/unit/NanoM",
+        "label": {
+          "en": "0.000000001-fold of the SI base unit metre"
+        }
+      }
+    },
+    "particle_class": {
+      "type": "Parameter",
+      "observedProperty": {
+        "id": "http://example.com/particletypes",
+        "label": {
+          "en": "Particle class"
+        },
+        "categories": [
+          {
+            "id": "http://example.com/particletypes/0",
+            "label": {
+              "en": "Oil droplet"
+            }
+          },
+          {
+            "id": "http://example.com/particletypes/1",
+            "label": {
+              "en": "Microplastic"
+            }
+          },
+          {
+            "id": "http://example.com/particletypes/2",
+            "label": {
+              "en": "Codepod"
+            }
+          }
+        ]
+      },
+      "categoryEncoding": {
+        "http://mmisw.org/ont/argo/qualityFlag/_0": 0,
+        "http://mmisw.org/ont/argo/qualityFlag/_1": 1,
+        "http://mmisw.org/ont/argo/qualityFlag/_4": 2
+      }
+    }
+  },
+  "referencing": [
+    {
+      "coordinates": [
+        "x",
+        "y"
+      ],
+      "system": {
+        "type": "GeographicCRS",
+        "id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+      }
+    },
+    {
+      "coordinates": [
+        "z"
+      ],
+      "system": {
+        "type": "VerticalCRS",
+        "cs": {
+          "csAxes": [
+            {
+              "name": {
+                "en": "Pressure"
+              },
+              "direction": "down",
+              "unit": {
+                "symbol": "Pa"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "coordinates": [
+        "t"
+      ],
+      "system": {
+        "type": "TemporalRS",
+        "calendar": "Gregorian"
+      }
+    }
+  ],
+  "domain": {
+    "type": "Domain",
+    "axes": {
+      "t": {
+        "values": [
+          "2008-01-01T04:00:00Z",
+          "2008-01-02T04:00:00Z"
+        ]
+      }
+    }
+  },
+  "coverages": [
+    {
+      "type": "Coverage",
+      "domain": {
+        "type": "Domain",
+        "axes": {
+          "t": {
+            "values": [
+              "2008-01-01T04:00:00Z"
+            ]
+          },
+          "composite": {
+            "dataType": "tuple",
+            "coordinates": [
+              "x",
+              "y",
+              "z"
+            ],
+            "values": [
+              [
+                1,
+                20,
+                1
+              ],
+              [
+                2,
+                21,
+                3
+              ]
+            ]
+          }
+        }
+      },
+      "ranges": {
+        "POTM": {
+          "type": "NdArray",
+          "dataType": "float",
+          "shape": [
+            2
+          ],
+          "axisNames": [
+            "composite"
+          ],
+          "values": [
+            23.8,
+            23.8
+          ]
+        },
+        "particle_class": {
+          "type": "NdArray",
+          "dataType": "integer",
+          "shape": [
+            2
+          ],
+          "axisNames": [
+            "composite"
+          ],
+          "values": [
+            1,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "type": "Coverage",
+      "domain": {
+        "type": "Domain",
+        "axes": {
+          "t": {
+            "values": [
+              "2008-01-02T04:00:00Z"
+            ]
+          },
+          "composite": {
+            "dataType": "tuple",
+            "coordinates": [
+              "x",
+              "y",
+              "z"
+            ],
+            "values": [
+              [
+                1,
+                20,
+                1
+              ],
+              [
+                2,
+                21,
+                3
+              ]
+            ]
+          }
+        }
+      },
+      "ranges": {
+        "POTM": {
+          "type": "NdArray",
+          "dataType": "float",
+          "shape": [
+            2
+          ],
+          "axisNames": [
+            "composite"
+          ],
+          "values": [
+            23.8,
+            23.8
+          ]
+        },
+        "particle_class": {
+          "type": "NdArray",
+          "dataType": "integer",
+          "shape": [
+            2
+          ],
+          "axisNames": [
+            "composite"
+          ],
+          "values": [
+            1,
+            2
+          ]
+        }
+      }
+    }
+  ],
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/context.jsonld"
+}
+```
+
 <blockquote class="lang-specific jsonld">
   <p class="example-links">
     <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverageJSON/example_1_1.jsonld">Open in new window</a>
@@ -233,7 +493,7 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 
 
 
-```jsonld
+```json
 {
   "type" : "CoverageCollection",
   "domainType" : "MultiPoint",
@@ -396,6 +656,262 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
   ]
 }
 
+```
+
+<blockquote class="lang-specific json">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverageJSON/example_2_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fogcincubator.github.io%2Filiad-apis-features%2Fbuild%2Ftests%2Fhosted%2Filiad%2Fapi%2Ffeatures%2FcoverageJSON%2Fexample_2_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+
+
+
+
+```jsonld
+{
+  "type": "CoverageCollection",
+  "domainType": "MultiPoint",
+  "parameters": {
+    "diameter": {
+      "type": "Parameter",
+      "description": {
+        "en": "particle diameter"
+      },
+      "unit": {
+        "label": {
+          "en": "nanometers"
+        },
+        "symbol": {
+          "value": "nm",
+          "type": "http://www.opengis.net/def/uom/UCUM/"
+        }
+      },
+      "observedProperty": {
+        "id": "https://qudt.org/vocab/unit/NanoM",
+        "label": {
+          "en": "0.000000001-fold of the SI base unit metre"
+        }
+      }
+    },
+    "particle_class": {
+      "type": "Parameter",
+      "observedProperty": {
+        "id": "http://example.com/particletypes",
+        "label": {
+          "en": "Particle class"
+        },
+        "categories": [
+          {
+            "id": "http://example.com/particletypes/0",
+            "label": {
+              "en": "Oil droplet"
+            }
+          },
+          {
+            "id": "http://example.com/particletypes/1",
+            "label": {
+              "en": "Microplastic"
+            }
+          },
+          {
+            "id": "http://example.com/particletypes/2",
+            "label": {
+              "en": "Codepod"
+            }
+          }
+        ]
+      },
+      "categoryEncoding": {
+        "http://mmisw.org/ont/argo/qualityFlag/_0": 0,
+        "http://mmisw.org/ont/argo/qualityFlag/_1": 1,
+        "http://mmisw.org/ont/argo/qualityFlag/_4": 2
+      }
+    }
+  },
+  "referencing": [
+    {
+      "coordinates": [
+        "x",
+        "y"
+      ],
+      "system": {
+        "type": "GeographicCRS",
+        "id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+      }
+    },
+    {
+      "coordinates": [
+        "z"
+      ],
+      "system": {
+        "type": "VerticalCRS",
+        "cs": {
+          "csAxes": [
+            {
+              "name": {
+                "en": "Pressure"
+              },
+              "direction": "down",
+              "unit": {
+                "symbol": "Pa"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "coordinates": [
+        "t"
+      ],
+      "system": {
+        "type": "TemporalRS",
+        "calendar": "Gregorian"
+      }
+    }
+  ],
+  "domain": {
+    "type": "Domain",
+    "axes": {
+      "t": {
+        "values": [
+          "2008-01-01T04:00:00Z",
+          "2008-01-02T04:00:00Z"
+        ]
+      }
+    }
+  },
+  "coverages": [
+    {
+      "type": "Coverage",
+      "domain": {
+        "type": "Domain",
+        "axes": {
+          "t": {
+            "values": [
+              "2008-01-01T04:00:00Z"
+            ]
+          },
+          "composite": {
+            "dataType": "tuple",
+            "coordinates": [
+              "x",
+              "y",
+              "z"
+            ],
+            "values": [
+              [
+                1,
+                20,
+                1
+              ],
+              [
+                2,
+                21,
+                3
+              ]
+            ]
+          }
+        }
+      },
+      "ranges": {
+        "POTM": {
+          "@id": "POTM_range",
+          "type": "NdArray",
+          "dataType": "float",
+          "shape": [
+            2
+          ],
+          "axisNames": [
+            "composite"
+          ],
+          "values": [
+            23.8,
+            23.8
+          ]
+        },
+        "particle_class": {
+          "type": "NdArray",
+          "dataType": "integer",
+          "shape": [
+            2
+          ],
+          "axisNames": [
+            "composite"
+          ],
+          "values": [
+            1,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "type": "Coverage",
+      "domain": {
+        "type": "Domain",
+        "axes": {
+          "t": {
+            "values": [
+              "2008-01-02T04:00:00Z"
+            ]
+          },
+          "composite": {
+            "dataType": "tuple",
+            "coordinates": [
+              "x",
+              "y",
+              "z"
+            ],
+            "values": [
+              [
+                1,
+                20,
+                1
+              ],
+              [
+                2,
+                21,
+                3
+              ]
+            ]
+          }
+        }
+      },
+      "ranges": {
+        "POTM": {
+          "type": "NdArray",
+          "dataType": "float",
+          "shape": [
+            2
+          ],
+          "axisNames": [
+            "composite"
+          ],
+          "values": [
+            23.8,
+            23.8
+          ]
+        },
+        "particle_class": {
+          "type": "NdArray",
+          "dataType": "integer",
+          "shape": [
+            2
+          ],
+          "axisNames": [
+            "composite"
+          ],
+          "values": [
+            1,
+            2
+          ]
+        }
+      }
+    }
+  ],
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/context.jsonld"
+}
 ```
 
 <blockquote class="lang-specific jsonld">

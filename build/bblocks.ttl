@@ -11,12 +11,12 @@ bblocks:ogc.hosted.iliad.api.features.coverageJSON a skos:Concept,
     rdfs:label "OGC CoverageJSON" ;
     dct:abstract "Based on JavaScript Object Notation (JSON), CoverageJSON is a format for publishing spatiotemporal data to the Web. The primary design goals are simplicity, machine and human readability and efficiency. While other use cases are possible, the primary CoverageJSON use case is enabling the development of interactive visual websites that display and manipulate environmental data within a web browser." ;
     dct:created "2023-12-01T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverageJSON/index.md" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverageJSON/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/coverageJSON/" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/coverageJSON/" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverageJSON/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-12-07"^^xsd:date ;
     dct:source <https://docs.ogc.org/cs/21-069r2/21-069r2.html>,
@@ -79,12 +79,12 @@ bblocks:ogc.hosted.iliad.api.features.oim-obs a skos:Concept,
     rdfs:label "OIM Observations" ;
     dct:abstract "Defines observations and collections to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model." ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/oim-obs/" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/oim-obs/" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2023-04-05"^^xsd:date ;
     dct:source <https://example.com/sources/1> ;
@@ -130,14 +130,14 @@ bblocks:ogc.hosted.iliad.api.features.oim-obs-cs a skos:Concept,
     skos:prefLabel "OGC Building Blocks Register" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2023-12-07T12:45:46.990991"^^xsd:dateTime ;
-    prov:startedAtTime "2023-12-07T12:45:46.923786"^^xsd:dateTime ;
+    prov:endedAtTime "2023-12-07T12:49:05.799545"^^xsd:dateTime ;
+    prov:startedAtTime "2023-12-07T12:49:05.732221"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/json" ;
-            rdfs:seeAlso <https://ogcincubator.github.io/iliad-apis-features/build/register.json> ],
-        [ a prov:Entity ;
             dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+        [ a prov:Entity ;
+            dct:format "application/json" ;
+            rdfs:seeAlso <https://ogcincubator.github.io/iliad-apis-features/build/register.json> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
