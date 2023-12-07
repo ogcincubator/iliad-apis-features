@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.coverageJSON - OGC CoverageJSON",
   "bblockName": "OGC CoverageJSON",
   "bblockId": "ogc.hosted.iliad.api.features.coverageJSON",
-  "generated": "2023-12-07T12:37:51.607173+00:00",
+  "generated": "2023-12-07T12:45:44.669929+00:00",
   "result": false,
   "items": [
     {
@@ -45,11 +45,9 @@
           "entries": [
             {
               "op": "validation",
-              "result": false,
-              "exception": "ValidationError",
-              "errorMessage": "'parametersSet' is not of type 'object'",
-              "isError": true,
-              "message": "ValidationError: 'parametersSet' is not of type 'object'\n\nFailed validating 'type' in schema['allOf'][4]['then']['properties']['parameters']['patternProperties']['.+']:\n    {'description': 'Represents metadata about the values of the coverage',\n     'properties': {'categoryEncoding': {'description': 'Maps IDs of '\n                                                        'categories in the '\n                                                        'observedProperty '\n                                                        'to range values',\n                                         'patternProperties': {'.+': {'oneOf': [{'type': 'integer'},\n                                                                                {'items': {'type': 'integer'},\n                                                                                 'minItems': 1,\n                                                                                 'type': 'array',\n                                                                                 'uniqueItems': True}]}},\n                                         'type': 'object'},\n                    'description': {'$ref': '#/definitions/i18n'},\n                    'id': {'type': 'string'},\n                    'observedProperty': {'$ref': '#/definitions/observedProperty'},\n                    'type': {'const': 'Parameter',\n                             'description': 'Type of the parameter object, '\n                                            'must be \"Parameter\"'},\n                    'unit': {'$ref': '#/definitions/unit'}},\n     'required': ['type', 'observedProperty'],\n     'type': 'object'}\n\nOn instance['parameters']['@id']:\n    'parametersSet'"
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
             }
           ]
         },

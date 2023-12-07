@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.coverageJSON - OGC CoverageJSON
-Generated 2023-12-07T12:37:51.600645+00:00
+Generated 2023-12-07T12:45:44.663709+00:00
 === Files ===
 Using example_1_1.jsonld from examples
 
@@ -8,33 +8,6 @@ Using example_1_1.jsonld from examples
 === End Files ===
 
 === JSON Schema ===
-
-** Validation error **
-ValidationError: 'parametersSet' is not of type 'object'
-
-Failed validating 'type' in schema['allOf'][4]['then']['properties']['parameters']['patternProperties']['.+']:
-    {'description': 'Represents metadata about the values of the coverage',
-     'properties': {'categoryEncoding': {'description': 'Maps IDs of '
-                                                        'categories in the '
-                                                        'observedProperty '
-                                                        'to range values',
-                                         'patternProperties': {'.+': {'oneOf': [{'type': 'integer'},
-                                                                                {'items': {'type': 'integer'},
-                                                                                 'minItems': 1,
-                                                                                 'type': 'array',
-                                                                                 'uniqueItems': True}]}},
-                                         'type': 'object'},
-                    'description': {'$ref': '#/definitions/i18n'},
-                    'id': {'type': 'string'},
-                    'observedProperty': {'$ref': '#/definitions/observedProperty'},
-                    'type': {'const': 'Parameter',
-                             'description': 'Type of the parameter object, '
-                                            'must be "Parameter"'},
-                    'unit': {'$ref': '#/definitions/unit'}},
-     'required': ['type', 'observedProperty'],
-     'type': 'object'}
-
-On instance['parameters']['@id']:
-    'parametersSet'
+Validation passed
 === End JSON Schema ===
 

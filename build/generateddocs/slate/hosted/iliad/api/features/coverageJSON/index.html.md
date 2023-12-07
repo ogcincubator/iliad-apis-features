@@ -60,7 +60,6 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
   "domainType" : "MultiPoint",
 
   "parameters" : {
-    "@id": "parametersSet",
     "diameter": {
       "@id": "diameter definition",
       "type" : "Parameter",
@@ -394,7 +393,7 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
     }
   }
   }
-              ],"@id":"queryfromcollection"
+  ]
 }
 
 ```
