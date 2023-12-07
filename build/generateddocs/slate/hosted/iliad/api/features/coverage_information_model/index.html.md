@@ -243,7 +243,6 @@ This schema is to be reused in the coverageJSON building block.
 
 ```jsonld
 {
-  "@context":"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld",
   "type": "CoverageByDomainAndRangeType",
   "id": "examples:CIS_05_2D",
   "domainSet": {
@@ -309,6 +308,7 @@ This schema is to be reused in the coverageJSON building block.
     <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverage_information_model/example_2_1.jsonld">Open in new window</a>
     <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fogcincubator.github.io%2Filiad-apis-features%2Fbuild%2Ftests%2Fhosted%2Filiad%2Fapi%2Ffeatures%2Fcoverage_information_model%2Fexample_2_1.jsonld">View on JSON-LD Playground</a>
 </blockquote>
+
 
 
 

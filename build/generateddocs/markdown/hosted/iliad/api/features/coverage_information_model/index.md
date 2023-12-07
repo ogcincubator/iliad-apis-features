@@ -191,7 +191,6 @@ This schema is to be reused in the coverageJSON building block.
 #### jsonld
 ```jsonld
 {
-  "@context":"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld",
   "type": "CoverageByDomainAndRangeType",
   "id": "examples:CIS_05_2D",
   "domainSet": {
@@ -249,6 +248,12 @@ This schema is to be reused in the coverageJSON building block.
     ]
   }
 }
+
+```
+
+#### ttl
+```ttl
+
 
 ```
 

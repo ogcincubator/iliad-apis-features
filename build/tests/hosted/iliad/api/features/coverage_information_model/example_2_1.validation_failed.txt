@@ -1,66 +1,13 @@
 Validation report for ogc.hosted.iliad.api.features.coverage_information_model - OGC Coverage Implementation Schema
-Generated 2023-12-07T11:54:02.701921+00:00
+Generated 2023-12-07T12:02:03.445300+00:00
 === Files ===
 Using example_2_1.jsonld from examples
-=== End Files ===
-
-=== Unknown errors ===
 
 ** Validation error **
-Traceback (most recent call last):
-,  File "/src/ogc/bblocks/validate.py", line 606, in _validate_resource
-    validate_inner()
-,  File "/src/ogc/bblocks/validate.py", line 405, in validate_inner
-    graph = Graph().parse(data=json_doc, format='json-ld', base=base_uri)
-,  File "/venv/lib/python3.10/site-packages/rdflib/graph.py", line 1494, in parse
-    parser.parse(source, self, **args)
-,  File "/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py", line 119, in parse
-    to_rdf(data, conj_sink, base, context_data, version, generalized_rdf)
-,  File "/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py", line 138, in to_rdf
-    return parser.parse(data, context, dataset)
-,  File "/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py", line 177, in parse
-    self._add_to_graph(dataset, graph, context, node, topcontext)
-,  File "/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py", line 238, in _add_to_graph
-    self._key_to_graph(dataset, graph, context, subj, key, obj, no_id=no_id)
-,  File "/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py", line 364, in _key_to_graph
-    obj = self._to_object(dataset, graph, context, term, obj_node)
-,  File "/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py", line 532, in _to_object
-    return self._add_to_graph(dataset, graph, context, node)
-,  File "/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py", line 196, in _add_to_graph
-    context = context.subcontext(local_context)
-,  File "/venv/lib/python3.10/site-packages/rdflib/plugins/shared/jsonld/context.py", line 118, in subcontext
-    return parent._subcontext(source, propagate)  # type: ignore[union-attr]
-,  File "/venv/lib/python3.10/site-packages/rdflib/plugins/shared/jsonld/context.py", line 133, in _subcontext
-    ctx.load(source)
-,  File "/venv/lib/python3.10/site-packages/rdflib/plugins/shared/jsonld/context.py", line 401, in load
-    self._prep_sources(base, source, sources, referenced_contexts)
-,  File "/venv/lib/python3.10/site-packages/rdflib/plugins/shared/jsonld/context.py", line 430, in _prep_sources
-    new_ctx = self._fetch_context(
-,  File "/venv/lib/python3.10/site-packages/rdflib/plugins/shared/jsonld/context.py", line 472, in _fetch_context
-    source = source_to_json(source_url)  # type: ignore[assignment]
-,  File "/venv/lib/python3.10/site-packages/rdflib/plugins/shared/jsonld/util.py", line 44, in source_to_json
-    source = create_input_source(source, format="json-ld")
-,  File "/venv/lib/python3.10/site-packages/rdflib/parser.py", line 416, in create_input_source
-    ) = _create_input_source_from_location(
-,  File "/venv/lib/python3.10/site-packages/rdflib/parser.py", line 478, in _create_input_source_from_location
-    input_source = URLInputSource(absolute_location, format)
-,  File "/venv/lib/python3.10/site-packages/rdflib/parser.py", line 285, in __init__
-    response: addinfourl = _urlopen(req)
-,  File "/venv/lib/python3.10/site-packages/rdflib/parser.py", line 272, in _urlopen
-    return urlopen(req)
-,  File "/usr/local/lib/python3.10/urllib/request.py", line 216, in urlopen
-    return opener.open(url, data, timeout)
-,  File "/usr/local/lib/python3.10/urllib/request.py", line 525, in open
-    response = meth(req, response)
-,  File "/usr/local/lib/python3.10/urllib/request.py", line 634, in http_response
-    response = self.parent.error(
-,  File "/usr/local/lib/python3.10/urllib/request.py", line 563, in error
-    return self._call_chain(*args)
-,  File "/usr/local/lib/python3.10/urllib/request.py", line 496, in _call_chain
-    result = func(*args)
-,  File "/usr/local/lib/python3.10/urllib/request.py", line 643, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-,urllib.error.HTTPError: HTTP Error 404: Not Found
+**Empty** output Turtle example_2_1.ttl created
+=== End Files ===
 
-=== End Unknown errors ===
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
 

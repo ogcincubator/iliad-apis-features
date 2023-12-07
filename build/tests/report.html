@@ -26,7 +26,7 @@
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2023-12-07T11:54:04.132159+00:00</small>
+            <small class="datetime">Generated at 2023-12-07T12:02:04.373048+00:00</small>
                 <p class="summary fw-semibold text-danger">
                     Number of passing building blocks: 3 / 4 (75%)
                 </p>
@@ -54,73 +54,6 @@
                                         <p class="summary fw-semibold text-danger">
                                             Test passed: 2 / 3
                                         </p>
-                                        <div class="card mb-2 global-validation-item validation-item">
-                                            <div class="card-body">
-                                                <div class="card-title">
-                                                    Building block global validation errors
-                                                    <div class="float-end">
-                                                        <span class="badge text-bg-danger me-2">Failed</span>
-                                                    </div>
-                                                </div>
-                                                <div class="card-text text-danger">
-                                                        <div class="font-monospace entry-message section-unknown">Traceback (most recent call last):
-,  File &quot;/src/ogc/bblocks/validate.py&quot;, line 606, in _validate_resource
-    validate_inner()
-,  File &quot;/src/ogc/bblocks/validate.py&quot;, line 405, in validate_inner
-    graph = Graph().parse(data=json_doc, format=&#x27;json-ld&#x27;, base=base_uri)
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/graph.py&quot;, line 1494, in parse
-    parser.parse(source, self, **args)
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py&quot;, line 119, in parse
-    to_rdf(data, conj_sink, base, context_data, version, generalized_rdf)
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py&quot;, line 138, in to_rdf
-    return parser.parse(data, context, dataset)
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py&quot;, line 177, in parse
-    self._add_to_graph(dataset, graph, context, node, topcontext)
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py&quot;, line 238, in _add_to_graph
-    self._key_to_graph(dataset, graph, context, subj, key, obj, no_id=no_id)
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py&quot;, line 364, in _key_to_graph
-    obj = self._to_object(dataset, graph, context, term, obj_node)
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py&quot;, line 532, in _to_object
-    return self._add_to_graph(dataset, graph, context, node)
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py&quot;, line 196, in _add_to_graph
-    context = context.subcontext(local_context)
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/plugins/shared/jsonld/context.py&quot;, line 118, in subcontext
-    return parent._subcontext(source, propagate)  # type: ignore[union-attr]
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/plugins/shared/jsonld/context.py&quot;, line 133, in _subcontext
-    ctx.load(source)
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/plugins/shared/jsonld/context.py&quot;, line 401, in load
-    self._prep_sources(base, source, sources, referenced_contexts)
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/plugins/shared/jsonld/context.py&quot;, line 430, in _prep_sources
-    new_ctx = self._fetch_context(
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/plugins/shared/jsonld/context.py&quot;, line 472, in _fetch_context
-    source = source_to_json(source_url)  # type: ignore[assignment]
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/plugins/shared/jsonld/util.py&quot;, line 44, in source_to_json
-    source = create_input_source(source, format=&quot;json-ld&quot;)
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/parser.py&quot;, line 416, in create_input_source
-    ) = _create_input_source_from_location(
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/parser.py&quot;, line 478, in _create_input_source_from_location
-    input_source = URLInputSource(absolute_location, format)
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/parser.py&quot;, line 285, in __init__
-    response: addinfourl = _urlopen(req)
-,  File &quot;/venv/lib/python3.10/site-packages/rdflib/parser.py&quot;, line 272, in _urlopen
-    return urlopen(req)
-,  File &quot;/usr/local/lib/python3.10/urllib/request.py&quot;, line 216, in urlopen
-    return opener.open(url, data, timeout)
-,  File &quot;/usr/local/lib/python3.10/urllib/request.py&quot;, line 525, in open
-    response = meth(req, response)
-,  File &quot;/usr/local/lib/python3.10/urllib/request.py&quot;, line 634, in http_response
-    response = self.parent.error(
-,  File &quot;/usr/local/lib/python3.10/urllib/request.py&quot;, line 563, in error
-    return self._call_chain(*args)
-,  File &quot;/usr/local/lib/python3.10/urllib/request.py&quot;, line 496, in _call_chain
-    result = func(*args)
-,  File &quot;/usr/local/lib/python3.10/urllib/request.py&quot;, line 643, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-,urllib.error.HTTPError: HTTP Error 404: Not Found
-</div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
                                                 <div class="card-title mb-0">
@@ -139,7 +72,6 @@
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-1">
                                                     <div class="validation-text-inner">
-                                                            <div class="font-monospace entry-message text-danger">Note: Test failed because there are global validation errors.</div>
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
                                                                     <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
@@ -169,9 +101,11 @@
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-2">
                                                     <div class="validation-text-inner">
-                                                            <div class="font-monospace entry-message text-danger">Note: Test failed because there are global validation errors.</div>
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_2_1.jsonld from examples</div>
+                                                                    <div class="font-monospace entry-message section-files text-danger">**Empty** output Turtle example_2_1.ttl created</div>
+                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                    <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -194,7 +128,6 @@
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-3">
                                                     <div class="validation-text-inner">
-                                                            <div class="font-monospace entry-message text-danger">Note: Test failed because there are global validation errors.</div>
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_3_1.ttl from examples</div>
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle example_3_1.ttl created</div>
@@ -302,12 +235,12 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
 </div>
                                                     </div>
                                                 </div>
@@ -344,19 +277,19 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/oim-obs/rules.shacl:
- - Shape :force-linked-data-observedProperty: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,_:Na65ef8957779488eb343098be7c4ae81,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
+ - Shape :force-linked-data-observedProperty: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;,_:Nd9d0d509b34146468f4f29f7a5b61346
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
 </div>
                                                     </div>
                                                 </div>
@@ -396,12 +329,12 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
 </div>
                                                     </div>
                                                 </div>
