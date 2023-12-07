@@ -1,0 +1,72 @@
+{
+  "@context": [
+    {
+      "examples": "http://www.opengis.net/cis/1.1/examples/"
+    }
+  ],
+  "type": "CoverageByDomainAndRangeType",
+  "id": "examples:CIS_05_2D",
+  "domainSet": {
+    "@context": "http://schemas.opengis.net/cis/1.1/json/domainset-context.json",
+    "type": "DomainSetType",
+    "id": "examples:CIS_DS_05_2D",
+    "generalGrid": {
+      "type": "GeneralGridCoverageType",
+      "id": "examples:CIS_DS_GG_05_2D",
+      "srsName": "http://www.opengis.net/def/crs/OGC/0/Index2D",
+      "axisLabels": [
+        "i",
+        "j"
+      ],
+      "axis": [
+        {
+          "type": "IndexAxisType",
+          "id": "examples:CIS_DS_GG_I_05_2D",
+          "axisLabel": "i",
+          "lowerBound": 0,
+          "upperBound": 2
+        },
+        {
+          "type": "IndexAxisType",
+          "id": "examples:CIS_DS_GG_J_05_2D",
+          "axisLabel": "j",
+          "lowerBound": 0,
+          "upperBound": 2
+        }
+      ]
+    }
+  },
+  "rangeSet": {
+    "@context": "http://schemas.opengis.net/cis/1.1/json/rangeset-context.json",
+    "type": "RangeSetType",
+    "id": "examples:CIS_RS_05_2D",
+    "dataBlock": {
+      "type": "VDataBlockType",
+      "values": [
+        1,
+        2,
+        3
+      ]
+    },
+    "fileReference": [
+      "http://myserver.com/fileref.tiff"
+    ]
+  },
+  "rangeType": {
+    "@context": "http://schemas.opengis.net/cis/1.1/json/rangetype-context.json",
+    "type": "DataRecordType",
+    "id": "examples:CIS_RT_05_2D",
+    "field": [
+      {
+        "type": "QuantityType",
+        "id": "examples:CIS_RT_F_05_2D",
+        "definition": "ogcType:unsignedInt",
+        "uom": {
+          "type": "UnitReference",
+          "id": "examples:CIS_RT_F_UOM_05_2D",
+          "code": "10^0"
+        }
+      }
+    ]
+  }
+}
