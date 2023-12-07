@@ -394,11 +394,11 @@ This schema is to be reused in the coverageJSON building block.
     cis:domainSet [ a cis:DomainSetType ;
             cis:generalGrid [ a cis:GeneralGridCoverageType ;
                     cis:axis [ a cis:IndexAxisType ;
-                            cis:axisLabel "j" ;
+                            cis:axisLabel "i" ;
                             cis:lowerBound 0 ;
                             cis:upperBound 2 ],
                         [ a cis:IndexAxisType ;
-                            cis:axisLabel "i" ;
+                            cis:axisLabel "j" ;
                             cis:lowerBound 0 ;
                             cis:upperBound 2 ] ;
                     cis:axisLabels ( "i" "j" ) ;
@@ -683,8 +683,7 @@ You can find the full JSON-LD context here:
 
 # References
 
-* [Reference to ILIAD](https://docs.ogc.org/is/09-146r6/09-146r8.html)
-* [CovJSON JSON-LD context](http://tbd/)
+* [Coverage Implementation Schema](https://docs.ogc.org/is/09-146r8/09-146r8.html)
 
 # For developers
 

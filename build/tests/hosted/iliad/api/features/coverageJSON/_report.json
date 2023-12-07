@@ -1,0 +1,153 @@
+{
+  "title": "Validation report for ogc.hosted.iliad.api.features.coverageJSON - OGC CoverageJSON",
+  "bblockName": "OGC CoverageJSON",
+  "bblockId": "ogc.hosted.iliad.api.features.coverageJSON",
+  "generated": "2023-12-07T12:37:51.607173+00:00",
+  "result": false,
+  "items": [
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverageJSON/example_1_1.jsonld",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "jsonld"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": []
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_1_1.jsonld from examples"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_1_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_1_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'parametersSet' is not of type 'object'",
+              "isError": true,
+              "message": "ValidationError: 'parametersSet' is not of type 'object'\n\nFailed validating 'type' in schema['allOf'][4]['then']['properties']['parameters']['patternProperties']['.+']:\n    {'description': 'Represents metadata about the values of the coverage',\n     'properties': {'categoryEncoding': {'description': 'Maps IDs of '\n                                                        'categories in the '\n                                                        'observedProperty '\n                                                        'to range values',\n                                         'patternProperties': {'.+': {'oneOf': [{'type': 'integer'},\n                                                                                {'items': {'type': 'integer'},\n                                                                                 'minItems': 1,\n                                                                                 'type': 'array',\n                                                                                 'uniqueItems': True}]}},\n                                         'type': 'object'},\n                    'description': {'$ref': '#/definitions/i18n'},\n                    'id': {'type': 'string'},\n                    'observedProperty': {'$ref': '#/definitions/observedProperty'},\n                    'type': {'const': 'Parameter',\n                             'description': 'Type of the parameter object, '\n                                            'must be \"Parameter\"'},\n                    'unit': {'$ref': '#/definitions/unit'}},\n     'required': ['type', 'observedProperty'],\n     'type': 'object'}\n\nOn instance['parameters']['@id']:\n    'parametersSet'"
+            }
+          ]
+        },
+        {
+          "name": "JSON_LD",
+          "title": "JSON-LD",
+          "entries": []
+        },
+        {
+          "name": "TURTLE",
+          "title": "Turtle",
+          "entries": []
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": []
+        },
+        {
+          "name": "UNKNOWN",
+          "title": "Unknown errors",
+          "entries": []
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverageJSON/example_2_1.jsonld",
+        "exampleIndex": 2,
+        "snippetIndex": 1,
+        "language": "jsonld"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": []
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_2_1.jsonld from examples"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_2_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_2_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        },
+        {
+          "name": "JSON_LD",
+          "title": "JSON-LD",
+          "entries": []
+        },
+        {
+          "name": "TURTLE",
+          "title": "Turtle",
+          "entries": []
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": []
+        },
+        {
+          "name": "UNKNOWN",
+          "title": "Unknown errors",
+          "entries": []
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 2,
+    "passed": 0,
+    "failed": 2
+  }
+}
