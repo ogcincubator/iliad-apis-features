@@ -1,5 +1,6 @@
 {
   "name": "OGC CoverageJSON",
+  "abstract": "Based on JavaScript Object Notation (JSON), CoverageJSON is a format for publishing spatiotemporal data to the Web. The primary design goals are simplicity, machine and human readability and efficiency. While other use cases are possible, the primary CoverageJSON use case is enabling the development of interactive visual websites that display and manipulate environmental data within a web browser.",
   "status": "under-development",
   "dateTimeAddition": "2023-12-01",
   "itemClass": "schema",
