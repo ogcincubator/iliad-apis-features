@@ -530,11 +530,11 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
     </span><span class="nn">cis:</span><span class="n">domainSet</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">cis:</span><span class="n">DomainSetType</span><span class="w"> </span><span class="p">;</span><span class="w">
             </span><span class="nn">cis:</span><span class="n">generalGrid</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">cis:</span><span class="n">GeneralGridCoverageType</span><span class="w"> </span><span class="p">;</span><span class="w">
                     </span><span class="nn">cis:</span><span class="n">axis</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">cis:</span><span class="n">IndexAxisType</span><span class="w"> </span><span class="p">;</span><span class="w">
-                            </span><span class="nn">cis:</span><span class="n">axisLabel</span><span class="w"> </span><span class="s">"i"</span><span class="w"> </span><span class="p">;</span><span class="w">
+                            </span><span class="nn">cis:</span><span class="n">axisLabel</span><span class="w"> </span><span class="s">"j"</span><span class="w"> </span><span class="p">;</span><span class="w">
                             </span><span class="nn">cis:</span><span class="n">lowerBound</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">;</span><span class="w">
                             </span><span class="nn">cis:</span><span class="n">upperBound</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">],</span><span class="w">
                         </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">cis:</span><span class="n">IndexAxisType</span><span class="w"> </span><span class="p">;</span><span class="w">
-                            </span><span class="nn">cis:</span><span class="n">axisLabel</span><span class="w"> </span><span class="s">"j"</span><span class="w"> </span><span class="p">;</span><span class="w">
+                            </span><span class="nn">cis:</span><span class="n">axisLabel</span><span class="w"> </span><span class="s">"i"</span><span class="w"> </span><span class="p">;</span><span class="w">
                             </span><span class="nn">cis:</span><span class="n">lowerBound</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">;</span><span class="w">
                             </span><span class="nn">cis:</span><span class="n">upperBound</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
                     </span><span class="nn">cis:</span><span class="n">axisLabels</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s">"i"</span><span class="w"> </span><span class="s">"j"</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w">
@@ -554,11 +554,7 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
     <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverage_information_model/example_1_1.ttl">Open in new window</a>
 </blockquote>
 <h2 id='json-ld-encoded-coverage-from-https-docs-ogc-org-is-09-146r6-09-146r6-html'>JSON-LD encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html</h2><div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"examples"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/cis/1.1/examples/"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="s2">"../context.jsonld"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CoverageByDomainAndRangeType"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"examples:CIS_05_2D"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"domainSet"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">

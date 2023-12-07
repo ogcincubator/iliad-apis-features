@@ -166,11 +166,11 @@ This schema is to be reused in the coverageJSON building block.
     cis:domainSet [ a cis:DomainSetType ;
             cis:generalGrid [ a cis:GeneralGridCoverageType ;
                     cis:axis [ a cis:IndexAxisType ;
-                            cis:axisLabel "i" ;
+                            cis:axisLabel "j" ;
                             cis:lowerBound 0 ;
                             cis:upperBound 2 ],
                         [ a cis:IndexAxisType ;
-                            cis:axisLabel "j" ;
+                            cis:axisLabel "i" ;
                             cis:lowerBound 0 ;
                             cis:upperBound 2 ] ;
                     cis:axisLabels ( "i" "j" ) ;
@@ -191,11 +191,7 @@ This schema is to be reused in the coverageJSON building block.
 #### jsonld
 ```jsonld
 {
-  "@context": [
-    {
-      "examples": "http://www.opengis.net/cis/1.1/examples/"
-    }
-  ],
+  "@context":"../context.jsonld",
   "type": "CoverageByDomainAndRangeType",
   "id": "examples:CIS_05_2D",
   "domainSet": {
@@ -253,12 +249,6 @@ This schema is to be reused in the coverageJSON building block.
     ]
   }
 }
-
-```
-
-#### ttl
-```ttl
-
 
 ```
 

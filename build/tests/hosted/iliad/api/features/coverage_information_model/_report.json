@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.coverage_information_model - OGC Coverage Implementation Schema",
   "bblockName": "OGC Coverage Implementation Schema",
   "bblockId": "ogc.hosted.iliad.api.features.coverage_information_model",
-  "generated": "2023-12-07T11:37:30.346167+00:00",
+  "generated": "2023-12-07T11:47:14.639037+00:00",
   "result": false,
   "items": [
     {
@@ -107,28 +107,13 @@
             {
               "isError": false,
               "message": "Using example_2_1.jsonld from examples"
-            },
-            {
-              "op": "ttl-create",
-              "empty": true,
-              "filename": "example_2_1.ttl",
-              "size": 0,
-              "isError": true,
-              "message": "**Empty** output Turtle example_2_1.ttl created"
             }
           ]
         },
         {
           "name": "JSON_SCHEMA",
           "title": "JSON Schema",
-          "entries": [
-            {
-              "op": "validation",
-              "result": true,
-              "isError": false,
-              "message": "Validation passed"
-            }
-          ]
+          "entries": []
         },
         {
           "name": "JSON_LD",
@@ -214,7 +199,13 @@
       ]
     }
   ],
-  "globalErrors": {},
+  "globalErrors": {
+    "UNKNOWN": {
+      "exception": "HTTPError",
+      "isError": true,
+      "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 606, in _validate_resource\n    validate_inner()\n,  File \"/src/ogc/bblocks/validate.py\", line 405, in validate_inner\n    graph = Graph().parse(data=json_doc, format='json-ld', base=base_uri)\n,  File \"/venv/lib/python3.10/site-packages/rdflib/graph.py\", line 1494, in parse\n    parser.parse(source, self, **args)\n,  File \"/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py\", line 119, in parse\n    to_rdf(data, conj_sink, base, context_data, version, generalized_rdf)\n,  File \"/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py\", line 138, in to_rdf\n    return parser.parse(data, context, dataset)\n,  File \"/venv/lib/python3.10/site-packages/rdflib/plugins/parsers/jsonld.py\", line 160, in parse\n    context.load(local_context, context.base)\n,  File \"/venv/lib/python3.10/site-packages/rdflib/plugins/shared/jsonld/context.py\", line 401, in load\n    self._prep_sources(base, source, sources, referenced_contexts)\n,  File \"/venv/lib/python3.10/site-packages/rdflib/plugins/shared/jsonld/context.py\", line 430, in _prep_sources\n    new_ctx = self._fetch_context(\n,  File \"/venv/lib/python3.10/site-packages/rdflib/plugins/shared/jsonld/context.py\", line 472, in _fetch_context\n    source = source_to_json(source_url)  # type: ignore[assignment]\n,  File \"/venv/lib/python3.10/site-packages/rdflib/plugins/shared/jsonld/util.py\", line 44, in source_to_json\n    source = create_input_source(source, format=\"json-ld\")\n,  File \"/venv/lib/python3.10/site-packages/rdflib/parser.py\", line 416, in create_input_source\n    ) = _create_input_source_from_location(\n,  File \"/venv/lib/python3.10/site-packages/rdflib/parser.py\", line 478, in _create_input_source_from_location\n    input_source = URLInputSource(absolute_location, format)\n,  File \"/venv/lib/python3.10/site-packages/rdflib/parser.py\", line 285, in __init__\n    response: addinfourl = _urlopen(req)\n,  File \"/venv/lib/python3.10/site-packages/rdflib/parser.py\", line 272, in _urlopen\n    return urlopen(req)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 634, in http_response\n    response = self.parent.error(\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 557, in error\n    result = self._call_chain(*args)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 496, in _call_chain\n    result = func(*args)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 749, in http_error_302\n    return self.parent.open(new, timeout=req.timeout)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 634, in http_response\n    response = self.parent.error(\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 563, in error\n    return self._call_chain(*args)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 496, in _call_chain\n    result = func(*args)\n,  File \"/usr/local/lib/python3.10/urllib/request.py\", line 643, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\n,urllib.error.HTTPError: HTTP Error 404: Not Found\n"
+    }
+  },
   "counts": {
     "total": 3,
     "passed": 2,

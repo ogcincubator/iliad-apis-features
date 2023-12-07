@@ -1,9 +1,5 @@
 {
-  "@context": [
-    {
-      "examples": "http://www.opengis.net/cis/1.1/examples/"
-    }
-  ],
+  "@context":"../context.jsonld",
   "type": "CoverageByDomainAndRangeType",
   "id": "examples:CIS_05_2D",
   "domainSet": {
@@ -40,17 +36,8 @@
     "@context": "http://schemas.opengis.net/cis/1.1/json/rangeset-context.json",
     "type": "RangeSetType",
     "id": "examples:CIS_RS_05_2D",
-    "dataBlock": {
-      "type": "VDataBlockType",
-      "values": [
-        1,
-        2,
-        3
-      ]
-    },
-    "fileReference": [
-      "http://myserver.com/fileref.tiff"
-    ]
+    "dataBlock":{"type":"VDataBlockType","values":[1,2,3]},
+    "fileReference": ["http://myserver.com/fileref.tiff"]
   },
   "rangeType": {
     "@context": "http://schemas.opengis.net/cis/1.1/json/rangetype-context.json",
