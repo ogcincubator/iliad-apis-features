@@ -224,23 +224,33 @@ Links to the schema:
     "hasSurvivalProperty": "ssn-system:hasSurvivalProperty",
     "qualityOfObservation": "ssn-system:qualityOfObservation",
     "hasMember": {
-      "@context": {
-        "features": "sosa:hasMember"
-      },
+      "@context": {},
       "@id": "sosa:hasMember"
     },
     "features": {
       "@context": {
-        "features": "sosa:hasMember"
+        "features": {
+          "@container": "@set",
+          "@id": "geojson:features"
+        }
       },
-      "@id": "geojson:features",
-      "@container": "@set"
+      "@container": "@set",
+      "@id": "sosa:hasMember"
     },
     "properties": "@nest",
     "featureType": "@type",
     "label": {
       "@id": "rdfs:label",
       "@container": "@language"
+    },
+    "type": "@type",
+    "geometry": {
+      "@context": {},
+      "@id": "geojson:geometry"
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
     },
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
@@ -251,15 +261,6 @@ Links to the schema:
     "MultiPolygon": "geojson:MultiPolygon",
     "Point": "geojson:Point",
     "Polygon": "geojson:Polygon",
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
-    },
-    "coordinates": {
-      "@container": "@list",
-      "@id": "geojson:coordinates"
-    },
-    "type": "@type",
     "links": {
       "@context": {
         "href": {
@@ -280,12 +281,15 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
-    "geometry": "geojson:geometry",
+    "coordinates": {
+      "@container": "@list",
+      "@id": "geojson:coordinates"
+    },
     "sosa": "http://www.w3.org/ns/sosa/",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "iliad": "http://w3id.org/iliad/property/",
     "ssn-system": "ssn:systems/",
     "ssn": "http://www.w3.org/ns/ssn/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "iliad": "http://w3id.org/iliad/property/",
     "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",

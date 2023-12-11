@@ -360,7 +360,6 @@ The SHACL rules (and any other validators developed) will be tested against the 
 ```turtle
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix iliad: <http://w3id.org/iliad/property/> .
-@prefix jf-density: <http://w3id.org/iliad/jellyfish/property/densityOfJF/> .
 @prefix jf-property: <http://w3id.org/iliad/jellyfish/property/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -370,12 +369,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
 <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,
         geojson:Feature ;
     rdfs:label "Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"@en ;
-    sosa:hasFeatureOfInterest <http://w3id.org/iliad/jellyfish/feature/1-18> ;
-    sosa:hasResult [ jf-property:beachedJF "1" ;
-            jf-property:densityOfJF jf-density:Some ;
-            jf-property:quantityOfJF 50 ;
-            jf-property:stingByJF "Unspecified" ;
-            iliad:sampleSizeValue "10-30" ;
+    sosa:hasFeatureOfInterest <http://w3id.org/iliad/jellyfish/observation/1-18> ;
+    sosa:hasResult [ iliad:sampleSizeValue "10-30" ;
             iliad:speciesScientificName "Phyllorhiza punctata" ;
             iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
     sosa:observedProperty jf-property:jellyFishAbundanceProperty ;
@@ -387,12 +382,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
 <http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> a sosa:Observation,
         geojson:Feature ;
     rdfs:label "Jelly fish observation #1 location id: 18 sensor: 528 species: Phyllorhiza punctata"@en ;
-    sosa:hasFeatureOfInterest <http://w3id.org/iliad/jellyfish/feature/1-18> ;
-    sosa:hasResult [ jf-property:beachedJF "0" ;
-            jf-property:densityOfJF jf-density:Some ;
-            jf-property:quantityOfJF 30 ;
-            jf-property:stingByJF "Unspecified" ;
-            iliad:sampleSizeValue "1-10" ;
+    sosa:hasFeatureOfInterest <http://w3id.org/iliad/jellyfish/observation/1-18> ;
+    sosa:hasResult [ iliad:sampleSizeValue "1-10" ;
             iliad:speciesScientificName "Phyllorhiza punctata" ;
             iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
     sosa:observedProperty jf-property:jellyFishAbundanceProperty ;
@@ -403,7 +394,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
 
 [] a sosa:ObservationCollection,
         geojson:FeatureCollection ;
-    geojson:features <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,
+    sosa:hasMember <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,
         <http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> .
 
 
@@ -543,12 +534,29 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
+    "resultTime": "sosa:resultTime",
+    "phenomenonTime": "sosa:phenomenonTime",
+    "hasFeatureOfInterest": {
+      "@context": {
+        "@base": "http://w3id.org/iliad/jellyfish/feature/"
+      },
+      "@id": "sosa:hasFeatureOfInterest",
+      "@type": "@id"
+    },
     "observedProperty": {
-      "@id": "sosa:observedProperty",
-      "@type": "@id",
       "@context": {
         "@base": "http://w3id.org/iliad/jellyfish/property/"
-      }
+      },
+      "@id": "sosa:observedProperty",
+      "@type": "@id"
+    },
+    "usedProcedure": {
+      "@id": "sosa:usedProcedure",
+      "@type": "@id"
+    },
+    "madeBySensor": {
+      "@id": "sosa:madeBySensor",
+      "@type": "@id"
     },
     "hasResult": {
       "@context": {
@@ -564,29 +572,6 @@ Links to the schema:
         "beachedJF": "jf-property:beachedJF"
       },
       "@id": "sosa:hasResult"
-    },
-    "hasFeatureOfInterest": {
-      "@context": {
-        "@base": "http://w3id.org/iliad/jellyfish/feature/"
-      },
-      "@id": "sosa:hasFeatureOfInterest",
-      "@type": "@id"
-    },
-    "sampleSizeValue": "iliad:sampleSizeValue",
-    "speciesScientificName": "iliad:speciesScientificName",
-    "wormsConcept": {
-      "@id": "iliad:wormsConcept",
-      "@type": "@id"
-    },
-    "resultTime": "sosa:resultTime",
-    "phenomenonTime": "sosa:phenomenonTime",
-    "usedProcedure": {
-      "@id": "sosa:usedProcedure",
-      "@type": "@id"
-    },
-    "madeBySensor": {
-      "@id": "sosa:madeBySensor",
-      "@type": "@id"
     },
     "hasSimpleResult": "sosa:hasSimpleResult",
     "Observation": "sosa:Observation",
@@ -678,22 +663,49 @@ Links to the schema:
     "qualityOfObservation": "ssn-system:qualityOfObservation",
     "hasMember": {
       "@context": {
-        "features": "sosa:hasMember"
+        "hasFeatureOfInterest": {
+          "@id": "sosa:hasFeatureOfInterest",
+          "@type": "@id"
+        },
+        "hasResult": "sosa:hasResult"
       },
       "@id": "sosa:hasMember"
     },
     "features": {
       "@context": {
-        "features": "sosa:hasMember"
+        "features": {
+          "@container": "@set",
+          "@id": "geojson:features"
+        },
+        "hasFeatureOfInterest": {
+          "@id": "sosa:hasFeatureOfInterest",
+          "@type": "@id"
+        },
+        "hasResult": "sosa:hasResult"
       },
-      "@id": "geojson:features",
-      "@container": "@set"
+      "@container": "@set",
+      "@id": "sosa:hasMember"
     },
     "properties": "@nest",
     "featureType": "@type",
     "label": {
       "@id": "rdfs:label",
       "@container": "@language"
+    },
+    "sampleSizeValue": "iliad:sampleSizeValue",
+    "speciesScientificName": "iliad:speciesScientificName",
+    "wormsConcept": {
+      "@id": "iliad:wormsConcept",
+      "@type": "@id"
+    },
+    "type": "@type",
+    "geometry": {
+      "@context": {},
+      "@id": "geojson:geometry"
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
     },
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
@@ -704,15 +716,6 @@ Links to the schema:
     "MultiPolygon": "geojson:MultiPolygon",
     "Point": "geojson:Point",
     "Polygon": "geojson:Polygon",
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
-    },
-    "coordinates": {
-      "@container": "@list",
-      "@id": "geojson:coordinates"
-    },
-    "type": "@type",
     "links": {
       "@context": {
         "href": {
@@ -733,14 +736,17 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
-    "geometry": "geojson:geometry",
-    "jf-property": "http://w3id.org/iliad/jellyfish/property/",
-    "jf-density": "jf-property:densityOfJF/",
-    "iliad": "http://w3id.org/iliad/property/",
+    "coordinates": {
+      "@container": "@list",
+      "@id": "geojson:coordinates"
+    },
     "sosa": "http://www.w3.org/ns/sosa/",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "ssn-system": "ssn:systems/",
     "ssn": "http://www.w3.org/ns/ssn/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "iliad": "http://w3id.org/iliad/property/",
+    "jf-property": "http://w3id.org/iliad/jellyfish/property/",
+    "jf-density": "jf-property:densityOfJF/",
     "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
