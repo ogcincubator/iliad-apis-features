@@ -75,7 +75,7 @@
       "itemIdentifier": "ogc.hosted.iliad.api.features.coverageJSON",
       "name": "OGC CoverageJSON",
       "abstract": "Based on JavaScript Object Notation (JSON), CoverageJSON is a format for publishing spatiotemporal data to the Web. The primary design goals are simplicity, machine and human readability and efficiency. While other use cases are possible, the primary CoverageJSON use case is enabling the development of interactive visual websites that display and manipulate environmental data within a web browser.",
-      "status": "invalid",
+      "status": "under-development",
       "dateTimeAddition": "2023-12-01T00:00:00Z",
       "itemClass": "schema",
       "register": "iliad-apis",
@@ -106,26 +106,31 @@
         "linked-data"
       ],
       "shaclRules": {},
+      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/context.jsonld",
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema.yaml",
         "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema.json"
       },
-      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/context.jsonld",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverageJSON/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverageJSON/",
       "validationPassed": false,
       "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/coverageJSON/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverageJSON/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverageJSON/index.json"
         },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverageJSON/index.md"
+        },
         "slate": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/coverageJSON/"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.coverageJSON"
         }
       },
       "@type": [
@@ -163,26 +168,31 @@
         "mesh"
       ],
       "shaclRules": {},
+      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld",
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema.yaml",
         "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema.json"
       },
-      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverage_information_model/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverage_information_model/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/coverage_information_model/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverage_information_model/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverage_information_model/index.json"
         },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverage_information_model/index.md"
+        },
         "slate": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/coverage_information_model/"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.coverage_information_model"
         }
       },
       "@type": [
@@ -224,30 +234,35 @@
         ]
       },
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
         "ogc.unstable.sosa.properties.observation",
+        "ogc.unstable.sosa.features.observation",
         "ogc.unstable.sosa.features.observationCollection",
-        "ogc.unstable.sosa.features.observation"
+        "ogc.ogc-utils.iri-or-curie"
       ],
+      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml",
         "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.json"
       },
-      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/",
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs/index.json"
         },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs/index.md"
+        },
         "slate": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/oim-obs/"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-obs"
         }
       },
       "@type": [
@@ -291,25 +306,30 @@
       "dependsOn": [
         "ogc.hosted.iliad.api.features.oim-obs"
       ],
+      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld",
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml",
         "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.json"
       },
-      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/",
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs-cs/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs-cs/index.json"
         },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs-cs/index.md"
+        },
         "slate": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/oim-obs-cs/"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-obs-cs"
         }
       },
       "@type": [
@@ -353,29 +373,34 @@
         ]
       },
       "dependsOn": [
-        "ogc.hosted.iliad.api.features.oim-obs-cs",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.hosted.iliad.api.features.oim-obs-cs"
       ],
+      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld",
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema.yaml",
         "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema.json"
       },
-      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/iliad-jellyfish/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/iliad-jellyfish/index.json"
         },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish/index.md"
+        },
         "slate": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/iliad-jellyfish/"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.iliad-jellyfish"
         }
       },
       "@type": [

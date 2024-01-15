@@ -36,11 +36,12 @@
   "dependsOn": [
     "ogc.hosted.iliad.api.features.oim-obs"
   ],
+  "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml",
     "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.json"
   },
-  "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld",
+  "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/",
   "validationPassed": true,
   "description": "## Ocean Information Model Observations Profile for Citizen Science\n\nCurrently a stub where requirements for OIM implementation can be defined as required.\n\nNote this will typically be combined with requirements for particular application domains needed to interoperate with external systems.",

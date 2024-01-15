@@ -2,14 +2,14 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.coverage_information_model - OGC Coverage Implementation Schema",
   "bblockName": "OGC Coverage Implementation Schema",
   "bblockId": "ogc.hosted.iliad.api.features.coverage_information_model",
-  "generated": "2023-12-11T10:00:52.409044+00:00",
+  "generated": "2024-01-15T02:54:09.593715+00:00",
   "result": true,
   "items": [
     {
       "source": {
         "type": "EXAMPLE",
         "requireFail": false,
-        "filename": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverage_information_model/example_1_1.json",
+        "filename": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverage_information_model/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "json"
@@ -88,7 +88,7 @@
       "source": {
         "type": "EXAMPLE",
         "requireFail": false,
-        "filename": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverage_information_model/example_2_1.json",
+        "filename": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverage_information_model/example_2_1.json",
         "exampleIndex": 2,
         "snippetIndex": 1,
         "language": "json"
@@ -167,7 +167,7 @@
       "source": {
         "type": "EXAMPLE",
         "requireFail": false,
-        "filename": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverage_information_model/example_3_1.ttl",
+        "filename": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverage_information_model/example_3_1.ttl",
         "exampleIndex": 3,
         "snippetIndex": 1,
         "language": "ttl"

@@ -2,14 +2,14 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.coverageJSON - OGC CoverageJSON",
   "bblockName": "OGC CoverageJSON",
   "bblockId": "ogc.hosted.iliad.api.features.coverageJSON",
-  "generated": "2023-12-11T10:00:52.216014+00:00",
+  "generated": "2024-01-15T02:54:09.186519+00:00",
   "result": false,
   "items": [
     {
       "source": {
         "type": "EXAMPLE",
         "requireFail": false,
-        "filename": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverageJSON/example_1_1.json",
+        "filename": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverageJSON/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "json"
@@ -88,7 +88,7 @@
       "source": {
         "type": "EXAMPLE",
         "requireFail": false,
-        "filename": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverageJSON/example_2_1.json",
+        "filename": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverageJSON/example_2_1.json",
         "exampleIndex": 2,
         "snippetIndex": 1,
         "language": "json"
