@@ -22,7 +22,7 @@ meta:
 
 # Observations - ILIAD Jellyfish Pilot for Citizen Science `ogc.hosted.iliad.api.features.iliad-jellyfish`
 
-Defines a project profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model
+Defines a project specific interoperability profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:

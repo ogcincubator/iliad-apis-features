@@ -3,7 +3,7 @@
 
 `ogc.hosted.iliad.api.features.iliad-jellyfish` *v0.1*
 
-Defines a project profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model
+Defines a project specific interoperability profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model
 
 [*Status*](http://www.opengis.net/def/status): Under development
 

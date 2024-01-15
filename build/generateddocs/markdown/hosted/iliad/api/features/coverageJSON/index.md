@@ -900,11 +900,11 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
                         [ covjson:dataType covjson:tuple ] ] ;
             covjson:range [ a covjson:NdArray ;
                     covjson:axisNames ( "composite" ) ;
-                    covjson:dataType xsd:integer ;
+                    covjson:dataType xsd:double ;
                     covjson:shape ( 2 ) ],
                 [ a covjson:NdArray ;
                     covjson:axisNames ( "composite" ) ;
-                    covjson:dataType xsd:double ;
+                    covjson:dataType xsd:integer ;
                     covjson:shape ( 2 ) ] ],
         [ a covjson:Coverage ;
             covjson:domain [ a covjson:Domain ;
@@ -919,21 +919,21 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
             covjson:axis [ ] ] ;
     covjson:domainType covjsondt:MultiPoint ;
     covjson:parameter [ a covjson:Parameter ;
-            dcterms:description "particle diameter"@en ;
-            qudt:unit [ qudt:symbol "nm"^^<http://www.opengis.net/def/uom/UCUM/> ;
-                    skos:prefLabel "nanometers"@en ] ;
-            ssn1:observedProperty <https://qudt.org/vocab/unit/NanoM> ],
-        [ a covjson:Parameter ;
             ssn1:observedProperty <http://example.com/particletypes> ;
             covjson:categoryEncoding [ ns1:_0 0 ;
                     ns1:_1 1 ;
-                    ns1:_4 2 ] ] ;
-    covjson:referencing [ covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ],
+                    ns1:_4 2 ] ],
+        [ a covjson:Parameter ;
+            dcterms:description "particle diameter"@en ;
+            qudt:unit [ qudt:symbol "nm"^^<http://www.opengis.net/def/uom/UCUM/> ;
+                    skos:prefLabel "nanometers"@en ] ;
+            ssn1:observedProperty <https://qudt.org/vocab/unit/NanoM> ] ;
+    covjson:referencing [ covjson:referenceSystem [ a inspiregloss:TemporalReferenceSystem ;
+                    covjson:calendar <http://www.opengis.net/def/uom/ISO-8601/0/Gregorian> ] ],
         [ covjson:referenceSystem [ a ignf:VerticalCRS ;
                     ignf:coordinateSystem [ covjson:coordinateSystemAxes ( [ ignf:axisDirection "down" ;
                                         qudt:unit [ qudt:symbol "Pa" ] ] ) ] ] ],
-        [ covjson:referenceSystem [ a inspiregloss:TemporalReferenceSystem ;
-                    covjson:calendar <http://www.opengis.net/def/uom/ISO-8601/0/Gregorian> ] ] .
+        [ covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] .
 
 
 ```
