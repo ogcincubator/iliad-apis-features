@@ -137,15 +137,27 @@ Links to the schema:
       "@id": "sosa:madeBySensor",
       "@type": "@id"
     },
-    "hasResult": "sosa:hasResult",
-    "hasSimpleResult": "sosa:hasSimpleResult",
+    "hasResult": {
+      "@id": "sosa:hasResult",
+      "@type": "@id"
+    },
+    "hasSimpleResult": {
+      "@id": "sosa:hasSimpleResult",
+      "@type": "@id"
+    },
     "id": "@id",
+    "properties": "@nest",
+    "featureType": "@type",
     "ActuatableProperty": {
       "@id": "sosa:ActuatableProperty",
       "@type": "@id"
     },
     "Actuation": {
       "@id": "sosa:Actuation",
+      "@type": "@id"
+    },
+    "ActuationCollection": {
+      "@id": "sosa:ActuationCollection",
       "@type": "@id"
     },
     "Actuator": {
@@ -156,12 +168,12 @@ Links to the schema:
       "@id": "sosa:Deployment",
       "@type": "@id"
     },
-    "FeatureOfInterest": {
-      "@id": "sosa:FeatureOfInterest",
+    "Execution": {
+      "@id": "sosa:Execution",
       "@type": "@id"
     },
-    "Input": {
-      "@id": "sosa:Input",
+    "FeatureOfInterest": {
+      "@id": "sosa:FeatureOfInterest",
       "@type": "@id"
     },
     "ObservableProperty": {
@@ -172,8 +184,8 @@ Links to the schema:
       "@id": "sosa:Observation",
       "@type": "@id"
     },
-    "Output": {
-      "@id": "sosa:Output",
+    "ObservationCollection": {
+      "@id": "sosa:ObservationCollection",
       "@type": "@id"
     },
     "Platform": {
@@ -188,12 +200,12 @@ Links to the schema:
       "@id": "sosa:Procedure",
       "@type": "@id"
     },
-    "Result": {
-      "@id": "sosa:Result",
-      "@type": "@id"
-    },
     "Sample": {
       "@id": "sosa:Sample",
+      "@type": "@id"
+    },
+    "SampleCollection": {
+      "@id": "sosa:SampleCollection",
       "@type": "@id"
     },
     "Sampler": {
@@ -260,6 +272,10 @@ Links to the schema:
       "@type": "@id",
       "@context": {}
     },
+    "hasOriginalSample": {
+      "@id": "sosa:hasOriginalSample",
+      "@type": "@id"
+    },
     "hasOutput": {
       "@id": "sosa:hasOutput",
       "@type": "@id"
@@ -268,8 +284,16 @@ Links to the schema:
       "@id": "sosa:hasProperty",
       "@type": "@id"
     },
+    "hasResultQuality": {
+      "@id": "sosa:hasResultQuality",
+      "@type": "@id"
+    },
     "hasSample": {
       "@id": "sosa:hasSample",
+      "@type": "@id"
+    },
+    "hasSampledFeature": {
+      "@id": "sosa:hasSampledFeature",
       "@type": "@id"
     },
     "hasSubSystem": {
@@ -326,6 +350,14 @@ Links to the schema:
       "@id": "sosa:isResultOf",
       "@type": "@id"
     },
+    "isResultOfMadeBySampler": {
+      "@id": "sosa:isResultOfMadeBySampler",
+      "@type": "@id"
+    },
+    "isResultOfUsedProcedure": {
+      "@id": "sosa:isResultOfUsedProcedure",
+      "@type": "@id"
+    },
     "isSampleOf": {
       "@id": "sosa:isSampleOf",
       "@type": "@id"
@@ -358,40 +390,16 @@ Links to the schema:
       "@id": "sosa:wasOriginatedBy",
       "@type": "@id"
     },
-    "inCondition": {
-      "@id": "ssn-system:inCondition",
-      "@type": "@id"
-    },
-    "Condition": {
-      "@id": "ssn-system:Condition",
-      "@type": "@id"
-    },
-    "hasSystemCapability": {
-      "@id": "ssn-system:hasSystemCapability",
-      "@type": "@id"
-    },
-    "SystemCapability": {
-      "@id": "ssn-system:SystemCapability",
-      "@type": "@id"
-    },
-    "hasSystemProperty": {
-      "@id": "ssn-system:hasSystemProperty",
-      "@type": "@id"
-    },
-    "SystemProperty": {
-      "@id": "ssn-system:SystemProperty",
-      "@type": "@id"
-    },
-    "MeasurementRange": {
-      "@id": "ssn-system:MeasurementRange",
+    "Accuracy": {
+      "@id": "ssn-system:Accuracy",
       "@type": "@id"
     },
     "ActuationRange": {
       "@id": "ssn-system:ActuationRange",
       "@type": "@id"
     },
-    "Accuracy": {
-      "@id": "ssn-system:Accuracy",
+    "BatteryLifetime": {
+      "@id": "ssn-system:BatteryLifetime",
       "@type": "@id"
     },
     "DetectionLimit": {
@@ -408,6 +416,26 @@ Links to the schema:
     },
     "Latency": {
       "@id": "ssn-system:Latency",
+      "@type": "@id"
+    },
+    "MaintenanceSchedule": {
+      "@id": "ssn-system:MaintenanceSchedule",
+      "@type": "@id"
+    },
+    "MeasurementRange": {
+      "@id": "ssn-system:MeasurementRange",
+      "@type": "@id"
+    },
+    "OperatingPowerRange": {
+      "@id": "ssn-system:OperatingPowerRange",
+      "@type": "@id"
+    },
+    "OperatingProperty": {
+      "@id": "ssn-system:OperatingProperty",
+      "@type": "@id"
+    },
+    "OperatingRange": {
+      "@id": "ssn-system:OperatingRange",
       "@type": "@id"
     },
     "Precision": {
@@ -430,42 +458,6 @@ Links to the schema:
       "@id": "ssn-system:Sensitivity",
       "@type": "@id"
     },
-    "hasOperatingRange": {
-      "@id": "ssn-system:hasOperatingRange",
-      "@type": "@id"
-    },
-    "OperatingRange": {
-      "@id": "ssn-system:OperatingRange",
-      "@type": "@id"
-    },
-    "hasOperatingProperty": {
-      "@id": "ssn-system:hasOperatingProperty",
-      "@type": "@id"
-    },
-    "OperatingProperty": {
-      "@id": "ssn-system:OperatingProperty",
-      "@type": "@id"
-    },
-    "MaintenanceSchedule": {
-      "@id": "ssn-system:MaintenanceSchedule",
-      "@type": "@id"
-    },
-    "OperatingPowerRange": {
-      "@id": "ssn-system:OperatingPowerRange",
-      "@type": "@id"
-    },
-    "hasSurvivalRange": {
-      "@id": "ssn-system:hasSurvivalRange",
-      "@type": "@id"
-    },
-    "SurvivalRange": {
-      "@id": "ssn-system:SurvivalRange",
-      "@type": "@id"
-    },
-    "hasSurvivalProperty": {
-      "@id": "ssn-system:hasSurvivalProperty",
-      "@type": "@id"
-    },
     "SurvivalProperty": {
       "@id": "ssn-system:SurvivalProperty",
       "@type": "@id"
@@ -474,16 +466,50 @@ Links to the schema:
       "@id": "ssn-system:SystemLifetime",
       "@type": "@id"
     },
-    "BatteryLifetime": {
-      "@id": "ssn-system:BatteryLifetime",
+    "SurvivalRange": {
+      "@id": "ssn-system:SurvivalRange",
+      "@type": "@id"
+    },
+    "SystemCapability": {
+      "@id": "ssn-system:SystemCapability",
+      "@type": "@id"
+    },
+    "SystemProperty": {
+      "@id": "ssn-system:SystemProperty",
+      "@type": "@id"
+    },
+    "hasOperatingProperty": {
+      "@id": "ssn-system:hasOperatingProperty",
+      "@type": "@id"
+    },
+    "hasOperatingRange": {
+      "@id": "ssn-system:hasOperatingRange",
+      "@type": "@id"
+    },
+    "hasSurvivalProperty": {
+      "@id": "ssn-system:hasSurvivalProperty",
+      "@type": "@id"
+    },
+    "hasSystemCapability": {
+      "@id": "ssn-system:hasSystemCapability",
+      "@type": "@id"
+    },
+    "hasSystemProperty": {
+      "@id": "ssn-system:hasSystemProperty",
+      "@type": "@id"
+    },
+    "hasSurvivalRange": {
+      "@id": "ssn-system:hasSurvivalRange",
+      "@type": "@id"
+    },
+    "inCondition": {
+      "@id": "ssn-system:inCondition",
       "@type": "@id"
     },
     "qualityOfObservation": {
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
-    "properties": "@nest",
-    "featureType": "@type",
     "label": {
       "@id": "rdfs:label",
       "@container": "@language"
@@ -556,8 +582,6 @@ The following sets of SHACL shapes are used for validating this building block:
 
 * OIM Observations <small><code>ogc.hosted.iliad.api.features.oim-obs</code></small>
   * [https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl](https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl)
-* SOSA Observation <small><code>ogc.unstable.sosa.properties.observation</code></small>
-  * [https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl](https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl)
 
 # References
 

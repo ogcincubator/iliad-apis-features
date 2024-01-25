@@ -1,106 +1,1071 @@
 {
   "x-defs": {
     "ogc.hosted.iliad.api.features.coverage_information_model": {
-      "title": "Coverage object",
-      "description": "Component of OGC Coverage Implementation Schema 1.1. Last updated: 2016-may-18. Copyright (c) 2016 Open Geospatial Consortium, Inc. All Rights Reserved. To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.",
-      "$ref": "https://schemas.opengis.net/cis/1.1/json/coverage-schema.json",
-      "x-jsonld-extra-terms": {
-        "id": "@id",
-        "type": "@type",
-        "CoverageByDomainAndRangeType": "http://www.opengis.net/cis/1.1/CoverageByDomainAndRangeType",
-        "CoverageByPartitioningType": "http://www.opengis.net/cis/1.1/CoverageByPartitioningType",
-        "envelope": "http://www.opengis.net/cis/1.1/envelope",
-        "domainSet": "http://www.opengis.net/cis/1.1/domainSet",
-        "rangeSet": "http://www.opengis.net/cis/1.1/rangeSet",
-        "partitionSet": "http://www.opengis.net/cis/1.1/partitionSet",
-        "rangeType": "http://www.opengis.net/cis/1.1/rangeType",
-        "metadata": "http://www.opengis.net/cis/1.1/metadata",
-        "DomainSetType": "http://www.opengis.net/cis/1.1/DomainSetType",
-        "GeneralGridCoverageType": "http://www.opengis.net/cis/1.1/GeneralGridCoverageType",
-        "generalGrid": "http://www.opengis.net/cis/1.1/generalGrid",
-        "srsName": {
-          "x-jsonld-id": "http://www.opengis.net/cis/1.1/srsName",
-          "x-jsonld-type": "@id"
-        },
-        "axisLabel": "http://www.opengis.net/cis/1.1/axisLabel",
-        "axisLabels": {
-          "x-jsonld-id": "http://www.opengis.net/cis/1.1/axisLabels",
-          "x-jsonld-container": "@list"
-        },
-        "uomLabel": "http://www.opengis.net/cis/1.1/uomLabel",
-        "uomLabels": {
-          "x-jsonld-id": "http://www.opengis.net/cis/1.1/uomLabels",
-          "x-jsonld-container": "@list"
-        },
-        "axis": "http://www.opengis.net/cis/1.1/axis",
-        "IndexAxisType": "http://www.opengis.net/cis/1.1/IndexAxisType",
-        "RegularAxisType": "http://www.opengis.net/cis/1.1/RegularAxisType",
-        "IrregularAxisType": "http://www.opengis.net/cis/1.1/IrregularAxisType",
-        "DisplacementAxisNestType": "http://www.opengis.net/cis/1.1/DisplacementAxisNestType",
-        "lowerBound": "http://www.opengis.net/cis/1.1/lowerBound",
-        "upperBound": "http://www.opengis.net/cis/1.1/upperBound",
-        "resolution": "http://www.opengis.net/cis/1.1/resolution",
-        "GridLimitsType": "http://www.opengis.net/cis/1.1/GridLimitsType",
-        "gridLimits": "http://www.opengis.net/cis/1.1/gridLimits",
-        "coordinate": "http://www.opengis.net/cis/1.1/coordinate",
-        "displacement": "http://www.opengis.net/cis/1.1/displacement",
-        "model": "http://www.opengis.net/cis/1.1/model",
-        "TransformationBySensorModelType": "http://www.opengis.net/cis/1.1/TransformationBySensorModelType",
-        "sensorModelRef": "http://www.sensorml.com/sensorML-2.0/sensorModelRef",
-        "sensorInstanceRef": "http://www.sensorml.com/sensorML-2.0/sensorInstanceRef",
-        "EnvelopeByAxisType": "http://www.opengis.net/cis/1.1/EnvelopeByAxisType",
-        "AxisExtendType": "http://www.opengis.net/cis/1.1/AxisExtendType",
-        "PartitionSetType": "http://www.opengis.net/cis/1.1/PartitionSetType",
-        "partition": "http://www.opengis.net/cis/1.1/partition",
-        "coverage": "http://www.opengis.net/cis/1.1/coverage",
-        "coverageRef": {
-          "x-jsonld-id": "http://www.opengis.net/cis/1.1/coverageRef",
-          "x-jsonld-type": "@id"
-        },
-        "positionValuePair": "http://www.opengis.net/cis/1.1/positionValuePair",
-        "PVPType": "http://www.opengis.net/cis/1.1/PVPType",
-        "value": "http://www.opengis.net/cis/1.1/value",
-        "RangeSetType": "http://www.opengis.net/cis/1.1/RangeSetType",
-        "RangeSetRefType": "http://www.opengis.net/cis/1.1/RangeSetRefType",
-        "dataBlock": "http://www.opengis.net/cis/1.1/dataBlock",
-        "VDataBlockType": "http://www.opengis.net/cis/1.1/VDataBlockType",
-        "fileReference": {
-          "x-jsonld-id": "http://www.opengis.net/cis/1.1/fileReference",
-          "x-jsonld-type": "@id"
-        },
-        "DataRecordType": "http://www.opengis.net/swe/2.0/DataRecordType",
-        "field": "http://www.opengis.net/swe/2.0/field",
-        "names": {
-          "x-jsonld-id": "http://www.opengis.net/swe/2.0/names",
-          "x-jsonld-container": "@list"
-        },
-        "name": "http://www.opengis.net/swe/2.0/name",
-        "QuantityType": "http://www.opengis.net/swe/2.0/QuantityType",
-        "uom": "http://www.opengis.net/swe/2.0/uom",
-        "code": "http://www.opengis.net/swe/2.0/code",
-        "UnitReference": "http://www.opengis.net/swe/2.0/UnitReference",
-        "definition": {
-          "x-jsonld-id": "http://www.opengis.net/swe/2.0/definition",
-          "x-jsonld-type": "@id"
-        },
-        "interpolationRestriction": "http://www.opengis.net/cis/1.1/interpolationRestriction",
-        "allowedInterpolation": {
-          "x-jsonld-id": "http://www.opengis.net/cis/1.1/allowedInterpolation",
-          "x-jsonld-type": "@id"
-        },
-        "constraint": "http://www.opengis.net/swe/2.0/constraint",
-        "AllowedValues": "http://www.opengis.net/swe/2.0/AllowedValues",
-        "interval": "http://www.opengis.net/swe/2.0/interval"
-      },
-      "x-jsonld-prefixes": {
-        "cis": "http://www.opengis.net/cis/1.1/",
-        "sml": "http://www.sensorml.com/sensorML-2.0/",
-        "swe": "http://www.opengis.net/swe/2.0/",
-        "ogcType": "http://www.opengis.net/def/dataType/OGC/0/",
-        "ogcInterpolation": "http://www.opengis.net/def/interpolation/OGC/0/"
-      },
       "x-schema-version": "http://json-schema.org/draft-04/schema#",
       "x-schema-source": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema-oas3.0.json"
+    },
+    "schemas.opengis.net_cis_1.1_json_coverage-schema.json": {
+      "title": "Coverage object",
+      "description": "Component of OGC Coverage Implementation Schema 1.1. Last updated: 2016-may-18. Copyright (c) 2016 Open Geospatial Consortium, Inc. All Rights Reserved. To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.",
+      "type": "object",
+      "oneOf": [
+        {
+          "required": [
+            "type",
+            "domainSet",
+            "rangeSet",
+            "rangeType"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "enum": [
+                "CoverageByDomainAndRangeType"
+              ]
+            },
+            "envelope": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema-oas3.0.json#/x-defs/schemas.opengis.net_cis_1.1_json_coverage-schema.json/definitions/envelope"
+            },
+            "domainSet": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema-oas3.0.json#/x-defs/schemas.opengis.net_cis_1.1_json_coverage-schema.json/definitions/domainSet"
+            },
+            "rangeSet": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema-oas3.0.json#/x-defs/schemas.opengis.net_cis_1.1_json_coverage-schema.json/definitions/rangeSet"
+            },
+            "rangeType": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema-oas3.0.json#/x-defs/schemas.opengis.net_cis_1.1_json_coverage-schema.json/definitions/rangeType"
+            },
+            "metadata": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema-oas3.0.json#/x-defs/schemas.opengis.net_cis_1.1_json_coverage-schema.json/definitions/metadata"
+            }
+          }
+        },
+        {
+          "required": [
+            "type",
+            "partitionSet",
+            "rangeType"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "enum": [
+                "CoverageByPartitioningType"
+              ]
+            },
+            "envelope": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema-oas3.0.json#/x-defs/schemas.opengis.net_cis_1.1_json_coverage-schema.json/definitions/envelope"
+            },
+            "partitionSet": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema-oas3.0.json#/x-defs/schemas.opengis.net_cis_1.1_json_coverage-schema.json/definitions/partitionSet"
+            },
+            "rangeType": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema-oas3.0.json#/x-defs/schemas.opengis.net_cis_1.1_json_coverage-schema.json/definitions/rangeType"
+            },
+            "metadata": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema-oas3.0.json#/x-defs/schemas.opengis.net_cis_1.1_json_coverage-schema.json/definitions/metadata"
+            }
+          }
+        }
+      ],
+      "definitions": {
+        "envelope": {
+          "title": "envelope",
+          "description": "The envelope around a coverage is defined by the lower and upper bound of each axis, respectively. The purpose of the axisLabels attribute, which lists the axis labels of all axisExtent elements in proper sequence, is to enforce axis sequence also in XML systems which do not preserve document order.",
+          "type": "object",
+          "required": [
+            "type",
+            "srsName",
+            "axisLabels",
+            "axis"
+          ],
+          "properties": {
+            "type": {
+              "enum": [
+                "EnvelopeByAxisType"
+              ]
+            },
+            "id": {
+              "type": "string"
+            },
+            "srsName": {
+              "type": "string",
+              "format": "uri"
+            },
+            "axisLabels": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "axis": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "type",
+                  "lowerBound",
+                  "upperBound",
+                  "uomLabel"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "enum": [
+                      "AxisExtentType"
+                    ]
+                  },
+                  "id": {
+                    "type": "string"
+                  },
+                  "axisLabel": {
+                    "type": "string"
+                  },
+                  "lowerBound": {
+                    "type": [
+                      "number",
+                      "string",
+                      "boolean"
+                    ],
+                    "nullable": true,
+                    "anyOf": {
+                      "anyOf": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "boolean"
+                        }
+                      ]
+                    }
+                  },
+                  "upperBound": {
+                    "type": [
+                      "number",
+                      "string",
+                      "boolean"
+                    ],
+                    "nullable": true,
+                    "anyOf": {
+                      "anyOf": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "boolean"
+                        }
+                      ]
+                    }
+                  },
+                  "uomLabel": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "domainSet": {
+          "title": "domainSet",
+          "description": "The domainSet describes the *direct positions* of the coverage, i.e., the locations for which values are available.",
+          "type": "object",
+          "oneOf": [
+            {
+              "required": [
+                "type",
+                "generalGrid"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "DomainSetType"
+                  ]
+                },
+                "generalGrid": {
+                  "title": "General Grid",
+                  "description": "A general n-D grid is defined through a sequence of axes, each of which can be of a particular axis type.",
+                  "type": "object",
+                  "required": [
+                    "type"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "GeneralGridCoverageType"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "srsName": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "axisLabels": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "axis": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "oneOf": [
+                          {
+                            "title": "Index Axis",
+                            "description": "An Index Axis is an axis with only integer positions allowed.",
+                            "required": [
+                              "type",
+                              "axisLabel",
+                              "lowerBound",
+                              "upperBound"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "enum": [
+                                  "IndexAxisType"
+                                ]
+                              },
+                              "id": {
+                                "type": "string"
+                              },
+                              "axisLabel": {
+                                "type": "string"
+                              },
+                              "lowerBound": {
+                                "type": "number"
+                              },
+                              "upperBound": {
+                                "type": "number"
+                              }
+                            }
+                          },
+                          {
+                            "title": "Regular Axis",
+                            "description": "A Regular Axis is an axis where all direct coordinates are at a common distance from its immediate neighbors.",
+                            "required": [
+                              "type",
+                              "axisLabel",
+                              "lowerBound",
+                              "upperBound",
+                              "resolution",
+                              "uomLabel"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "enum": [
+                                  "RegularAxisType"
+                                ]
+                              },
+                              "id": {
+                                "type": "string"
+                              },
+                              "axisLabel": {
+                                "type": "string"
+                              },
+                              "lowerBound": {
+                                "type": [
+                                  "number",
+                                  "string",
+                                  "boolean"
+                                ],
+                                "nullable": true,
+                                "anyOf": {
+                                  "anyOf": [
+                                    {
+                                      "type": "number"
+                                    },
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "boolean"
+                                    }
+                                  ]
+                                }
+                              },
+                              "upperBound": {
+                                "type": [
+                                  "number",
+                                  "string",
+                                  "boolean"
+                                ],
+                                "nullable": true,
+                                "anyOf": {
+                                  "anyOf": [
+                                    {
+                                      "type": "number"
+                                    },
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "boolean"
+                                    }
+                                  ]
+                                }
+                              },
+                              "uomLabel": {
+                                "type": "string"
+                              },
+                              "resolution": {
+                                "type": "number"
+                              }
+                            }
+                          },
+                          {
+                            "title": "Irregular Axis",
+                            "description": "An irregular axis enumerates all possible direct position coordinates.",
+                            "required": [
+                              "type",
+                              "axisLabel",
+                              "uomLabel",
+                              "coordinate"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "type": {
+                                "enum": [
+                                  "IrregularAxisType"
+                                ]
+                              },
+                              "id": {
+                                "type": "string"
+                              },
+                              "axisLabel": {
+                                "type": "string"
+                              },
+                              "uomLabel": {
+                                "type": "string"
+                              },
+                              "coordinate": {
+                                "type": "array",
+                                "items": {
+                                  "type": [
+                                    "number",
+                                    "string",
+                                    "boolean"
+                                  ],
+                                  "anyOf": {
+                                    "anyOf": [
+                                      {
+                                        "type": "number"
+                                      },
+                                      {
+                                        "type": "string"
+                                      },
+                                      {
+                                        "type": "boolean"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "displacement": {
+                      "title": "Displacement",
+                      "description": "A Displacement is a warped axis nest where points on the grid all have their individual direct position coordinates. The sequenceRule element describes linearization order.",
+                      "type": "object",
+                      "oneOf": [
+                        {
+                          "required": [
+                            "type",
+                            "axisLabels",
+                            "uomLabels",
+                            "coordinates"
+                          ],
+                          "properties": {
+                            "type": {
+                              "enum": [
+                                "DisplacementAxisNestType"
+                              ]
+                            },
+                            "id": {
+                              "type": "string"
+                            },
+                            "axisLabel": {
+                              "type": "string"
+                            },
+                            "srsName": {
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "axisLabels": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "uomLabels": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "coordinates": {
+                              "type": "array",
+                              "items": {
+                                "type": "array",
+                                "items": {
+                                  "type": [
+                                    "number",
+                                    "string",
+                                    "boolean"
+                                  ],
+                                  "anyOf": {
+                                    "anyOf": [
+                                      {
+                                        "type": "number"
+                                      },
+                                      {
+                                        "type": "string"
+                                      },
+                                      {
+                                        "type": "boolean"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "required": [
+                            "type",
+                            "axisLabels",
+                            "uomLabels",
+                            "coordinatesRef"
+                          ],
+                          "properties": {
+                            "type": {
+                              "enum": [
+                                "DisplacementAxisNestTypeRef"
+                              ]
+                            },
+                            "id": {
+                              "type": "string"
+                            },
+                            "axisLabel": {
+                              "type": "string"
+                            },
+                            "srsName": {
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "axisLabels": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "uomLabels": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "coordinatesRef": {
+                              "type": "string",
+                              "format": "uri"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "model": {
+                      "title": "Sensor model",
+                      "description": "A Transformation By Sensor Model is a transformation definition which is given by a SensorML 2.0 transformation specification.",
+                      "type": "object",
+                      "required": [
+                        "type",
+                        "sensorModelRef"
+                      ],
+                      "properties": {
+                        "type": {
+                          "enum": [
+                            "TransformationBySensorModelType"
+                          ]
+                        },
+                        "id": {
+                          "type": "string"
+                        },
+                        "axisLabels": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "uomLabels": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "sensorModelRef": {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        "sensorInstanceRef": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      }
+                    },
+                    "gridLimits": {
+                      "title": "Grid limits",
+                      "description": "This is the boundary of the array underlying the grid, given by its diagonal corner points in integer _60_3D. The grid limits can be omitted in case all axes are of type index axis, because then it repeats the grid information in a redundant way. The purpose of the axisLabels attribute, which lists the axis labels of all axisExtent elements in proper sequence, is to enforce axis sequence also in XML systems which do not preserve document order.",
+                      "type": "object",
+                      "required": [
+                        "type"
+                      ],
+                      "properties": {
+                        "indexAxis": {
+                          "title": "Index Axis",
+                          "description": "An Index Axis is an axis with only integer positions allowed.",
+                          "type": "object",
+                          "required": [
+                            "type",
+                            "lowerBound",
+                            "upperBound"
+                          ],
+                          "additionalProperties": false,
+                          "properties": {
+                            "type": {
+                              "enum": [
+                                "IndexAxisType"
+                              ]
+                            },
+                            "id": {
+                              "type": "string"
+                            },
+                            "axisLabel": {
+                              "type": "string"
+                            },
+                            "lowerBound": {
+                              "type": "number"
+                            },
+                            "upperBound": {
+                              "type": "number"
+                            }
+                          }
+                        },
+                        "srsName": {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        "axisLabels": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "required": [
+                "type",
+                "directMultiPoint"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "DomainSetType"
+                  ]
+                },
+                "directMultiPoint": {
+                  "oneOf": [
+                    {
+                      "required": [
+                        "type",
+                        "coordinates"
+                      ],
+                      "properties": {
+                        "type": {
+                          "enum": [
+                            "DirectMultiPointType"
+                          ]
+                        },
+                        "coordinates": {
+                          "type": "array",
+                          "items": {
+                            "type": "array",
+                            "items": {
+                              "type": [
+                                "number",
+                                "string",
+                                "boolean"
+                              ],
+                              "anyOf": {
+                                "anyOf": [
+                                  {
+                                    "type": "number"
+                                  },
+                                  {
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "boolean"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "required": [
+                        "type",
+                        "coordinatesRef"
+                      ],
+                      "properties": {
+                        "type": {
+                          "enum": [
+                            "DirectMultiPointTypeRef"
+                          ]
+                        },
+                        "coordinatesRef": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "required": [
+                "type",
+                "fileReference"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "DomainSetRefType"
+                  ]
+                },
+                "id": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "fileReference": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            }
+          ]
+        },
+        "rangeSet": {
+          "title": "rangeSet",
+          "description": "The rangeSet lists a value for each of the coverage's direct positions. Values resemble the *payload* information of some particular direct positions. Values can be composite (with a single nesting level, i.e.: composites always consist of atomics), or atomic (emulated through single-component composites) whereby the sequence, structure, and meaning of every value is defined through the rangeType. Values can be represented in-line or by reference to an external file which may have any suitable encoding.",
+          "type": "object",
+          "oneOf": [
+            {
+              "required": [
+                "type",
+                "dataBlock"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "RangeSetType"
+                  ]
+                },
+                "dataBlock": {
+                  "title": "dataBlock",
+                  "description": "Data block objects",
+                  "type": "object",
+                  "required": [
+                    "type",
+                    "values"
+                  ],
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "VDataBlockType",
+                        "CVDataBlockType"
+                      ]
+                    },
+                    "values": {
+                      "type": "array",
+                      "items": {
+                        "type": [
+                          "number",
+                          "string",
+                          "boolean"
+                        ],
+                        "nullable": true,
+                        "anyOf": {
+                          "anyOf": [
+                            {
+                              "type": "number"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "boolean"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "required": [
+                "type",
+                "fileReference"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "RangeSetRefType"
+                  ]
+                },
+                "fileReference": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "partitionSet": {
+          "title": "Partitioning Set",
+          "description": "A partition describes how a coverage (*sub-coverage*) referenced is located within referencing coverage (*super-coverage*). The sub-coverage can be represented by referencing a coverage id or a URL pointing to a coverage.  Such sub-coverages referenced may be grouped into the super-coverage document, or reside remote, or mixed. As an additional alternative, single range values can be indicated verbatimg, together with their direct position. All values must share an identical structure and conform to the rangeType definition.",
+          "type": "object",
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "enum": [
+                "PartitionSetType"
+              ]
+            },
+            "partition": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "oneOf": [
+                  {
+                    "required": [
+                      "type",
+                      "coverageRef"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "enum": [
+                          "PartitionRefType"
+                        ]
+                      },
+                      "envelope": {
+                        "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema-oas3.0.json#/x-defs/schemas.opengis.net_cis_1.1_json_coverage-schema.json/definitions/envelope"
+                      },
+                      "coverageRef": {
+                        "type": "string",
+                        "format": "uri"
+                      }
+                    }
+                  },
+                  {
+                    "required": [
+                      "type",
+                      "coverage"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "enum": [
+                          "PartitionType"
+                        ]
+                      },
+                      "envelope": {
+                        "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema-oas3.0.json#/x-defs/schemas.opengis.net_cis_1.1_json_coverage-schema.json/definitions/envelope"
+                      },
+                      "coverage": {
+                        "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema-oas3.0.json#/x-defs/schemas.opengis.net_cis_1.1_json_coverage-schema.json"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "positionValuePair": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "type",
+                  "coordinate",
+                  "value"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "enum": [
+                      "PVPType"
+                    ]
+                  },
+                  "coordinate": {
+                    "type": "array",
+                    "items": {
+                      "type": [
+                        "number",
+                        "string",
+                        "boolean"
+                      ],
+                      "anyOf": {
+                        "anyOf": [
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "boolean"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "value": {
+                    "type": "array",
+                    "items": {
+                      "type": [
+                        "number",
+                        "string",
+                        "boolean"
+                      ],
+                      "nullable": true,
+                      "anyOf": {
+                        "anyOf": [
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "boolean"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "rangeType": {
+          "title": "rangeType",
+          "description": "The rangeType element describes the structure and semantics of a coverage's range values, including (optionally) restrictions on the interpolation allowed on such values.",
+          "type": "object",
+          "oneOf": [
+            {
+              "required": [
+                "type",
+                "field"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "DataRecordType"
+                  ]
+                },
+                "field": {
+                  "type": "array",
+                  "items": {
+                    "title": "quantity",
+                    "description": "quantiy",
+                    "type": "object",
+                    "required": [
+                      "type"
+                    ],
+                    "properties": {
+                      "type": {
+                        "enum": [
+                          "QuantityType"
+                        ]
+                      },
+                      "id": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "definition": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "uom": {
+                        "title": "units of measure",
+                        "description": "units of measure",
+                        "type": "object",
+                        "required": [
+                          "type",
+                          "code"
+                        ],
+                        "properties": {
+                          "type": {
+                            "enum": [
+                              "UnitReference"
+                            ]
+                          },
+                          "id": {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "code": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "constraint": {
+                        "title": "Constraint",
+                        "description": "Constraint",
+                        "type": "object",
+                        "required": [
+                          "type"
+                        ],
+                        "properties": {
+                          "type": {
+                            "enum": [
+                              "AllowedValues"
+                            ]
+                          },
+                          "id": {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "interval": {
+                            "type": "array",
+                            "items": {
+                              "type": [
+                                "number",
+                                "string",
+                                "boolean"
+                              ],
+                              "anyOf": {
+                                "anyOf": [
+                                  {
+                                    "type": "number"
+                                  },
+                                  {
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "boolean"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "interpolationRestriction": {
+                  "title": "interpolationRestriction",
+                  "description": "Interpolation restriction",
+                  "type": "object",
+                  "required": [
+                    "type"
+                  ],
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "InterpolationRestrictionType"
+                      ]
+                    },
+                    "id": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "allowedInterpolation": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "format": "uri"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "required": [
+                "type",
+                "fileReference"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "RangeTypeRefType"
+                  ]
+                },
+                "id": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "fileReference": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            }
+          ]
+        },
+        "metadata": {
+          "title": "Metadata",
+          "description": "The metadata element is a container of any (not further specified) information which should be transported along with the coverage on hand, such as domain-specific metadata.",
+          "type": "object"
+        }
+      },
+      "x-schema-version": "http://json-schema.org/draft-04/schema#",
+      "x-schema-source": "https://schemas.opengis.net/cis/1.1/json/coverage-schema.json"
     }
   },
   "allOf": [
