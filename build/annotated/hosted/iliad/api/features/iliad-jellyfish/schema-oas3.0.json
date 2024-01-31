@@ -15,7 +15,7 @@
                   "properties": {
                     "quantityOfJF": {
                       "type": "integer",
-                      "x-jsonld-id": "http://w3id.org/iliad/jellyfish/property/quantityOfJF"
+                      "x-jsonld-id": "https://w3id.org/iliad/jellyfish/property/quantityOfJF"
                     },
                     "densityOfJF": {
                       "type": "string",
@@ -25,17 +25,17 @@
                         "Swarm",
                         "Few"
                       ],
-                      "x-jsonld-id": "http://w3id.org/iliad/jellyfish/property/densityOfJF",
+                      "x-jsonld-id": "https://w3id.org/iliad/jellyfish/property/densityOfJF",
                       "x-jsonld-type": "@id",
-                      "x-jsonld-base": "http://w3id.org/iliad/jellyfish/property/densityOfJF/"
+                      "x-jsonld-base": "https://w3id.org/iliad/jellyfish/property/densityOfJF/"
                     },
                     "stingByJF": {
                       "type": "string",
-                      "x-jsonld-id": "http://w3id.org/iliad/jellyfish/property/stingByJF"
+                      "x-jsonld-id": "https://w3id.org/iliad/jellyfish/property/stingByJF"
                     },
                     "beachedJF": {
                       "type": "string",
-                      "x-jsonld-id": "http://w3id.org/iliad/jellyfish/property/beachedJF"
+                      "x-jsonld-id": "https://w3id.org/iliad/jellyfish/property/beachedJF"
                     }
                   },
                   "x-jsonld-id": "sosa:hasResult"
@@ -97,13 +97,13 @@
           "x-jsonld-id": "sosa:observedProperty",
           "x-jsonld-type": "@id",
           "x-jsonld-context": {
-            "@base": "http://w3id.org/iliad/jellyfish/property/"
+            "@base": "https://w3id.org/iliad/jellyfish/property/"
           }
         }
       },
       "x-jsonld-prefixes": {
-        "jf-property": "http://w3id.org/iliad/jellyfish/property/",
-        "jf-density": "http://w3id.org/iliad/jellyfish/property/densityOfJF/"
+        "jf-property": "https://w3id.org/iliad/jellyfish/property/",
+        "jf-density": "https://w3id.org/iliad/jellyfish/property/densityOfJF/"
       },
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema-oas3.0.json"
@@ -121,16 +121,16 @@
               "properties": {
                 "sampleSizeValue": {
                   "type": "string",
-                  "x-jsonld-id": "http://w3id.org/iliad/property/sampleSizeValue"
+                  "x-jsonld-id": "https://w3id.org/iliad/property/sampleSizeValue"
                 },
                 "speciesScientificName": {
                   "type": "string",
-                  "x-jsonld-id": "http://w3id.org/iliad/property/speciesScientificName"
+                  "x-jsonld-id": "https://w3id.org/iliad/property/speciesScientificName"
                 },
                 "wormsConcept": {
                   "type": "string",
                   "pattern": "^https://marinespecies\\.org/.*",
-                  "x-jsonld-id": "http://w3id.org/iliad/property/wormsConcept",
+                  "x-jsonld-id": "https://w3id.org/iliad/property/wormsConcept",
                   "x-jsonld-type": "@id"
                 }
               }
@@ -185,7 +185,7 @@
         }
       ],
       "x-jsonld-prefixes": {
-        "iliad": "http://w3id.org/iliad/property/"
+        "iliad": "https://w3id.org/iliad/property/"
       },
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/oim-obs-cs/schema.json"
@@ -271,7 +271,7 @@
       "x-jsonld-prefixes": {
         "sosa": "http://www.w3.org/ns/sosa/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "iliad": "http://w3id.org/iliad/property/"
+        "iliad": "https://w3id.org/iliad/property/"
       },
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/oim-obs/schema.json"

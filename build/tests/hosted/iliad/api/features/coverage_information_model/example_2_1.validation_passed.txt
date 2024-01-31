@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.coverage_information_model - OGC Coverage Implementation Schema
-Generated 2024-01-25T21:35:33.054447+00:00
+Generated 2024-01-31T01:18:26.245263+00:00
 === Files ===
 Using example_2_1.json from examples
 JSON-LD context is present - uplifting

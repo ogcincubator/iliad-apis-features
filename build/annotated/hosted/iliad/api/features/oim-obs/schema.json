@@ -39,7 +39,7 @@
               "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json",
               "x-jsonld-id": "http://www.w3.org/ns/sosa/observedProperty",
               "x-jsonld-type": "@id",
-              "x-jsonld-base": "http://w3id.org/iliad/jellyfish/property/"
+              "x-jsonld-base": "https://w3id.org/iliad/jellyfish/property/"
             }
           }
         }
@@ -81,6 +81,6 @@
   "x-jsonld-prefixes": {
     "sosa": "http://www.w3.org/ns/sosa/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "iliad": "http://w3id.org/iliad/property/"
+    "iliad": "https://w3id.org/iliad/property/"
   }
 }

@@ -7,14 +7,14 @@
     },
     "hasFeatureOfInterest": {
       "@context": {
-        "@base": "http://w3id.org/iliad/jellyfish/feature/"
+        "@base": "https://w3id.org/iliad/jellyfish/feature/"
       },
       "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
     },
     "observedProperty": {
       "@context": {
-        "@base": "http://w3id.org/iliad/jellyfish/property/"
+        "@base": "https://w3id.org/iliad/jellyfish/property/"
       },
       "@id": "sosa:observedProperty",
       "@type": "@id"
@@ -32,7 +32,7 @@
         "quantityOfJF": "jf-property:quantityOfJF",
         "densityOfJF": {
           "@context": {
-            "@base": "http://w3id.org/iliad/jellyfish/property/densityOfJF/"
+            "@base": "https://w3id.org/iliad/jellyfish/property/densityOfJF/"
           },
           "@id": "jf-property:densityOfJF",
           "@type": "@id"
@@ -485,8 +485,8 @@
     "ssn-system": "ssn:systems/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "iliad": "http://w3id.org/iliad/property/",
-    "jf-property": "http://w3id.org/iliad/jellyfish/property/",
+    "iliad": "https://w3id.org/iliad/property/",
+    "jf-property": "https://w3id.org/iliad/jellyfish/property/",
     "jf-density": "jf-property:densityOfJF/",
     "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",

@@ -35,7 +35,7 @@ x-defs:
     x-jsonld-prefixes:
       sosa: http://www.w3.org/ns/sosa/
       rdfs: http://www.w3.org/2000/01/rdf-schema#
-      iliad: http://w3id.org/iliad/property/
+      iliad: https://w3id.org/iliad/property/
     x-schema-version: https://json-schema.org/draft/2020-12/schema
     x-schema-source: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.yaml
   opengeospatial.github.io_ogcapi-sosa_build_annotated_unstable_sosa_properties_observation_schema.json:

@@ -32,14 +32,14 @@ $defs:
     - properties:
         sampleSizeValue:
           type: string
-          x-jsonld-id: http://w3id.org/iliad/property/sampleSizeValue
+          x-jsonld-id: https://w3id.org/iliad/property/sampleSizeValue
         speciesScientificName:
           type: string
-          x-jsonld-id: http://w3id.org/iliad/property/speciesScientificName
+          x-jsonld-id: https://w3id.org/iliad/property/speciesScientificName
         wormsConcept:
           type: string
           pattern: ^https://marinespecies\.org/.*
-          x-jsonld-id: http://w3id.org/iliad/property/wormsConcept
+          x-jsonld-id: https://w3id.org/iliad/property/wormsConcept
           x-jsonld-type: '@id'
   OIMObsFeature:
     allOf:
@@ -61,7 +61,7 @@ anyOf:
 - $ref: '#/$defs/OIMObsFeature'
 - $ref: '#/$defs/OIMObsCollection'
 x-jsonld-prefixes:
-  iliad: http://w3id.org/iliad/property/
+  iliad: https://w3id.org/iliad/property/
 
 ```
 
@@ -87,7 +87,7 @@ Links to the schema:
     },
     "observedProperty": {
       "@context": {
-        "@base": "http://w3id.org/iliad/jellyfish/property/"
+        "@base": "https://w3id.org/iliad/jellyfish/property/"
       },
       "@id": "sosa:observedProperty",
       "@type": "@id"
@@ -529,7 +529,7 @@ Links to the schema:
     "ssn-system": "ssn:systems/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "iliad": "http://w3id.org/iliad/property/",
+    "iliad": "https://w3id.org/iliad/property/",
     "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",

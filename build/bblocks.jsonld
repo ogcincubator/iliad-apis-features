@@ -98,16 +98,26 @@
       }
     }
   ],
+  "name": "ILIAD API Profiles",
+  "abstract": "(Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability.",
+  "description": "Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. \n\nThus, a pilot project to monitor Jellyfish swarms using Citizen Science will reuse common patterns for Citizen Science observations, which in turn we reuse a common pattern for observations, using an underlying component of the OIM - the OGC Observations model (SOSA ontology). \n",
+  "modified": "2024-01-31T01:18:21.519574",
+  "tooling": {
+    "bblocks-postprocess": {
+      "commitId": "\"d0c27618159fefb1cffad6f996b2780fdfd81c71",
+      "shortCommitId": "\"d0c276",
+      "date": "2024-01-30T09:34:26+00:00\""
+    }
+  },
+  "gitRepository": "https://github.com/ogcincubator/iliad-apis-features",
+  "gitHubRepository": "https://github.com/ogcincubator/iliad-apis-features/blob/master/",
+  "baseURL": "https://ogcincubator.github.io/iliad-apis-features/",
+  "viewerURL": "https://ogcincubator.github.io/iliad-apis-features/",
+  "validationReport": "https://ogcincubator.github.io/iliad-apis-features/build/tests/report.html",
   "imports": [
     "https://opengeospatial.github.io/bblocks/register.json",
     "https://opengeospatial.github.io/ogcapi-sosa/build/register.json"
   ],
-  "baseURL": "https://ogcincubator.github.io/iliad-apis-features/",
-  "viewerURL": "https://ogcincubator.github.io/iliad-apis-features/",
-  "validationReport": "https://ogcincubator.github.io/iliad-apis-features/build/tests/report.html",
-  "abstract": "(Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability.",
-  "description": "Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. \n\nThus, a pilot project to monitor Jellyfish swarms using Citizen Science will reuse common patterns for Citizen Science observations, which in turn we reuse a common pattern for observations, using an underlying component of the OIM - the OGC Observations model (SOSA ontology). \n",
-  "name": "ILIAD API Profiles",
   "@type": [
     "skos:ConceptScheme",
     "dcat:Catalog"
@@ -123,7 +133,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2023-12-07",
+      "dateOfLastChange": "2024-01-31",
       "link": "https://github.com/opengeospatial/CoverageJSON",
       "sources": [
         {
@@ -191,7 +201,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2023-11-30",
+      "dateOfLastChange": "2024-01-31",
       "link": "https://github.com/opengeospatial/coverage-implementation-schema",
       "sources": [
         {
@@ -254,7 +264,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2023-04-05",
+      "dateOfLastChange": "2024-01-31",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -319,7 +329,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2023-04-05",
+      "dateOfLastChange": "2024-01-31",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -385,7 +395,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2023-04-05",
+      "dateOfLastChange": "2024-01-31",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {

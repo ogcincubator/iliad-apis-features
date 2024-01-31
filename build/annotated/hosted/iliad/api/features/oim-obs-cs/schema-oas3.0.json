@@ -13,16 +13,16 @@
               "properties": {
                 "sampleSizeValue": {
                   "type": "string",
-                  "x-jsonld-id": "http://w3id.org/iliad/property/sampleSizeValue"
+                  "x-jsonld-id": "https://w3id.org/iliad/property/sampleSizeValue"
                 },
                 "speciesScientificName": {
                   "type": "string",
-                  "x-jsonld-id": "http://w3id.org/iliad/property/speciesScientificName"
+                  "x-jsonld-id": "https://w3id.org/iliad/property/speciesScientificName"
                 },
                 "wormsConcept": {
                   "type": "string",
                   "pattern": "^https://marinespecies\\.org/.*",
-                  "x-jsonld-id": "http://w3id.org/iliad/property/wormsConcept",
+                  "x-jsonld-id": "https://w3id.org/iliad/property/wormsConcept",
                   "x-jsonld-type": "@id"
                 }
               }
@@ -77,7 +77,7 @@
         }
       ],
       "x-jsonld-prefixes": {
-        "iliad": "http://w3id.org/iliad/property/"
+        "iliad": "https://w3id.org/iliad/property/"
       },
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema-oas3.0.json"
@@ -159,7 +159,7 @@
       "x-jsonld-prefixes": {
         "sosa": "http://www.w3.org/ns/sosa/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "iliad": "http://w3id.org/iliad/property/"
+        "iliad": "https://w3id.org/iliad/property/"
       },
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/oim-obs/schema.json"

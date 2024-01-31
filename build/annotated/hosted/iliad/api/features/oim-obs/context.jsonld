@@ -11,7 +11,7 @@
     },
     "observedProperty": {
       "@context": {
-        "@base": "http://w3id.org/iliad/jellyfish/property/"
+        "@base": "https://w3id.org/iliad/jellyfish/property/"
       },
       "@id": "sosa:observedProperty",
       "@type": "@id"
@@ -447,7 +447,7 @@
     "ssn-system": "ssn:systems/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "iliad": "http://w3id.org/iliad/property/",
+    "iliad": "https://w3id.org/iliad/property/",
     "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",

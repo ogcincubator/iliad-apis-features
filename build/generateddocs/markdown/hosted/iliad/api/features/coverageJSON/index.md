@@ -884,14 +884,14 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 
 <http://example.com/particletypes> skos:prefLabel "Particle class"@en .
 
-<http://w3id.org/ogcincubator/coverageJSON/POTM_range> a covjson:NdArray ;
+<http://www.opengis.net/def/crs/OGC/1.3/CRS84> a <https://w3id.org/ogcincubator/coverageJSON/GeographicCRS> .
+
+<https://qudt.org/vocab/unit/NanoM> skos:prefLabel "0.000000001-fold of the SI base unit metre"@en .
+
+<https://w3id.org/ogcincubator/coverageJSON/POTM_range> a covjson:NdArray ;
     covjson:axisNames ( "composite" ) ;
     covjson:dataType xsd:double ;
     covjson:shape ( 2 ) .
-
-<http://www.opengis.net/def/crs/OGC/1.3/CRS84> a <http://w3id.org/ogcincubator/coverageJSON/GeographicCRS> .
-
-<https://qudt.org/vocab/unit/NanoM> skos:prefLabel "0.000000001-fold of the SI base unit metre"@en .
 
 [] a covjson:CoverageCollection ;
     hydra:member [ a covjson:Coverage ;
@@ -902,32 +902,32 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
                     covjson:axisNames ( "composite" ) ;
                     covjson:dataType xsd:integer ;
                     covjson:shape ( 2 ) ],
-                <http://w3id.org/ogcincubator/coverageJSON/POTM_range> ],
+                <https://w3id.org/ogcincubator/coverageJSON/POTM_range> ],
         [ a covjson:Coverage ;
             covjson:domain [ a covjson:Domain ;
-                    covjson:axis [ ],
-                        [ covjson:dataType covjson:tuple ] ] ;
+                    covjson:axis [ covjson:dataType covjson:tuple ],
+                        [ ] ] ;
             covjson:range [ a covjson:NdArray ;
                     covjson:axisNames ( "composite" ) ;
-                    covjson:dataType xsd:double ;
+                    covjson:dataType xsd:integer ;
                     covjson:shape ( 2 ) ],
                 [ a covjson:NdArray ;
                     covjson:axisNames ( "composite" ) ;
-                    covjson:dataType xsd:integer ;
+                    covjson:dataType xsd:double ;
                     covjson:shape ( 2 ) ] ] ;
     covjson:domain [ a covjson:Domain ;
             covjson:axis [ ] ] ;
     covjson:domainType covjsondt:MultiPoint ;
     covjson:parameter [ a covjson:Parameter ;
-            dcterms:description "particle diameter"@en ;
-            qudt:unit [ qudt:symbol "nm"^^<http://www.opengis.net/def/uom/UCUM/> ;
-                    skos:prefLabel "nanometers"@en ] ;
-            ssn1:observedProperty <https://qudt.org/vocab/unit/NanoM> ],
-        [ a covjson:Parameter ;
             ssn1:observedProperty <http://example.com/particletypes> ;
             covjson:categoryEncoding [ ns1:_0 0 ;
                     ns1:_1 1 ;
-                    ns1:_4 2 ] ] ;
+                    ns1:_4 2 ] ],
+        [ a covjson:Parameter ;
+            dcterms:description "particle diameter"@en ;
+            qudt:unit [ qudt:symbol "nm"^^<http://www.opengis.net/def/uom/UCUM/> ;
+                    skos:prefLabel "nanometers"@en ] ;
+            ssn1:observedProperty <https://qudt.org/vocab/unit/NanoM> ] ;
     covjson:referencing [ covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ],
         [ covjson:referenceSystem [ a inspiregloss:TemporalReferenceSystem ;
                     covjson:calendar <http://www.opengis.net/def/uom/ISO-8601/0/Gregorian> ] ],

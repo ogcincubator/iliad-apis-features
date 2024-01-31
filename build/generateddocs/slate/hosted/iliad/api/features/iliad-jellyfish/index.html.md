@@ -56,7 +56,7 @@ e.g.
       "@id": "sosa:observedProperty",
       "@type": "@id",
       "@context": {
-        "@base": "http://w3id.org/iliad/jellyfish/property/"
+        "@base": "https://w3id.org/iliad/jellyfish/property/"
       }
     },
 ```
@@ -161,18 +161,18 @@ The SHACL rules (and any other validators developed) will be tested against the 
 
 ```turtle
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix iliad: <http://w3id.org/iliad/property/> .
-@prefix jf-density: <http://w3id.org/iliad/jellyfish/property/densityOfJF/> .
-@prefix jf-property: <http://w3id.org/iliad/jellyfish/property/> .
+@prefix iliad: <https://w3id.org/iliad/property/> .
+@prefix jf-density: <https://w3id.org/iliad/jellyfish/property/densityOfJF/> .
+@prefix jf-property: <https://w3id.org/iliad/jellyfish/property/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,
+<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,
         geojson:Feature ;
     rdfs:label "Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"@en ;
-    sosa:hasFeatureOfInterest <http://w3id.org/iliad/jellyfish/feature/1-18> ;
+    sosa:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/feature/1-18> ;
     sosa:hasResult [ jf-property:beachedJF "1" ;
             jf-property:densityOfJF jf-density:Some ;
             jf-property:quantityOfJF 50 ;
@@ -359,17 +359,17 @@ The SHACL rules (and any other validators developed) will be tested against the 
 
 ```turtle
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix iliad: <http://w3id.org/iliad/property/> .
-@prefix jf-property: <http://w3id.org/iliad/jellyfish/property/> .
+@prefix iliad: <https://w3id.org/iliad/property/> .
+@prefix jf-property: <https://w3id.org/iliad/jellyfish/property/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,
+<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,
         geojson:Feature ;
     rdfs:label "Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"@en ;
-    sosa:hasFeatureOfInterest <http://w3id.org/iliad/jellyfish/observation/1-18> ;
+    sosa:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/observation/1-18> ;
     sosa:hasResult [ iliad:sampleSizeValue "10-30" ;
             iliad:speciesScientificName "Phyllorhiza punctata" ;
             iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
@@ -379,10 +379,10 @@ The SHACL rules (and any other validators developed) will be tested against the 
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ] .
 
-<http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> a sosa:Observation,
+<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> a sosa:Observation,
         geojson:Feature ;
     rdfs:label "Jelly fish observation #1 location id: 18 sensor: 528 species: Phyllorhiza punctata"@en ;
-    sosa:hasFeatureOfInterest <http://w3id.org/iliad/jellyfish/observation/1-18> ;
+    sosa:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/observation/1-18> ;
     sosa:hasResult [ iliad:sampleSizeValue "1-10" ;
             iliad:speciesScientificName "Phyllorhiza punctata" ;
             iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
@@ -394,8 +394,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
 
 [] a sosa:ObservationCollection,
         geojson:FeatureCollection ;
-    sosa:hasMember <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,
-        <http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> .
+    sosa:hasMember <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,
+        <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> .
 
 
 ```
@@ -413,18 +413,18 @@ The SHACL rules (and any other validators developed) will be tested against the 
 
 ```turtle
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix iliad: <http://w3id.org/iliad/property/> .
-@prefix jf-density: <http://w3id.org/iliad/jellyfish/property/densityOfJF/> .
-@prefix jf-property: <http://w3id.org/iliad/jellyfish/property/> .
+@prefix iliad: <https://w3id.org/iliad/property/> .
+@prefix jf-density: <https://w3id.org/iliad/jellyfish/property/densityOfJF/> .
+@prefix jf-property: <https://w3id.org/iliad/jellyfish/property/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,
+<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,
         geojson:Feature ;
     rdfs:label "Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"@en ;
-    sosa:hasFeatureOfInterest <http://w3id.org/iliad/jellyfish/feature/1-18> ;
+    sosa:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/feature/1-18> ;
     sosa:hasResult [ jf-property:beachedJF "1" ;
             jf-property:densityOfJF jf-density:Some ;
             jf-property:quantityOfJF 50 ;
@@ -468,7 +468,7 @@ $defs:
           properties:
             quantityOfJF:
               type: integer
-              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/quantityOfJF
+              x-jsonld-id: https://w3id.org/iliad/jellyfish/property/quantityOfJF
             densityOfJF:
               type: string
               enum:
@@ -476,20 +476,20 @@ $defs:
               - Some
               - Swarm
               - Few
-              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/densityOfJF
+              x-jsonld-id: https://w3id.org/iliad/jellyfish/property/densityOfJF
               x-jsonld-type: '@id'
-              x-jsonld-base: http://w3id.org/iliad/jellyfish/property/densityOfJF/
+              x-jsonld-base: https://w3id.org/iliad/jellyfish/property/densityOfJF/
             stingByJF:
               type: string
-              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/stingByJF
+              x-jsonld-id: https://w3id.org/iliad/jellyfish/property/stingByJF
             beachedJF:
               type: string
-              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/beachedJF
+              x-jsonld-id: https://w3id.org/iliad/jellyfish/property/beachedJF
           x-jsonld-id: sosa:hasResult
         hasFeatureOfInterest:
           $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
           x-jsonld-id: sosa:hasFeatureOfInterest
-          x-jsonld-base: http://w3id.org/iliad/jellyfish/feature/
+          x-jsonld-base: https://w3id.org/iliad/jellyfish/feature/
   OIMObsFeature:
     allOf:
     - $ref: ../oim-obs-cs/schema.yaml#/$defs/OIMObsFeature
@@ -514,10 +514,10 @@ x-jsonld-extra-terms:
     x-jsonld-id: sosa:observedProperty
     x-jsonld-type: '@id'
     x-jsonld-context:
-      '@base': http://w3id.org/iliad/jellyfish/property/
+      '@base': https://w3id.org/iliad/jellyfish/property/
 x-jsonld-prefixes:
-  jf-property: http://w3id.org/iliad/jellyfish/property/
-  jf-density: http://w3id.org/iliad/jellyfish/property/densityOfJF/
+  jf-property: https://w3id.org/iliad/jellyfish/property/
+  jf-density: https://w3id.org/iliad/jellyfish/property/densityOfJF/
 
 ```
 
@@ -541,14 +541,14 @@ Links to the schema:
     },
     "hasFeatureOfInterest": {
       "@context": {
-        "@base": "http://w3id.org/iliad/jellyfish/feature/"
+        "@base": "https://w3id.org/iliad/jellyfish/feature/"
       },
       "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
     },
     "observedProperty": {
       "@context": {
-        "@base": "http://w3id.org/iliad/jellyfish/property/"
+        "@base": "https://w3id.org/iliad/jellyfish/property/"
       },
       "@id": "sosa:observedProperty",
       "@type": "@id"
@@ -566,7 +566,7 @@ Links to the schema:
         "quantityOfJF": "jf-property:quantityOfJF",
         "densityOfJF": {
           "@context": {
-            "@base": "http://w3id.org/iliad/jellyfish/property/densityOfJF/"
+            "@base": "https://w3id.org/iliad/jellyfish/property/densityOfJF/"
           },
           "@id": "jf-property:densityOfJF",
           "@type": "@id"
@@ -1019,8 +1019,8 @@ Links to the schema:
     "ssn-system": "ssn:systems/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "iliad": "http://w3id.org/iliad/property/",
-    "jf-property": "http://w3id.org/iliad/jellyfish/property/",
+    "iliad": "https://w3id.org/iliad/property/",
+    "jf-property": "https://w3id.org/iliad/jellyfish/property/",
     "jf-density": "jf-property:densityOfJF/",
     "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",

@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish - Observations - ILIAD Jellyfish Pilot for Citizen Science
-Generated 2024-01-25T21:35:34.527367+00:00
+Generated 2024-01-31T01:18:27.095160+00:00
 === Files ===
 Using example_2_1.json from examples
 JSON-LD context is present - uplifting
@@ -17,7 +17,7 @@ Validation result for _sources/oim-obs/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/oim-obs/rules.shacl:
- - Shape :force-linked-data-observedProperty: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,_:Nf2284b72afe64d06bec9eeab36bd4b66,<http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>
+ - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,_:Nfa4abd74343e49fcbae60d43be52f62c
 
 === End SHACL ===
 

@@ -79,7 +79,7 @@ $defs:
           $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
           x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty
           x-jsonld-type: '@id'
-          x-jsonld-base: http://w3id.org/iliad/jellyfish/property/
+          x-jsonld-base: https://w3id.org/iliad/jellyfish/property/
   OIMObsCollection:
     allOf:
     - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observationCollection/schema.json
@@ -96,7 +96,7 @@ anyOf:
 x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   rdfs: http://www.w3.org/2000/01/rdf-schema#
-  iliad: http://w3id.org/iliad/property/
+  iliad: https://w3id.org/iliad/property/
 
 ```
 
@@ -124,7 +124,7 @@ Links to the schema:
     },
     "observedProperty": {
       "@context": {
-        "@base": "http://w3id.org/iliad/jellyfish/property/"
+        "@base": "https://w3id.org/iliad/jellyfish/property/"
       },
       "@id": "sosa:observedProperty",
       "@type": "@id"
@@ -560,7 +560,7 @@ Links to the schema:
     "ssn-system": "ssn:systems/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "iliad": "http://w3id.org/iliad/property/",
+    "iliad": "https://w3id.org/iliad/property/",
     "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",

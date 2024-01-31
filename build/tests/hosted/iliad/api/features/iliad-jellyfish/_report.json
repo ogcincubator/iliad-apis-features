@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish - Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "bblockName": "Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "bblockId": "ogc.hosted.iliad.api.features.iliad-jellyfish",
-  "generated": "2024-01-25T21:35:34.533470+00:00",
+  "generated": "2024-01-31T01:18:27.101368+00:00",
   "result": true,
   "items": [
     {
@@ -88,12 +88,12 @@
               "focusNodes": {
                 ":force-linked-data-observedProperty": {
                   "nodes": [
-                    "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n"
+              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n"
             }
           ]
         },
@@ -187,14 +187,14 @@
               "focusNodes": {
                 ":force-linked-data-observedProperty": {
                   "nodes": [
-                    "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>",
-                    "_:Nf2284b72afe64d06bec9eeab36bd4b66",
-                    "<http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>"
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>",
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>",
+                    "_:Nfa4abd74343e49fcbae60d43be52f62c"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,_:Nf2284b72afe64d06bec9eeab36bd4b66,<http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n"
+              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,_:Nfa4abd74343e49fcbae60d43be52f62c\n"
             }
           ]
         },
@@ -270,12 +270,12 @@
               "focusNodes": {
                 ":force-linked-data-observedProperty": {
                   "nodes": [
-                    "<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n"
+              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n"
             }
           ]
         },

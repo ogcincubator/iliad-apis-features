@@ -10,7 +10,7 @@ $defs:
           properties:
             quantityOfJF:
               type: integer
-              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/quantityOfJF
+              x-jsonld-id: https://w3id.org/iliad/jellyfish/property/quantityOfJF
             densityOfJF:
               type: string
               enum:
@@ -18,20 +18,20 @@ $defs:
               - Some
               - Swarm
               - Few
-              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/densityOfJF
+              x-jsonld-id: https://w3id.org/iliad/jellyfish/property/densityOfJF
               x-jsonld-type: '@id'
-              x-jsonld-base: http://w3id.org/iliad/jellyfish/property/densityOfJF/
+              x-jsonld-base: https://w3id.org/iliad/jellyfish/property/densityOfJF/
             stingByJF:
               type: string
-              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/stingByJF
+              x-jsonld-id: https://w3id.org/iliad/jellyfish/property/stingByJF
             beachedJF:
               type: string
-              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/beachedJF
+              x-jsonld-id: https://w3id.org/iliad/jellyfish/property/beachedJF
           x-jsonld-id: sosa:hasResult
         hasFeatureOfInterest:
           $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
           x-jsonld-id: sosa:hasFeatureOfInterest
-          x-jsonld-base: http://w3id.org/iliad/jellyfish/feature/
+          x-jsonld-base: https://w3id.org/iliad/jellyfish/feature/
   OIMObsFeature:
     allOf:
     - $ref: ../oim-obs-cs/schema.yaml#/$defs/OIMObsFeature
@@ -56,7 +56,7 @@ x-jsonld-extra-terms:
     x-jsonld-id: sosa:observedProperty
     x-jsonld-type: '@id'
     x-jsonld-context:
-      '@base': http://w3id.org/iliad/jellyfish/property/
+      '@base': https://w3id.org/iliad/jellyfish/property/
 x-jsonld-prefixes:
-  jf-property: http://w3id.org/iliad/jellyfish/property/
-  jf-density: http://w3id.org/iliad/jellyfish/property/densityOfJF/
+  jf-property: https://w3id.org/iliad/jellyfish/property/
+  jf-density: https://w3id.org/iliad/jellyfish/property/densityOfJF/
