@@ -19,7 +19,7 @@ e.g.
       "@id": "sosa:observedProperty",
       "@type": "@id",
       "@context": {
-        "@base": "http://w3id.org/iliad/jellyfish/property/"
+        "@base": "https://w3id.org/iliad/jellyfish/property/"
       }
     },
 ```

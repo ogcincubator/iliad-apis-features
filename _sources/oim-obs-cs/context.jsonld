@@ -1,6 +1,6 @@
 {
   "@context": {
-    "iliad": "http://w3id.org/iliad/property/",
+    "iliad": "https://w3id.org/iliad/property/",
     "sampleSizeValue": "iliad:sampleSizeValue",
     "speciesScientificName": "iliad:speciesScientificName",
     "wormsConcept": {
