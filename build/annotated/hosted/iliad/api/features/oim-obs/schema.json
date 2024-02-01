@@ -5,7 +5,7 @@
     "OIMObsProps": {
       "allOf": [
         {
-          "$ref": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/properties/observation/schema.json"
+          "$ref": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.json"
         },
         {
           "properties": {
@@ -28,7 +28,7 @@
     "OIMObsFeature": {
       "allOf": [
         {
-          "$ref": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observation/schema.json"
+          "$ref": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.json"
         },
         {
           "properties": {
@@ -48,7 +48,7 @@
     "OIMObsCollection": {
       "allOf": [
         {
-          "$ref": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observationCollection/schema.json"
+          "$ref": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observationCollection/schema.json"
         },
         {
           "properties": {

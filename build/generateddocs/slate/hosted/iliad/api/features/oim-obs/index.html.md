@@ -61,7 +61,7 @@ description: Schemas for Observations
 $defs:
   OIMObsProps:
     allOf:
-    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/properties/observation/schema.json
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.json
     - properties:
         label:
           oneOf:
@@ -71,7 +71,7 @@ $defs:
           x-jsonld-container: '@language'
   OIMObsFeature:
     allOf:
-    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observation/schema.json
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.json
     - properties:
         properties:
           $ref: '#/$defs/OIMObsProps'
@@ -82,7 +82,7 @@ $defs:
           x-jsonld-base: https://w3id.org/iliad/jellyfish/property/
   OIMObsCollection:
     allOf:
-    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observationCollection/schema.json
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observationCollection/schema.json
     - properties:
         features:
           type: array
@@ -582,6 +582,8 @@ The following sets of SHACL shapes are used for validating this building block:
 
 * OIM Observations <small><code>ogc.hosted.iliad.api.features.oim-obs</code></small>
   * [https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl](https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl)
+* SOSA Observation <small><code>ogc.sosa.properties.observation</code></small>
+  * [https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl](https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl)
 
 # References
 

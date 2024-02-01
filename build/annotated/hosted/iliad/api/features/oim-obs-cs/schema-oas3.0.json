@@ -88,7 +88,7 @@
         "OIMObsProps": {
           "allOf": [
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema-oas3.0.json#/x-defs/opengeospatial.github.io_ogcapi-sosa_build_annotated_unstable_sosa_properties_observation_schema.json"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observation"
             },
             {
               "properties": {
@@ -111,7 +111,7 @@
         "OIMObsFeature": {
           "allOf": [
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema-oas3.0.json#/x-defs/opengeospatial.github.io_ogcapi-sosa_build_annotated_unstable_sosa_features_observation_schema.json"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema-oas3.0.json#/x-defs/ogc.sosa.features.observation"
             },
             {
               "properties": {
@@ -126,7 +126,7 @@
         "OIMObsCollection": {
           "allOf": [
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema-oas3.0.json#/x-defs/opengeospatial.github.io_ogcapi-sosa_build_annotated_unstable_sosa_features_observationCollection_schema.json"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema-oas3.0.json#/x-defs/ogc.sosa.features.observationCollection"
             },
             {
               "properties": {
@@ -164,7 +164,7 @@
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/oim-obs/schema.json"
     },
-    "opengeospatial.github.io_ogcapi-sosa_build_annotated_unstable_sosa_properties_observation_schema.json": {
+    "ogc.sosa.properties.observation": {
       "description": "SOSA Observation",
       "type": "object",
       "properties": {
@@ -649,9 +649,9 @@
         "ssn": "http://www.w3.org/ns/ssn/"
       },
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/properties/observation/schema.json"
+      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.json"
     },
-    "opengeospatial.github.io_ogcapi-sosa_build_annotated_unstable_sosa_features_observation_schema.json": {
+    "ogc.sosa.features.observation": {
       "description": "SOSA Observation Feature",
       "type": "object",
       "allOf": [
@@ -1058,13 +1058,13 @@
         "ssn": "http://www.w3.org/ns/ssn/"
       },
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observation/schema.json"
+      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.json"
     },
     "ogc.ogc-utils.iri-or-curie": {
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
     },
-    "opengeospatial.github.io_ogcapi-sosa_build_annotated_unstable_sosa_features_observationCollection_schema.json": {
+    "ogc.sosa.features.observationCollection": {
       "description": "SOSA Observation Feature",
       "allOf": [
         {
@@ -1079,7 +1079,7 @@
               "items": {
                 "oneOf": [
                   {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema-oas3.0.json#/x-defs/opengeospatial.github.io_ogcapi-sosa_build_annotated_unstable_sosa_features_observation_schema.json"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema-oas3.0.json#/x-defs/ogc.sosa.features.observation"
                   },
                   {
                     "type": "string"
@@ -1481,7 +1481,7 @@
         "ssn": "http://www.w3.org/ns/ssn/"
       },
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/features/observationCollection/schema.json"
+      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observationCollection/schema.json"
     },
     "ogc.geo.json-fg.feature-lenient": {
       "allOf": [
@@ -1640,7 +1640,7 @@
       },
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json"
     },
-    "opengeospatial.github.io_ogcapi-sosa_build_annotated_unstable_sosa_properties_observationCollection_schema.json": {
+    "ogc.sosa.properties.observationCollection": {
       "description": "SOSA ObservationCollection",
       "$defs": {
         "collection": {
@@ -1746,10 +1746,10 @@
               "items": {
                 "anyOf": [
                   {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema-oas3.0.json#/x-defs/opengeospatial.github.io_ogcapi-sosa_build_annotated_unstable_sosa_properties_observationCollection_schema.json/$defs/collection"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observationCollection/$defs/collection"
                   },
                   {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema-oas3.0.json#/x-defs/opengeospatial.github.io_ogcapi-sosa_build_annotated_unstable_sosa_properties_observation_schema.json"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observation"
                   },
                   {
                     "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie"
@@ -1764,7 +1764,7 @@
       },
       "allOf": [
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema-oas3.0.json#/x-defs/opengeospatial.github.io_ogcapi-sosa_build_annotated_unstable_sosa_properties_observationCollection_schema.json/$defs/collection"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observationCollection/$defs/collection"
         },
         {
           "not": {
@@ -2152,7 +2152,7 @@
         "ssn": "http://www.w3.org/ns/ssn/"
       },
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/unstable/sosa/properties/observationCollection/schema.json"
+      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json"
     },
     "ogc.geo.features.feature": {
       "allOf": [

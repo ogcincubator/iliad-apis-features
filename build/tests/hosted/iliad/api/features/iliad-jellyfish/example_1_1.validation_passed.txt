@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish - Observations - ILIAD Jellyfish Pilot for Citizen Science
-Generated 2024-01-31T01:18:26.712120+00:00
+Generated 2024-02-01T06:32:41.777540+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
@@ -18,6 +18,18 @@ Validation result for _sources/oim-obs/rules.shacl:
   
 Focus nodes for _sources/oim-obs/rules.shacl:
  - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+
+Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
 
 === End SHACL ===
 

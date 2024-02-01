@@ -101,12 +101,12 @@
   "name": "ILIAD API Profiles",
   "abstract": "(Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability.",
   "description": "Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. \n\nThus, a pilot project to monitor Jellyfish swarms using Citizen Science will reuse common patterns for Citizen Science observations, which in turn we reuse a common pattern for observations, using an underlying component of the OIM - the OGC Observations model (SOSA ontology). \n",
-  "modified": "2024-01-31T01:18:21.519574",
+  "modified": "2024-02-01T06:32:30.953631",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"d0c27618159fefb1cffad6f996b2780fdfd81c71",
-      "shortCommitId": "\"d0c276",
-      "date": "2024-01-30T09:34:26+00:00\""
+      "commitId": "\"fd0465021c0dc5467a837bcb68da167e551b7bfd",
+      "shortCommitId": "\"fd0465",
+      "date": "2024-01-31T10:28:24+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/iliad-apis-features",
@@ -133,7 +133,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2024-01-31",
+      "dateOfLastChange": "2024-02-01",
       "link": "https://github.com/opengeospatial/CoverageJSON",
       "sources": [
         {
@@ -201,7 +201,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2024-01-31",
+      "dateOfLastChange": "2024-02-01",
       "link": "https://github.com/opengeospatial/coverage-implementation-schema",
       "sources": [
         {
@@ -264,7 +264,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2024-01-31",
+      "dateOfLastChange": "2024-02-01",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -283,9 +283,15 @@
       "shaclRules": {
         "ogc.hosted.iliad.api.features.oim-obs": [
           "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
+        ],
+        "ogc.sosa.properties.observation": [
+          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
         ]
       },
       "dependsOn": [
+        "ogc.sosa.features.observation",
+        "ogc.sosa.properties.observation",
+        "ogc.sosa.features.observationCollection",
         "ogc.ogc-utils.iri-or-curie"
       ],
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
@@ -329,7 +335,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2024-01-31",
+      "dateOfLastChange": "2024-02-01",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -348,6 +354,9 @@
       "shaclRules": {
         "ogc.hosted.iliad.api.features.oim-obs": [
           "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
+        ],
+        "ogc.sosa.properties.observation": [
+          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
         ]
       },
       "dependsOn": [
@@ -395,7 +404,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2024-01-31",
+      "dateOfLastChange": "2024-02-01",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -416,6 +425,9 @@
       "shaclRules": {
         "ogc.hosted.iliad.api.features.oim-obs": [
           "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
+        ],
+        "ogc.sosa.properties.observation": [
+          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
         ]
       },
       "dependsOn": [
