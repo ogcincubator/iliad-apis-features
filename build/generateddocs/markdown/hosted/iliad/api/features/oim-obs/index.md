@@ -36,7 +36,7 @@ description: Schemas for Observations
 $defs:
   OIMObsProps:
     allOf:
-    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.json
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.yaml
     - properties:
         label:
           oneOf:
@@ -46,7 +46,7 @@ $defs:
           x-jsonld-container: '@language'
   OIMObsFeature:
     allOf:
-    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.json
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.yaml
     - properties:
         properties:
           $ref: '#/$defs/OIMObsProps'
@@ -57,7 +57,7 @@ $defs:
           x-jsonld-base: https://w3id.org/iliad/jellyfish/property/
   OIMObsCollection:
     allOf:
-    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observationCollection/schema.json
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observationCollection/schema.yaml
     - properties:
         features:
           type: array
@@ -108,14 +108,6 @@ Links to the schema:
     },
     "madeBySensor": {
       "@id": "sosa:madeBySensor",
-      "@type": "@id"
-    },
-    "hasResult": {
-      "@id": "sosa:hasResult",
-      "@type": "@id"
-    },
-    "hasSimpleResult": {
-      "@id": "sosa:hasSimpleResult",
       "@type": "@id"
     },
     "id": "@id",
@@ -257,6 +249,10 @@ Links to the schema:
       "@id": "sosa:hasProperty",
       "@type": "@id"
     },
+    "hasResult": {
+      "@id": "sosa:hasResult",
+      "@type": "@id"
+    },
     "hasResultQuality": {
       "@id": "sosa:hasResultQuality",
       "@type": "@id"
@@ -267,6 +263,10 @@ Links to the schema:
     },
     "hasSampledFeature": {
       "@id": "sosa:hasSampledFeature",
+      "@type": "@id"
+    },
+    "hasSimpleResult": {
+      "@id": "sosa:hasSimpleResult",
       "@type": "@id"
     },
     "hasSubSystem": {

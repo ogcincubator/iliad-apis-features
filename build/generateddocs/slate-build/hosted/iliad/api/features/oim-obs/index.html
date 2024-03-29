@@ -389,7 +389,7 @@ This building block is <strong>valid</strong>
 <span class="na">$defs</span><span class="pi">:</span>
   <span class="na">OIMObsProps</span><span class="pi">:</span>
     <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.json</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.yaml</span>
     <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
         <span class="na">label</span><span class="pi">:</span>
           <span class="na">oneOf</span><span class="pi">:</span>
@@ -399,7 +399,7 @@ This building block is <strong>valid</strong>
           <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@language'</span>
   <span class="na">OIMObsFeature</span><span class="pi">:</span>
     <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.json</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.yaml</span>
     <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
         <span class="na">properties</span><span class="pi">:</span>
           <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/OIMObsProps'</span>
@@ -410,7 +410,7 @@ This building block is <strong>valid</strong>
           <span class="na">x-jsonld-base</span><span class="pi">:</span> <span class="s">https://w3id.org/iliad/jellyfish/property/</span>
   <span class="na">OIMObsCollection</span><span class="pi">:</span>
     <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observationCollection/schema.json</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observationCollection/schema.yaml</span>
     <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
         <span class="na">features</span><span class="pi">:</span>
           <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
@@ -461,14 +461,6 @@ This building block is <strong>valid</strong>
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"madeBySensor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:madeBySensor"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasResult"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"hasSimpleResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasSimpleResult"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
@@ -610,6 +602,10 @@ This building block is <strong>valid</strong>
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasProperty"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasResult"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"hasResultQuality"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasResultQuality"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
@@ -620,6 +616,10 @@ This building block is <strong>valid</strong>
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"hasSampledFeature"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasSampledFeature"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"hasSimpleResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasSimpleResult"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"hasSubSystem"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">

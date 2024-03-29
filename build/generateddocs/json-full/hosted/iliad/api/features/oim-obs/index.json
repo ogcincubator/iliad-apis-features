@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2024-02-01",
+  "dateOfLastChange": "2024-03-29",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -34,10 +34,10 @@
     ]
   },
   "dependsOn": [
-    "ogc.sosa.features.observationCollection",
-    "ogc.sosa.properties.observation",
     "ogc.ogc-utils.iri-or-curie",
-    "ogc.sosa.features.observation"
+    "ogc.sosa.features.observation",
+    "ogc.sosa.features.observationCollection",
+    "ogc.sosa.properties.observation"
   ],
   "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
   "schema": {
@@ -55,7 +55,7 @@
       "content": "TBD - see specific sub-profile for examples."
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Schemas for Observations\n$defs:\n  OIMObsProps:\n    allOf:\n    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.json\n    - properties:\n        label:\n          oneOf:\n          - type: string\n          - type: object\n          x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label\n          x-jsonld-container: '@language'\n  OIMObsFeature:\n    allOf:\n    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.json\n    - properties:\n        properties:\n          $ref: '#/$defs/OIMObsProps'\n        observedProperty:\n          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n          x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty\n          x-jsonld-type: '@id'\n          x-jsonld-base: https://w3id.org/iliad/jellyfish/property/\n  OIMObsCollection:\n    allOf:\n    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observationCollection/schema.json\n    - properties:\n        features:\n          type: array\n          items:\n            allOf:\n            - $ref: '#/$defs/OIMObsFeature'\nanyOf:\n- $ref: '#/$defs/OIMObsProps'\n- $ref: '#/$defs/OIMObsFeature'\n- $ref: '#/$defs/OIMObsCollection'\nx-jsonld-prefixes:\n  sosa: http://www.w3.org/ns/sosa/\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n  iliad: https://w3id.org/iliad/property/\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Schemas for Observations\n$defs:\n  OIMObsProps:\n    allOf:\n    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.yaml\n    - properties:\n        label:\n          oneOf:\n          - type: string\n          - type: object\n          x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label\n          x-jsonld-container: '@language'\n  OIMObsFeature:\n    allOf:\n    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.yaml\n    - properties:\n        properties:\n          $ref: '#/$defs/OIMObsProps'\n        observedProperty:\n          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n          x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty\n          x-jsonld-type: '@id'\n          x-jsonld-base: https://w3id.org/iliad/jellyfish/property/\n  OIMObsCollection:\n    allOf:\n    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observationCollection/schema.yaml\n    - properties:\n        features:\n          type: array\n          items:\n            allOf:\n            - $ref: '#/$defs/OIMObsFeature'\nanyOf:\n- $ref: '#/$defs/OIMObsProps'\n- $ref: '#/$defs/OIMObsFeature'\n- $ref: '#/$defs/OIMObsCollection'\nx-jsonld-prefixes:\n  sosa: http://www.w3.org/ns/sosa/\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n  iliad: https://w3id.org/iliad/property/\n",
   "gitRepository": "https://github.com/ogcincubator/iliad-apis-features",
   "gitPath": "_sources/oim-obs"
 }

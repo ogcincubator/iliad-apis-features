@@ -377,7 +377,7 @@ description: Schemas for Ocean Information Model Observations
 $defs:
   OIMObsProps:
     allOf:
-    - $ref: ../oim-obs-cs/schema.yaml#/$defs/OIMObsProps
+    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsProps
     - properties:
         hasResult:
           type: object
@@ -408,13 +408,13 @@ $defs:
           x-jsonld-base: https://w3id.org/iliad/jellyfish/feature/
   OIMObsFeature:
     allOf:
-    - $ref: ../oim-obs-cs/schema.yaml#/$defs/OIMObsFeature
+    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsFeature
     - properties:
         properties:
           $ref: '#/$defs/OIMObsProps'
   OIMObsCollection:
     allOf:
-    - $ref: ../oim-obs-cs/schema.yaml#/$defs/OIMObsCollection
+    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsCollection
     - properties:
         features:
           type: array
@@ -473,26 +473,6 @@ Links to the schema:
     },
     "madeBySensor": {
       "@id": "sosa:madeBySensor",
-      "@type": "@id"
-    },
-    "hasResult": {
-      "@context": {
-        "quantityOfJF": "jf-property:quantityOfJF",
-        "densityOfJF": {
-          "@context": {
-            "@base": "https://w3id.org/iliad/jellyfish/property/densityOfJF/"
-          },
-          "@id": "jf-property:densityOfJF",
-          "@type": "@id"
-        },
-        "stingByJF": "jf-property:stingByJF",
-        "beachedJF": "jf-property:beachedJF"
-      },
-      "@id": "sosa:hasResult",
-      "@type": "@id"
-    },
-    "hasSimpleResult": {
-      "@id": "sosa:hasSimpleResult",
       "@type": "@id"
     },
     "id": "@id",
@@ -651,6 +631,22 @@ Links to the schema:
       "@id": "sosa:hasProperty",
       "@type": "@id"
     },
+    "hasResult": {
+      "@id": "sosa:hasResult",
+      "@type": "@id",
+      "@context": {
+        "quantityOfJF": "jf-property:quantityOfJF",
+        "densityOfJF": {
+          "@context": {
+            "@base": "https://w3id.org/iliad/jellyfish/property/densityOfJF/"
+          },
+          "@id": "jf-property:densityOfJF",
+          "@type": "@id"
+        },
+        "stingByJF": "jf-property:stingByJF",
+        "beachedJF": "jf-property:beachedJF"
+      }
+    },
     "hasResultQuality": {
       "@id": "sosa:hasResultQuality",
       "@type": "@id"
@@ -661,6 +657,10 @@ Links to the schema:
     },
     "hasSampledFeature": {
       "@id": "sosa:hasSampledFeature",
+      "@type": "@id"
+    },
+    "hasSimpleResult": {
+      "@id": "sosa:hasSimpleResult",
       "@type": "@id"
     },
     "hasSubSystem": {

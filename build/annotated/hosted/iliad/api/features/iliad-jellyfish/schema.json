@@ -5,7 +5,7 @@
     "OIMObsProps": {
       "allOf": [
         {
-          "$ref": "../oim-obs-cs/schema.json#/$defs/OIMObsProps"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.json#/$defs/OIMObsProps"
         },
         {
           "properties": {
@@ -51,7 +51,7 @@
     "OIMObsFeature": {
       "allOf": [
         {
-          "$ref": "../oim-obs-cs/schema.json#/$defs/OIMObsFeature"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.json#/$defs/OIMObsFeature"
         },
         {
           "properties": {
@@ -65,7 +65,7 @@
     "OIMObsCollection": {
       "allOf": [
         {
-          "$ref": "../oim-obs-cs/schema.json#/$defs/OIMObsCollection"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.json#/$defs/OIMObsCollection"
         },
         {
           "properties": {

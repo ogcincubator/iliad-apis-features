@@ -28,7 +28,7 @@ comment: This is a stub for now - with simple proxies for each object where sche
 $defs:
   OIMObsProps:
     allOf:
-    - $ref: ../oim-obs/schema.yaml#/$defs/OIMObsProps
+    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml#/$defs/OIMObsProps
     - properties:
         sampleSizeValue:
           type: string
@@ -43,13 +43,13 @@ $defs:
           x-jsonld-type: '@id'
   OIMObsFeature:
     allOf:
-    - $ref: ../oim-obs/schema.yaml#/$defs/OIMObsFeature
+    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml#/$defs/OIMObsFeature
     - properties:
         properties:
           $ref: '#/$defs/OIMObsProps'
   OIMObsCollection:
     allOf:
-    - $ref: ../oim-obs/schema.yaml#/$defs/OIMObsCollection
+    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml#/$defs/OIMObsCollection
     - properties:
         features:
           type: array
@@ -98,14 +98,6 @@ Links to the schema:
     },
     "madeBySensor": {
       "@id": "sosa:madeBySensor",
-      "@type": "@id"
-    },
-    "hasResult": {
-      "@id": "sosa:hasResult",
-      "@type": "@id"
-    },
-    "hasSimpleResult": {
-      "@id": "sosa:hasSimpleResult",
       "@type": "@id"
     },
     "id": "@id",
@@ -247,6 +239,10 @@ Links to the schema:
       "@id": "sosa:hasProperty",
       "@type": "@id"
     },
+    "hasResult": {
+      "@id": "sosa:hasResult",
+      "@type": "@id"
+    },
     "hasResultQuality": {
       "@id": "sosa:hasResultQuality",
       "@type": "@id"
@@ -257,6 +253,10 @@ Links to the schema:
     },
     "hasSampledFeature": {
       "@id": "sosa:hasSampledFeature",
+      "@type": "@id"
+    },
+    "hasSimpleResult": {
+      "@id": "sosa:hasSimpleResult",
       "@type": "@id"
     },
     "hasSubSystem": {

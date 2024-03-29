@@ -181,14 +181,8 @@
             ]
           }
         },
-        "hasResult": {
-          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasResult",
-          "x-jsonld-type": "@id"
-        },
-        "hasSimpleResult": {
-          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSimpleResult",
-          "x-jsonld-type": "@id"
-        }
+        "hasResult": true,
+        "hasSimpleResult": true
       },
       "anyOf": [
         {
@@ -334,6 +328,10 @@
           "x-jsonld-id": "http://www.w3.org/ns/sosa/hasProperty",
           "x-jsonld-type": "@id"
         },
+        "hasResult": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasResult",
+          "x-jsonld-type": "@id"
+        },
         "hasResultQuality": {
           "x-jsonld-id": "http://www.w3.org/ns/sosa/hasResultQuality",
           "x-jsonld-type": "@id"
@@ -344,6 +342,10 @@
         },
         "hasSampledFeature": {
           "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSampledFeature",
+          "x-jsonld-type": "@id"
+        },
+        "hasSimpleResult": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSimpleResult",
           "x-jsonld-type": "@id"
         },
         "hasSubSystem": {
@@ -2111,7 +2113,7 @@
     },
     "beta.schemas.opengis.net_json-fg_featuretype.json": {
       "title": "the featureType member",
-      "description": "This JSON Schema is part of JSON-FG version 0.1.1",
+      "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
         {
           "type": "string"
@@ -2123,12 +2125,12 @@
           }
         }
       ],
-      "x-schema-version": "https://json-schema.org/draft/2019-09/schema",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://beta.schemas.opengis.net/json-fg/featuretype.json"
     },
     "beta.schemas.opengis.net_json-fg_link.json": {
-      "title": "the Link object",
-      "description": "This JSON Schema is part of JSON-FG version 0.1.1",
+      "title": "a Link object",
+      "description": "Since JSON-FG 0.2 this schema is no longer part of JSON-FG. The file is still published as an informative schema in case any other schema includes a reference. All references to this schema should be changed.",
       "type": "object",
       "required": [
         "href",
@@ -2158,7 +2160,7 @@
           "type": "string"
         }
       },
-      "x-schema-version": "https://json-schema.org/draft/2019-09/schema",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://beta.schemas.opengis.net/json-fg/link.json"
     },
     "ogc.ogc-utils.json-link": {
@@ -2211,7 +2213,7 @@
     },
     "beta.schemas.opengis.net_json-fg_time.json": {
       "title": "the time member",
-      "description": "This JSON Schema is part of JSON-FG version 0.1.1",
+      "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
         {
           "type": "object",
@@ -2260,12 +2262,12 @@
         }
       },
       "nullable": true,
-      "x-schema-version": "https://json-schema.org/draft/2019-09/schema",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://beta.schemas.opengis.net/json-fg/time.json"
     },
     "beta.schemas.opengis.net_json-fg_coordrefsys.json": {
       "title": "the coordRefSys member",
-      "description": "This JSON Schema is part of JSON-FG version 0.1.1",
+      "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
         {
           "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/single-refsys"
@@ -2274,7 +2276,8 @@
           "type": "array",
           "items": {
             "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/single-refsys"
-          }
+          },
+          "minItems": 2
         }
       ],
       "$defs": {
@@ -2293,7 +2296,7 @@
         },
         "refsys-simpleref": {
           "type": "string",
-          "format": "uri"
+          "description": "The value is either a URI or a CURIE."
         },
         "refsys-byref": {
           "type": "object",
@@ -2310,7 +2313,7 @@
             },
             "href": {
               "type": "string",
-              "format": "uri"
+              "description": "The value is either a URI or a CURIE."
             },
             "epoch": {
               "type": "number"
@@ -2334,12 +2337,12 @@
           }
         }
       },
-      "x-schema-version": "https://json-schema.org/draft/2019-09/schema",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://beta.schemas.opengis.net/json-fg/coordrefsys.json"
     },
     "beta.schemas.opengis.net_json-fg_place.json": {
       "title": "the place member",
-      "description": "This JSON Schema is part of JSON-FG version 0.1.1",
+      "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
         {
           "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
@@ -2376,12 +2379,12 @@
         }
       ],
       "nullable": true,
-      "x-schema-version": "https://json-schema.org/draft/2019-09/schema",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://beta.schemas.opengis.net/json-fg/place.json"
     },
     "beta.schemas.opengis.net_json-fg_geometry.json": {
       "title": "the geometry member",
-      "description": "This JSON Schema is part of JSON-FG version 0.1.1",
+      "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
         {
           "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
@@ -2406,7 +2409,7 @@
         }
       ],
       "nullable": true,
-      "x-schema-version": "https://json-schema.org/draft/2019-09/schema",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://beta.schemas.opengis.net/json-fg/geometry.json"
     },
     "ogc.geo.features.featureCollection": {
@@ -3060,7 +3063,7 @@
     },
     "beta.schemas.opengis.net_json-fg_geometry-objects.json": {
       "title": "the geometry objects",
-      "description": "This JSON Schema is part of JSON-FG version 0.1.1",
+      "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "$defs": {
         "CustomGeometry": {
           "title": "A custom geometry object",
@@ -3090,7 +3093,7 @@
           }
         },
         "Point": {
-          "title": "GeoJSON Point",
+          "title": "GeoJSON Point with additional 'coordRefSys' member",
           "type": "object",
           "required": [
             "type",
@@ -3103,6 +3106,9 @@
                 "Point"
               ]
             },
+            "coordRefSys": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+            },
             "coordinates": {
               "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
             },
@@ -3112,7 +3118,7 @@
           }
         },
         "LineString": {
-          "title": "GeoJSON LineString",
+          "title": "GeoJSON LineString with additional 'coordRefSys' member",
           "type": "object",
           "required": [
             "type",
@@ -3124,6 +3130,9 @@
               "enum": [
                 "LineString"
               ]
+            },
+            "coordRefSys": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "coordinates": {
               "type": "array",
@@ -3138,7 +3147,7 @@
           }
         },
         "Polygon": {
-          "title": "GeoJSON Polygon",
+          "title": "GeoJSON Polygon with additional 'coordRefSys' member",
           "type": "object",
           "required": [
             "type",
@@ -3150,6 +3159,9 @@
               "enum": [
                 "Polygon"
               ]
+            },
+            "coordRefSys": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "coordinates": {
               "type": "array",
@@ -3167,7 +3179,7 @@
           }
         },
         "MultiPoint": {
-          "title": "GeoJSON MultiPoint",
+          "title": "GeoJSON MultiPoint with additional 'coordRefSys' member",
           "type": "object",
           "required": [
             "type",
@@ -3179,6 +3191,9 @@
               "enum": [
                 "MultiPoint"
               ]
+            },
+            "coordRefSys": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "coordinates": {
               "type": "array",
@@ -3192,7 +3207,7 @@
           }
         },
         "MultiLineString": {
-          "title": "GeoJSON MultiLineString",
+          "title": "GeoJSON MultiLineString with additional 'coordRefSys' member",
           "type": "object",
           "required": [
             "type",
@@ -3204,6 +3219,9 @@
               "enum": [
                 "MultiLineString"
               ]
+            },
+            "coordRefSys": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "coordinates": {
               "type": "array",
@@ -3221,7 +3239,7 @@
           }
         },
         "MultiPolygon": {
-          "title": "GeoJSON MultiPolygon",
+          "title": "GeoJSON MultiPolygon with additional 'coordRefSys' member",
           "type": "object",
           "required": [
             "type",
@@ -3233,6 +3251,9 @@
               "enum": [
                 "MultiPolygon"
               ]
+            },
+            "coordRefSys": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "coordinates": {
               "type": "array",
@@ -3265,6 +3286,9 @@
               "enum": [
                 "Polyhedron"
               ]
+            },
+            "coordRefSys": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "coordinates": {
               "type": "array",
@@ -3303,6 +3327,9 @@
               "enum": [
                 "MultiPolyhedron"
               ]
+            },
+            "coordRefSys": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "coordinates": {
               "type": "array",
@@ -3345,6 +3372,9 @@
               "enum": [
                 "Prism"
               ]
+            },
+            "coordRefSys": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "base": {
               "oneOf": [
@@ -3393,6 +3423,9 @@
                 "MultiPrism"
               ]
             },
+            "coordRefSys": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+            },
             "prisms": {
               "type": "array",
               "items": {
@@ -3405,7 +3438,7 @@
           }
         },
         "GeometryCollection": {
-          "title": "GeoJSON GeometryCollection",
+          "title": "GeoJSON GeometryCollection with additional 'coordRefSys' member",
           "type": "object",
           "required": [
             "type",
@@ -3417,6 +3450,9 @@
               "enum": [
                 "GeometryCollection"
               ]
+            },
+            "coordRefSys": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "geometries": {
               "type": "array",
@@ -3491,7 +3527,7 @@
           }
         }
       },
-      "x-schema-version": "https://json-schema.org/draft/2019-09/schema",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json"
     },
     "geojson.org_schema_FeatureCollection.json": {

@@ -381,7 +381,7 @@ This building block is <strong>valid</strong>
 <span class="na">$defs</span><span class="pi">:</span>
   <span class="na">OIMObsProps</span><span class="pi">:</span>
     <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">../oim-obs/schema.yaml#/$defs/OIMObsProps</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml#/$defs/OIMObsProps</span>
     <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
         <span class="na">sampleSizeValue</span><span class="pi">:</span>
           <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
@@ -396,13 +396,13 @@ This building block is <strong>valid</strong>
           <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
   <span class="na">OIMObsFeature</span><span class="pi">:</span>
     <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">../oim-obs/schema.yaml#/$defs/OIMObsFeature</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml#/$defs/OIMObsFeature</span>
     <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
         <span class="na">properties</span><span class="pi">:</span>
           <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/OIMObsProps'</span>
   <span class="na">OIMObsCollection</span><span class="pi">:</span>
     <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">../oim-obs/schema.yaml#/$defs/OIMObsCollection</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml#/$defs/OIMObsCollection</span>
     <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
         <span class="na">features</span><span class="pi">:</span>
           <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
@@ -451,14 +451,6 @@ This building block is <strong>valid</strong>
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"madeBySensor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:madeBySensor"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasResult"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"hasSimpleResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasSimpleResult"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
@@ -600,6 +592,10 @@ This building block is <strong>valid</strong>
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasProperty"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"hasResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasResult"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"hasResultQuality"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasResultQuality"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
@@ -610,6 +606,10 @@ This building block is <strong>valid</strong>
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"hasSampledFeature"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasSampledFeature"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"hasSimpleResult"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:hasSimpleResult"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"hasSubSystem"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
