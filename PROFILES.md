@@ -1,17 +1,17 @@
 # Profile patterns
 
+Standards can define very specific application behaviours, of general patterns common to many applications. Applications can be quite simple, but complexity emerges from many different solutions to the same common patterns. Alternatively powerful, flexible common patterns can be defined and re-used in applications. These however can be hard to understand - however **profiles** of such standards can provide simplified views by constraining and demonstrating implementation options.  Profiles can also extend common patterns with application specific capabilities, including re-use of other common standards and rules how things inter-relate.
 
-**Profiles** allow all the underlying details of base standards to be automatically included in testing and validation - this _encapsulates_ the underlying complexity of base specifications.
+**Profiles** allow all the underlying details of base standards to be automatically included in documentation, testing and validation - this _encapsulates_ the underlying complexity of base specifications.
  
 This dramatically **simplifies** profiles in terms of both development and usage, and ensures **consistency** and conformance of profiles with base specifications.
 
 Typical types of profiles are a layering of general to specific, with specific benefits accruing to each layer in terms of reuse of software through to reuse of application data.
 ![](https://lucid.app/publicSegments/view/5bebb494-e12f-46c6-a633-9c4cb3f0ba56/image.png)
 
+In particular, if base specifications use the OGC BuildingBlocks then profiles can _leverage_ all the effort in design, testing and validation capabilities through CI/CT (*Continuous Integration/Continuus Testing),
 
-In particular, if base specifications use the OGC BuildingBlocks then profiles can _leverage_ all the effort in design, testing and validation capabilities.
-
-Thus profiles also use the same structures, so they can be profiled in turn.
+Thus profiles based on OGC Building Blocks also use the same structures as the underlying standards, so they can be profiled in turn.
 
 ## What is a profile?
 
