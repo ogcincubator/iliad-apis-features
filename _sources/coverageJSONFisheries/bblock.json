@@ -1,0 +1,39 @@
+{
+  "name": "OGC Iliad CoverageJSON ",
+  "abstract": "Based on CoverageJSON and Ocean Information Model",
+  "status": "under-development",
+  "dateTimeAddition": "2024-04-23T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2024-04-23",
+  "link": "https://github.com/opengeospatial/CoverageJSON",
+  "sources": [
+    {
+      "title": "CoverageJSON context",
+      "link": "https://docs.ogc.org/cs/21-069r2/21-069r2.html"
+    },
+    {
+      "title": "Coverage Implementation Schema that CoverageJSON is based on",
+      "link": "https://docs.ogc.org/is/09-146r8/09-146r8.html"
+    },
+    {
+      "title": "Ocean Information Model",
+      "link": ""
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "Ogcdoc",
+    "OGC document",
+    "JSON",
+    "JSON-LD",
+    "CoverageJSON",
+    "CovJSON",
+    "coverage",
+    "spatiotemporal",
+    "linked-data",
+    OIM
+  ]
+}

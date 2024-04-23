@@ -2,7 +2,7 @@
 
 
 **Profiles** allow all the underlying details of base standards to be automatically included in testing and validation - this _encapsulates_ the underlying complexity of base specifications.
- 
+
 This dramatically **simplifies** profiles in terms of both development and usage, and ensures **consistency** and conformance of profiles with base specifications.
 
 Typical types of profiles are a layering of general to specific, with specific benefits accruing to each layer in terms of reuse of software through to reuse of application data.
@@ -19,7 +19,7 @@ A profile defines a set of constraints on a base specification. Implementations 
 
 Because many technologies like JSON and RDF are permissive (by default) about additional information being present, definition of an *extension* is effectively defining a *constraint* on how additional information should be represented.
 
-## Profiles of profiles... 
+## Profiles of profiles...
 
 Profiles can be designed as separate re-usable sets of constraints that can be reused - for example a time-series of water-quality monitoring observations could be specified as a profile of both a time-series profile of Observations and a water-quality profile for the results of such observations.
 In turn the time-series profile could defined as data structure using GeoJSON, or Coverage JSON.  The water-quality content requirements could be described using constraints independent of the data structure.
@@ -31,14 +31,14 @@ The **OGC BuildingBlock** model supports a range of possible constraint approach
 Constraints SHOULD be defined in a form that allows for **_validation_** of test cases and examples.
 
 Built-in support is provided for automatic validation of the following forms:
-- project metadata (description)
+- project metadata (description)w
 - well-formed example encoding (JSON, TTL)
 - JSON schema (for JSON examples) for **structure**
 - SHACL (Shapes Constraint Language for RDF) for **content** and **logical consistency**
 
-In addition [custom validators](VALIDATORS) can be added to the validation workflow. 
+In addition [custom validators](VALIDATORS) can be added to the validation workflow.
 
-Using a JSON-LD context "semantic uplift" of JSON to RDF supports use of SHACL and other forms of validators to 
+Using a JSON-LD context "semantic uplift" of JSON to RDF supports use of SHACL and other forms of validators to
 
 ## Testing
 

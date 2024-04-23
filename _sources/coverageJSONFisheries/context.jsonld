@@ -1,0 +1,6 @@
+{
+  "@context":["https://covjson.org/context.jsonld",
+    "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/main/jsonld/metadata-context.jsonld",
+    "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/main/jsonld/crossDomain-context.jsonld",
+    "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/main/jsonld/oimOceanProfile-context.jsonld"]
+}
