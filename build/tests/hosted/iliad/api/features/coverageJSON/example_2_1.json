@@ -239,6 +239,5 @@
         }
       }
     }
-  ],
-  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/context.jsonld"
+  ]
 }

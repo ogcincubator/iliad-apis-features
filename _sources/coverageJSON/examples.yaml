@@ -1,11 +1,11 @@
 - title: Coverage JSON Collection representing snapshot series of PointClouds with LD
-  base-uri: http://w3id.org/ogcincubator/coverageJSON/
+  base-uri: https://w3id.org/ogcincubator/coverageJSON/
   snippets:
     - language: json
       ref: examples/MultiTrajectories.json
 
 - title: Coverage JSON Collection representing collection of PointSeries with LD
-  base-uri: http://w3id.org/ogcincubator/coverageJSON/
+  base-uri: https://w3id.org/ogcincubator/coverageJSON/
   snippets:
     - language: json
       ref: examples/PointSeries.json

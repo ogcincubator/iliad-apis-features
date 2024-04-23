@@ -1,18 +1,18 @@
 - title: JSON encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html
-  base-uri: http://w3id.org/ogcincubator/cis/
+  base-uri: https://w3id.org/ogcincubator/cis/
   snippets:
     - language: json
       ref: examples/example.json
 
 - title: JSON with Ids encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html
-  base-uri: http://w3id.org/ogcincubator/cis/
+  base-uri: https://w3id.org/ogcincubator/cis/
   snippets:
     - language: json
       ref: examples/example.json
 
 
 - title: RDF encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html
-  base-uri: http://w3id.org/ogcincubator/cis/
+  base-uri: https://w3id.org/ogcincubator/cis/
   snippets:
     - language: ttl
       ref: examples/example.ttl

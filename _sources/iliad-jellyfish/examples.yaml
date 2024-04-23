@@ -1,11 +1,11 @@
 - title: Example of Jellyfish abundance observation
-  base-uri: http://w3id.org/iliad/jellyfish/observation/
+  base-uri: https://w3id.org/iliad/jellyfish/observation/
   snippets:
     - language: json
       ref: examples/example.json
 
 - title: Example of Jellyfish abundance observation collection
-  base-uri: http://w3id.org/iliad/jellyfish/observation/
+  base-uri: https://w3id.org/iliad/jellyfish/observation/
   snippets:
     - language: json
       ref: examples/collection.json
@@ -18,7 +18,7 @@
     Note that the structure of a sosa:Observation is still relevant.
 
 
-  base-uri: http://w3id.org/iliad/jellyfish/observation/
+  base-uri: https://w3id.org/iliad/jellyfish/observation/
   snippets:
     - language: ttl
       ref: examples/example.ttl

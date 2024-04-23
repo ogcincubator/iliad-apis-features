@@ -1,8 +1,10 @@
 {
+  "@id": "CoverageCollection of Multipoints",
   "type": "CoverageCollection",
   "domainType": "MultiPoint",
   "parameters": {
     "diameter": {
+      "@id": "diameter definition",
       "type": "Parameter",
       "description": {
         "en": "particle diameter"
@@ -146,7 +148,6 @@
       },
       "ranges": {
         "POTM": {
-          "@id": "POTM_range",
           "type": "NdArray",
           "dataType": "float",
           "shape": [
@@ -239,6 +240,5 @@
         }
       }
     }
-  ],
-  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/context.jsonld"
+  ]
 }

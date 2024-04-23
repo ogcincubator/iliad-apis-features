@@ -1,18 +1,18 @@
 # OGC API Profiles for ILIAD
 
-This repository defines profiles of the OGC APIs to support interoperability in the ILIAD Digital Twin of the Ocean context. [About Profiles](PROFILES.md)
+This repository defines [profiles of OGC APIs and exchange formats](PROFILES.md) to support interoperability in the ILIAD Digital Twin of the Ocean context.
 
-The profiles link OGC APIs such as OGC API Features to specific schemas supporting the Oceans Information Model used by ILIAD, and show how these can be used to define specific application profiles.
+The profiles link several APIs such as OGC API Features to specific schemas supporting the [Oceans Information Model]() used by [ILIAD]().
 
-[Here](https://drive.google.com/file/d/1kKC2Wx8wItdoH_ZVDQA-KW-f4wv46xcU/view?usp=sharing) is  a short (11mins) video describing this from a "Best Practices" perspective.
+This repository is both a place where common elements can be tested and specificed and a set of examples to show how these can be used to define specific application profiles.
+
+[Here](https://drive.google.com/file/d/1kKC2Wx8wItdoH_ZVDQA-KW-f4wv46xcU/view?usp=sharing) is a short (11mins) video describing this from a "Best Practices" perspective.
 
 The compiled (ready to use) elements and documentation are available here: (https://ogcincubator.github.io/iliad-apis-features/)
 
 These profiles demonstrate a scalable and extensible approach to creating different levels of interoperability for different sub-domains.
 
-The core of this profile is the SOSA component of the Oceans Information Model using a standardised JSON schema, JSON-LD context and SHACL rules regarding disposition of metadata across ObservationCollections and individual observations.
-
-![Overview](https://lucid.app/publicSegments/view/bba7b5a1-722d-4046-aad9-08cc87735287/image.png)
+Examples used Linked Data published vocabularies managed in a [separate repository](https://github.com/ogcincubator/iliad-observable-properties) - these can be managed by individual application domains independently of the common API patterns.
 
 # Contents
 
@@ -22,6 +22,10 @@ This profile defines a baseline for all APIs delivering observational data in th
 The requirements are simple and pertain to metadata required to register services and data in the ILIAD ecosystem.
 
 This profile defines transformations for the Features JSON schema to and from other APIs, such as EDR and STA.
+
+The core of this profile is the SOSA component of the Oceans Information Model using a standardised JSON schema, JSON-LD context and SHACL rules regarding disposition of metadata across ObservationCollections and individual observations.
+
+![Overview](https://lucid.app/publicSegments/view/bba7b5a1-722d-4046-aad9-08cc87735287/image.png)
 
 ## ILIAD Citizen Science Profile
 

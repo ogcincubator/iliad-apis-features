@@ -22,7 +22,7 @@ meta:
 
 # Observations - ILIAD Jellyfish Pilot for Citizen Science `ogc.hosted.iliad.api.features.iliad-jellyfish`
 
-Defines a project profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model
+Defines a project specific interoperability profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model
 
 <p class="status">
     <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
@@ -56,7 +56,7 @@ e.g.
       "@id": "sosa:observedProperty",
       "@type": "@id",
       "@context": {
-        "@base": "http://w3id.org/iliad/jellyfish/property/"
+        "@base": "https://w3id.org/iliad/jellyfish/property/"
       }
     },
 ```
@@ -161,18 +161,18 @@ The SHACL rules (and any other validators developed) will be tested against the 
 
 ```turtle
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix iliad: <http://w3id.org/iliad/property/> .
-@prefix jf-density: <http://w3id.org/iliad/jellyfish/property/densityOfJF/> .
-@prefix jf-property: <http://w3id.org/iliad/jellyfish/property/> .
+@prefix iliad: <https://w3id.org/iliad/property/> .
+@prefix jf-density: <https://w3id.org/iliad/jellyfish/property/densityOfJF/> .
+@prefix jf-property: <https://w3id.org/iliad/jellyfish/property/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,
+<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,
         geojson:Feature ;
     rdfs:label "Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"@en ;
-    sosa:hasFeatureOfInterest <http://w3id.org/iliad/jellyfish/feature/1-18> ;
+    sosa:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/feature/1-18> ;
     sosa:hasResult [ jf-property:beachedJF "1" ;
             jf-property:densityOfJF jf-density:Some ;
             jf-property:quantityOfJF 50 ;
@@ -181,7 +181,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
             iliad:speciesScientificName "Phyllorhiza punctata" ;
             iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
     sosa:observedProperty jf-property:jellyFishAbundanceProperty ;
-    sosa:phenomenonTime "2011-07-01T09:00:00" ;
+    sosa:phenomenonTime <2011-07-01t09:00:00> ;
     sosa:resultTime "2011-07-01T09:00:00" ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ] .
@@ -359,52 +359,43 @@ The SHACL rules (and any other validators developed) will be tested against the 
 
 ```turtle
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix iliad: <http://w3id.org/iliad/property/> .
-@prefix jf-density: <http://w3id.org/iliad/jellyfish/property/densityOfJF/> .
-@prefix jf-property: <http://w3id.org/iliad/jellyfish/property/> .
+@prefix iliad: <https://w3id.org/iliad/property/> .
+@prefix jf-property: <https://w3id.org/iliad/jellyfish/property/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,
+<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,
         geojson:Feature ;
     rdfs:label "Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"@en ;
-    sosa:hasFeatureOfInterest <http://w3id.org/iliad/jellyfish/feature/1-18> ;
-    sosa:hasResult [ jf-property:beachedJF "1" ;
-            jf-property:densityOfJF jf-density:Some ;
-            jf-property:quantityOfJF 50 ;
-            jf-property:stingByJF "Unspecified" ;
-            iliad:sampleSizeValue "10-30" ;
+    sosa:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/observation/1-18> ;
+    sosa:hasResult [ iliad:sampleSizeValue "10-30" ;
             iliad:speciesScientificName "Phyllorhiza punctata" ;
             iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
     sosa:observedProperty jf-property:jellyFishAbundanceProperty ;
-    sosa:phenomenonTime "2011-07-01T09:00:00" ;
+    sosa:phenomenonTime <2011-07-01t09:00:00> ;
     sosa:resultTime "2011-07-01T09:00:00" ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ] .
 
-<http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> a sosa:Observation,
+<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> a sosa:Observation,
         geojson:Feature ;
     rdfs:label "Jelly fish observation #1 location id: 18 sensor: 528 species: Phyllorhiza punctata"@en ;
-    sosa:hasFeatureOfInterest <http://w3id.org/iliad/jellyfish/feature/1-18> ;
-    sosa:hasResult [ jf-property:beachedJF "0" ;
-            jf-property:densityOfJF jf-density:Some ;
-            jf-property:quantityOfJF 30 ;
-            jf-property:stingByJF "Unspecified" ;
-            iliad:sampleSizeValue "1-10" ;
+    sosa:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/observation/1-18> ;
+    sosa:hasResult [ iliad:sampleSizeValue "1-10" ;
             iliad:speciesScientificName "Phyllorhiza punctata" ;
             iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
     sosa:observedProperty jf-property:jellyFishAbundanceProperty ;
-    sosa:phenomenonTime "2011-07-01T09:00:00" ;
+    sosa:phenomenonTime <2011-07-01t09:00:00> ;
     sosa:resultTime "2011-07-01T09:00:00" ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 3.564385e+01 3.427363e+01 ) ] .
 
 [] a sosa:ObservationCollection,
         geojson:FeatureCollection ;
-    geojson:features <http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,
-        <http://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> .
+    sosa:hasMember <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,
+        <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> .
 
 
 ```
@@ -418,27 +409,22 @@ The SHACL rules (and any other validators developed) will be tested against the 
 
 ## Example of Jellyfish abundance observation ontology
 
-This TTL to be replaced by examples from the ontology development cycle.
-
-Note that the structure of a sosa:Observation is still relevant.
-
-
 
 
 ```turtle
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix iliad: <http://w3id.org/iliad/property/> .
-@prefix jf-density: <http://w3id.org/iliad/jellyfish/property/densityOfJF/> .
-@prefix jf-property: <http://w3id.org/iliad/jellyfish/property/> .
+@prefix iliad: <https://w3id.org/iliad/property/> .
+@prefix jf-density: <https://w3id.org/iliad/jellyfish/property/densityOfJF/> .
+@prefix jf-property: <https://w3id.org/iliad/jellyfish/property/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,
+<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,
         geojson:Feature ;
     rdfs:label "Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"@en ;
-    sosa:hasFeatureOfInterest <http://w3id.org/iliad/jellyfish/feature/1-18> ;
+    sosa:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/feature/1-18> ;
     sosa:hasResult [ jf-property:beachedJF "1" ;
             jf-property:densityOfJF jf-density:Some ;
             jf-property:quantityOfJF 50 ;
@@ -461,6 +447,11 @@ Note that the structure of a sosa:Observation is still relevant.
 </blockquote>
 
 
+This TTL to be replaced by examples from the ontology development cycle.
+
+Note that the structure of a sosa:Observation is still relevant.
+
+
 
 # JSON Schema
 
@@ -470,14 +461,14 @@ description: Schemas for Ocean Information Model Observations
 $defs:
   OIMObsProps:
     allOf:
-    - $ref: ../oim-obs-cs/schema.yaml#/$defs/OIMObsProps
+    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsProps
     - properties:
         hasResult:
           type: object
           properties:
             quantityOfJF:
               type: integer
-              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/quantityOfJF
+              x-jsonld-id: https://w3id.org/iliad/jellyfish/property/quantityOfJF
             densityOfJF:
               type: string
               enum:
@@ -485,29 +476,29 @@ $defs:
               - Some
               - Swarm
               - Few
-              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/densityOfJF
+              x-jsonld-id: https://w3id.org/iliad/jellyfish/property/densityOfJF
               x-jsonld-type: '@id'
-              x-jsonld-base: http://w3id.org/iliad/jellyfish/property/densityOfJF/
+              x-jsonld-base: https://w3id.org/iliad/jellyfish/property/densityOfJF/
             stingByJF:
               type: string
-              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/stingByJF
+              x-jsonld-id: https://w3id.org/iliad/jellyfish/property/stingByJF
             beachedJF:
               type: string
-              x-jsonld-id: http://w3id.org/iliad/jellyfish/property/beachedJF
+              x-jsonld-id: https://w3id.org/iliad/jellyfish/property/beachedJF
           x-jsonld-id: sosa:hasResult
         hasFeatureOfInterest:
           $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
           x-jsonld-id: sosa:hasFeatureOfInterest
-          x-jsonld-base: http://w3id.org/iliad/jellyfish/feature/
+          x-jsonld-base: https://w3id.org/iliad/jellyfish/feature/
   OIMObsFeature:
     allOf:
-    - $ref: ../oim-obs-cs/schema.yaml#/$defs/OIMObsFeature
+    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsFeature
     - properties:
         properties:
           $ref: '#/$defs/OIMObsProps'
   OIMObsCollection:
     allOf:
-    - $ref: ../oim-obs-cs/schema.yaml#/$defs/OIMObsCollection
+    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsCollection
     - properties:
         features:
           type: array
@@ -523,10 +514,10 @@ x-jsonld-extra-terms:
     x-jsonld-id: sosa:observedProperty
     x-jsonld-type: '@id'
     x-jsonld-context:
-      '@base': http://w3id.org/iliad/jellyfish/property/
+      '@base': https://w3id.org/iliad/jellyfish/property/
 x-jsonld-prefixes:
-  jf-property: http://w3id.org/iliad/jellyfish/property/
-  jf-density: http://w3id.org/iliad/jellyfish/property/densityOfJF/
+  jf-property: https://w3id.org/iliad/jellyfish/property/
+  jf-density: https://w3id.org/iliad/jellyfish/property/densityOfJF/
 
 ```
 
@@ -543,43 +534,25 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
-    "observedProperty": {
-      "@id": "sosa:observedProperty",
-      "@type": "@id",
-      "@context": {
-        "@base": "http://w3id.org/iliad/jellyfish/property/"
-      }
-    },
-    "hasResult": {
-      "@context": {
-        "quantityOfJF": "jf-property:quantityOfJF",
-        "densityOfJF": {
-          "@context": {
-            "@base": "http://w3id.org/iliad/jellyfish/property/densityOfJF/"
-          },
-          "@id": "jf-property:densityOfJF",
-          "@type": "@id"
-        },
-        "stingByJF": "jf-property:stingByJF",
-        "beachedJF": "jf-property:beachedJF"
-      },
-      "@id": "sosa:hasResult"
+    "resultTime": "sosa:resultTime",
+    "phenomenonTime": {
+      "@id": "sosa:phenomenonTime",
+      "@type": "@id"
     },
     "hasFeatureOfInterest": {
       "@context": {
-        "@base": "http://w3id.org/iliad/jellyfish/feature/"
+        "@base": "https://w3id.org/iliad/jellyfish/feature/"
       },
       "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
     },
-    "sampleSizeValue": "iliad:sampleSizeValue",
-    "speciesScientificName": "iliad:speciesScientificName",
-    "wormsConcept": {
-      "@id": "iliad:wormsConcept",
+    "observedProperty": {
+      "@context": {
+        "@base": "https://w3id.org/iliad/jellyfish/property/"
+      },
+      "@id": "sosa:observedProperty",
       "@type": "@id"
     },
-    "resultTime": "sosa:resultTime",
-    "phenomenonTime": "sosa:phenomenonTime",
     "usedProcedure": {
       "@id": "sosa:usedProcedure",
       "@type": "@id"
@@ -588,30 +561,258 @@ Links to the schema:
       "@id": "sosa:madeBySensor",
       "@type": "@id"
     },
-    "hasSimpleResult": "sosa:hasSimpleResult",
-    "Observation": "sosa:Observation",
-    "Sample": "sosa:Sample",
-    "System": "sosa:System",
-    "Platform": "sosa:Platform",
     "id": "@id",
-    "observes": {
-      "@id": "sosa:observes",
+    "properties": "@nest",
+    "featureType": "@type",
+    "ActuatableProperty": {
+      "@id": "sosa:ActuatableProperty",
       "@type": "@id"
     },
-    "isObservedBy": {
-      "@id": "sosa:isObservedBy",
+    "Actuation": {
+      "@id": "sosa:Actuation",
       "@type": "@id"
     },
-    "madeObservation": {
-      "@id": "sosa:madeObservation",
+    "ActuationCollection": {
+      "@id": "sosa:ActuationCollection",
+      "@type": "@id"
+    },
+    "Actuator": {
+      "@id": "sosa:Actuator",
+      "@type": "@id"
+    },
+    "Deployment": {
+      "@id": "sosa:Deployment",
+      "@type": "@id"
+    },
+    "Execution": {
+      "@id": "sosa:Execution",
+      "@type": "@id"
+    },
+    "FeatureOfInterest": {
+      "@id": "sosa:FeatureOfInterest",
+      "@type": "@id"
+    },
+    "ObservableProperty": {
+      "@id": "sosa:ObservableProperty",
+      "@type": "@id"
+    },
+    "Observation": {
+      "@id": "sosa:Observation",
+      "@type": "@id"
+    },
+    "ObservationCollection": {
+      "@id": "sosa:ObservationCollection",
+      "@type": "@id"
+    },
+    "Platform": {
+      "@id": "sosa:Platform",
+      "@type": "@id"
+    },
+    "Property": {
+      "@id": "sosa:Property",
+      "@type": "@id"
+    },
+    "Procedure ": {
+      "@id": "sosa:Procedure",
+      "@type": "@id"
+    },
+    "Sample": {
+      "@id": "sosa:Sample",
+      "@type": "@id"
+    },
+    "SampleCollection": {
+      "@id": "sosa:SampleCollection",
+      "@type": "@id"
+    },
+    "Sampler": {
+      "@id": "sosa:Sampler",
+      "@type": "@id"
+    },
+    "Sampling": {
+      "@id": "sosa:Sampling",
+      "@type": "@id"
+    },
+    "Sensor": {
+      "@id": "sosa:Sensor",
+      "@type": "@id"
+    },
+    "Stimulus": {
+      "@id": "sosa:Stimulus",
+      "@type": "@id"
+    },
+    "System": {
+      "@id": "sosa:System",
       "@type": "@id"
     },
     "actsOnProperty": {
       "@id": "sosa:actsOnProperty",
       "@type": "@id"
     },
+    "deployedOnPlatform": {
+      "@id": "sosa:deployedOnPlatform",
+      "@type": "@id"
+    },
+    "deployedSystem": {
+      "@id": "sosa:deployedSystem",
+      "@type": "@id"
+    },
+    "detects": {
+      "@id": "sosa:detects",
+      "@type": "@id"
+    },
+    "features": {
+      "@id": "sosa:hasMember",
+      "@type": "@id",
+      "@context": {
+        "features": {
+          "@container": "@set",
+          "@id": "geojson:features"
+        },
+        "hasFeatureOfInterest": {
+          "@id": "sosa:hasFeatureOfInterest",
+          "@type": "@id"
+        },
+        "hasResult": {
+          "@id": "sosa:hasResult",
+          "@type": "@id"
+        }
+      },
+      "@container": "@set"
+    },
+    "forProperty": {
+      "@id": "sosa:forProperty",
+      "@type": "@id"
+    },
+    "hasDeployment": {
+      "@id": "sosa:hasDeployment",
+      "@type": "@id"
+    },
+    "hasInput": {
+      "@id": "sosa:hasInput",
+      "@type": "@id"
+    },
+    "hasMember": {
+      "@id": "sosa:hasMember",
+      "@type": "@id",
+      "@context": {
+        "hasFeatureOfInterest": {
+          "@id": "sosa:hasFeatureOfInterest",
+          "@type": "@id"
+        },
+        "hasResult": {
+          "@id": "sosa:hasResult",
+          "@type": "@id"
+        }
+      }
+    },
+    "hasOriginalSample": {
+      "@id": "sosa:hasOriginalSample",
+      "@type": "@id"
+    },
+    "hasOutput": {
+      "@id": "sosa:hasOutput",
+      "@type": "@id"
+    },
+    "hasProperty": {
+      "@id": "sosa:hasProperty",
+      "@type": "@id"
+    },
+    "hasResult": {
+      "@id": "sosa:hasResult",
+      "@type": "@id",
+      "@context": {
+        "quantityOfJF": "jf-property:quantityOfJF",
+        "densityOfJF": {
+          "@context": {
+            "@base": "https://w3id.org/iliad/jellyfish/property/densityOfJF/"
+          },
+          "@id": "jf-property:densityOfJF",
+          "@type": "@id"
+        },
+        "stingByJF": "jf-property:stingByJF",
+        "beachedJF": "jf-property:beachedJF"
+      }
+    },
+    "hasResultQuality": {
+      "@id": "sosa:hasResultQuality",
+      "@type": "@id"
+    },
+    "hasSample": {
+      "@id": "sosa:hasSample",
+      "@type": "@id"
+    },
+    "hasSampledFeature": {
+      "@id": "sosa:hasSampledFeature",
+      "@type": "@id"
+    },
+    "hasSimpleResult": {
+      "@id": "sosa:hasSimpleResult",
+      "@type": "@id"
+    },
+    "hasSubSystem": {
+      "@id": "sosa:hasSubSystem",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "hasUltimateFeatureOfInterest": {
+      "@id": "sosa:hasUltimateFeatureOfInterest",
+      "@type": "@id"
+    },
+    "hosts": {
+      "@id": "sosa:hosts",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "implementedBy": {
+      "@id": "sosa:implementedBy",
+      "@type": "@id"
+    },
+    "implements": {
+      "@id": "sosa:implements",
+      "@type": "@id"
+    },
+    "inDeployment": {
+      "@id": "sosa:inDeployment",
+      "@type": "@id"
+    },
     "isActedOnBy": {
       "@id": "sosa:isActedOnBy",
+      "@type": "@id"
+    },
+    "isFeatureOfInterestOf": {
+      "@id": "sosa:isFeatureOfInterestOf",
+      "@type": "@id"
+    },
+    "isHostedBy": {
+      "@id": "sosa:isHostedBy",
+      "@type": "@id"
+    },
+    "isObservedBy": {
+      "@id": "sosa:isObservedBy",
+      "@type": "@id"
+    },
+    "isPropertyOf": {
+      "@id": "sosa:isPropertyOf",
+      "@type": "@id"
+    },
+    "isProxyFor": {
+      "@id": "sosa:isProxyFor",
+      "@type": "@id"
+    },
+    "isResultOf": {
+      "@id": "sosa:isResultOf",
+      "@type": "@id"
+    },
+    "isResultOfMadeBySampler": {
+      "@id": "sosa:isResultOfMadeBySampler",
+      "@type": "@id"
+    },
+    "isResultOfUsedProcedure": {
+      "@id": "sosa:isResultOfUsedProcedure",
+      "@type": "@id"
+    },
+    "isSampleOf": {
+      "@id": "sosa:isSampleOf",
       "@type": "@id"
     },
     "madeActuation": {
@@ -622,78 +823,164 @@ Links to the schema:
       "@id": "sosa:madeByActuator",
       "@type": "@id"
     },
-    "hasSample": {
-      "@id": "sosa:hasSample",
+    "madeBySampler": {
+      "@id": "sosa:madeBySampler",
       "@type": "@id"
     },
-    "isSampleOf": {
-      "@id": "sosa:isSampleOf",
+    "madeObservation": {
+      "@id": "sosa:madeObservation",
       "@type": "@id"
     },
     "madeSampling": {
       "@id": "sosa:madeSampling",
       "@type": "@id"
     },
-    "madeBySampler": {
-      "@id": "sosa:madeBySampler",
+    "observes": {
+      "@id": "sosa:observes",
       "@type": "@id"
     },
-    "isFeatureOfInterestOf": {
-      "@id": "sosa:isFeatureOfInterestOf",
+    "wasOriginatedBy": {
+      "@id": "sosa:wasOriginatedBy",
       "@type": "@id"
     },
-    "isResultOf": "sosa:isResultOf",
-    "hosts": {
-      "@id": "sosa:hosts",
-      "@type": "@id",
-      "@container": "@set"
+    "Accuracy": {
+      "@id": "ssn-system:Accuracy",
+      "@type": "@id"
     },
-    "isHostedBy": "sosa:isHostedBy",
-    "isProxyFor": "sosa:isProxyFor",
-    "wasOriginatedBy": "sosa:wasOriginatedBy",
-    "detects": "sosa:detects",
-    "hasProperty": "sosa:hasProperty",
-    "isPropertyOf": "sosa:isPropertyOf",
-    "forProperty": "sosa:forProperty",
-    "implements": "sosa:implements",
-    "implementedBy": "sosa:implementedBy",
-    "hasInput": "sosa:hasInput",
-    "hasOutput": "sosa:hasOutput",
-    "hasSubSystem": {
-      "@id": "sosa:hasSubSystem",
-      "@type": "@id",
-      "@container": "@set"
+    "ActuationRange": {
+      "@id": "ssn-system:ActuationRange",
+      "@type": "@id"
     },
-    "deployedSystem": "sosa:deployedSystem",
-    "hasDeployment": "sosa:hasDeployment",
-    "deployedOnPlatform": "sosa:deployedOnPlatform",
-    "inDeployment": "sosa:inDeployment",
-    "inCondition": "ssn-system:inCondition",
-    "hasSystemCapability": "ssn-system:hasSystemCapability",
-    "hasSystemProperty": "ssn-system:hasSystemProperty",
-    "hasOperatingRange": "ssn-system:hasOperatingRange",
-    "hasOperatingProperty": "ssn-system:hasOperatingProperty",
-    "hasSurvivalRange": "ssn-system:hasSurvivalRange",
-    "hasSurvivalProperty": "ssn-system:hasSurvivalProperty",
-    "qualityOfObservation": "ssn-system:qualityOfObservation",
-    "hasMember": {
-      "@context": {
-        "features": "sosa:hasMember"
-      },
-      "@id": "sosa:hasMember"
+    "BatteryLifetime": {
+      "@id": "ssn-system:BatteryLifetime",
+      "@type": "@id"
     },
-    "features": {
-      "@context": {
-        "features": "sosa:hasMember"
-      },
-      "@id": "geojson:features",
-      "@container": "@set"
+    "DetectionLimit": {
+      "@id": "ssn-system:DetectionLimit",
+      "@type": "@id"
     },
-    "properties": "@nest",
-    "featureType": "@type",
+    "Drift": {
+      "@id": "ssn-system:Drift",
+      "@type": "@id"
+    },
+    "Frequency": {
+      "@id": "ssn-system:Frequency",
+      "@type": "@id"
+    },
+    "Latency": {
+      "@id": "ssn-system:Latency",
+      "@type": "@id"
+    },
+    "MaintenanceSchedule": {
+      "@id": "ssn-system:MaintenanceSchedule",
+      "@type": "@id"
+    },
+    "MeasurementRange": {
+      "@id": "ssn-system:MeasurementRange",
+      "@type": "@id"
+    },
+    "OperatingPowerRange": {
+      "@id": "ssn-system:OperatingPowerRange",
+      "@type": "@id"
+    },
+    "OperatingProperty": {
+      "@id": "ssn-system:OperatingProperty",
+      "@type": "@id"
+    },
+    "OperatingRange": {
+      "@id": "ssn-system:OperatingRange",
+      "@type": "@id"
+    },
+    "Precision": {
+      "@id": "ssn-system:Precision",
+      "@type": "@id"
+    },
+    "Resolution": {
+      "@id": "ssn-system:Resolution",
+      "@type": "@id"
+    },
+    "ResponseTime": {
+      "@id": "ssn-system:ResponseTime",
+      "@type": "@id"
+    },
+    "Selectivity": {
+      "@id": "ssn-system:Selectivity",
+      "@type": "@id"
+    },
+    "Sensitivity": {
+      "@id": "ssn-system:Sensitivity",
+      "@type": "@id"
+    },
+    "SurvivalProperty": {
+      "@id": "ssn-system:SurvivalProperty",
+      "@type": "@id"
+    },
+    "SystemLifetime": {
+      "@id": "ssn-system:SystemLifetime",
+      "@type": "@id"
+    },
+    "SurvivalRange": {
+      "@id": "ssn-system:SurvivalRange",
+      "@type": "@id"
+    },
+    "SystemCapability": {
+      "@id": "ssn-system:SystemCapability",
+      "@type": "@id"
+    },
+    "SystemProperty": {
+      "@id": "ssn-system:SystemProperty",
+      "@type": "@id"
+    },
+    "hasOperatingProperty": {
+      "@id": "ssn-system:hasOperatingProperty",
+      "@type": "@id"
+    },
+    "hasOperatingRange": {
+      "@id": "ssn-system:hasOperatingRange",
+      "@type": "@id"
+    },
+    "hasSurvivalProperty": {
+      "@id": "ssn-system:hasSurvivalProperty",
+      "@type": "@id"
+    },
+    "hasSystemCapability": {
+      "@id": "ssn-system:hasSystemCapability",
+      "@type": "@id"
+    },
+    "hasSystemProperty": {
+      "@id": "ssn-system:hasSystemProperty",
+      "@type": "@id"
+    },
+    "hasSurvivalRange": {
+      "@id": "ssn-system:hasSurvivalRange",
+      "@type": "@id"
+    },
+    "inCondition": {
+      "@id": "ssn-system:inCondition",
+      "@type": "@id"
+    },
+    "qualityOfObservation": {
+      "@id": "ssn-system:qualityOfObservation",
+      "@type": "@id"
+    },
     "label": {
       "@id": "rdfs:label",
       "@container": "@language"
+    },
+    "sampleSizeValue": "iliad:sampleSizeValue",
+    "speciesScientificName": "iliad:speciesScientificName",
+    "wormsConcept": {
+      "@id": "iliad:wormsConcept",
+      "@type": "@id"
+    },
+    "type": "@type",
+    "geometry": {
+      "@context": {},
+      "@id": "geojson:geometry"
+    },
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
     },
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
@@ -704,15 +991,6 @@ Links to the schema:
     "MultiPolygon": "geojson:MultiPolygon",
     "Point": "geojson:Point",
     "Polygon": "geojson:Polygon",
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
-    },
-    "coordinates": {
-      "@container": "@list",
-      "@id": "geojson:coordinates"
-    },
-    "type": "@type",
     "links": {
       "@context": {
         "href": {
@@ -733,14 +1011,17 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
-    "geometry": "geojson:geometry",
-    "jf-property": "http://w3id.org/iliad/jellyfish/property/",
-    "jf-density": "jf-property:densityOfJF/",
-    "iliad": "http://w3id.org/iliad/property/",
+    "coordinates": {
+      "@container": "@list",
+      "@id": "geojson:coordinates"
+    },
     "sosa": "http://www.w3.org/ns/sosa/",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "ssn-system": "ssn:systems/",
     "ssn": "http://www.w3.org/ns/ssn/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "iliad": "https://w3id.org/iliad/property/",
+    "jf-property": "https://w3id.org/iliad/jellyfish/property/",
+    "jf-density": "jf-property:densityOfJF/",
     "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
@@ -762,7 +1043,7 @@ The following sets of SHACL shapes are used for validating this building block:
 
 * OIM Observations <small><code>ogc.hosted.iliad.api.features.oim-obs</code></small>
   * [https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl](https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl)
-* SOSA Observation <small><code>ogc.unstable.sosa.properties.observation</code></small>
+* Observation Properties <small><code>ogc.sosa.properties.observation</code></small>
   * [https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl](https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl)
 
 # References

@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2023-11-30",
+  "dateOfLastChange": "2024-03-29",
   "link": "https://github.com/opengeospatial/coverage-implementation-schema",
   "sources": [
     {
@@ -30,11 +30,13 @@
     "mesh"
   ],
   "shaclRules": {},
+  "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema.yaml",
     "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema.json"
   },
-  "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld",
+  "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverage_information_model/context.jsonld",
+  "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverage_information_model/schema.yaml",
   "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverage_information_model/",
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/coverage_information_model/",
@@ -42,7 +44,7 @@
   "examples": [
     {
       "title": "JSON encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html",
-      "base-uri": "http://w3id.org/ogcincubator/cis/",
+      "base-uri": "https://w3id.org/ogcincubator/cis/",
       "snippets": [
         {
           "language": "json",
@@ -64,7 +66,7 @@
     },
     {
       "title": "JSON with Ids encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html",
-      "base-uri": "http://w3id.org/ogcincubator/cis/",
+      "base-uri": "https://w3id.org/ogcincubator/cis/",
       "snippets": [
         {
           "language": "json",
@@ -86,7 +88,7 @@
     },
     {
       "title": "RDF encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html",
-      "base-uri": "http://w3id.org/ogcincubator/cis/",
+      "base-uri": "https://w3id.org/ogcincubator/cis/",
       "snippets": [
         {
           "language": "ttl",
