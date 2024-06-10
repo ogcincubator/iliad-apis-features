@@ -1,198 +1,24 @@
 {
   "x-defs": {
-    "ogc.hosted.iliad.api.features.oim-obs": {
-      "description": "Schemas for Observations",
-      "$defs": {
-        "OIMObsProps": {
-          "allOf": [
-            {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observation"
-            },
-            {
-              "properties": {
-                "label": {
-                  "oneOf": [
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "object"
-                    }
-                  ],
-                  "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#label",
-                  "x-jsonld-container": "@language"
-                }
-              }
-            }
-          ]
-        },
-        "OIMObsFeature": {
-          "allOf": [
-            {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.sosa.features.observation"
-            },
-            {
-              "properties": {
-                "properties": {
-                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.hosted.iliad.api.features.oim-obs/$defs/OIMObsProps"
-                },
-                "observedProperty": {}
-              }
-            }
-          ]
-        },
-        "OIMObsCollection": {
-          "allOf": [
-            {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.sosa.features.observationCollection"
-            },
-            {
-              "properties": {
-                "features": {
-                  "type": "array",
-                  "items": {
-                    "allOf": [
-                      {
-                        "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.hosted.iliad.api.features.oim-obs/$defs/OIMObsFeature"
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          ]
-        }
-      },
-      "anyOf": [
-        {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.hosted.iliad.api.features.oim-obs/$defs/OIMObsProps"
-        },
-        {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.hosted.iliad.api.features.oim-obs/$defs/OIMObsFeature"
-        },
-        {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.hosted.iliad.api.features.oim-obs/$defs/OIMObsCollection"
-        }
-      ],
-      "x-jsonld-prefixes": {
-        "sosa": "http://www.w3.org/ns/sosa/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "iliad": "https://w3id.org/iliad/property/"
-      },
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json"
-    },
     "ogc.sosa.properties.observation": {
       "description": "SOSA Observation",
       "type": "object",
-      "properties": {
-        "resultTime": {
-          "type": "string",
-          "format": "date-time",
-          "x-jsonld-id": "http://www.w3.org/ns/sosa/resultTime"
-        },
-        "phenomenonTime": {
-          "type": [
-            "object",
-            "string"
-          ],
-          "x-jsonld-id": "http://www.w3.org/ns/sosa/phenomenonTime",
-          "x-jsonld-type": "@id",
-          "anyOf": {
-            "anyOf": [
-              {
-                "type": "object"
-              },
-              {
-                "type": "string"
-              }
-            ]
-          }
-        },
-        "hasFeatureOfInterest": {
-          "type": [
-            "object",
-            "string"
-          ],
-          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-          "x-jsonld-type": "@id",
-          "anyOf": {
-            "anyOf": [
-              {
-                "type": "object"
-              },
-              {
-                "type": "string"
-              }
-            ]
-          }
-        },
-        "observedProperty": {
-          "type": [
-            "object",
-            "string"
-          ],
-          "x-jsonld-id": "http://www.w3.org/ns/sosa/observedProperty",
-          "x-jsonld-type": "@id",
-          "anyOf": {
-            "anyOf": [
-              {
-                "type": "object"
-              },
-              {
-                "type": "string"
-              }
-            ]
-          }
-        },
-        "usedProcedure": {
-          "type": [
-            "object",
-            "string"
-          ],
-          "x-jsonld-id": "http://www.w3.org/ns/sosa/usedProcedure",
-          "x-jsonld-type": "@id",
-          "anyOf": {
-            "anyOf": [
-              {
-                "type": "object"
-              },
-              {
-                "type": "string"
-              }
-            ]
-          }
-        },
-        "madeBySensor": {
-          "type": [
-            "object",
-            "string"
-          ],
-          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySensor",
-          "x-jsonld-type": "@id",
-          "anyOf": {
-            "anyOf": [
-              {
-                "type": "object"
-              },
-              {
-                "type": "string"
-              }
-            ]
-          }
-        },
-        "hasResult": true,
-        "hasSimpleResult": true
-      },
-      "anyOf": [
+      "allOf": [
         {
-          "required": [
-            "hasResult"
-          ]
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observation-owa"
         },
         {
-          "required": [
-            "hasSimpleResult"
+          "anyOf": [
+            {
+              "required": [
+                "hasResult"
+              ]
+            },
+            {
+              "required": [
+                "hasSimpleResult"
+              ]
+            }
           ]
         }
       ],
@@ -306,6 +132,10 @@
         },
         "hasDeployment": {
           "x-jsonld-id": "http://www.w3.org/ns/sosa/hasDeployment",
+          "x-jsonld-type": "@id"
+        },
+        "hasFeatureOfInterest": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
           "x-jsonld-type": "@id"
         },
         "hasInput": {
@@ -426,6 +256,10 @@
           "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySampler",
           "x-jsonld-type": "@id"
         },
+        "madeBySensor": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySensor",
+          "x-jsonld-type": "@id"
+        },
         "madeObservation": {
           "x-jsonld-id": "http://www.w3.org/ns/sosa/madeObservation",
           "x-jsonld-type": "@id"
@@ -434,8 +268,21 @@
           "x-jsonld-id": "http://www.w3.org/ns/sosa/madeSampling",
           "x-jsonld-type": "@id"
         },
+        "observedProperty": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/observedProperty",
+          "x-jsonld-type": "@id"
+        },
         "observes": {
           "x-jsonld-id": "http://www.w3.org/ns/sosa/observes",
+          "x-jsonld-type": "@id"
+        },
+        "phenomenonTime": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/phenomenonTime",
+          "x-jsonld-type": "@id"
+        },
+        "resultTime": "http://www.w3.org/ns/sosa/resultTime",
+        "usedProcedure": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/usedProcedure",
           "x-jsonld-type": "@id"
         },
         "wasOriginatedBy": {
@@ -568,8 +415,8 @@
         "ssn-system": "http://www.w3.org/ns/ssn/systems/",
         "ssn": "http://www.w3.org/ns/ssn/"
       },
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.json"
+      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
     },
     "ogc.sosa.features.observation": {
       "description": "SOSA Observation Feature",
@@ -581,7 +428,14 @@
         {
           "type": "object",
           "properties": {
-            "properties": {}
+            "properties": {
+              "x-jsonld-id": "@nest",
+              "allOf": [
+                {
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observation"
+                }
+              ]
+            }
           }
         }
       ],
@@ -977,12 +831,76 @@
         "ssn-system": "http://www.w3.org/ns/ssn/systems/",
         "ssn": "http://www.w3.org/ns/ssn/"
       },
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.json"
+      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
     },
     "ogc.ogc-utils.iri-or-curie": {
+      "description": "IRI or CURIE",
+      "$defs": {
+        "IRI": {
+          "type": "string",
+          "pattern": "^\\w+:/*([^:<>{}|\\\\^`\"\\s/]+[^<>{}|\\\\^`\"\\s]*(:[^:<>{}|\\\\^`\"\\s]+)?)?$"
+        },
+        "CURIE": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][^\\s:/]*:[^:<>{}|\\\\^`\"\\s]*(\\?[^<>{}|\\\\^`\" ]*)?(#[^<>{}|\\\\^`\"\\s]*)?$"
+        },
+        "LocalPart": {
+          "type": "string",
+          "pattern": "^[^:<>{}|\\\\^`\"\\s]*(\\?[^<>{}|\\\\^`\"\\s]*)?(#[^<>{}|\\\\^`\"\\s]*)?$"
+        },
+        "Single": {
+          "anyOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/IRI"
+            },
+            {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/CURIE"
+            },
+            {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/LocalPart"
+            }
+          ]
+        },
+        "Multiple": {
+          "oneOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/Single"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/Single"
+              }
+            }
+          ]
+        },
+        "MultipleOrObject": {
+          "oneOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/Multiple"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "MultipleOrObjectOrNull": {
+          "oneOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/MultipleOrObject"
+            }
+          ],
+          "nullable": true
+        }
+      },
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json",
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
+      "allOf": [
+        {
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/Single"
+        }
+      ]
     },
     "ogc.sosa.features.observationCollection": {
       "description": "SOSA Observation Feature",
@@ -993,7 +911,14 @@
         {
           "type": "object",
           "properties": {
-            "properties": {},
+            "properties": {
+              "x-jsonld-id": "@nest",
+              "allOf": [
+                {
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observationCollection"
+                }
+              ]
+            },
             "features": {
               "type": "array",
               "items": {
@@ -1400,8 +1325,457 @@
         "ssn-system": "http://www.w3.org/ns/ssn/systems/",
         "ssn": "http://www.w3.org/ns/ssn/"
       },
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observationCollection/schema.json"
+      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observationCollection/schema.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
+    },
+    "ogc.sosa.properties.observation-owa": {
+      "description": "SOSA Observation",
+      "type": "object",
+      "properties": {
+        "resultTime": {
+          "type": "string",
+          "format": "date-time",
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/resultTime"
+        },
+        "phenomenonTime": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/phenomenonTime",
+          "x-jsonld-type": "@id",
+          "anyOf": [
+            {
+              "type": "object"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "hasFeatureOfInterest": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+          "x-jsonld-type": "@id",
+          "anyOf": [
+            {
+              "type": "object"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "observedProperty": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/observedProperty",
+          "x-jsonld-type": "@id",
+          "anyOf": [
+            {
+              "type": "object"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "usedProcedure": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/usedProcedure",
+          "x-jsonld-type": "@id",
+          "anyOf": [
+            {
+              "type": "object"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "madeBySensor": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySensor",
+          "x-jsonld-type": "@id",
+          "anyOf": [
+            {
+              "type": "object"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "hasResult": true,
+        "result": true,
+        "result@links": true,
+        "hasSimpleResult": true
+      },
+      "x-jsonld-extra-terms": {
+        "id": "@id",
+        "properties": "@nest",
+        "featureType": "@type",
+        "ActuatableProperty": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/ActuatableProperty",
+          "x-jsonld-type": "@id"
+        },
+        "Actuation": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Actuation",
+          "x-jsonld-type": "@id"
+        },
+        "ActuationCollection": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/ActuationCollection",
+          "x-jsonld-type": "@id"
+        },
+        "Actuator": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Actuator",
+          "x-jsonld-type": "@id"
+        },
+        "Deployment": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Deployment",
+          "x-jsonld-type": "@id"
+        },
+        "Execution": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Execution",
+          "x-jsonld-type": "@id"
+        },
+        "FeatureOfInterest": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/FeatureOfInterest",
+          "x-jsonld-type": "@id"
+        },
+        "ObservableProperty": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/ObservableProperty",
+          "x-jsonld-type": "@id"
+        },
+        "Observation": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Observation",
+          "x-jsonld-type": "@id"
+        },
+        "ObservationCollection": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/ObservationCollection",
+          "x-jsonld-type": "@id"
+        },
+        "Platform": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Platform",
+          "x-jsonld-type": "@id"
+        },
+        "Property": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Property",
+          "x-jsonld-type": "@id"
+        },
+        "Procedure ": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Procedure",
+          "x-jsonld-type": "@id"
+        },
+        "Sample": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Sample",
+          "x-jsonld-type": "@id"
+        },
+        "SampleCollection": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/SampleCollection",
+          "x-jsonld-type": "@id"
+        },
+        "Sampler": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Sampler",
+          "x-jsonld-type": "@id"
+        },
+        "Sampling": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Sampling",
+          "x-jsonld-type": "@id"
+        },
+        "Sensor": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Sensor",
+          "x-jsonld-type": "@id"
+        },
+        "Stimulus": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/Stimulus",
+          "x-jsonld-type": "@id"
+        },
+        "System": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/System",
+          "x-jsonld-type": "@id"
+        },
+        "actsOnProperty": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/actsOnProperty",
+          "x-jsonld-type": "@id"
+        },
+        "deployedOnPlatform": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/deployedOnPlatform",
+          "x-jsonld-type": "@id"
+        },
+        "deployedSystem": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/deployedSystem",
+          "x-jsonld-type": "@id"
+        },
+        "detects": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/detects",
+          "x-jsonld-type": "@id"
+        },
+        "features": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasMember",
+          "x-jsonld-type": "@id"
+        },
+        "forProperty": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/forProperty",
+          "x-jsonld-type": "@id"
+        },
+        "hasDeployment": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasDeployment",
+          "x-jsonld-type": "@id"
+        },
+        "hasInput": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasInput",
+          "x-jsonld-type": "@id"
+        },
+        "hasMember": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasMember",
+          "x-jsonld-type": "@id"
+        },
+        "hasOriginalSample": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasOriginalSample",
+          "x-jsonld-type": "@id"
+        },
+        "hasOutput": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasOutput",
+          "x-jsonld-type": "@id"
+        },
+        "hasProperty": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasProperty",
+          "x-jsonld-type": "@id"
+        },
+        "hasResult": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasResult",
+          "x-jsonld-type": "@id"
+        },
+        "hasResultQuality": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasResultQuality",
+          "x-jsonld-type": "@id"
+        },
+        "hasSample": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSample",
+          "x-jsonld-type": "@id"
+        },
+        "hasSampledFeature": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSampledFeature",
+          "x-jsonld-type": "@id"
+        },
+        "hasSimpleResult": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSimpleResult",
+          "x-jsonld-type": "@id"
+        },
+        "hasSubSystem": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSubSystem",
+          "x-jsonld-type": "@id",
+          "x-jsonld-container": "@set"
+        },
+        "hasUltimateFeatureOfInterest": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest",
+          "x-jsonld-type": "@id"
+        },
+        "hosts": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hosts",
+          "x-jsonld-type": "@id",
+          "x-jsonld-container": "@set"
+        },
+        "implementedBy": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/implementedBy",
+          "x-jsonld-type": "@id"
+        },
+        "implements": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/implements",
+          "x-jsonld-type": "@id"
+        },
+        "inDeployment": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/inDeployment",
+          "x-jsonld-type": "@id"
+        },
+        "isActedOnBy": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isActedOnBy",
+          "x-jsonld-type": "@id"
+        },
+        "isFeatureOfInterestOf": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+          "x-jsonld-type": "@id"
+        },
+        "isHostedBy": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isHostedBy",
+          "x-jsonld-type": "@id"
+        },
+        "isObservedBy": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isObservedBy",
+          "x-jsonld-type": "@id"
+        },
+        "isPropertyOf": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isPropertyOf",
+          "x-jsonld-type": "@id"
+        },
+        "isProxyFor": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isProxyFor",
+          "x-jsonld-type": "@id"
+        },
+        "isResultOf": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isResultOf",
+          "x-jsonld-type": "@id"
+        },
+        "isResultOfMadeBySampler": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isResultOfMadeBySampler",
+          "x-jsonld-type": "@id"
+        },
+        "isResultOfUsedProcedure": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isResultOfUsedProcedure",
+          "x-jsonld-type": "@id"
+        },
+        "isSampleOf": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/isSampleOf",
+          "x-jsonld-type": "@id"
+        },
+        "madeActuation": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeActuation",
+          "x-jsonld-type": "@id"
+        },
+        "madeByActuator": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeByActuator",
+          "x-jsonld-type": "@id"
+        },
+        "madeBySampler": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySampler",
+          "x-jsonld-type": "@id"
+        },
+        "madeObservation": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeObservation",
+          "x-jsonld-type": "@id"
+        },
+        "madeSampling": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/madeSampling",
+          "x-jsonld-type": "@id"
+        },
+        "observes": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/observes",
+          "x-jsonld-type": "@id"
+        },
+        "wasOriginatedBy": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/wasOriginatedBy",
+          "x-jsonld-type": "@id"
+        },
+        "Accuracy": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/Accuracy",
+          "x-jsonld-type": "@id"
+        },
+        "ActuationRange": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/ActuationRange",
+          "x-jsonld-type": "@id"
+        },
+        "BatteryLifetime": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/BatteryLifetime",
+          "x-jsonld-type": "@id"
+        },
+        "DetectionLimit": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/DetectionLimit",
+          "x-jsonld-type": "@id"
+        },
+        "Drift": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/Drift",
+          "x-jsonld-type": "@id"
+        },
+        "Frequency": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/Frequency",
+          "x-jsonld-type": "@id"
+        },
+        "Latency": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/Latency",
+          "x-jsonld-type": "@id"
+        },
+        "MaintenanceSchedule": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/MaintenanceSchedule",
+          "x-jsonld-type": "@id"
+        },
+        "MeasurementRange": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/MeasurementRange",
+          "x-jsonld-type": "@id"
+        },
+        "OperatingPowerRange": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/OperatingPowerRange",
+          "x-jsonld-type": "@id"
+        },
+        "OperatingProperty": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/OperatingProperty",
+          "x-jsonld-type": "@id"
+        },
+        "OperatingRange": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/OperatingRange",
+          "x-jsonld-type": "@id"
+        },
+        "Precision": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/Precision",
+          "x-jsonld-type": "@id"
+        },
+        "Resolution": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/Resolution",
+          "x-jsonld-type": "@id"
+        },
+        "ResponseTime": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/ResponseTime",
+          "x-jsonld-type": "@id"
+        },
+        "Selectivity": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/Selectivity",
+          "x-jsonld-type": "@id"
+        },
+        "Sensitivity": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/Sensitivity",
+          "x-jsonld-type": "@id"
+        },
+        "SurvivalProperty": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/SurvivalProperty",
+          "x-jsonld-type": "@id"
+        },
+        "SystemLifetime": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/SystemLifetime",
+          "x-jsonld-type": "@id"
+        },
+        "SurvivalRange": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/SurvivalRange",
+          "x-jsonld-type": "@id"
+        },
+        "SystemCapability": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/SystemCapability",
+          "x-jsonld-type": "@id"
+        },
+        "SystemProperty": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/SystemProperty",
+          "x-jsonld-type": "@id"
+        },
+        "hasOperatingProperty": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
+          "x-jsonld-type": "@id"
+        },
+        "hasOperatingRange": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
+          "x-jsonld-type": "@id"
+        },
+        "hasSurvivalProperty": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
+          "x-jsonld-type": "@id"
+        },
+        "hasSystemCapability": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
+          "x-jsonld-type": "@id"
+        },
+        "hasSystemProperty": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
+          "x-jsonld-type": "@id"
+        },
+        "hasSurvivalRange": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
+          "x-jsonld-type": "@id"
+        },
+        "inCondition": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/inCondition",
+          "x-jsonld-type": "@id"
+        },
+        "qualityOfObservation": {
+          "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
+          "x-jsonld-type": "@id"
+        }
+      },
+      "x-jsonld-prefixes": {
+        "sosa": "http://www.w3.org/ns/sosa/",
+        "ssn-system": "http://www.w3.org/ns/ssn/systems/",
+        "ssn": "http://www.w3.org/ns/ssn/"
+      },
+      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
     },
     "ogc.geo.json-fg.feature-lenient": {
       "allOf": [
@@ -1434,13 +1808,20 @@
               ],
               "x-jsonld-id": "@id"
             },
-            "featureType": {},
+            "featureType": {
+              "x-jsonld-id": "@type",
+              "allOf": [
+                {
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/featuretype"
+                }
+              ]
+            },
             "links": {
               "type": "array",
               "items": {
                 "allOf": [
                   {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_link.json"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/link"
                   },
                   {
                     "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.ogc-utils.json-link"
@@ -1450,15 +1831,37 @@
               "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
             },
             "time": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json"
+              "x-jsonld-id": "http://purl.org/dc/terms/time",
+              "allOf": [
+                {
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.time"
+                }
+              ]
             },
             "coordRefSys": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "x-jsonld-id": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
+              "allOf": [
+                {
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys"
+                }
+              ]
             },
             "place": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_place.json"
+              "x-jsonld-id": "http://purl.org/dc/terms/spatial",
+              "allOf": [
+                {
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/place"
+                }
+              ]
             },
-            "geometry": {},
+            "geometry": {
+              "x-jsonld-id": "https://purl.org/geojson/vocab#geometry",
+              "allOf": [
+                {
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry"
+                }
+              ]
+            },
             "properties": {
               "oneOf": [
                 {
@@ -1481,6 +1884,22 @@
         "MultiPolygon": "https://purl.org/geojson/vocab#MultiPolygon",
         "Point": "https://purl.org/geojson/vocab#Point",
         "Polygon": "https://purl.org/geojson/vocab#Polygon",
+        "Polyhedron": "https://purl.org/geojson/vocab#Polyhedron",
+        "MultiPolyhedron": "https://purl.org/geojson/vocab#MultiPolyhedron",
+        "Prism": {
+          "x-jsonld-id": "https://purl.org/geojson/vocab#Prism",
+          "x-jsonld-context": {
+            "base": "https://purl.org/geojson/vocab#prismBase",
+            "lower": "https://purl.org/geojson/vocab#prismLower",
+            "upper": "https://purl.org/geojson/vocab#prismUpper"
+          }
+        },
+        "MultiPrism": {
+          "x-jsonld-id": "https://purl.org/geojson/vocab#MultiPrism",
+          "x-jsonld-context": {
+            "prisms": "https://purl.org/geojson/vocab#prisms"
+          }
+        },
         "bbox": {
           "x-jsonld-container": "@list",
           "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
@@ -1492,11 +1911,17 @@
         "features": {
           "x-jsonld-container": "@set",
           "x-jsonld-id": "https://purl.org/geojson/vocab#features"
+        },
+        "geometries": {
+          "x-jsonld-id": "https://purl.org/geojson/vocab#geometry",
+          "x-jsonld-container": "@list"
         }
       },
       "x-jsonld-prefixes": {
         "geojson": "https://purl.org/geojson/vocab#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "dct": "http://purl.org/dc/terms/",
+        "owlTime": "http://www.w3.org/2006/time#"
       },
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.json"
     },
@@ -1518,21 +1943,28 @@
               ],
               "x-jsonld-id": "@type"
             },
-            "featureType": {},
+            "featureType": {
+              "x-jsonld-id": "https://purl.org/geojson/vocab#collectionFeatureType",
+              "allOf": [
+                {
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/featuretype"
+                }
+              ]
+            },
             "geometryDimension": {
               "type": "integer",
               "minimum": 0,
               "maximum": 3
             },
             "coordRefSys": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "links": {
               "type": "array",
               "items": {
                 "allOf": [
                   {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_link.json"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/link"
                   },
                   {
                     "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.ogc-utils.json-link"
@@ -1549,7 +1981,8 @@
               "x-jsonld-container": "@set",
               "x-jsonld-id": "https://purl.org/geojson/vocab#features"
             }
-          }
+          },
+          "x-schema-version": "https://json-schema.org/draft/2019-09/schema"
         },
         {
           "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.geo.features.featureCollection"
@@ -1572,94 +2005,64 @@
               "x-jsonld-id": "http://www.w3.org/ns/sosa/resultTime"
             },
             "phenomenonTime": {
-              "type": [
-                "object",
-                "string"
-              ],
               "x-jsonld-id": "http://www.w3.org/ns/sosa/phenomenonTime",
               "x-jsonld-type": "@id",
-              "anyOf": {
-                "anyOf": [
-                  {
-                    "type": "object"
-                  },
-                  {
-                    "type": "string"
-                  }
-                ]
-              }
+              "anyOf": [
+                {
+                  "type": "object"
+                },
+                {
+                  "type": "string"
+                }
+              ]
             },
             "hasFeatureOfInterest": {
-              "type": [
-                "object",
-                "string"
-              ],
               "x-jsonld-id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
               "x-jsonld-type": "@id",
-              "anyOf": {
-                "anyOf": [
-                  {
-                    "type": "object"
-                  },
-                  {
-                    "type": "string"
-                  }
-                ]
-              }
+              "anyOf": [
+                {
+                  "type": "object"
+                },
+                {
+                  "type": "string"
+                }
+              ]
             },
             "observedProperty": {
-              "type": [
-                "object",
-                "string"
-              ],
               "x-jsonld-id": "http://www.w3.org/ns/sosa/observedProperty",
               "x-jsonld-type": "@id",
-              "anyOf": {
-                "anyOf": [
-                  {
-                    "type": "object"
-                  },
-                  {
-                    "type": "string"
-                  }
-                ]
-              }
+              "anyOf": [
+                {
+                  "type": "object"
+                },
+                {
+                  "type": "string"
+                }
+              ]
             },
             "usedProcedure": {
-              "type": [
-                "object",
-                "string"
-              ],
               "x-jsonld-id": "http://www.w3.org/ns/sosa/usedProcedure",
               "x-jsonld-type": "@id",
-              "anyOf": {
-                "anyOf": [
-                  {
-                    "type": "object"
-                  },
-                  {
-                    "type": "string"
-                  }
-                ]
-              }
+              "anyOf": [
+                {
+                  "type": "object"
+                },
+                {
+                  "type": "string"
+                }
+              ]
             },
             "madeBySensor": {
-              "type": [
-                "object",
-                "string"
-              ],
               "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySensor",
               "x-jsonld-type": "@id",
-              "anyOf": {
-                "anyOf": [
-                  {
-                    "type": "object"
-                  },
-                  {
-                    "type": "string"
-                  }
-                ]
-              }
+              "anyOf": [
+                {
+                  "type": "object"
+                },
+                {
+                  "type": "string"
+                }
+              ]
             },
             "hasMember": {
               "type": "array",
@@ -2071,8 +2474,8 @@
         "ssn-system": "http://www.w3.org/ns/ssn/systems/",
         "ssn": "http://www.w3.org/ns/ssn/"
       },
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json"
+      "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
     },
     "ogc.geo.features.feature": {
       "allOf": [
@@ -2093,7 +2496,9 @@
               "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
             },
             "type": {
-              "const": "Feature"
+              "enum": [
+                "Feature"
+              ]
             }
           },
           "required": [
@@ -2111,7 +2516,7 @@
       },
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json"
     },
-    "beta.schemas.opengis.net_json-fg_featuretype.json": {
+    "featuretype": {
       "title": "the featureType member",
       "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
@@ -2125,10 +2530,11 @@
           }
         }
       ],
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/featuretype.json"
+      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/featuretype.json",
+      "x-schema-id": "https://beta.schemas.opengis.net/json-fg/featuretype.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
     },
-    "beta.schemas.opengis.net_json-fg_link.json": {
+    "link": {
       "title": "a Link object",
       "description": "Since JSON-FG 0.2 this schema is no longer part of JSON-FG. The file is still published as an informative schema in case any other schema includes a reference. All references to this schema should be changed.",
       "type": "object",
@@ -2160,8 +2566,9 @@
           "type": "string"
         }
       },
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/link.json"
+      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/link.json",
+      "x-schema-id": "https://beta.schemas.opengis.net/json-fg/link.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
     },
     "ogc.ogc-utils.json-link": {
       "description": "JSON Link",
@@ -2208,10 +2615,10 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "dct": "http://purl.org/dc/terms/"
       },
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json"
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
     },
-    "beta.schemas.opengis.net_json-fg_time.json": {
+    "ogc.geo.json-fg.time": {
       "title": "the time member",
       "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
@@ -2219,13 +2626,31 @@
           "type": "object",
           "properties": {
             "date": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/date"
+              "x-jsonld-id": "http://www.w3.org/2006/time#hasTime",
+              "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#date",
+              "allOf": [
+                {
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.time/$defs/date"
+                }
+              ]
             },
             "timestamp": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/timestamp"
+              "x-jsonld-id": "http://www.w3.org/2006/time#hasTime",
+              "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "allOf": [
+                {
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.time/$defs/timestamp"
+                }
+              ]
             },
             "interval": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/interval"
+              "x-jsonld-id": "http://www.w3.org/2006/time#hasTime",
+              "x-jsonld-container": "@list",
+              "allOf": [
+                {
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.time/$defs/interval"
+                }
+              ]
             }
           }
         }
@@ -2246,10 +2671,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/date"
+                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.time/$defs/date"
               },
               {
-                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/timestamp"
+                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.time/$defs/timestamp"
               },
               {
                 "type": "string",
@@ -2261,21 +2686,26 @@
           }
         }
       },
-      "nullable": true,
+      "x-jsonld-prefixes": {
+        "time": "http://www.w3.org/2006/time#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+      },
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.json",
+      "x-schema-id": "https://beta.schemas.opengis.net/json-fg/time.json",
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/time.json"
+      "nullable": true
     },
-    "beta.schemas.opengis.net_json-fg_coordrefsys.json": {
+    "coordrefsys": {
       "title": "the coordRefSys member",
       "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/single-refsys"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys/$defs/single-refsys"
         },
         {
           "type": "array",
           "items": {
-            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/single-refsys"
+            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys/$defs/single-refsys"
           },
           "minItems": 2
         }
@@ -2284,13 +2714,13 @@
         "single-refsys": {
           "oneOf": [
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/refsys-simpleref"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys/$defs/refsys-simpleref"
             },
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/refsys-byref"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys/$defs/refsys-byref"
             },
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/refsys-custom"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys/$defs/refsys-custom"
             }
           ]
         },
@@ -2337,85 +2767,88 @@
           }
         }
       },
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/coordrefsys.json"
+      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/coordrefsys.json",
+      "x-schema-id": "https://beta.schemas.opengis.net/json-fg/coordrefsys.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
     },
-    "beta.schemas.opengis.net_json-fg_place.json": {
+    "place": {
       "title": "the place member",
       "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Point"
         },
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPoint"
         },
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/LineString"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/LineString"
         },
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiLineString"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiLineString"
         },
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polygon"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Polygon"
         },
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPolygon"
         },
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polyhedron"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Polyhedron"
         },
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolyhedron"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPolyhedron"
         },
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Prism"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Prism"
         },
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPrism"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPrism"
         },
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/CustomGeometry"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/CustomGeometry"
         }
       ],
-      "nullable": true,
+      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/place.json",
+      "x-schema-id": "https://beta.schemas.opengis.net/json-fg/place.json",
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/place.json"
+      "nullable": true
     },
-    "beta.schemas.opengis.net_json-fg_geometry.json": {
+    "geometry": {
       "title": "the geometry member",
       "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Point"
         },
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPoint"
         },
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/LineString"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/LineString"
         },
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiLineString"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiLineString"
         },
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polygon"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Polygon"
         },
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPolygon"
         },
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/GeometryCollection"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/GeometryCollection"
         }
       ],
-      "nullable": true,
+      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/geometry.json",
+      "x-schema-id": "https://beta.schemas.opengis.net/json-fg/geometry.json",
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/geometry.json"
+      "nullable": true
     },
     "ogc.geo.features.featureCollection": {
       "allOf": [
         {
-          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geojson.org_schema_FeatureCollection.json"
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/FeatureCollection"
         },
         {
           "type": "object",
@@ -3041,8 +3474,9 @@
       "x-jsonld-prefixes": {
         "geojson": "https://purl.org/geojson/vocab#"
       },
-      "x-schema-version": "http://json-schema.org/draft-07/schema#",
-      "x-schema-source": "https://geojson.org/schema/Feature.json"
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json",
+      "x-schema-id": "https://geojson.org/schema/Feature.json",
+      "x-schema-version": "http://json-schema.org/draft-07/schema#"
     },
     "ogc.geo.common.data_types.bounding_box": {
       "type": "array",
@@ -3061,7 +3495,7 @@
       },
       "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json"
     },
-    "beta.schemas.opengis.net_json-fg_geometry-objects.json": {
+    "geometry-objects": {
       "title": "the geometry objects",
       "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "$defs": {
@@ -3107,13 +3541,13 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "coordinates": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/position"
             },
             "bbox": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox"
             }
           }
         },
@@ -3132,17 +3566,17 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "coordinates": {
               "type": "array",
               "minItems": 2,
               "items": {
-                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/position"
               }
             },
             "bbox": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox"
             }
           }
         },
@@ -3161,7 +3595,7 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "coordinates": {
               "type": "array",
@@ -3169,12 +3603,12 @@
                 "type": "array",
                 "minItems": 4,
                 "items": {
-                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/position"
                 }
               }
             },
             "bbox": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox"
             }
           }
         },
@@ -3193,16 +3627,16 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "coordinates": {
               "type": "array",
               "items": {
-                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/position"
               }
             },
             "bbox": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox"
             }
           }
         },
@@ -3221,7 +3655,7 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "coordinates": {
               "type": "array",
@@ -3229,12 +3663,12 @@
                 "type": "array",
                 "minItems": 2,
                 "items": {
-                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/position"
                 }
               }
             },
             "bbox": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox"
             }
           }
         },
@@ -3253,7 +3687,7 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "coordinates": {
               "type": "array",
@@ -3263,13 +3697,13 @@
                   "type": "array",
                   "minItems": 4,
                   "items": {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/position"
                   }
                 }
               }
             },
             "bbox": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox"
             }
           }
         },
@@ -3288,7 +3722,7 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "coordinates": {
               "type": "array",
@@ -3303,14 +3737,14 @@
                     "type": "array",
                     "minItems": 4,
                     "items": {
-                      "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position3d"
+                      "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/position3d"
                     }
                   }
                 }
               }
             },
             "bbox": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox3d"
             }
           }
         },
@@ -3329,7 +3763,7 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "coordinates": {
               "type": "array",
@@ -3346,7 +3780,7 @@
                       "type": "array",
                       "minItems": 4,
                       "items": {
-                        "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position3d"
+                        "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/position3d"
                       }
                     }
                   }
@@ -3354,7 +3788,7 @@
               }
             },
             "bbox": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox3d"
             }
           }
         },
@@ -3374,27 +3808,27 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "base": {
               "oneOf": [
                 {
-                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Point"
                 },
                 {
-                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/LineString"
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/LineString"
                 },
                 {
-                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polygon"
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Polygon"
                 },
                 {
-                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint"
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPoint"
                 },
                 {
-                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiLineString"
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiLineString"
                 },
                 {
-                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon"
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPolygon"
                 }
               ]
             },
@@ -3405,7 +3839,7 @@
               "type": "number"
             },
             "bbox": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox3d"
             }
           }
         },
@@ -3424,16 +3858,16 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "prisms": {
               "type": "array",
               "items": {
-                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Prism"
+                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Prism"
               }
             },
             "bbox": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox3d"
             }
           }
         },
@@ -3452,35 +3886,35 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/coordrefsys"
             },
             "geometries": {
               "type": "array",
               "items": {
                 "oneOf": [
                   {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Point"
                   },
                   {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPoint"
                   },
                   {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/LineString"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/LineString"
                   },
                   {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiLineString"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiLineString"
                   },
                   {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polygon"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/Polygon"
                   },
                   {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/MultiPolygon"
                   }
                 ]
               }
             },
             "bbox": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox"
             }
           }
         },
@@ -3503,10 +3937,10 @@
         "bbox": {
           "oneOf": [
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox2d"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox2d"
             },
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/geometry-objects/$defs/bbox3d"
             }
           ]
         },
@@ -3527,10 +3961,11 @@
           }
         }
       },
-      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json"
+      "x-schema-source": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json",
+      "x-schema-id": "https://beta.schemas.opengis.net/json-fg/geometry-objects.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
     },
-    "geojson.org_schema_FeatureCollection.json": {
+    "FeatureCollection": {
       "title": "GeoJSON FeatureCollection",
       "type": "object",
       "required": [
@@ -4054,13 +4489,455 @@
           }
         }
       },
-      "x-schema-version": "http://json-schema.org/draft-07/schema#",
-      "x-schema-source": "https://geojson.org/schema/FeatureCollection.json"
+      "x-schema-source": "https://geojson.org/schema/FeatureCollection.json",
+      "x-schema-id": "https://geojson.org/schema/FeatureCollection.json",
+      "x-schema-version": "http://json-schema.org/draft-07/schema#"
     }
   },
-  "allOf": [
-    {
-      "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.hosted.iliad.api.features.oim-obs"
+  "description": "Schemas for Observations",
+  "$defs": {
+    "OIMObsProps": {
+      "allOf": [
+        {
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observation"
+        },
+        {
+          "properties": {
+            "label": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "object"
+                }
+              ],
+              "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#label",
+              "x-jsonld-container": "@language"
+            }
+          }
+        }
+      ]
+    },
+    "OIMObsFeature": {
+      "allOf": [
+        {
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.sosa.features.observation"
+        },
+        {
+          "properties": {
+            "properties": {
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/$defs/OIMObsProps"
+            },
+            "observedProperty": {
+              "x-jsonld-id": "http://www.w3.org/ns/sosa/observedProperty",
+              "x-jsonld-type": "@id",
+              "x-jsonld-base": "https://w3id.org/iliad/jellyfish/property/",
+              "allOf": [
+                {
+                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "OIMObsCollection": {
+      "allOf": [
+        {
+          "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/x-defs/ogc.sosa.features.observationCollection"
+        },
+        {
+          "properties": {
+            "features": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/$defs/OIMObsFeature"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
     }
-  ]
+  },
+  "anyOf": [
+    {
+      "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/$defs/OIMObsProps"
+    },
+    {
+      "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/$defs/OIMObsFeature"
+    },
+    {
+      "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema-oas3.0.json#/$defs/OIMObsCollection"
+    }
+  ],
+  "x-jsonld-extra-terms": {
+    "implements": {
+      "x-jsonld-id": "http://www.w3.org/ns/ssn/implements",
+      "x-jsonld-type": "@id"
+    },
+    "MultiLineString": "http://www.opengis.net/ont/sf#MultiLineString",
+    "Attachable": "http://purl.org/linked-data/cube#Attachable",
+    "affiliation": "https://schema.org/affiliation",
+    "Line": "http://www.opengis.net/ont/sf#Line",
+    "member": {
+      "x-jsonld-id": "http://xmlns.com/foaf/0.1/member",
+      "x-jsonld-type": "@id"
+    },
+    "versionInfo": "http://www.w3.org/2002/07/owl#versionInfo",
+    "example": "http://www.w3.org/2004/02/skos/core#example",
+    "Slice": "http://purl.org/linked-data/cube#Slice",
+    "Concentration": "http://purl.oclc.org/NET/ssnx/qu/dim#Concentration",
+    "dataSet": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#dataSet",
+      "x-jsonld-type": "@id"
+    },
+    "componentAttachment": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#componentAttachment",
+      "x-jsonld-type": "@id"
+    },
+    "Platform": "http://www.w3.org/ns/sosa/Platform",
+    "concept": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#concept",
+      "x-jsonld-type": "@id"
+    },
+    "Deployment": "http://www.w3.org/ns/ssn/Deployment",
+    "MultiSurface": "http://www.opengis.net/ont/sf#MultiSurface",
+    "Organization": "https://schema.org/Organization",
+    "GFI_Feature": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+    "AttributeProperty": "http://purl.org/linked-data/cube#AttributeProperty",
+    "hosts": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hosts",
+      "x-jsonld-type": "@id"
+    },
+    "asWKT": {
+      "x-jsonld-id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "x-jsonld-type": "http://www.opengis.net/ont/geosparql#wktLiteral"
+    },
+    "asGeoJSON": {
+      "x-jsonld-id": "http://www.opengis.net/ont/geosparql#asGeoJSON",
+      "x-jsonld-type": "http://www.opengis.net/ont/geosparql#geoJSONLiteral"
+    },
+    "RotationalSpeed": "http://purl.oclc.org/NET/ssnx/qu/dim#RotationalSpeed",
+    "FeatureOfInterest": "http://www.w3.org/ns/sosa/FeatureOfInterest",
+    "ComponentProperty": "http://purl.org/linked-data/cube#ComponentProperty",
+    "Class": "http://www.w3.org/2000/01/rdf-schema#Class",
+    "Geometry": "http://www.opengis.net/ont/geosparql#Geometry",
+    "depiction": "http://xmlns.com/foaf/0.1/depiction",
+    "Curve": "http://www.opengis.net/ont/sf#Curve",
+    "maker": "http://xmlns.com/foaf/0.1/maker",
+    "sfWithin": {
+      "x-jsonld-id": "http://www.opengis.net/ont/geosparql#sfWithin",
+      "x-jsonld-type": "@id"
+    },
+    "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",
+    "domainIncludes": "https://schema.org/domainIncludes",
+    "madeBySensor": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "x-jsonld-type": "@id"
+    },
+    "ActuatableProperty": "http://www.w3.org/ns/sosa/ActuatableProperty",
+    "Feature": "http://www.opengis.net/ont/geosparql#Feature",
+    "FeatureCollection": "http://www.opengis.net/ont/geosparql#FeatureCollection",
+    "SpatialObjectCollection": "http://www.opengis.net/ont/geosparql#SpatialObjectCollection",
+    "LineString": "http://www.opengis.net/ont/sf#LineString",
+    "Concept": "http://www.w3.org/2004/02/skos/core#Concept",
+    "component": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#component",
+      "x-jsonld-type": "@id"
+    },
+    "measure": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#measure",
+      "x-jsonld-type": "@id"
+    },
+    "SliceKey": "http://purl.org/linked-data/cube#SliceKey",
+    "Result": "http://www.w3.org/ns/sosa/Result",
+    "isHostedBy": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/isHostedBy",
+      "x-jsonld-type": "@id"
+    },
+    "Compressibility": "http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility",
+    "inDeployment": {
+      "x-jsonld-id": "http://www.w3.org/ns/ssn/inDeployment",
+      "x-jsonld-type": "@id"
+    },
+    "ComponentSet": "http://purl.org/linked-data/cube#ComponentSet",
+    "MassPerTimePerArea": "http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerArea",
+    "Temperature": "http://purl.oclc.org/NET/ssnx/qu/dim#Temperature",
+    "homepage": "http://xmlns.com/foaf/0.1/homepage",
+    "hasProperty": {
+      "x-jsonld-id": "http://www.w3.org/ns/ssn/hasProperty",
+      "x-jsonld-type": "@id"
+    },
+    "Person": "http://xmlns.com/foaf/0.1/Person",
+    "Triangle": "http://www.opengis.net/ont/sf#Triangle",
+    "observationGroup": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#observationGroup",
+      "x-jsonld-type": "@id"
+    },
+    "EnergyFlux": "http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux",
+    "StressOrPressure": "http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure",
+    "resultTime": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/resultTime",
+      "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Agent": "http://xmlns.com/foaf/0.1/Agent",
+    "creator": "http://purl.org/dc/terms/creator",
+    "Energy": "http://purl.oclc.org/NET/ssnx/qu/dim#Energy",
+    "foaf.name": "http://xmlns.com/foaf/0.1/name",
+    "Role": "https://schema.org/Role",
+    "hasSerialization": {
+      "x-jsonld-id": "http://www.opengis.net/ont/geosparql#hasSerialization",
+      "x-jsonld-type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "SF_SamplingFeature.sampledFeature": {
+      "x-jsonld-id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature",
+      "x-jsonld-type": "@id"
+    },
+    "rangeIncludes": "https://schema.org/rangeIncludes",
+    "location": {
+      "x-jsonld-id": "http://www.w3.org/2003/01/geo/wgs84_pos#location",
+      "x-jsonld-type": "@id"
+    },
+    "ComponentSpecification": "http://purl.org/linked-data/cube#ComponentSpecification",
+    "Scheme": "http://www.w3.org/2004/02/skos/core#Scheme",
+    "GeometryCollection": "http://www.opengis.net/ont/sf#GeometryCollection",
+    "rights": "http://purl.org/dc/terms/rights",
+    "isResultOf": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/isResultOf",
+      "x-jsonld-type": "@id"
+    },
+    "SF_SamplingFeature": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
+    "DimensionProperty": "http://purl.org/linked-data/cube#DimensionProperty",
+    "Acceleration": "http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration",
+    "identifier": "http://purl.org/dc/terms/identifier",
+    "hasSubSystem": {
+      "x-jsonld-id": "http://www.w3.org/ns/ssn/hasSubSystem",
+      "x-jsonld-type": "@id"
+    },
+    "QuantityKind": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind",
+    "Distance": "http://purl.oclc.org/NET/ssnx/qu/dim#Distance",
+    "TIN": "http://www.opengis.net/ont/sf#TIN",
+    "SurfaceDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceDensity",
+    "isDefinedBy": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+    "wgs84.Point": "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+    "definition": "http://www.w3.org/2004/02/skos/core#definition",
+    "hasDeployment": {
+      "x-jsonld-id": "http://www.w3.org/ns/ssn/hasDeployment",
+      "x-jsonld-type": "@id"
+    },
+    "hasResult": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasResult",
+      "x-jsonld-type": "@id"
+    },
+    "order": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#order",
+      "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "hasGeometry": {
+      "x-jsonld-id": "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "x-jsonld-type": "@id"
+    },
+    "sfContains": {
+      "x-jsonld-id": "http://www.opengis.net/ont/geosparql#sfContains",
+      "x-jsonld-type": "@id"
+    },
+    "title": "http://purl.org/dc/terms/title",
+    "Density": "http://purl.oclc.org/NET/ssnx/qu/dim#Density",
+    "LinearRing": "http://www.opengis.net/ont/sf#LinearRing",
+    "MeasureProperty": "http://purl.org/linked-data/cube#MeasureProperty",
+    "PropertyKind": "http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind",
+    "SpatialObject": "http://www.opengis.net/ont/geosparql#SpatialObject",
+    "sliceStructure": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#sliceStructure",
+      "x-jsonld-type": "@id"
+    },
+    "hasFeatureOfInterest": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "x-jsonld-type": "@id"
+    },
+    "hasUltimateFeatureOfInterest": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest",
+      "x-jsonld-type": "@id"
+    },
+    "hasMember": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasMember",
+      "x-jsonld-type": "@id"
+    },
+    "SpecificEntropy": "http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropy",
+    "CodedProperty": "http://purl.org/linked-data/cube#CodedProperty",
+    "slice": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#slice",
+      "x-jsonld-type": "@id"
+    },
+    "madeObservation": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/madeObservation",
+      "x-jsonld-type": "@id"
+    },
+    "date": "http://purl.org/dc/terms/date",
+    "isPropertyOf": {
+      "x-jsonld-id": "http://www.w3.org/ns/ssn/isPropertyOf",
+      "x-jsonld-type": "@id"
+    },
+    "seeAlso": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+    "ObservationGroup": "http://purl.org/linked-data/cube#ObservationGroup",
+    "Sample": "http://www.w3.org/ns/sosa/Sample",
+    "DataSet": "http://purl.org/linked-data/cube#DataSet",
+    "comment": "http://www.w3.org/2000/01/rdf-schema#comment",
+    "PolyhedralSurface": "http://www.opengis.net/ont/sf#PolyhedralSurface",
+    "Polygon": "http://www.opengis.net/ont/sf#Polygon",
+    "MultiPolygon": "http://www.opengis.net/ont/sf#MultiPolygon",
+    "ObservableProperty": "http://www.w3.org/ns/sosa/ObservableProperty",
+    "contributor": "http://purl.org/dc/terms/contributor",
+    "deployedSystem": {
+      "x-jsonld-id": "http://www.w3.org/ns/ssn/deployedSystem",
+      "x-jsonld-type": "@id"
+    },
+    "System": "http://www.w3.org/ns/ssn/System",
+    "dimension": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#dimension",
+      "x-jsonld-type": "@id"
+    },
+    "RadianceExposure": "http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposure",
+    "VelocityOrSpeed": "http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed",
+    "deployedOnPlatform": {
+      "x-jsonld-id": "http://www.w3.org/ns/ssn/deployedOnPlatform",
+      "x-jsonld-type": "@id"
+    },
+    "GFI_DomainFeature": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
+    "observation": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#observation",
+      "x-jsonld-type": "@id"
+    },
+    "Dimensionless": "http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless",
+    "Power": "http://purl.oclc.org/NET/ssnx/qu/dim#Power",
+    "OM_Observation": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+    "prefLabel": "http://www.w3.org/2004/02/skos/core#prefLabel",
+    "Surface": "http://www.opengis.net/ont/sf#Surface",
+    "sliceKey": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#sliceKey",
+      "x-jsonld-type": "@id"
+    },
+    "inScheme": "http://www.w3.org/2004/02/skos/core#inScheme",
+    "dct.description": "http://purl.org/dc/terms/description",
+    "MultiCurve": "http://www.opengis.net/ont/sf#MultiCurve",
+    "DataStructureDefinition": "http://purl.org/linked-data/cube#DataStructureDefinition",
+    "MultiPoint": "http://www.opengis.net/ont/sf#MultiPoint",
+    "qb.Observation": "http://purl.org/linked-data/cube#Observation",
+    "EnergyDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensity",
+    "hasSimpleResult": "http://www.w3.org/ns/sosa/hasSimpleResult",
+    "componentProperty": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#componentProperty",
+      "x-jsonld-type": "@id"
+    },
+    "isFeatureOfInterestOf": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+      "x-jsonld-type": "@id"
+    },
+    "sf.Geometry": "http://www.opengis.net/ont/sf#Geometry",
+    "schema.Person": "https://schema.org/Person",
+    "Observation": "http://www.w3.org/ns/sosa/Observation",
+    "ObservationCollection": "http://www.w3.org/ns/sosa/ObservationCollection",
+    "Point": "http://www.opengis.net/ont/sf#Point",
+    "ssn.Property": "http://www.w3.org/ns/ssn/Property",
+    "schema.name": "https://schema.org/name",
+    "Measure": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Measure",
+    "Quantity": "http://qudt.org/schema/qudt/Quantity",
+    "qudt.QuantityKind": "http://qudt.org/schema/qudt/QuantityKind",
+    "QuantityValue": "http://qudt.org/schema/qudt/QuantityValue",
+    "Unit": "http://qudt.org/schema/qudt/Unit",
+    "unit": {
+      "x-jsonld-id": "http://qudt.org/schema/qudt/unit",
+      "x-jsonld-type": "@id"
+    },
+    "quantityValue": {
+      "x-jsonld-id": "http://qudt.org/schema/qudt/quantityValue",
+      "x-jsonld-type": "@id"
+    },
+    "hasQuantityKind": {
+      "x-jsonld-id": "http://qudt.org/schema/qudt/hasQuantityKind",
+      "x-jsonld-type": "@id"
+    },
+    "numericValue": "http://qudt.org/schema/qudt/numericValue",
+    "Sensor": "http://www.w3.org/ns/sosa/Sensor",
+    "Actuation": "http://www.w3.org/ns/sosa/Actuation",
+    "Sampling": "http://www.w3.org/ns/sosa/Sampling",
+    "Procedure": "http://www.w3.org/ns/sosa/Procedure",
+    "observes": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/observes",
+      "x-jsonld-type": "@id"
+    },
+    "phenomenonTime": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/phenomenonTime",
+      "x-jsonld-type": "@id"
+    },
+    "usedProcedure": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "x-jsonld-type": "@id"
+    },
+    "hasInput": {
+      "x-jsonld-id": "http://www.w3.org/ns/ssn/hasInput",
+      "x-jsonld-type": "@id"
+    },
+    "hasOutput": {
+      "x-jsonld-id": "http://www.w3.org/ns/ssn/hasOutput",
+      "x-jsonld-type": "@id"
+    },
+    "implementedBy": {
+      "x-jsonld-id": "http://www.w3.org/ns/ssn/implementedBy",
+      "x-jsonld-type": "@id"
+    },
+    "lat": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+    "long": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+    "alt": "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
+    "TemporalDuration": "http://www.w3.org/2006/time#TemporalDuration",
+    "Thing": "http://www.w3.org/2002/07/owl#Thing",
+    "TemporalUnit": "http://www.w3.org/2006/time#TemporalUnit",
+    "Instant": "http://www.w3.org/2006/time#Instant",
+    "numericDuration": {
+      "x-jsonld-id": "http://www.w3.org/2006/time#numericDuration",
+      "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "note": "http://www.w3.org/2004/02/skos/core#note",
+    "Interval": "http://www.w3.org/2006/time#Interval",
+    "hasTime": {
+      "x-jsonld-id": "http://www.w3.org/2006/time#hasTime",
+      "x-jsonld-type": "@id"
+    },
+    "hasEnd": {
+      "x-jsonld-id": "http://www.w3.org/2006/time#hasEnd",
+      "x-jsonld-type": "@id"
+    },
+    "TemporalEntity": "http://www.w3.org/2006/time#TemporalEntity",
+    "hasBeginning": {
+      "x-jsonld-id": "http://www.w3.org/2006/time#hasBeginning",
+      "x-jsonld-type": "@id"
+    },
+    "deprecated": "http://www.w3.org/2002/07/owl#deprecated",
+    "Duration": "http://www.w3.org/2006/time#Duration",
+    "editorialNote": "http://www.w3.org/2004/02/skos/core#editorialNote",
+    "inXSDDateTimeStamp": {
+      "x-jsonld-id": "http://www.w3.org/2006/time#inXSDDateTimeStamp",
+      "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+    },
+    "inXSDDate": {
+      "x-jsonld-id": "http://www.w3.org/2006/time#inXSDDate",
+      "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "unitType": {
+      "x-jsonld-id": "http://www.w3.org/2006/time#unitType",
+      "x-jsonld-type": "@id"
+    }
+  },
+  "x-jsonld-prefixes": {
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "iliad": "https://w3id.org/iliad/property/"
+  },
+  "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
 }

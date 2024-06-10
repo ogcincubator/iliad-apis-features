@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.hosted.iliad.api.features.oim-sta-obs - OIM Observations",
+  "bblockName": "OIM Observations",
+  "bblockId": "ogc.hosted.iliad.api.features.oim-sta-obs",
+  "generated": "2024-06-10T11:37:38.824627+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

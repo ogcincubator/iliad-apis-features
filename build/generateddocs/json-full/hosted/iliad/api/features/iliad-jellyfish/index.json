@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2024-03-29",
+  "dateOfLastChange": "2024-06-10",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -37,16 +37,16 @@
     ]
   },
   "dependsOn": [
-    "ogc.hosted.iliad.api.features.oim-obs-cs",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.ogc-utils.iri-or-curie",
+    "ogc.hosted.iliad.api.features.oim-obs-cs"
   ],
   "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema.yaml",
     "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/schema.json"
   },
-  "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/context.jsonld",
   "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/",
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/iliad-jellyfish/",

@@ -1,0 +1,97 @@
+{
+  "title": "Validation report for ogc.hosted.iliad.api.features.coverageJSONFisheries - OGC Iliad CoverageJSON ",
+  "bblockName": "OGC Iliad CoverageJSON ",
+  "bblockId": "ogc.hosted.iliad.api.features.coverageJSONFisheries",
+  "generated": "2024-06-10T11:37:39.364536+00:00",
+  "result": false,
+  "items": [
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/hosted/iliad/api/features/coverageJSONFisheries/example_1_1.json",
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverageJSONFisheries/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": []
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_1_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_1_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_1_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_1_1.ttl",
+              "size": 40,
+              "isError": false,
+              "message": "Output Turtle example_1_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'Suitability of good catch (>200 kg) for Pleuronectes platessa' is not of type 'object'",
+              "isError": true,
+              "message": "ValidationError: 'Suitability of good catch (>200 kg) for Pleuronectes platessa' is not of type 'object'\n\nFailed validating 'type' in schema['allOf'][3]['then']['allOf'][0]['properties']['parameters']['patternProperties']['.+']['properties']['description']:\n    {'additionalProperties': False,\n     'description': 'Object representing an internationalised string where '\n                    'keys are BCP 47 language tags.',\n     'patternProperties': {'^(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*))$': {'type': 'string'}},\n     'type': 'object'}\n\nOn instance['parameters']['PLE_fishing_suitability']['description']:\n    'Suitability of good catch (>200 kg) for Pleuronectes platessa'"
+            }
+          ]
+        },
+        {
+          "name": "JSON_LD",
+          "title": "JSON-LD",
+          "entries": []
+        },
+        {
+          "name": "TURTLE",
+          "title": "Turtle",
+          "entries": []
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": []
+        },
+        {
+          "name": "UNKNOWN",
+          "title": "Unknown errors",
+          "entries": []
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1
+  }
+}
