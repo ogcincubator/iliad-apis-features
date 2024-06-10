@@ -1,10 +1,6 @@
 {
   "x-defs": {
-    "ogc.hosted.iliad.api.features.coverageJSON": {
-      "x-schema-version": "http://json-schema.org/draft-07/schema#",
-      "x-schema-source": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json"
-    },
-    "schemas.opengis.net_covjson_1.0_coveragejson.json": {
+    "coveragejson": {
       "description": "A CoverageJSON object",
       "type": "object",
       "properties": {
@@ -26,60 +22,70 @@
           "if": {
             "properties": {
               "type": {
-                "const": "Domain"
+                "enum": [
+                  "Domain"
+                ]
               }
             }
           },
           "then": {
-            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/domain"
+            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/domain"
           }
         },
         {
           "if": {
             "properties": {
               "type": {
-                "const": "NdArray"
+                "enum": [
+                  "NdArray"
+                ]
               }
             }
           },
           "then": {
-            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/ndArray"
+            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/ndArray"
           }
         },
         {
           "if": {
             "properties": {
               "type": {
-                "const": "TiledNdArray"
+                "enum": [
+                  "TiledNdArray"
+                ]
               }
             }
           },
           "then": {
-            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/tiledNdArray"
+            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/tiledNdArray"
           }
         },
         {
           "if": {
             "properties": {
               "type": {
-                "const": "Coverage"
+                "enum": [
+                  "Coverage"
+                ]
               }
             }
           },
           "then": {
-            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/coverage"
+            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/coverage"
           }
         },
         {
           "if": {
             "properties": {
               "type": {
-                "const": "CoverageCollection"
+                "enum": [
+                  "CoverageCollection"
+                ]
               }
             }
           },
           "then": {
-            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/coverageCollection"
+            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/coverageCollection"
           }
         }
       ],
@@ -92,16 +98,16 @@
             ]
           },
           "then": {
-            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/valuesAxis"
+            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/valuesAxis"
           },
           "else": {
-            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericRegularlySpacedAxis"
+            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericRegularlySpacedAxis"
           }
         },
         "coverage": {
           "allOf": [
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/coverageBase"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/coverageBase"
             },
             {
               "required": [
@@ -127,7 +133,9 @@
           "type": "object",
           "properties": {
             "type": {
-              "const": "Coverage"
+              "enum": [
+                "Coverage"
+              ]
             },
             "id": {
               "type": "string"
@@ -138,113 +146,36 @@
             "domain": {
               "allOf": [
                 {
-                  "type": [
-                    "string",
-                    "object"
-                  ],
-                  "anyOf": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "type": "object"
-                      }
-                    ]
-                  }
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "object"
+                    }
+                  ]
                 },
                 {
                   "if": {
                     "type": "object"
                   },
                   "then": {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/domainBase"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/domainBase"
                   }
                 }
               ]
             },
             "parameters": {
-              "type": "object",
-              "patternProperties": {
-                ".+": {
-                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/parameter"
-                }
-              }
+              "type": "object"
             },
             "parameterGroups": {
               "type": "array",
               "items": {
-                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/parameterGroup"
+                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/parameterGroup"
               }
             },
             "ranges": {
-              "type": "object",
-              "patternProperties": {
-                ".+": {
-                  "allOf": [
-                    {
-                      "type": [
-                        "string",
-                        "object"
-                      ],
-                      "anyOf": {
-                        "anyOf": [
-                          {
-                            "type": "string"
-                          },
-                          {
-                            "type": "object"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "if": {
-                        "type": "object"
-                      },
-                      "then": {
-                        "properties": {
-                          "type": {
-                            "enum": [
-                              "NdArray",
-                              "TiledNdArray"
-                            ]
-                          }
-                        },
-                        "required": [
-                          "type"
-                        ]
-                      }
-                    },
-                    {
-                      "if": {
-                        "type": "object",
-                        "properties": {
-                          "type": {
-                            "const": "NdArray"
-                          }
-                        }
-                      },
-                      "then": {
-                        "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/ndArray"
-                      }
-                    },
-                    {
-                      "if": {
-                        "type": "object",
-                        "properties": {
-                          "type": {
-                            "const": "TiledNdArray"
-                          }
-                        }
-                      },
-                      "then": {
-                        "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/tiledNdArray"
-                      }
-                    }
-                  ]
-                }
-              }
+              "type": "object"
             },
             "rangeAlternates": {
               "type": "object"
@@ -260,35 +191,32 @@
           "description": "A collection of coverage objects",
           "properties": {
             "type": {
-              "const": "CoverageCollection"
+              "enum": [
+                "CoverageCollection"
+              ]
             },
             "domainType": {
               "type": "string"
             },
             "parameters": {
-              "type": "object",
-              "patternProperties": {
-                ".+": {
-                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/parameter"
-                }
-              }
+              "type": "object"
             },
             "parameterGroups": {
               "type": "array",
               "items": {
-                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/parameterGroup"
+                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/parameterGroup"
               }
             },
             "referencing": {
               "type": "array",
               "items": {
-                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/referenceSystemConnection"
+                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/referenceSystemConnection"
               }
             },
             "coverages": {
               "type": "array",
               "items": {
-                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/coverageBase"
+                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/coverageBase"
               }
             }
           },
@@ -298,7 +226,6 @@
           ],
           "allOf": [
             {
-              "$comment": "If no parameters are present at collection level then each coverage must have their own",
               "if": {
                 "not": {
                   "required": [
@@ -319,7 +246,6 @@
               }
             },
             {
-              "$comment": "If no \"referencing\" member is present at collection level then each coverage domain must have its own",
               "if": {
                 "not": {
                   "required": [
@@ -353,7 +279,7 @@
         "domain": {
           "allOf": [
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/domainBase"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/domainBase"
             },
             {
               "required": [
@@ -367,7 +293,9 @@
           "type": "object",
           "properties": {
             "type": {
-              "const": "Domain"
+              "enum": [
+                "Domain"
+              ]
             },
             "domainType": {
               "type": "string"
@@ -375,17 +303,12 @@
             "axes": {
               "type": "object",
               "description": "Set of Axis objects, keyed by axis identifier",
-              "minProperties": 1,
-              "patternProperties": {
-                ".+": {
-                  "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/anyAxis"
-                }
-              }
+              "minProperties": 1
             },
             "referencing": {
               "type": "array",
               "items": {
-                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/referenceSystemConnection"
+                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/referenceSystemConnection"
               }
             }
           },
@@ -400,7 +323,9 @@
                   "if": {
                     "properties": {
                       "domainType": {
-                        "const": "Grid"
+                        "enum": [
+                          "Grid"
+                        ]
                       }
                     }
                   },
@@ -410,16 +335,16 @@
                       "axes": {
                         "properties": {
                           "x": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericAxis"
                           },
                           "y": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericAxis"
                           },
                           "z": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericAxis"
                           },
                           "t": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/stringValuesAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/stringValuesAxis"
                           }
                         },
                         "required": [
@@ -435,7 +360,9 @@
                   "if": {
                     "properties": {
                       "domainType": {
-                        "const": "Trajectory"
+                        "enum": [
+                          "Trajectory"
+                        ]
                       }
                     }
                   },
@@ -447,13 +374,12 @@
                           "composite": {
                             "allOf": [
                               {
-                                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/tupleValuesAxis"
+                                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/tupleValuesAxis"
                               },
                               {
                                 "properties": {
                                   "values": {
                                     "items": {
-                                      "$comment": "In a Trajectory, tuples always have 3 (txy) or 4 (txyz) values",
                                       "minItems": 3,
                                       "maxItems": 4
                                     }
@@ -478,7 +404,7 @@
                             ]
                           },
                           "z": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericSingleValueAxis"
                           }
                         },
                         "required": [
@@ -493,7 +419,9 @@
                   "if": {
                     "properties": {
                       "domainType": {
-                        "const": "VerticalProfile"
+                        "enum": [
+                          "VerticalProfile"
+                        ]
                       }
                     }
                   },
@@ -503,16 +431,16 @@
                       "axes": {
                         "properties": {
                           "x": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericSingleValueAxis"
                           },
                           "y": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericSingleValueAxis"
                           },
                           "z": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericAxis"
                           },
                           "t": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/stringSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/stringSingleValueAxis"
                           }
                         },
                         "required": [
@@ -529,7 +457,9 @@
                   "if": {
                     "properties": {
                       "domainType": {
-                        "const": "Point"
+                        "enum": [
+                          "Point"
+                        ]
                       }
                     }
                   },
@@ -539,16 +469,16 @@
                       "axes": {
                         "properties": {
                           "x": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericSingleValueAxis"
                           },
                           "y": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericSingleValueAxis"
                           },
                           "z": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericSingleValueAxis"
                           },
                           "t": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/stringSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/stringSingleValueAxis"
                           }
                         },
                         "required": [
@@ -564,7 +494,9 @@
                   "if": {
                     "properties": {
                       "domainType": {
-                        "const": "PointSeries"
+                        "enum": [
+                          "PointSeries"
+                        ]
                       }
                     }
                   },
@@ -574,16 +506,16 @@
                       "axes": {
                         "properties": {
                           "x": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericSingleValueAxis"
                           },
                           "y": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericSingleValueAxis"
                           },
                           "z": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericSingleValueAxis"
                           },
                           "t": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/stringValuesAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/stringValuesAxis"
                           }
                         },
                         "required": [
@@ -600,7 +532,9 @@
                   "if": {
                     "properties": {
                       "domainType": {
-                        "const": "MultiPoint"
+                        "enum": [
+                          "MultiPoint"
+                        ]
                       }
                     }
                   },
@@ -612,13 +546,12 @@
                           "composite": {
                             "allOf": [
                               {
-                                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/tupleValuesAxis"
+                                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/tupleValuesAxis"
                               },
                               {
                                 "properties": {
                                   "values": {
                                     "items": {
-                                      "$comment": "In a MultiPoint, tuples always have 2 (xy) or 3 values (xyz)",
                                       "minItems": 2,
                                       "maxItems": 3
                                     }
@@ -641,7 +574,7 @@
                             ]
                           },
                           "t": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/stringSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/stringSingleValueAxis"
                           }
                         },
                         "required": [
@@ -656,7 +589,9 @@
                   "if": {
                     "properties": {
                       "domainType": {
-                        "const": "MultiPointSeries"
+                        "enum": [
+                          "MultiPointSeries"
+                        ]
                       }
                     }
                   },
@@ -668,13 +603,12 @@
                           "composite": {
                             "allOf": [
                               {
-                                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/tupleValuesAxis"
+                                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/tupleValuesAxis"
                               },
                               {
                                 "properties": {
                                   "values": {
                                     "items": {
-                                      "$comment": "In a MultiPointSeries, tuples always have 2 (xy) or 3 values (xyz)",
                                       "minItems": 2,
                                       "maxItems": 3
                                     }
@@ -697,7 +631,7 @@
                             ]
                           },
                           "t": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/stringValuesAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/stringValuesAxis"
                           }
                         },
                         "required": [
@@ -713,7 +647,9 @@
                   "if": {
                     "properties": {
                       "domainType": {
-                        "const": "Section"
+                        "enum": [
+                          "Section"
+                        ]
                       }
                     }
                   },
@@ -725,22 +661,23 @@
                           "composite": {
                             "allOf": [
                               {
-                                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/tupleValuesAxis"
+                                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/tupleValuesAxis"
                               },
                               {
                                 "properties": {
                                   "values": {
                                     "items": {
-                                      "$comment": "In a Section, tuples always have 3 values (txy)",
                                       "minItems": 3,
                                       "maxItems": 3
                                     }
                                   },
                                   "coordinates": {
-                                    "const": [
-                                      "t",
-                                      "x",
-                                      "y"
+                                    "enum": [
+                                      [
+                                        "t",
+                                        "x",
+                                        "y"
+                                      ]
                                     ]
                                   }
                                 }
@@ -748,7 +685,7 @@
                             ]
                           },
                           "z": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericAxis"
                           }
                         },
                         "required": [
@@ -764,7 +701,9 @@
                   "if": {
                     "properties": {
                       "domainType": {
-                        "const": "Polygon"
+                        "enum": [
+                          "Polygon"
+                        ]
                       }
                     }
                   },
@@ -776,18 +715,19 @@
                           "composite": {
                             "allOf": [
                               {
-                                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/polygonValuesAxis"
+                                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/polygonValuesAxis"
                               },
                               {
                                 "properties": {
                                   "values": {
-                                    "$comment": "There can only be one polygon in the axis",
                                     "maxItems": 1
                                   },
                                   "coordinates": {
-                                    "const": [
-                                      "x",
-                                      "y"
+                                    "enum": [
+                                      [
+                                        "x",
+                                        "y"
+                                      ]
                                     ]
                                   }
                                 }
@@ -795,10 +735,10 @@
                             ]
                           },
                           "z": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericSingleValueAxis"
                           },
                           "t": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/stringSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/stringSingleValueAxis"
                           }
                         },
                         "required": [
@@ -813,7 +753,9 @@
                   "if": {
                     "properties": {
                       "domainType": {
-                        "const": "PolygonSeries"
+                        "enum": [
+                          "PolygonSeries"
+                        ]
                       }
                     }
                   },
@@ -825,18 +767,19 @@
                           "composite": {
                             "allOf": [
                               {
-                                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/polygonValuesAxis"
+                                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/polygonValuesAxis"
                               },
                               {
                                 "properties": {
                                   "values": {
-                                    "$comment": "There can only be one polygon in the axis",
                                     "maxItems": 1
                                   },
                                   "coordinates": {
-                                    "const": [
-                                      "x",
-                                      "y"
+                                    "enum": [
+                                      [
+                                        "x",
+                                        "y"
+                                      ]
                                     ]
                                   }
                                 }
@@ -844,10 +787,10 @@
                             ]
                           },
                           "z": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericSingleValueAxis"
                           },
                           "t": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/stringValuesAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/stringValuesAxis"
                           }
                         },
                         "required": [
@@ -862,7 +805,9 @@
                   "if": {
                     "properties": {
                       "domainType": {
-                        "const": "MultiPolygon"
+                        "enum": [
+                          "MultiPolygon"
+                        ]
                       }
                     }
                   },
@@ -874,14 +819,16 @@
                           "composite": {
                             "allOf": [
                               {
-                                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/polygonValuesAxis"
+                                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/polygonValuesAxis"
                               },
                               {
                                 "properties": {
                                   "coordinates": {
-                                    "const": [
-                                      "x",
-                                      "y"
+                                    "enum": [
+                                      [
+                                        "x",
+                                        "y"
+                                      ]
                                     ]
                                   }
                                 }
@@ -889,10 +836,10 @@
                             ]
                           },
                           "z": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericSingleValueAxis"
                           },
                           "t": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/stringSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/stringSingleValueAxis"
                           }
                         },
                         "required": [
@@ -907,7 +854,9 @@
                   "if": {
                     "properties": {
                       "domainType": {
-                        "const": "MultiPolygonSeries"
+                        "enum": [
+                          "MultiPolygonSeries"
+                        ]
                       }
                     }
                   },
@@ -919,14 +868,16 @@
                           "composite": {
                             "allOf": [
                               {
-                                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/polygonValuesAxis"
+                                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/polygonValuesAxis"
                               },
                               {
                                 "properties": {
                                   "coordinates": {
-                                    "const": [
-                                      "x",
-                                      "y"
+                                    "enum": [
+                                      [
+                                        "x",
+                                        "y"
+                                      ]
                                     ]
                                   }
                                 }
@@ -934,10 +885,10 @@
                             ]
                           },
                           "z": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericSingleValueAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericSingleValueAxis"
                           },
                           "t": {
-                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/stringValuesAxis"
+                            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/stringValuesAxis"
                           }
                         },
                         "required": [
@@ -955,11 +906,6 @@
         "i18n": {
           "type": "object",
           "description": "Object representing an internationalised string where keys are BCP 47 language tags.",
-          "patternProperties": {
-            "^(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*))$": {
-              "type": "string"
-            }
-          },
           "additionalProperties": false
         },
         "ndArray": {
@@ -967,7 +913,9 @@
           "description": "Object representing a multidimensional (>= 0D) array with named axes, encoded as a flat one-dimensional array in row-major order",
           "properties": {
             "type": {
-              "const": "NdArray"
+              "enum": [
+                "NdArray"
+              ]
             },
             "dataType": {
               "enum": [
@@ -999,7 +947,9 @@
               "if": {
                 "properties": {
                   "dataType": {
-                    "const": "float"
+                    "enum": [
+                      "float"
+                    ]
                   }
                 }
               },
@@ -1018,7 +968,9 @@
               "if": {
                 "properties": {
                   "dataType": {
-                    "const": "integer"
+                    "enum": [
+                      "integer"
+                    ]
                   }
                 }
               },
@@ -1037,7 +989,9 @@
               "if": {
                 "properties": {
                   "dataType": {
-                    "const": "string"
+                    "enum": [
+                      "string"
+                    ]
                   }
                 }
               },
@@ -1114,10 +1068,10 @@
             ]
           },
           "then": {
-            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericValuesAxis"
+            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericValuesAxis"
           },
           "else": {
-            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericRegularlySpacedAxis"
+            "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericRegularlySpacedAxis"
           }
         },
         "numericRegularlySpacedAxis": {
@@ -1145,7 +1099,7 @@
           "description": "Axis defined by single numeric value",
           "allOf": [
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericValuesAxis"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericValuesAxis"
             },
             {
               "properties": {
@@ -1160,7 +1114,7 @@
           "description": "Axis defined by list of numeric axis values and optional bounds",
           "allOf": [
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/valuesAxisBase"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/valuesAxisBase"
             },
             {
               "properties": {
@@ -1187,10 +1141,10 @@
               "type": "string"
             },
             "label": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/i18n"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/i18n"
             },
             "description": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/i18n"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/i18n"
             },
             "categories": {
               "type": "array",
@@ -1201,10 +1155,10 @@
                     "type": "string"
                   },
                   "label": {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/i18n"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/i18n"
                   },
                   "description": {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/i18n"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/i18n"
                   }
                 },
                 "required": [
@@ -1228,37 +1182,22 @@
             },
             "type": {
               "description": "Type of the parameter object, must be \"Parameter\"",
-              "const": "Parameter"
+              "enum": [
+                "Parameter"
+              ]
             },
             "description": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/i18n"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/i18n"
             },
             "observedProperty": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/observedProperty"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/observedProperty"
             },
             "unit": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/unit"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/unit"
             },
             "categoryEncoding": {
               "type": "object",
-              "description": "Maps IDs of categories in the observedProperty to range values",
-              "patternProperties": {
-                ".+": {
-                  "oneOf": [
-                    {
-                      "type": "integer"
-                    },
-                    {
-                      "type": "array",
-                      "items": {
-                        "type": "integer"
-                      },
-                      "minItems": 1,
-                      "uniqueItems": true
-                    }
-                  ]
-                }
-              }
+              "description": "Maps IDs of categories in the observedProperty to range values"
             }
           },
           "required": [
@@ -1272,19 +1211,21 @@
           "properties": {
             "type": {
               "description": "Type of the parameter group object, must be \"ParameterGroup\"",
-              "const": "ParameterGroup"
+              "enum": [
+                "ParameterGroup"
+              ]
             },
             "id": {
               "type": "string"
             },
             "label": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/i18n"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/i18n"
             },
             "description": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/i18n"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/i18n"
             },
             "observedProperty": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/observedProperty"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/observedProperty"
             },
             "members": {
               "type": "array",
@@ -1316,12 +1257,14 @@
           "description": "Polygon-based axis",
           "allOf": [
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/valuesAxisBase"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/valuesAxisBase"
             },
             {
               "properties": {
                 "dataType": {
-                  "const": "polygon"
+                  "enum": [
+                    "polygon"
+                  ]
                 },
                 "values": {
                   "items": {
@@ -1357,10 +1300,9 @@
           "description": "Validates any axis with primitive values",
           "allOf": [
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/valuesAxisBase"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/valuesAxisBase"
             },
             {
-              "$comment": "This redundant branch exists to fail early with succinct errors",
               "properties": {
                 "values": {
                   "items": {
@@ -1387,10 +1329,10 @@
                 }
               },
               "then": {
-                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/numericValuesAxis"
+                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/numericValuesAxis"
               },
               "else": {
-                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/stringValuesAxis"
+                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/stringValuesAxis"
               }
             }
           ]
@@ -1410,7 +1352,9 @@
               "if": {
                 "properties": {
                   "type": {
-                    "const": "TemporalRS"
+                    "enum": [
+                      "TemporalRS"
+                    ]
                   }
                 }
               },
@@ -1421,7 +1365,9 @@
                     "type": "string",
                     "oneOf": [
                       {
-                        "const": "Gregorian"
+                        "enum": [
+                          "Gregorian"
+                        ]
                       },
                       {
                         "pattern": "^https?://"
@@ -1441,7 +1387,9 @@
               "if": {
                 "properties": {
                   "type": {
-                    "const": "IdentifierRS"
+                    "enum": [
+                      "IdentifierRS"
+                    ]
                   }
                 }
               },
@@ -1452,21 +1400,16 @@
                     "type": "string"
                   },
                   "label": {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/i18n"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/i18n"
                   },
                   "description": {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/i18n"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/i18n"
                   },
                   "targetConcept": {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/targetConcept"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/targetConcept"
                   },
                   "identifiers": {
-                    "type": "object",
-                    "patternProperties": {
-                      ".+": {
-                        "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/targetConcept"
-                      }
-                    }
+                    "type": "object"
                   }
                 },
                 "required": [
@@ -1488,7 +1431,7 @@
               "minItems": 1
             },
             "system": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/referenceSystem"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/referenceSystem"
             }
           },
           "required": [
@@ -1500,7 +1443,7 @@
           "description": "Axis defined by single string value",
           "allOf": [
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/stringValuesAxis"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/stringValuesAxis"
             },
             {
               "properties": {
@@ -1515,7 +1458,7 @@
           "description": "Simple axis with string values (e.g. time strings)",
           "allOf": [
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/valuesAxisBase"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/valuesAxisBase"
             },
             {
               "properties": {
@@ -1541,10 +1484,10 @@
               "type": "string"
             },
             "label": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/i18n"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/i18n"
             },
             "description": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/i18n"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/i18n"
             }
           },
           "required": [
@@ -1556,7 +1499,9 @@
           "description": "Object representing a multidimensional (>= 1D) array with named axes split up into sets of linked NdArray documents",
           "properties": {
             "type": {
-              "const": "TiledNdArray"
+              "enum": [
+                "TiledNdArray"
+              ]
             },
             "dataType": {
               "enum": [
@@ -1618,32 +1563,28 @@
           "description": "Tuple-based axis",
           "allOf": [
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/valuesAxisBase"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/valuesAxisBase"
             },
             {
               "properties": {
                 "dataType": {
-                  "const": "tuple"
+                  "enum": [
+                    "tuple"
+                  ]
                 },
                 "values": {
                   "items": {
                     "description": "A tuple of axis values (numbers or strings)",
                     "type": "array",
                     "items": {
-                      "type": [
-                        "number",
-                        "string"
-                      ],
-                      "anyOf": {
-                        "anyOf": [
-                          {
-                            "type": "number"
-                          },
-                          {
-                            "type": "string"
-                          }
-                        ]
-                      }
+                      "anyOf": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
                     },
                     "minItems": 2
                   }
@@ -1667,25 +1608,19 @@
               "type": "string"
             },
             "label": {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/i18n"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/i18n"
             },
             "symbol": {
               "allOf": [
                 {
-                  "type": [
-                    "string",
-                    "object"
-                  ],
-                  "anyOf": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "type": "object"
-                      }
-                    ]
-                  }
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "object"
+                    }
+                  ]
                 },
                 {
                   "if": {
@@ -1726,7 +1661,7 @@
           "description": "Validates any values-based axis",
           "allOf": [
             {
-              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/valuesAxisBase"
+              "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/valuesAxisBase"
             },
             {
               "if": {
@@ -1737,7 +1672,7 @@
                 }
               },
               "then": {
-                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/primitiveValuesAxis"
+                "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/primitiveValuesAxis"
               }
             }
           ],
@@ -1748,24 +1683,28 @@
                   "if": {
                     "properties": {
                       "dataType": {
-                        "const": "tuple"
+                        "enum": [
+                          "tuple"
+                        ]
                       }
                     }
                   },
                   "then": {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/tupleValuesAxis"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/tupleValuesAxis"
                   }
                 },
                 {
                   "if": {
                     "properties": {
                       "dataType": {
-                        "const": "polygon"
+                        "enum": [
+                          "polygon"
+                        ]
                       }
                     }
                   },
                   "then": {
-                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/schemas.opengis.net_covjson_1.0_coveragejson.json/definitions/polygonValuesAxis"
+                    "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson/definitions/polygonValuesAxis"
                   }
                 }
               ]
@@ -1773,12 +1712,13 @@
           }
         },
         "valuesAxisBase": {
-          "$comment": "Base schema for values-based axis schemas",
           "properties": {
             "dataType": {
               "type": "string",
               "not": {
-                "const": "primitive"
+                "enum": [
+                  "primitive"
+                ]
               }
             },
             "values": {
@@ -1804,13 +1744,166 @@
           ]
         }
       },
-      "x-schema-version": "http://json-schema.org/draft-07/schema",
-      "x-schema-source": "https://schemas.opengis.net/covjson/1.0/coveragejson.json"
+      "x-schema-source": "https://schemas.opengis.net/covjson/1.0/coveragejson.json",
+      "x-schema-id": "https://schemas.opengis.net/covjson/1.0/coveragejson.json",
+      "x-schema-version": "http://json-schema.org/draft-07/schema"
     }
   },
+  "title": "A CoverageJSON object",
+  "description": "Component of OGC Coverage Implementation Schema 1.0. Last updated: 2023-05-10. Copyright (c) 2023 Open Geospatial Consortium, Inc. All Rights Reserved. To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.",
+  "x-jsonld-extra-terms": {
+    "id": "@id",
+    "type": "@type",
+    "value": "@value",
+    "label": {
+      "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "x-jsonld-container": "@language"
+    },
+    "title": {
+      "x-jsonld-id": "http://purl.org/dc/terms/title",
+      "x-jsonld-container": "@language"
+    },
+    "description": {
+      "x-jsonld-id": "http://purl.org/dc/terms/description",
+      "x-jsonld-container": "@language"
+    },
+    "unit": "http://qudt.org/schema/qudt#unit",
+    "symbol": "http://qudt.org/schema/qudt#symbol",
+    "Domain": "https://covjson.org/def/core#Domain",
+    "domain": "https://covjson.org/def/core#domain",
+    "domainType": {
+      "x-jsonld-id": "https://covjson.org/def/core#domainType",
+      "x-jsonld-type": "@vocab"
+    },
+    "axes": {
+      "x-jsonld-id": "https://covjson.org/def/core#axis",
+      "x-jsonld-container": "@index"
+    },
+    "dataType": {
+      "x-jsonld-id": "https://covjson.org/def/core#dataType",
+      "x-jsonld-type": "@vocab"
+    },
+    "primitive": "https://covjson.org/def/core#primitive",
+    "tuple": "https://covjson.org/def/core#tuple",
+    "polygon": "https://covjson.org/def/core#polygon",
+    "num": "https://covjson.org/def/core#num",
+    "start": "https://covjson.org/def/core#start",
+    "stop": "https://covjson.org/def/core#stop",
+    "referencing": {
+      "x-jsonld-id": "https://covjson.org/def/core#referencing",
+      "x-jsonld-container": "@set"
+    },
+    "components": {
+      "x-jsonld-id": "https://covjson.org/def/core#components",
+      "x-jsonld-container": "@list"
+    },
+    "system": "https://covjson.org/def/core#referenceSystem",
+    "RS": "https://covjson.org/def/core#ReferenceSystem",
+    "CRS": "https://covjson.org/def/core#CoordinateReferenceSystem",
+    "cs": "http://data.ign.fr/def/ignf#coordinateSystem",
+    "CS": "http://data.ign.fr/def/ignf#CoordinateSystem",
+    "TemporalRS": "http://inspire.ec.europa.eu/glossary/TemporalReferenceSystem",
+    "TemporalCRS": "https://covjson.org/def/core#TemporalCRS",
+    "calendar": {
+      "x-jsonld-id": "https://covjson.org/def/core#calendar",
+      "x-jsonld-type": "@vocab"
+    },
+    "Gregorian": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian",
+    "timeScale": "https://covjson.org/def/core#timeScale",
+    "SpatialRS": "http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem",
+    "SpatialCRS": "http://data.ign.fr/def/ignf#CRS",
+    "GeodeticCRS": "http://data.ign.fr/def/ignf#GeodeticCRS",
+    "ProjectedCRS": "http://data.ign.fr/def/ignf#ProjectedCRS",
+    "VerticalCRS": "http://data.ign.fr/def/ignf#VerticalCRS",
+    "datum": "http://data.ign.fr/def/ignf#datum",
+    "csAxes": {
+      "x-jsonld-id": "https://covjson.org/def/core#coordinateSystemAxes",
+      "x-jsonld-container": "@list"
+    },
+    "direction": "http://data.ign.fr/def/ignf#axisDirection",
+    "IdentifierRS": "https://covjson.org/def/core#IdentifierReferenceSystem",
+    "targetConcept": "https://covjson.org/def/core#targetConcept",
+    "identifiers": {
+      "x-jsonld-id": "https://covjson.org/def/core#identifier",
+      "x-jsonld-type": "@id",
+      "x-jsonld-container": "@index"
+    },
+    "Parameter": "https://covjson.org/def/core#Parameter",
+    "parameters": {
+      "x-jsonld-id": "https://covjson.org/def/core#parameter",
+      "x-jsonld-type": "@id",
+      "x-jsonld-container": "@index"
+    },
+    "observedProperty": "http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#observedProperty",
+    "categoryEncoding": "https://covjson.org/def/core#categoryEncoding",
+    "ParameterGroup": "https://covjson.org/def/core#ParameterGroup",
+    "members": {
+      "x-jsonld-id": "https://covjson.org/def/core#member",
+      "x-jsonld-type": "@vocab",
+      "x-jsonld-container": "@set"
+    },
+    "ranges": {
+      "x-jsonld-id": "https://covjson.org/def/core#range",
+      "x-jsonld-type": "@id",
+      "x-jsonld-container": "@index"
+    },
+    "NdArray": "https://covjson.org/def/core#NdArray",
+    "TiledNdArray": "https://covjson.org/def/core#TiledNdArray",
+    "shape": {
+      "x-jsonld-id": "https://covjson.org/def/core#shape",
+      "x-jsonld-container": "@list"
+    },
+    "tileShape": {
+      "x-jsonld-id": "https://covjson.org/def/core#tileShape",
+      "x-jsonld-container": "@list"
+    },
+    "axisNames": {
+      "x-jsonld-id": "https://covjson.org/def/core#axisNames",
+      "x-jsonld-container": "@list"
+    },
+    "urlTemplate": "https://covjson.org/def/core#urlTemplate",
+    "tileSets": {
+      "x-jsonld-id": "https://covjson.org/def/core#tileSet",
+      "x-jsonld-container": "@set"
+    },
+    "float": "http://www.w3.org/2001/XMLSchema#double",
+    "integer": "http://www.w3.org/2001/XMLSchema#integer",
+    "string": "http://www.w3.org/2001/XMLSchema#string",
+    "Coverage": "https://covjson.org/def/core#Coverage",
+    "coverages": {
+      "x-jsonld-id": "http://www.w3.org/ns/hydra/core#member",
+      "x-jsonld-container": "@set"
+    },
+    "CoverageCollection": "https://covjson.org/def/core#CoverageCollection",
+    "Grid": "https://covjson.org/def/domainTypes#Grid",
+    "VerticalProfile": "https://covjson.org/def/domainTypes#VerticalProfile",
+    "MultiPointSeries": "https://covjson.org/def/domainTypes#MultiPointSeries",
+    "MultiPoint": "https://covjson.org/def/domainTypes#MultiPoint",
+    "PointSeries": "https://covjson.org/def/domainTypes#PointSeries",
+    "Point": "https://covjson.org/def/domainTypes#Point",
+    "Trajectory": "https://covjson.org/def/domainTypes#Trajectory",
+    "Section": "https://covjson.org/def/domainTypes#Section",
+    "MultiPolygonSeries": "https://covjson.org/def/domainTypes#MultiPolygonSeries",
+    "MultiPolygon": "https://covjson.org/def/domainTypes#MultiPolygon",
+    "Polygon": "https://covjson.org/def/domainTypes#Polygon"
+  },
+  "x-jsonld-prefixes": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dct": "http://purl.org/dc/terms/",
+    "qudt": "http://qudt.org/schema/qudt#",
+    "covjson": "https://covjson.org/def/core#",
+    "ignf": "http://data.ign.fr/def/ignf#",
+    "inspiregloss": "http://inspire.ec.europa.eu/glossary/",
+    "ssn": "http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "covjsondt": "https://covjson.org/def/domainTypes#",
+    "rel": "http://www.iana.org/assignments/relation/"
+  },
+  "x-schema-version": "http://json-schema.org/draft-07/schema#",
   "allOf": [
     {
-      "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/ogc.hosted.iliad.api.features.coverageJSON"
+      "$ref": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema-oas3.0.json#/x-defs/coveragejson"
     }
   ]
 }

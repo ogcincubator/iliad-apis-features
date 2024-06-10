@@ -68,6 +68,306 @@ anyOf:
 - $ref: '#/$defs/OIMObsProps'
 - $ref: '#/$defs/OIMObsFeature'
 - $ref: '#/$defs/OIMObsCollection'
+x-jsonld-extra-terms:
+  implements:
+    x-jsonld-id: http://www.w3.org/ns/ssn/implements
+    x-jsonld-type: '@id'
+  MultiLineString: http://www.opengis.net/ont/sf#MultiLineString
+  Attachable: http://purl.org/linked-data/cube#Attachable
+  affiliation: https://schema.org/affiliation
+  Line: http://www.opengis.net/ont/sf#Line
+  member:
+    x-jsonld-id: http://xmlns.com/foaf/0.1/member
+    x-jsonld-type: '@id'
+  versionInfo: http://www.w3.org/2002/07/owl#versionInfo
+  example: http://www.w3.org/2004/02/skos/core#example
+  Slice: http://purl.org/linked-data/cube#Slice
+  Concentration: http://purl.oclc.org/NET/ssnx/qu/dim#Concentration
+  dataSet:
+    x-jsonld-id: http://purl.org/linked-data/cube#dataSet
+    x-jsonld-type: '@id'
+  componentAttachment:
+    x-jsonld-id: http://purl.org/linked-data/cube#componentAttachment
+    x-jsonld-type: '@id'
+  Platform: http://www.w3.org/ns/sosa/Platform
+  concept:
+    x-jsonld-id: http://purl.org/linked-data/cube#concept
+    x-jsonld-type: '@id'
+  Deployment: http://www.w3.org/ns/ssn/Deployment
+  MultiSurface: http://www.opengis.net/ont/sf#MultiSurface
+  Organization: https://schema.org/Organization
+  GFI_Feature: http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature
+  AttributeProperty: http://purl.org/linked-data/cube#AttributeProperty
+  hosts:
+    x-jsonld-id: http://www.w3.org/ns/sosa/hosts
+    x-jsonld-type: '@id'
+  asWKT:
+    x-jsonld-id: http://www.opengis.net/ont/geosparql#asWKT
+    x-jsonld-type: http://www.opengis.net/ont/geosparql#wktLiteral
+  asGeoJSON:
+    x-jsonld-id: http://www.opengis.net/ont/geosparql#asGeoJSON
+    x-jsonld-type: http://www.opengis.net/ont/geosparql#geoJSONLiteral
+  RotationalSpeed: http://purl.oclc.org/NET/ssnx/qu/dim#RotationalSpeed
+  FeatureOfInterest: http://www.w3.org/ns/sosa/FeatureOfInterest
+  ComponentProperty: http://purl.org/linked-data/cube#ComponentProperty
+  Class: http://www.w3.org/2000/01/rdf-schema#Class
+  Geometry: http://www.opengis.net/ont/geosparql#Geometry
+  depiction: http://xmlns.com/foaf/0.1/depiction
+  Curve: http://www.opengis.net/ont/sf#Curve
+  maker: http://xmlns.com/foaf/0.1/maker
+  sfWithin:
+    x-jsonld-id: http://www.opengis.net/ont/geosparql#sfWithin
+    x-jsonld-type: '@id'
+  ThermalConductivity: http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity
+  domainIncludes: https://schema.org/domainIncludes
+  madeBySensor:
+    x-jsonld-id: http://www.w3.org/ns/sosa/madeBySensor
+    x-jsonld-type: '@id'
+  ActuatableProperty: http://www.w3.org/ns/sosa/ActuatableProperty
+  Feature: http://www.opengis.net/ont/geosparql#Feature
+  FeatureCollection: http://www.opengis.net/ont/geosparql#FeatureCollection
+  SpatialObjectCollection: http://www.opengis.net/ont/geosparql#SpatialObjectCollection
+  LineString: http://www.opengis.net/ont/sf#LineString
+  Concept: http://www.w3.org/2004/02/skos/core#Concept
+  component:
+    x-jsonld-id: http://purl.org/linked-data/cube#component
+    x-jsonld-type: '@id'
+  measure:
+    x-jsonld-id: http://purl.org/linked-data/cube#measure
+    x-jsonld-type: '@id'
+  SliceKey: http://purl.org/linked-data/cube#SliceKey
+  Result: http://www.w3.org/ns/sosa/Result
+  isHostedBy:
+    x-jsonld-id: http://www.w3.org/ns/sosa/isHostedBy
+    x-jsonld-type: '@id'
+  Compressibility: http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility
+  inDeployment:
+    x-jsonld-id: http://www.w3.org/ns/ssn/inDeployment
+    x-jsonld-type: '@id'
+  ComponentSet: http://purl.org/linked-data/cube#ComponentSet
+  MassPerTimePerArea: http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerArea
+  Temperature: http://purl.oclc.org/NET/ssnx/qu/dim#Temperature
+  homepage: http://xmlns.com/foaf/0.1/homepage
+  hasProperty:
+    x-jsonld-id: http://www.w3.org/ns/ssn/hasProperty
+    x-jsonld-type: '@id'
+  Person: http://xmlns.com/foaf/0.1/Person
+  Triangle: http://www.opengis.net/ont/sf#Triangle
+  observationGroup:
+    x-jsonld-id: http://purl.org/linked-data/cube#observationGroup
+    x-jsonld-type: '@id'
+  EnergyFlux: http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux
+  StressOrPressure: http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure
+  resultTime:
+    x-jsonld-id: http://www.w3.org/ns/sosa/resultTime
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
+  Agent: http://xmlns.com/foaf/0.1/Agent
+  creator: http://purl.org/dc/terms/creator
+  Energy: http://purl.oclc.org/NET/ssnx/qu/dim#Energy
+  foaf.name: http://xmlns.com/foaf/0.1/name
+  Role: https://schema.org/Role
+  hasSerialization:
+    x-jsonld-id: http://www.opengis.net/ont/geosparql#hasSerialization
+    x-jsonld-type: http://www.w3.org/2000/01/rdf-schema#Literal
+  SF_SamplingFeature.sampledFeature:
+    x-jsonld-id: http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature
+    x-jsonld-type: '@id'
+  rangeIncludes: https://schema.org/rangeIncludes
+  location:
+    x-jsonld-id: http://www.w3.org/2003/01/geo/wgs84_pos#location
+    x-jsonld-type: '@id'
+  ComponentSpecification: http://purl.org/linked-data/cube#ComponentSpecification
+  Scheme: http://www.w3.org/2004/02/skos/core#Scheme
+  GeometryCollection: http://www.opengis.net/ont/sf#GeometryCollection
+  rights: http://purl.org/dc/terms/rights
+  isResultOf:
+    x-jsonld-id: http://www.w3.org/ns/sosa/isResultOf
+    x-jsonld-type: '@id'
+  SF_SamplingFeature: http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature
+  DimensionProperty: http://purl.org/linked-data/cube#DimensionProperty
+  Acceleration: http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration
+  identifier: http://purl.org/dc/terms/identifier
+  hasSubSystem:
+    x-jsonld-id: http://www.w3.org/ns/ssn/hasSubSystem
+    x-jsonld-type: '@id'
+  QuantityKind: http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind
+  Distance: http://purl.oclc.org/NET/ssnx/qu/dim#Distance
+  TIN: http://www.opengis.net/ont/sf#TIN
+  SurfaceDensity: http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceDensity
+  isDefinedBy: http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+  wgs84.Point: http://www.w3.org/2003/01/geo/wgs84_pos#Point
+  definition: http://www.w3.org/2004/02/skos/core#definition
+  hasDeployment:
+    x-jsonld-id: http://www.w3.org/ns/ssn/hasDeployment
+    x-jsonld-type: '@id'
+  hasResult:
+    x-jsonld-id: http://www.w3.org/ns/sosa/hasResult
+    x-jsonld-type: '@id'
+  order:
+    x-jsonld-id: http://purl.org/linked-data/cube#order
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#int
+  hasGeometry:
+    x-jsonld-id: http://www.opengis.net/ont/geosparql#hasGeometry
+    x-jsonld-type: '@id'
+  sfContains:
+    x-jsonld-id: http://www.opengis.net/ont/geosparql#sfContains
+    x-jsonld-type: '@id'
+  title: http://purl.org/dc/terms/title
+  Density: http://purl.oclc.org/NET/ssnx/qu/dim#Density
+  LinearRing: http://www.opengis.net/ont/sf#LinearRing
+  MeasureProperty: http://purl.org/linked-data/cube#MeasureProperty
+  PropertyKind: http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind
+  SpatialObject: http://www.opengis.net/ont/geosparql#SpatialObject
+  sliceStructure:
+    x-jsonld-id: http://purl.org/linked-data/cube#sliceStructure
+    x-jsonld-type: '@id'
+  hasFeatureOfInterest:
+    x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
+    x-jsonld-type: '@id'
+  hasUltimateFeatureOfInterest:
+    x-jsonld-id: http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest
+    x-jsonld-type: '@id'
+  hasMember:
+    x-jsonld-id: http://www.w3.org/ns/sosa/hasMember
+    x-jsonld-type: '@id'
+  SpecificEntropy: http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropy
+  CodedProperty: http://purl.org/linked-data/cube#CodedProperty
+  slice:
+    x-jsonld-id: http://purl.org/linked-data/cube#slice
+    x-jsonld-type: '@id'
+  madeObservation:
+    x-jsonld-id: http://www.w3.org/ns/sosa/madeObservation
+    x-jsonld-type: '@id'
+  date: http://purl.org/dc/terms/date
+  isPropertyOf:
+    x-jsonld-id: http://www.w3.org/ns/ssn/isPropertyOf
+    x-jsonld-type: '@id'
+  seeAlso: http://www.w3.org/2000/01/rdf-schema#seeAlso
+  ObservationGroup: http://purl.org/linked-data/cube#ObservationGroup
+  Sample: http://www.w3.org/ns/sosa/Sample
+  DataSet: http://purl.org/linked-data/cube#DataSet
+  comment: http://www.w3.org/2000/01/rdf-schema#comment
+  PolyhedralSurface: http://www.opengis.net/ont/sf#PolyhedralSurface
+  Polygon: http://www.opengis.net/ont/sf#Polygon
+  MultiPolygon: http://www.opengis.net/ont/sf#MultiPolygon
+  ObservableProperty: http://www.w3.org/ns/sosa/ObservableProperty
+  contributor: http://purl.org/dc/terms/contributor
+  deployedSystem:
+    x-jsonld-id: http://www.w3.org/ns/ssn/deployedSystem
+    x-jsonld-type: '@id'
+  System: http://www.w3.org/ns/ssn/System
+  dimension:
+    x-jsonld-id: http://purl.org/linked-data/cube#dimension
+    x-jsonld-type: '@id'
+  RadianceExposure: http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposure
+  VelocityOrSpeed: http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed
+  deployedOnPlatform:
+    x-jsonld-id: http://www.w3.org/ns/ssn/deployedOnPlatform
+    x-jsonld-type: '@id'
+  GFI_DomainFeature: http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature
+  observation:
+    x-jsonld-id: http://purl.org/linked-data/cube#observation
+    x-jsonld-type: '@id'
+  Dimensionless: http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless
+  Power: http://purl.oclc.org/NET/ssnx/qu/dim#Power
+  OM_Observation: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation
+  prefLabel: http://www.w3.org/2004/02/skos/core#prefLabel
+  Surface: http://www.opengis.net/ont/sf#Surface
+  sliceKey:
+    x-jsonld-id: http://purl.org/linked-data/cube#sliceKey
+    x-jsonld-type: '@id'
+  inScheme: http://www.w3.org/2004/02/skos/core#inScheme
+  dct.description: http://purl.org/dc/terms/description
+  MultiCurve: http://www.opengis.net/ont/sf#MultiCurve
+  DataStructureDefinition: http://purl.org/linked-data/cube#DataStructureDefinition
+  MultiPoint: http://www.opengis.net/ont/sf#MultiPoint
+  qb.Observation: http://purl.org/linked-data/cube#Observation
+  EnergyDensity: http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensity
+  hasSimpleResult: http://www.w3.org/ns/sosa/hasSimpleResult
+  componentProperty:
+    x-jsonld-id: http://purl.org/linked-data/cube#componentProperty
+    x-jsonld-type: '@id'
+  isFeatureOfInterestOf:
+    x-jsonld-id: http://www.w3.org/ns/sosa/isFeatureOfInterestOf
+    x-jsonld-type: '@id'
+  sf.Geometry: http://www.opengis.net/ont/sf#Geometry
+  schema.Person: https://schema.org/Person
+  Observation: http://www.w3.org/ns/sosa/Observation
+  ObservationCollection: http://www.w3.org/ns/sosa/ObservationCollection
+  Point: http://www.opengis.net/ont/sf#Point
+  ssn.Property: http://www.w3.org/ns/ssn/Property
+  schema.name: https://schema.org/name
+  Measure: http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Measure
+  Quantity: http://qudt.org/schema/qudt/Quantity
+  qudt.QuantityKind: http://qudt.org/schema/qudt/QuantityKind
+  QuantityValue: http://qudt.org/schema/qudt/QuantityValue
+  Unit: http://qudt.org/schema/qudt/Unit
+  unit:
+    x-jsonld-id: http://qudt.org/schema/qudt/unit
+    x-jsonld-type: '@id'
+  quantityValue:
+    x-jsonld-id: http://qudt.org/schema/qudt/quantityValue
+    x-jsonld-type: '@id'
+  hasQuantityKind:
+    x-jsonld-id: http://qudt.org/schema/qudt/hasQuantityKind
+    x-jsonld-type: '@id'
+  numericValue: http://qudt.org/schema/qudt/numericValue
+  Sensor: http://www.w3.org/ns/sosa/Sensor
+  Actuation: http://www.w3.org/ns/sosa/Actuation
+  Sampling: http://www.w3.org/ns/sosa/Sampling
+  Procedure: http://www.w3.org/ns/sosa/Procedure
+  observes:
+    x-jsonld-id: http://www.w3.org/ns/sosa/observes
+    x-jsonld-type: '@id'
+  phenomenonTime:
+    x-jsonld-id: http://www.w3.org/ns/sosa/phenomenonTime
+    x-jsonld-type: '@id'
+  usedProcedure:
+    x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
+    x-jsonld-type: '@id'
+  hasInput:
+    x-jsonld-id: http://www.w3.org/ns/ssn/hasInput
+    x-jsonld-type: '@id'
+  hasOutput:
+    x-jsonld-id: http://www.w3.org/ns/ssn/hasOutput
+    x-jsonld-type: '@id'
+  implementedBy:
+    x-jsonld-id: http://www.w3.org/ns/ssn/implementedBy
+    x-jsonld-type: '@id'
+  lat: http://www.w3.org/2003/01/geo/wgs84_pos#lat
+  long: http://www.w3.org/2003/01/geo/wgs84_pos#long
+  alt: http://www.w3.org/2003/01/geo/wgs84_pos#alt
+  TemporalDuration: http://www.w3.org/2006/time#TemporalDuration
+  Thing: http://www.w3.org/2002/07/owl#Thing
+  TemporalUnit: http://www.w3.org/2006/time#TemporalUnit
+  Instant: http://www.w3.org/2006/time#Instant
+  numericDuration:
+    x-jsonld-id: http://www.w3.org/2006/time#numericDuration
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#decimal
+  note: http://www.w3.org/2004/02/skos/core#note
+  Interval: http://www.w3.org/2006/time#Interval
+  hasTime:
+    x-jsonld-id: http://www.w3.org/2006/time#hasTime
+    x-jsonld-type: '@id'
+  hasEnd:
+    x-jsonld-id: http://www.w3.org/2006/time#hasEnd
+    x-jsonld-type: '@id'
+  TemporalEntity: http://www.w3.org/2006/time#TemporalEntity
+  hasBeginning:
+    x-jsonld-id: http://www.w3.org/2006/time#hasBeginning
+    x-jsonld-type: '@id'
+  deprecated: http://www.w3.org/2002/07/owl#deprecated
+  Duration: http://www.w3.org/2006/time#Duration
+  editorialNote: http://www.w3.org/2004/02/skos/core#editorialNote
+  inXSDDateTimeStamp:
+    x-jsonld-id: http://www.w3.org/2006/time#inXSDDateTimeStamp
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTimeStamp
+  inXSDDate:
+    x-jsonld-id: http://www.w3.org/2006/time#inXSDDate
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#date
+  unitType:
+    x-jsonld-id: http://www.w3.org/2006/time#unitType
+    x-jsonld-type: '@id'
 x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   rdfs: http://www.w3.org/2000/01/rdf-schema#
@@ -525,9 +825,282 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
+    "time": {
+      "@context": {
+        "date": {
+          "@id": "owlTime:hasTime",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "timestamp": {
+          "@id": "owlTime:hasTime",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "interval": {
+          "@id": "owlTime:hasTime",
+          "@container": "@list"
+        }
+      },
+      "@id": "dct:time"
+    },
+    "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
+    "place": "dct:spatial",
+    "Polyhedron": "geojson:Polyhedron",
+    "MultiPolyhedron": "geojson:MultiPolyhedron",
+    "Prism": {
+      "@id": "geojson:Prism",
+      "@context": {
+        "base": "geojson:prismBase",
+        "lower": "geojson:prismLower",
+        "upper": "geojson:prismUpper"
+      }
+    },
+    "MultiPrism": {
+      "@id": "geojson:MultiPrism",
+      "@context": {
+        "prisms": "geojson:prisms"
+      }
+    },
     "coordinates": {
       "@container": "@list",
       "@id": "geojson:coordinates"
+    },
+    "geometries": {
+      "@id": "geojson:geometry",
+      "@container": "@list"
+    },
+    "Attachable": "http://purl.org/linked-data/cube#Attachable",
+    "affiliation": "https://schema.org/affiliation",
+    "Line": "http://www.opengis.net/ont/sf#Line",
+    "member": {
+      "@id": "http://xmlns.com/foaf/0.1/member",
+      "@type": "@id"
+    },
+    "versionInfo": "http://www.w3.org/2002/07/owl#versionInfo",
+    "example": "http://www.w3.org/2004/02/skos/core#example",
+    "Slice": "http://purl.org/linked-data/cube#Slice",
+    "Concentration": "http://purl.oclc.org/NET/ssnx/qu/dim#Concentration",
+    "dataSet": {
+      "@id": "http://purl.org/linked-data/cube#dataSet",
+      "@type": "@id"
+    },
+    "componentAttachment": {
+      "@id": "http://purl.org/linked-data/cube#componentAttachment",
+      "@type": "@id"
+    },
+    "concept": {
+      "@id": "http://purl.org/linked-data/cube#concept",
+      "@type": "@id"
+    },
+    "MultiSurface": "http://www.opengis.net/ont/sf#MultiSurface",
+    "Organization": "https://schema.org/Organization",
+    "GFI_Feature": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+    "AttributeProperty": "http://purl.org/linked-data/cube#AttributeProperty",
+    "asWKT": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.opengis.net/ont/geosparql#wktLiteral"
+    },
+    "asGeoJSON": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGeoJSON",
+      "@type": "http://www.opengis.net/ont/geosparql#geoJSONLiteral"
+    },
+    "RotationalSpeed": "http://purl.oclc.org/NET/ssnx/qu/dim#RotationalSpeed",
+    "ComponentProperty": "http://purl.org/linked-data/cube#ComponentProperty",
+    "Class": "rdfs:Class",
+    "Geometry": "http://www.opengis.net/ont/geosparql#Geometry",
+    "depiction": "http://xmlns.com/foaf/0.1/depiction",
+    "Curve": "http://www.opengis.net/ont/sf#Curve",
+    "maker": "http://xmlns.com/foaf/0.1/maker",
+    "sfWithin": {
+      "@id": "http://www.opengis.net/ont/geosparql#sfWithin",
+      "@type": "@id"
+    },
+    "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",
+    "domainIncludes": "https://schema.org/domainIncludes",
+    "SpatialObjectCollection": "http://www.opengis.net/ont/geosparql#SpatialObjectCollection",
+    "Concept": "http://www.w3.org/2004/02/skos/core#Concept",
+    "component": {
+      "@id": "http://purl.org/linked-data/cube#component",
+      "@type": "@id"
+    },
+    "measure": {
+      "@id": "http://purl.org/linked-data/cube#measure",
+      "@type": "@id"
+    },
+    "SliceKey": "http://purl.org/linked-data/cube#SliceKey",
+    "Result": "sosa:Result",
+    "Compressibility": "http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility",
+    "ComponentSet": "http://purl.org/linked-data/cube#ComponentSet",
+    "MassPerTimePerArea": "http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerArea",
+    "Temperature": "http://purl.oclc.org/NET/ssnx/qu/dim#Temperature",
+    "homepage": "http://xmlns.com/foaf/0.1/homepage",
+    "Person": "http://xmlns.com/foaf/0.1/Person",
+    "Triangle": "http://www.opengis.net/ont/sf#Triangle",
+    "observationGroup": {
+      "@id": "http://purl.org/linked-data/cube#observationGroup",
+      "@type": "@id"
+    },
+    "EnergyFlux": "http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux",
+    "StressOrPressure": "http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure",
+    "Agent": "http://xmlns.com/foaf/0.1/Agent",
+    "creator": "dct:creator",
+    "Energy": "http://purl.oclc.org/NET/ssnx/qu/dim#Energy",
+    "foaf.name": "http://xmlns.com/foaf/0.1/name",
+    "Role": "https://schema.org/Role",
+    "hasSerialization": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasSerialization",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "SF_SamplingFeature.sampledFeature": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature",
+      "@type": "@id"
+    },
+    "rangeIncludes": "https://schema.org/rangeIncludes",
+    "location": {
+      "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#location",
+      "@type": "@id"
+    },
+    "ComponentSpecification": "http://purl.org/linked-data/cube#ComponentSpecification",
+    "Scheme": "http://www.w3.org/2004/02/skos/core#Scheme",
+    "rights": "dct:rights",
+    "SF_SamplingFeature": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
+    "DimensionProperty": "http://purl.org/linked-data/cube#DimensionProperty",
+    "Acceleration": "http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration",
+    "identifier": "dct:identifier",
+    "QuantityKind": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind",
+    "Distance": "http://purl.oclc.org/NET/ssnx/qu/dim#Distance",
+    "TIN": "http://www.opengis.net/ont/sf#TIN",
+    "SurfaceDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceDensity",
+    "isDefinedBy": "rdfs:isDefinedBy",
+    "wgs84.Point": "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+    "definition": "http://www.w3.org/2004/02/skos/core#definition",
+    "order": {
+      "@id": "http://purl.org/linked-data/cube#order",
+      "@type": "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "hasGeometry": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "@type": "@id"
+    },
+    "sfContains": {
+      "@id": "http://www.opengis.net/ont/geosparql#sfContains",
+      "@type": "@id"
+    },
+    "title": "dct:title",
+    "Density": "http://purl.oclc.org/NET/ssnx/qu/dim#Density",
+    "LinearRing": "http://www.opengis.net/ont/sf#LinearRing",
+    "MeasureProperty": "http://purl.org/linked-data/cube#MeasureProperty",
+    "PropertyKind": "http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind",
+    "SpatialObject": "http://www.opengis.net/ont/geosparql#SpatialObject",
+    "sliceStructure": {
+      "@id": "http://purl.org/linked-data/cube#sliceStructure",
+      "@type": "@id"
+    },
+    "SpecificEntropy": "http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropy",
+    "CodedProperty": "http://purl.org/linked-data/cube#CodedProperty",
+    "slice": {
+      "@id": "http://purl.org/linked-data/cube#slice",
+      "@type": "@id"
+    },
+    "date": "dct:date",
+    "seeAlso": "rdfs:seeAlso",
+    "ObservationGroup": "http://purl.org/linked-data/cube#ObservationGroup",
+    "DataSet": "http://purl.org/linked-data/cube#DataSet",
+    "comment": "rdfs:comment",
+    "PolyhedralSurface": "http://www.opengis.net/ont/sf#PolyhedralSurface",
+    "contributor": "dct:contributor",
+    "dimension": {
+      "@id": "http://purl.org/linked-data/cube#dimension",
+      "@type": "@id"
+    },
+    "RadianceExposure": "http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposure",
+    "VelocityOrSpeed": "http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed",
+    "GFI_DomainFeature": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
+    "observation": {
+      "@id": "http://purl.org/linked-data/cube#observation",
+      "@type": "@id"
+    },
+    "Dimensionless": "http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless",
+    "Power": "http://purl.oclc.org/NET/ssnx/qu/dim#Power",
+    "OM_Observation": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+    "prefLabel": "http://www.w3.org/2004/02/skos/core#prefLabel",
+    "Surface": "http://www.opengis.net/ont/sf#Surface",
+    "sliceKey": {
+      "@id": "http://purl.org/linked-data/cube#sliceKey",
+      "@type": "@id"
+    },
+    "inScheme": "http://www.w3.org/2004/02/skos/core#inScheme",
+    "dct.description": "dct:description",
+    "MultiCurve": "http://www.opengis.net/ont/sf#MultiCurve",
+    "DataStructureDefinition": "http://purl.org/linked-data/cube#DataStructureDefinition",
+    "qb.Observation": "http://purl.org/linked-data/cube#Observation",
+    "EnergyDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensity",
+    "componentProperty": {
+      "@id": "http://purl.org/linked-data/cube#componentProperty",
+      "@type": "@id"
+    },
+    "sf.Geometry": "http://www.opengis.net/ont/sf#Geometry",
+    "schema.Person": "https://schema.org/Person",
+    "ssn.Property": "ssn:Property",
+    "schema.name": "https://schema.org/name",
+    "Measure": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Measure",
+    "Quantity": "http://qudt.org/schema/qudt/Quantity",
+    "qudt.QuantityKind": "http://qudt.org/schema/qudt/QuantityKind",
+    "QuantityValue": "http://qudt.org/schema/qudt/QuantityValue",
+    "Unit": "http://qudt.org/schema/qudt/Unit",
+    "unit": {
+      "@id": "http://qudt.org/schema/qudt/unit",
+      "@type": "@id"
+    },
+    "quantityValue": {
+      "@id": "http://qudt.org/schema/qudt/quantityValue",
+      "@type": "@id"
+    },
+    "hasQuantityKind": {
+      "@id": "http://qudt.org/schema/qudt/hasQuantityKind",
+      "@type": "@id"
+    },
+    "numericValue": "http://qudt.org/schema/qudt/numericValue",
+    "Procedure": "sosa:Procedure",
+    "lat": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+    "long": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+    "alt": "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
+    "TemporalDuration": "owlTime:TemporalDuration",
+    "Thing": "http://www.w3.org/2002/07/owl#Thing",
+    "TemporalUnit": "owlTime:TemporalUnit",
+    "Instant": "owlTime:Instant",
+    "numericDuration": {
+      "@id": "owlTime:numericDuration",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "note": "http://www.w3.org/2004/02/skos/core#note",
+    "Interval": "owlTime:Interval",
+    "hasTime": {
+      "@id": "owlTime:hasTime",
+      "@type": "@id"
+    },
+    "hasEnd": {
+      "@id": "owlTime:hasEnd",
+      "@type": "@id"
+    },
+    "TemporalEntity": "owlTime:TemporalEntity",
+    "hasBeginning": {
+      "@id": "owlTime:hasBeginning",
+      "@type": "@id"
+    },
+    "deprecated": "http://www.w3.org/2002/07/owl#deprecated",
+    "Duration": "owlTime:Duration",
+    "editorialNote": "http://www.w3.org/2004/02/skos/core#editorialNote",
+    "inXSDDateTimeStamp": {
+      "@id": "owlTime:inXSDDateTimeStamp",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+    },
+    "inXSDDate": {
+      "@id": "owlTime:inXSDDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "unitType": {
+      "@id": "owlTime:unitType",
+      "@type": "@id"
     },
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
@@ -537,6 +1110,8 @@ Links to the schema:
     "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
+    "owlTime": "http://www.w3.org/2006/time#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
     "@version": 1.1
   }
 }

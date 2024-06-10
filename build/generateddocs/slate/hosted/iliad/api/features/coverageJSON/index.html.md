@@ -952,8 +952,8 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 [] a covjson:CoverageCollection ;
     hydra:member [ a covjson:Coverage ;
             covjson:domain [ a covjson:Domain ;
-                    covjson:axis [ covjson:dataType covjson:tuple ],
-                        [ ] ] ;
+                    covjson:axis [ ],
+                        [ covjson:dataType covjson:tuple ] ] ;
             covjson:range [ a covjson:NdArray ;
                     covjson:axisNames ( "composite" ) ;
                     covjson:dataType xsd:double ;
@@ -984,12 +984,12 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
             covjson:categoryEncoding [ ns1:_0 0 ;
                     ns1:_1 1 ;
                     ns1:_4 2 ] ] ;
-    covjson:referencing [ covjson:referenceSystem [ a inspiregloss:TemporalReferenceSystem ;
-                    covjson:calendar <http://www.opengis.net/def/uom/ISO-8601/0/Gregorian> ] ],
-        [ covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ],
-        [ covjson:referenceSystem [ a ignf:VerticalCRS ;
+    covjson:referencing [ covjson:referenceSystem [ a ignf:VerticalCRS ;
                     ignf:coordinateSystem [ covjson:coordinateSystemAxes ( [ ignf:axisDirection "down" ;
-                                        qudt:unit [ qudt:symbol "Pa" ] ] ) ] ] ] .
+                                        qudt:unit [ qudt:symbol "Pa" ] ] ) ] ] ],
+        [ covjson:referenceSystem [ a inspiregloss:TemporalReferenceSystem ;
+                    covjson:calendar <http://www.opengis.net/def/uom/ISO-8601/0/Gregorian> ] ],
+        [ covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] .
 
 
 ```

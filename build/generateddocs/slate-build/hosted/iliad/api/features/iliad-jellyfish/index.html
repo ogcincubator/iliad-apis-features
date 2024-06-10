@@ -1303,9 +1303,282 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
       </span><span class="p">},</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:seeAlso"</span><span class="w">
     </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"time"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:hasTime"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2001/XMLSchema#date"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:hasTime"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2001/XMLSchema#dateTime"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:hasTime"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:time"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"coordRefSys"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"place"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:spatial"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Polyhedron"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Polyhedron"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"MultiPolyhedron"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:MultiPolyhedron"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Prism"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:Prism"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:prismBase"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"lower"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:prismLower"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"upper"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:prismUpper"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"MultiPrism"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:MultiPrism"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"prisms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:prisms"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:coordinates"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"geometries"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geojson:geometry"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"Attachable"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#Attachable"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"affiliation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://schema.org/affiliation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Line"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/sf#Line"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"member"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://xmlns.com/foaf/0.1/member"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"versionInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2002/07/owl#versionInfo"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"example"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2004/02/skos/core#example"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Slice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#Slice"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Concentration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#Concentration"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dataSet"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#dataSet"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"componentAttachment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#componentAttachment"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"concept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#concept"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"MultiSurface"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/sf#MultiSurface"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Organization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://schema.org/Organization"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"GFI_Feature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"AttributeProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#AttributeProperty"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"asWKT"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/geosparql#asWKT"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/geosparql#wktLiteral"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"asGeoJSON"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/geosparql#asGeoJSON"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/geosparql#geoJSONLiteral"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"RotationalSpeed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#RotationalSpeed"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ComponentProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#ComponentProperty"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:Class"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Geometry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/geosparql#Geometry"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"depiction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://xmlns.com/foaf/0.1/depiction"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Curve"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/sf#Curve"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"maker"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://xmlns.com/foaf/0.1/maker"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sfWithin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/geosparql#sfWithin"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"ThermalConductivity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"domainIncludes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://schema.org/domainIncludes"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"SpatialObjectCollection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/geosparql#SpatialObjectCollection"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Concept"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2004/02/skos/core#Concept"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"component"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#component"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"measure"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#measure"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"SliceKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#SliceKey"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Result"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Compressibility"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ComponentSet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#ComponentSet"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"MassPerTimePerArea"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerArea"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Temperature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#Temperature"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"homepage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://xmlns.com/foaf/0.1/homepage"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Person"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://xmlns.com/foaf/0.1/Person"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Triangle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/sf#Triangle"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"observationGroup"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#observationGroup"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"EnergyFlux"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"StressOrPressure"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Agent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://xmlns.com/foaf/0.1/Agent"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"creator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:creator"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Energy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#Energy"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"foaf.name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://xmlns.com/foaf/0.1/name"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://schema.org/Role"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasSerialization"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/geosparql#hasSerialization"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2000/01/rdf-schema#Literal"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"SF_SamplingFeature.sampledFeature"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"rangeIncludes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://schema.org/rangeIncludes"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2003/01/geo/wgs84_pos#location"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"ComponentSpecification"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#ComponentSpecification"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Scheme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2004/02/skos/core#Scheme"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rights"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:rights"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"SF_SamplingFeature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"DimensionProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#DimensionProperty"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Acceleration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"QuantityKind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Distance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#Distance"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"TIN"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/sf#TIN"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"SurfaceDensity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceDensity"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"isDefinedBy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:isDefinedBy"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"wgs84.Point"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2003/01/geo/wgs84_pos#Point"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2004/02/skos/core#definition"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"order"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#order"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2001/XMLSchema#int"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"hasGeometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/geosparql#hasGeometry"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"sfContains"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/geosparql#sfContains"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:title"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Density"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#Density"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"LinearRing"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/sf#LinearRing"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"MeasureProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#MeasureProperty"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"PropertyKind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"SpatialObject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/geosparql#SpatialObject"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sliceStructure"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#sliceStructure"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"SpecificEntropy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropy"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"CodedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#CodedProperty"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"slice"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#slice"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:date"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"seeAlso"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:seeAlso"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ObservationGroup"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#ObservationGroup"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"DataSet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#DataSet"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:comment"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"PolyhedralSurface"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/sf#PolyhedralSurface"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"contributor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:contributor"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dimension"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#dimension"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"RadianceExposure"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposure"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"VelocityOrSpeed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"GFI_DomainFeature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"observation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#observation"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"Dimensionless"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Power"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#Power"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"OM_Observation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"prefLabel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2004/02/skos/core#prefLabel"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Surface"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/sf#Surface"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sliceKey"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#sliceKey"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"inScheme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2004/02/skos/core#inScheme"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dct.description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:description"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"MultiCurve"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/sf#MultiCurve"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"DataStructureDefinition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#DataStructureDefinition"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"qb.Observation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#Observation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"EnergyDensity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensity"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"componentProperty"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#componentProperty"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"sf.Geometry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/sf#Geometry"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"schema.Person"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://schema.org/Person"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ssn.Property"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:Property"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"schema.name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://schema.org/name"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Measure"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Measure"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Quantity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://qudt.org/schema/qudt/Quantity"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"qudt.QuantityKind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://qudt.org/schema/qudt/QuantityKind"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"QuantityValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://qudt.org/schema/qudt/QuantityValue"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://qudt.org/schema/qudt/Unit"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"unit"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://qudt.org/schema/qudt/unit"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"quantityValue"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://qudt.org/schema/qudt/quantityValue"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"hasQuantityKind"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://qudt.org/schema/qudt/hasQuantityKind"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"numericValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://qudt.org/schema/qudt/numericValue"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Procedure"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sosa:Procedure"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"lat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2003/01/geo/wgs84_pos#lat"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"long"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2003/01/geo/wgs84_pos#long"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"alt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2003/01/geo/wgs84_pos#alt"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"TemporalDuration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:TemporalDuration"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Thing"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2002/07/owl#Thing"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"TemporalUnit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:TemporalUnit"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Instant"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:Instant"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"numericDuration"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:numericDuration"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2001/XMLSchema#decimal"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2004/02/skos/core#note"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:Interval"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasTime"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:hasTime"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"hasEnd"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:hasEnd"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"TemporalEntity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:TemporalEntity"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasBeginning"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:hasBeginning"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"deprecated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2002/07/owl#deprecated"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"Duration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:Duration"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"editorialNote"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2004/02/skos/core#editorialNote"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"inXSDDateTimeStamp"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:inXSDDateTimeStamp"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2001/XMLSchema#dateTimeStamp"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"inXSDDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:inXSDDate"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2001/XMLSchema#date"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"unitType"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owlTime:unitType"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"sosa"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"ssn-system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:systems/"</span><span class="p">,</span><span class="w">
@@ -1317,6 +1590,8 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
     </span><span class="nl">"geojson"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://purl.org/geojson/vocab#"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"oa"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/oa#"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"dct"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/dc/terms/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"owlTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2006/time#"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"xsd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2001/XMLSchema#"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"@version"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">

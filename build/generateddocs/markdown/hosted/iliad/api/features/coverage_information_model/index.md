@@ -22,9 +22,6 @@ Coverages can be encoded in any suitable format (such as GML, JSON, GeoTIFF, or 
 - a schema for the coverage, domainset, rangeset and rangetype
 - a JSON-LD context for this result schema
 
-## Future work
-This schema is to be reused in the coverageJSON building block.
-
 ## Examples
 
 ### JSON encoded coverage from https://docs.ogc.org/is/09-146r6/09-146r6.html
