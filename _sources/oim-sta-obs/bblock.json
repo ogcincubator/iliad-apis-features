@@ -1,5 +1,5 @@
 {
-  "name": "OIM Observations",
+  "name": "OIM STA Observations",
   "abstract": "Defines SensorThings API Observations to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model.",
   "status": "under-development",
   "dateTimeAddition": "2023-06-05T00:00:00Z",

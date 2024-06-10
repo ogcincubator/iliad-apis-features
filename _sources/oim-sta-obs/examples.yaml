@@ -1,4 +1,5 @@
-- title: Oceans Information Model examples
-  content: |-
-    TBD - see specific sub-profile for examples.
-
+- title: Coverage JSON Coverage representing snapshot series of Grid with LD
+  base-uri: http://w3id.org/ogcincubator/coverageJSON/
+  snippets:
+    - language: json
+      ref: examples/Observation.json
