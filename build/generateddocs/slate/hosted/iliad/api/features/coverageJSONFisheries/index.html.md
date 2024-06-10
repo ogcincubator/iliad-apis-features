@@ -838,10 +838,10 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
             covjson:axis [ covjson:num 13 ;
                     covjson:start -1.496301e+01 ;
                     covjson:stop -1.451857e+01 ],
-                [ ],
                 [ covjson:num 23 ;
                     covjson:start 4.60003e+01 ;
-                    covjson:stop 4.648921e+01 ] ;
+                    covjson:stop 4.648921e+01 ],
+                [ ] ;
             covjson:domainType covjsondt:Grid ;
             covjson:referencing [ covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/4326> ] ] ;
     covjson:parameter [ a covjson:Parameter ;

@@ -163,11 +163,11 @@ Coverages can be encoded in any suitable format (such as GML, JSON, GeoTIFF, or 
     cis:domainSet [ a cis:DomainSetType ;
             cis:generalGrid [ a cis:GeneralGridCoverageType ;
                     cis:axis [ a cis:IndexAxisType ;
-                            cis:axisLabel "i" ;
+                            cis:axisLabel "j" ;
                             cis:lowerBound 0 ;
                             cis:upperBound 2 ],
                         [ a cis:IndexAxisType ;
-                            cis:axisLabel "j" ;
+                            cis:axisLabel "i" ;
                             cis:lowerBound 0 ;
                             cis:upperBound 2 ] ;
                     cis:axisLabels ( "i" "j" ) ;
@@ -323,11 +323,11 @@ Coverages can be encoded in any suitable format (such as GML, JSON, GeoTIFF, or 
     cis:domainSet [ a cis:DomainSetType ;
             cis:generalGrid [ a cis:GeneralGridCoverageType ;
                     cis:axis [ a cis:IndexAxisType ;
-                            cis:axisLabel "j" ;
+                            cis:axisLabel "i" ;
                             cis:lowerBound 0 ;
                             cis:upperBound 2 ],
                         [ a cis:IndexAxisType ;
-                            cis:axisLabel "i" ;
+                            cis:axisLabel "j" ;
                             cis:lowerBound 0 ;
                             cis:upperBound 2 ] ;
                     cis:axisLabels ( "i" "j" ) ;

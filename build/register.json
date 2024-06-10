@@ -2,7 +2,7 @@
   "name": "ILIAD API Profiles",
   "abstract": "(Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability.",
   "description": "Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. \n\nThus, a pilot project to monitor Jellyfish swarms using Citizen Science will reuse common patterns for Citizen Science observations, which in turn we reuse a common pattern for observations, using an underlying component of the OIM - the OGC Observations model (SOSA ontology). \n",
-  "modified": "2024-06-10T11:37:23.475108",
+  "modified": "2024-06-10T11:43:44.939195",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"86d544ee272c5495ae35236b0871ada235e29d6e",
@@ -145,7 +145,7 @@
     },
     {
       "itemIdentifier": "ogc.hosted.iliad.api.features.oim-sta-obs",
-      "name": "OIM Observations",
+      "name": "OIM STA Observations",
       "abstract": "Defines SensorThings API Observations to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model.",
       "status": "under-development",
       "dateTimeAddition": "2023-06-05T00:00:00Z",
@@ -178,6 +178,7 @@
       "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/",
       "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/oim-sta-obs/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
@@ -303,10 +304,10 @@
         ]
       },
       "dependsOn": [
-        "ogc.sosa.properties.observation",
-        "ogc.sosa.features.observation",
         "ogc.sosa.features.observationCollection",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.sosa.features.observation",
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.sosa.properties.observation"
       ],
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
       "schema": {
@@ -437,8 +438,8 @@
         ]
       },
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.hosted.iliad.api.features.oim-obs-cs"
+        "ogc.hosted.iliad.api.features.oim-obs-cs",
+        "ogc.ogc-utils.iri-or-curie"
       ],
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld",
       "schema": {
