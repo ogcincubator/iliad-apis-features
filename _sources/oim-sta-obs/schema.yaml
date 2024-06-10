@@ -1,0 +1,4 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+title: A OIM aligned STA Observtion schema
+description: 'Component of OGC STA Observation. no particular added constraints are added'
+$ref: https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.json

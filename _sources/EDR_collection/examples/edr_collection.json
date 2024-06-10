@@ -1,0 +1,173 @@
+{
+    "id":"swan2-edr",
+    "title":"EDR test with SWAN from Sea-Gust",
+    "description":"SST example netCDF data via EDR API",
+    "keywords":[
+        "edr",
+        "swan",
+        "aquaculture",
+        "template"
+    ],
+    "links":[
+        {
+            "type":"text/html",
+            "rel":"canonical",
+            "title":"base url",
+            "href":"http://localhost:5003/swan-edr",
+            "hreflang":"en-US"
+        },
+        {
+            "type":"app/json",
+            "rel":"canonical",
+            "title":"example json query significant_wave_height by 2D bbox (11.25,36.3,11.26,36.31) coordinates and time slice 2023-07-16T02:00Z - 2023-07-16T02:00Z",
+            "href":"http://localhost:5003/collections/swan2-edr/cube?bbox=11.25,36.3,11.26,36.31&datetime=2023-07-16T02:00Z/2023-07-16T02:00Z&f=json",
+            "hreflang":"en-US"
+        },
+        {
+            "type":"text/html",
+            "rel":"canonical",
+            "title":"example html query significant_wave_height by 2D bbox (10.4,35.5,11.26,36.31) coordinates and time slice 2023-07-16T02:00Z - 2023-07-16T02:00Z",
+            "href":"http://localhost:5003/collections/swan2-edr/cube?bbox=10.4,35.5,11.26,36.31&datetime=2023-07-16T02:00Z/2023-07-16T02:00Z&parameter-name=hs",
+            "hreflang":"en-US"
+        },
+        {
+            "type":"text/html",
+            "rel":"canonical",
+            "title":"example html query all properties by 2D bbox (10.4,35.5,11.26,36.31) coordinates and time slice 2023-07-16T02:00Z - 2023-07-16T02:00Z",
+            "href":"http://localhost:5003/collections/swan2-edr/cube?bbox=10.4,35.5,11.26,36.31&datetime=2023-07-16T02:00Z/2023-07-16T02:00Z",
+            "hreflang":"en-US"
+        },
+        {
+            "type":"text/html",
+            "rel":"canonical",
+            "title":"example html query all prameters by POINT(11.0 36.0) coordinates and time slice 2023-07-16T02:00Z - 2023-07-16T02:00Z",
+            "href":"http://localhost:5003/collections/swan2-edr/position?coords=POINT(11.0 36.0)&datetime=2023-07-16T02:00Z&parameter-name=hs",
+            "hreflang":"en-US"
+        },
+        {
+            "type":"text/html",
+            "rel":"canonical",
+            "title":"example html query significant_wave_height by POINT(11.0 36.0) coordinates and time slice 2023-07-16T02:00Z - 2023-07-16T02:00Z",
+            "href":"http://localhost:5003/collections/swan2-edr/position?coords=POINT(11.0 36.0)&datetime=2023-07-16T02:00Z&parameter-name=hs",
+            "hreflang":"en-US"
+        },
+        {
+            "type":"app/json",
+            "rel":"canonical",
+            "title":"example json query significant_wave_height by POINT(11.0 36.0) coordinates and time slice 2023-07-16T02:00Z - 2023-07-16T02:00Z",
+            "href":"http://localhost:5003/collections/swan2-edr/position?coords=POINT(11.0 36.0)&datetime=2023-07-16T02:00Z&f=json&parameter-name=hs",
+            "hreflang":"en-US"
+        },
+        {
+            "type":"application/json",
+            "rel":"root",
+            "title":"The landing page of this server as JSON",
+            "href":"http://localhost:5002?f=json"
+        },
+        {
+            "type":"text/html",
+            "rel":"root",
+            "title":"The landing page of this server as HTML",
+            "href":"http://localhost:5002?f=html"
+        },
+        {
+            "type":"application/json",
+            "rel":"self",
+            "title":"This document as JSON",
+            "href":"http://localhost:5002/collections/swan2-edr?f=json"
+        },
+        {
+            "type":"application/ld+json",
+            "rel":"alternate",
+            "title":"This document as RDF (JSON-LD)",
+            "href":"http://localhost:5002/collections/swan2-edr?f=jsonld"
+        },
+        {
+            "type":"text/html",
+            "rel":"alternate",
+            "title":"This document as HTML",
+            "href":"http://localhost:5002/collections/swan2-edr?f=html"
+        },
+        {
+            "type":"application/json",
+            "rel":"data",
+            "title":"position query for this collection as JSON",
+            "href":"http://localhost:5002/collections/swan2-edr/position?f=json"
+        },
+        {
+            "type":"text/html",
+            "rel":"data",
+            "title":"position query for this collection as HTML",
+            "href":"http://localhost:5002/collections/swan2-edr/position?f=html"
+        },
+        {
+            "type":"application/json",
+            "rel":"data",
+            "title":"cube query for this collection as JSON",
+            "href":"http://localhost:5002/collections/swan2-edr/cube?f=json"
+        },
+        {
+            "type":"text/html",
+            "rel":"data",
+            "title":"cube query for this collection as HTML",
+            "href":"http://localhost:5002/collections/swan2-edr/cube?f=html"
+        }
+    ],
+    "extent":{
+        "spatial":{
+            "bbox":[
+                [
+                    10.4,
+                    35.5,
+                    11.26,
+                    36.31
+                ]
+            ],
+            "crs":"http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "parameter_names":{
+        "hs":{
+            "id":"hs",
+            "type":"Parameter",
+            "name":"sea surface wave significant height",
+            "unit":{
+                "label":{
+                    "en":"sea surface wave significant height"
+                },
+                "symbol":{
+                    "value":"m",
+                    "type":"http://www.opengis.net/def/uom/UCUM/"
+                }
+            }
+        },
+        "eastward_wave_direction_unit_vector":{
+            "id":"eastward_wave_direction_unit_vector",
+            "type":"Parameter",
+            "name":"eastward wave direction unit vector",
+            "unit":{
+                "label":{
+                    "en":"eastward wave direction unit vector"
+                },
+                "symbol":{
+                    "value":"-",
+                    "type":"http://www.opengis.net/def/uom/UCUM/"
+                }
+            }
+        },
+        "northward_wave_direction_unit_vector":{
+            "id":"northward_wave_direction_unit_vector",
+            "type":"Parameter",
+            "name":"northward wave direction unit vector",
+            "unit":{
+                "label":{
+                    "en":"northward wave direction unit vector"
+                },
+                "symbol":{
+                    "value":"-",
+                    "type":"http://www.opengis.net/def/uom/UCUM/"
+                }
+            }
+        }
+    }
+}

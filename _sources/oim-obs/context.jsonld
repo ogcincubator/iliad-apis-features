@@ -1,5 +1,6 @@
 {
-  "@context": {
+  "@context": ["https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/main/jsonld/crossDomain-context.jsonld",
+      {
     "sosa": "http://www.w3.org/ns/sosa/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "iliad": "https://w3id.org/iliad/property/",
