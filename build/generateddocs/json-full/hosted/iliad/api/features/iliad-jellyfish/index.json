@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2024-06-10",
+  "dateOfLastChange": "2024-06-17",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -37,8 +37,8 @@
     ]
   },
   "dependsOn": [
-    "ogc.hosted.iliad.api.features.oim-obs-cs",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.ogc-utils.iri-or-curie",
+    "ogc.hosted.iliad.api.features.oim-obs-cs"
   ],
   "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld",
   "schema": {

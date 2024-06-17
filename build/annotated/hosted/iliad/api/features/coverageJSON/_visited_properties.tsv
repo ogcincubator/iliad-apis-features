@@ -1,182 +1,182 @@
 path	@id
-/type	
-/domainType	
-/axes	
-/axes/.+/dataType	
-/axes/.+/values	
-/axes/.+/coordinates	
-/axes/.+/bounds	
-/axes/.+/start	
-/axes/.+/stop	
-/axes/.+/num	
-/referencing	
-/referencing/coordinates	
-/referencing/system	
-/referencing/system/type	
-/referencing/system/calendar	
-/referencing/system/timeScale	
-/referencing/system/id	
-/referencing/system/label	
-/referencing/system/description	
-/referencing/system/targetConcept	
-/referencing/system/targetConcept/id	
-/referencing/system/targetConcept/label	
-/referencing/system/targetConcept/description	
-/referencing/system/identifiers	
-/referencing/system/identifiers/.+/id	
-/referencing/system/identifiers/.+/label	
-/referencing/system/identifiers/.+/description	
-/dataType	
-/shape	
-/axisNames	
-/values	
-/tileSets	
-/tileSets/tileShape	
-/tileSets/urlTemplate	
-/id	
-/domain	
-/domain/type	
-/domain/domainType	
-/domain/axes	
-/domain/axes/.+/dataType	
-/domain/axes/.+/values	
-/domain/axes/.+/coordinates	
-/domain/axes/.+/bounds	
-/domain/axes/.+/start	
-/domain/axes/.+/stop	
-/domain/axes/.+/num	
-/domain/referencing	
-/domain/referencing/coordinates	
-/domain/referencing/system	
-/domain/referencing/system/type	
-/domain/referencing/system/calendar	
-/domain/referencing/system/timeScale	
-/domain/referencing/system/id	
-/domain/referencing/system/label	
-/domain/referencing/system/description	
-/domain/referencing/system/targetConcept	
-/domain/referencing/system/targetConcept/id	
-/domain/referencing/system/targetConcept/label	
-/domain/referencing/system/targetConcept/description	
-/domain/referencing/system/identifiers	
-/domain/referencing/system/identifiers/.+/id	
-/domain/referencing/system/identifiers/.+/label	
-/domain/referencing/system/identifiers/.+/description	
-/parameters	
-/parameters/.+/id	
-/parameters/.+/type	
-/parameters/.+/description	
-/parameters/.+/observedProperty	
-/parameters/.+/observedProperty/id	
-/parameters/.+/observedProperty/label	
-/parameters/.+/observedProperty/description	
+/type	@type
+/domainType	https://covjson.org/def/core#domainType
+/axes	https://covjson.org/def/core#axis
+/axes/.+/dataType	https://covjson.org/def/core#dataType
+/axes/.+/values	https://covjson.org/def/core#values
+/axes/.+/coordinates	https://covjson.org/def/core#coordinates
+/axes/.+/bounds	https://covjson.org/def/core#bounds
+/axes/.+/start	https://covjson.org/def/core#start
+/axes/.+/stop	https://covjson.org/def/core#stop
+/axes/.+/num	https://covjson.org/def/core#num
+/referencing	https://covjson.org/def/core#referencing
+/referencing/coordinates	https://covjson.org/def/core#coordinates
+/referencing/system	https://covjson.org/def/core#referenceSystem
+/referencing/system/type	@type
+/referencing/system/calendar	https://covjson.org/def/core#calendar
+/referencing/system/timeScale	https://covjson.org/def/core#timeScale
+/referencing/system/id	@id
+/referencing/system/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/referencing/system/description	http://purl.org/dc/terms/description
+/referencing/system/targetConcept	https://covjson.org/def/core#targetConcept
+/referencing/system/targetConcept/id	@id
+/referencing/system/targetConcept/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/referencing/system/targetConcept/description	http://purl.org/dc/terms/description
+/referencing/system/identifiers	https://covjson.org/def/core#identifier
+/referencing/system/identifiers/.+/id	@id
+/referencing/system/identifiers/.+/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/referencing/system/identifiers/.+/description	http://purl.org/dc/terms/description
+/dataType	https://covjson.org/def/core#dataType
+/shape	https://covjson.org/def/core#shape
+/axisNames	https://covjson.org/def/core#axisNames
+/values	https://covjson.org/def/core#values
+/tileSets	https://covjson.org/def/core#tileSet
+/tileSets/tileShape	https://covjson.org/def/core#tileShape
+/tileSets/urlTemplate	https://covjson.org/def/core#urlTemplate
+/id	@id
+/domain	https://covjson.org/def/core#domain
+/domain/type	@type
+/domain/domainType	https://covjson.org/def/core#domainType
+/domain/axes	https://covjson.org/def/core#axis
+/domain/axes/.+/dataType	https://covjson.org/def/core#dataType
+/domain/axes/.+/values	https://covjson.org/def/core#values
+/domain/axes/.+/coordinates	https://covjson.org/def/core#coordinates
+/domain/axes/.+/bounds	https://covjson.org/def/core#bounds
+/domain/axes/.+/start	https://covjson.org/def/core#start
+/domain/axes/.+/stop	https://covjson.org/def/core#stop
+/domain/axes/.+/num	https://covjson.org/def/core#num
+/domain/referencing	https://covjson.org/def/core#referencing
+/domain/referencing/coordinates	https://covjson.org/def/core#coordinates
+/domain/referencing/system	https://covjson.org/def/core#referenceSystem
+/domain/referencing/system/type	@type
+/domain/referencing/system/calendar	https://covjson.org/def/core#calendar
+/domain/referencing/system/timeScale	https://covjson.org/def/core#timeScale
+/domain/referencing/system/id	@id
+/domain/referencing/system/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/domain/referencing/system/description	http://purl.org/dc/terms/description
+/domain/referencing/system/targetConcept	https://covjson.org/def/core#targetConcept
+/domain/referencing/system/targetConcept/id	@id
+/domain/referencing/system/targetConcept/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/domain/referencing/system/targetConcept/description	http://purl.org/dc/terms/description
+/domain/referencing/system/identifiers	https://covjson.org/def/core#identifier
+/domain/referencing/system/identifiers/.+/id	@id
+/domain/referencing/system/identifiers/.+/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/domain/referencing/system/identifiers/.+/description	http://purl.org/dc/terms/description
+/parameters	https://covjson.org/def/core#parameter
+/parameters/.+/id	@id
+/parameters/.+/type	@type
+/parameters/.+/description	http://purl.org/dc/terms/description
+/parameters/.+/observedProperty	http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#observedProperty
+/parameters/.+/observedProperty/id	@id
+/parameters/.+/observedProperty/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/parameters/.+/observedProperty/description	http://purl.org/dc/terms/description
 /parameters/.+/observedProperty/categories	
-/parameters/.+/observedProperty/categories/id	
-/parameters/.+/observedProperty/categories/label	
-/parameters/.+/observedProperty/categories/description	
-/parameters/.+/unit	
-/parameters/.+/unit/id	
-/parameters/.+/unit/label	
-/parameters/.+/unit/symbol	
-/parameters/.+/unit/symbol/type	
-/parameters/.+/unit/symbol/value	
-/parameters/.+/categoryEncoding	
+/parameters/.+/observedProperty/categories/id	@id
+/parameters/.+/observedProperty/categories/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/parameters/.+/observedProperty/categories/description	http://purl.org/dc/terms/description
+/parameters/.+/unit	http://qudt.org/schema/qudt#unit
+/parameters/.+/unit/id	@id
+/parameters/.+/unit/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/parameters/.+/unit/symbol	http://qudt.org/schema/qudt#symbol
+/parameters/.+/unit/symbol/type	@type
+/parameters/.+/unit/symbol/value	@value
+/parameters/.+/categoryEncoding	https://covjson.org/def/core#categoryEncoding
 /parameterGroups	
-/parameterGroups/type	
-/parameterGroups/id	
-/parameterGroups/label	
-/parameterGroups/description	
-/parameterGroups/observedProperty	
-/parameterGroups/observedProperty/id	
-/parameterGroups/observedProperty/label	
-/parameterGroups/observedProperty/description	
+/parameterGroups/type	@type
+/parameterGroups/id	@id
+/parameterGroups/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/parameterGroups/description	http://purl.org/dc/terms/description
+/parameterGroups/observedProperty	http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#observedProperty
+/parameterGroups/observedProperty/id	@id
+/parameterGroups/observedProperty/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/parameterGroups/observedProperty/description	http://purl.org/dc/terms/description
 /parameterGroups/observedProperty/categories	
-/parameterGroups/observedProperty/categories/id	
-/parameterGroups/observedProperty/categories/label	
-/parameterGroups/observedProperty/categories/description	
-/parameterGroups/members	
-/ranges	
-/ranges/.+/type	
-/ranges/.+/dataType	
-/ranges/.+/shape	
-/ranges/.+/axisNames	
-/ranges/.+/values	
-/ranges/.+/tileSets	
-/ranges/.+/tileSets/tileShape	
-/ranges/.+/tileSets/urlTemplate	
+/parameterGroups/observedProperty/categories/id	@id
+/parameterGroups/observedProperty/categories/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/parameterGroups/observedProperty/categories/description	http://purl.org/dc/terms/description
+/parameterGroups/members	https://covjson.org/def/core#member
+/ranges	https://covjson.org/def/core#range
+/ranges/.+/type	@type
+/ranges/.+/dataType	https://covjson.org/def/core#dataType
+/ranges/.+/shape	https://covjson.org/def/core#shape
+/ranges/.+/axisNames	https://covjson.org/def/core#axisNames
+/ranges/.+/values	https://covjson.org/def/core#values
+/ranges/.+/tileSets	https://covjson.org/def/core#tileSet
+/ranges/.+/tileSets/tileShape	https://covjson.org/def/core#tileShape
+/ranges/.+/tileSets/urlTemplate	https://covjson.org/def/core#urlTemplate
 /rangeAlternates	
-/coverages	
-/coverages/type	
-/coverages/id	
-/coverages/domainType	
-/coverages/domain	
-/coverages/domain/type	
-/coverages/domain/domainType	
-/coverages/domain/axes	
-/coverages/domain/axes/.+/dataType	
-/coverages/domain/axes/.+/values	
-/coverages/domain/axes/.+/coordinates	
-/coverages/domain/axes/.+/bounds	
-/coverages/domain/axes/.+/start	
-/coverages/domain/axes/.+/stop	
-/coverages/domain/axes/.+/num	
-/coverages/domain/referencing	
-/coverages/domain/referencing/coordinates	
-/coverages/domain/referencing/system	
-/coverages/domain/referencing/system/type	
-/coverages/domain/referencing/system/calendar	
-/coverages/domain/referencing/system/timeScale	
-/coverages/domain/referencing/system/id	
-/coverages/domain/referencing/system/label	
-/coverages/domain/referencing/system/description	
-/coverages/domain/referencing/system/targetConcept	
-/coverages/domain/referencing/system/targetConcept/id	
-/coverages/domain/referencing/system/targetConcept/label	
-/coverages/domain/referencing/system/targetConcept/description	
-/coverages/domain/referencing/system/identifiers	
-/coverages/domain/referencing/system/identifiers/.+/id	
-/coverages/domain/referencing/system/identifiers/.+/label	
-/coverages/domain/referencing/system/identifiers/.+/description	
-/coverages/parameters	
-/coverages/parameters/.+/id	
-/coverages/parameters/.+/type	
-/coverages/parameters/.+/description	
-/coverages/parameters/.+/observedProperty	
-/coverages/parameters/.+/observedProperty/id	
-/coverages/parameters/.+/observedProperty/label	
-/coverages/parameters/.+/observedProperty/description	
+/coverages	http://www.w3.org/ns/hydra/core#member
+/coverages/type	@type
+/coverages/id	@id
+/coverages/domainType	https://covjson.org/def/core#domainType
+/coverages/domain	https://covjson.org/def/core#domain
+/coverages/domain/type	@type
+/coverages/domain/domainType	https://covjson.org/def/core#domainType
+/coverages/domain/axes	https://covjson.org/def/core#axis
+/coverages/domain/axes/.+/dataType	https://covjson.org/def/core#dataType
+/coverages/domain/axes/.+/values	https://covjson.org/def/core#values
+/coverages/domain/axes/.+/coordinates	https://covjson.org/def/core#coordinates
+/coverages/domain/axes/.+/bounds	https://covjson.org/def/core#bounds
+/coverages/domain/axes/.+/start	https://covjson.org/def/core#start
+/coverages/domain/axes/.+/stop	https://covjson.org/def/core#stop
+/coverages/domain/axes/.+/num	https://covjson.org/def/core#num
+/coverages/domain/referencing	https://covjson.org/def/core#referencing
+/coverages/domain/referencing/coordinates	https://covjson.org/def/core#coordinates
+/coverages/domain/referencing/system	https://covjson.org/def/core#referenceSystem
+/coverages/domain/referencing/system/type	@type
+/coverages/domain/referencing/system/calendar	https://covjson.org/def/core#calendar
+/coverages/domain/referencing/system/timeScale	https://covjson.org/def/core#timeScale
+/coverages/domain/referencing/system/id	@id
+/coverages/domain/referencing/system/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/coverages/domain/referencing/system/description	http://purl.org/dc/terms/description
+/coverages/domain/referencing/system/targetConcept	https://covjson.org/def/core#targetConcept
+/coverages/domain/referencing/system/targetConcept/id	@id
+/coverages/domain/referencing/system/targetConcept/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/coverages/domain/referencing/system/targetConcept/description	http://purl.org/dc/terms/description
+/coverages/domain/referencing/system/identifiers	https://covjson.org/def/core#identifier
+/coverages/domain/referencing/system/identifiers/.+/id	@id
+/coverages/domain/referencing/system/identifiers/.+/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/coverages/domain/referencing/system/identifiers/.+/description	http://purl.org/dc/terms/description
+/coverages/parameters	https://covjson.org/def/core#parameter
+/coverages/parameters/.+/id	@id
+/coverages/parameters/.+/type	@type
+/coverages/parameters/.+/description	http://purl.org/dc/terms/description
+/coverages/parameters/.+/observedProperty	http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#observedProperty
+/coverages/parameters/.+/observedProperty/id	@id
+/coverages/parameters/.+/observedProperty/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/coverages/parameters/.+/observedProperty/description	http://purl.org/dc/terms/description
 /coverages/parameters/.+/observedProperty/categories	
-/coverages/parameters/.+/observedProperty/categories/id	
-/coverages/parameters/.+/observedProperty/categories/label	
-/coverages/parameters/.+/observedProperty/categories/description	
-/coverages/parameters/.+/unit	
-/coverages/parameters/.+/unit/id	
-/coverages/parameters/.+/unit/label	
-/coverages/parameters/.+/unit/symbol	
-/coverages/parameters/.+/unit/symbol/type	
-/coverages/parameters/.+/unit/symbol/value	
-/coverages/parameters/.+/categoryEncoding	
+/coverages/parameters/.+/observedProperty/categories/id	@id
+/coverages/parameters/.+/observedProperty/categories/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/coverages/parameters/.+/observedProperty/categories/description	http://purl.org/dc/terms/description
+/coverages/parameters/.+/unit	http://qudt.org/schema/qudt#unit
+/coverages/parameters/.+/unit/id	@id
+/coverages/parameters/.+/unit/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/coverages/parameters/.+/unit/symbol	http://qudt.org/schema/qudt#symbol
+/coverages/parameters/.+/unit/symbol/type	@type
+/coverages/parameters/.+/unit/symbol/value	@value
+/coverages/parameters/.+/categoryEncoding	https://covjson.org/def/core#categoryEncoding
 /coverages/parameterGroups	
-/coverages/parameterGroups/type	
-/coverages/parameterGroups/id	
-/coverages/parameterGroups/label	
-/coverages/parameterGroups/description	
-/coverages/parameterGroups/observedProperty	
-/coverages/parameterGroups/observedProperty/id	
-/coverages/parameterGroups/observedProperty/label	
-/coverages/parameterGroups/observedProperty/description	
+/coverages/parameterGroups/type	@type
+/coverages/parameterGroups/id	@id
+/coverages/parameterGroups/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/coverages/parameterGroups/description	http://purl.org/dc/terms/description
+/coverages/parameterGroups/observedProperty	http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#observedProperty
+/coverages/parameterGroups/observedProperty/id	@id
+/coverages/parameterGroups/observedProperty/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/coverages/parameterGroups/observedProperty/description	http://purl.org/dc/terms/description
 /coverages/parameterGroups/observedProperty/categories	
-/coverages/parameterGroups/observedProperty/categories/id	
-/coverages/parameterGroups/observedProperty/categories/label	
-/coverages/parameterGroups/observedProperty/categories/description	
-/coverages/parameterGroups/members	
-/coverages/ranges	
-/coverages/ranges/.+/type	
-/coverages/ranges/.+/dataType	
-/coverages/ranges/.+/shape	
-/coverages/ranges/.+/axisNames	
-/coverages/ranges/.+/values	
-/coverages/ranges/.+/tileSets	
-/coverages/ranges/.+/tileSets/tileShape	
-/coverages/ranges/.+/tileSets/urlTemplate	
+/coverages/parameterGroups/observedProperty/categories/id	@id
+/coverages/parameterGroups/observedProperty/categories/label	http://www.w3.org/2004/02/skos/core#prefLabel
+/coverages/parameterGroups/observedProperty/categories/description	http://purl.org/dc/terms/description
+/coverages/parameterGroups/members	https://covjson.org/def/core#member
+/coverages/ranges	https://covjson.org/def/core#range
+/coverages/ranges/.+/type	@type
+/coverages/ranges/.+/dataType	https://covjson.org/def/core#dataType
+/coverages/ranges/.+/shape	https://covjson.org/def/core#shape
+/coverages/ranges/.+/axisNames	https://covjson.org/def/core#axisNames
+/coverages/ranges/.+/values	https://covjson.org/def/core#values
+/coverages/ranges/.+/tileSets	https://covjson.org/def/core#tileSet
+/coverages/ranges/.+/tileSets/tileShape	https://covjson.org/def/core#tileShape
+/coverages/ranges/.+/tileSets/urlTemplate	https://covjson.org/def/core#urlTemplate
 /coverages/rangeAlternates	
