@@ -1,0 +1,6 @@
+{
+    "@context": ["https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/jsonld/metadata-context.jsonld",
+    "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/main/jsonld/crossDomain-context.jsonld",
+        "https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/dcat-records/context.jsonld"]
+  }
+  
