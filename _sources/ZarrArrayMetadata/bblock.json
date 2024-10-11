@@ -12,7 +12,7 @@
     {
       "title": "Zarr spcification",
       "link": "https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays"
-    },
+    }
 
   ],
   "maturity": "development",
