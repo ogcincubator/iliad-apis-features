@@ -1,6 +1,0 @@
-- title: Defines example records conformant to STAC and OGC Records API with CF data extracte
-  base-uri: http://w3id.org/ogcincubator/iliad-api-features
-  snippets:
-    - language: json
-      ref: examples/oilspill_record_example_wth_netcdf_data.json
-
