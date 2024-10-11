@@ -1,0 +1,14 @@
+path	@id
+/long_name	_:_:long_name
+/standard_name	_:_:standard_name
+/units	_:_:units
+/_ARRAY_DIMENSIONS	_:_:_ARRAY_DIMENSIONS
+/Conventions	_:_:Conventions
+/units_metadata	_:_:units_metadata
+/cell_methods	_:_:cell_methods
+/created_by	_:_:created_by
+/date	_:_:date
+/crs_wkt	_:_:crs_wkt
+/geotransform	_:_:geotransform
+/proj4	_:_:proj4
+/spatial_ref	_:_:spatial_ref

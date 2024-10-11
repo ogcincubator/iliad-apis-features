@@ -1,0 +1,9 @@
+{
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld",
+  "_ARRAY_DIMENSIONS": [
+    "time"
+  ],
+  "calendar": "standard",
+  "long_name": "time",
+  "units": "seconds since 1970-01-01"
+}

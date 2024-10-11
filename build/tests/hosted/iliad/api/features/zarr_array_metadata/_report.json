@@ -1,0 +1,72 @@
+{
+  "title": "Validation report for ogc.hosted.iliad.api.features.zarr_array_metadata - GeoZarr Array description metadata",
+  "bblockName": "GeoZarr Array description metadata",
+  "bblockId": "ogc.hosted.iliad.api.features.zarr_array_metadata",
+  "generated": "2024-10-11T10:01:15.814227+00:00",
+  "result": false,
+  "items": [
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/hosted/iliad/api/features/zarr_array_metadata/example_1_1.json",
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_array_metadata/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_1_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_1_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_1_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_1_1.ttl",
+              "size": 14,
+              "isError": false,
+              "message": "Output Turtle example_1_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'<f8' is not of type 'object'",
+              "isError": true,
+              "message": "ValidationError: '<f8' is not of type 'object'\n\nFailed validating 'type' in schema['properties']['dtype']:\n    {'type': 'object',\n     'x-jsonld-id': 'http:/w3id.org/iliad/zarr/dtype',\n     'x-jsonld-type': 'http://www.w3.org/2001/XMLSchema#string'}\n\nOn instance['dtype']:\n    '<f8'"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1
+  }
+}

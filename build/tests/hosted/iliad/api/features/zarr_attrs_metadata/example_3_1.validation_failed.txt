@@ -1,0 +1,25 @@
+Validation report for ogc.hosted.iliad.api.features.zarr_attrs_metadata - GeoZarr Attributes description metadata
+Generated 2024-10-11T10:01:15.829114+00:00
+=== Files ===
+Using example_3_1.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_3_1.jsonld created
+
+** Validation error **
+**Empty** output Turtle example_3_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'degrees_east' is not one of ['degrees_north', 'degreesN']
+
+Failed validating 'enum' in schema['properties']['units']:
+    {'enum': ['degrees_north', 'degreesN'],
+     'type': 'string',
+     'x-jsonld-id': '_:_:units'}
+
+On instance['units']:
+    'degrees_east'
+=== End JSON Schema ===
+

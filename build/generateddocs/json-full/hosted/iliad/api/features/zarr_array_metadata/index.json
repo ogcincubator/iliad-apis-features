@@ -1,0 +1,72 @@
+
+
+{
+  "itemIdentifier": "ogc.hosted.iliad.api.features.zarr_array_metadata",
+  "name": "GeoZarr Array description metadata",
+  "abstract": "based on the https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html and Iliad requiremnts",
+  "status": "under-development",
+  "dateTimeAddition": "2024-09-24T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2024-10-11",
+  "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_array_metadata",
+  "sources": [
+    {
+      "title": "Zarr specification",
+      "link": "https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "Ogcdoc",
+    "OGC document",
+    "JSON",
+    "JSON-LD",
+    "Zarr",
+    "coverage",
+    "spatiotemporal",
+    "linked-data",
+    "climate & forecast convention"
+  ],
+  "shaclRules": {},
+  "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_array_metadata/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_array_metadata/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_array_metadata/context.jsonld",
+  "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_array_metadata/",
+  "validationPassed": false,
+  "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/zarr_array_metadata/",
+  "description": "## Zarr Array Metadata\n\n[Source: https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays](https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays)\n\nEach array requires essential configuration metadata to be stored, enabling correct interpretation of the stored data. This metadata is encoded using JSON and stored as the value of the \u201d.zarray\u201d key within an array store.\n\nThe metadata resource is a JSON object. The following keys MUST be present within the object:\n\n* zarr_format - \nAn integer defining the version of the storage specification to which the array store adheres.\n* shape - \nA list of integers defining the length of each dimension of the array.\n* chunks - \nA list of integers defining the length of each dimension of a chunk of the array. Note that all chunks within a Zarr array have the same shape.\n* dtype - \nA string or list defining a valid data type for the array. See also the subsection below on data type encoding.\n* compressor - \nA JSON object identifying the primary compression codec and providing configuration parameters, or null if no compressor is to be used. The object MUST contain an \"id\" key identifying the codec to be used.\n* fill_value - \nA scalar value providing the default value to use for uninitialized portions of the array, or null if no fill_value is to be used.\n* order - \nEither \u201cC\u201d or \u201cF\u201d, defining the layout of bytes within each chunk of the array. \u201cC\u201d means row-major order, i.e., the last dimension varies fastest; \u201cF\u201d means column-major order, i.e., the first dimension varies fastest.\n* filters - \nA list of JSON objects providing codec configurations, or null if no filters are to be applied. Each codec configuration object MUST contain a \"id\" key identifying the codec to be used.\nOther keys MUST NOT be present within the metadata object.",
+  "examples": [
+    {
+      "title": "Zarr v2 array metadata based on https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#examples",
+      "base-uri": "http://schemas.opengis.net/zarr",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/.zarray",
+          "code": "{\n  \"chunks\": [\n      1000,\n      1000\n  ],\n  \"compressor\": {\n      \"id\": \"blosc\",\n      \"cname\": \"lz4\",\n      \"clevel\": 5,\n      \"shuffle\": 1\n  },\n  \"dtype\": \"<f8\",\n  \"fill_value\": \"NaN\",\n  \"filters\": [\n      {\"id\": \"delta\", \"dtype\": \"<f8\", \"astype\": \"<f4\"}\n  ],\n  \"order\": \"C\",\n  \"shape\": [\n      10000,\n      10000\n  ],\n  \"zarr_format\": 2\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_array_metadata/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_array_metadata/context.jsonld\",\n  \"chunks\": [\n    1000,\n    1000\n  ],\n  \"compressor\": {\n    \"id\": \"blosc\",\n    \"cname\": \"lz4\",\n    \"clevel\": 5,\n    \"shuffle\": 1\n  },\n  \"dtype\": \"<f8\",\n  \"fill_value\": \"NaN\",\n  \"filters\": [\n    {\n      \"id\": \"delta\",\n      \"dtype\": \"<f8\",\n      \"astype\": \"<f4\"\n    }\n  ],\n  \"order\": \"C\",\n  \"shape\": [\n    10000,\n    10000\n  ],\n  \"zarr_format\": 2\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_array_metadata/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix ns1: <http:/w3id.org/iliad/zarr/> .\n@prefix ns2: <http:/w3id.org/iliad/zarr/compressor/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] ns1:chunks 1000 ;\n    ns1:compressor [ ns2:clevel 5 ;\n            ns2:cname \"lz4\"^^xsd:string ;\n            ns2:id \"blosc\"^^xsd:string ;\n            ns2:shuffle 1 ] ;\n    ns1:dtype \"<f8\"^^xsd:string ;\n    ns1:fill_value \"NaN\"^^xsd:string ;\n    ns1:filters [ ns2:id \"delta\"^^xsd:string ;\n            ns1:dtype \"<f8\"^^xsd:string ] ;\n    ns1:order \"C\"^^xsd:string ;\n    ns1:shape 10000 ;\n    ns1:zarr_format 2 .\n\n",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_array_metadata/example_1_1.ttl"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: http://json-schema.org/draft-07/schema#\ntitle: Zarr Array Metadata\ntype: object\nproperties:\n  chunks:\n    type: array\n    items:\n      type: integer\n    minItems: 1\n    x-jsonld-id: http:/w3id.org/iliad/zarr/chunks\n    x-jsonld-type: '@id'\n  compressor:\n    type: object\n    properties:\n      id:\n        type: string\n        x-jsonld-id: http:/w3id.org/iliad/zarr/compressor/id\n        x-jsonld-type: http://www.w3.org/2001/XMLSchema#string\n      cname:\n        type: string\n        x-jsonld-id: http:/w3id.org/iliad/zarr/compressor/cname\n        x-jsonld-type: http://www.w3.org/2001/XMLSchema#string\n      clevel:\n        type: integer\n        x-jsonld-id: http:/w3id.org/iliad/zarr/compressor/clevel\n        x-jsonld-type: http://www.w3.org/2001/XMLSchema#integer\n      shuffle:\n        type: integer\n        x-jsonld-id: http:/w3id.org/iliad/zarr/compressor/shuffle\n        x-jsonld-type: http://www.w3.org/2001/XMLSchema#integer\n    required:\n    - id\n    x-jsonld-id: http:/w3id.org/iliad/zarr/compressor\n    x-jsonld-type: '@id'\n  dtype:\n    type: object\n    x-jsonld-id: http:/w3id.org/iliad/zarr/dtype\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#string\n  fill_value:\n    type: object\n    x-jsonld-id: http:/w3id.org/iliad/zarr/fill_value\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#string\n  filters:\n    type: array\n    items:\n      type: object\n      properties:\n        id:\n          type: string\n          x-jsonld-id: http:/w3id.org/iliad/zarr/compressor/id\n          x-jsonld-type: http://www.w3.org/2001/XMLSchema#string\n        dtype:\n          type: string\n          x-jsonld-id: http:/w3id.org/iliad/zarr/dtype\n          x-jsonld-type: http://www.w3.org/2001/XMLSchema#string\n        astype:\n          type: string\n      required:\n      - id\n    x-jsonld-id: http:/w3id.org/iliad/zarr/filters\n    x-jsonld-type: '@id'\n  order:\n    type: string\n    enum:\n    - C\n    - F\n    x-jsonld-id: http:/w3id.org/iliad/zarr/order\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#string\n  shape:\n    type: array\n    items:\n      type: integer\n    minItems: 1\n    x-jsonld-id: http:/w3id.org/iliad/zarr/shape\n    x-jsonld-type: '@id'\n  zarr_format:\n    type: integer\n    x-jsonld-id: http:/w3id.org/iliad/zarr/zarr_format\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#integer\nrequired:\n- chunks\n- compressor\n- dtype\n- fill_value\n- filters\n- order\n- shape\n- zarr_format\n",
+  "gitRepository": "https://github.com/ogcincubator/iliad-apis-features",
+  "gitPath": "_sources/zarr_array_metadata"
+}

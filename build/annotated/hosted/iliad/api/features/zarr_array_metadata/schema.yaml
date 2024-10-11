@@ -1,0 +1,88 @@
+$schema: http://json-schema.org/draft-07/schema#
+title: Zarr Array Metadata
+type: object
+properties:
+  chunks:
+    type: array
+    items:
+      type: integer
+    minItems: 1
+    x-jsonld-id: http:/w3id.org/iliad/zarr/chunks
+    x-jsonld-type: '@id'
+  compressor:
+    type: object
+    properties:
+      id:
+        type: string
+        x-jsonld-id: http:/w3id.org/iliad/zarr/compressor/id
+        x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+      cname:
+        type: string
+        x-jsonld-id: http:/w3id.org/iliad/zarr/compressor/cname
+        x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+      clevel:
+        type: integer
+        x-jsonld-id: http:/w3id.org/iliad/zarr/compressor/clevel
+        x-jsonld-type: http://www.w3.org/2001/XMLSchema#integer
+      shuffle:
+        type: integer
+        x-jsonld-id: http:/w3id.org/iliad/zarr/compressor/shuffle
+        x-jsonld-type: http://www.w3.org/2001/XMLSchema#integer
+    required:
+    - id
+    x-jsonld-id: http:/w3id.org/iliad/zarr/compressor
+    x-jsonld-type: '@id'
+  dtype:
+    type: object
+    x-jsonld-id: http:/w3id.org/iliad/zarr/dtype
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  fill_value:
+    type: object
+    x-jsonld-id: http:/w3id.org/iliad/zarr/fill_value
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  filters:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          x-jsonld-id: http:/w3id.org/iliad/zarr/compressor/id
+          x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+        dtype:
+          type: string
+          x-jsonld-id: http:/w3id.org/iliad/zarr/dtype
+          x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+        astype:
+          type: string
+      required:
+      - id
+    x-jsonld-id: http:/w3id.org/iliad/zarr/filters
+    x-jsonld-type: '@id'
+  order:
+    type: string
+    enum:
+    - C
+    - F
+    x-jsonld-id: http:/w3id.org/iliad/zarr/order
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  shape:
+    type: array
+    items:
+      type: integer
+    minItems: 1
+    x-jsonld-id: http:/w3id.org/iliad/zarr/shape
+    x-jsonld-type: '@id'
+  zarr_format:
+    type: integer
+    x-jsonld-id: http:/w3id.org/iliad/zarr/zarr_format
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#integer
+required:
+- chunks
+- compressor
+- dtype
+- fill_value
+- filters
+- order
+- shape
+- zarr_format

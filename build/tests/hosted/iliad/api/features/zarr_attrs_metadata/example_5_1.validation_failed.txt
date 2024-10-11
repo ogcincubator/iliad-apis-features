@@ -1,0 +1,23 @@
+Validation report for ogc.hosted.iliad.api.features.zarr_attrs_metadata - GeoZarr Attributes description metadata
+Generated 2024-10-11T10:01:15.833383+00:00
+=== Files ===
+Using example_5_1.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_5_1.jsonld created
+Output Turtle example_5_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'seconds since 1970-01-01' is not one of ['degrees_north', 'degreesN']
+
+Failed validating 'enum' in schema['properties']['units']:
+    {'enum': ['degrees_north', 'degreesN'],
+     'type': 'string',
+     'x-jsonld-id': '_:_:units'}
+
+On instance['units']:
+    'seconds since 1970-01-01'
+=== End JSON Schema ===
+

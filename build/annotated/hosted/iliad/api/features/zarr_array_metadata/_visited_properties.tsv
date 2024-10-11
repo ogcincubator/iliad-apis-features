@@ -1,0 +1,16 @@
+path	@id
+/chunks	http:/w3id.org/iliad/zarr/chunks
+/compressor	http:/w3id.org/iliad/zarr/compressor
+/compressor/id	http:/w3id.org/iliad/zarr/compressor/id
+/compressor/cname	http:/w3id.org/iliad/zarr/compressor/cname
+/compressor/clevel	http:/w3id.org/iliad/zarr/compressor/clevel
+/compressor/shuffle	http:/w3id.org/iliad/zarr/compressor/shuffle
+/dtype	http:/w3id.org/iliad/zarr/dtype
+/fill_value	http:/w3id.org/iliad/zarr/fill_value
+/filters	http:/w3id.org/iliad/zarr/filters
+/filters/id	http:/w3id.org/iliad/zarr/compressor/id
+/filters/dtype	http:/w3id.org/iliad/zarr/dtype
+/filters/astype	
+/order	http:/w3id.org/iliad/zarr/order
+/shape	http:/w3id.org/iliad/zarr/shape
+/zarr_format	http:/w3id.org/iliad/zarr/zarr_format
