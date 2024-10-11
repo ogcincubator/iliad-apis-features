@@ -856,11 +856,11 @@ Links to the schema:
       "@context": {
         "date": {
           "@id": "owlTime:hasTime",
-          "@type": "xsd:date"
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
         },
         "timestamp": {
           "@id": "owlTime:hasTime",
-          "@type": "xsd:dateTime"
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
         },
         "interval": {
           "@id": "owlTime:hasTime",
@@ -975,7 +975,7 @@ Links to the schema:
     "Role": "https://schema.org/Role",
     "hasSerialization": {
       "@id": "http://www.opengis.net/ont/geosparql#hasSerialization",
-      "@type": "rdfs:Literal"
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "SF_SamplingFeature.sampledFeature": {
       "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature",
@@ -1002,7 +1002,7 @@ Links to the schema:
     "definition": "http://www.w3.org/2004/02/skos/core#definition",
     "order": {
       "@id": "http://purl.org/linked-data/cube#order",
-      "@type": "xsd:int"
+      "@type": "http://www.w3.org/2001/XMLSchema#int"
     },
     "hasGeometry": {
       "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
@@ -1097,7 +1097,7 @@ Links to the schema:
     "Instant": "owlTime:Instant",
     "numericDuration": {
       "@id": "owlTime:numericDuration",
-      "@type": "xsd:decimal"
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
     },
     "note": "http://www.w3.org/2004/02/skos/core#note",
     "Interval": "owlTime:Interval",
@@ -1119,11 +1119,11 @@ Links to the schema:
     "editorialNote": "http://www.w3.org/2004/02/skos/core#editorialNote",
     "inXSDDateTimeStamp": {
       "@id": "owlTime:inXSDDateTimeStamp",
-      "@type": "xsd:dateTimeStamp"
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
     },
     "inXSDDate": {
       "@id": "owlTime:inXSDDate",
-      "@type": "xsd:date"
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
     "unitType": {
       "@id": "owlTime:unitType",

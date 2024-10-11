@@ -1,154 +1,63 @@
 {
   "@context": {
-    "type": "@type",
-    "domainType": {
-      "@id": "covjson:domainType",
-      "@type": "@vocab"
-    },
-    "axes": {
-      "@context": {
-        "coordinates": {
-          "@id": "covjson:coordinates",
-          "@type": "@json"
-        },
-        "bounds": {
-          "@id": "covjson:bounds",
-          "@type": "@json"
-        },
-        "start": "covjson:start",
-        "stop": "covjson:stop",
-        "num": "covjson:num"
-      },
-      "@id": "covjson:axis",
-      "@container": "@index",
-      "@index": "dct:identifier"
-    },
-    "referencing": {
-      "@context": {
-        "coordinates": {
-          "@id": "covjson:coordinates",
-          "@type": "@json"
-        },
-        "system": {
-          "@context": {
-            "calendar": {
-              "@id": "covjson:calendar",
-              "@type": "@vocab"
-            },
-            "timeScale": "covjson:timeScale",
-            "targetConcept": "covjson:targetConcept",
-            "identifiers": {
-              "@id": "covjson:identifier",
-              "@type": "@id",
-              "@container": "@index"
-            }
-          },
-          "@id": "covjson:referenceSystem"
-        }
-      },
-      "@id": "covjson:referencing",
-      "@container": "@set"
-    },
-    "dataType": {
-      "@id": "covjson:dataType",
-      "@type": "@id"
-    },
-    "shape": {
-      "@id": "covjson:shape",
-      "@container": "@list"
-    },
-    "axisNames": {
-      "@id": "covjson:axisNames",
-      "@container": "@list"
-    },
-    "values": {
-      "@id": "covjson:values",
-      "@type": "@json"
-    },
-    "tileSets": {
-      "@context": {
-        "tileShape": {
-          "@id": "covjson:tileShape",
-          "@container": "@list"
-        },
-        "urlTemplate": "covjson:urlTemplate"
-      },
-      "@id": "covjson:tileSet",
-      "@container": "@set"
-    },
     "id": "@id",
-    "domain": {
-      "@context": {},
-      "@id": "covjson:domain"
-    },
-    "parameters": {
-      "@context": {
-        "unit": {
-          "@context": {
-            "symbol": {
-              "@context": {
-                "value": "@value"
-              },
-              "@id": "qudt:symbol"
-            }
-          },
-          "@id": "qudt:unit"
-        },
-        "categoryEncoding": "covjson:categoryEncoding"
-      },
-      "@id": "covjson:parameter",
-      "@type": "@id",
-      "@container": "@index",
-      "@index": "dct:identifier"
-    },
+    "type": "@type",
+    "value": "@value",
     "label": {
       "@id": "skos:prefLabel",
+      "@container": "@language"
+    },
+    "title": {
+      "@id": "dct:title",
       "@container": "@language"
     },
     "description": {
       "@id": "dct:description",
       "@container": "@language"
     },
-    "observedProperty": {
-      "@context": {},
-      "@id": "ssn:observedProperty"
-    },
-    "members": {
-      "@id": "covjson:member",
-      "@type": "@vocab",
-      "@container": "@set"
-    },
-    "ranges": {
-      "@context": {},
-      "@id": "covjson:range",
-      "@type": "@id",
-      "@container": "@index",
-      "@index": "dct:identifier"
-    },
-    "coverages": {
-      "@context": {},
-      "@id": "hydra:member",
-      "@container": "@set"
-    },
-    "title": {
-      "@id": "dct:title",
-      "@container": "@language"
-    },
+    "unit": "qudt:unit",
+    "symbol": "qudt:symbol",
     "Domain": "covjson:Domain",
+    "domain": "covjson:domain",
+    "domainType": {
+      "@id": "covjson:domainType",
+      "@type": "@vocab"
+    },
+    "axes": {
+      "@id": "covjson:axis",
+      "@container": "@index"
+    },
+    "dataType": {
+      "@id": "covjson:dataType",
+      "@type": "@vocab"
+    },
     "primitive": "covjson:primitive",
     "tuple": "covjson:tuple",
     "polygon": "covjson:polygon",
+    "num": "covjson:num",
+    "start": "covjson:start",
+    "stop": "covjson:stop",
+    "referencing": {
+      "@id": "covjson:referencing",
+      "@container": "@set"
+    },
     "components": {
       "@id": "covjson:components",
       "@container": "@list"
     },
+    "system": "covjson:referenceSystem",
     "RS": "covjson:ReferenceSystem",
     "CRS": "covjson:CoordinateReferenceSystem",
     "cs": "ignf:coordinateSystem",
     "CS": "ignf:CoordinateSystem",
     "TemporalRS": "inspiregloss:TemporalReferenceSystem",
     "TemporalCRS": "covjson:TemporalCRS",
+    "calendar": {
+      "@id": "covjson:calendar",
+      "@type": "@vocab"
+    },
     "Gregorian": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian",
+    "timeScale": "covjson:timeScale",
     "SpatialRS": "inspiregloss:SpatialReferenceSystem",
     "SpatialCRS": "ignf:CRS",
     "GeodeticCRS": "ignf:GeodeticCRS",
@@ -161,14 +70,58 @@
     },
     "direction": "ignf:axisDirection",
     "IdentifierRS": "covjson:IdentifierReferenceSystem",
+    "targetConcept": "covjson:targetConcept",
+    "identifiers": {
+      "@id": "covjson:identifier",
+      "@type": "@id",
+      "@container": "@index"
+    },
     "Parameter": "covjson:Parameter",
+    "parameters": {
+      "@id": "covjson:parameter",
+      "@type": "@id",
+      "@container": "@index"
+    },
+    "observedProperty": "ssn:observedProperty",
+    "categoryEncoding": "covjson:categoryEncoding",
     "ParameterGroup": "covjson:ParameterGroup",
+    "members": {
+      "@id": "covjson:member",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "ranges": {
+      "@id": "covjson:range",
+      "@type": "@id",
+      "@container": "@index"
+    },
     "NdArray": "covjson:NdArray",
     "TiledNdArray": "covjson:TiledNdArray",
+    "shape": {
+      "@id": "covjson:shape",
+      "@container": "@list"
+    },
+    "tileShape": {
+      "@id": "covjson:tileShape",
+      "@container": "@list"
+    },
+    "axisNames": {
+      "@id": "covjson:axisNames",
+      "@container": "@list"
+    },
+    "urlTemplate": "covjson:urlTemplate",
+    "tileSets": {
+      "@id": "covjson:tileSet",
+      "@container": "@set"
+    },
     "float": "xsd:double",
     "integer": "xsd:integer",
     "string": "xsd:string",
     "Coverage": "covjson:Coverage",
+    "coverages": {
+      "@id": "hydra:member",
+      "@container": "@set"
+    },
     "CoverageCollection": "covjson:CoverageCollection",
     "Grid": "covjsondt:Grid",
     "VerticalProfile": "covjsondt:VerticalProfile",

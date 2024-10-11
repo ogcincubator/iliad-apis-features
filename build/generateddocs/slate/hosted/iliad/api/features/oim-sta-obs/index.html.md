@@ -1,14 +1,10 @@
 ---
-title: OIM STA Observations (Schema)
+title: OIM Observations (Schema)
 
-language_tabs:
-  - json: JSON
-  - jsonld: JSON-LD
-  - turtle: RDF/Turtle
 
 toc_footers:
   - Version 0.1
-  - <a href='#'>OIM STA Observations</a>
+  - <a href='#'>OIM Observations</a>
   - <a href='https://blocks.ogc.org/register.html'>Building Blocks register</a>
 
 search: true
@@ -16,11 +12,11 @@ search: true
 code_clipboard: true
 
 meta:
-  - name: OIM STA Observations (Schema)
+  - name: OIM Observations (Schema)
 ---
 
 
-# OIM STA Observations `ogc.hosted.iliad.api.features.oim-sta-obs`
+# OIM Observations `ogc.hosted.iliad.api.features.oim-sta-obs`
 
 Defines SensorThings API Observations to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model.
 
@@ -30,7 +26,7 @@ Defines SensorThings API Observations to implement the OIM SOSA cross-domain mod
 </p>
 
 <aside class="success">
-This building block is <strong><a href="https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/oim-sta-obs/" target="_blank">valid</a></strong>
+This building block is <strong>valid</strong>
 </aside>
 
 # Description
@@ -53,73 +49,9 @@ The mechanisms for handling external vocabulary constraints to be define here: (
 
 # Examples
 
-## Coverage JSON Coverage representing snapshot series of Grid with LD
+## Oceans Information Model examples
 
-
-
-```json
-{
-  "@iot.id": "1",
-  "@iot.selfLink": "http://example.org/v1.1/Observations(1)",
-  "FeatureOfInterest@iot.navigationLink": "Observations(1)/FeatureOfInterest",
-  "Datastream@iot.navigationLink": "Observations(1)/Datastream",
-  "phenomenonTime": "2014-12-31T11:59:59.00+08:00",
-  "resultTime": "2014-12-31T11:59:59.00+08:00",
-  "result": 70.4
-}
-
-```
-
-<blockquote class="lang-specific json">
-  <p class="example-links">
-    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.json">Open in new window</a>
-    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fogcincubator.github.io%2Filiad-apis-features%2Fbuild%2Ftests%2Fhosted%2Filiad%2Fapi%2Ffeatures%2Foim-sta-obs%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
-</blockquote>
-
-
-
-
-```jsonld
-{
-  "@iot.id": "1",
-  "@iot.selfLink": "http://example.org/v1.1/Observations(1)",
-  "FeatureOfInterest@iot.navigationLink": "Observations(1)/FeatureOfInterest",
-  "Datastream@iot.navigationLink": "Observations(1)/Datastream",
-  "phenomenonTime": "2014-12-31T11:59:59.00+08:00",
-  "resultTime": "2014-12-31T11:59:59.00+08:00",
-  "result": 70.4,
-  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-sta-obs/context.jsonld"
-}
-```
-
-<blockquote class="lang-specific jsonld">
-  <p class="example-links">
-    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.jsonld">Open in new window</a>
-    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fogcincubator.github.io%2Filiad-apis-features%2Fbuild%2Ftests%2Fhosted%2Filiad%2Fapi%2Ffeatures%2Foim-sta-obs%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
-</blockquote>
-
-
-
-
-```turtle
-@prefix sosa1: <https://www.w3.org/TR/vocab-ssn/#> .
-@prefix sta: <https://schemas.opengis.org/sta/def/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<http://w3id.org/ogcincubator/coverageJSON/1> sta:DataStream "Observations(1)/Datastream" ;
-    sosa1:hasFeatureOfInterest "Observations(1)/FeatureOfInterest" ;
-    sosa1:hasSimpleResult 7.04e+01 ;
-    sosa1:phenomenonTime "2014-12-31T11:59:59.00+08:00" ;
-    sosa1:resultTime "2014-12-31T11:59:59.00+08:00" .
-
-
-```
-
-<blockquote class="lang-specific turtle">
-  <p class="example-links">
-    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.ttl">Open in new window</a>
-</blockquote>
-
+TBD - see specific sub-profile for examples.
 
 
 # JSON Schema

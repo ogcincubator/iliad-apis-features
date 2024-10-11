@@ -1243,72 +1243,51 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
 </span><span class="nl">&lt;https://qudt.org/vocab/unit/NanoM&gt;</span><span class="w"> </span><span class="nn">skos:</span><span class="n">prefLabel</span><span class="w"> </span><span class="s">"0.000000001-fold of the SI base unit metre"</span><span class="na">@en</span><span class="w"> </span><span class="p">.</span><span class="w">
 
 </span><span class="nl">&lt;https://w3id.org/ogcincubator/coverageJSON/POTM_range&gt;</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">NdArray</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">dcterms:</span><span class="n">identifier</span><span class="w"> </span><span class="s">"POTM"</span><span class="w"> </span><span class="p">;</span><span class="w">
     </span><span class="nn">covjson:</span><span class="n">axisNames</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s">"composite"</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">covjson:</span><span class="n">dataType</span><span class="w"> </span><span class="nl">&lt;https://w3id.org/ogcincubator/coverageJSON/float&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">covjson:</span><span class="n">shape</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">covjson:</span><span class="n">values</span><span class="w"> </span><span class="s">"[23.8,23.8]"</span><span class="p">^^</span><span class="nn">rdf:</span><span class="n">JSON</span><span class="w"> </span><span class="p">.</span><span class="w">
+    </span><span class="nn">covjson:</span><span class="n">dataType</span><span class="w"> </span><span class="nn">xsd:</span><span class="n">double</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">covjson:</span><span class="n">shape</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">.</span><span class="w">
 
 </span><span class="p">[]</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">CoverageCollection</span><span class="w"> </span><span class="p">;</span><span class="w">
     </span><span class="nn">hydra:</span><span class="n">member</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">Coverage</span><span class="w"> </span><span class="p">;</span><span class="w">
             </span><span class="nn">covjson:</span><span class="n">domain</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">Domain</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">covjson:</span><span class="n">axis</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">dcterms:</span><span class="n">identifier</span><span class="w"> </span><span class="s">"composite"</span><span class="w"> </span><span class="p">;</span><span class="w">
-                            </span><span class="nn">covjson:</span><span class="n">coordinates</span><span class="w"> </span><span class="s">"[\"x\",\"y\",\"z\"]"</span><span class="p">^^</span><span class="nn">rdf:</span><span class="n">JSON</span><span class="w"> </span><span class="p">;</span><span class="w">
-                            </span><span class="nn">covjson:</span><span class="n">dataType</span><span class="w"> </span><span class="nl">&lt;https://w3id.org/ogcincubator/coverageJSON/tuple&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
-                            </span><span class="nn">covjson:</span><span class="n">values</span><span class="w"> </span><span class="s">"[[1,20,1],[2,21,3]]"</span><span class="p">^^</span><span class="nn">rdf:</span><span class="n">JSON</span><span class="w"> </span><span class="p">],</span><span class="w">
-                        </span><span class="p">[</span><span class="w"> </span><span class="nn">dcterms:</span><span class="n">identifier</span><span class="w"> </span><span class="s">"t"</span><span class="w"> </span><span class="p">;</span><span class="w">
-                            </span><span class="nn">covjson:</span><span class="n">values</span><span class="w"> </span><span class="s">"[\"2008-01-02T04:00:00Z\"]"</span><span class="p">^^</span><span class="nn">rdf:</span><span class="n">JSON</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+                    </span><span class="nn">covjson:</span><span class="n">axis</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">
+                        </span><span class="p">[</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">dataType</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">tuple</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
             </span><span class="nn">covjson:</span><span class="n">range</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">NdArray</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">dcterms:</span><span class="n">identifier</span><span class="w"> </span><span class="s">"POTM"</span><span class="w"> </span><span class="p">;</span><span class="w">
                     </span><span class="nn">covjson:</span><span class="n">axisNames</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s">"composite"</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">covjson:</span><span class="n">dataType</span><span class="w"> </span><span class="nl">&lt;https://w3id.org/ogcincubator/coverageJSON/float&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">covjson:</span><span class="n">shape</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">covjson:</span><span class="n">values</span><span class="w"> </span><span class="s">"[23.8,23.8]"</span><span class="p">^^</span><span class="nn">rdf:</span><span class="n">JSON</span><span class="w"> </span><span class="p">],</span><span class="w">
+                    </span><span class="nn">covjson:</span><span class="n">dataType</span><span class="w"> </span><span class="nn">xsd:</span><span class="n">double</span><span class="w"> </span><span class="p">;</span><span class="w">
+                    </span><span class="nn">covjson:</span><span class="n">shape</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">],</span><span class="w">
                 </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">NdArray</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">dcterms:</span><span class="n">identifier</span><span class="w"> </span><span class="s">"particle_class"</span><span class="w"> </span><span class="p">;</span><span class="w">
                     </span><span class="nn">covjson:</span><span class="n">axisNames</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s">"composite"</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">covjson:</span><span class="n">dataType</span><span class="w"> </span><span class="nl">&lt;https://w3id.org/ogcincubator/coverageJSON/integer&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">covjson:</span><span class="n">shape</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">covjson:</span><span class="n">values</span><span class="w"> </span><span class="s">"[1,2]"</span><span class="p">^^</span><span class="nn">rdf:</span><span class="n">JSON</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">],</span><span class="w">
+                    </span><span class="nn">covjson:</span><span class="n">dataType</span><span class="w"> </span><span class="nn">xsd:</span><span class="n">integer</span><span class="w"> </span><span class="p">;</span><span class="w">
+                    </span><span class="nn">covjson:</span><span class="n">shape</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">],</span><span class="w">
         </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">Coverage</span><span class="w"> </span><span class="p">;</span><span class="w">
             </span><span class="nn">covjson:</span><span class="n">domain</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">Domain</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">covjson:</span><span class="n">axis</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">dcterms:</span><span class="n">identifier</span><span class="w"> </span><span class="s">"composite"</span><span class="w"> </span><span class="p">;</span><span class="w">
-                            </span><span class="nn">covjson:</span><span class="n">coordinates</span><span class="w"> </span><span class="s">"[\"x\",\"y\",\"z\"]"</span><span class="p">^^</span><span class="nn">rdf:</span><span class="n">JSON</span><span class="w"> </span><span class="p">;</span><span class="w">
-                            </span><span class="nn">covjson:</span><span class="n">dataType</span><span class="w"> </span><span class="nl">&lt;https://w3id.org/ogcincubator/coverageJSON/tuple&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
-                            </span><span class="nn">covjson:</span><span class="n">values</span><span class="w"> </span><span class="s">"[[1,20,1],[2,21,3]]"</span><span class="p">^^</span><span class="nn">rdf:</span><span class="n">JSON</span><span class="w"> </span><span class="p">],</span><span class="w">
-                        </span><span class="p">[</span><span class="w"> </span><span class="nn">dcterms:</span><span class="n">identifier</span><span class="w"> </span><span class="s">"t"</span><span class="w"> </span><span class="p">;</span><span class="w">
-                            </span><span class="nn">covjson:</span><span class="n">values</span><span class="w"> </span><span class="s">"[\"2008-01-01T04:00:00Z\"]"</span><span class="p">^^</span><span class="nn">rdf:</span><span class="n">JSON</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+                    </span><span class="nn">covjson:</span><span class="n">axis</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">dataType</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">tuple</span><span class="w"> </span><span class="p">],</span><span class="w">
+                        </span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
             </span><span class="nn">covjson:</span><span class="n">range</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">NdArray</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">dcterms:</span><span class="n">identifier</span><span class="w"> </span><span class="s">"particle_class"</span><span class="w"> </span><span class="p">;</span><span class="w">
                     </span><span class="nn">covjson:</span><span class="n">axisNames</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s">"composite"</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">covjson:</span><span class="n">dataType</span><span class="w"> </span><span class="nl">&lt;https://w3id.org/ogcincubator/coverageJSON/integer&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">covjson:</span><span class="n">shape</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">covjson:</span><span class="n">values</span><span class="w"> </span><span class="s">"[1,3]"</span><span class="p">^^</span><span class="nn">rdf:</span><span class="n">JSON</span><span class="w"> </span><span class="p">],</span><span class="w">
+                    </span><span class="nn">covjson:</span><span class="n">dataType</span><span class="w"> </span><span class="nn">xsd:</span><span class="n">integer</span><span class="w"> </span><span class="p">;</span><span class="w">
+                    </span><span class="nn">covjson:</span><span class="n">shape</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">],</span><span class="w">
                 </span><span class="nl">&lt;https://w3id.org/ogcincubator/coverageJSON/POTM_range&gt;</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
     </span><span class="nn">covjson:</span><span class="n">domain</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">Domain</span><span class="w"> </span><span class="p">;</span><span class="w">
-            </span><span class="nn">covjson:</span><span class="n">axis</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">dcterms:</span><span class="n">identifier</span><span class="w"> </span><span class="s">"t"</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">covjson:</span><span class="n">values</span><span class="w"> </span><span class="s">"[\"2008-01-01T04:00:00Z\",\"2008-01-02T04:00:00Z\"]"</span><span class="p">^^</span><span class="nn">rdf:</span><span class="n">JSON</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">covjson:</span><span class="n">axis</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
     </span><span class="nn">covjson:</span><span class="n">domainType</span><span class="w"> </span><span class="nn">covjsondt:</span><span class="n">MultiPoint</span><span class="w"> </span><span class="p">;</span><span class="w">
     </span><span class="nn">covjson:</span><span class="n">parameter</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">Parameter</span><span class="w"> </span><span class="p">;</span><span class="w">
-            </span><span class="nn">dcterms:</span><span class="n">identifier</span><span class="w"> </span><span class="s">"particle_class"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">dcterms:</span><span class="n">description</span><span class="w"> </span><span class="s">"particle diameter"</span><span class="na">@en</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">qudt:</span><span class="n">unit</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">qudt:</span><span class="n">symbol</span><span class="w"> </span><span class="s">"nm"</span><span class="p">^^</span><span class="nl">&lt;http://www.opengis.net/def/uom/UCUM/&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
+                    </span><span class="nn">skos:</span><span class="n">prefLabel</span><span class="w"> </span><span class="s">"nanometers"</span><span class="na">@en</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">ssn1:</span><span class="n">observedProperty</span><span class="w"> </span><span class="nl">&lt;https://qudt.org/vocab/unit/NanoM&gt;</span><span class="w"> </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">Parameter</span><span class="w"> </span><span class="p">;</span><span class="w">
             </span><span class="nn">ssn1:</span><span class="n">observedProperty</span><span class="w"> </span><span class="nl">&lt;http://example.com/particletypes&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
             </span><span class="nn">covjson:</span><span class="n">categoryEncoding</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">ns1:</span><span class="n">_0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">;</span><span class="w">
                     </span><span class="nn">ns1:</span><span class="n">_1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">ns1:</span><span class="n">_4</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">],</span><span class="w">
-        </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">Parameter</span><span class="w"> </span><span class="p">;</span><span class="w">
-            </span><span class="nn">dcterms:</span><span class="n">description</span><span class="w"> </span><span class="s">"particle diameter"</span><span class="na">@en</span><span class="w"> </span><span class="p">;</span><span class="w">
-            </span><span class="nn">dcterms:</span><span class="n">identifier</span><span class="w"> </span><span class="s">"diameter"</span><span class="w"> </span><span class="p">;</span><span class="w">
-            </span><span class="nn">qudt:</span><span class="n">unit</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">qudt:</span><span class="n">symbol</span><span class="w"> </span><span class="s">"nm"</span><span class="p">^^</span><span class="nl">&lt;http://www.opengis.net/def/uom/UCUM/&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">skos:</span><span class="n">prefLabel</span><span class="w"> </span><span class="s">"nanometers"</span><span class="na">@en</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
-            </span><span class="nn">ssn1:</span><span class="n">observedProperty</span><span class="w"> </span><span class="nl">&lt;https://qudt.org/vocab/unit/NanoM&gt;</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">covjson:</span><span class="n">referencing</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">coordinates</span><span class="w"> </span><span class="s">"[\"z\"]"</span><span class="p">^^</span><span class="nn">rdf:</span><span class="n">JSON</span><span class="w"> </span><span class="p">;</span><span class="w">
-            </span><span class="nn">covjson:</span><span class="n">referenceSystem</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">ignf:</span><span class="n">VerticalCRS</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">ignf:</span><span class="n">coordinateSystem</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">coordinateSystemAxes</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">ignf:</span><span class="n">axisDirection</span><span class="w"> </span><span class="s">"down"</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">],</span><span class="w">
-        </span><span class="p">[</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">coordinates</span><span class="w"> </span><span class="s">"[\"x\",\"y\"]"</span><span class="p">^^</span><span class="nn">rdf:</span><span class="n">JSON</span><span class="w"> </span><span class="p">;</span><span class="w">
-            </span><span class="nn">covjson:</span><span class="n">referenceSystem</span><span class="w"> </span><span class="nl">&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt;</span><span class="w"> </span><span class="p">],</span><span class="w">
-        </span><span class="p">[</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">coordinates</span><span class="w"> </span><span class="s">"[\"t\"]"</span><span class="p">^^</span><span class="nn">rdf:</span><span class="n">JSON</span><span class="w"> </span><span class="p">;</span><span class="w">
-            </span><span class="nn">covjson:</span><span class="n">referenceSystem</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">inspiregloss:</span><span class="n">TemporalReferenceSystem</span><span class="w"> </span><span class="p">;</span><span class="w">
-                    </span><span class="nn">covjson:</span><span class="n">calendar</span><span class="w"> </span><span class="nl">&lt;http://www.opengis.net/def/uom/ISO-8601/0/Gregorian&gt;</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">.</span><span class="w">
+                    </span><span class="nn">ns1:</span><span class="n">_4</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">covjson:</span><span class="n">referencing</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">referenceSystem</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">ignf:</span><span class="n">VerticalCRS</span><span class="w"> </span><span class="p">;</span><span class="w">
+                    </span><span class="nn">ignf:</span><span class="n">coordinateSystem</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">coordinateSystemAxes</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">ignf:</span><span class="n">axisDirection</span><span class="w"> </span><span class="s">"down"</span><span class="w"> </span><span class="p">;</span><span class="w">
+                                        </span><span class="nn">qudt:</span><span class="n">unit</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">qudt:</span><span class="n">symbol</span><span class="w"> </span><span class="s">"Pa"</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">referenceSystem</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">inspiregloss:</span><span class="n">TemporalReferenceSystem</span><span class="w"> </span><span class="p">;</span><span class="w">
+                    </span><span class="nn">covjson:</span><span class="n">calendar</span><span class="w"> </span><span class="nl">&lt;http://www.opengis.net/def/uom/ISO-8601/0/Gregorian&gt;</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w"> </span><span class="nn">covjson:</span><span class="n">referenceSystem</span><span class="w"> </span><span class="nl">&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt;</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">.</span><span class="w">
 
 
 </span></code></pre></div>
@@ -1316,1236 +1295,62 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
   <p class="example-links">
     <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverageJSON/example_2_1.ttl">Open in new window</a>
 </blockquote>
-<h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$id</span><span class="pi">:</span> <span class="s">https://schemas.opengis.net/covjson/1.0/coveragejson.json</span>
-<span class="na">$schema</span><span class="pi">:</span> <span class="s">http://json-schema.org/draft-07/schema</span>
-<span class="na">description</span><span class="pi">:</span> <span class="s">A CoverageJSON object</span>
-<span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-<span class="na">properties</span><span class="pi">:</span>
-  <span class="na">type</span><span class="pi">:</span>
-    <span class="na">enum</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">Domain</span>
-    <span class="pi">-</span> <span class="s">NdArray</span>
-    <span class="pi">-</span> <span class="s">TiledNdArray</span>
-    <span class="pi">-</span> <span class="s">Coverage</span>
-    <span class="pi">-</span> <span class="s">CoverageCollection</span>
-    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
-<span class="na">required</span><span class="pi">:</span>
-<span class="pi">-</span> <span class="s">type</span>
-<span class="na">allOf</span><span class="pi">:</span>
-<span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span>
-        <span class="na">const</span><span class="pi">:</span> <span class="s">Domain</span>
-  <span class="na">then</span><span class="pi">:</span>
-    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/domain'</span>
-<span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span>
-        <span class="na">const</span><span class="pi">:</span> <span class="s">NdArray</span>
-  <span class="na">then</span><span class="pi">:</span>
-    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/ndArray'</span>
-<span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span>
-        <span class="na">const</span><span class="pi">:</span> <span class="s">TiledNdArray</span>
-  <span class="na">then</span><span class="pi">:</span>
-    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/tiledNdArray'</span>
-<span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span>
-        <span class="na">const</span><span class="pi">:</span> <span class="s">Coverage</span>
-  <span class="na">then</span><span class="pi">:</span>
-    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/coverage'</span>
-<span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span>
-        <span class="na">const</span><span class="pi">:</span> <span class="s">CoverageCollection</span>
-  <span class="na">then</span><span class="pi">:</span>
-    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/coverageCollection'</span>
-<span class="na">definitions</span><span class="pi">:</span>
-  <span class="na">anyAxis</span><span class="pi">:</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">Validates any axis</span>
-    <span class="na">if</span><span class="pi">:</span>
-      <span class="na">required</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">values</span>
-    <span class="na">then</span><span class="pi">:</span>
-      <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/valuesAxis'</span>
-    <span class="na">else</span><span class="pi">:</span>
-      <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericRegularlySpacedAxis'</span>
-  <span class="na">coverage</span><span class="pi">:</span>
-    <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/coverageBase'</span>
-    <span class="pi">-</span> <span class="na">required</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">parameters</span>
-      <span class="na">properties</span><span class="pi">:</span>
-        <span class="na">domain</span><span class="pi">:</span>
-          <span class="na">if</span><span class="pi">:</span>
-            <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">required</span><span class="pi">:</span>
-            <span class="pi">-</span> <span class="s">referencing</span>
-          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#domain</span>
-  <span class="na">coverageBase</span><span class="pi">:</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">A Coverage, representing a mapping from a domain to sets of data</span>
-      <span class="s">values described by parameters.</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span>
-        <span class="na">const</span><span class="pi">:</span> <span class="s">Coverage</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
-      <span class="na">id</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-      <span class="na">domainType</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#domainType</span>
-        <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@vocab'</span>
-      <span class="na">domain</span><span class="pi">:</span>
-        <span class="na">allOf</span><span class="pi">:</span>
-        <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span>
-          <span class="pi">-</span> <span class="s">string</span>
-          <span class="pi">-</span> <span class="s">object</span>
-        <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-            <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/domainBase'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#domain</span>
-      <span class="na">parameters</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-        <span class="na">patternProperties</span><span class="pi">:</span>
-          <span class="na">.+</span><span class="pi">:</span>
-            <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/parameter'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#parameter</span>
-        <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@index'</span>
-        <span class="na">x-jsonld-index</span><span class="pi">:</span> <span class="s">http://purl.org/dc/terms/identifier</span>
-      <span class="na">parameterGroups</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">items</span><span class="pi">:</span>
-          <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/parameterGroup'</span>
-      <span class="na">ranges</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-        <span class="na">patternProperties</span><span class="pi">:</span>
-          <span class="na">.+</span><span class="pi">:</span>
-            <span class="na">allOf</span><span class="pi">:</span>
-            <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span>
-              <span class="pi">-</span> <span class="s">string</span>
-              <span class="pi">-</span> <span class="s">object</span>
-            <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-                <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-              <span class="na">then</span><span class="pi">:</span>
-                <span class="na">properties</span><span class="pi">:</span>
-                  <span class="na">type</span><span class="pi">:</span>
-                    <span class="na">enum</span><span class="pi">:</span>
-                    <span class="pi">-</span> <span class="s">NdArray</span>
-                    <span class="pi">-</span> <span class="s">TiledNdArray</span>
-                    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
-                <span class="na">required</span><span class="pi">:</span>
-                <span class="pi">-</span> <span class="s">type</span>
-            <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-                <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-                <span class="na">properties</span><span class="pi">:</span>
-                  <span class="na">type</span><span class="pi">:</span>
-                    <span class="na">const</span><span class="pi">:</span> <span class="s">NdArray</span>
-              <span class="na">then</span><span class="pi">:</span>
-                <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/ndArray'</span>
-            <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-                <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-                <span class="na">properties</span><span class="pi">:</span>
-                  <span class="na">type</span><span class="pi">:</span>
-                    <span class="na">const</span><span class="pi">:</span> <span class="s">TiledNdArray</span>
-              <span class="na">then</span><span class="pi">:</span>
-                <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/tiledNdArray'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#range</span>
-        <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@index'</span>
-        <span class="na">x-jsonld-index</span><span class="pi">:</span> <span class="s">http://purl.org/dc/terms/identifier</span>
-      <span class="na">rangeAlternates</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-    <span class="na">required</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">type</span>
-    <span class="pi">-</span> <span class="s">domain</span>
-    <span class="pi">-</span> <span class="s">ranges</span>
-  <span class="na">coverageCollection</span><span class="pi">:</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">A collection of coverage objects</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span>
-        <span class="na">const</span><span class="pi">:</span> <span class="s">CoverageCollection</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
-      <span class="na">domainType</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#domainType</span>
-        <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@vocab'</span>
-      <span class="na">parameters</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-        <span class="na">patternProperties</span><span class="pi">:</span>
-          <span class="na">.+</span><span class="pi">:</span>
-            <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/parameter'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#parameter</span>
-        <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@index'</span>
-        <span class="na">x-jsonld-index</span><span class="pi">:</span> <span class="s">http://purl.org/dc/terms/identifier</span>
-      <span class="na">parameterGroups</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">items</span><span class="pi">:</span>
-          <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/parameterGroup'</span>
-      <span class="na">referencing</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">items</span><span class="pi">:</span>
-          <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/referenceSystemConnection'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#referencing</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@set'</span>
-      <span class="na">coverages</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">items</span><span class="pi">:</span>
-          <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/coverageBase'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/hydra/core#member</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@set'</span>
-    <span class="na">required</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">type</span>
-    <span class="pi">-</span> <span class="s">coverages</span>
-    <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$comment</span><span class="pi">:</span> <span class="s">If no parameters are present at collection level then each coverage</span>
-        <span class="s">must have their own</span>
-      <span class="na">if</span><span class="pi">:</span>
-        <span class="na">not</span><span class="pi">:</span>
-          <span class="na">required</span><span class="pi">:</span>
-          <span class="pi">-</span> <span class="s">parameters</span>
-      <span class="na">then</span><span class="pi">:</span>
-        <span class="na">properties</span><span class="pi">:</span>
-          <span class="na">coverages</span><span class="pi">:</span>
-            <span class="na">items</span><span class="pi">:</span>
-              <span class="na">required</span><span class="pi">:</span>
-              <span class="pi">-</span> <span class="s">parameters</span>
-            <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/hydra/core#member</span>
-            <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@set'</span>
-    <span class="pi">-</span> <span class="na">$comment</span><span class="pi">:</span> <span class="s">If no "referencing" member is present at collection level then each</span>
-        <span class="s">coverage domain must have its own</span>
-      <span class="na">if</span><span class="pi">:</span>
-        <span class="na">not</span><span class="pi">:</span>
-          <span class="na">required</span><span class="pi">:</span>
-          <span class="pi">-</span> <span class="s">referencing</span>
-      <span class="na">then</span><span class="pi">:</span>
-        <span class="na">properties</span><span class="pi">:</span>
-          <span class="na">coverages</span><span class="pi">:</span>
-            <span class="na">items</span><span class="pi">:</span>
-              <span class="na">properties</span><span class="pi">:</span>
-                <span class="na">domain</span><span class="pi">:</span>
-                  <span class="na">if</span><span class="pi">:</span>
-                    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-                  <span class="na">then</span><span class="pi">:</span>
-                    <span class="na">required</span><span class="pi">:</span>
-                    <span class="pi">-</span> <span class="s">referencing</span>
-            <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/hydra/core#member</span>
-            <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@set'</span>
-  <span class="na">domain</span><span class="pi">:</span>
-    <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/domainBase'</span>
-    <span class="pi">-</span> <span class="na">required</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">referencing</span>
-  <span class="na">domainBase</span><span class="pi">:</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">A Domain, which defines a set of positions and their extent in one</span>
-      <span class="s">or more referencing systems</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span>
-        <span class="na">const</span><span class="pi">:</span> <span class="s">Domain</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
-      <span class="na">domainType</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#domainType</span>
-        <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@vocab'</span>
-      <span class="na">axes</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-        <span class="na">description</span><span class="pi">:</span> <span class="s">Set of Axis objects, keyed by axis identifier</span>
-        <span class="na">minProperties</span><span class="pi">:</span> <span class="m">1</span>
-        <span class="na">patternProperties</span><span class="pi">:</span>
-          <span class="na">.+</span><span class="pi">:</span>
-            <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/anyAxis'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#axis</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@index'</span>
-        <span class="na">x-jsonld-index</span><span class="pi">:</span> <span class="s">http://purl.org/dc/terms/identifier</span>
-      <span class="na">referencing</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">items</span><span class="pi">:</span>
-          <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/referenceSystemConnection'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#referencing</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@set'</span>
-    <span class="na">required</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">type</span>
-    <span class="pi">-</span> <span class="s">axes</span>
-    <span class="na">dependencies</span><span class="pi">:</span>
-      <span class="na">domainType</span><span class="pi">:</span>
-        <span class="na">allOf</span><span class="pi">:</span>
-        <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">domainType</span><span class="pi">:</span>
-                <span class="na">const</span><span class="pi">:</span> <span class="s">Grid</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Grid</span><span class="nv"> </span><span class="s">domain:</span><span class="nv"> </span><span class="s">x</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">y</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">required,</span><span class="nv"> </span><span class="s">z</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">t</span><span class="nv"> </span><span class="s">optional'</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">axes</span><span class="pi">:</span>
-                <span class="na">properties</span><span class="pi">:</span>
-                  <span class="na">x</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericAxis'</span>
-                  <span class="na">y</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericAxis'</span>
-                  <span class="na">z</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericAxis'</span>
-                  <span class="na">t</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/stringValuesAxis'</span>
-                <span class="na">required</span><span class="pi">:</span>
-                <span class="pi">-</span> <span class="s">x</span>
-                <span class="pi">-</span> <span class="s">y</span>
-                <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-        <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">domainType</span><span class="pi">:</span>
-                <span class="na">const</span><span class="pi">:</span> <span class="s">Trajectory</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Trajectory</span><span class="nv"> </span><span class="s">domain:</span><span class="nv"> </span><span class="s">mandatory</span><span class="nv"> </span><span class="s">composite</span><span class="nv"> </span><span class="s">axis</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">optional</span>
-              <span class="s">z</span><span class="nv"> </span><span class="s">axis'</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">axes</span><span class="pi">:</span>
-                <span class="na">properties</span><span class="pi">:</span>
-                  <span class="na">composite</span><span class="pi">:</span>
-                    <span class="na">allOf</span><span class="pi">:</span>
-                    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/tupleValuesAxis'</span>
-                    <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-                        <span class="na">values</span><span class="pi">:</span>
-                          <span class="na">items</span><span class="pi">:</span>
-                            <span class="na">$comment</span><span class="pi">:</span> <span class="s">In a Trajectory, tuples always have 3 (txy)</span>
-                              <span class="s">or 4 (txyz) values</span>
-                            <span class="na">minItems</span><span class="pi">:</span> <span class="m">3</span>
-                            <span class="na">maxItems</span><span class="pi">:</span> <span class="m">4</span>
-                        <span class="na">coordinates</span><span class="pi">:</span>
-                          <span class="na">enum</span><span class="pi">:</span>
-                          <span class="pi">-</span> <span class="pi">-</span> <span class="s">t</span>
-                            <span class="pi">-</span> <span class="s">x</span>
-                            <span class="pi">-</span> <span class="s">y</span>
-                            <span class="pi">-</span> <span class="s">z</span>
-                          <span class="pi">-</span> <span class="pi">-</span> <span class="s">t</span>
-                            <span class="pi">-</span> <span class="s">x</span>
-                            <span class="pi">-</span> <span class="s">y</span>
-                  <span class="na">z</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericSingleValueAxis'</span>
-                <span class="na">required</span><span class="pi">:</span>
-                <span class="pi">-</span> <span class="s">composite</span>
-                <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-        <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">domainType</span><span class="pi">:</span>
-                <span class="na">const</span><span class="pi">:</span> <span class="s">VerticalProfile</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Vertical</span><span class="nv"> </span><span class="s">Profile</span><span class="nv"> </span><span class="s">domain:</span><span class="nv"> </span><span class="s">mandatory</span><span class="nv"> </span><span class="s">x,</span><span class="nv"> </span><span class="s">y</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">z</span><span class="nv"> </span><span class="s">axis</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">optional</span>
-              <span class="s">t</span><span class="nv"> </span><span class="s">axis'</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">axes</span><span class="pi">:</span>
-                <span class="na">properties</span><span class="pi">:</span>
-                  <span class="na">x</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericSingleValueAxis'</span>
-                  <span class="na">y</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericSingleValueAxis'</span>
-                  <span class="na">z</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericAxis'</span>
-                  <span class="na">t</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/stringSingleValueAxis'</span>
-                <span class="na">required</span><span class="pi">:</span>
-                <span class="pi">-</span> <span class="s">x</span>
-                <span class="pi">-</span> <span class="s">y</span>
-                <span class="pi">-</span> <span class="s">z</span>
-                <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-        <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">domainType</span><span class="pi">:</span>
-                <span class="na">const</span><span class="pi">:</span> <span class="s">Point</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Point</span><span class="nv"> </span><span class="s">domain:</span><span class="nv"> </span><span class="s">mandatory</span><span class="nv"> </span><span class="s">x</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">y</span><span class="nv"> </span><span class="s">axis,</span><span class="nv"> </span><span class="s">optional</span><span class="nv"> </span><span class="s">z</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">t</span><span class="nv"> </span><span class="s">axis'</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">axes</span><span class="pi">:</span>
-                <span class="na">properties</span><span class="pi">:</span>
-                  <span class="na">x</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericSingleValueAxis'</span>
-                  <span class="na">y</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericSingleValueAxis'</span>
-                  <span class="na">z</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericSingleValueAxis'</span>
-                  <span class="na">t</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/stringSingleValueAxis'</span>
-                <span class="na">required</span><span class="pi">:</span>
-                <span class="pi">-</span> <span class="s">x</span>
-                <span class="pi">-</span> <span class="s">y</span>
-                <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-        <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">domainType</span><span class="pi">:</span>
-                <span class="na">const</span><span class="pi">:</span> <span class="s">PointSeries</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">PointSeries</span><span class="nv"> </span><span class="s">domain:</span><span class="nv"> </span><span class="s">mandatory</span><span class="nv"> </span><span class="s">x,</span><span class="nv"> </span><span class="s">y</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">t</span><span class="nv"> </span><span class="s">axis,</span><span class="nv"> </span><span class="s">optional</span>
-              <span class="s">z</span><span class="nv"> </span><span class="s">axis'</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">axes</span><span class="pi">:</span>
-                <span class="na">properties</span><span class="pi">:</span>
-                  <span class="na">x</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericSingleValueAxis'</span>
-                  <span class="na">y</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericSingleValueAxis'</span>
-                  <span class="na">z</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericSingleValueAxis'</span>
-                  <span class="na">t</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/stringValuesAxis'</span>
-                <span class="na">required</span><span class="pi">:</span>
-                <span class="pi">-</span> <span class="s">x</span>
-                <span class="pi">-</span> <span class="s">y</span>
-                <span class="pi">-</span> <span class="s">t</span>
-                <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-        <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">domainType</span><span class="pi">:</span>
-                <span class="na">const</span><span class="pi">:</span> <span class="s">MultiPoint</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">MultiPoint</span><span class="nv"> </span><span class="s">domain:</span><span class="nv"> </span><span class="s">mandatory</span><span class="nv"> </span><span class="s">composite</span><span class="nv"> </span><span class="s">axis,</span><span class="nv"> </span><span class="s">optional</span><span class="nv"> </span><span class="s">t</span>
-              <span class="s">axis'</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">axes</span><span class="pi">:</span>
-                <span class="na">properties</span><span class="pi">:</span>
-                  <span class="na">composite</span><span class="pi">:</span>
-                    <span class="na">allOf</span><span class="pi">:</span>
-                    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/tupleValuesAxis'</span>
-                    <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-                        <span class="na">values</span><span class="pi">:</span>
-                          <span class="na">items</span><span class="pi">:</span>
-                            <span class="na">$comment</span><span class="pi">:</span> <span class="s">In a MultiPoint, tuples always have 2 (xy) or</span>
-                              <span class="s">3 values (xyz)</span>
-                            <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
-                            <span class="na">maxItems</span><span class="pi">:</span> <span class="m">3</span>
-                        <span class="na">coordinates</span><span class="pi">:</span>
-                          <span class="na">enum</span><span class="pi">:</span>
-                          <span class="pi">-</span> <span class="pi">-</span> <span class="s">x</span>
-                            <span class="pi">-</span> <span class="s">y</span>
-                            <span class="pi">-</span> <span class="s">z</span>
-                          <span class="pi">-</span> <span class="pi">-</span> <span class="s">x</span>
-                            <span class="pi">-</span> <span class="s">y</span>
-                  <span class="na">t</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/stringSingleValueAxis'</span>
-                <span class="na">required</span><span class="pi">:</span>
-                <span class="pi">-</span> <span class="s">composite</span>
-                <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-        <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">domainType</span><span class="pi">:</span>
-                <span class="na">const</span><span class="pi">:</span> <span class="s">MultiPointSeries</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">MultiPointSeries</span><span class="nv"> </span><span class="s">domain:</span><span class="nv"> </span><span class="s">mandatory</span><span class="nv"> </span><span class="s">composite</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">t</span><span class="nv"> </span><span class="s">axes'</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">axes</span><span class="pi">:</span>
-                <span class="na">properties</span><span class="pi">:</span>
-                  <span class="na">composite</span><span class="pi">:</span>
-                    <span class="na">allOf</span><span class="pi">:</span>
-                    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/tupleValuesAxis'</span>
-                    <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-                        <span class="na">values</span><span class="pi">:</span>
-                          <span class="na">items</span><span class="pi">:</span>
-                            <span class="na">$comment</span><span class="pi">:</span> <span class="s">In a MultiPointSeries, tuples always have </span><span class="m">2</span>
-                              <span class="s">(xy) or 3 values (xyz)</span>
-                            <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
-                            <span class="na">maxItems</span><span class="pi">:</span> <span class="m">3</span>
-                        <span class="na">coordinates</span><span class="pi">:</span>
-                          <span class="na">enum</span><span class="pi">:</span>
-                          <span class="pi">-</span> <span class="pi">-</span> <span class="s">x</span>
-                            <span class="pi">-</span> <span class="s">y</span>
-                            <span class="pi">-</span> <span class="s">z</span>
-                          <span class="pi">-</span> <span class="pi">-</span> <span class="s">x</span>
-                            <span class="pi">-</span> <span class="s">y</span>
-                  <span class="na">t</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/stringValuesAxis'</span>
-                <span class="na">required</span><span class="pi">:</span>
-                <span class="pi">-</span> <span class="s">composite</span>
-                <span class="pi">-</span> <span class="s">t</span>
-                <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-        <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">domainType</span><span class="pi">:</span>
-                <span class="na">const</span><span class="pi">:</span> <span class="s">Section</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Section</span><span class="nv"> </span><span class="s">domain:</span><span class="nv"> </span><span class="s">mandatory</span><span class="nv"> </span><span class="s">composite</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">z</span><span class="nv"> </span><span class="s">axes'</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">axes</span><span class="pi">:</span>
-                <span class="na">properties</span><span class="pi">:</span>
-                  <span class="na">composite</span><span class="pi">:</span>
-                    <span class="na">allOf</span><span class="pi">:</span>
-                    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/tupleValuesAxis'</span>
-                    <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-                        <span class="na">values</span><span class="pi">:</span>
-                          <span class="na">items</span><span class="pi">:</span>
-                            <span class="na">$comment</span><span class="pi">:</span> <span class="s">In a Section, tuples always have 3 values (txy)</span>
-                            <span class="na">minItems</span><span class="pi">:</span> <span class="m">3</span>
-                            <span class="na">maxItems</span><span class="pi">:</span> <span class="m">3</span>
-                        <span class="na">coordinates</span><span class="pi">:</span>
-                          <span class="na">const</span><span class="pi">:</span>
-                          <span class="pi">-</span> <span class="s">t</span>
-                          <span class="pi">-</span> <span class="s">x</span>
-                          <span class="pi">-</span> <span class="s">y</span>
-                  <span class="na">z</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericAxis'</span>
-                <span class="na">required</span><span class="pi">:</span>
-                <span class="pi">-</span> <span class="s">composite</span>
-                <span class="pi">-</span> <span class="s">z</span>
-                <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-        <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">domainType</span><span class="pi">:</span>
-                <span class="na">const</span><span class="pi">:</span> <span class="s">Polygon</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Polygon</span><span class="nv"> </span><span class="s">domain:</span><span class="nv"> </span><span class="s">mandatory</span><span class="nv"> </span><span class="s">composite</span><span class="nv"> </span><span class="s">axis,</span><span class="nv"> </span><span class="s">optional</span><span class="nv"> </span><span class="s">z</span><span class="nv"> </span><span class="s">and</span>
-              <span class="s">t</span><span class="nv"> </span><span class="s">axes'</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">axes</span><span class="pi">:</span>
-                <span class="na">properties</span><span class="pi">:</span>
-                  <span class="na">composite</span><span class="pi">:</span>
-                    <span class="na">allOf</span><span class="pi">:</span>
-                    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/polygonValuesAxis'</span>
-                    <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-                        <span class="na">values</span><span class="pi">:</span>
-                          <span class="na">$comment</span><span class="pi">:</span> <span class="s">There can only be one polygon in the axis</span>
-                          <span class="na">maxItems</span><span class="pi">:</span> <span class="m">1</span>
-                        <span class="na">coordinates</span><span class="pi">:</span>
-                          <span class="na">const</span><span class="pi">:</span>
-                          <span class="pi">-</span> <span class="s">x</span>
-                          <span class="pi">-</span> <span class="s">y</span>
-                  <span class="na">z</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericSingleValueAxis'</span>
-                  <span class="na">t</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/stringSingleValueAxis'</span>
-                <span class="na">required</span><span class="pi">:</span>
-                <span class="pi">-</span> <span class="s">composite</span>
-                <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-        <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">domainType</span><span class="pi">:</span>
-                <span class="na">const</span><span class="pi">:</span> <span class="s">PolygonSeries</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">PolygonSeries</span><span class="nv"> </span><span class="s">domain:</span><span class="nv"> </span><span class="s">mandatory</span><span class="nv"> </span><span class="s">composite</span><span class="nv"> </span><span class="s">axis,</span><span class="nv"> </span><span class="s">optional</span>
-              <span class="s">z</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">t</span><span class="nv"> </span><span class="s">axes'</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">axes</span><span class="pi">:</span>
-                <span class="na">properties</span><span class="pi">:</span>
-                  <span class="na">composite</span><span class="pi">:</span>
-                    <span class="na">allOf</span><span class="pi">:</span>
-                    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/polygonValuesAxis'</span>
-                    <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-                        <span class="na">values</span><span class="pi">:</span>
-                          <span class="na">$comment</span><span class="pi">:</span> <span class="s">There can only be one polygon in the axis</span>
-                          <span class="na">maxItems</span><span class="pi">:</span> <span class="m">1</span>
-                        <span class="na">coordinates</span><span class="pi">:</span>
-                          <span class="na">const</span><span class="pi">:</span>
-                          <span class="pi">-</span> <span class="s">x</span>
-                          <span class="pi">-</span> <span class="s">y</span>
-                  <span class="na">z</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericSingleValueAxis'</span>
-                  <span class="na">t</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/stringValuesAxis'</span>
-                <span class="na">required</span><span class="pi">:</span>
-                <span class="pi">-</span> <span class="s">composite</span>
-                <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-        <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">domainType</span><span class="pi">:</span>
-                <span class="na">const</span><span class="pi">:</span> <span class="s">MultiPolygon</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">MultiPolygon</span><span class="nv"> </span><span class="s">domain:</span><span class="nv"> </span><span class="s">mandatory</span><span class="nv"> </span><span class="s">composite</span><span class="nv"> </span><span class="s">axis,</span><span class="nv"> </span><span class="s">optional</span>
-              <span class="s">z</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">t</span><span class="nv"> </span><span class="s">axes'</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">axes</span><span class="pi">:</span>
-                <span class="na">properties</span><span class="pi">:</span>
-                  <span class="na">composite</span><span class="pi">:</span>
-                    <span class="na">allOf</span><span class="pi">:</span>
-                    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/polygonValuesAxis'</span>
-                    <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-                        <span class="na">coordinates</span><span class="pi">:</span>
-                          <span class="na">const</span><span class="pi">:</span>
-                          <span class="pi">-</span> <span class="s">x</span>
-                          <span class="pi">-</span> <span class="s">y</span>
-                  <span class="na">z</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericSingleValueAxis'</span>
-                  <span class="na">t</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/stringSingleValueAxis'</span>
-                <span class="na">required</span><span class="pi">:</span>
-                <span class="pi">-</span> <span class="s">composite</span>
-                <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-        <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">domainType</span><span class="pi">:</span>
-                <span class="na">const</span><span class="pi">:</span> <span class="s">MultiPolygonSeries</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">MultiPolygonSeries</span><span class="nv"> </span><span class="s">domain:</span><span class="nv"> </span><span class="s">mandatory</span><span class="nv"> </span><span class="s">composite</span><span class="nv"> </span><span class="s">axis,</span><span class="nv"> </span><span class="s">optional</span>
-              <span class="s">z</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">t</span><span class="nv"> </span><span class="s">axes'</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">axes</span><span class="pi">:</span>
-                <span class="na">properties</span><span class="pi">:</span>
-                  <span class="na">composite</span><span class="pi">:</span>
-                    <span class="na">allOf</span><span class="pi">:</span>
-                    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/polygonValuesAxis'</span>
-                    <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-                        <span class="na">coordinates</span><span class="pi">:</span>
-                          <span class="na">const</span><span class="pi">:</span>
-                          <span class="pi">-</span> <span class="s">x</span>
-                          <span class="pi">-</span> <span class="s">y</span>
-                  <span class="na">z</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericSingleValueAxis'</span>
-                  <span class="na">t</span><span class="pi">:</span>
-                    <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/stringValuesAxis'</span>
-                <span class="na">required</span><span class="pi">:</span>
-                <span class="pi">-</span> <span class="s">composite</span>
-                <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-  <span class="na">i18n</span><span class="pi">:</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">Object representing an internationalised string where keys are BCP</span>
-      <span class="s">47 language tags.</span>
-    <span class="na">patternProperties</span><span class="pi">:</span>
-      <span class="pi">?</span> <span class="s">^(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*))$</span>
-      <span class="pi">:</span> <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-    <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-  <span class="na">ndArray</span><span class="pi">:</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">Object representing a multidimensional (&gt;= 0D) array with named axes,</span>
-      <span class="s">encoded as a flat one-dimensional array in row-major order</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span>
-        <span class="na">const</span><span class="pi">:</span> <span class="s">NdArray</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
-      <span class="na">dataType</span><span class="pi">:</span>
-        <span class="na">enum</span><span class="pi">:</span>
-        <span class="pi">-</span> <span class="s">float</span>
-        <span class="pi">-</span> <span class="s">integer</span>
-        <span class="pi">-</span> <span class="s">string</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#dataType</span>
-        <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-      <span class="na">shape</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">items</span><span class="pi">:</span>
-          <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#shape</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
-      <span class="na">axisNames</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">items</span><span class="pi">:</span>
-          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-        <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#axisNames</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
-      <span class="na">values</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#values</span>
-        <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-    <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-        <span class="na">properties</span><span class="pi">:</span>
-          <span class="na">dataType</span><span class="pi">:</span>
-            <span class="na">const</span><span class="pi">:</span> <span class="s">float</span>
-      <span class="na">then</span><span class="pi">:</span>
-        <span class="na">properties</span><span class="pi">:</span>
-          <span class="na">values</span><span class="pi">:</span>
-            <span class="na">items</span><span class="pi">:</span>
-              <span class="na">type</span><span class="pi">:</span>
-              <span class="pi">-</span> <span class="s">number</span>
-              <span class="pi">-</span> <span class="s1">'</span><span class="s">null'</span>
-            <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#values</span>
-            <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-    <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-        <span class="na">properties</span><span class="pi">:</span>
-          <span class="na">dataType</span><span class="pi">:</span>
-            <span class="na">const</span><span class="pi">:</span> <span class="s">integer</span>
-      <span class="na">then</span><span class="pi">:</span>
-        <span class="na">properties</span><span class="pi">:</span>
-          <span class="na">values</span><span class="pi">:</span>
-            <span class="na">items</span><span class="pi">:</span>
-              <span class="na">type</span><span class="pi">:</span>
-              <span class="pi">-</span> <span class="s">integer</span>
-              <span class="pi">-</span> <span class="s1">'</span><span class="s">null'</span>
-            <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#values</span>
-            <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-    <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-        <span class="na">properties</span><span class="pi">:</span>
-          <span class="na">dataType</span><span class="pi">:</span>
-            <span class="na">const</span><span class="pi">:</span> <span class="s">string</span>
-      <span class="na">then</span><span class="pi">:</span>
-        <span class="na">properties</span><span class="pi">:</span>
-          <span class="na">values</span><span class="pi">:</span>
-            <span class="na">items</span><span class="pi">:</span>
-              <span class="na">type</span><span class="pi">:</span>
-              <span class="pi">-</span> <span class="s">string</span>
-              <span class="pi">-</span> <span class="s1">'</span><span class="s">null'</span>
-            <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#values</span>
-            <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-    <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-        <span class="na">anyOf</span><span class="pi">:</span>
-        <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-            <span class="na">values</span><span class="pi">:</span>
-              <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
-        <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-            <span class="na">shape</span><span class="pi">:</span>
-              <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
-          <span class="na">required</span><span class="pi">:</span>
-          <span class="pi">-</span> <span class="s">shape</span>
-        <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-            <span class="na">axisNames</span><span class="pi">:</span>
-              <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
-          <span class="na">required</span><span class="pi">:</span>
-          <span class="pi">-</span> <span class="s">axisNames</span>
-      <span class="na">then</span><span class="pi">:</span>
-        <span class="na">properties</span><span class="pi">:</span>
-          <span class="na">shape</span><span class="pi">:</span>
-            <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
-            <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#shape</span>
-            <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
-          <span class="na">axisNames</span><span class="pi">:</span>
-            <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
-            <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#axisNames</span>
-            <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
-        <span class="na">required</span><span class="pi">:</span>
-        <span class="pi">-</span> <span class="s">shape</span>
-        <span class="pi">-</span> <span class="s">axisNames</span>
-    <span class="na">required</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">type</span>
-    <span class="pi">-</span> <span class="s">dataType</span>
-    <span class="pi">-</span> <span class="s">values</span>
-  <span class="na">numericAxis</span><span class="pi">:</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">Simple axis with numeric values</span>
-    <span class="na">if</span><span class="pi">:</span>
-      <span class="na">required</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">values</span>
-    <span class="na">then</span><span class="pi">:</span>
-      <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericValuesAxis'</span>
-    <span class="na">else</span><span class="pi">:</span>
-      <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericRegularlySpacedAxis'</span>
-  <span class="na">numericRegularlySpacedAxis</span><span class="pi">:</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">A regularly-spaced numeric axis</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">start</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#start</span>
-      <span class="na">stop</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#stop</span>
-      <span class="na">num</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">integer</span>
-        <span class="na">minimum</span><span class="pi">:</span> <span class="m">1</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#num</span>
-    <span class="na">required</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">start</span>
-    <span class="pi">-</span> <span class="s">stop</span>
-    <span class="pi">-</span> <span class="s">num</span>
-    <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-  <span class="na">numericSingleValueAxis</span><span class="pi">:</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">Axis defined by single numeric value</span>
-    <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericValuesAxis'</span>
-    <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-        <span class="na">values</span><span class="pi">:</span>
-          <span class="na">maxItems</span><span class="pi">:</span> <span class="m">1</span>
-          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#values</span>
-          <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-  <span class="na">numericValuesAxis</span><span class="pi">:</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">Axis defined by list of numeric axis values and optional bounds</span>
-    <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/valuesAxisBase'</span>
-    <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-        <span class="na">values</span><span class="pi">:</span>
-          <span class="na">items</span><span class="pi">:</span>
-            <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
-          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#values</span>
-          <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-        <span class="na">bounds</span><span class="pi">:</span>
-          <span class="na">items</span><span class="pi">:</span>
-            <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
-          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#bounds</span>
-          <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-      <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-  <span class="na">observedProperty</span><span class="pi">:</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">A definition of the quantity being measured.</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">id</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-      <span class="na">label</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/i18n'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/2004/02/skos/core#prefLabel</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@language'</span>
-      <span class="na">description</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/i18n'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://purl.org/dc/terms/description</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@language'</span>
-      <span class="na">categories</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">items</span><span class="pi">:</span>
-          <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-          <span class="na">properties</span><span class="pi">:</span>
-            <span class="na">id</span><span class="pi">:</span>
-              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-              <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-            <span class="na">label</span><span class="pi">:</span>
-              <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/i18n'</span>
-              <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/2004/02/skos/core#prefLabel</span>
-              <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@language'</span>
-            <span class="na">description</span><span class="pi">:</span>
-              <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/i18n'</span>
-              <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://purl.org/dc/terms/description</span>
-              <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@language'</span>
-          <span class="na">required</span><span class="pi">:</span>
-          <span class="pi">-</span> <span class="s">id</span>
-          <span class="pi">-</span> <span class="s">label</span>
-        <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
-    <span class="na">required</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">label</span>
-  <span class="na">parameter</span><span class="pi">:</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">Represents metadata about the values of the coverage</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">id</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-      <span class="na">type</span><span class="pi">:</span>
-        <span class="na">description</span><span class="pi">:</span> <span class="s">Type of the parameter object, must be "Parameter"</span>
-        <span class="na">const</span><span class="pi">:</span> <span class="s">Parameter</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
-      <span class="na">description</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/i18n'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://purl.org/dc/terms/description</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@language'</span>
-      <span class="na">observedProperty</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/observedProperty'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#observedProperty</span>
-      <span class="na">unit</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/unit'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://qudt.org/schema/qudt#unit</span>
-      <span class="na">categoryEncoding</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-        <span class="na">description</span><span class="pi">:</span> <span class="s">Maps IDs of categories in the observedProperty to range values</span>
-        <span class="na">patternProperties</span><span class="pi">:</span>
-          <span class="na">.+</span><span class="pi">:</span>
-            <span class="na">oneOf</span><span class="pi">:</span>
-            <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">integer</span>
-            <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-              <span class="na">items</span><span class="pi">:</span>
-                <span class="na">type</span><span class="pi">:</span> <span class="s">integer</span>
-              <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
-              <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#categoryEncoding</span>
-    <span class="na">required</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">type</span>
-    <span class="pi">-</span> <span class="s">observedProperty</span>
-  <span class="na">parameterGroup</span><span class="pi">:</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">Represents logical groups of parameters</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span>
-        <span class="na">description</span><span class="pi">:</span> <span class="s">Type of the parameter group object, must be "ParameterGroup"</span>
-        <span class="na">const</span><span class="pi">:</span> <span class="s">ParameterGroup</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
-      <span class="na">id</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-      <span class="na">label</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/i18n'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/2004/02/skos/core#prefLabel</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@language'</span>
-      <span class="na">description</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/i18n'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://purl.org/dc/terms/description</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@language'</span>
-      <span class="na">observedProperty</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/observedProperty'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#observedProperty</span>
-      <span class="na">members</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">items</span><span class="pi">:</span>
-          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-        <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
-        <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#member</span>
-        <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@vocab'</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@set'</span>
-    <span class="na">required</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">type</span>
-    <span class="pi">-</span> <span class="s">members</span>
-    <span class="na">anyOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">required</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">label</span>
-    <span class="pi">-</span> <span class="na">required</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">observedProperty</span>
-  <span class="na">polygonValuesAxis</span><span class="pi">:</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">Polygon-based axis</span>
-    <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/valuesAxisBase'</span>
-    <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-        <span class="na">dataType</span><span class="pi">:</span>
-          <span class="na">const</span><span class="pi">:</span> <span class="s">polygon</span>
-          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#dataType</span>
-          <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-        <span class="na">values</span><span class="pi">:</span>
-          <span class="na">items</span><span class="pi">:</span>
-            <span class="na">description</span><span class="pi">:</span> <span class="s">A GeoJSON polygon</span>
-            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-            <span class="na">items</span><span class="pi">:</span>
-              <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-              <span class="na">items</span><span class="pi">:</span>
-                <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">The</span><span class="nv"> </span><span class="s">inner</span><span class="nv"> </span><span class="s">array:</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">coordinates</span><span class="nv"> </span><span class="s">themselves'</span>
-                <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-                <span class="na">items</span><span class="pi">:</span>
-                  <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
-                <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
-              <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
-            <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
-          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#values</span>
-          <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-        <span class="na">coordinates</span><span class="pi">:</span>
-          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#coordinates</span>
-          <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-      <span class="na">required</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">dataType</span>
-      <span class="pi">-</span> <span class="s">values</span>
-      <span class="pi">-</span> <span class="s">coordinates</span>
-      <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-  <span class="na">primitiveValuesAxis</span><span class="pi">:</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">Validates any axis with primitive values</span>
-    <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/valuesAxisBase'</span>
-    <span class="pi">-</span> <span class="na">$comment</span><span class="pi">:</span> <span class="s">This redundant branch exists to fail early with succinct errors</span>
-      <span class="na">properties</span><span class="pi">:</span>
-        <span class="na">values</span><span class="pi">:</span>
-          <span class="na">items</span><span class="pi">:</span>
-            <span class="na">oneOf</span><span class="pi">:</span>
-            <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
-            <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#values</span>
-          <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-    <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-        <span class="na">properties</span><span class="pi">:</span>
-          <span class="na">values</span><span class="pi">:</span>
-            <span class="na">items</span><span class="pi">:</span>
-              <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
-      <span class="na">then</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/numericValuesAxis'</span>
-      <span class="na">else</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/stringValuesAxis'</span>
-  <span class="na">referenceSystem</span><span class="pi">:</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
-    <span class="na">required</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">type</span>
-    <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-        <span class="na">properties</span><span class="pi">:</span>
-          <span class="na">type</span><span class="pi">:</span>
-            <span class="na">const</span><span class="pi">:</span> <span class="s">TemporalRS</span>
-      <span class="na">then</span><span class="pi">:</span>
-        <span class="na">description</span><span class="pi">:</span> <span class="s">Temporal reference system</span>
-        <span class="na">properties</span><span class="pi">:</span>
-          <span class="na">calendar</span><span class="pi">:</span>
-            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-            <span class="na">oneOf</span><span class="pi">:</span>
-            <span class="pi">-</span> <span class="na">const</span><span class="pi">:</span> <span class="s">Gregorian</span>
-            <span class="pi">-</span> <span class="na">pattern</span><span class="pi">:</span> <span class="s">^https?://</span>
-            <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#calendar</span>
-            <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@vocab'</span>
-          <span class="na">timeScale</span><span class="pi">:</span>
-            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-            <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#timeScale</span>
-        <span class="na">required</span><span class="pi">:</span>
-        <span class="pi">-</span> <span class="s">calendar</span>
-    <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-        <span class="na">properties</span><span class="pi">:</span>
-          <span class="na">type</span><span class="pi">:</span>
-            <span class="na">const</span><span class="pi">:</span> <span class="s">IdentifierRS</span>
-      <span class="na">then</span><span class="pi">:</span>
-        <span class="na">description</span><span class="pi">:</span> <span class="s">An identifier-based reference system</span>
-        <span class="na">properties</span><span class="pi">:</span>
-          <span class="na">id</span><span class="pi">:</span>
-            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-            <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-          <span class="na">label</span><span class="pi">:</span>
-            <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/i18n'</span>
-            <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/2004/02/skos/core#prefLabel</span>
-            <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@language'</span>
-          <span class="na">description</span><span class="pi">:</span>
-            <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/i18n'</span>
-            <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://purl.org/dc/terms/description</span>
-            <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@language'</span>
-          <span class="na">targetConcept</span><span class="pi">:</span>
-            <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/targetConcept'</span>
-            <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#targetConcept</span>
-          <span class="na">identifiers</span><span class="pi">:</span>
-            <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-            <span class="na">patternProperties</span><span class="pi">:</span>
-              <span class="na">.+</span><span class="pi">:</span>
-                <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/targetConcept'</span>
-            <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#identifier</span>
-            <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-            <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@index'</span>
-        <span class="na">required</span><span class="pi">:</span>
-        <span class="pi">-</span> <span class="s">targetConcept</span>
-  <span class="na">referenceSystemConnection</span><span class="pi">:</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Reference</span><span class="nv"> </span><span class="s">System</span><span class="nv"> </span><span class="s">Connection</span><span class="nv"> </span><span class="s">object:</span><span class="nv"> </span><span class="s">connects</span><span class="nv"> </span><span class="s">coordinates</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">reference</span>
-      <span class="s">systems'</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">coordinates</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">items</span><span class="pi">:</span>
-          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-        <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#coordinates</span>
-        <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-      <span class="na">system</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/referenceSystem'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#referenceSystem</span>
-    <span class="na">required</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">coordinates</span>
-    <span class="pi">-</span> <span class="s">system</span>
-  <span class="na">stringSingleValueAxis</span><span class="pi">:</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">Axis defined by single string value</span>
-    <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/stringValuesAxis'</span>
-    <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-        <span class="na">values</span><span class="pi">:</span>
-          <span class="na">maxItems</span><span class="pi">:</span> <span class="m">1</span>
-          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#values</span>
-          <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-  <span class="na">stringValuesAxis</span><span class="pi">:</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">Simple axis with string values (e.g. time strings)</span>
-    <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/valuesAxisBase'</span>
-    <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-        <span class="na">values</span><span class="pi">:</span>
-          <span class="na">items</span><span class="pi">:</span>
-            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#values</span>
-          <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-        <span class="na">bounds</span><span class="pi">:</span>
-          <span class="na">items</span><span class="pi">:</span>
-            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#bounds</span>
-          <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-      <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-  <span class="na">targetConcept</span><span class="pi">:</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">id</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-      <span class="na">label</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/i18n'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/2004/02/skos/core#prefLabel</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@language'</span>
-      <span class="na">description</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/i18n'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://purl.org/dc/terms/description</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@language'</span>
-    <span class="na">required</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">label</span>
-  <span class="na">tiledNdArray</span><span class="pi">:</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">Object representing a multidimensional (&gt;= 1D) array with named axes</span>
-      <span class="s">split up into sets of linked NdArray documents</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span>
-        <span class="na">const</span><span class="pi">:</span> <span class="s">TiledNdArray</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
-      <span class="na">dataType</span><span class="pi">:</span>
-        <span class="na">enum</span><span class="pi">:</span>
-        <span class="pi">-</span> <span class="s">float</span>
-        <span class="pi">-</span> <span class="s">integer</span>
-        <span class="pi">-</span> <span class="s">string</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#dataType</span>
-        <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-      <span class="na">shape</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">items</span><span class="pi">:</span>
-          <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
-        <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#shape</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
-      <span class="na">axisNames</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">items</span><span class="pi">:</span>
-          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-        <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
-        <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#axisNames</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
-      <span class="na">tileSets</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
-        <span class="na">items</span><span class="pi">:</span>
-          <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-          <span class="na">properties</span><span class="pi">:</span>
-            <span class="na">tileShape</span><span class="pi">:</span>
-              <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-              <span class="na">items</span><span class="pi">:</span>
-                <span class="na">type</span><span class="pi">:</span>
-                <span class="pi">-</span> <span class="s">number</span>
-                <span class="pi">-</span> <span class="s1">'</span><span class="s">null'</span>
-              <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
-              <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#tileShape</span>
-              <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
-            <span class="na">urlTemplate</span><span class="pi">:</span>
-              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-              <span class="na">description</span><span class="pi">:</span> <span class="s">RFC 6570 Level 1 URI template</span>
-              <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#urlTemplate</span>
-          <span class="na">required</span><span class="pi">:</span>
-          <span class="pi">-</span> <span class="s">tileShape</span>
-          <span class="pi">-</span> <span class="s">urlTemplate</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#tileSet</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@set'</span>
-    <span class="na">required</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">type</span>
-    <span class="pi">-</span> <span class="s">dataType</span>
-    <span class="pi">-</span> <span class="s">shape</span>
-    <span class="pi">-</span> <span class="s">axisNames</span>
-    <span class="pi">-</span> <span class="s">tileSets</span>
-  <span class="na">tupleValuesAxis</span><span class="pi">:</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">Tuple-based axis</span>
-    <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/valuesAxisBase'</span>
-    <span class="pi">-</span> <span class="na">properties</span><span class="pi">:</span>
-        <span class="na">dataType</span><span class="pi">:</span>
-          <span class="na">const</span><span class="pi">:</span> <span class="s">tuple</span>
-          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#dataType</span>
-          <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-        <span class="na">values</span><span class="pi">:</span>
-          <span class="na">items</span><span class="pi">:</span>
-            <span class="na">description</span><span class="pi">:</span> <span class="s">A tuple of axis values (numbers or strings)</span>
-            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-            <span class="na">items</span><span class="pi">:</span>
-              <span class="na">type</span><span class="pi">:</span>
-              <span class="pi">-</span> <span class="s">number</span>
-              <span class="pi">-</span> <span class="s">string</span>
-            <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
-          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#values</span>
-          <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-        <span class="na">coordinates</span><span class="pi">:</span>
-          <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#coordinates</span>
-          <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-      <span class="na">required</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">dataType</span>
-      <span class="pi">-</span> <span class="s">values</span>
-      <span class="pi">-</span> <span class="s">coordinates</span>
-      <span class="na">additionalProperties</span><span class="pi">:</span> <span class="no">false</span>
-  <span class="na">unit</span><span class="pi">:</span>
-    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">The units of measure</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">id</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-      <span class="na">label</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/i18n'</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/2004/02/skos/core#prefLabel</span>
-        <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@language'</span>
-      <span class="na">symbol</span><span class="pi">:</span>
-        <span class="na">allOf</span><span class="pi">:</span>
-        <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span>
-          <span class="pi">-</span> <span class="s">string</span>
-          <span class="pi">-</span> <span class="s">object</span>
-        <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-            <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">type</span><span class="pi">:</span>
-                <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-                <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
-              <span class="na">value</span><span class="pi">:</span>
-                <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-                <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@value'</span>
-            <span class="na">required</span><span class="pi">:</span>
-            <span class="pi">-</span> <span class="s">type</span>
-            <span class="pi">-</span> <span class="s">value</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://qudt.org/schema/qudt#symbol</span>
-    <span class="na">anyOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">required</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">label</span>
-    <span class="pi">-</span> <span class="na">required</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">symbol</span>
-  <span class="na">valuesAxis</span><span class="pi">:</span>
-    <span class="na">description</span><span class="pi">:</span> <span class="s">Validates any values-based axis</span>
-    <span class="na">allOf</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/valuesAxisBase'</span>
-    <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-        <span class="na">not</span><span class="pi">:</span>
-          <span class="na">required</span><span class="pi">:</span>
-          <span class="pi">-</span> <span class="s">dataType</span>
-      <span class="na">then</span><span class="pi">:</span>
-        <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/primitiveValuesAxis'</span>
-    <span class="na">dependencies</span><span class="pi">:</span>
-      <span class="na">dataType</span><span class="pi">:</span>
-        <span class="na">allOf</span><span class="pi">:</span>
-        <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">dataType</span><span class="pi">:</span>
-                <span class="na">const</span><span class="pi">:</span> <span class="s">tuple</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/tupleValuesAxis'</span>
-        <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span>
-            <span class="na">properties</span><span class="pi">:</span>
-              <span class="na">dataType</span><span class="pi">:</span>
-                <span class="na">const</span><span class="pi">:</span> <span class="s">polygon</span>
-          <span class="na">then</span><span class="pi">:</span>
-            <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/definitions/polygonValuesAxis'</span>
-  <span class="na">valuesAxisBase</span><span class="pi">:</span>
-    <span class="na">$comment</span><span class="pi">:</span> <span class="s">Base schema for values-based axis schemas</span>
-    <span class="na">properties</span><span class="pi">:</span>
-      <span class="na">dataType</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-        <span class="na">not</span><span class="pi">:</span>
-          <span class="na">const</span><span class="pi">:</span> <span class="s">primitive</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#dataType</span>
-        <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
-      <span class="na">values</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
-        <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#values</span>
-        <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-      <span class="na">coordinates</span><span class="pi">:</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">items</span><span class="pi">:</span>
-          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-        <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#coordinates</span>
-        <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-      <span class="na">bounds</span><span class="pi">:</span>
-        <span class="na">description</span><span class="pi">:</span> <span class="s">Optional axis bounds. Must be twice as long (and same data type)</span>
-          <span class="s">as "values"</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
-        <span class="na">minItems</span><span class="pi">:</span> <span class="m">2</span>
-        <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#bounds</span>
-        <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@json'</span>
-    <span class="na">required</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="s">values</span>
+<h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">http://json-schema.org/draft-07/schema#</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">A CoverageJSON object</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Component</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">OGC</span><span class="nv"> </span><span class="s">Coverage</span><span class="nv"> </span><span class="s">Implementation</span><span class="nv"> </span><span class="s">Schema</span><span class="nv"> </span><span class="s">1.0.</span><span class="nv"> </span><span class="s">Last</span><span class="nv"> </span><span class="s">updated:</span><span class="nv"> </span><span class="s">2023-05-10.</span>
+  <span class="s">Copyright</span><span class="nv"> </span><span class="s">(c)</span><span class="nv"> </span><span class="s">2023</span><span class="nv"> </span><span class="s">Open</span><span class="nv"> </span><span class="s">Geospatial</span><span class="nv"> </span><span class="s">Consortium,</span><span class="nv"> </span><span class="s">Inc.</span><span class="nv"> </span><span class="s">All</span><span class="nv"> </span><span class="s">Rights</span><span class="nv"> </span><span class="s">Reserved.</span><span class="nv"> </span><span class="s">To</span><span class="nv"> </span><span class="s">obtain</span>
+  <span class="s">additional</span><span class="nv"> </span><span class="s">rights</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">use,</span><span class="nv"> </span><span class="s">visit</span><span class="nv"> </span><span class="s">http://www.opengeospatial.org/legal/.'</span>
+<span class="na">$ref</span><span class="pi">:</span> <span class="s">https://schemas.opengis.net/covjson/1.0/coveragejson.json</span>
 <span class="na">x-jsonld-extra-terms</span><span class="pi">:</span>
+  <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@type'</span>
+  <span class="na">value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@value'</span>
+  <span class="na">label</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/2004/02/skos/core#prefLabel</span>
+    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@language'</span>
   <span class="na">title</span><span class="pi">:</span>
     <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://purl.org/dc/terms/title</span>
     <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@language'</span>
+  <span class="na">description</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://purl.org/dc/terms/description</span>
+    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@language'</span>
+  <span class="na">unit</span><span class="pi">:</span> <span class="s">http://qudt.org/schema/qudt#unit</span>
+  <span class="na">symbol</span><span class="pi">:</span> <span class="s">http://qudt.org/schema/qudt#symbol</span>
   <span class="na">Domain</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#Domain</span>
+  <span class="na">domain</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#domain</span>
+  <span class="na">domainType</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#domainType</span>
+    <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@vocab'</span>
+  <span class="na">axes</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#axis</span>
+    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@index'</span>
+  <span class="na">dataType</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#dataType</span>
+    <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@vocab'</span>
   <span class="na">primitive</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#primitive</span>
   <span class="na">tuple</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#tuple</span>
   <span class="na">polygon</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#polygon</span>
+  <span class="na">num</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#num</span>
+  <span class="na">start</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#start</span>
+  <span class="na">stop</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#stop</span>
+  <span class="na">referencing</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#referencing</span>
+    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@set'</span>
   <span class="na">components</span><span class="pi">:</span>
     <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#components</span>
     <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+  <span class="na">system</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#referenceSystem</span>
   <span class="na">RS</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#ReferenceSystem</span>
   <span class="na">CRS</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#CoordinateReferenceSystem</span>
   <span class="na">cs</span><span class="pi">:</span> <span class="s">http://data.ign.fr/def/ignf#coordinateSystem</span>
   <span class="na">CS</span><span class="pi">:</span> <span class="s">http://data.ign.fr/def/ignf#CoordinateSystem</span>
   <span class="na">TemporalRS</span><span class="pi">:</span> <span class="s">http://inspire.ec.europa.eu/glossary/TemporalReferenceSystem</span>
   <span class="na">TemporalCRS</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#TemporalCRS</span>
+  <span class="na">calendar</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#calendar</span>
+    <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@vocab'</span>
   <span class="na">Gregorian</span><span class="pi">:</span> <span class="s">http://www.opengis.net/def/uom/ISO-8601/0/Gregorian</span>
+  <span class="na">timeScale</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#timeScale</span>
   <span class="na">SpatialRS</span><span class="pi">:</span> <span class="s">http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem</span>
   <span class="na">SpatialCRS</span><span class="pi">:</span> <span class="s">http://data.ign.fr/def/ignf#CRS</span>
   <span class="na">GeodeticCRS</span><span class="pi">:</span> <span class="s">http://data.ign.fr/def/ignf#GeodeticCRS</span>
@@ -2557,14 +1362,49 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
     <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
   <span class="na">direction</span><span class="pi">:</span> <span class="s">http://data.ign.fr/def/ignf#axisDirection</span>
   <span class="na">IdentifierRS</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#IdentifierReferenceSystem</span>
+  <span class="na">targetConcept</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#targetConcept</span>
+  <span class="na">identifiers</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#identifier</span>
+    <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
+    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@index'</span>
   <span class="na">Parameter</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#Parameter</span>
+  <span class="na">parameters</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#parameter</span>
+    <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
+    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@index'</span>
+  <span class="na">observedProperty</span><span class="pi">:</span> <span class="s">http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#observedProperty</span>
+  <span class="na">categoryEncoding</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#categoryEncoding</span>
   <span class="na">ParameterGroup</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#ParameterGroup</span>
+  <span class="na">members</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#member</span>
+    <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@vocab'</span>
+    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@set'</span>
+  <span class="na">ranges</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#range</span>
+    <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
+    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@index'</span>
   <span class="na">NdArray</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#NdArray</span>
   <span class="na">TiledNdArray</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#TiledNdArray</span>
+  <span class="na">shape</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#shape</span>
+    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+  <span class="na">tileShape</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#tileShape</span>
+    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+  <span class="na">axisNames</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#axisNames</span>
+    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@list'</span>
+  <span class="na">urlTemplate</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#urlTemplate</span>
+  <span class="na">tileSets</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#tileSet</span>
+    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@set'</span>
   <span class="na">float</span><span class="pi">:</span> <span class="s">http://www.w3.org/2001/XMLSchema#double</span>
   <span class="na">integer</span><span class="pi">:</span> <span class="s">http://www.w3.org/2001/XMLSchema#integer</span>
   <span class="na">string</span><span class="pi">:</span> <span class="s">http://www.w3.org/2001/XMLSchema#string</span>
   <span class="na">Coverage</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#Coverage</span>
+  <span class="na">coverages</span><span class="pi">:</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">http://www.w3.org/ns/hydra/core#member</span>
+    <span class="na">x-jsonld-container</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@set'</span>
   <span class="na">CoverageCollection</span><span class="pi">:</span> <span class="s">https://covjson.org/def/core#CoverageCollection</span>
   <span class="na">Grid</span><span class="pi">:</span> <span class="s">https://covjson.org/def/domainTypes#Grid</span>
   <span class="na">VerticalProfile</span><span class="pi">:</span> <span class="s">https://covjson.org/def/domainTypes#VerticalProfile</span>
@@ -2603,155 +1443,64 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
 </ul>
 <h1 id='json-ld-context'>JSON-LD Context</h1><div class="highlight"><pre class="highlight json tab-json--ldContext"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@type"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"domainType"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:domainType"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@vocab"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"axes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:coordinates"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@json"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"bounds"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:bounds"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@json"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:start"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"stop"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:stop"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"num"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:num"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:axis"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@index"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:identifier"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"referencing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:coordinates"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@json"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"calendar"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:calendar"</span><span class="p">,</span><span class="w">
-              </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@vocab"</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="nl">"timeScale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:timeScale"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"targetConcept"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:targetConcept"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"identifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:identifier"</span><span class="p">,</span><span class="w">
-              </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
-              </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@index"</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-          </span><span class="p">},</span><span class="w">
-          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:referenceSystem"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:referencing"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"dataType"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:dataType"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"shape"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:shape"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"axisNames"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:axisNames"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:values"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@json"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"tileSets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"tileShape"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:tileShape"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"urlTemplate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:urlTemplate"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:tileSet"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:domain"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"unit"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@value"</span><span class="w">
-              </span><span class="p">},</span><span class="w">
-              </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qudt:symbol"</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-          </span><span class="p">},</span><span class="w">
-          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qudt:unit"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"categoryEncoding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:categoryEncoding"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:parameter"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@index"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:identifier"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@type"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@value"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"skos:prefLabel"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@language"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:title"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@language"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:description"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@language"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:observedProperty"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"members"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:member"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@vocab"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"ranges"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:range"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@index"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:identifier"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"coverages"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hydra:member"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dct:title"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@language"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qudt:unit"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qudt:symbol"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"Domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:Domain"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:domain"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"domainType"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:domainType"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@vocab"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"axes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:axis"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@index"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"dataType"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:dataType"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@vocab"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"primitive"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:primitive"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"tuple"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:tuple"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"polygon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:polygon"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"num"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:num"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:start"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"stop"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:stop"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"referencing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:referencing"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"components"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:components"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="w">
     </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:referenceSystem"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"RS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:ReferenceSystem"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"CRS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:CoordinateReferenceSystem"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"cs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ignf:coordinateSystem"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"CS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ignf:CoordinateSystem"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"TemporalRS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inspiregloss:TemporalReferenceSystem"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"TemporalCRS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:TemporalCRS"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"calendar"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:calendar"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@vocab"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"Gregorian"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timeScale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:timeScale"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"SpatialRS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inspiregloss:SpatialReferenceSystem"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"SpatialCRS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ignf:CRS"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"GeodeticCRS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ignf:GeodeticCRS"</span><span class="p">,</span><span class="w">
@@ -2764,14 +1513,58 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"direction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ignf:axisDirection"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"IdentifierRS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:IdentifierReferenceSystem"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"targetConcept"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:targetConcept"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"identifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:identifier"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@index"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"Parameter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:Parameter"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:parameter"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@index"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"observedProperty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssn:observedProperty"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"categoryEncoding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:categoryEncoding"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"ParameterGroup"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:ParameterGroup"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"members"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:member"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@vocab"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"ranges"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:range"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@index"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"NdArray"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:NdArray"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"TiledNdArray"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:TiledNdArray"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shape"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:shape"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"tileShape"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:tileShape"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"axisNames"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:axisNames"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@list"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"urlTemplate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:urlTemplate"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"tileSets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:tileSet"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"float"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xsd:double"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"integer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xsd:integer"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"string"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xsd:string"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"Coverage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:Coverage"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"coverages"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hydra:member"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@set"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"CoverageCollection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjson:CoverageCollection"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"Grid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjsondt:Grid"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"VerticalProfile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"covjsondt:VerticalProfile"</span><span class="p">,</span><span class="w">

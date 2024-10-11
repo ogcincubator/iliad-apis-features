@@ -3,4 +3,4 @@ title: A CoverageJSON object
 description: 'Component of OGC Coverage Implementation Schema 1.0. Last updated: 2023-05-10.
   Copyright (c) 2023 Open Geospatial Consortium, Inc. All Rights Reserved. To obtain
   additional rights of use, visit http://www.opengeospatial.org/legal/.'
-$ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema.json
+$ref: https://schemas.opengis.net/covjson/1.0/coveragejson.json

@@ -6,9 +6,9 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta
-            name="OIM STA Observations (Schema)"
+            name="OIM Observations (Schema)"
         >
-    <title>OIM STA Observations (Schema)</title>
+    <title>OIM Observations (Schema)</title>
 
     <style media="screen">
       .highlight table td { padding: 5px; }
@@ -294,7 +294,7 @@
     </script>
   </head>
 
-  <body class="hosted hosted_iliad hosted_iliad_api hosted_iliad_api_features hosted_iliad_api_features_oim-sta-obs hosted_iliad_api_features_oim-sta-obs_index" data-languages="[&quot;json&quot;,&quot;jsonld&quot;,&quot;turtle&quot;]">
+  <body class="hosted hosted_iliad hosted_iliad_api hosted_iliad_api_features hosted_iliad_api_features_oim-sta-obs hosted_iliad_api_features_oim-sta-obs_index" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -303,18 +303,13 @@
     </a>
     <div class="toc-wrapper">
       <img src="../../../../../images/logo-4d9dfd05.svg" class="logo" alt="" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="json">JSON</a>
-              <a href="#" data-language-name="jsonld">JSON-LD</a>
-              <a href="#" data-language-name="turtle">RDF/Turtle</a>
-        </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#oim-sta-observations-ogc-hosted-iliad-api-features-oim-sta-obs" class="toc-h1 toc-link" data-title="OIM STA Observations ogc.hosted.iliad.api.features.oim-sta-obs">OIM STA Observations <code>ogc.hosted.iliad.api.features.oim-sta-obs</code></a>
+            <a href="#oim-observations-ogc-hosted-iliad-api-features-oim-sta-obs" class="toc-h1 toc-link" data-title="OIM Observations ogc.hosted.iliad.api.features.oim-sta-obs">OIM Observations <code>ogc.hosted.iliad.api.features.oim-sta-obs</code></a>
           </li>
           <li>
             <a href="#description" class="toc-h1 toc-link" data-title="Description">Description</a>
@@ -328,7 +323,7 @@
             <a href="#examples" class="toc-h1 toc-link" data-title="Examples">Examples</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#coverage-json-coverage-representing-snapshot-series-of-grid-with-ld" class="toc-h2 toc-link" data-title="Coverage JSON Coverage representing snapshot series of Grid with LD">Coverage JSON Coverage representing snapshot series of Grid with LD</a>
+                    <a href="#oceans-information-model-examples" class="toc-h2 toc-link" data-title="Oceans Information Model examples">Oceans Information Model examples</a>
                   </li>
               </ul>
           </li>
@@ -347,14 +342,14 @@
       </ul>
         <ul class="toc-footer">
             <li>Version 0.1</li>
-            <li><a href='#'>OIM STA Observations</a></li>
+            <li><a href='#'>OIM Observations</a></li>
             <li><a href='https://blocks.ogc.org/register.html'>Building Blocks register</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='oim-sta-observations-ogc-hosted-iliad-api-features-oim-sta-obs'>OIM STA Observations <code>ogc.hosted.iliad.api.features.oim-sta-obs</code></h1>
+        <h1 id='oim-observations-ogc-hosted-iliad-api-features-oim-sta-obs'>OIM Observations <code>ogc.hosted.iliad.api.features.oim-sta-obs</code></h1>
 <p>Defines SensorThings API Observations to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model.</p>
 
 <p class="status">
@@ -363,7 +358,7 @@
 </p>
 
 <aside class="success">
-This building block is <strong><a href="https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/oim-sta-obs/" target="_blank">valid</a></strong>
+This building block is <strong>valid</strong>
 </aside>
 <h1 id='description'>Description</h1><h2 id='ocean-information-model-observations-profile'>Ocean Information Model Observations Profile</h2>
 <p>Currently a stub where requirements for OIM implementation can be defined as required.</p>
@@ -379,54 +374,8 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
 <p>Note that it may have an externally resolvable URI or be a proxy handled by ILIAD (using the OGC RAINBOW)</p>
 
 <p>The mechanisms for handling external vocabulary constraints to be define here: (TBD)</p>
-<h1 id='examples'>Examples</h1><h2 id='coverage-json-coverage-representing-snapshot-series-of-grid-with-ld'>Coverage JSON Coverage representing snapshot series of Grid with LD</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"@iot.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"@iot.selfLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.org/v1.1/Observations(1)"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"FeatureOfInterest@iot.navigationLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Observations(1)/FeatureOfInterest"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"Datastream@iot.navigationLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Observations(1)/Datastream"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"phenomenonTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-12-31T11:59:59.00+08:00"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-12-31T11:59:59.00+08:00"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="mf">70.4</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-</span></code></pre></div>
-<blockquote class="lang-specific json">
-  <p class="example-links">
-    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.json">Open in new window</a>
-    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fogcincubator.github.io%2Filiad-apis-features%2Fbuild%2Ftests%2Fhosted%2Filiad%2Fapi%2Ffeatures%2Foim-sta-obs%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"@iot.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"@iot.selfLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.org/v1.1/Observations(1)"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"FeatureOfInterest@iot.navigationLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Observations(1)/FeatureOfInterest"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"Datastream@iot.navigationLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Observations(1)/Datastream"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"phenomenonTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-12-31T11:59:59.00+08:00"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"resultTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-12-31T11:59:59.00+08:00"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="mf">70.4</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-sta-obs/context.jsonld"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<blockquote class="lang-specific jsonld">
-  <p class="example-links">
-    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.jsonld">Open in new window</a>
-    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fogcincubator.github.io%2Filiad-apis-features%2Fbuild%2Ftests%2Fhosted%2Filiad%2Fapi%2Ffeatures%2Foim-sta-obs%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
-</blockquote>
-<div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="kd">@prefix</span><span class="w"> </span><span class="nn">sosa1:</span><span class="w"> </span><span class="nl">&lt;https://www.w3.org/TR/vocab-ssn/#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
-</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">sta:</span><span class="w"> </span><span class="nl">&lt;https://schemas.opengis.org/sta/def/core#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
-</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
-
-</span><span class="nl">&lt;http://w3id.org/ogcincubator/coverageJSON/1&gt;</span><span class="w"> </span><span class="nn">sta:</span><span class="n">DataStream</span><span class="w"> </span><span class="s">"Observations(1)/Datastream"</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">sosa1:</span><span class="n">hasFeatureOfInterest</span><span class="w"> </span><span class="s">"Observations(1)/FeatureOfInterest"</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">sosa1:</span><span class="n">hasSimpleResult</span><span class="w"> </span><span class="mf">7.0</span><span class="mi">4</span><span class="n">e+01</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">sosa1:</span><span class="n">phenomenonTime</span><span class="w"> </span><span class="s">"2014-12-31T11:59:59.00+08:00"</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">sosa1:</span><span class="n">resultTime</span><span class="w"> </span><span class="s">"2014-12-31T11:59:59.00+08:00"</span><span class="w"> </span><span class="p">.</span><span class="w">
-
-
-</span></code></pre></div>
-<blockquote class="lang-specific turtle">
-  <p class="example-links">
-    <a target="_blank" href="https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.ttl">Open in new window</a>
-</blockquote>
+<h1 id='examples'>Examples</h1><h2 id='oceans-information-model-examples'>Oceans Information Model examples</h2>
+<p>TBD - see specific sub-profile for examples.</p>
 <h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2020-12/schema</span>
 <span class="na">title</span><span class="pi">:</span> <span class="s">A OIM aligned STA Observtion schema</span>
 <span class="na">description</span><span class="pi">:</span> <span class="s">Component of OGC STA Observation. no particular added constraints are</span>
@@ -1147,11 +1096,6 @@ This building block is <strong><a href="https://github.com/ogcincubator/iliad-ap
 
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="json">JSON</a>
-                <a href="#" data-language-name="jsonld">JSON-LD</a>
-                <a href="#" data-language-name="turtle">RDF/Turtle</a>
-          </div>
       </div>
     </div>
   </body>
