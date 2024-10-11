@@ -1,0 +1,52 @@
+{
+  "@context": {
+  "chunks": {
+  "@id": "http:/w3id.org/iliad/zarr/chunks",
+  "@type": "@id"
+  },
+  "compressor": {
+  "@id": "http:/w3id.org/iliad/zarr/compressor",
+  "@type": "@id"
+  },
+  "id": {
+  "@id": "http:/w3id.org/iliad/zarr/compressor/id",
+  "@type": "http://www.w3.org/2001/XMLSchema#string"
+  },
+  "cname": {
+  "@id": "http:/w3id.org/iliad/zarr/compressor/cname",
+  "@type": "http://www.w3.org/2001/XMLSchema#string"
+  },
+  "clevel": {
+  "@id": "http:/w3id.org/iliad/zarr/compressor/clevel",
+  "@type": "http://www.w3.org/2001/XMLSchema#integer"
+  },
+  "shuffle": {
+  "@id": "http:/w3id.org/iliad/zarr/compressor/shuffle",
+  "@type": "http://www.w3.org/2001/XMLSchema#integer"
+  },
+  "dtype": {
+  "@id": "http:/w3id.org/iliad/zarr/dtype",
+  "@type": "http://www.w3.org/2001/XMLSchema#string"
+  },
+  "fill_value": {
+  "@id": "http:/w3id.org/iliad/zarr/fill_value",
+  "@type": "http://www.w3.org/2001/XMLSchema#string"
+  },
+  "filters": {
+  "@id": "http:/w3id.org/iliad/zarr/filters",
+  "@type": "@id"
+  },
+  "order": {
+  "@id": "http:/w3id.org/iliad/zarr/order",
+  "@type": "http://www.w3.org/2001/XMLSchema#string"
+  },
+  "shape": {
+  "@id": "http:/w3id.org/iliad/zarr/shape",
+  "@type": "@id"
+  },
+  "zarr_format": {
+  "@id": "http:/w3id.org/iliad/zarr/zarr_format",
+  "@type": "http://www.w3.org/2001/XMLSchema#integer"
+  }
+  }
+  }

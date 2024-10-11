@@ -1,0 +1,11 @@
+- title: Zarr v2 attributes metadata
+  base-uri: http://schemas.opengis.net/zarr
+  snippets:
+    - language: json
+      ref: examples/.zattrs
+
+- title: Zarr v2 group metadata
+  base-uri: http://schemas.opengis.net/zarr
+  snippets:
+    - language: json
+      ref: examples/.zgroups
