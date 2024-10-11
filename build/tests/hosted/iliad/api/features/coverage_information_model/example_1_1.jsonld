@@ -1,4 +1,5 @@
 {
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld",
   "type": "CoverageByDomainAndRangeType",
   "domainSet": {
     "type": "DomainSetType",
@@ -54,6 +55,5 @@
         }
       }
     ]
-  },
-  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld"
+  }
 }

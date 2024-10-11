@@ -120,6 +120,7 @@ x-jsonld-extra-terms:
   MultiPolygonSeries: https://covjson.org/def/domainTypes#MultiPolygonSeries
   MultiPolygon: https://covjson.org/def/domainTypes#MultiPolygon
   Polygon: https://covjson.org/def/domainTypes#Polygon
+x-jsonld-vocab: '_:_:'
 x-jsonld-prefixes:
   skos: http://www.w3.org/2004/02/skos/core#
   dct: http://purl.org/dc/terms/

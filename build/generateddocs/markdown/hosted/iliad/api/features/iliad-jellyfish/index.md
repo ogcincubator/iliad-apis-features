@@ -82,6 +82,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
 #### jsonld
 ```jsonld
 {
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld",
   "@id": "1-18-527-Phyllorhiza_punctata",
   "type": "Feature",
   "featureType": "sosa:Observation",
@@ -109,8 +110,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
       "stingByJF": "Unspecified",
       "beachedJF": "1"
     }
-  },
-  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld"
+  }
 }
 ```
 
@@ -137,7 +137,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
             iliad:speciesScientificName "Phyllorhiza punctata" ;
             iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
     sosa:observedProperty jf-property:jellyFishAbundanceProperty ;
-    sosa:phenomenonTime <2011-07-01t09:00:00> ;
+    sosa:phenomenonTime <2011-07-01T09:00:00> ;
     sosa:resultTime "2011-07-01T09:00:00" ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ] .
@@ -220,6 +220,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
 #### jsonld
 ```jsonld
 {
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld",
   "type": "FeatureCollection",
   "featureType": "sosa:ObservationCollection",
   "features": [
@@ -283,8 +284,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
         }
       }
     }
-  ],
-  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish/context.jsonld"
+  ]
 }
 ```
 
@@ -306,7 +306,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
             iliad:speciesScientificName "Phyllorhiza punctata" ;
             iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
     sosa:observedProperty jf-property:jellyFishAbundanceProperty ;
-    sosa:phenomenonTime <2011-07-01t09:00:00> ;
+    sosa:phenomenonTime <2011-07-01T09:00:00> ;
     sosa:resultTime "2011-07-01T09:00:00" ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ] .
@@ -319,7 +319,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
             iliad:speciesScientificName "Phyllorhiza punctata" ;
             iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
     sosa:observedProperty jf-property:jellyFishAbundanceProperty ;
-    sosa:phenomenonTime <2011-07-01t09:00:00> ;
+    sosa:phenomenonTime <2011-07-01T09:00:00> ;
     sosa:resultTime "2011-07-01T09:00:00" ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 3.564385e+01 3.427363e+01 ) ] .
@@ -431,6 +431,7 @@ x-jsonld-extra-terms:
     x-jsonld-type: '@id'
     x-jsonld-context:
       '@base': https://w3id.org/iliad/jellyfish/property/
+x-jsonld-base: https://w3id.org/iliad/jellyfish/observation/
 x-jsonld-prefixes:
   jf-property: https://w3id.org/iliad/jellyfish/property/
   jf-density: https://w3id.org/iliad/jellyfish/property/densityOfJF/
@@ -448,6 +449,7 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "@base": "https://w3id.org/iliad/jellyfish/observation/",
     "resultTime": "sosa:resultTime",
     "phenomenonTime": {
       "@id": "sosa:phenomenonTime",
@@ -577,11 +579,8 @@ Links to the schema:
     "features": {
       "@id": "sosa:hasMember",
       "@type": "@id",
+      "@container": "@set",
       "@context": {
-        "features": {
-          "@container": "@set",
-          "@id": "geojson:features"
-        },
         "hasFeatureOfInterest": {
           "@id": "sosa:hasFeatureOfInterest",
           "@type": "@id"
@@ -590,8 +589,7 @@ Links to the schema:
           "@id": "sosa:hasResult",
           "@type": "@id"
         }
-      },
-      "@container": "@set"
+      }
     },
     "forProperty": {
       "@id": "sosa:forProperty",
@@ -888,10 +886,7 @@ Links to the schema:
       "@type": "@id"
     },
     "type": "@type",
-    "geometry": {
-      "@context": {},
-      "@id": "geojson:geometry"
-    },
+    "geometry": "geojson:geometry",
     "bbox": {
       "@container": "@list",
       "@id": "geojson:bbox"
@@ -929,11 +924,11 @@ Links to the schema:
       "@context": {
         "date": {
           "@id": "owlTime:hasTime",
-          "@type": "http://www.w3.org/2001/XMLSchema#date"
+          "@type": "xsd:date"
         },
         "timestamp": {
           "@id": "owlTime:hasTime",
-          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+          "@type": "xsd:dateTime"
         },
         "interval": {
           "@id": "owlTime:hasTime",
@@ -968,14 +963,25 @@ Links to the schema:
       "@id": "geojson:geometry",
       "@container": "@list"
     },
+    "PhotonFluxDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity",
+    "invalidatedAtTime": {
+      "@id": "http://www.w3.org/ns/prov#invalidatedAtTime",
+      "@type": "xsd:dateTime"
+    },
     "Attachable": "http://purl.org/linked-data/cube#Attachable",
+    "QuantityValue": "http://qudt.org/schema/qudt/QuantityValue",
     "affiliation": "https://schema.org/affiliation",
+    "Unit": "http://qudt.org/schema/qudt/Unit",
     "Line": "http://www.opengis.net/ont/sf#Line",
     "member": {
       "@id": "http://xmlns.com/foaf/0.1/member",
       "@type": "@id"
     },
     "versionInfo": "http://www.w3.org/2002/07/owl#versionInfo",
+    "generatedAtTime": {
+      "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+      "@type": "xsd:dateTime"
+    },
     "example": "http://www.w3.org/2004/02/skos/core#example",
     "Slice": "http://purl.org/linked-data/cube#Slice",
     "Concentration": "http://purl.oclc.org/NET/ssnx/qu/dim#Concentration",
@@ -992,23 +998,37 @@ Links to the schema:
       "@type": "@id"
     },
     "MultiSurface": "http://www.opengis.net/ont/sf#MultiSurface",
-    "Organization": "https://schema.org/Organization",
-    "GFI_Feature": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
-    "AttributeProperty": "http://purl.org/linked-data/cube#AttributeProperty",
-    "asWKT": {
-      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
-      "@type": "http://www.opengis.net/ont/geosparql#wktLiteral"
-    },
+    "TemporalDuration": "owlTime:TemporalDuration",
+    "Procedure": "sosa:Procedure",
+    "DiffusionCoefficient": "http://purl.oclc.org/NET/ssnx/qu/dim#DiffusionCoefficient",
     "asGeoJSON": {
       "@id": "http://www.opengis.net/ont/geosparql#asGeoJSON",
       "@type": "http://www.opengis.net/ont/geosparql#geoJSONLiteral"
     },
+    "Organization": "https://schema.org/Organization",
+    "Volume": "http://purl.oclc.org/NET/ssnx/qu/dim#Volume",
+    "Thing": "http://www.w3.org/2002/07/owl#Thing",
+    "GFI_Feature": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+    "AttributeProperty": "http://purl.org/linked-data/cube#AttributeProperty",
+    "quantityValue": {
+      "@id": "http://qudt.org/schema/qudt/quantityValue",
+      "@type": "@id"
+    },
+    "TemporalUnit": "owlTime:TemporalUnit",
+    "asWKT": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.opengis.net/ont/geosparql#wktLiteral"
+    },
+    "Angle": "http://purl.oclc.org/NET/ssnx/qu/dim#Angle",
+    "TemperatureDrift": "http://purl.oclc.org/NET/ssnx/qu/dim#TemperatureDrift",
     "RotationalSpeed": "http://purl.oclc.org/NET/ssnx/qu/dim#RotationalSpeed",
     "ComponentProperty": "http://purl.org/linked-data/cube#ComponentProperty",
     "Class": "rdfs:Class",
     "Geometry": "http://www.opengis.net/ont/geosparql#Geometry",
+    "NumberPerArea": "http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerArea",
     "depiction": "http://xmlns.com/foaf/0.1/depiction",
     "Curve": "http://www.opengis.net/ont/sf#Curve",
+    "Instant": "owlTime:Instant",
     "maker": "http://xmlns.com/foaf/0.1/maker",
     "sfWithin": {
       "@id": "http://www.opengis.net/ont/geosparql#sfWithin",
@@ -1016,7 +1036,8 @@ Links to the schema:
     },
     "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",
     "domainIncludes": "https://schema.org/domainIncludes",
-    "SpatialObjectCollection": "http://www.opengis.net/ont/geosparql#SpatialObjectCollection",
+    "long": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+    "numericValue": "http://qudt.org/schema/qudt/numericValue",
     "Concept": "http://www.w3.org/2004/02/skos/core#Concept",
     "component": {
       "@id": "http://purl.org/linked-data/cube#component",
@@ -1031,16 +1052,25 @@ Links to the schema:
     "Compressibility": "http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility",
     "ComponentSet": "http://purl.org/linked-data/cube#ComponentSet",
     "MassPerTimePerArea": "http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerArea",
+    "numericDuration": {
+      "@id": "owlTime:numericDuration",
+      "@type": "xsd:decimal"
+    },
+    "ElectricConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ElectricConductivity",
     "Temperature": "http://purl.oclc.org/NET/ssnx/qu/dim#Temperature",
     "homepage": "http://xmlns.com/foaf/0.1/homepage",
+    "Measure": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Measure",
     "Person": "http://xmlns.com/foaf/0.1/Person",
     "Triangle": "http://www.opengis.net/ont/sf#Triangle",
+    "note": "http://www.w3.org/2004/02/skos/core#note",
     "observationGroup": {
       "@id": "http://purl.org/linked-data/cube#observationGroup",
       "@type": "@id"
     },
+    "Interval": "owlTime:Interval",
     "EnergyFlux": "http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux",
     "StressOrPressure": "http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure",
+    "VolumeDensityRate": "http://purl.oclc.org/NET/ssnx/qu/dim#VolumeDensityRate",
     "Agent": "http://xmlns.com/foaf/0.1/Agent",
     "creator": "dct:creator",
     "Energy": "http://purl.oclc.org/NET/ssnx/qu/dim#Energy",
@@ -1048,39 +1078,62 @@ Links to the schema:
     "Role": "https://schema.org/Role",
     "hasSerialization": {
       "@id": "http://www.opengis.net/ont/geosparql#hasSerialization",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      "@type": "rdfs:Literal"
+    },
+    "hasTime": {
+      "@id": "owlTime:hasTime",
+      "@type": "@id"
     },
     "SF_SamplingFeature.sampledFeature": {
       "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature",
       "@type": "@id"
     },
     "rangeIncludes": "https://schema.org/rangeIncludes",
+    "Mass": "http://purl.oclc.org/NET/ssnx/qu/dim#Mass",
     "location": {
       "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#location",
       "@type": "@id"
     },
     "ComponentSpecification": "http://purl.org/linked-data/cube#ComponentSpecification",
     "Scheme": "http://www.w3.org/2004/02/skos/core#Scheme",
+    "hasEnd": {
+      "@id": "owlTime:hasEnd",
+      "@type": "@id"
+    },
     "rights": "dct:rights",
+    "TemporalEntity": "owlTime:TemporalEntity",
+    "hasBeginning": {
+      "@id": "owlTime:hasBeginning",
+      "@type": "@id"
+    },
     "SF_SamplingFeature": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
     "DimensionProperty": "http://purl.org/linked-data/cube#DimensionProperty",
+    "alt": "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
     "Acceleration": "http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration",
     "identifier": "dct:identifier",
-    "QuantityKind": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind",
+    "Quantity": "http://qudt.org/schema/qudt/Quantity",
+    "MassFlowRate": "http://purl.oclc.org/NET/ssnx/qu/dim#MassFlowRate",
+    "qu.QuantityKind": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind",
+    "SpatialObjectCollection": "http://www.opengis.net/ont/geosparql#SpatialObjectCollection",
     "Distance": "http://purl.oclc.org/NET/ssnx/qu/dim#Distance",
+    "deprecated": "http://www.w3.org/2002/07/owl#deprecated",
+    "Radiance": "http://purl.oclc.org/NET/ssnx/qu/dim#Radiance",
+    "Duration": "owlTime:Duration",
     "TIN": "http://www.opengis.net/ont/sf#TIN",
     "SurfaceDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceDensity",
     "isDefinedBy": "rdfs:isDefinedBy",
     "wgs84.Point": "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
     "definition": "http://www.w3.org/2004/02/skos/core#definition",
+    "editorialNote": "http://www.w3.org/2004/02/skos/core#editorialNote",
     "order": {
       "@id": "http://purl.org/linked-data/cube#order",
-      "@type": "http://www.w3.org/2001/XMLSchema#int"
+      "@type": "xsd:int"
     },
     "hasGeometry": {
       "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
       "@type": "@id"
     },
+    "ssn.Property": "ssn:Property",
     "sfContains": {
       "@id": "http://www.opengis.net/ont/geosparql#sfContains",
       "@type": "@id"
@@ -1088,6 +1141,11 @@ Links to the schema:
     "title": "dct:title",
     "Density": "http://purl.oclc.org/NET/ssnx/qu/dim#Density",
     "LinearRing": "http://www.opengis.net/ont/sf#LinearRing",
+    "Molality": "http://purl.oclc.org/NET/ssnx/qu/dim#Molality",
+    "inXSDDateTimeStamp": {
+      "@id": "owlTime:inXSDDateTimeStamp",
+      "@type": "xsd:dateTimeStamp"
+    },
     "MeasureProperty": "http://purl.org/linked-data/cube#MeasureProperty",
     "PropertyKind": "http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind",
     "SpatialObject": "http://www.opengis.net/ont/geosparql#SpatialObject",
@@ -1095,10 +1153,17 @@ Links to the schema:
       "@id": "http://purl.org/linked-data/cube#sliceStructure",
       "@type": "@id"
     },
+    "NumberPerLength": "http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLength",
+    "lat": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+    "VolumeFlowRate": "http://purl.oclc.org/NET/ssnx/qu/dim#VolumeFlowRate",
     "SpecificEntropy": "http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropy",
     "CodedProperty": "http://purl.org/linked-data/cube#CodedProperty",
     "slice": {
       "@id": "http://purl.org/linked-data/cube#slice",
+      "@type": "@id"
+    },
+    "unit": {
+      "@id": "http://qudt.org/schema/qudt/unit",
       "@type": "@id"
     },
     "date": "dct:date",
@@ -1108,18 +1173,27 @@ Links to the schema:
     "comment": "rdfs:comment",
     "PolyhedralSurface": "http://www.opengis.net/ont/sf#PolyhedralSurface",
     "contributor": "dct:contributor",
+    "unitKind": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#unitKind",
+      "@type": "@id"
+    },
     "dimension": {
       "@id": "http://purl.org/linked-data/cube#dimension",
       "@type": "@id"
     },
     "RadianceExposure": "http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposure",
     "VelocityOrSpeed": "http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed",
+    "inXSDDate": {
+      "@id": "owlTime:inXSDDate",
+      "@type": "xsd:date"
+    },
     "GFI_DomainFeature": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
     "observation": {
       "@id": "http://purl.org/linked-data/cube#observation",
       "@type": "@id"
     },
     "Dimensionless": "http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless",
+    "Area": "http://purl.oclc.org/NET/ssnx/qu/dim#Area",
     "Power": "http://purl.oclc.org/NET/ssnx/qu/dim#Power",
     "OM_Observation": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
     "prefLabel": "http://www.w3.org/2004/02/skos/core#prefLabel",
@@ -1131,77 +1205,25 @@ Links to the schema:
     "inScheme": "http://www.w3.org/2004/02/skos/core#inScheme",
     "dct.description": "dct:description",
     "MultiCurve": "http://www.opengis.net/ont/sf#MultiCurve",
+    "hasQuantityKind": {
+      "@id": "http://qudt.org/schema/qudt/hasQuantityKind",
+      "@type": "@id"
+    },
     "DataStructureDefinition": "http://purl.org/linked-data/cube#DataStructureDefinition",
     "qb.Observation": "http://purl.org/linked-data/cube#Observation",
     "EnergyDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensity",
+    "unitType": {
+      "@id": "owlTime:unitType",
+      "@type": "@id"
+    },
     "componentProperty": {
       "@id": "http://purl.org/linked-data/cube#componentProperty",
       "@type": "@id"
     },
     "sf.Geometry": "http://www.opengis.net/ont/sf#Geometry",
     "schema.Person": "https://schema.org/Person",
-    "ssn.Property": "ssn:Property",
     "schema.name": "https://schema.org/name",
-    "Measure": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Measure",
-    "Quantity": "http://qudt.org/schema/qudt/Quantity",
-    "qudt.QuantityKind": "http://qudt.org/schema/qudt/QuantityKind",
-    "QuantityValue": "http://qudt.org/schema/qudt/QuantityValue",
-    "Unit": "http://qudt.org/schema/qudt/Unit",
-    "unit": {
-      "@id": "http://qudt.org/schema/qudt/unit",
-      "@type": "@id"
-    },
-    "quantityValue": {
-      "@id": "http://qudt.org/schema/qudt/quantityValue",
-      "@type": "@id"
-    },
-    "hasQuantityKind": {
-      "@id": "http://qudt.org/schema/qudt/hasQuantityKind",
-      "@type": "@id"
-    },
-    "numericValue": "http://qudt.org/schema/qudt/numericValue",
-    "Procedure": "sosa:Procedure",
-    "lat": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
-    "long": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
-    "alt": "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
-    "TemporalDuration": "owlTime:TemporalDuration",
-    "Thing": "http://www.w3.org/2002/07/owl#Thing",
-    "TemporalUnit": "owlTime:TemporalUnit",
-    "Instant": "owlTime:Instant",
-    "numericDuration": {
-      "@id": "owlTime:numericDuration",
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
-    },
-    "note": "http://www.w3.org/2004/02/skos/core#note",
-    "Interval": "owlTime:Interval",
-    "hasTime": {
-      "@id": "owlTime:hasTime",
-      "@type": "@id"
-    },
-    "hasEnd": {
-      "@id": "owlTime:hasEnd",
-      "@type": "@id"
-    },
-    "TemporalEntity": "owlTime:TemporalEntity",
-    "hasBeginning": {
-      "@id": "owlTime:hasBeginning",
-      "@type": "@id"
-    },
-    "deprecated": "http://www.w3.org/2002/07/owl#deprecated",
-    "Duration": "owlTime:Duration",
-    "editorialNote": "http://www.w3.org/2004/02/skos/core#editorialNote",
-    "inXSDDateTimeStamp": {
-      "@id": "owlTime:inXSDDateTimeStamp",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
-    },
-    "inXSDDate": {
-      "@id": "owlTime:inXSDDate",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "unitType": {
-      "@id": "owlTime:unitType",
-      "@type": "@id"
-    },
+    "QuantityKind": "http://qudt.org/schema/qudt/QuantityKind",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
     "ssn": "http://www.w3.org/ns/ssn/",

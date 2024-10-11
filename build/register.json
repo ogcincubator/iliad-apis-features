@@ -2,12 +2,12 @@
   "name": "ILIAD API Profiles",
   "abstract": "(Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability.",
   "description": "Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. \n\nThus, a pilot project to monitor Jellyfish swarms using Citizen Science will reuse common patterns for Citizen Science observations, which in turn we reuse a common pattern for observations, using an underlying component of the OIM - the OGC Observations model (SOSA ontology). \n",
-  "modified": "2024-06-10T11:37:23.475108",
+  "modified": "2024-10-11T09:25:28.730681",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"86d544ee272c5495ae35236b0871ada235e29d6e",
-      "shortCommitId": "\"86d544",
-      "date": "2024-06-06T08:52:47+00:00\""
+      "commitId": "\"5d47077eb2f3255708fae570e734806772b94223",
+      "shortCommitId": "\"5d4707",
+      "date": "2024-10-09T10:07:50+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/iliad-apis-features",
@@ -29,7 +29,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2024-06-10",
+      "dateOfLastChange": "2024-10-11",
       "link": "https://github.com/opengeospatial/CoverageJSON",
       "sources": [
         {
@@ -74,10 +74,6 @@
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverageJSON/index.json"
         },
-        "slate": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/coverageJSON/"
-        },
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.coverageJSON"
@@ -93,7 +89,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2024-06-10",
+      "dateOfLastChange": "2024-10-11",
       "link": "https://github.com/opengeospatial/coverage-implementation-schema",
       "sources": [
         {
@@ -133,10 +129,6 @@
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverage_information_model/index.json"
         },
-        "slate": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/coverage_information_model/"
-        },
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.coverage_information_model"
@@ -145,14 +137,14 @@
     },
     {
       "itemIdentifier": "ogc.hosted.iliad.api.features.oim-sta-obs",
-      "name": "OIM Observations",
+      "name": "OIM STA Observations",
       "abstract": "Defines SensorThings API Observations to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model.",
       "status": "under-development",
       "dateTimeAddition": "2023-06-05T00:00:00Z",
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2024-06-10",
+      "dateOfLastChange": "2024-10-11",
       "link": "https://github.com/opengeospatial/iliad-api-features/oim-sta-obs",
       "sources": [
         {
@@ -178,6 +170,7 @@
       "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/",
       "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/oim-sta-obs/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
@@ -186,10 +179,6 @@
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-sta-obs/index.json"
-        },
-        "slate": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/oim-sta-obs/"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -206,7 +195,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2024-06-10",
+      "dateOfLastChange": "2024-10-11",
       "link": "https://github.com/opengeospatial/CoverageJSON",
       "sources": [
         {
@@ -259,10 +248,6 @@
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverageJSONFisheries/index.json"
         },
-        "slate": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/coverageJSONFisheries/"
-        },
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.coverageJSONFisheries"
@@ -278,7 +263,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2024-06-10",
+      "dateOfLastChange": "2024-10-11",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -303,9 +288,9 @@
         ]
       },
       "dependsOn": [
-        "ogc.sosa.properties.observation",
         "ogc.sosa.features.observation",
         "ogc.sosa.features.observationCollection",
+        "ogc.sosa.properties.observation",
         "ogc.ogc-utils.iri-or-curie"
       ],
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
@@ -326,10 +311,6 @@
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs/index.json"
         },
-        "slate": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/oim-obs/"
-        },
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-obs"
@@ -345,7 +326,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2024-06-10",
+      "dateOfLastChange": "2024-10-11",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -390,10 +371,6 @@
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs-cs/index.json"
         },
-        "slate": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/oim-obs-cs/"
-        },
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-obs-cs"
@@ -410,7 +387,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2024-06-10",
+      "dateOfLastChange": "2024-10-11",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -458,10 +435,6 @@
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/iliad-jellyfish/index.json"
-        },
-        "slate": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/slate-build/hosted/iliad/api/features/iliad-jellyfish/"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",

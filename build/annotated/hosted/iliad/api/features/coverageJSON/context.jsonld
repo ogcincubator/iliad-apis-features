@@ -1,5 +1,6 @@
 {
   "@context": {
+    "@vocab": "_:_:",
     "id": "@id",
     "type": "@type",
     "value": "@value",

@@ -91,6 +91,7 @@ Coverages can be encoded in any suitable format (such as GML, JSON, GeoTIFF, or 
 #### jsonld
 ```jsonld
 {
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld",
   "type": "CoverageByDomainAndRangeType",
   "domainSet": {
     "type": "DomainSetType",
@@ -146,8 +147,7 @@ Coverages can be encoded in any suitable format (such as GML, JSON, GeoTIFF, or 
         }
       }
     ]
-  },
-  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld"
+  }
 }
 ```
 
@@ -251,6 +251,7 @@ Coverages can be encoded in any suitable format (such as GML, JSON, GeoTIFF, or 
 #### jsonld
 ```jsonld
 {
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld",
   "type": "CoverageByDomainAndRangeType",
   "domainSet": {
     "type": "DomainSetType",
@@ -306,8 +307,7 @@ Coverages can be encoded in any suitable format (such as GML, JSON, GeoTIFF, or 
         }
       }
     ]
-  },
-  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld"
+  }
 }
 ```
 

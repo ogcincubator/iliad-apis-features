@@ -199,6 +199,7 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 #### jsonld
 ```jsonld
 {
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/context.jsonld",
   "@id": "CoverageCollection of Multipoints",
   "type": "CoverageCollection",
   "domainType": "MultiPoint",
@@ -440,8 +441,7 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
         }
       }
     }
-  ],
-  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/context.jsonld"
+  ]
 }
 ```
 
@@ -622,6 +622,7 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 #### jsonld
 ```jsonld
 {
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/context.jsonld",
   "type": "CoverageCollection",
   "domainType": "MultiPoint",
   "parameters": {
@@ -862,8 +863,7 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
         }
       }
     }
-  ],
-  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/context.jsonld"
+  ]
 }
 ```
 
@@ -884,7 +884,7 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 
 <http://example.com/particletypes> skos:prefLabel "Particle class"@en .
 
-<http://www.opengis.net/def/crs/OGC/1.3/CRS84> a <https://w3id.org/ogcincubator/coverageJSON/GeographicCRS> .
+<http://www.opengis.net/def/crs/OGC/1.3/CRS84> a [ ] .
 
 <https://qudt.org/vocab/unit/NanoM> skos:prefLabel "0.000000001-fold of the SI base unit metre"@en .
 
@@ -928,11 +928,11 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
             covjson:categoryEncoding [ ns1:_0 0 ;
                     ns1:_1 1 ;
                     ns1:_4 2 ] ] ;
-    covjson:referencing [ covjson:referenceSystem [ a ignf:VerticalCRS ;
+    covjson:referencing [ covjson:referenceSystem [ a inspiregloss:TemporalReferenceSystem ;
+                    covjson:calendar <http://www.opengis.net/def/uom/ISO-8601/0/Gregorian> ] ],
+        [ covjson:referenceSystem [ a ignf:VerticalCRS ;
                     ignf:coordinateSystem [ covjson:coordinateSystemAxes ( [ ignf:axisDirection "down" ;
                                         qudt:unit [ qudt:symbol "Pa" ] ] ) ] ] ],
-        [ covjson:referenceSystem [ a inspiregloss:TemporalReferenceSystem ;
-                    covjson:calendar <http://www.opengis.net/def/uom/ISO-8601/0/Gregorian> ] ],
         [ covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] .
 
 
@@ -1063,6 +1063,7 @@ x-jsonld-extra-terms:
   MultiPolygonSeries: https://covjson.org/def/domainTypes#MultiPolygonSeries
   MultiPolygon: https://covjson.org/def/domainTypes#MultiPolygon
   Polygon: https://covjson.org/def/domainTypes#Polygon
+x-jsonld-vocab: '_:_:'
 x-jsonld-prefixes:
   skos: http://www.w3.org/2004/02/skos/core#
   dct: http://purl.org/dc/terms/
@@ -1089,6 +1090,7 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "@vocab": "_:_:",
     "id": "@id",
     "type": "@type",
     "value": "@value",

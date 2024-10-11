@@ -1,0 +1,9 @@
+@prefix sosa1: <https://www.w3.org/TR/vocab-ssn/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/ogcincubator/coverageJSON/1> sosa1:hasFeatureOfInterest "Observations(1)/FeatureOfInterest" ;
+    sosa1:hasSimpleResult 7.04e+01 ;
+    sosa1:isMemberOf "Observations(1)/Datastream" ;
+    sosa1:phenomenonTime "2014-12-31T11:59:59.00+08:00" ;
+    sosa1:resultTime "2014-12-31T11:59:59.00+08:00" .
+

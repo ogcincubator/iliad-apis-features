@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.coverageJSON - OGC CoverageJSON",
   "bblockName": "OGC CoverageJSON",
   "bblockId": "ogc.hosted.iliad.api.features.coverageJSON",
-  "generated": "2024-06-10T11:37:38.452436+00:00",
+  "generated": "2024-10-11T09:25:33.282597+00:00",
   "result": false,
   "items": [
     {
@@ -17,11 +17,6 @@
       },
       "result": false,
       "sections": [
-        {
-          "name": "GENERAL",
-          "title": "General",
-          "entries": []
-        },
         {
           "name": "FILES",
           "title": "Files",
@@ -62,26 +57,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "JSON_LD",
-          "title": "JSON-LD",
-          "entries": []
-        },
-        {
-          "name": "TURTLE",
-          "title": "Turtle",
-          "entries": []
-        },
-        {
-          "name": "SHACL",
-          "title": "SHACL",
-          "entries": []
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": []
         }
       ]
     },
@@ -97,11 +72,6 @@
       },
       "result": true,
       "sections": [
-        {
-          "name": "GENERAL",
-          "title": "General",
-          "entries": []
-        },
         {
           "name": "FILES",
           "title": "Files",
@@ -142,26 +112,6 @@
               "message": "Validation passed"
             }
           ]
-        },
-        {
-          "name": "JSON_LD",
-          "title": "JSON-LD",
-          "entries": []
-        },
-        {
-          "name": "TURTLE",
-          "title": "Turtle",
-          "entries": []
-        },
-        {
-          "name": "SHACL",
-          "title": "SHACL",
-          "entries": []
-        },
-        {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
-          "entries": []
         }
       ]
     }

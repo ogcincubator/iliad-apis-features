@@ -1,4 +1,5 @@
 {
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSONFisheries/context.jsonld",
   "type": "Coverage",
   "domain": {
     "type": "Domain",
@@ -364,6 +365,5 @@
         2.794966167130042e-05
       ]
     }
-  },
-  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSONFisheries/context.jsonld"
+  }
 }
