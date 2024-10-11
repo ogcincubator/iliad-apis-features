@@ -1,16 +1,16 @@
 {
-  "title": "Validation report for ogc.hosted.iliad.api.features.zarr_array_metadata - GeoZarr Array description metadata",
-  "bblockName": "GeoZarr Array description metadata",
-  "bblockId": "ogc.hosted.iliad.api.features.zarr_array_metadata",
-  "generated": "2024-10-11T11:44:31.319837+00:00",
+  "title": "Validation report for ogc.hosted.iliad.api.features.stac_multidim_data - STAC records with dcat mapping",
+  "bblockName": "STAC records with dcat mapping",
+  "bblockId": "ogc.hosted.iliad.api.features.stac_multidim_data",
+  "generated": "2024-10-11T11:44:31.308020+00:00",
   "result": false,
   "items": [
     {
       "source": {
         "type": "EXAMPLE",
         "requireFail": false,
-        "filename": "build/tests/hosted/iliad/api/features/zarr_array_metadata/example_1_1.json",
-        "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_array_metadata/example_1_1.json",
+        "filename": "build/tests/hosted/iliad/api/features/stac_multidim_data/example_1_1.json",
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/stac_multidim_data/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "json"
@@ -40,7 +40,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 14,
+              "size": 153,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }
@@ -54,9 +54,9 @@
               "op": "validation",
               "result": false,
               "exception": "ValidationError",
-              "errorMessage": "'<f8' is not of type 'object'",
+              "errorMessage": "{'interval': ['2023-04-09 01:00:00+00:00', '2023-04-12 01:00:00+00:00'], 'resolution': 'P1D'} is not valid under any of the given schemas",
               "isError": true,
-              "message": "ValidationError: '<f8' is not of type 'object'\n\nFailed validating 'type' in schema['properties']['dtype']:\n    {'type': 'object',\n     'x-jsonld-id': 'http:/w3id.org/iliad/zarr/dtype',\n     'x-jsonld-type': 'http://www.w3.org/2001/XMLSchema#string'}\n\nOn instance['dtype']:\n    '<f8'"
+              "message": "ValidationError: {'interval': ['2023-04-09 01:00:00+00:00', '2023-04-12 01:00:00+00:00'], 'resolution': 'P1D'} is not valid under any of the given schemas\n\nFailed validating 'oneOf' in schema['allOf'][0]['properties']['time']:\n    {'oneOf': [{'enum': [None]},\n               {'$ref': 'https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/time/schema.json'}]}\n\nOn instance['time']:\n    {'interval': ['2023-04-09 01:00:00+00:00', '2023-04-12 01:00:00+00:00'],\n     'resolution': 'P1D'}"
             }
           ]
         }
