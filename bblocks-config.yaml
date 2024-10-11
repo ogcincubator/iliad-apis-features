@@ -14,4 +14,5 @@ imports:
   - default
   - https://opengeospatial.github.io/ogcapi-sosa/build/register.json
   - https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json
+#   - https://ogcincubator.github.io/oceans-info-model/build/register.json
   
