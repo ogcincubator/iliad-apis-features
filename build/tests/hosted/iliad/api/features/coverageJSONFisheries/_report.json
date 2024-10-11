@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.coverageJSONFisheries - OGC Iliad CoverageJSON ",
   "bblockName": "OGC Iliad CoverageJSON ",
   "bblockId": "ogc.hosted.iliad.api.features.coverageJSONFisheries",
-  "generated": "2024-06-10T11:37:39.364536+00:00",
+  "generated": "2024-06-17T19:37:38.162637+00:00",
   "result": false,
   "items": [
     {
@@ -45,7 +45,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 40,
+              "size": 48,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }

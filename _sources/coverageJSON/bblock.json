@@ -18,6 +18,7 @@
       "link": "https://docs.ogc.org/is/09-146r8/09-146r8.html"
     }
   ],
+  "schema": "https://schemas.opengis.net/covjson/1.0/coveragejson.json",
   "maturity": "development",
   "scope": "unstable",
   "tags": [

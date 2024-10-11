@@ -1,5 +1,5 @@
 
-# OIM Observations (Schema)
+# OIM STA Observations (Schema)
 
 `ogc.hosted.iliad.api.features.oim-sta-obs` *v0.1*
 
@@ -27,8 +27,50 @@ The mechanisms for handling external vocabulary constraints to be define here: (
 
 ## Examples
 
-### Oceans Information Model examples
-TBD - see specific sub-profile for examples.
+### Coverage JSON Coverage representing snapshot series of Grid with LD
+#### json
+```json
+{
+  "@iot.id": "1",
+  "@iot.selfLink": "http://example.org/v1.1/Observations(1)",
+  "FeatureOfInterest@iot.navigationLink": "Observations(1)/FeatureOfInterest",
+  "Datastream@iot.navigationLink": "Observations(1)/Datastream",
+  "phenomenonTime": "2014-12-31T11:59:59.00+08:00",
+  "resultTime": "2014-12-31T11:59:59.00+08:00",
+  "result": 70.4
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@iot.id": "1",
+  "@iot.selfLink": "http://example.org/v1.1/Observations(1)",
+  "FeatureOfInterest@iot.navigationLink": "Observations(1)/FeatureOfInterest",
+  "Datastream@iot.navigationLink": "Observations(1)/Datastream",
+  "phenomenonTime": "2014-12-31T11:59:59.00+08:00",
+  "resultTime": "2014-12-31T11:59:59.00+08:00",
+  "result": 70.4,
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-sta-obs/context.jsonld"
+}
+```
+
+#### ttl
+```ttl
+@prefix sosa1: <https://www.w3.org/TR/vocab-ssn/#> .
+@prefix sta: <https://schemas.opengis.org/sta/def/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/ogcincubator/coverageJSON/1> sta:DataStream "Observations(1)/Datastream" ;
+    sosa1:hasFeatureOfInterest "Observations(1)/FeatureOfInterest" ;
+    sosa1:hasSimpleResult 7.04e+01 ;
+    sosa1:phenomenonTime "2014-12-31T11:59:59.00+08:00" ;
+    sosa1:resultTime "2014-12-31T11:59:59.00+08:00" .
+
+
+```
+
 ## Schema
 
 ```yaml

@@ -835,23 +835,30 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 
 [] a covjson:Coverage ;
     covjson:domain [ a covjson:Domain ;
-            covjson:axis [ covjson:num 13 ;
+            covjson:axis [ dcterms:identifier "t" ;
+                    covjson:values "[\"2024-04-18T00:00:00.000000000\"]"^^rdf:JSON ],
+                [ dcterms:identifier "x" ;
+                    covjson:num 13 ;
                     covjson:start -1.496301e+01 ;
                     covjson:stop -1.451857e+01 ],
-                [ ],
-                [ covjson:num 23 ;
+                [ dcterms:identifier "y" ;
+                    covjson:num 23 ;
                     covjson:start 4.60003e+01 ;
                     covjson:stop 4.648921e+01 ] ;
             covjson:domainType covjsondt:Grid ;
-            covjson:referencing [ covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/4326> ] ] ;
+            covjson:referencing [ covjson:coordinates "[\"y\",\"x\"]"^^rdf:JSON ;
+                    covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/4326> ] ] ;
     covjson:parameter [ a covjson:Parameter ;
             dcterms:description "Suitability of good catch (>200 kg) for Pleuronectes platessa" ;
+            dcterms:identifier "PLE_fishing_suitability" ;
             qudt:unit [ qudt:symbol "percent" ] ;
             ssn1:observedProperty <http://w3id.org/ogcincubator/coverageJSON/PLE_fishing_suitability> ] ;
     covjson:range [ a covjson:NdArray ;
+            dcterms:identifier "PLE_fishing_suitability" ;
             covjson:axisNames ( "y" "x" "t" ) ;
             covjson:dataType <http://w3id.org/ogcincubator/coverageJSON/number> ;
-            covjson:shape ( 23 13 1 ) ] .
+            covjson:shape ( 23 13 1 ) ;
+            covjson:values "[2.888692142732907e-05,2.2336645997711457e-05,1.8950233425130136e-05,1.8950233425130136e-05,2.406747626082506e-05,2.5959576305467635e-05,1.7174235836137086e-05,1.3787500392936636e-05,1.6251331544481218e-05,1.6592652173130773e-05,7.2977081799763255e-06,7.2977081799763255e-06,6.760107680747751e-06,2.888692142732907e-05,2.2336645997711457e-05,1.8950233425130136e-05,1.8950233425130136e-05,2.406747626082506e-05,2.5959576305467635e-05,1.7174235836137086e-05,1.3787500392936636e-05,1.6251331544481218e-05,1.6592652173130773e-05,7.2977081799763255e-06,7.2977081799763255e-06,6.760107680747751e-06,2.90345742541831e-05,2.4632701752125286e-05,2.01517395908013e-05,2.8240063329576515e-05,2.8762697183992714e-05,2.8475906219682656e-05,2.8475906219682656e-05,2.4538423531339504e-05,1.729549330775626e-05,1.603488635737449e-05,9.122604751610197e-06,9.122604751610197e-06,8.450569112028461e-06,2.4632701752125286e-05,2.173599750676658e-05,3.0460198104265146e-05,3.0460198104265146e-05,2.570073411334306e-05,2.8475906219682656e-05,2.7188089006813243e-05,2.3098624296835624e-05,2.2587775674764998e-05,2.9892968086642213e-05,2.6586798412608914e-05,2.6586798412608914e-05,1.7989208572544158e-05,2.173599750676658e-05,2.15192685573129e-05,3.015647962456569e-05,2.15192685573129e-05,1.8524413462728262e-05,1.8524413462728262e-05,1.8524413462728262e-05,2.4538423531339504e-05,3.0569033697247505e-05,2.2587775674764998e-05,2.3098624296835624e-05,2.3098624296835624e-05,2.3098624296835624e-05,2.15192685573129e-05,2.15192685573129e-05,1.83397060027346e-05,1.83397060027346e-05,1.8524413462728262e-05,1.8524413462728262e-05,1.8524413462728262e-05,1.751029776642099e-05,2.4538423531339504e-05,2.889671850425657e-05,3.201699291821569e-05,3.201699291821569e-05,3.201699291821569e-05,2.15192685573129e-05,2.15192685573129e-05,1.83397060027346e-05,1.83397060027346e-05,1.8524413462728262e-05,1.8524413462728262e-05,1.8524413462728262e-05,1.751029776642099e-05,2.4538423531339504e-05,2.889671850425657e-05,3.201699291821569e-05,3.201699291821569e-05,3.201699291821569e-05,2.419527299934998e-05,1.83397060027346e-05,1.83397060027346e-05,1.83397060027346e-05,2.0620318537112325e-05,1.9687769963638857e-05,1.9687769963638857e-05,2.0620318537112325e-05,2.0620318537112325e-05,2.889671850425657e-05,3.756779187824577e-05,3.756779187824577e-05,3.756779187824577e-05,2.05227352125803e-05,2.6717123546404764e-05,2.6717123546404764e-05,2.6717123546404764e-05,2.5508848921163008e-05,2.5508848921163008e-05,2.5508848921163008e-05,2.4747996576479636e-05,2.3394128220388666e-05,2.5670889954199083e-05,3.3906551834661514e-05,3.3906551834661514e-05,3.756779187824577e-05,1.6609350495855324e-05,2.4019207558012567e-05,2.2932943466003053e-05,2.2932943466003053e-05,2.066084198304452e-05,2.066084198304452e-05,2.066084198304452e-05,2.1447940525831655e-05,2.1447940525831655e-05,1.9594599507399835e-05,2.3394128220388666e-05,3.012146225955803e-05,3.012146225955803e-05,2.12107061088318e-05,2.593175850051921e-05,2.593175850051921e-05,2.593175850051921e-05,2.5508848921163008e-05,2.593175850051921e-05,2.593175850051921e-05,1.9594599507399835e-05,1.9594599507399835e-05,2.1447940525831655e-05,2.05227352125803e-05,3.1349081837106496e-05,3.0414033972192556e-05,2.12107061088318e-05,2.593175850051921e-05,2.593175850051921e-05,2.593175850051921e-05,2.5508848921163008e-05,2.593175850051921e-05,2.593175850051921e-05,1.9594599507399835e-05,1.9594599507399835e-05,2.1447940525831655e-05,2.05227352125803e-05,3.1349081837106496e-05,3.0414033972192556e-05,1.593877277628053e-05,1.7489965102868155e-05,1.7489965102868155e-05,1.7489965102868155e-05,1.9687769963638857e-05,1.9687769963638857e-05,1.9687769963638857e-05,1.7489965102868155e-05,1.7489965102868155e-05,2.450993088132236e-05,2.3394128220388666e-05,2.592023156466894e-05,3.0414033972192556e-05,2.3404531020787545e-05,1.593877277628053e-05,1.593877277628053e-05,1.593877277628053e-05,1.831841109378729e-05,1.831841109378729e-05,1.831841109378729e-05,1.831841109378729e-05,1.831841109378729e-05,2.0620318537112325e-05,1.9687769963638857e-05,1.9687769963638857e-05,2.0620318537112325e-05,1.2435079952410888e-05,1.666164826019667e-05,1.666164826019667e-05,1.666164826019667e-05,2.5391127564944327e-05,2.6358431568951346e-05,2.6358431568951346e-05,3.1868818041402847e-05,3.1349081837106496e-05,2.829389995895326e-05,1.831841109378729e-05,1.831841109378729e-05,2.0620318537112325e-05,1.7115533410105854e-05,1.7115533410105854e-05,1.7926244254340418e-05,1.666164826019667e-05,2.6358431568951346e-05,3.1868818041402847e-05,3.677818676806055e-05,2.7167699954588898e-05,2.7167699954588898e-05,2.5461640689172782e-05,2.5461640689172782e-05,1.958794382517226e-05,1.6693742509232834e-05,1.7115533410105854e-05,1.7115533410105854e-05,1.7926244254340418e-05,1.666164826019667e-05,2.6358431568951346e-05,3.1868818041402847e-05,3.677818676806055e-05,2.7167699954588898e-05,2.7167699954588898e-05,2.5461640689172782e-05,2.5461640689172782e-05,1.958794382517226e-05,1.6693742509232834e-05,2.12107061088318e-05,2.1447940525831655e-05,2.8384494726196863e-05,2.4513132302672602e-05,2.149428109987639e-05,2.419527299934998e-05,2.419527299934998e-05,2.7972097086603753e-05,2.984637103509158e-05,2.984637103509158e-05,2.984637103509158e-05,3.145053415209986e-05,3.145053415209986e-05,2.3404531020787545e-05,2.3404531020787545e-05,1.6428793969680555e-05,1.831841109378729e-05,1.83397060027346e-05,2.15192685573129e-05,2.15192685573129e-05,2.825381488946732e-05,3.0146964490995742e-05,3.0146964490995742e-05,2.8845459382864647e-05,3.0146964490995742e-05,3.0146964490995742e-05,1.6428793969680555e-05,1.6428793969680555e-05,1.7489965102868155e-05,2.0620318537112325e-05,1.83397060027346e-05,2.15192685573129e-05,2.15192685573129e-05,2.15192685573129e-05,2.825381488946732e-05,2.825381488946732e-05,3.0146964490995742e-05,2.8845459382864647e-05,2.6743018679553643e-05,1.593877277628053e-05,1.831841109378729e-05,2.0620318537112325e-05,1.83397060027346e-05,1.83397060027346e-05,1.83397060027346e-05,2.15192685573129e-05,2.15192685573129e-05,2.825381488946732e-05,2.825381488946732e-05,2.794966167130042e-05,2.794966167130042e-05,2.6743018679553643e-05,1.593877277628053e-05,1.831841109378729e-05,2.0620318537112325e-05,1.83397060027346e-05,1.83397060027346e-05,1.83397060027346e-05,2.15192685573129e-05,2.15192685573129e-05,2.825381488946732e-05,2.825381488946732e-05,2.794966167130042e-05,2.794966167130042e-05,2.6743018679553643e-05,1.6693742509232834e-05,2.0620318537112325e-05,1.83397060027346e-05,1.8524413462728262e-05,1.83397060027346e-05,1.83397060027346e-05,1.83397060027346e-05,2.173599750676658e-05,2.01517395908013e-05,2.619449696794618e-05,2.794966167130042e-05,2.794966167130042e-05,2.794966167130042e-05]"^^rdf:JSON ] .
 
 
 ```
@@ -1974,64 +1981,121 @@ Links to the schema:
 ```json--ldContext
 {
   "@context": {
-    "id": "@id",
     "type": "@type",
-    "value": "@value",
+    "domainType": {
+      "@id": "covjson:domainType",
+      "@type": "@vocab"
+    },
+    "axes": {
+      "@context": {
+        "coordinates": {
+          "@id": "covjson:coordinates",
+          "@type": "@json"
+        },
+        "bounds": {
+          "@id": "covjson:bounds",
+          "@type": "@json"
+        }
+      },
+      "@id": "covjson:axis",
+      "@container": "@index",
+      "@index": "dct:identifier"
+    },
+    "referencing": {
+      "@context": {
+        "coordinates": {
+          "@id": "covjson:coordinates",
+          "@type": "@json"
+        },
+        "system": {
+          "@context": {},
+          "@id": "covjson:referenceSystem"
+        }
+      },
+      "@id": "covjson:referencing",
+      "@container": "@set"
+    },
+    "dataType": {
+      "@id": "covjson:dataType",
+      "@type": "@id"
+    },
+    "shape": {
+      "@id": "covjson:shape",
+      "@container": "@list"
+    },
+    "axisNames": {
+      "@id": "covjson:axisNames",
+      "@container": "@list"
+    },
+    "values": {
+      "@id": "covjson:values",
+      "@type": "@json"
+    },
+    "tileSets": {
+      "@context": {},
+      "@id": "covjson:tileSet",
+      "@container": "@set"
+    },
+    "id": "@id",
+    "domain": {
+      "@context": {},
+      "@id": "covjson:domain"
+    },
+    "parameters": {
+      "@context": {},
+      "@id": "covjson:parameter",
+      "@type": "@id",
+      "@container": "@index",
+      "@index": "dct:identifier"
+    },
     "label": {
       "@id": "skos:prefLabel",
-      "@container": "@language"
-    },
-    "title": {
-      "@id": "dct:title",
       "@container": "@language"
     },
     "description": {
       "@id": "dct:description",
       "@container": "@language"
     },
-    "unit": "qudt:unit",
-    "symbol": "qudt:symbol",
+    "observedProperty": {
+      "@context": {},
+      "@id": "ssn:observedProperty"
+    },
+    "members": {
+      "@id": "covjson:member",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "ranges": {
+      "@context": {},
+      "@id": "covjson:range",
+      "@type": "@id",
+      "@container": "@index",
+      "@index": "dct:identifier"
+    },
+    "coverages": {
+      "@context": {},
+      "@id": "hydra:member",
+      "@container": "@set"
+    },
+    "title": {
+      "@id": "dct:title",
+      "@container": "@language"
+    },
     "Domain": "covjson:Domain",
-    "domain": "covjson:domain",
-    "domainType": {
-      "@id": "covjson:domainType",
-      "@type": "@vocab"
-    },
-    "axes": {
-      "@id": "covjson:axis",
-      "@container": "@index"
-    },
-    "dataType": {
-      "@id": "covjson:dataType",
-      "@type": "@vocab"
-    },
     "primitive": "covjson:primitive",
     "tuple": "covjson:tuple",
     "polygon": "covjson:polygon",
-    "num": "covjson:num",
-    "start": "covjson:start",
-    "stop": "covjson:stop",
-    "referencing": {
-      "@id": "covjson:referencing",
-      "@container": "@set"
-    },
     "components": {
       "@id": "covjson:components",
       "@container": "@list"
     },
-    "system": "covjson:referenceSystem",
     "RS": "covjson:ReferenceSystem",
     "CRS": "covjson:CoordinateReferenceSystem",
     "cs": "ignf:coordinateSystem",
     "CS": "ignf:CoordinateSystem",
     "TemporalRS": "inspiregloss:TemporalReferenceSystem",
     "TemporalCRS": "covjson:TemporalCRS",
-    "calendar": {
-      "@id": "covjson:calendar",
-      "@type": "@vocab"
-    },
     "Gregorian": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian",
-    "timeScale": "covjson:timeScale",
     "SpatialRS": "inspiregloss:SpatialReferenceSystem",
     "SpatialCRS": "ignf:CRS",
     "GeodeticCRS": "ignf:GeodeticCRS",
@@ -2044,58 +2108,14 @@ Links to the schema:
     },
     "direction": "ignf:axisDirection",
     "IdentifierRS": "covjson:IdentifierReferenceSystem",
-    "targetConcept": "covjson:targetConcept",
-    "identifiers": {
-      "@id": "covjson:identifier",
-      "@type": "@id",
-      "@container": "@index"
-    },
     "Parameter": "covjson:Parameter",
-    "parameters": {
-      "@id": "covjson:parameter",
-      "@type": "@id",
-      "@container": "@index"
-    },
-    "observedProperty": "ssn:observedProperty",
-    "categoryEncoding": "covjson:categoryEncoding",
     "ParameterGroup": "covjson:ParameterGroup",
-    "members": {
-      "@id": "covjson:member",
-      "@type": "@vocab",
-      "@container": "@set"
-    },
-    "ranges": {
-      "@id": "covjson:range",
-      "@type": "@id",
-      "@container": "@index"
-    },
     "NdArray": "covjson:NdArray",
     "TiledNdArray": "covjson:TiledNdArray",
-    "shape": {
-      "@id": "covjson:shape",
-      "@container": "@list"
-    },
-    "tileShape": {
-      "@id": "covjson:tileShape",
-      "@container": "@list"
-    },
-    "axisNames": {
-      "@id": "covjson:axisNames",
-      "@container": "@list"
-    },
-    "urlTemplate": "covjson:urlTemplate",
-    "tileSets": {
-      "@id": "covjson:tileSet",
-      "@container": "@set"
-    },
     "float": "xsd:double",
     "integer": "xsd:integer",
     "string": "xsd:string",
     "Coverage": "covjson:Coverage",
-    "coverages": {
-      "@id": "hydra:member",
-      "@container": "@set"
-    },
     "CoverageCollection": "covjson:CoverageCollection",
     "Grid": "covjsondt:Grid",
     "VerticalProfile": "covjsondt:VerticalProfile",
@@ -2108,11 +2128,35 @@ Links to the schema:
     "MultiPolygonSeries": "covjsondt:MultiPolygonSeries",
     "MultiPolygon": "covjsondt:MultiPolygon",
     "Polygon": "covjsondt:Polygon",
+    "value": "@value",
+    "unit": "qudt:unit",
+    "symbol": "qudt:symbol",
+    "num": "covjson:num",
+    "start": "covjson:start",
+    "stop": "covjson:stop",
+    "system": "covjson:referenceSystem",
+    "calendar": {
+      "@id": "covjson:calendar",
+      "@type": "@vocab"
+    },
+    "timeScale": "covjson:timeScale",
+    "targetConcept": "covjson:targetConcept",
+    "identifiers": {
+      "@id": "covjson:identifier",
+      "@type": "@id",
+      "@container": "@index"
+    },
+    "categoryEncoding": "covjson:categoryEncoding",
+    "tileShape": {
+      "@id": "covjson:tileShape",
+      "@container": "@list"
+    },
+    "urlTemplate": "covjson:urlTemplate",
     "IndexAxisType": "http://www.opengis.net/cis/1.1/IndexAxisType",
     "spatial": "dct:spatial",
     "previewInfo": {
       "@id": "https://w3id.org/iliad/oim/metadata/previewInfo",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "coverage": {
       "@id": "http://www.opengis.net/cis/1.1/coverage",
@@ -2131,13 +2175,13 @@ Links to the schema:
     "ImageRepresentation": "https://w3id.org/idsa/core/ImageRepresentation",
     "lowerBound": {
       "@id": "http://www.opengis.net/cis/1.1/lowerBound",
-      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      "@type": "xsd:integer"
     },
     "Dataset": "http://www.w3.org/ns/dcat#Dataset",
     "EnvelopeByAxisType": "http://www.opengis.net/cis/1.1/EnvelopeByAxisType",
     "width": {
       "@id": "https://w3id.org/idsa/core/width",
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      "@type": "xsd:decimal"
     },
     "license": "dct:license",
     "Representation": "https://w3id.org/idsa/core/Representation",
@@ -2160,7 +2204,7 @@ Links to the schema:
     "AxisExtendType": "http://www.opengis.net/cis/1.1/AxisExtendType",
     "height": {
       "@id": "https://w3id.org/idsa/core/height",
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      "@type": "xsd:decimal"
     },
     "hasQualityMetadata": {
       "@id": "http://www.w3.org/ns/dqv#hasQualityMetadata",
@@ -2172,7 +2216,7 @@ Links to the schema:
     },
     "frameRate": {
       "@id": "https://w3id.org/idsa/core/frameRate",
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      "@type": "xsd:decimal"
     },
     "QualityMetadata": "http://www.w3.org/ns/dqv#QualityMetadata",
     "GridLimitsType": "http://www.opengis.net/cis/1.1/GridLimitsType",
@@ -2196,7 +2240,7 @@ Links to the schema:
     "PVPType": "http://www.opengis.net/cis/1.1/PVPType",
     "scaleFactor": {
       "@id": "https://w3id.org/iliad/oim/metadata/scaleFactor",
-      "@type": "http://www.w3.org/2001/XMLSchema#float"
+      "@type": "xsd:float"
     },
     "AllowedValues": "http://www.opengis.net/swe/2.0/AllowedValues",
     "project": "https://w3id.org/iliad/oim/metadata/project",
@@ -2218,11 +2262,11 @@ Links to the schema:
     },
     "axisLabels": {
       "@id": "http://www.opengis.net/cis/1.1/axisLabels",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "path": {
       "@id": "https://w3id.org/idsa/core/path",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "interpolationRestriction": {
       "@id": "http://www.opengis.net/cis/1.1/interpolationRestriction",
@@ -2249,29 +2293,29 @@ Links to the schema:
     "Axis": "http://www.opengis.net/cis/1.1/Axis",
     "appliedModel": {
       "@id": "https://w3id.org/iliad/oim/metadata/appliedModel",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "Graph": "http://www.w3.org/2004/03/trix/rdfg-1/Graph",
     "unitsDescription": {
       "@id": "https://w3id.org/iliad/oim/metadata/unitsDescription",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "Artifact": "https://w3id.org/idsa/core/Artifact",
     "filters": {
       "@id": "https://w3id.org/iliad/oim/metadata/filters",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "noDataValue": {
       "@id": "https://w3id.org/iliad/oim/metadata/noDataValue",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "searchText": {
       "@id": "https://w3id.org/iliad/oim/metadata/searchText",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "profileSchema": {
       "@id": "https://w3id.org/iliad/oim/metadata/profileSchema",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "coverageRef": {
       "@id": "http://www.opengis.net/cis/1.1/coverageRef",
@@ -2282,7 +2326,7 @@ Links to the schema:
     "creator": "dct:creator",
     "name": {
       "@id": "https://schema.org/name",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "dataBlock": {
       "@id": "http://www.opengis.net/cis/1.1/dataBlock",
@@ -2295,7 +2339,7 @@ Links to the schema:
     },
     "minDate": {
       "@id": "https://w3id.org/iliad/oim/metadata/minDate",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+      "@type": "xsd:dateTimeStamp"
     },
     "interval": {
       "@id": "http://www.opengis.net/swe/2.0/interval",
@@ -2303,16 +2347,16 @@ Links to the schema:
     },
     "uomLabel": {
       "@id": "http://www.opengis.net/cis/1.1/uomLabel",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "RangeSetType": "http://www.opengis.net/cis/1.1/RangeSetType",
     "allowedInterpolation": {
       "@id": "http://www.opengis.net/cis/1.1/allowedInterpolation",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+      "@type": "xsd:anyURI"
     },
     "axisLabel": {
       "@id": "http://www.opengis.net/cis/1.1/axisLabel",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "rights": "dct:rights",
     "TemporalEntity": "http://www.w3.org/2006/time#TemporalEntity",
@@ -2331,11 +2375,11 @@ Links to the schema:
     },
     "endpointInformation": {
       "@id": "https://w3id.org/idsa/core/endpointInformation",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "fileName": {
       "@id": "https://w3id.org/idsa/core/fileName",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "metadata": {
       "@id": "http://www.opengis.net/cis/1.1/metadata",
@@ -2343,7 +2387,7 @@ Links to the schema:
     },
     "byteSize": {
       "@id": "https://w3id.org/idsa/core/byteSize",
-      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      "@type": "xsd:integer"
     },
     "instance": {
       "@id": "https://w3id.org/idsa/core/instance",
@@ -2352,25 +2396,25 @@ Links to the schema:
     "isDefinedBy": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
     "definition": {
       "@id": "skos:definition",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "RangeSetRefType": "http://www.opengis.net/cis/1.1/RangeSetRefType",
     "srsName": {
       "@id": "http://www.opengis.net/cis/1.1/srsName",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+      "@type": "xsd:anyURI"
     },
     "QuantityType": "http://www.opengis.net/swe/2.0/QuantityType",
     "technicalManagerInfo": {
       "@id": "https://w3id.org/iliad/oim/metadata/technicalManagerInfo",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "colorTable": {
       "@id": "https://w3id.org/iliad/oim/metadata/colorTable",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "names": {
       "@id": "http://www.opengis.net/swe/2.0/names",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "source": "https://smartdatamodels.org/source",
     "publisher": {
@@ -2386,25 +2430,25 @@ Links to the schema:
     "subDatasetName": "https://w3id.org/iliad/oim/metadata/subDatasetName",
     "upperBound": {
       "@id": "http://www.opengis.net/cis/1.1/upperBound",
-      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      "@type": "xsd:integer"
     },
     "modified": "dct:modified",
     "Frequency": "https://w3id.org/idsa/core/Frequency",
     "Endpoint": "https://w3id.org/idsa/core/Endpoint",
     "samplingRate": {
       "@id": "https://w3id.org/idsa/core/samplingRate",
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      "@type": "xsd:decimal"
     },
     "CoverageByDomainAndRangeType": "http://www.opengis.net/cis/1.1/CoverageByDomainAndRangeType",
     "endpointDocumentation": {
       "@id": "https://w3id.org/idsa/core/endpointDocumentation",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+      "@type": "xsd:anyURI"
     },
     "accessRights": "dct:accessRights",
     "DCMIType": "dct:DCMIType",
     "checkSum": {
       "@id": "https://w3id.org/idsa/core/checkSum",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "seeAlso": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
     "contentType": {
@@ -2418,11 +2462,11 @@ Links to the schema:
     },
     "datasetManagerInfo": {
       "@id": "https://w3id.org/iliad/oim/metadata/datasetManagerInfo",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "contentStandard": {
       "@id": "https://w3id.org/idsa/core/contentStandard",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+      "@type": "xsd:anyURI"
     },
     "dataTypeSchema": {
       "@id": "https://w3id.org/idsa/core/dataTypeSchema",
@@ -2442,12 +2486,12 @@ Links to the schema:
     "TransformationBySensorModelType": "http://www.opengis.net/cis/1.1/TransformationBySensorModelType",
     "uomLabels": {
       "@id": "http://www.opengis.net/cis/1.1/uomLabels",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "contributor": "dct:contributor",
     "resolutionUnit": {
       "@id": "https://w3id.org/iliad/oim/metadata/resolutionUnit",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "AudioResource": "https://w3id.org/idsa/core/AudioResource",
     "DisplacementAxisNestType": "http://www.opengis.net/cis/1.1/DisplacementAxisNestType",
@@ -2462,34 +2506,34 @@ Links to the schema:
     "acrualPeriodicity": "dct:acrualPeriodicity",
     "customLicense": {
       "@id": "https://w3id.org/idsa/core/customLicense",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+      "@type": "xsd:anyURI"
     },
     "code": {
       "@id": "http://www.opengis.net/swe/2.0/code",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "epsg": {
       "@id": "https://w3id.org/iliad/oim/metadata/epsg",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "format": "dct:format",
     "accessURL": {
       "@id": "https://w3id.org/idsa/core/accessURL",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+      "@type": "xsd:anyURI"
     },
     "credits": {
       "@id": "https://w3id.org/iliad/oim/metadata/credits",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "temporal": "dct:temporal",
     "accrualPolicy": "dct:accrualPolicy",
     "resolution": {
       "@id": "http://www.opengis.net/cis/1.1/resolution",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "maxDate": {
       "@id": "https://w3id.org/iliad/oim/metadata/maxDate",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+      "@type": "xsd:dateTimeStamp"
     },
     "constraint": {
       "@id": "http://www.opengis.net/swe/2.0/constraint",
@@ -2498,12 +2542,12 @@ Links to the schema:
     "ConnectorEndpoint": "https://w3id.org/idsa/core/ConnectorEndpoint",
     "numberOfRecords": {
       "@id": "https://w3id.org/iliad/oim/metadata/numberOfRecords",
-      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      "@type": "xsd:integer"
     },
     "RegularAxisType": "http://www.opengis.net/cis/1.1/RegularAxisType",
     "standardLicense": {
       "@id": "https://w3id.org/idsa/core/standardLicense",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+      "@type": "xsd:anyURI"
     },
     "implements": {
       "@id": "http://www.w3.org/ns/ssn/implements",
@@ -2608,7 +2652,7 @@ Links to the schema:
     "StressOrPressure": "http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure",
     "resultTime": {
       "@id": "http://www.w3.org/ns/sosa/resultTime",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      "@type": "xsd:dateTime"
     },
     "Energy": "http://purl.oclc.org/NET/ssnx/qu/dim#Energy",
     "foaf.name": "http://xmlns.com/foaf/0.1/name",
@@ -2655,7 +2699,7 @@ Links to the schema:
     },
     "order": {
       "@id": "http://rs.tdwg.org/dwc/terms/order",
-      "@type": "http://www.w3.org/2001/XMLSchema#int"
+      "@type": "xsd:int"
     },
     "hasGeometry": {
       "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
@@ -2807,7 +2851,7 @@ Links to the schema:
     "Instant": "http://www.w3.org/2006/time#Instant",
     "numericDuration": {
       "@id": "http://www.w3.org/2006/time#numericDuration",
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+      "@type": "xsd:decimal"
     },
     "note": "skos:note",
     "Interval": "http://www.w3.org/2006/time#Interval",
@@ -2828,11 +2872,11 @@ Links to the schema:
     "editorialNote": "skos:editorialNote",
     "inXSDDateTimeStamp": {
       "@id": "http://www.w3.org/2006/time#inXSDDateTimeStamp",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+      "@type": "xsd:dateTimeStamp"
     },
     "inXSDDate": {
       "@id": "http://www.w3.org/2006/time#inXSDDate",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
+      "@type": "xsd:date"
     },
     "unitType": {
       "@id": "http://www.w3.org/2006/time#unitType",
@@ -2874,7 +2918,7 @@ Links to the schema:
     "taxonomicStatus": "http://rs.tdwg.org/dwc/terms/taxonomicStatus",
     "validFrom": {
       "@id": "http://portele.de/ont/inspire/baseInspire#validFrom",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      "@type": "xsd:dateTime"
     },
     "SurfaceMediumMedium": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#SurfaceMediumMedium",
     "Humidity": "https://saref.etsi.org/core/Humidity",
@@ -2891,7 +2935,7 @@ Links to the schema:
     "recordedByID": "http://rs.tdwg.org/dwc/terms/recordedByID",
     "dateCreated": {
       "@id": "https://smartdatamodels.org/dateCreated",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      "@type": "xsd:dateTime"
     },
     "Identification": "http://rs.tdwg.org/dwc/terms/Identification",
     "WeatherObserved": "https://smartdatamodels.org/dataModel.Weather/WeatherObserved",
@@ -2909,7 +2953,7 @@ Links to the schema:
     "minimumDistanceAboveSurfaceInMeters": "http://rs.tdwg.org/dwc/terms/minimumDistanceAboveSurfaceInMeters",
     "dateModified": {
       "@id": "https://smartdatamodels.org/dateModified",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      "@type": "xsd:dateTime"
     },
     "decimalLatitude": "http://rs.tdwg.org/dwc/terms/decimalLatitude",
     "references": "dct:references",
@@ -3030,7 +3074,7 @@ Links to the schema:
     "informationWithheld": "http://rs.tdwg.org/dwc/terms/informationWithheld",
     "dateObserved": {
       "@id": "https://smartdatamodels.org/dateObserved",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      "@type": "xsd:dateTime"
     },
     "relatesToMeasurement": {
       "@id": "https://saref.etsi.org/core/relatesToMeasurement",
@@ -3061,7 +3105,7 @@ Links to the schema:
     "habitat": "http://rs.tdwg.org/dwc/terms/habitat",
     "userName": {
       "@id": "https://w3id.org/demeter/agri/agriCommon#userName",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "materialSampleID": "http://rs.tdwg.org/dwc/terms/materialSampleID",
     "georeferenceVerificationStatus": "http://rs.tdwg.org/dwc/terms/georeferenceVerificationStatus",
@@ -3085,7 +3129,7 @@ Links to the schema:
     "eventDate": "http://rs.tdwg.org/dwc/terms/eventDate",
     "validTo": {
       "@id": "http://portele.de/ont/inspire/baseInspire#validTo",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      "@type": "xsd:dateTime"
     },
     "Occurrence": "http://rs.tdwg.org/dwc/terms/Occurrence",
     "year": "http://rs.tdwg.org/dwc/terms/year",
@@ -3115,7 +3159,7 @@ Links to the schema:
     "sampleAreaInSquareMeters": "http://mmisw.org/ont/ioos/marine_biogeography/sampleAreaInSquareMeters",
     "password": {
       "@id": "https://w3id.org/demeter/agri/agriCommon#password",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "xsd:string"
     },
     "subgenus": "http://rs.tdwg.org/dwc/terms/subgenus",
     "observedMaxLengthInCm": "http://mmisw.org/ont/ioos/marine_biogeography/observedMaxLengthInCm",

@@ -889,51 +889,72 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 <https://qudt.org/vocab/unit/NanoM> skos:prefLabel "0.000000001-fold of the SI base unit metre"@en .
 
 <https://w3id.org/ogcincubator/coverageJSON/POTM_range> a covjson:NdArray ;
+    dcterms:identifier "POTM" ;
     covjson:axisNames ( "composite" ) ;
-    covjson:dataType xsd:double ;
-    covjson:shape ( 2 ) .
+    covjson:dataType <https://w3id.org/ogcincubator/coverageJSON/float> ;
+    covjson:shape ( 2 ) ;
+    covjson:values "[23.8,23.8]"^^rdf:JSON .
 
 [] a covjson:CoverageCollection ;
     hydra:member [ a covjson:Coverage ;
             covjson:domain [ a covjson:Domain ;
-                    covjson:axis [ ],
-                        [ covjson:dataType covjson:tuple ] ] ;
+                    covjson:axis [ dcterms:identifier "composite" ;
+                            covjson:coordinates "[\"x\",\"y\",\"z\"]"^^rdf:JSON ;
+                            covjson:dataType <https://w3id.org/ogcincubator/coverageJSON/tuple> ;
+                            covjson:values "[[1,20,1],[2,21,3]]"^^rdf:JSON ],
+                        [ dcterms:identifier "t" ;
+                            covjson:values "[\"2008-01-02T04:00:00Z\"]"^^rdf:JSON ] ] ;
             covjson:range [ a covjson:NdArray ;
+                    dcterms:identifier "POTM" ;
                     covjson:axisNames ( "composite" ) ;
-                    covjson:dataType xsd:double ;
-                    covjson:shape ( 2 ) ],
+                    covjson:dataType <https://w3id.org/ogcincubator/coverageJSON/float> ;
+                    covjson:shape ( 2 ) ;
+                    covjson:values "[23.8,23.8]"^^rdf:JSON ],
                 [ a covjson:NdArray ;
+                    dcterms:identifier "particle_class" ;
                     covjson:axisNames ( "composite" ) ;
-                    covjson:dataType xsd:integer ;
-                    covjson:shape ( 2 ) ] ],
+                    covjson:dataType <https://w3id.org/ogcincubator/coverageJSON/integer> ;
+                    covjson:shape ( 2 ) ;
+                    covjson:values "[1,2]"^^rdf:JSON ] ],
         [ a covjson:Coverage ;
             covjson:domain [ a covjson:Domain ;
-                    covjson:axis [ covjson:dataType covjson:tuple ],
-                        [ ] ] ;
+                    covjson:axis [ dcterms:identifier "composite" ;
+                            covjson:coordinates "[\"x\",\"y\",\"z\"]"^^rdf:JSON ;
+                            covjson:dataType <https://w3id.org/ogcincubator/coverageJSON/tuple> ;
+                            covjson:values "[[1,20,1],[2,21,3]]"^^rdf:JSON ],
+                        [ dcterms:identifier "t" ;
+                            covjson:values "[\"2008-01-01T04:00:00Z\"]"^^rdf:JSON ] ] ;
             covjson:range [ a covjson:NdArray ;
+                    dcterms:identifier "particle_class" ;
                     covjson:axisNames ( "composite" ) ;
-                    covjson:dataType xsd:integer ;
-                    covjson:shape ( 2 ) ],
+                    covjson:dataType <https://w3id.org/ogcincubator/coverageJSON/integer> ;
+                    covjson:shape ( 2 ) ;
+                    covjson:values "[1,3]"^^rdf:JSON ],
                 <https://w3id.org/ogcincubator/coverageJSON/POTM_range> ] ;
     covjson:domain [ a covjson:Domain ;
-            covjson:axis [ ] ] ;
+            covjson:axis [ dcterms:identifier "t" ;
+                    covjson:values "[\"2008-01-01T04:00:00Z\",\"2008-01-02T04:00:00Z\"]"^^rdf:JSON ] ] ;
     covjson:domainType covjsondt:MultiPoint ;
     covjson:parameter [ a covjson:Parameter ;
-            dcterms:description "particle diameter"@en ;
-            qudt:unit [ qudt:symbol "nm"^^<http://www.opengis.net/def/uom/UCUM/> ;
-                    skos:prefLabel "nanometers"@en ] ;
-            ssn1:observedProperty <https://qudt.org/vocab/unit/NanoM> ],
-        [ a covjson:Parameter ;
+            dcterms:identifier "particle_class" ;
             ssn1:observedProperty <http://example.com/particletypes> ;
             covjson:categoryEncoding [ ns1:_0 0 ;
                     ns1:_1 1 ;
-                    ns1:_4 2 ] ] ;
-    covjson:referencing [ covjson:referenceSystem [ a ignf:VerticalCRS ;
-                    ignf:coordinateSystem [ covjson:coordinateSystemAxes ( [ ignf:axisDirection "down" ;
-                                        qudt:unit [ qudt:symbol "Pa" ] ] ) ] ] ],
-        [ covjson:referenceSystem [ a inspiregloss:TemporalReferenceSystem ;
-                    covjson:calendar <http://www.opengis.net/def/uom/ISO-8601/0/Gregorian> ] ],
-        [ covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] .
+                    ns1:_4 2 ] ],
+        [ a covjson:Parameter ;
+            dcterms:description "particle diameter"@en ;
+            dcterms:identifier "diameter" ;
+            qudt:unit [ qudt:symbol "nm"^^<http://www.opengis.net/def/uom/UCUM/> ;
+                    skos:prefLabel "nanometers"@en ] ;
+            ssn1:observedProperty <https://qudt.org/vocab/unit/NanoM> ] ;
+    covjson:referencing [ covjson:coordinates "[\"z\"]"^^rdf:JSON ;
+            covjson:referenceSystem [ a ignf:VerticalCRS ;
+                    ignf:coordinateSystem [ covjson:coordinateSystemAxes ( [ ignf:axisDirection "down" ] ) ] ] ],
+        [ covjson:coordinates "[\"x\",\"y\"]"^^rdf:JSON ;
+            covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ],
+        [ covjson:coordinates "[\"t\"]"^^rdf:JSON ;
+            covjson:referenceSystem [ a inspiregloss:TemporalReferenceSystem ;
+                    covjson:calendar <http://www.opengis.net/def/uom/ISO-8601/0/Gregorian> ] ] .
 
 
 ```
@@ -941,62 +962,1236 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 ## Schema
 
 ```yaml
-$schema: http://json-schema.org/draft-07/schema#
-title: A CoverageJSON object
-description: 'Component of OGC Coverage Implementation Schema 1.0. Last updated: 2023-05-10.
-  Copyright (c) 2023 Open Geospatial Consortium, Inc. All Rights Reserved. To obtain
-  additional rights of use, visit http://www.opengeospatial.org/legal/.'
-$ref: https://schemas.opengis.net/covjson/1.0/coveragejson.json
+$id: https://schemas.opengis.net/covjson/1.0/coveragejson.json
+$schema: http://json-schema.org/draft-07/schema
+description: A CoverageJSON object
+type: object
+properties:
+  type:
+    enum:
+    - Domain
+    - NdArray
+    - TiledNdArray
+    - Coverage
+    - CoverageCollection
+    x-jsonld-id: '@type'
+required:
+- type
+allOf:
+- if:
+    properties:
+      type:
+        const: Domain
+  then:
+    $ref: '#/definitions/domain'
+- if:
+    properties:
+      type:
+        const: NdArray
+  then:
+    $ref: '#/definitions/ndArray'
+- if:
+    properties:
+      type:
+        const: TiledNdArray
+  then:
+    $ref: '#/definitions/tiledNdArray'
+- if:
+    properties:
+      type:
+        const: Coverage
+  then:
+    $ref: '#/definitions/coverage'
+- if:
+    properties:
+      type:
+        const: CoverageCollection
+  then:
+    $ref: '#/definitions/coverageCollection'
+definitions:
+  anyAxis:
+    description: Validates any axis
+    if:
+      required:
+      - values
+    then:
+      $ref: '#/definitions/valuesAxis'
+    else:
+      $ref: '#/definitions/numericRegularlySpacedAxis'
+  coverage:
+    allOf:
+    - $ref: '#/definitions/coverageBase'
+    - required:
+      - parameters
+      properties:
+        domain:
+          if:
+            type: object
+          then:
+            required:
+            - referencing
+          x-jsonld-id: https://covjson.org/def/core#domain
+  coverageBase:
+    description: A Coverage, representing a mapping from a domain to sets of data
+      values described by parameters.
+    type: object
+    properties:
+      type:
+        const: Coverage
+        x-jsonld-id: '@type'
+      id:
+        type: string
+        x-jsonld-id: '@id'
+      domainType:
+        type: string
+        x-jsonld-id: https://covjson.org/def/core#domainType
+        x-jsonld-type: '@vocab'
+      domain:
+        allOf:
+        - type:
+          - string
+          - object
+        - if:
+            type: object
+          then:
+            $ref: '#/definitions/domainBase'
+        x-jsonld-id: https://covjson.org/def/core#domain
+      parameters:
+        type: object
+        patternProperties:
+          .+:
+            $ref: '#/definitions/parameter'
+        x-jsonld-id: https://covjson.org/def/core#parameter
+        x-jsonld-type: '@id'
+        x-jsonld-container: '@index'
+        x-jsonld-index: http://purl.org/dc/terms/identifier
+      parameterGroups:
+        type: array
+        items:
+          $ref: '#/definitions/parameterGroup'
+      ranges:
+        type: object
+        patternProperties:
+          .+:
+            allOf:
+            - type:
+              - string
+              - object
+            - if:
+                type: object
+              then:
+                properties:
+                  type:
+                    enum:
+                    - NdArray
+                    - TiledNdArray
+                    x-jsonld-id: '@type'
+                required:
+                - type
+            - if:
+                type: object
+                properties:
+                  type:
+                    const: NdArray
+              then:
+                $ref: '#/definitions/ndArray'
+            - if:
+                type: object
+                properties:
+                  type:
+                    const: TiledNdArray
+              then:
+                $ref: '#/definitions/tiledNdArray'
+        x-jsonld-id: https://covjson.org/def/core#range
+        x-jsonld-type: '@id'
+        x-jsonld-container: '@index'
+        x-jsonld-index: http://purl.org/dc/terms/identifier
+      rangeAlternates:
+        type: object
+    required:
+    - type
+    - domain
+    - ranges
+  coverageCollection:
+    description: A collection of coverage objects
+    properties:
+      type:
+        const: CoverageCollection
+        x-jsonld-id: '@type'
+      domainType:
+        type: string
+        x-jsonld-id: https://covjson.org/def/core#domainType
+        x-jsonld-type: '@vocab'
+      parameters:
+        type: object
+        patternProperties:
+          .+:
+            $ref: '#/definitions/parameter'
+        x-jsonld-id: https://covjson.org/def/core#parameter
+        x-jsonld-type: '@id'
+        x-jsonld-container: '@index'
+        x-jsonld-index: http://purl.org/dc/terms/identifier
+      parameterGroups:
+        type: array
+        items:
+          $ref: '#/definitions/parameterGroup'
+      referencing:
+        type: array
+        items:
+          $ref: '#/definitions/referenceSystemConnection'
+        x-jsonld-id: https://covjson.org/def/core#referencing
+        x-jsonld-container: '@set'
+      coverages:
+        type: array
+        items:
+          $ref: '#/definitions/coverageBase'
+        x-jsonld-id: http://www.w3.org/ns/hydra/core#member
+        x-jsonld-container: '@set'
+    required:
+    - type
+    - coverages
+    allOf:
+    - $comment: If no parameters are present at collection level then each coverage
+        must have their own
+      if:
+        not:
+          required:
+          - parameters
+      then:
+        properties:
+          coverages:
+            items:
+              required:
+              - parameters
+            x-jsonld-id: http://www.w3.org/ns/hydra/core#member
+            x-jsonld-container: '@set'
+    - $comment: If no "referencing" member is present at collection level then each
+        coverage domain must have its own
+      if:
+        not:
+          required:
+          - referencing
+      then:
+        properties:
+          coverages:
+            items:
+              properties:
+                domain:
+                  if:
+                    type: object
+                  then:
+                    required:
+                    - referencing
+            x-jsonld-id: http://www.w3.org/ns/hydra/core#member
+            x-jsonld-container: '@set'
+  domain:
+    allOf:
+    - $ref: '#/definitions/domainBase'
+    - required:
+      - referencing
+  domainBase:
+    description: A Domain, which defines a set of positions and their extent in one
+      or more referencing systems
+    type: object
+    properties:
+      type:
+        const: Domain
+        x-jsonld-id: '@type'
+      domainType:
+        type: string
+        x-jsonld-id: https://covjson.org/def/core#domainType
+        x-jsonld-type: '@vocab'
+      axes:
+        type: object
+        description: Set of Axis objects, keyed by axis identifier
+        minProperties: 1
+        patternProperties:
+          .+:
+            $ref: '#/definitions/anyAxis'
+        x-jsonld-id: https://covjson.org/def/core#axis
+        x-jsonld-container: '@index'
+        x-jsonld-index: http://purl.org/dc/terms/identifier
+      referencing:
+        type: array
+        items:
+          $ref: '#/definitions/referenceSystemConnection'
+        x-jsonld-id: https://covjson.org/def/core#referencing
+        x-jsonld-container: '@set'
+    required:
+    - type
+    - axes
+    dependencies:
+      domainType:
+        allOf:
+        - if:
+            properties:
+              domainType:
+                const: Grid
+          then:
+            description: 'Grid domain: x and y are required, z and t optional'
+            properties:
+              axes:
+                properties:
+                  x:
+                    $ref: '#/definitions/numericAxis'
+                  y:
+                    $ref: '#/definitions/numericAxis'
+                  z:
+                    $ref: '#/definitions/numericAxis'
+                  t:
+                    $ref: '#/definitions/stringValuesAxis'
+                required:
+                - x
+                - y
+                additionalProperties: false
+        - if:
+            properties:
+              domainType:
+                const: Trajectory
+          then:
+            description: 'Trajectory domain: mandatory composite axis and optional
+              z axis'
+            properties:
+              axes:
+                properties:
+                  composite:
+                    allOf:
+                    - $ref: '#/definitions/tupleValuesAxis'
+                    - properties:
+                        values:
+                          items:
+                            $comment: In a Trajectory, tuples always have 3 (txy)
+                              or 4 (txyz) values
+                            minItems: 3
+                            maxItems: 4
+                        coordinates:
+                          enum:
+                          - - t
+                            - x
+                            - y
+                            - z
+                          - - t
+                            - x
+                            - y
+                  z:
+                    $ref: '#/definitions/numericSingleValueAxis'
+                required:
+                - composite
+                additionalProperties: false
+        - if:
+            properties:
+              domainType:
+                const: VerticalProfile
+          then:
+            description: 'Vertical Profile domain: mandatory x, y and z axis and optional
+              t axis'
+            properties:
+              axes:
+                properties:
+                  x:
+                    $ref: '#/definitions/numericSingleValueAxis'
+                  y:
+                    $ref: '#/definitions/numericSingleValueAxis'
+                  z:
+                    $ref: '#/definitions/numericAxis'
+                  t:
+                    $ref: '#/definitions/stringSingleValueAxis'
+                required:
+                - x
+                - y
+                - z
+                additionalProperties: false
+        - if:
+            properties:
+              domainType:
+                const: Point
+          then:
+            description: 'Point domain: mandatory x and y axis, optional z and t axis'
+            properties:
+              axes:
+                properties:
+                  x:
+                    $ref: '#/definitions/numericSingleValueAxis'
+                  y:
+                    $ref: '#/definitions/numericSingleValueAxis'
+                  z:
+                    $ref: '#/definitions/numericSingleValueAxis'
+                  t:
+                    $ref: '#/definitions/stringSingleValueAxis'
+                required:
+                - x
+                - y
+                additionalProperties: false
+        - if:
+            properties:
+              domainType:
+                const: PointSeries
+          then:
+            description: 'PointSeries domain: mandatory x, y and t axis, optional
+              z axis'
+            properties:
+              axes:
+                properties:
+                  x:
+                    $ref: '#/definitions/numericSingleValueAxis'
+                  y:
+                    $ref: '#/definitions/numericSingleValueAxis'
+                  z:
+                    $ref: '#/definitions/numericSingleValueAxis'
+                  t:
+                    $ref: '#/definitions/stringValuesAxis'
+                required:
+                - x
+                - y
+                - t
+                additionalProperties: false
+        - if:
+            properties:
+              domainType:
+                const: MultiPoint
+          then:
+            description: 'MultiPoint domain: mandatory composite axis, optional t
+              axis'
+            properties:
+              axes:
+                properties:
+                  composite:
+                    allOf:
+                    - $ref: '#/definitions/tupleValuesAxis'
+                    - properties:
+                        values:
+                          items:
+                            $comment: In a MultiPoint, tuples always have 2 (xy) or
+                              3 values (xyz)
+                            minItems: 2
+                            maxItems: 3
+                        coordinates:
+                          enum:
+                          - - x
+                            - y
+                            - z
+                          - - x
+                            - y
+                  t:
+                    $ref: '#/definitions/stringSingleValueAxis'
+                required:
+                - composite
+                additionalProperties: false
+        - if:
+            properties:
+              domainType:
+                const: MultiPointSeries
+          then:
+            description: 'MultiPointSeries domain: mandatory composite and t axes'
+            properties:
+              axes:
+                properties:
+                  composite:
+                    allOf:
+                    - $ref: '#/definitions/tupleValuesAxis'
+                    - properties:
+                        values:
+                          items:
+                            $comment: In a MultiPointSeries, tuples always have 2
+                              (xy) or 3 values (xyz)
+                            minItems: 2
+                            maxItems: 3
+                        coordinates:
+                          enum:
+                          - - x
+                            - y
+                            - z
+                          - - x
+                            - y
+                  t:
+                    $ref: '#/definitions/stringValuesAxis'
+                required:
+                - composite
+                - t
+                additionalProperties: false
+        - if:
+            properties:
+              domainType:
+                const: Section
+          then:
+            description: 'Section domain: mandatory composite and z axes'
+            properties:
+              axes:
+                properties:
+                  composite:
+                    allOf:
+                    - $ref: '#/definitions/tupleValuesAxis'
+                    - properties:
+                        values:
+                          items:
+                            $comment: In a Section, tuples always have 3 values (txy)
+                            minItems: 3
+                            maxItems: 3
+                        coordinates:
+                          const:
+                          - t
+                          - x
+                          - y
+                  z:
+                    $ref: '#/definitions/numericAxis'
+                required:
+                - composite
+                - z
+                additionalProperties: false
+        - if:
+            properties:
+              domainType:
+                const: Polygon
+          then:
+            description: 'Polygon domain: mandatory composite axis, optional z and
+              t axes'
+            properties:
+              axes:
+                properties:
+                  composite:
+                    allOf:
+                    - $ref: '#/definitions/polygonValuesAxis'
+                    - properties:
+                        values:
+                          $comment: There can only be one polygon in the axis
+                          maxItems: 1
+                        coordinates:
+                          const:
+                          - x
+                          - y
+                  z:
+                    $ref: '#/definitions/numericSingleValueAxis'
+                  t:
+                    $ref: '#/definitions/stringSingleValueAxis'
+                required:
+                - composite
+                additionalProperties: false
+        - if:
+            properties:
+              domainType:
+                const: PolygonSeries
+          then:
+            description: 'PolygonSeries domain: mandatory composite axis, optional
+              z and t axes'
+            properties:
+              axes:
+                properties:
+                  composite:
+                    allOf:
+                    - $ref: '#/definitions/polygonValuesAxis'
+                    - properties:
+                        values:
+                          $comment: There can only be one polygon in the axis
+                          maxItems: 1
+                        coordinates:
+                          const:
+                          - x
+                          - y
+                  z:
+                    $ref: '#/definitions/numericSingleValueAxis'
+                  t:
+                    $ref: '#/definitions/stringValuesAxis'
+                required:
+                - composite
+                additionalProperties: false
+        - if:
+            properties:
+              domainType:
+                const: MultiPolygon
+          then:
+            description: 'MultiPolygon domain: mandatory composite axis, optional
+              z and t axes'
+            properties:
+              axes:
+                properties:
+                  composite:
+                    allOf:
+                    - $ref: '#/definitions/polygonValuesAxis'
+                    - properties:
+                        coordinates:
+                          const:
+                          - x
+                          - y
+                  z:
+                    $ref: '#/definitions/numericSingleValueAxis'
+                  t:
+                    $ref: '#/definitions/stringSingleValueAxis'
+                required:
+                - composite
+                additionalProperties: false
+        - if:
+            properties:
+              domainType:
+                const: MultiPolygonSeries
+          then:
+            description: 'MultiPolygonSeries domain: mandatory composite axis, optional
+              z and t axes'
+            properties:
+              axes:
+                properties:
+                  composite:
+                    allOf:
+                    - $ref: '#/definitions/polygonValuesAxis'
+                    - properties:
+                        coordinates:
+                          const:
+                          - x
+                          - y
+                  z:
+                    $ref: '#/definitions/numericSingleValueAxis'
+                  t:
+                    $ref: '#/definitions/stringValuesAxis'
+                required:
+                - composite
+                additionalProperties: false
+  i18n:
+    type: object
+    description: Object representing an internationalised string where keys are BCP
+      47 language tags.
+    patternProperties:
+      ? ^(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*))$
+      : type: string
+    additionalProperties: false
+  ndArray:
+    type: object
+    description: Object representing a multidimensional (>= 0D) array with named axes,
+      encoded as a flat one-dimensional array in row-major order
+    properties:
+      type:
+        const: NdArray
+        x-jsonld-id: '@type'
+      dataType:
+        enum:
+        - float
+        - integer
+        - string
+        x-jsonld-id: https://covjson.org/def/core#dataType
+        x-jsonld-type: '@id'
+      shape:
+        type: array
+        items:
+          type: number
+        x-jsonld-id: https://covjson.org/def/core#shape
+        x-jsonld-container: '@list'
+      axisNames:
+        type: array
+        items:
+          type: string
+        uniqueItems: true
+        x-jsonld-id: https://covjson.org/def/core#axisNames
+        x-jsonld-container: '@list'
+      values:
+        type: array
+        minItems: 1
+        x-jsonld-id: https://covjson.org/def/core#values
+        x-jsonld-type: '@json'
+    allOf:
+    - if:
+        properties:
+          dataType:
+            const: float
+      then:
+        properties:
+          values:
+            items:
+              type:
+              - number
+              - 'null'
+            x-jsonld-id: https://covjson.org/def/core#values
+            x-jsonld-type: '@json'
+    - if:
+        properties:
+          dataType:
+            const: integer
+      then:
+        properties:
+          values:
+            items:
+              type:
+              - integer
+              - 'null'
+            x-jsonld-id: https://covjson.org/def/core#values
+            x-jsonld-type: '@json'
+    - if:
+        properties:
+          dataType:
+            const: string
+      then:
+        properties:
+          values:
+            items:
+              type:
+              - string
+              - 'null'
+            x-jsonld-id: https://covjson.org/def/core#values
+            x-jsonld-type: '@json'
+    - if:
+        anyOf:
+        - properties:
+            values:
+              minItems: 2
+        - properties:
+            shape:
+              minItems: 1
+          required:
+          - shape
+        - properties:
+            axisNames:
+              minItems: 1
+          required:
+          - axisNames
+      then:
+        properties:
+          shape:
+            minItems: 1
+            x-jsonld-id: https://covjson.org/def/core#shape
+            x-jsonld-container: '@list'
+          axisNames:
+            minItems: 1
+            x-jsonld-id: https://covjson.org/def/core#axisNames
+            x-jsonld-container: '@list'
+        required:
+        - shape
+        - axisNames
+    required:
+    - type
+    - dataType
+    - values
+  numericAxis:
+    description: Simple axis with numeric values
+    if:
+      required:
+      - values
+    then:
+      $ref: '#/definitions/numericValuesAxis'
+    else:
+      $ref: '#/definitions/numericRegularlySpacedAxis'
+  numericRegularlySpacedAxis:
+    description: A regularly-spaced numeric axis
+    properties:
+      start:
+        type: number
+        x-jsonld-id: https://covjson.org/def/core#start
+      stop:
+        type: number
+        x-jsonld-id: https://covjson.org/def/core#stop
+      num:
+        type: integer
+        minimum: 1
+        x-jsonld-id: https://covjson.org/def/core#num
+    required:
+    - start
+    - stop
+    - num
+    additionalProperties: false
+  numericSingleValueAxis:
+    description: Axis defined by single numeric value
+    allOf:
+    - $ref: '#/definitions/numericValuesAxis'
+    - properties:
+        values:
+          maxItems: 1
+          x-jsonld-id: https://covjson.org/def/core#values
+          x-jsonld-type: '@json'
+  numericValuesAxis:
+    description: Axis defined by list of numeric axis values and optional bounds
+    allOf:
+    - $ref: '#/definitions/valuesAxisBase'
+    - properties:
+        values:
+          items:
+            type: number
+          x-jsonld-id: https://covjson.org/def/core#values
+          x-jsonld-type: '@json'
+        bounds:
+          items:
+            type: number
+          x-jsonld-id: https://covjson.org/def/core#bounds
+          x-jsonld-type: '@json'
+      additionalProperties: false
+  observedProperty:
+    type: object
+    description: A definition of the quantity being measured.
+    properties:
+      id:
+        type: string
+        x-jsonld-id: '@id'
+      label:
+        $ref: '#/definitions/i18n'
+        x-jsonld-id: http://www.w3.org/2004/02/skos/core#prefLabel
+        x-jsonld-container: '@language'
+      description:
+        $ref: '#/definitions/i18n'
+        x-jsonld-id: http://purl.org/dc/terms/description
+        x-jsonld-container: '@language'
+      categories:
+        type: array
+        items:
+          type: object
+          properties:
+            id:
+              type: string
+              x-jsonld-id: '@id'
+            label:
+              $ref: '#/definitions/i18n'
+              x-jsonld-id: http://www.w3.org/2004/02/skos/core#prefLabel
+              x-jsonld-container: '@language'
+            description:
+              $ref: '#/definitions/i18n'
+              x-jsonld-id: http://purl.org/dc/terms/description
+              x-jsonld-container: '@language'
+          required:
+          - id
+          - label
+        minItems: 1
+    required:
+    - label
+  parameter:
+    type: object
+    description: Represents metadata about the values of the coverage
+    properties:
+      id:
+        type: string
+        x-jsonld-id: '@id'
+      type:
+        description: Type of the parameter object, must be "Parameter"
+        const: Parameter
+        x-jsonld-id: '@type'
+      description:
+        $ref: '#/definitions/i18n'
+        x-jsonld-id: http://purl.org/dc/terms/description
+        x-jsonld-container: '@language'
+      observedProperty:
+        $ref: '#/definitions/observedProperty'
+        x-jsonld-id: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#observedProperty
+      unit:
+        $ref: '#/definitions/unit'
+        x-jsonld-id: http://qudt.org/schema/qudt#unit
+      categoryEncoding:
+        type: object
+        description: Maps IDs of categories in the observedProperty to range values
+        patternProperties:
+          .+:
+            oneOf:
+            - type: integer
+            - type: array
+              items:
+                type: integer
+              minItems: 1
+              uniqueItems: true
+        x-jsonld-id: https://covjson.org/def/core#categoryEncoding
+    required:
+    - type
+    - observedProperty
+  parameterGroup:
+    type: object
+    description: Represents logical groups of parameters
+    properties:
+      type:
+        description: Type of the parameter group object, must be "ParameterGroup"
+        const: ParameterGroup
+        x-jsonld-id: '@type'
+      id:
+        type: string
+        x-jsonld-id: '@id'
+      label:
+        $ref: '#/definitions/i18n'
+        x-jsonld-id: http://www.w3.org/2004/02/skos/core#prefLabel
+        x-jsonld-container: '@language'
+      description:
+        $ref: '#/definitions/i18n'
+        x-jsonld-id: http://purl.org/dc/terms/description
+        x-jsonld-container: '@language'
+      observedProperty:
+        $ref: '#/definitions/observedProperty'
+        x-jsonld-id: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#observedProperty
+      members:
+        type: array
+        items:
+          type: string
+        minItems: 1
+        uniqueItems: true
+        x-jsonld-id: https://covjson.org/def/core#member
+        x-jsonld-type: '@vocab'
+        x-jsonld-container: '@set'
+    required:
+    - type
+    - members
+    anyOf:
+    - required:
+      - label
+    - required:
+      - observedProperty
+  polygonValuesAxis:
+    description: Polygon-based axis
+    allOf:
+    - $ref: '#/definitions/valuesAxisBase'
+    - properties:
+        dataType:
+          const: polygon
+          x-jsonld-id: https://covjson.org/def/core#dataType
+          x-jsonld-type: '@id'
+        values:
+          items:
+            description: A GeoJSON polygon
+            type: array
+            items:
+              type: array
+              items:
+                description: 'The inner array: the coordinates themselves'
+                type: array
+                items:
+                  type: number
+                minItems: 2
+              minItems: 1
+            minItems: 1
+          x-jsonld-id: https://covjson.org/def/core#values
+          x-jsonld-type: '@json'
+        coordinates:
+          x-jsonld-id: https://covjson.org/def/core#coordinates
+          x-jsonld-type: '@json'
+      required:
+      - dataType
+      - values
+      - coordinates
+      additionalProperties: false
+  primitiveValuesAxis:
+    description: Validates any axis with primitive values
+    allOf:
+    - $ref: '#/definitions/valuesAxisBase'
+    - $comment: This redundant branch exists to fail early with succinct errors
+      properties:
+        values:
+          items:
+            oneOf:
+            - type: number
+            - type: string
+          x-jsonld-id: https://covjson.org/def/core#values
+          x-jsonld-type: '@json'
+    - if:
+        properties:
+          values:
+            items:
+              type: number
+      then:
+        $ref: '#/definitions/numericValuesAxis'
+      else:
+        $ref: '#/definitions/stringValuesAxis'
+  referenceSystem:
+    type: object
+    properties:
+      type:
+        type: string
+        x-jsonld-id: '@type'
+    required:
+    - type
+    allOf:
+    - if:
+        properties:
+          type:
+            const: TemporalRS
+      then:
+        description: Temporal reference system
+        properties:
+          calendar:
+            type: string
+            oneOf:
+            - const: Gregorian
+            - pattern: ^https?://
+            x-jsonld-id: https://covjson.org/def/core#calendar
+            x-jsonld-type: '@vocab'
+          timeScale:
+            type: string
+            x-jsonld-id: https://covjson.org/def/core#timeScale
+        required:
+        - calendar
+    - if:
+        properties:
+          type:
+            const: IdentifierRS
+      then:
+        description: An identifier-based reference system
+        properties:
+          id:
+            type: string
+            x-jsonld-id: '@id'
+          label:
+            $ref: '#/definitions/i18n'
+            x-jsonld-id: http://www.w3.org/2004/02/skos/core#prefLabel
+            x-jsonld-container: '@language'
+          description:
+            $ref: '#/definitions/i18n'
+            x-jsonld-id: http://purl.org/dc/terms/description
+            x-jsonld-container: '@language'
+          targetConcept:
+            $ref: '#/definitions/targetConcept'
+            x-jsonld-id: https://covjson.org/def/core#targetConcept
+          identifiers:
+            type: object
+            patternProperties:
+              .+:
+                $ref: '#/definitions/targetConcept'
+            x-jsonld-id: https://covjson.org/def/core#identifier
+            x-jsonld-type: '@id'
+            x-jsonld-container: '@index'
+        required:
+        - targetConcept
+  referenceSystemConnection:
+    description: 'Reference System Connection object: connects coordinates to reference
+      systems'
+    type: object
+    properties:
+      coordinates:
+        type: array
+        items:
+          type: string
+        minItems: 1
+        x-jsonld-id: https://covjson.org/def/core#coordinates
+        x-jsonld-type: '@json'
+      system:
+        $ref: '#/definitions/referenceSystem'
+        x-jsonld-id: https://covjson.org/def/core#referenceSystem
+    required:
+    - coordinates
+    - system
+  stringSingleValueAxis:
+    description: Axis defined by single string value
+    allOf:
+    - $ref: '#/definitions/stringValuesAxis'
+    - properties:
+        values:
+          maxItems: 1
+          x-jsonld-id: https://covjson.org/def/core#values
+          x-jsonld-type: '@json'
+  stringValuesAxis:
+    description: Simple axis with string values (e.g. time strings)
+    allOf:
+    - $ref: '#/definitions/valuesAxisBase'
+    - properties:
+        values:
+          items:
+            type: string
+          x-jsonld-id: https://covjson.org/def/core#values
+          x-jsonld-type: '@json'
+        bounds:
+          items:
+            type: string
+          x-jsonld-id: https://covjson.org/def/core#bounds
+          x-jsonld-type: '@json'
+      additionalProperties: false
+  targetConcept:
+    type: object
+    properties:
+      id:
+        type: string
+        x-jsonld-id: '@id'
+      label:
+        $ref: '#/definitions/i18n'
+        x-jsonld-id: http://www.w3.org/2004/02/skos/core#prefLabel
+        x-jsonld-container: '@language'
+      description:
+        $ref: '#/definitions/i18n'
+        x-jsonld-id: http://purl.org/dc/terms/description
+        x-jsonld-container: '@language'
+    required:
+    - label
+  tiledNdArray:
+    type: object
+    description: Object representing a multidimensional (>= 1D) array with named axes
+      split up into sets of linked NdArray documents
+    properties:
+      type:
+        const: TiledNdArray
+        x-jsonld-id: '@type'
+      dataType:
+        enum:
+        - float
+        - integer
+        - string
+        x-jsonld-id: https://covjson.org/def/core#dataType
+        x-jsonld-type: '@id'
+      shape:
+        type: array
+        items:
+          type: number
+        minItems: 1
+        x-jsonld-id: https://covjson.org/def/core#shape
+        x-jsonld-container: '@list'
+      axisNames:
+        type: array
+        items:
+          type: string
+        minItems: 1
+        uniqueItems: true
+        x-jsonld-id: https://covjson.org/def/core#axisNames
+        x-jsonld-container: '@list'
+      tileSets:
+        type: array
+        minItems: 1
+        items:
+          type: object
+          properties:
+            tileShape:
+              type: array
+              items:
+                type:
+                - number
+                - 'null'
+              minItems: 1
+              x-jsonld-id: https://covjson.org/def/core#tileShape
+              x-jsonld-container: '@list'
+            urlTemplate:
+              type: string
+              description: RFC 6570 Level 1 URI template
+              x-jsonld-id: https://covjson.org/def/core#urlTemplate
+          required:
+          - tileShape
+          - urlTemplate
+        x-jsonld-id: https://covjson.org/def/core#tileSet
+        x-jsonld-container: '@set'
+    required:
+    - type
+    - dataType
+    - shape
+    - axisNames
+    - tileSets
+  tupleValuesAxis:
+    description: Tuple-based axis
+    allOf:
+    - $ref: '#/definitions/valuesAxisBase'
+    - properties:
+        dataType:
+          const: tuple
+          x-jsonld-id: https://covjson.org/def/core#dataType
+          x-jsonld-type: '@id'
+        values:
+          items:
+            description: A tuple of axis values (numbers or strings)
+            type: array
+            items:
+              type:
+              - number
+              - string
+            minItems: 2
+          x-jsonld-id: https://covjson.org/def/core#values
+          x-jsonld-type: '@json'
+        coordinates:
+          x-jsonld-id: https://covjson.org/def/core#coordinates
+          x-jsonld-type: '@json'
+      required:
+      - dataType
+      - values
+      - coordinates
+      additionalProperties: false
+  unit:
+    type: object
+    description: The units of measure
+    properties:
+      id:
+        type: string
+        x-jsonld-id: '@id'
+      label:
+        $ref: '#/definitions/i18n'
+        x-jsonld-id: http://www.w3.org/2004/02/skos/core#prefLabel
+        x-jsonld-container: '@language'
+      symbol:
+        allOf:
+        - type:
+          - string
+          - object
+        - if:
+            type: object
+          then:
+            properties:
+              type:
+                type: string
+                x-jsonld-id: '@type'
+              value:
+                type: string
+                x-jsonld-id: '@value'
+            required:
+            - type
+            - value
+        x-jsonld-id: http://qudt.org/schema/qudt#symbol
+    anyOf:
+    - required:
+      - label
+    - required:
+      - symbol
+  valuesAxis:
+    description: Validates any values-based axis
+    allOf:
+    - $ref: '#/definitions/valuesAxisBase'
+    - if:
+        not:
+          required:
+          - dataType
+      then:
+        $ref: '#/definitions/primitiveValuesAxis'
+    dependencies:
+      dataType:
+        allOf:
+        - if:
+            properties:
+              dataType:
+                const: tuple
+          then:
+            $ref: '#/definitions/tupleValuesAxis'
+        - if:
+            properties:
+              dataType:
+                const: polygon
+          then:
+            $ref: '#/definitions/polygonValuesAxis'
+  valuesAxisBase:
+    $comment: Base schema for values-based axis schemas
+    properties:
+      dataType:
+        type: string
+        not:
+          const: primitive
+        x-jsonld-id: https://covjson.org/def/core#dataType
+        x-jsonld-type: '@id'
+      values:
+        type: array
+        minItems: 1
+        uniqueItems: true
+        x-jsonld-id: https://covjson.org/def/core#values
+        x-jsonld-type: '@json'
+      coordinates:
+        type: array
+        items:
+          type: string
+        minItems: 2
+        x-jsonld-id: https://covjson.org/def/core#coordinates
+        x-jsonld-type: '@json'
+      bounds:
+        description: Optional axis bounds. Must be twice as long (and same data type)
+          as "values"
+        type: array
+        minItems: 2
+        x-jsonld-id: https://covjson.org/def/core#bounds
+        x-jsonld-type: '@json'
+    required:
+    - values
 x-jsonld-extra-terms:
-  id: '@id'
-  type: '@type'
-  value: '@value'
-  label:
-    x-jsonld-id: http://www.w3.org/2004/02/skos/core#prefLabel
-    x-jsonld-container: '@language'
   title:
     x-jsonld-id: http://purl.org/dc/terms/title
     x-jsonld-container: '@language'
-  description:
-    x-jsonld-id: http://purl.org/dc/terms/description
-    x-jsonld-container: '@language'
-  unit: http://qudt.org/schema/qudt#unit
-  symbol: http://qudt.org/schema/qudt#symbol
   Domain: https://covjson.org/def/core#Domain
-  domain: https://covjson.org/def/core#domain
-  domainType:
-    x-jsonld-id: https://covjson.org/def/core#domainType
-    x-jsonld-type: '@vocab'
-  axes:
-    x-jsonld-id: https://covjson.org/def/core#axis
-    x-jsonld-container: '@index'
-  dataType:
-    x-jsonld-id: https://covjson.org/def/core#dataType
-    x-jsonld-type: '@vocab'
   primitive: https://covjson.org/def/core#primitive
   tuple: https://covjson.org/def/core#tuple
   polygon: https://covjson.org/def/core#polygon
-  num: https://covjson.org/def/core#num
-  start: https://covjson.org/def/core#start
-  stop: https://covjson.org/def/core#stop
-  referencing:
-    x-jsonld-id: https://covjson.org/def/core#referencing
-    x-jsonld-container: '@set'
   components:
     x-jsonld-id: https://covjson.org/def/core#components
     x-jsonld-container: '@list'
-  system: https://covjson.org/def/core#referenceSystem
   RS: https://covjson.org/def/core#ReferenceSystem
   CRS: https://covjson.org/def/core#CoordinateReferenceSystem
   cs: http://data.ign.fr/def/ignf#coordinateSystem
   CS: http://data.ign.fr/def/ignf#CoordinateSystem
   TemporalRS: http://inspire.ec.europa.eu/glossary/TemporalReferenceSystem
   TemporalCRS: https://covjson.org/def/core#TemporalCRS
-  calendar:
-    x-jsonld-id: https://covjson.org/def/core#calendar
-    x-jsonld-type: '@vocab'
   Gregorian: http://www.opengis.net/def/uom/ISO-8601/0/Gregorian
-  timeScale: https://covjson.org/def/core#timeScale
   SpatialRS: http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem
   SpatialCRS: http://data.ign.fr/def/ignf#CRS
   GeodeticCRS: http://data.ign.fr/def/ignf#GeodeticCRS
@@ -1008,49 +2203,14 @@ x-jsonld-extra-terms:
     x-jsonld-container: '@list'
   direction: http://data.ign.fr/def/ignf#axisDirection
   IdentifierRS: https://covjson.org/def/core#IdentifierReferenceSystem
-  targetConcept: https://covjson.org/def/core#targetConcept
-  identifiers:
-    x-jsonld-id: https://covjson.org/def/core#identifier
-    x-jsonld-type: '@id'
-    x-jsonld-container: '@index'
   Parameter: https://covjson.org/def/core#Parameter
-  parameters:
-    x-jsonld-id: https://covjson.org/def/core#parameter
-    x-jsonld-type: '@id'
-    x-jsonld-container: '@index'
-  observedProperty: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#observedProperty
-  categoryEncoding: https://covjson.org/def/core#categoryEncoding
   ParameterGroup: https://covjson.org/def/core#ParameterGroup
-  members:
-    x-jsonld-id: https://covjson.org/def/core#member
-    x-jsonld-type: '@vocab'
-    x-jsonld-container: '@set'
-  ranges:
-    x-jsonld-id: https://covjson.org/def/core#range
-    x-jsonld-type: '@id'
-    x-jsonld-container: '@index'
   NdArray: https://covjson.org/def/core#NdArray
   TiledNdArray: https://covjson.org/def/core#TiledNdArray
-  shape:
-    x-jsonld-id: https://covjson.org/def/core#shape
-    x-jsonld-container: '@list'
-  tileShape:
-    x-jsonld-id: https://covjson.org/def/core#tileShape
-    x-jsonld-container: '@list'
-  axisNames:
-    x-jsonld-id: https://covjson.org/def/core#axisNames
-    x-jsonld-container: '@list'
-  urlTemplate: https://covjson.org/def/core#urlTemplate
-  tileSets:
-    x-jsonld-id: https://covjson.org/def/core#tileSet
-    x-jsonld-container: '@set'
   float: http://www.w3.org/2001/XMLSchema#double
   integer: http://www.w3.org/2001/XMLSchema#integer
   string: http://www.w3.org/2001/XMLSchema#string
   Coverage: https://covjson.org/def/core#Coverage
-  coverages:
-    x-jsonld-id: http://www.w3.org/ns/hydra/core#member
-    x-jsonld-container: '@set'
   CoverageCollection: https://covjson.org/def/core#CoverageCollection
   Grid: https://covjson.org/def/domainTypes#Grid
   VerticalProfile: https://covjson.org/def/domainTypes#VerticalProfile
@@ -1089,64 +2249,155 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "id": "@id",
     "type": "@type",
-    "value": "@value",
+    "domainType": {
+      "@id": "covjson:domainType",
+      "@type": "@vocab"
+    },
+    "axes": {
+      "@context": {
+        "coordinates": {
+          "@id": "covjson:coordinates",
+          "@type": "@json"
+        },
+        "bounds": {
+          "@id": "covjson:bounds",
+          "@type": "@json"
+        },
+        "start": "covjson:start",
+        "stop": "covjson:stop",
+        "num": "covjson:num"
+      },
+      "@id": "covjson:axis",
+      "@container": "@index",
+      "@index": "dct:identifier"
+    },
+    "referencing": {
+      "@context": {
+        "coordinates": {
+          "@id": "covjson:coordinates",
+          "@type": "@json"
+        },
+        "system": {
+          "@context": {
+            "calendar": {
+              "@id": "covjson:calendar",
+              "@type": "@vocab"
+            },
+            "timeScale": "covjson:timeScale",
+            "targetConcept": "covjson:targetConcept",
+            "identifiers": {
+              "@id": "covjson:identifier",
+              "@type": "@id",
+              "@container": "@index"
+            }
+          },
+          "@id": "covjson:referenceSystem"
+        }
+      },
+      "@id": "covjson:referencing",
+      "@container": "@set"
+    },
+    "dataType": {
+      "@id": "covjson:dataType",
+      "@type": "@id"
+    },
+    "shape": {
+      "@id": "covjson:shape",
+      "@container": "@list"
+    },
+    "axisNames": {
+      "@id": "covjson:axisNames",
+      "@container": "@list"
+    },
+    "values": {
+      "@id": "covjson:values",
+      "@type": "@json"
+    },
+    "tileSets": {
+      "@context": {
+        "tileShape": {
+          "@id": "covjson:tileShape",
+          "@container": "@list"
+        },
+        "urlTemplate": "covjson:urlTemplate"
+      },
+      "@id": "covjson:tileSet",
+      "@container": "@set"
+    },
+    "id": "@id",
+    "domain": {
+      "@context": {},
+      "@id": "covjson:domain"
+    },
+    "parameters": {
+      "@context": {
+        "unit": {
+          "@context": {
+            "symbol": {
+              "@context": {
+                "value": "@value"
+              },
+              "@id": "qudt:symbol"
+            }
+          },
+          "@id": "qudt:unit"
+        },
+        "categoryEncoding": "covjson:categoryEncoding"
+      },
+      "@id": "covjson:parameter",
+      "@type": "@id",
+      "@container": "@index",
+      "@index": "dct:identifier"
+    },
     "label": {
       "@id": "skos:prefLabel",
-      "@container": "@language"
-    },
-    "title": {
-      "@id": "dct:title",
       "@container": "@language"
     },
     "description": {
       "@id": "dct:description",
       "@container": "@language"
     },
-    "unit": "qudt:unit",
-    "symbol": "qudt:symbol",
+    "observedProperty": {
+      "@context": {},
+      "@id": "ssn:observedProperty"
+    },
+    "members": {
+      "@id": "covjson:member",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "ranges": {
+      "@context": {},
+      "@id": "covjson:range",
+      "@type": "@id",
+      "@container": "@index",
+      "@index": "dct:identifier"
+    },
+    "coverages": {
+      "@context": {},
+      "@id": "hydra:member",
+      "@container": "@set"
+    },
+    "title": {
+      "@id": "dct:title",
+      "@container": "@language"
+    },
     "Domain": "covjson:Domain",
-    "domain": "covjson:domain",
-    "domainType": {
-      "@id": "covjson:domainType",
-      "@type": "@vocab"
-    },
-    "axes": {
-      "@id": "covjson:axis",
-      "@container": "@index"
-    },
-    "dataType": {
-      "@id": "covjson:dataType",
-      "@type": "@vocab"
-    },
     "primitive": "covjson:primitive",
     "tuple": "covjson:tuple",
     "polygon": "covjson:polygon",
-    "num": "covjson:num",
-    "start": "covjson:start",
-    "stop": "covjson:stop",
-    "referencing": {
-      "@id": "covjson:referencing",
-      "@container": "@set"
-    },
     "components": {
       "@id": "covjson:components",
       "@container": "@list"
     },
-    "system": "covjson:referenceSystem",
     "RS": "covjson:ReferenceSystem",
     "CRS": "covjson:CoordinateReferenceSystem",
     "cs": "ignf:coordinateSystem",
     "CS": "ignf:CoordinateSystem",
     "TemporalRS": "inspiregloss:TemporalReferenceSystem",
     "TemporalCRS": "covjson:TemporalCRS",
-    "calendar": {
-      "@id": "covjson:calendar",
-      "@type": "@vocab"
-    },
     "Gregorian": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian",
-    "timeScale": "covjson:timeScale",
     "SpatialRS": "inspiregloss:SpatialReferenceSystem",
     "SpatialCRS": "ignf:CRS",
     "GeodeticCRS": "ignf:GeodeticCRS",
@@ -1159,58 +2410,14 @@ Links to the schema:
     },
     "direction": "ignf:axisDirection",
     "IdentifierRS": "covjson:IdentifierReferenceSystem",
-    "targetConcept": "covjson:targetConcept",
-    "identifiers": {
-      "@id": "covjson:identifier",
-      "@type": "@id",
-      "@container": "@index"
-    },
     "Parameter": "covjson:Parameter",
-    "parameters": {
-      "@id": "covjson:parameter",
-      "@type": "@id",
-      "@container": "@index"
-    },
-    "observedProperty": "ssn:observedProperty",
-    "categoryEncoding": "covjson:categoryEncoding",
     "ParameterGroup": "covjson:ParameterGroup",
-    "members": {
-      "@id": "covjson:member",
-      "@type": "@vocab",
-      "@container": "@set"
-    },
-    "ranges": {
-      "@id": "covjson:range",
-      "@type": "@id",
-      "@container": "@index"
-    },
     "NdArray": "covjson:NdArray",
     "TiledNdArray": "covjson:TiledNdArray",
-    "shape": {
-      "@id": "covjson:shape",
-      "@container": "@list"
-    },
-    "tileShape": {
-      "@id": "covjson:tileShape",
-      "@container": "@list"
-    },
-    "axisNames": {
-      "@id": "covjson:axisNames",
-      "@container": "@list"
-    },
-    "urlTemplate": "covjson:urlTemplate",
-    "tileSets": {
-      "@id": "covjson:tileSet",
-      "@container": "@set"
-    },
     "float": "xsd:double",
     "integer": "xsd:integer",
     "string": "xsd:string",
     "Coverage": "covjson:Coverage",
-    "coverages": {
-      "@id": "hydra:member",
-      "@container": "@set"
-    },
     "CoverageCollection": "covjson:CoverageCollection",
     "Grid": "covjsondt:Grid",
     "VerticalProfile": "covjsondt:VerticalProfile",
