@@ -1,5 +1,0 @@
-- title: Zarr v2 array metadata based on https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#examples
-  base-uri: http://schemas.opengis.net/zarr
-  snippets:
-    - language: json
-      ref: examples/.zarray

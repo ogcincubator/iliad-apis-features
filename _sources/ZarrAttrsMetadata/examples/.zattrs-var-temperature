@@ -1,7 +1,0 @@
-{
-    "standard_name": "surface_temperature",
-    "long_name": "global-mean surface temperature",
-    "units_metadata": "temperature: on_scale",
-    "cell_methods": "area: mean",
-    "units": "degC"
-}
