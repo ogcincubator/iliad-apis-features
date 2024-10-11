@@ -6,7 +6,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2024--09-25",
+  "dateOfLastChange": "2024-09-25",
   "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_array_metadata",
   "sources": [
     {
