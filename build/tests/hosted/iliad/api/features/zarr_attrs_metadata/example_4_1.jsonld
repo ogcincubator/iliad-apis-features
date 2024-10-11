@@ -1,0 +1,6 @@
+{
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld",
+  "Conventions": "CF-1.4",
+  "created_by": "R packages ncdf4 and terra (version 1.7-71)",
+  "date": "2024-04-18 15:50:45"
+}

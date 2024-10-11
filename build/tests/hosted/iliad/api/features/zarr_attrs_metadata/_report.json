@@ -1,0 +1,463 @@
+{
+  "title": "Validation report for ogc.hosted.iliad.api.features.zarr_attrs_metadata - GeoZarr Attributes description metadata",
+  "bblockName": "GeoZarr Attributes description metadata",
+  "bblockId": "ogc.hosted.iliad.api.features.zarr_attrs_metadata",
+  "generated": "2024-10-11T10:01:15.839286+00:00",
+  "result": false,
+  "items": [
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_1_1.json",
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_1_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_1_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_1_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_1_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_1_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_2_1.json",
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_2_1.json",
+        "exampleIndex": 2,
+        "snippetIndex": 1,
+        "language": "json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_2_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_2_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_2_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_2_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_2_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_3_1.json",
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_3_1.json",
+        "exampleIndex": 3,
+        "snippetIndex": 1,
+        "language": "json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_3_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_3_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_3_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_3_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_3_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'degrees_east' is not one of ['degrees_north', 'degreesN']",
+              "isError": true,
+              "message": "ValidationError: 'degrees_east' is not one of ['degrees_north', 'degreesN']\n\nFailed validating 'enum' in schema['properties']['units']:\n    {'enum': ['degrees_north', 'degreesN'],\n     'type': 'string',\n     'x-jsonld-id': '_:_:units'}\n\nOn instance['units']:\n    'degrees_east'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_4_1.json",
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_4_1.json",
+        "exampleIndex": 4,
+        "snippetIndex": 1,
+        "language": "json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_4_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_4_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_4_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_4_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_4_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_5_1.json",
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_5_1.json",
+        "exampleIndex": 5,
+        "snippetIndex": 1,
+        "language": "json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_5_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_5_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_5_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_5_1.ttl",
+              "size": 1,
+              "isError": false,
+              "message": "Output Turtle example_5_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'seconds since 1970-01-01' is not one of ['degrees_north', 'degreesN']",
+              "isError": true,
+              "message": "ValidationError: 'seconds since 1970-01-01' is not one of ['degrees_north', 'degreesN']\n\nFailed validating 'enum' in schema['properties']['units']:\n    {'enum': ['degrees_north', 'degreesN'],\n     'type': 'string',\n     'x-jsonld-id': '_:_:units'}\n\nOn instance['units']:\n    'seconds since 1970-01-01'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_6_1.json",
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_6_1.json",
+        "exampleIndex": 6,
+        "snippetIndex": 1,
+        "language": "json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_6_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_6_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_6_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_6_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_6_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'degC' is not one of ['degrees_north', 'degreesN']",
+              "isError": true,
+              "message": "ValidationError: 'degC' is not one of ['degrees_north', 'degreesN']\n\nFailed validating 'enum' in schema['properties']['units']:\n    {'enum': ['degrees_north', 'degreesN'],\n     'type': 'string',\n     'x-jsonld-id': '_:_:units'}\n\nOn instance['units']:\n    'degC'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_7_1.json",
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_7_1.json",
+        "exampleIndex": 7,
+        "snippetIndex": 1,
+        "language": "json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_7_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_7_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_7_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_7_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_7_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'percent' is not one of ['degrees_north', 'degreesN']",
+              "isError": true,
+              "message": "ValidationError: 'percent' is not one of ['degrees_north', 'degreesN']\n\nFailed validating 'enum' in schema['properties']['units']:\n    {'enum': ['degrees_north', 'degreesN'],\n     'type': 'string',\n     'x-jsonld-id': '_:_:units'}\n\nOn instance['units']:\n    'percent'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_8_1.json",
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_8_1.json",
+        "exampleIndex": 8,
+        "snippetIndex": 1,
+        "language": "json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_8_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_8_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_8_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_8_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_8_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 8,
+    "passed": 0,
+    "failed": 8
+  }
+}

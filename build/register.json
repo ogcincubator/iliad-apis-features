@@ -2,7 +2,7 @@
   "name": "ILIAD API Profiles",
   "abstract": "(Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability.",
   "description": "Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. \n\nThus, a pilot project to monitor Jellyfish swarms using Citizen Science will reuse common patterns for Citizen Science observations, which in turn we reuse a common pattern for observations, using an underlying component of the OIM - the OGC Observations model (SOSA ontology). \n",
-  "modified": "2024-10-11T09:25:28.730681",
+  "modified": "2024-10-11T10:01:10.817397",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"5d47077eb2f3255708fae570e734806772b94223",
@@ -187,6 +187,118 @@
       }
     },
     {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.zarr_array_metadata",
+      "name": "GeoZarr Array description metadata",
+      "abstract": "based on the https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html and Iliad requiremnts",
+      "status": "under-development",
+      "dateTimeAddition": "2024-09-24T00:00:00Z",
+      "itemClass": "schema",
+      "register": "iliad-apis",
+      "version": "0.1",
+      "dateOfLastChange": "2024-10-11",
+      "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_array_metadata",
+      "sources": [
+        {
+          "title": "Zarr specification",
+          "link": "https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "Ogcdoc",
+        "OGC document",
+        "JSON",
+        "JSON-LD",
+        "Zarr",
+        "coverage",
+        "spatiotemporal",
+        "linked-data",
+        "climate & forecast convention"
+      ],
+      "shaclRules": {},
+      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_array_metadata/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_array_metadata/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_array_metadata/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_array_metadata/",
+      "validationPassed": false,
+      "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/zarr_array_metadata/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/zarr_array_metadata/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/zarr_array_metadata/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.zarr_array_metadata"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.zarr_attrs_metadata",
+      "name": "GeoZarr Attributes description metadata",
+      "abstract": "based on the https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html, tooling support constraints and Iliad requiremnts",
+      "status": "under-development",
+      "dateTimeAddition": "2024-09-24T00:00:00Z",
+      "itemClass": "schema",
+      "register": "iliad-apis",
+      "version": "0.1",
+      "dateOfLastChange": "2024-10-11",
+      "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_attrs_metadata",
+      "sources": [
+        {
+          "title": "Zarr spcification",
+          "link": "https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "Ogcdoc",
+        "OGC document",
+        "JSON",
+        "JSON-LD",
+        "Zarr",
+        "coverage",
+        "spatiotemporal",
+        "linked-data",
+        "climate & forecast convention"
+      ],
+      "shaclRules": {},
+      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/",
+      "validationPassed": false,
+      "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/zarr_attrs_metadata/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/zarr_attrs_metadata/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.zarr_attrs_metadata"
+        }
+      }
+    },
+    {
       "itemIdentifier": "ogc.hosted.iliad.api.features.coverageJSONFisheries",
       "name": "OGC Iliad CoverageJSON ",
       "abstract": "Based on CoverageJSON and Ocean Information Model",
@@ -288,10 +400,10 @@
         ]
       },
       "dependsOn": [
+        "ogc.ogc-utils.iri-or-curie",
         "ogc.sosa.features.observation",
-        "ogc.sosa.features.observationCollection",
         "ogc.sosa.properties.observation",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.sosa.features.observationCollection"
       ],
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
       "schema": {

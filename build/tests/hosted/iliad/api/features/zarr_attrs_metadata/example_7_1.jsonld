@@ -1,0 +1,11 @@
+{
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld",
+  "_ARRAY_DIMENSIONS": [
+    "time",
+    "latitude",
+    "longitude"
+  ],
+  "grid_mapping": "crs",
+  "long_name": "Suitability of good catch (>200 kg) for Pleuronectes platessa",
+  "units": "percent"
+}

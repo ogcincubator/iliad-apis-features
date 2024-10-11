@@ -1,0 +1,8 @@
+{
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld",
+  "_ARRAY_DIMENSIONS": [
+    "longitude"
+  ],
+  "long_name": "longitude",
+  "units": "degrees_east"
+}

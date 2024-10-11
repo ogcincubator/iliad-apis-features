@@ -1,0 +1,226 @@
+
+
+{
+  "itemIdentifier": "ogc.hosted.iliad.api.features.zarr_attrs_metadata",
+  "name": "GeoZarr Attributes description metadata",
+  "abstract": "based on the https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html, tooling support constraints and Iliad requiremnts",
+  "status": "under-development",
+  "dateTimeAddition": "2024-09-24T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2024-10-11",
+  "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_attrs_metadata",
+  "sources": [
+    {
+      "title": "Zarr spcification",
+      "link": "https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "Ogcdoc",
+    "OGC document",
+    "JSON",
+    "JSON-LD",
+    "Zarr",
+    "coverage",
+    "spatiotemporal",
+    "linked-data",
+    "climate & forecast convention"
+  ],
+  "shaclRules": {},
+  "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/context.jsonld",
+  "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/",
+  "validationPassed": false,
+  "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/",
+  "description": "## OGC Coverage JSON\n\n\nlong_name:\n    type: string\n  standard_name:\n    type: string\n  units:\n    type: string\n    enum:\n    - degrees_north\n    - degreesN\n  _ARRAY_DIMENSIONS:\n    type: array\n    items:\n      type: string\n  \"Conventions\":\n    \"type\": \"string\"\n  \"units_metadata\":\n    \"type\": \"string\"\n  \"cell_methods\":\n    \"type\": \"string\"\n  \"created_by\":\n    \"type\": \"string\"\n  \"date\":\n    \"type\": \"string\"\n  \"crs_wkt\":\n    \"type\": \"string\"\n  \"geotransform\":\n    \"type\": \"string\"\n  \"proj4\": \n    \"type\": \"string\"\n  \"spatial_ref\": \n    \"type\": \"string\"",
+  "examples": [
+    {
+      "title": "Zarr v2 attributes metadata for CRS",
+      "base-uri": "http://schemas.opengis.net/zarr",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/.zattrs-crs",
+          "code": "{\n            \"_ARRAY_DIMENSIONS\": [],\n            \"crs_wkt\": \"GEOGCRS[\\\"WGS 84\\\",    ENSEMBLE[\\\"World Geodetic System 1984 ensemble\\\",        MEMBER[\\\"World Geodetic System 1984 (Transit)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G730)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G873)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1150)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1674)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1762)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G2139)\\\"],        ELLIPSOID[\\\"WGS 84\\\",6378137,298.257223563,            LENGTHUNIT[\\\"metre\\\",1]],        ENSEMBLEACCURACY[2.0]],    PRIMEM[\\\"Greenwich\\\",0,        ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],    CS[ellipsoidal,2],        AXIS[\\\"geodetic latitude (Lat)\\\",north,            ORDER[1],            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],        AXIS[\\\"geodetic longitude (Lon)\\\",east,            ORDER[2],            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],    USAGE[        SCOPE[\\\"Horizontal component of 3D system.\\\"],        AREA[\\\"World.\\\"],        BBOX[-90,-180,90,180]],    ID[\\\"EPSG\\\",4326]]\",\n            \"epsg_code\": \"4326\",\n            \"geotransform\": \"-15.01856792000000062615 0.03703666616296295843735 0 61.30106364000000240821 0 -0.02222333317851959630373\",\n            \"proj4\": \"+proj=longlat +datum=WGS84 +no_defs\",\n            \"spatial_ref\": \"GEOGCRS[\\\"WGS 84\\\",    ENSEMBLE[\\\"World Geodetic System 1984 ensemble\\\",        MEMBER[\\\"World Geodetic System 1984 (Transit)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G730)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G873)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1150)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1674)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1762)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G2139)\\\"],        ELLIPSOID[\\\"WGS 84\\\",6378137,298.257223563,            LENGTHUNIT[\\\"metre\\\",1]],        ENSEMBLEACCURACY[2.0]],    PRIMEM[\\\"Greenwich\\\",0,        ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],    CS[ellipsoidal,2],        AXIS[\\\"geodetic latitude (Lat)\\\",north,            ORDER[1],            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],        AXIS[\\\"geodetic longitude (Lon)\\\",east,            ORDER[2],            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],    USAGE[        SCOPE[\\\"Horizontal component of 3D system.\\\"],        AREA[\\\"World.\\\"],        BBOX[-90,-180,90,180]],    ID[\\\"EPSG\\\",4326]]\"\n        }",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld\",\n  \"_ARRAY_DIMENSIONS\": [],\n  \"crs_wkt\": \"GEOGCRS[\\\"WGS 84\\\",    ENSEMBLE[\\\"World Geodetic System 1984 ensemble\\\",        MEMBER[\\\"World Geodetic System 1984 (Transit)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G730)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G873)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1150)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1674)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1762)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G2139)\\\"],        ELLIPSOID[\\\"WGS 84\\\",6378137,298.257223563,            LENGTHUNIT[\\\"metre\\\",1]],        ENSEMBLEACCURACY[2.0]],    PRIMEM[\\\"Greenwich\\\",0,        ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],    CS[ellipsoidal,2],        AXIS[\\\"geodetic latitude (Lat)\\\",north,            ORDER[1],            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],        AXIS[\\\"geodetic longitude (Lon)\\\",east,            ORDER[2],            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],    USAGE[        SCOPE[\\\"Horizontal component of 3D system.\\\"],        AREA[\\\"World.\\\"],        BBOX[-90,-180,90,180]],    ID[\\\"EPSG\\\",4326]]\",\n  \"epsg_code\": \"4326\",\n  \"geotransform\": \"-15.01856792000000062615 0.03703666616296295843735 0 61.30106364000000240821 0 -0.02222333317851959630373\",\n  \"proj4\": \"+proj=longlat +datum=WGS84 +no_defs\",\n  \"spatial_ref\": \"GEOGCRS[\\\"WGS 84\\\",    ENSEMBLE[\\\"World Geodetic System 1984 ensemble\\\",        MEMBER[\\\"World Geodetic System 1984 (Transit)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G730)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G873)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1150)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1674)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1762)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G2139)\\\"],        ELLIPSOID[\\\"WGS 84\\\",6378137,298.257223563,            LENGTHUNIT[\\\"metre\\\",1]],        ENSEMBLEACCURACY[2.0]],    PRIMEM[\\\"Greenwich\\\",0,        ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],    CS[ellipsoidal,2],        AXIS[\\\"geodetic latitude (Lat)\\\",north,            ORDER[1],            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],        AXIS[\\\"geodetic longitude (Lon)\\\",east,            ORDER[2],            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],    USAGE[        SCOPE[\\\"Horizontal component of 3D system.\\\"],        AREA[\\\"World.\\\"],        BBOX[-90,-180,90,180]],    ID[\\\"EPSG\\\",4326]]\"\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_1_1.ttl"
+        }
+      ]
+    },
+    {
+      "title": "Zarr v2 attributes metadata for latitude",
+      "base-uri": "http://schemas.opengis.net/zarr",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/.zattrs-latitude",
+          "code": "{\n            \"_ARRAY_DIMENSIONS\": [\n                \"latitude\"\n            ],\n            \"long_name\": \"latitude\",\n            \"units\": \"degrees_north\",\n            \"standard_name\": \"latitude\"\n        }",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_2_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld\",\n  \"_ARRAY_DIMENSIONS\": [\n    \"latitude\"\n  ],\n  \"long_name\": \"latitude\",\n  \"units\": \"degrees_north\",\n  \"standard_name\": \"latitude\"\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_2_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_2_1.ttl"
+        }
+      ]
+    },
+    {
+      "title": "Zarr v2 attributes metadata for longitude",
+      "base-uri": "http://schemas.opengis.net/zarr",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/.zattrs-longitude",
+          "code": "{\n            \"_ARRAY_DIMENSIONS\": [\n                \"longitude\"\n            ],\n            \"long_name\": \"longitude\",\n            \"units\": \"degrees_east\"\n        }",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_3_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld\",\n  \"_ARRAY_DIMENSIONS\": [\n    \"longitude\"\n  ],\n  \"long_name\": \"longitude\",\n  \"units\": \"degrees_east\"\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_3_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_3_1.ttl"
+        }
+      ]
+    },
+    {
+      "title": "Zarr v2 attributes metadata for root",
+      "base-uri": "http://schemas.opengis.net/zarr",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/.zattrs-root",
+          "code": "{\n            \"Conventions\": \"CF-1.4\",\n            \"created_by\": \"R packages ncdf4 and terra (version 1.7-71)\",\n            \"date\": \"2024-04-18 15:50:45\"\n        }",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_4_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld\",\n  \"Conventions\": \"CF-1.4\",\n  \"created_by\": \"R packages ncdf4 and terra (version 1.7-71)\",\n  \"date\": \"2024-04-18 15:50:45\"\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_4_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_4_1.ttl"
+        }
+      ]
+    },
+    {
+      "title": "Zarr v2 attributes metadata for time",
+      "base-uri": "http://schemas.opengis.net/zarr",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/.zattrs-time",
+          "code": "{\n            \"_ARRAY_DIMENSIONS\": [\n                \"time\"\n            ],\n            \"calendar\": \"standard\",\n            \"long_name\": \"time\",\n            \"units\": \"seconds since 1970-01-01\"\n        }",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_5_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld\",\n  \"_ARRAY_DIMENSIONS\": [\n    \"time\"\n  ],\n  \"calendar\": \"standard\",\n  \"long_name\": \"time\",\n  \"units\": \"seconds since 1970-01-01\"\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_5_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix covjson: <https://covjson.org/def/core#> .\n\n[] covjson:calendar [ ] .\n\n",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_5_1.ttl"
+        }
+      ]
+    },
+    {
+      "title": "Zarr v2 attributes metadata for variable like temperature",
+      "base-uri": "http://schemas.opengis.net/zarr",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/.zattrs-var-temperature",
+          "code": "{\n    \"standard_name\": \"surface_temperature\",\n    \"long_name\": \"global-mean surface temperature\",\n    \"units_metadata\": \"temperature: on_scale\",\n    \"cell_methods\": \"area: mean\",\n    \"units\": \"degC\"\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_6_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld\",\n  \"standard_name\": \"surface_temperature\",\n  \"long_name\": \"global-mean surface temperature\",\n  \"units_metadata\": \"temperature: on_scale\",\n  \"cell_methods\": \"area: mean\",\n  \"units\": \"degC\"\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_6_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_6_1.ttl"
+        }
+      ]
+    },
+    {
+      "title": "Zarr v2 attributes metadata for variable",
+      "base-uri": "http://schemas.opengis.net/zarr",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/.zattrs-variable",
+          "code": "{\n  \"_ARRAY_DIMENSIONS\": [\n      \"time\",\n      \"latitude\",\n      \"longitude\"\n  ],\n  \"grid_mapping\": \"crs\",\n  \"long_name\": \"Suitability of good catch (>200 kg) for Pleuronectes platessa\",\n  \"units\": \"percent\"\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_7_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld\",\n  \"_ARRAY_DIMENSIONS\": [\n    \"time\",\n    \"latitude\",\n    \"longitude\"\n  ],\n  \"grid_mapping\": \"crs\",\n  \"long_name\": \"Suitability of good catch (>200 kg) for Pleuronectes platessa\",\n  \"units\": \"percent\"\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_7_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_7_1.ttl"
+        }
+      ]
+    },
+    {
+      "title": "Zarr v2 group metadata",
+      "base-uri": "http://schemas.opengis.net/zarr",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/.zgroups",
+          "code": "{\n    \"zarr_format\": 2\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_8_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld\",\n  \"zarr_format\": 2\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_8_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_8_1.ttl"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: http://json-schema.org/draft-07/schema#\ntitle: Zarr Attributes Metadata\ntype: object\nproperties:\n  long_name:\n    type: string\n    x-jsonld-id: _:_:long_name\n  standard_name:\n    type: string\n    x-jsonld-id: _:_:standard_name\n  units:\n    type: string\n    enum:\n    - degrees_north\n    - degreesN\n    x-jsonld-id: _:_:units\n  _ARRAY_DIMENSIONS:\n    type: array\n    items:\n      type: string\n    x-jsonld-id: _:_:_ARRAY_DIMENSIONS\n  Conventions:\n    type: string\n    x-jsonld-id: _:_:Conventions\n  units_metadata:\n    type: string\n    x-jsonld-id: _:_:units_metadata\n  cell_methods:\n    type: string\n    x-jsonld-id: _:_:cell_methods\n  created_by:\n    type: string\n    x-jsonld-id: _:_:created_by\n  date:\n    type: string\n    x-jsonld-id: _:_:date\n  crs_wkt:\n    type: string\n    x-jsonld-id: _:_:crs_wkt\n  geotransform:\n    type: string\n    x-jsonld-id: _:_:geotransform\n  proj4:\n    type: string\n    x-jsonld-id: _:_:proj4\n  spatial_ref:\n    type: string\n    x-jsonld-id: _:_:spatial_ref\nx-jsonld-extra-terms:\n  id: '@id'\n  type: '@type'\n  value: '@value'\n  label:\n    x-jsonld-id: http://www.w3.org/2004/02/skos/core#prefLabel\n    x-jsonld-container: '@language'\n  title:\n    x-jsonld-id: http://purl.org/dc/terms/title\n    x-jsonld-container: '@language'\n  description:\n    x-jsonld-id: http://purl.org/dc/terms/description\n    x-jsonld-container: '@language'\n  unit: http://qudt.org/schema/qudt#unit\n  symbol: http://qudt.org/schema/qudt#symbol\n  Domain: https://covjson.org/def/core#Domain\n  domain: https://covjson.org/def/core#domain\n  domainType:\n    x-jsonld-id: https://covjson.org/def/core#domainType\n    x-jsonld-type: '@vocab'\n  axes:\n    x-jsonld-id: https://covjson.org/def/core#axis\n    x-jsonld-container: '@index'\n  dataType:\n    x-jsonld-id: https://covjson.org/def/core#dataType\n    x-jsonld-type: '@vocab'\n  primitive: https://covjson.org/def/core#primitive\n  tuple: https://covjson.org/def/core#tuple\n  polygon: https://covjson.org/def/core#polygon\n  num: https://covjson.org/def/core#num\n  start: https://covjson.org/def/core#start\n  stop: https://covjson.org/def/core#stop\n  referencing:\n    x-jsonld-id: https://covjson.org/def/core#referencing\n    x-jsonld-container: '@set'\n  components:\n    x-jsonld-id: https://covjson.org/def/core#components\n    x-jsonld-container: '@list'\n  system: https://covjson.org/def/core#referenceSystem\n  RS: https://covjson.org/def/core#ReferenceSystem\n  CRS: https://covjson.org/def/core#CoordinateReferenceSystem\n  cs: http://data.ign.fr/def/ignf#coordinateSystem\n  CS: http://data.ign.fr/def/ignf#CoordinateSystem\n  TemporalRS: http://inspire.ec.europa.eu/glossary/TemporalReferenceSystem\n  TemporalCRS: https://covjson.org/def/core#TemporalCRS\n  calendar:\n    x-jsonld-id: https://covjson.org/def/core#calendar\n    x-jsonld-type: '@vocab'\n  Gregorian: http://www.opengis.net/def/uom/ISO-8601/0/Gregorian\n  timeScale: https://covjson.org/def/core#timeScale\n  SpatialRS: http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem\n  SpatialCRS: http://data.ign.fr/def/ignf#CRS\n  GeodeticCRS: http://data.ign.fr/def/ignf#GeodeticCRS\n  ProjectedCRS: http://data.ign.fr/def/ignf#ProjectedCRS\n  VerticalCRS: http://data.ign.fr/def/ignf#VerticalCRS\n  datum: http://data.ign.fr/def/ignf#datum\n  csAxes:\n    x-jsonld-id: https://covjson.org/def/core#coordinateSystemAxes\n    x-jsonld-container: '@list'\n  direction: http://data.ign.fr/def/ignf#axisDirection\n  IdentifierRS: https://covjson.org/def/core#IdentifierReferenceSystem\n  targetConcept: https://covjson.org/def/core#targetConcept\n  identifiers:\n    x-jsonld-id: https://covjson.org/def/core#identifier\n    x-jsonld-type: '@id'\n    x-jsonld-container: '@index'\n  Parameter: https://covjson.org/def/core#Parameter\n  parameters:\n    x-jsonld-id: https://covjson.org/def/core#parameter\n    x-jsonld-type: '@id'\n    x-jsonld-container: '@index'\n  observedProperty: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#observedProperty\n  categoryEncoding: https://covjson.org/def/core#categoryEncoding\n  ParameterGroup: https://covjson.org/def/core#ParameterGroup\n  members:\n    x-jsonld-id: https://covjson.org/def/core#member\n    x-jsonld-type: '@vocab'\n    x-jsonld-container: '@set'\n  ranges:\n    x-jsonld-id: https://covjson.org/def/core#range\n    x-jsonld-type: '@id'\n    x-jsonld-container: '@index'\n  NdArray: https://covjson.org/def/core#NdArray\n  TiledNdArray: https://covjson.org/def/core#TiledNdArray\n  shape:\n    x-jsonld-id: https://covjson.org/def/core#shape\n    x-jsonld-container: '@list'\n  tileShape:\n    x-jsonld-id: https://covjson.org/def/core#tileShape\n    x-jsonld-container: '@list'\n  axisNames:\n    x-jsonld-id: https://covjson.org/def/core#axisNames\n    x-jsonld-container: '@list'\n  urlTemplate: https://covjson.org/def/core#urlTemplate\n  tileSets:\n    x-jsonld-id: https://covjson.org/def/core#tileSet\n    x-jsonld-container: '@set'\n  float: http://www.w3.org/2001/XMLSchema#double\n  integer: http://www.w3.org/2001/XMLSchema#integer\n  string: http://www.w3.org/2001/XMLSchema#string\n  Coverage: https://covjson.org/def/core#Coverage\n  coverages:\n    x-jsonld-id: http://www.w3.org/ns/hydra/core#member\n    x-jsonld-container: '@set'\n  CoverageCollection: https://covjson.org/def/core#CoverageCollection\n  Grid: https://covjson.org/def/domainTypes#Grid\n  VerticalProfile: https://covjson.org/def/domainTypes#VerticalProfile\n  MultiPointSeries: https://covjson.org/def/domainTypes#MultiPointSeries\n  MultiPoint: https://covjson.org/def/domainTypes#MultiPoint\n  PointSeries: https://covjson.org/def/domainTypes#PointSeries\n  Point: https://covjson.org/def/domainTypes#Point\n  Trajectory: https://covjson.org/def/domainTypes#Trajectory\n  Section: https://covjson.org/def/domainTypes#Section\n  MultiPolygonSeries: https://covjson.org/def/domainTypes#MultiPolygonSeries\n  MultiPolygon: https://covjson.org/def/domainTypes#MultiPolygon\n  Polygon: https://covjson.org/def/domainTypes#Polygon\nx-jsonld-vocab: '_:_:'\nx-jsonld-prefixes:\n  skos: http://www.w3.org/2004/02/skos/core#\n  dct: http://purl.org/dc/terms/\n  qudt: http://qudt.org/schema/qudt#\n  covjson: https://covjson.org/def/core#\n  ignf: http://data.ign.fr/def/ignf#\n  inspiregloss: http://inspire.ec.europa.eu/glossary/\n  ssn: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#\n  xsd: http://www.w3.org/2001/XMLSchema#\n  hydra: http://www.w3.org/ns/hydra/core#\n  covjsondt: https://covjson.org/def/domainTypes#\n  rel: http://www.iana.org/assignments/relation/\n",
+  "gitRepository": "https://github.com/ogcincubator/iliad-apis-features",
+  "gitPath": "_sources/zarr_attrs_metadata"
+}
