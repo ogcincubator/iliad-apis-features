@@ -1,0 +1,31 @@
+{
+  "name": "GeoZarr Array description metadata",
+  "abstract": "based on the https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html and Iliad requiremnts",
+  "status": "under-development",
+  "dateTimeAddition": "2024-09-24T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2024--09-25",
+  "link": "https://github.com/opengeospatial/Zarr",
+  "sources": [
+    {
+      "title": "Zarr spcification",
+      "link": "https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays"
+    },
+
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "Ogcdoc",
+    "OGC document",
+    "JSON",
+    "JSON-LD",
+    "Zarr",
+    "coverage",
+    "spatiotemporal",
+    "linked-data",
+    "climate & forecast convention"
+  ]
+}
