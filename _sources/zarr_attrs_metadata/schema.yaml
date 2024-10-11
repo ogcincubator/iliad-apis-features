@@ -33,7 +33,7 @@ properties:
     "type": "string"
   "spatial_ref": 
     "type": "string"
-required: #there are varios constraints depending on the position of the file, potentially these could be profiles of the bb, but there are no common names reqiured between root and group attributes
+#required: #there are varios constraints depending on the position of the file, potentially these could be profiles of the bb, but there are no common names reqiured between root and group attributes
 #- long_name
 #- standard_name
 #- units
