@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.coverage_information_model - OGC Coverage Implementation Schema
-Generated 2024-10-11T11:44:30.769510+00:00
+Generated 2024-10-23T10:19:58.464247+00:00
 === Files ===
 Using example_3_1.ttl from examples
 Output Turtle example_3_1.ttl created
