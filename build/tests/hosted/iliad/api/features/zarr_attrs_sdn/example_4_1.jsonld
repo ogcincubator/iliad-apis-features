@@ -1,8 +1,16 @@
 {
   "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_sdn/context.jsonld",
-  "_ARRAY_DIMENSIONS": [],
-  "epsg_code": "EPSG:4326",
-  "grid_mapping_name": "latitude_longitude",
-  "inverse_flattening": 298.257223563,
-  "semi_major_axis": 6378137.0
+  "_ARRAY_DIMENSIONS": [
+    "INSTANCE",
+    "MAXT"
+  ],
+  "ancillary_variables": "TEMPTADC_SEADATANET_QC",
+  "coordinates": "TIME DEPTH LATITUDE LONGITUDE",
+  "long_name": "SST",
+  "sdn_parameter_name": "Temperature of the water body by in-situ thermistor on acoustic doppler current profiler (ADCP) transducer",
+  "sdn_parameter_urn": "SDN:P01::TEMPTADC",
+  "sdn_uom_name": "Degrees Celsius",
+  "sdn_uom_urn": "SDN:P06::UPAA",
+  "standard_name": "sea_surface_temperature",
+  "units": "degrees celsius"
 }
