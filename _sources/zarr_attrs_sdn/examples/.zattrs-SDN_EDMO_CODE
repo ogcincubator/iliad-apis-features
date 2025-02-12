@@ -1,0 +1,7 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "INSTANCE"
+    ],
+    "coordinates": "DEPTH LATITUDE LONGITUDE",
+    "long_name": "European Directory of Marine Organisations code for the CDI partner"
+}

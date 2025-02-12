@@ -1,0 +1,30 @@
+{
+  "name": "GeoZarr Attributes description metadata aligned to the SeaDataNet time series profile",
+  "abstract": "based on the https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html, tooling support constraints and Iliad requiremnts",
+  "status": "under-development",
+  "dateTimeAddition": "2025-01-24T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2025-01-25",
+  "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_attrs_metadata",
+  "sources": [
+    {
+      "title": "Zarr spcification",
+      "link": "https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "Ogcdoc",
+    "OGC document",
+    "JSON",
+    "JSON-LD",
+    "Zarr",
+    "coverage",
+    "spatiotemporal",
+    "linked-data",
+    "climate & forecast convention"
+  ]
+}

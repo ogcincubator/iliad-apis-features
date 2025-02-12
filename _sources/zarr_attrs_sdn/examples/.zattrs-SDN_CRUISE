@@ -1,0 +1,13 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "INSTANCE"
+    ],
+    "availability": "publicly (CC-BY-SA)",
+    "chiefScientist": "UNKNOWN",
+    "coordinates": "DEPTH LATITUDE LONGITUDE",
+    "country": "58",
+    "endDate": "2024-10-31",
+    "laboratories": "OceanLab Observatory Munkholmen, Trondheim, Norway",
+    "long_name": "Trondheimsfjord sea temperature measured by ADCP",
+    "startDate": "2024-10-1"
+}

@@ -1,0 +1,8 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "INSTANCE"
+    ],
+    "cf_role": "timeseries_id",
+    "coordinates": "DEPTH LATITUDE LONGITUDE",
+    "long_name": "SeaDataNet CDI identifier"
+}

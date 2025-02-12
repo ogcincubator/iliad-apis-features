@@ -1,0 +1,8 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "INSTANCE",
+        "REFMAX"
+    ],
+    "coordinates": "DEPTH LATITUDE LONGITUDE",
+    "long_name": "External resource linkages"
+}

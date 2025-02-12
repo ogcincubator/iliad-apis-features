@@ -1,0 +1,15 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "INSTANCE",
+        "MAXT"
+    ],
+    "ancillary_variables": "DBINAA01_SEADATANET_QC",
+    "coordinates": "TIME DEPTH LATITUDE LONGITUDE",
+    "long_name": "DEPTH",
+    "sdn_parameter_name": "Depth (spatial coordinate) of ADCP bin relative to water surface {bin depth} in the water body",
+    "sdn_parameter_urn": "SDN:P01::DBINAA01",
+    "sdn_uom_name": "Metres",
+    "sdn_uom_urn": "SDN:P06::ULAA",
+    "standard_name": "depth",
+    "units": "meters"
+}

@@ -1,0 +1,7 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "INSTANCE"
+    ],
+    "coordinates": "DEPTH LATITUDE LONGITUDE",
+    "long_name": "List of station numbers"
+}

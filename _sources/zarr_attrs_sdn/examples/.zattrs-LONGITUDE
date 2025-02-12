@@ -1,0 +1,15 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "INSTANCE"
+    ],
+    "ancillary_variables": "POSITION_SEADATANET_QC",
+    "axis": "X",
+    "grid_mapping": "crs",
+    "long_name": "Longitude",
+    "sdn_parameter_name": "Longitude east",
+    "sdn_parameter_urn": "SDN:P01::ALONZZ01",
+    "sdn_uom_name": "Degrees east",
+    "sdn_uom_urn": "SDN:P06::DEGE",
+    "standard_name": "longitude",
+    "units": "degrees_east"
+}

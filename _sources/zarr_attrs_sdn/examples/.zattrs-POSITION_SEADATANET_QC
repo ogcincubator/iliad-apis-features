@@ -1,0 +1,25 @@
+{
+    "Conventions": "SeaDataNet measurand qualifier flags",
+    "_ARRAY_DIMENSIONS": [
+        "INSTANCE"
+    ],
+    "coordinates": "DEPTH LATITUDE LONGITUDE",
+    "flag_meanings": "value_phenomenon_uncertain nominal_value no_quality_control good_value value_below_limit_of_quantification probably_good_value probably_bad_value bad_value changed_value value_below_detection value_in_excess interpolated_value missing_value",
+    "flag_values": [
+        65,
+        66,
+        48,
+        49,
+        81,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+    ],
+    "long_name": "SeaDataNet quality flag",
+    "sdn_conventions_urn": "SDN:L20::"
+}

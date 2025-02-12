@@ -1,0 +1,24 @@
+- title: Zarr v2 attributes metadata for CRS
+  base-uri: http://schemas.opengis.net/zarr-sdn
+  snippets:
+    - language: json
+      ref: examples/.zattrs-crs
+
+- title: Zarr v2 attributes metadata for LATITUDE
+  base-uri: http://schemas.opengis.net/zarr-sdn
+  snippets:
+    - language: json
+      ref: examples/.zattrs-LATITUDE
+
+- title: Zarr v2 attributes metadata for TIME
+  base-uri: http://schemas.opengis.net/zarr-sdn
+  snippets:
+    - language: json
+      ref: examples/.zattrs-TIME
+
+- title: Zarr v2 attributes metadata for crs
+  base-uri: http://schemas.opengis.net/zarr-sdn
+  snippets:
+    - language: json
+      ref: examples/.zattrs-crs
+

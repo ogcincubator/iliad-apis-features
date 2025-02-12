@@ -1,35 +1,5 @@
 {
-  "@context": {
-    "jf-property": "https://w3id.org/iliad/jellyfish/property/",
-    "jf-density": "https://w3id.org/iliad/jellyfish/property/densityOfJF/",
-    "@base": "https://w3id.org/iliad/jellyfish/observation/",
-    "observedProperty": {
-      "@id": "sosa:observedProperty",
-      "@type": "@id",
-      "@context": {
-        "@base": "https://w3id.org/iliad/jellyfish/property/"
-      }
-    },
-    "hasResult": {
-      "@id": "sosa:hasResult",
-      "@context": {
-        "densityOfJF": {
-          "@id": "https://w3id.org/iliad/jellyfish/property/densityOfJF",
-          "@type": "@id",
-          "@context": {
-            "@base": "https://w3id.org/iliad/jellyfish/property/densityOfJF/"
-          }
-        },
-        "quantityOfJF": "jf-property:quantityOfJF",
-        "stingByJF": "jf-property:stingByJF",
-        "beachedJF": "jf-property:beachedJF"
-      }
-    },
-    "hasFeatureOfInterest": {
-      "@id": "sosa:hasFeatureOfInterest",
-      "@context": {
-        "@base": "https://w3id.org/iliad/jellyfish/feature/"
-      }
-    }
-  }
+  "@context": ["https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jsonld/jellyFish-context.jsonld",
+  "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/jsonld/oimOceanProfile-context.jsonld"]
+  
 }

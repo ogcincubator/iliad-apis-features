@@ -1,0 +1,15 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "INSTANCE",
+        "MAXT"
+    ],
+    "ancillary_variables": "ALATZZ01_SEADATANET_QC",
+    "coordinates": "TIME DEPTH LATITUDE LONGITUDE",
+    "long_name": "LAT",
+    "sdn_parameter_name": "Latitude north",
+    "sdn_parameter_urn": "SDN:P01::ALATZZ01",
+    "sdn_uom_name": "Degrees",
+    "sdn_uom_urn": "SDN:P06::UAAA",
+    "standard_name": "latitude",
+    "units": "degrees"
+}
