@@ -12,3 +12,14 @@ path	@id
 /geotransform	https://w3id.org/iliad/oim/default-context/geotransform
 /proj4	https://w3id.org/iliad/oim/default-context/proj4
 /spatial_ref	https://w3id.org/iliad/oim/default-context/spatial_ref
+/epsg_code	https://w3id.org/iliad/oim/default-context/epsg_code
+/grid_mapping_name	https://w3id.org/iliad/oim/default-context/grid_mapping_name
+/inverse_flattening	https://w3id.org/iliad/oim/default-context/inverse_flattening
+/semi_major_axis	https://w3id.org/iliad/oim/default-context/semi_major_axis
+/ancillary_variables	https://w3id.org/iliad/oim/default-context/ancillary_variables
+/axis	http://www.opengis.net/cis/1.1/axis
+/grid_mapping	https://w3id.org/iliad/oim/default-context/grid_mapping
+/sdn_parameter_name	https://w3id.org/iliad/oim/default-context/sdn_parameter_name
+/sdn_parameter_urn	https://w3id.org/iliad/oim/default-context/sdn_parameter_urn
+/sdn_uom_name	https://w3id.org/iliad/oim/default-context/sdn_uom_name
+/sdn_uom_urn	https://w3id.org/iliad/oim/default-context/sdn_uom_urn

@@ -193,11 +193,19 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
 #### json
 ```json
 {
-    "_ARRAY_DIMENSIONS": [],
-    "epsg_code": "EPSG:4326",
-    "grid_mapping_name": "latitude_longitude",
-    "inverse_flattening": 298.257223563,
-    "semi_major_axis": 6378137.0
+    "_ARRAY_DIMENSIONS": [
+        "INSTANCE",
+        "MAXT"
+    ],
+    "ancillary_variables": "TEMPTADC_SEADATANET_QC",
+    "coordinates": "TIME DEPTH LATITUDE LONGITUDE",
+    "long_name": "SST",
+    "sdn_parameter_name": "Temperature of the water body by in-situ thermistor on acoustic doppler current profiler (ADCP) transducer",
+    "sdn_parameter_urn": "SDN:P01::TEMPTADC",
+    "sdn_uom_name": "Degrees Celsius",
+    "sdn_uom_urn": "SDN:P06::UPAA",
+    "standard_name": "sea_surface_temperature",
+    "units": "degrees celsius"
 }
 ```
 
@@ -205,23 +213,37 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
 ```jsonld
 {
   "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_sdn/context.jsonld",
-  "_ARRAY_DIMENSIONS": [],
-  "epsg_code": "EPSG:4326",
-  "grid_mapping_name": "latitude_longitude",
-  "inverse_flattening": 298.257223563,
-  "semi_major_axis": 6378137.0
+  "_ARRAY_DIMENSIONS": [
+    "INSTANCE",
+    "MAXT"
+  ],
+  "ancillary_variables": "TEMPTADC_SEADATANET_QC",
+  "coordinates": "TIME DEPTH LATITUDE LONGITUDE",
+  "long_name": "SST",
+  "sdn_parameter_name": "Temperature of the water body by in-situ thermistor on acoustic doppler current profiler (ADCP) transducer",
+  "sdn_parameter_urn": "SDN:P01::TEMPTADC",
+  "sdn_uom_name": "Degrees Celsius",
+  "sdn_uom_urn": "SDN:P06::UPAA",
+  "standard_name": "sea_surface_temperature",
+  "units": "degrees celsius"
 }
 ```
 
 #### ttl
 ```ttl
 @prefix : <https://w3id.org/iliad/oim/default-context/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-[] :epsg_code "EPSG:4326" ;
-    :grid_mapping_name "latitude_longitude" ;
-    :inverse_flattening 2.982572e+02 ;
-    :semi_major_axis 6.378137e+06 .
+[] :_ARRAY_DIMENSIONS "INSTANCE",
+        "MAXT" ;
+    :ancillary_variables "TEMPTADC_SEADATANET_QC" ;
+    :coordinates "TIME DEPTH LATITUDE LONGITUDE" ;
+    :long_name "SST" ;
+    :sdn_parameter_name "Temperature of the water body by in-situ thermistor on acoustic doppler current profiler (ADCP) transducer" ;
+    :sdn_parameter_urn "SDN:P01::TEMPTADC" ;
+    :sdn_uom_name "Degrees Celsius" ;
+    :sdn_uom_urn "SDN:P06::UPAA" ;
+    :standard_name "sea_surface_temperature" ;
+    :units "degrees celsius" .
 
 
 ```
@@ -230,7 +252,7 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
 
 ```yaml
 $schema: http://json-schema.org/draft-07/schema#
-title: Zarr Attributes Metadata
+title: Zarr Attributes Metadata for SeaDataNet
 type: object
 properties:
   long_name:
@@ -241,9 +263,6 @@ properties:
     x-jsonld-id: https://w3id.org/iliad/oim/default-context/standard_name
   units:
     type: string
-    enum:
-    - degrees_north
-    - degreesN
     x-jsonld-id: https://w3id.org/iliad/oim/default-context/units
   _ARRAY_DIMENSIONS:
     type: array
@@ -277,6 +296,40 @@ properties:
   spatial_ref:
     type: string
     x-jsonld-id: https://w3id.org/iliad/oim/default-context/spatial_ref
+  epsg_code:
+    type: string
+    x-jsonld-id: https://w3id.org/iliad/oim/default-context/epsg_code
+  grid_mapping_name:
+    type: string
+    x-jsonld-id: https://w3id.org/iliad/oim/default-context/grid_mapping_name
+  inverse_flattening:
+    type: number
+    x-jsonld-id: https://w3id.org/iliad/oim/default-context/inverse_flattening
+  semi_major_axis:
+    type: number
+    x-jsonld-id: https://w3id.org/iliad/oim/default-context/semi_major_axis
+  ancillary_variables:
+    type: string
+    x-jsonld-id: https://w3id.org/iliad/oim/default-context/ancillary_variables
+  axis:
+    type: string
+    x-jsonld-id: http://www.opengis.net/cis/1.1/axis
+    x-jsonld-type: '@id'
+  grid_mapping:
+    type: string
+    x-jsonld-id: https://w3id.org/iliad/oim/default-context/grid_mapping
+  sdn_parameter_name:
+    type: string
+    x-jsonld-id: https://w3id.org/iliad/oim/default-context/sdn_parameter_name
+  sdn_parameter_urn:
+    type: string
+    x-jsonld-id: https://w3id.org/iliad/oim/default-context/sdn_parameter_urn
+  sdn_uom_name:
+    type: string
+    x-jsonld-id: https://w3id.org/iliad/oim/default-context/sdn_uom_name
+  sdn_uom_urn:
+    type: string
+    x-jsonld-id: https://w3id.org/iliad/oim/default-context/sdn_uom_urn
 x-jsonld-extra-terms:
   id: '@id'
   type: '@type'
@@ -576,9 +629,6 @@ x-jsonld-extra-terms:
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
   interpolationRestriction:
     x-jsonld-id: http://www.opengis.net/cis/1.1/interpolationRestriction
-    x-jsonld-type: '@id'
-  axis:
-    x-jsonld-id: http://www.opengis.net/cis/1.1/axis
     x-jsonld-type: '@id'
   Activity: http://www.w3.org/ns/prov#Activity
   ImageResource: https://w3id.org/idsa/core/ImageResource
@@ -1587,6 +1637,20 @@ Links to the schema:
     "geotransform": "https://w3id.org/iliad/oim/default-context/geotransform",
     "proj4": "https://w3id.org/iliad/oim/default-context/proj4",
     "spatial_ref": "https://w3id.org/iliad/oim/default-context/spatial_ref",
+    "epsg_code": "https://w3id.org/iliad/oim/default-context/epsg_code",
+    "grid_mapping_name": "https://w3id.org/iliad/oim/default-context/grid_mapping_name",
+    "inverse_flattening": "https://w3id.org/iliad/oim/default-context/inverse_flattening",
+    "semi_major_axis": "https://w3id.org/iliad/oim/default-context/semi_major_axis",
+    "ancillary_variables": "https://w3id.org/iliad/oim/default-context/ancillary_variables",
+    "axis": {
+      "@id": "http://www.opengis.net/cis/1.1/axis",
+      "@type": "@id"
+    },
+    "grid_mapping": "https://w3id.org/iliad/oim/default-context/grid_mapping",
+    "sdn_parameter_name": "https://w3id.org/iliad/oim/default-context/sdn_parameter_name",
+    "sdn_parameter_urn": "https://w3id.org/iliad/oim/default-context/sdn_parameter_urn",
+    "sdn_uom_name": "https://w3id.org/iliad/oim/default-context/sdn_uom_name",
+    "sdn_uom_urn": "https://w3id.org/iliad/oim/default-context/sdn_uom_urn",
     "id": "@id",
     "type": "@type",
     "value": "@value",
@@ -1947,10 +2011,6 @@ Links to the schema:
     },
     "interpolationRestriction": {
       "@id": "http://www.opengis.net/cis/1.1/interpolationRestriction",
-      "@type": "@id"
-    },
-    "axis": {
-      "@id": "http://www.opengis.net/cis/1.1/axis",
       "@type": "@id"
     },
     "Activity": "http://www.w3.org/ns/prov#Activity",
