@@ -1,5 +1,5 @@
 "$schema": http://json-schema.org/draft-07/schema#
-title: Zarr Attributes Metadata
+title: Zarr Attributes Metadata for SeaDataNet
 type: object
 properties:
   long_name:
@@ -9,32 +9,60 @@ properties:
   units:
     type: string
     enum:
-    - degrees_north
-    - degreesN
+      - degrees_north
+      - degreesN
   _ARRAY_DIMENSIONS:
     type: array
     items:
       type: string
-  "Conventions":
-    "type": "string"
-  "units_metadata":
-    "type": "string"
-  "cell_methods":
-    "type": "string"
-  "created_by":
-    "type": "string"
-  "date":
-    "type": "string"
-  "crs_wkt":
-    "type": "string"
-  "geotransform":
-    "type": "string"
-  "proj4": 
-    "type": "string"
-  "spatial_ref": 
-    "type": "string"
-#required: #there are varios constraints depending on the position of the file, potentially these could be profiles of the bb, but there are no common names reqiured between root and group attributes
-#- long_name
-#- standard_name
-#- units
-#- _ARRAY_DIMENSIONS
+  Conventions:
+    type: string
+  units_metadata:
+    type: string
+  cell_methods:
+    type: string
+  created_by:
+    type: string
+  date:
+    type: string
+  crs_wkt:
+    type: string
+  geotransform:
+    type: string
+  proj4:
+    type: string
+  spatial_ref:
+    type: string
+  epsg_code:
+    type: string
+  grid_mapping_name:
+    type: string
+  inverse_flattening:
+    type: number
+  semi_major_axis:
+    type: number
+  ancillary_variables:
+    type: string
+  axis:
+    type: string
+  grid_mapping:
+    type: string
+  sdn_parameter_name:
+    type: string
+  sdn_parameter_urn:
+    type: string
+  sdn_uom_name:
+    type: string
+  sdn_uom_urn:
+    type: string
+  standard_name:
+    type: string
+  units:
+    type: string
+
+
+# required: # there are various constraints depending on the position of the file, potentially these could be profiles of the bb, but there are no common names required between root and group attributes
+# - long_name
+# - standard_name
+# - units
+# - _ARRAY_DIMENSIONS

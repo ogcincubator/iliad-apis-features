@@ -20,5 +20,5 @@
   base-uri: http://schemas.opengis.net/zarr-sdn
   snippets:
     - language: json
-      ref: examples/.zattrs-crs
+      ref: examples/.zattrs-TEMPTADC
 
