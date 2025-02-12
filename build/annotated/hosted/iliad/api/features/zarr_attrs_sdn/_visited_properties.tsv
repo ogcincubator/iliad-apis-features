@@ -1,0 +1,14 @@
+path	@id
+/long_name	https://w3id.org/iliad/oim/default-context/long_name
+/standard_name	https://w3id.org/iliad/oim/default-context/standard_name
+/units	https://w3id.org/iliad/oim/default-context/units
+/_ARRAY_DIMENSIONS	https://w3id.org/iliad/oim/default-context/_ARRAY_DIMENSIONS
+/Conventions	https://w3id.org/iliad/oim/default-context/Conventions
+/units_metadata	https://w3id.org/iliad/oim/default-context/units_metadata
+/cell_methods	https://w3id.org/iliad/oim/default-context/cell_methods
+/created_by	https://w3id.org/iliad/oim/default-context/created_by
+/date	http://purl.org/dc/terms/date
+/crs_wkt	https://w3id.org/iliad/oim/default-context/crs_wkt
+/geotransform	https://w3id.org/iliad/oim/default-context/geotransform
+/proj4	https://w3id.org/iliad/oim/default-context/proj4
+/spatial_ref	https://w3id.org/iliad/oim/default-context/spatial_ref

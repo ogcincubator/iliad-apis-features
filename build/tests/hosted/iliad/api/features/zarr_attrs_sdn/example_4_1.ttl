@@ -1,0 +1,8 @@
+@prefix : <https://w3id.org/iliad/oim/default-context/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] :epsg_code "EPSG:4326" ;
+    :grid_mapping_name "latitude_longitude" ;
+    :inverse_flattening 2.982572e+02 ;
+    :semi_major_axis 6.378137e+06 .
+

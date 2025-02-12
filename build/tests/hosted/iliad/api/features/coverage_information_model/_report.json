@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.coverage_information_model - OGC Coverage Implementation Schema",
   "bblockName": "OGC Coverage Implementation Schema",
   "bblockId": "ogc.hosted.iliad.api.features.coverage_information_model",
-  "generated": "2024-10-23T10:19:58.464312+00:00",
+  "generated": "2025-02-12T12:12:50.478244+00:00",
   "result": true,
   "items": [
     {
@@ -13,7 +13,7 @@
         "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverage_information_model/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
-        "language": "json"
+        "language": "application/json"
       },
       "result": true,
       "sections": [
@@ -68,7 +68,7 @@
         "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverage_information_model/example_2_1.json",
         "exampleIndex": 2,
         "snippetIndex": 1,
-        "language": "json"
+        "language": "application/json"
       },
       "result": true,
       "sections": [
@@ -123,7 +123,7 @@
         "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/coverage_information_model/example_3_1.ttl",
         "exampleIndex": 3,
         "snippetIndex": 1,
-        "language": "ttl"
+        "language": "text/turtle"
       },
       "result": true,
       "sections": [

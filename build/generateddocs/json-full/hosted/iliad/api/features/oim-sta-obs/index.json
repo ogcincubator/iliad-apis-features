@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2024-10-23",
+  "dateOfLastChange": "2025-02-12",
   "link": "https://github.com/opengeospatial/iliad-api-features/oim-sta-obs",
   "sources": [
     {
@@ -34,6 +34,7 @@
   "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/schema.yaml",
   "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/",
+  "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/oim-sta-obs/",
   "description": "## Ocean Information Model Observations Profile\n\nCurrently a stub where requirements for OIM implementation can be defined as required.\n\nNote specific profiles will define specific requirements for interaction with external systems.\n\nThe JSON-LD Context declares the default baseURI of Observation with generic STA context and OIM specific context.\n\nTODO: (MVP)\n1 - implement the observableProperties Register as a concept scheme under OGC hosted\n2 - define a SHACL or other rule that requires observableProperties to be registered in the ILIAD observable properties register.\n\nNote that it may have an externally resolvable URI or be a proxy handled by ILIAD (using the OGC RAINBOW)\n\nThe mechanisms for handling external vocabulary constraints to be define here: (TBD)\n",

@@ -1,0 +1,1516 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/iliad/oim/default-context/",
+    "long_name": "https://w3id.org/iliad/oim/default-context/long_name",
+    "standard_name": "https://w3id.org/iliad/oim/default-context/standard_name",
+    "units": "https://w3id.org/iliad/oim/default-context/units",
+    "_ARRAY_DIMENSIONS": "https://w3id.org/iliad/oim/default-context/_ARRAY_DIMENSIONS",
+    "Conventions": "https://w3id.org/iliad/oim/default-context/Conventions",
+    "units_metadata": "https://w3id.org/iliad/oim/default-context/units_metadata",
+    "cell_methods": "https://w3id.org/iliad/oim/default-context/cell_methods",
+    "created_by": "https://w3id.org/iliad/oim/default-context/created_by",
+    "date": "dct:date",
+    "crs_wkt": "https://w3id.org/iliad/oim/default-context/crs_wkt",
+    "geotransform": "https://w3id.org/iliad/oim/default-context/geotransform",
+    "proj4": "https://w3id.org/iliad/oim/default-context/proj4",
+    "spatial_ref": "https://w3id.org/iliad/oim/default-context/spatial_ref",
+    "id": "@id",
+    "type": "@type",
+    "value": "@value",
+    "label": {
+      "@id": "rdfs:label",
+      "@container": "@language"
+    },
+    "title": {
+      "@id": "dct:title",
+      "@container": "@language"
+    },
+    "description": {
+      "@id": "dct:description",
+      "@container": "@language"
+    },
+    "unit": "qudt:unit",
+    "symbol": "qudt:symbol",
+    "Domain": "covjson:Domain",
+    "domain": "covjson:domain",
+    "domainType": {
+      "@id": "covjson:domainType",
+      "@type": "@vocab"
+    },
+    "axes": {
+      "@id": "covjson:axis",
+      "@container": "@index"
+    },
+    "dataType": {
+      "@id": "https://w3id.org/idsa/core/dataType",
+      "@type": "xsd:anyURI"
+    },
+    "primitive": "covjson:primitive",
+    "tuple": "covjson:tuple",
+    "polygon": "covjson:polygon",
+    "num": "covjson:num",
+    "start": "covjson:start",
+    "stop": "covjson:stop",
+    "referencing": {
+      "@id": "covjson:referencing",
+      "@container": "@set"
+    },
+    "components": {
+      "@id": "covjson:components",
+      "@container": "@list"
+    },
+    "system": "covjson:referenceSystem",
+    "RS": "covjson:ReferenceSystem",
+    "CRS": "covjson:CoordinateReferenceSystem",
+    "cs": "ignf:coordinateSystem",
+    "CS": "ignf:CoordinateSystem",
+    "TemporalRS": "inspiregloss:TemporalReferenceSystem",
+    "TemporalCRS": "covjson:TemporalCRS",
+    "calendar": {
+      "@id": "covjson:calendar",
+      "@type": "@vocab"
+    },
+    "Gregorian": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian",
+    "timeScale": "covjson:timeScale",
+    "SpatialRS": "inspiregloss:SpatialReferenceSystem",
+    "SpatialCRS": "ignf:CRS",
+    "GeodeticCRS": "ignf:GeodeticCRS",
+    "ProjectedCRS": "ignf:ProjectedCRS",
+    "VerticalCRS": "ignf:VerticalCRS",
+    "datum": "ignf:datum",
+    "csAxes": {
+      "@id": "covjson:coordinateSystemAxes",
+      "@container": "@list"
+    },
+    "direction": "ignf:axisDirection",
+    "IdentifierRS": "covjson:IdentifierReferenceSystem",
+    "targetConcept": "covjson:targetConcept",
+    "identifiers": {
+      "@id": "covjson:identifier",
+      "@type": "@id",
+      "@container": "@index"
+    },
+    "Parameter": "covjson:Parameter",
+    "parameters": {
+      "@id": "covjson:parameter",
+      "@type": "@id",
+      "@container": "@index"
+    },
+    "observedProperty": "ssn:observedProperty",
+    "categoryEncoding": "covjson:categoryEncoding",
+    "ParameterGroup": "covjson:ParameterGroup",
+    "members": {
+      "@id": "covjson:member",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "ranges": {
+      "@id": "covjson:range",
+      "@type": "@id",
+      "@container": "@index"
+    },
+    "NdArray": "covjson:NdArray",
+    "TiledNdArray": "covjson:TiledNdArray",
+    "shape": {
+      "@id": "covjson:shape",
+      "@container": "@list"
+    },
+    "tileShape": {
+      "@id": "covjson:tileShape",
+      "@container": "@list"
+    },
+    "axisNames": {
+      "@id": "covjson:axisNames",
+      "@container": "@list"
+    },
+    "urlTemplate": "covjson:urlTemplate",
+    "tileSets": {
+      "@id": "covjson:tileSet",
+      "@container": "@set"
+    },
+    "float": "xsd:double",
+    "integer": "xsd:integer",
+    "string": "xsd:string",
+    "Coverage": "covjson:Coverage",
+    "coverages": {
+      "@id": "hydra:member",
+      "@container": "@set"
+    },
+    "CoverageCollection": "covjson:CoverageCollection",
+    "Grid": "covjsondt:Grid",
+    "VerticalProfile": "covjsondt:VerticalProfile",
+    "MultiPointSeries": "covjsondt:MultiPointSeries",
+    "MultiPoint": "covjsondt:MultiPoint",
+    "PointSeries": "covjsondt:PointSeries",
+    "Point": "covjsondt:Point",
+    "Trajectory": "covjsondt:Trajectory",
+    "Section": "covjsondt:Section",
+    "MultiPolygonSeries": "covjsondt:MultiPolygonSeries",
+    "MultiPolygon": "covjsondt:MultiPolygon",
+    "Polygon": "covjsondt:Polygon",
+    "IndexAxisType": "http://www.opengis.net/cis/1.1/IndexAxisType",
+    "spatial": "dct:spatial",
+    "previewInfo": {
+      "@id": "https://w3id.org/iliad/oim/metadata/previewInfo",
+      "@type": "xsd:string"
+    },
+    "hasEmail": {
+      "@id": "http://www.w3.org/2006/vcard/ns#hasEmail",
+      "@type": "@id"
+    },
+    "QualityMeasurement": "http://www.w3.org/ns/dqv#QualityMeasurement",
+    "coverage": {
+      "@id": "http://www.opengis.net/cis/1.1/coverage",
+      "@type": "@id"
+    },
+    "VideoResource": "https://w3id.org/idsa/core/VideoResource",
+    "scopeNote": "skos:scopeNote",
+    "endpointDescription": {
+      "@id": "dcat:endpointDescription",
+      "@type": "@id"
+    },
+    "DigitalContent": "https://w3id.org/idsa/core/DigitalContent",
+    "affiliation": "https://schema.org/affiliation",
+    "endpointArtifact": {
+      "@id": "https://w3id.org/idsa/core/endpointArtifact",
+      "@type": "@id"
+    },
+    "Unit": "http://qudt.org/schema/qudt/Unit",
+    "wasGeneratedBy": {
+      "@id": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "@type": "@id"
+    },
+    "versionInfo": "owl:versionInfo",
+    "created": "dct:created",
+    "VDataBlockType": "http://www.opengis.net/cis/1.1/VDataBlockType",
+    "ImageRepresentation": "https://w3id.org/idsa/core/ImageRepresentation",
+    "lowerBound": {
+      "@id": "http://www.opengis.net/cis/1.1/lowerBound",
+      "@type": "xsd:integer"
+    },
+    "GeoPoint": "https://w3id.org/idsa/core/GeoPoint",
+    "qualifiedAttribution": {
+      "@id": "http://www.w3.org/ns/prov#qualifiedAttribution",
+      "@type": "@id"
+    },
+    "Dataset": "dcat:Dataset",
+    "EnvelopeByAxisType": "http://www.opengis.net/cis/1.1/EnvelopeByAxisType",
+    "width": {
+      "@id": "https://w3id.org/idsa/core/width",
+      "@type": "xsd:decimal"
+    },
+    "compressFormat": {
+      "@id": "dcat:compressFormat",
+      "@type": "@id"
+    },
+    "Relationship": "https://uri.etsi.org/ngsi-ld/Relationship",
+    "license": "dct:license",
+    "concept": {
+      "@id": "http://purl.org/linked-data/cube#concept",
+      "@type": "@id"
+    },
+    "ProvenanceStatement": "dct:ProvenanceStatement",
+    "accrualPeriodicity": "dct:accrualPeriodicity",
+    "Asset": "http://www.w3.org/ns/odrl/2/Asset",
+    "adms.Asset": "http://www.w3.org/ns/adms#Asset",
+    "model": {
+      "@id": "http://www.opengis.net/cis/1.1/model",
+      "@type": "@id"
+    },
+    "Type": "http://www.w3.org/2006/vcard/ns#Type",
+    "MediaType": "dct:MediaType",
+    "Organization": "https://schema.org/Organization",
+    "vcard.Organization": "http://www.w3.org/2006/vcard/ns#Organization",
+    "Distribution": "dcat:Distribution",
+    "issued": "dct:issued",
+    "dataset": {
+      "@id": "dcat:dataset",
+      "@type": "@id"
+    },
+    "AudioRepresentation": "https://w3id.org/idsa/core/AudioRepresentation",
+    "wasRevisionOf": {
+      "@id": "http://www.w3.org/ns/prov#wasRevisionOf",
+      "@type": "@id"
+    },
+    "usageNote": "http://purl.org/vocab/vann/usageNote",
+    "AxisExtendType": "http://www.opengis.net/cis/1.1/AxisExtendType",
+    "height": {
+      "@id": "https://w3id.org/idsa/core/height",
+      "@type": "xsd:decimal"
+    },
+    "distribution": {
+      "@id": "dcat:distribution",
+      "@type": "@id"
+    },
+    "downloadURL": {
+      "@id": "dcat:downloadURL",
+      "@type": "@id"
+    },
+    "hasQualityMetadata": {
+      "@id": "http://www.w3.org/ns/dqv#hasQualityMetadata",
+      "@type": "@id"
+    },
+    "coordinate": {
+      "@id": "http://www.opengis.net/cis/1.1/coordinate",
+      "@type": "@id"
+    },
+    "ComponentProperty": "http://purl.org/linked-data/cube#ComponentProperty",
+    "hasVersion": "dct:hasVersion",
+    "dcat.hasVersion": {
+      "@id": "dcat:hasVersion",
+      "@type": "@id"
+    },
+    "wasAttributedTo": {
+      "@id": "http://www.w3.org/ns/prov#wasAttributedTo",
+      "@type": "@id"
+    },
+    "frameRate": {
+      "@id": "https://w3id.org/idsa/core/frameRate",
+      "@type": "xsd:decimal"
+    },
+    "QualityMetadata": "http://www.w3.org/ns/dqv#QualityMetadata",
+    "Geometry": "http://www.opengis.net/ont/geosparql#Geometry",
+    "locn.Geometry": "http://www.w3.org/ns/locn#Geometry",
+    "GridLimitsType": "http://www.opengis.net/cis/1.1/GridLimitsType",
+    "hasValue": {
+      "@id": "https://saref.etsi.org/core/hasValue",
+      "@type": "@id"
+    },
+    "temporalResolution": "dcat:temporalResolution",
+    "versionNotes": {
+      "@id": "http://www.w3.org/ns/adms#versionNotes",
+      "@type": "rdfs:Literal"
+    },
+    "VideoRepresentation": "https://w3id.org/idsa/core/VideoRepresentation",
+    "GeoFeature": "https://w3id.org/idsa/core/GeoFeature",
+    "landingPage": {
+      "@id": "dcat:landingPage",
+      "@type": "@id"
+    },
+    "maker": {
+      "@id": "http://xmlns.com/foaf/0.1/maker",
+      "@type": "@id"
+    },
+    "isPrimaryTopicOf": {
+      "@id": "http://xmlns.com/foaf/0.1/isPrimaryTopicOf",
+      "@type": "@id"
+    },
+    "fileReference": "http://www.opengis.net/cis/1.1/fileReference",
+    "hasAddress": {
+      "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
+      "@type": "@id"
+    },
+    "DataRepresentation": "https://w3id.org/idsa/core/DataRepresentation",
+    "sensorInstanceRef": {
+      "@id": "http://www.sensorml.com/sensorML-2.0/sensorInstanceRef",
+      "@type": "@id"
+    },
+    "generalGrid": {
+      "@id": "http://www.opengis.net/cis/1.1/generalGrid",
+      "@type": "@id"
+    },
+    "structure": {
+      "@id": "http://purl.org/linked-data/cube#structure",
+      "@type": "@id"
+    },
+    "positionValuePair": {
+      "@id": "http://www.opengis.net/cis/1.1/positionValuePair",
+      "@type": "@id"
+    },
+    "PVPType": "http://www.opengis.net/cis/1.1/PVPType",
+    "hasTelephone": {
+      "@id": "http://www.w3.org/2006/vcard/ns#hasTelephone",
+      "@type": "@id"
+    },
+    "scaleFactor": {
+      "@id": "https://w3id.org/iliad/oim/metadata/scaleFactor",
+      "@type": "xsd:float"
+    },
+    "AllowedValues": "http://www.opengis.net/swe/2.0/AllowedValues",
+    "DescribedSemantically": "https://w3id.org/idsa/core/DescribedSemantically",
+    "isPartOf": "dct:isPartOf",
+    "filenameExtension": {
+      "@id": "https://w3id.org/idsa/core/filenameExtension",
+      "@type": "xsd:string"
+    },
+    "project": "https://w3id.org/iliad/oim/metadata/project",
+    "Concept": "skos:Concept",
+    "component": {
+      "@id": "http://purl.org/linked-data/cube#component",
+      "@type": "@id"
+    },
+    "measure": {
+      "@id": "http://purl.org/linked-data/cube#measure",
+      "@type": "@id"
+    },
+    "gridLimits": {
+      "@id": "http://www.opengis.net/cis/1.1/gridLimits",
+      "@type": "@id"
+    },
+    "user": {
+      "@id": "http://data.europa.eu/930/user",
+      "@type": "@id"
+    },
+    "TextRepresentation": "https://w3id.org/idsa/core/TextRepresentation",
+    "TextResource": "https://w3id.org/idsa/core/TextResource",
+    "DataResource": "https://w3id.org/idsa/core/DataResource",
+    "rangeSet": {
+      "@id": "http://www.opengis.net/cis/1.1/rangeSet",
+      "@type": "@id"
+    },
+    "Location": "dct:Location",
+    "idsa.Location": "https://w3id.org/idsa/core/Location",
+    "rangeType": {
+      "@id": "http://www.opengis.net/cis/1.1/rangeType",
+      "@type": "@id"
+    },
+    "axisLabels": {
+      "@id": "http://www.opengis.net/cis/1.1/axisLabels",
+      "@type": "xsd:string"
+    },
+    "path": {
+      "@id": "https://w3id.org/idsa/core/path",
+      "@type": "xsd:string"
+    },
+    "interpolationRestriction": {
+      "@id": "http://www.opengis.net/cis/1.1/interpolationRestriction",
+      "@type": "@id"
+    },
+    "axis": {
+      "@id": "http://www.opengis.net/cis/1.1/axis",
+      "@type": "@id"
+    },
+    "Activity": "http://www.w3.org/ns/prov#Activity",
+    "ImageResource": "https://w3id.org/idsa/core/ImageResource",
+    "spatialResolutionInMeters": "dcat:spatialResolutionInMeters",
+    "partition": {
+      "@id": "http://www.opengis.net/cis/1.1/partition",
+      "@type": "@id"
+    },
+    "fn": {
+      "@id": "http://www.w3.org/2006/vcard/ns#fn",
+      "@type": "xsd:string"
+    },
+    "used": {
+      "@id": "http://www.w3.org/ns/prov#used",
+      "@type": "@id"
+    },
+    "CoverageByPartitioningType": "http://www.opengis.net/cis/1.1/CoverageByPartitioningType",
+    "GeneralGridCoverageType": "http://www.opengis.net/cis/1.1/GeneralGridCoverageType",
+    "homepage": {
+      "@id": "http://xmlns.com/foaf/0.1/homepage",
+      "@type": "@id"
+    },
+    "maxValue": "https://w3id.org/iliad/oim/metadata/maxValue",
+    "sensorModelRef": {
+      "@id": "http://www.sensorml.com/sensorML-2.0/sensorModelRef",
+      "@type": "@id"
+    },
+    "Axis": "http://www.opengis.net/cis/1.1/Axis",
+    "appliedModel": {
+      "@id": "https://w3id.org/iliad/oim/metadata/appliedModel",
+      "@type": "xsd:string"
+    },
+    "hasQualityMeasurement": {
+      "@id": "http://www.w3.org/ns/dqv#hasQualityMeasurement",
+      "@type": "@id"
+    },
+    "Graph": "http://www.w3.org/2004/03/trix/rdfg-1/Graph",
+    "Person": "https://schema.org/Person",
+    "unitsDescription": {
+      "@id": "https://w3id.org/iliad/oim/metadata/unitsDescription",
+      "@type": "xsd:string"
+    },
+    "Artifact": "https://w3id.org/idsa/core/Artifact",
+    "filters": {
+      "@id": "https://w3id.org/iliad/oim/metadata/filters",
+      "@type": "xsd:string"
+    },
+    "rightsHolder": "dct:rightsHolder",
+    "noDataValue": {
+      "@id": "https://w3id.org/iliad/oim/metadata/noDataValue",
+      "@type": "xsd:string"
+    },
+    "QualityAnnotation": "http://www.w3.org/ns/dqv#QualityAnnotation",
+    "searchText": {
+      "@id": "https://w3id.org/iliad/oim/metadata/searchText",
+      "@type": "xsd:string"
+    },
+    "notation": "skos:notation",
+    "Participant": "https://w3id.org/idsa/core/Participant",
+    "profileSchema": {
+      "@id": "https://w3id.org/iliad/oim/metadata/profileSchema",
+      "@type": "xsd:string"
+    },
+    "Described": "https://w3id.org/idsa/core/Described",
+    "coverageRef": {
+      "@id": "http://www.opengis.net/cis/1.1/coverageRef",
+      "@type": "@id"
+    },
+    "Agent": "http://xmlns.com/foaf/0.1/Agent",
+    "dct.Agent": "dct:Agent",
+    "prov.Agent": "http://www.w3.org/ns/prov#Agent",
+    "ContentType": "https://w3id.org/idsa/core/ContentType",
+    "creator": "dct:creator",
+    "name": {
+      "@id": "https://schema.org/name",
+      "@type": "rdfs:Literal"
+    },
+    "swe.name": "http://www.opengis.net/swe/2.0/name",
+    "dataBlock": {
+      "@id": "http://www.opengis.net/cis/1.1/dataBlock",
+      "@type": "@id"
+    },
+    "DataService": "dcat:DataService",
+    "Individual": "http://www.w3.org/2006/vcard/ns#Individual",
+    "representation": {
+      "@id": "https://w3id.org/idsa/core/representation",
+      "@type": "@id"
+    },
+    "minDate": {
+      "@id": "https://w3id.org/iliad/oim/metadata/minDate",
+      "@type": "xsd:dateTimeStamp"
+    },
+    "Attribution": "http://www.w3.org/ns/prov#Attribution",
+    "interval": {
+      "@id": "http://www.opengis.net/swe/2.0/interval",
+      "@type": "@id"
+    },
+    "wasDerivedFrom": {
+      "@id": "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "@type": "@id"
+    },
+    "uomLabel": {
+      "@id": "http://www.opengis.net/cis/1.1/uomLabel",
+      "@type": "xsd:string"
+    },
+    "schemaAgency": {
+      "@id": "http://www.w3.org/ns/adms#schemaAgency",
+      "@type": "rdfs:Literal"
+    },
+    "RangeSetType": "http://www.opengis.net/cis/1.1/RangeSetType",
+    "allowedInterpolation": {
+      "@id": "http://www.opengis.net/cis/1.1/allowedInterpolation",
+      "@type": "xsd:anyURI"
+    },
+    "geometry": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "@id"
+    },
+    "ComponentSpecification": "http://purl.org/linked-data/cube#ComponentSpecification",
+    "axisLabel": {
+      "@id": "http://www.opengis.net/cis/1.1/axisLabel",
+      "@type": "xsd:string"
+    },
+    "rights": "dct:rights",
+    "Work": "http://www.w3.org/2006/vcard/ns#Work",
+    "TemporalEntity": "http://www.w3.org/2006/time#TemporalEntity",
+    "DataRecordType": "http://www.opengis.net/swe/2.0/DataRecordType",
+    "IrregularAxisType": "http://www.opengis.net/cis/1.1/IrregularAxisType",
+    "field": {
+      "@id": "http://www.opengis.net/swe/2.0/field",
+      "@type": "@id"
+    },
+    "hadPrimarySource": {
+      "@id": "http://www.w3.org/ns/prov#hadPrimarySource",
+      "@type": "@id"
+    },
+    "PartitionSetType": "http://www.opengis.net/cis/1.1/PartitionSetType",
+    "identifier": "dct:identifier",
+    "adms.identifier": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "keyword": {
+      "@id": "dcat:keyword",
+      "@type": "rdfs:Literal"
+    },
+    "envelope": {
+      "@id": "http://www.opengis.net/cis/1.1/envelope",
+      "@type": "@id"
+    },
+    "processor": {
+      "@id": "http://data.europa.eu/930/processor",
+      "@type": "@id"
+    },
+    "bbox": {
+      "@id": "dcat:bbox",
+      "@type": "rdfs:Literal"
+    },
+    "endpointInformation": {
+      "@id": "https://w3id.org/idsa/core/endpointInformation",
+      "@type": "xsd:string"
+    },
+    "subject": "dct:subject",
+    "fileName": {
+      "@id": "https://w3id.org/idsa/core/fileName",
+      "@type": "xsd:string"
+    },
+    "qualifiedRelation": {
+      "@id": "dcat:qualifiedRelation",
+      "@type": "@id"
+    },
+    "metadata": {
+      "@id": "http://www.opengis.net/cis/1.1/metadata",
+      "@type": "@id"
+    },
+    "byteSize": "dcat:byteSize",
+    "idsa.byteSize": {
+      "@id": "https://w3id.org/idsa/core/byteSize",
+      "@type": "xsd:integer"
+    },
+    "instance": {
+      "@id": "https://w3id.org/idsa/core/instance",
+      "@type": "@id"
+    },
+    "isDefinedBy": "rdfs:isDefinedBy",
+    "definition": "skos:definition",
+    "swe.definition": {
+      "@id": "http://www.opengis.net/swe/2.0/definition",
+      "@type": "xsd:string"
+    },
+    "RangeSetRefType": "http://www.opengis.net/cis/1.1/RangeSetRefType",
+    "srsName": {
+      "@id": "http://www.opengis.net/cis/1.1/srsName",
+      "@type": "xsd:anyURI"
+    },
+    "principalInvestigator": {
+      "@id": "http://data.europa.eu/930/principalInvestigator",
+      "@type": "@id"
+    },
+    "QuantityType": "http://www.opengis.net/swe/2.0/QuantityType",
+    "technicalManagerInfo": {
+      "@id": "https://w3id.org/iliad/oim/metadata/technicalManagerInfo",
+      "@type": "xsd:string"
+    },
+    "colorTable": {
+      "@id": "https://w3id.org/iliad/oim/metadata/colorTable",
+      "@type": "xsd:string"
+    },
+    "names": {
+      "@id": "http://www.opengis.net/swe/2.0/names",
+      "@type": "xsd:string"
+    },
+    "Property": "https://saref.etsi.org/core/Property",
+    "source": "https://smartdatamodels.org/source",
+    "MeasureProperty": "http://purl.org/linked-data/cube#MeasureProperty",
+    "publisher": "dct:publisher",
+    "mediaType": "dct:mediaType",
+    "uom": {
+      "@id": "http://www.opengis.net/swe/2.0/uom",
+      "@type": "@id"
+    },
+    "subDatasetName": "https://w3id.org/iliad/oim/metadata/subDatasetName",
+    "upperBound": {
+      "@id": "http://www.opengis.net/cis/1.1/upperBound",
+      "@type": "xsd:integer"
+    },
+    "version": "dcat:version",
+    "modified": "dct:modified",
+    "Frequency": "dct:Frequency",
+    "idsa.Frequency": "https://w3id.org/idsa/core/Frequency",
+    "Endpoint": "https://w3id.org/idsa/core/Endpoint",
+    "endpointURL": {
+      "@id": "dcat:endpointURL",
+      "@type": "@id"
+    },
+    "provenance": "dct:provenance",
+    "samplingRate": {
+      "@id": "https://w3id.org/idsa/core/samplingRate",
+      "@type": "xsd:decimal"
+    },
+    "CoverageByDomainAndRangeType": "http://www.opengis.net/cis/1.1/CoverageByDomainAndRangeType",
+    "inSeries": {
+      "@id": "dcat:inSeries",
+      "@type": "@id"
+    },
+    "endpointDocumentation": {
+      "@id": "https://w3id.org/idsa/core/endpointDocumentation",
+      "@type": "xsd:anyURI"
+    },
+    "distributor": {
+      "@id": "http://data.europa.eu/930/distributor",
+      "@type": "@id"
+    },
+    "accessRights": "dct:accessRights",
+    "DCMIType": "dct:DCMIType",
+    "wasUsedBy": {
+      "@id": "http://www.w3.org/ns/prov#wasUsedBy",
+      "@type": "@id"
+    },
+    "checkSum": {
+      "@id": "https://w3id.org/idsa/core/checkSum",
+      "@type": "xsd:string"
+    },
+    "seeAlso": "rdfs:seeAlso",
+    "contentType": {
+      "@id": "https://w3id.org/idsa/core/contentType",
+      "@type": "@id"
+    },
+    "RepresentationInstance": "https://w3id.org/idsa/core/RepresentationInstance",
+    "partitionSet": {
+      "@id": "http://www.opengis.net/cis/1.1/partitionSet",
+      "@type": "@id"
+    },
+    "datasetManagerInfo": {
+      "@id": "https://w3id.org/iliad/oim/metadata/datasetManagerInfo",
+      "@type": "xsd:string"
+    },
+    "contentStandard": {
+      "@id": "https://w3id.org/idsa/core/contentStandard",
+      "@type": "xsd:anyURI"
+    },
+    "Entity": "https://uri.etsi.org/ngsi-ld/Entity",
+    "dataTypeSchema": {
+      "@id": "https://w3id.org/idsa/core/dataTypeSchema",
+      "@type": "@id"
+    },
+    "Language": "https://w3id.org/idsa/core/Language",
+    "resourceProvider": {
+      "@id": "http://data.europa.eu/930/resourceProvider",
+      "@type": "@id"
+    },
+    "contactPoint": {
+      "@id": "dcat:contactPoint",
+      "@type": "@id"
+    },
+    "Resource": "dcat:Resource",
+    "idsa.Resource": "https://w3id.org/idsa/core/Resource",
+    "rdfs.Resource": "rdfs:Resource",
+    "hasQualityAnnotation": {
+      "@id": "http://www.w3.org/ns/dqv#hasQualityAnnotation",
+      "@type": "@id"
+    },
+    "domainSet": {
+      "@id": "http://www.opengis.net/cis/1.1/domainSet",
+      "@type": "@id"
+    },
+    "SpatialThing": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+    "theme": {
+      "@id": "dcat:theme",
+      "@type": "@id"
+    },
+    "Party": "http://www.w3.org/ns/odrl/2/Party",
+    "wasQuotedFrom": {
+      "@id": "http://www.w3.org/ns/prov#wasQuotedFrom",
+      "@type": "@id"
+    },
+    "comment": "rdfs:comment",
+    "custodian": {
+      "@id": "http://data.europa.eu/930/custodian",
+      "@type": "@id"
+    },
+    "Document": "http://xmlns.com/foaf/0.1/Document",
+    "language": "dct:language",
+    "page": {
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "@id"
+    },
+    "Group": "http://xmlns.com/foaf/0.1/Group",
+    "TransformationBySensorModelType": "http://www.opengis.net/cis/1.1/TransformationBySensorModelType",
+    "uomLabels": {
+      "@id": "http://www.opengis.net/cis/1.1/uomLabels",
+      "@type": "xsd:string"
+    },
+    "contributor": "dct:contributor",
+    "originator": {
+      "@id": "http://data.europa.eu/930/originator",
+      "@type": "@id"
+    },
+    "resolutionUnit": {
+      "@id": "https://w3id.org/iliad/oim/metadata/resolutionUnit",
+      "@type": "xsd:string"
+    },
+    "AudioResource": "https://w3id.org/idsa/core/AudioResource",
+    "DisplacementAxisNestType": "http://www.opengis.net/cis/1.1/DisplacementAxisNestType",
+    "DomainSetType": "http://www.opengis.net/cis/1.1/DomainSetType",
+    "generalizationOf": {
+      "@id": "http://www.w3.org/ns/prov#generalizationOf",
+      "@type": "@id"
+    },
+    "conformsTo": "dct:conformsTo",
+    "displacement": {
+      "@id": "http://www.opengis.net/cis/1.1/displacement",
+      "@type": "@id"
+    },
+    "minValue": "https://w3id.org/iliad/oim/metadata/minValue",
+    "UnitReference": "http://www.opengis.net/swe/2.0/UnitReference",
+    "specializationOf": {
+      "@id": "http://www.w3.org/ns/prov#specializationOf",
+      "@type": "@id"
+    },
+    "code": {
+      "@id": "http://www.opengis.net/swe/2.0/code",
+      "@type": "xsd:string"
+    },
+    "Identifier": "http://www.w3.org/ns/adms#Identifier",
+    "epsg": {
+      "@id": "https://w3id.org/iliad/oim/metadata/epsg",
+      "@type": "xsd:string"
+    },
+    "Home": "http://www.w3.org/2006/vcard/ns#Home",
+    "ManagedEntity": "https://w3id.org/idsa/core/ManagedEntity",
+    "format": "dct:format",
+    "accessURL": {
+      "@id": "dcat:accessURL",
+      "@type": "@id"
+    },
+    "credits": {
+      "@id": "https://w3id.org/iliad/oim/metadata/credits",
+      "@type": "xsd:string"
+    },
+    "sample": {
+      "@id": "http://www.w3.org/ns/adms#sample",
+      "@type": "@id"
+    },
+    "BoundingPolygon": "https://w3id.org/idsa/core/BoundingPolygon",
+    "Kind": "http://www.w3.org/2006/vcard/ns#Kind",
+    "relation": "dct:relation",
+    "temporal": "dct:temporal",
+    "accrualPolicy": "dct:accrualPolicy",
+    "resolution": {
+      "@id": "http://www.opengis.net/cis/1.1/resolution",
+      "@type": "xsd:string"
+    },
+    "maxDate": {
+      "@id": "https://w3id.org/iliad/oim/metadata/maxDate",
+      "@type": "xsd:dateTimeStamp"
+    },
+    "constraint": {
+      "@id": "http://www.opengis.net/swe/2.0/constraint",
+      "@type": "@id"
+    },
+    "ConnectorEndpoint": "https://w3id.org/idsa/core/ConnectorEndpoint",
+    "DataStructureDefinition": "http://purl.org/linked-data/cube#DataStructureDefinition",
+    "numberOfRecords": {
+      "@id": "https://w3id.org/iliad/oim/metadata/numberOfRecords",
+      "@type": "xsd:integer"
+    },
+    "RegularAxisType": "http://www.opengis.net/cis/1.1/RegularAxisType",
+    "PhotonFluxDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity",
+    "implements": {
+      "@id": "http://www.w3.org/ns/ssn/implements",
+      "@type": "@id"
+    },
+    "invalidatedAtTime": {
+      "@id": "http://www.w3.org/ns/prov#invalidatedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "MultiLineString": "http://www.opengis.net/ont/sf#MultiLineString",
+    "Attachable": "http://purl.org/linked-data/cube#Attachable",
+    "QuantityValue": "http://qudt.org/schema/qudt/QuantityValue",
+    "Line": "http://www.opengis.net/ont/sf#Line",
+    "member": {
+      "@id": "http://rs.tdwg.org/dwc/terms/member",
+      "@type": "@id"
+    },
+    "generatedAtTime": {
+      "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "example": "skos:example",
+    "Slice": "http://purl.org/linked-data/cube#Slice",
+    "Concentration": "http://purl.oclc.org/NET/ssnx/qu/dim#Concentration",
+    "dataSet": {
+      "@id": "http://purl.org/linked-data/cube#dataSet",
+      "@type": "@id"
+    },
+    "componentAttachment": {
+      "@id": "http://purl.org/linked-data/cube#componentAttachment",
+      "@type": "@id"
+    },
+    "Platform": "http://www.w3.org/ns/sosa/Platform",
+    "Deployment": "http://www.w3.org/ns/ssn/Deployment",
+    "MultiSurface": "http://www.opengis.net/ont/sf#MultiSurface",
+    "TemporalDuration": "http://www.w3.org/2006/time#TemporalDuration",
+    "Procedure": "http://www.w3.org/ns/sosa/Procedure",
+    "DiffusionCoefficient": "http://purl.oclc.org/NET/ssnx/qu/dim#DiffusionCoefficient",
+    "asGeoJSON": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGeoJSON",
+      "@type": "http://www.opengis.net/ont/geosparql#geoJSONLiteral"
+    },
+    "Volume": "http://purl.oclc.org/NET/ssnx/qu/dim#Volume",
+    "Thing": "owl:Thing",
+    "GFI_Feature": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+    "AttributeProperty": "http://purl.org/linked-data/cube#AttributeProperty",
+    "quantityValue": {
+      "@id": "http://qudt.org/schema/qudt/quantityValue",
+      "@type": "@id"
+    },
+    "TemporalUnit": "http://www.w3.org/2006/time#TemporalUnit",
+    "hosts": {
+      "@id": "http://www.w3.org/ns/sosa/hosts",
+      "@type": "@id"
+    },
+    "asWKT": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.opengis.net/ont/geosparql#wktLiteral"
+    },
+    "hasOutput": {
+      "@id": "http://www.w3.org/ns/ssn/hasOutput",
+      "@type": "@id"
+    },
+    "Angle": "http://purl.oclc.org/NET/ssnx/qu/dim#Angle",
+    "TemperatureDrift": "http://purl.oclc.org/NET/ssnx/qu/dim#TemperatureDrift",
+    "RotationalSpeed": "http://purl.oclc.org/NET/ssnx/qu/dim#RotationalSpeed",
+    "FeatureOfInterest": "http://www.w3.org/ns/sosa/FeatureOfInterest",
+    "Class": "rdfs:Class",
+    "ObservationCollection": "http://www.w3.org/ns/sosa/ObservationCollection",
+    "NumberPerArea": "http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerArea",
+    "depiction": "http://xmlns.com/foaf/0.1/depiction",
+    "Curve": "http://www.opengis.net/ont/sf#Curve",
+    "Instant": "http://www.w3.org/2006/time#Instant",
+    "sfWithin": {
+      "@id": "http://www.opengis.net/ont/geosparql#sfWithin",
+      "@type": "@id"
+    },
+    "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",
+    "hasUltimateFeatureOfInterest": {
+      "@id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest",
+      "@type": "@id"
+    },
+    "domainIncludes": "https://schema.org/domainIncludes",
+    "madeBySensor": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "@id"
+    },
+    "long": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+    "ActuatableProperty": "http://www.w3.org/ns/sosa/ActuatableProperty",
+    "Feature": "http://www.opengis.net/ont/geosparql#Feature",
+    "LineString": "http://www.opengis.net/ont/sf#LineString",
+    "numericValue": "http://qudt.org/schema/qudt/numericValue",
+    "SliceKey": "http://purl.org/linked-data/cube#SliceKey",
+    "Result": "http://www.w3.org/ns/sosa/Result",
+    "isHostedBy": {
+      "@id": "http://www.w3.org/ns/sosa/isHostedBy",
+      "@type": "@id"
+    },
+    "Compressibility": "http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility",
+    "inDeployment": {
+      "@id": "http://www.w3.org/ns/ssn/inDeployment",
+      "@type": "@id"
+    },
+    "ComponentSet": "http://purl.org/linked-data/cube#ComponentSet",
+    "MassPerTimePerArea": "http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerArea",
+    "numericDuration": {
+      "@id": "http://www.w3.org/2006/time#numericDuration",
+      "@type": "xsd:decimal"
+    },
+    "ElectricConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ElectricConductivity",
+    "Temperature": "http://purl.oclc.org/NET/ssnx/qu/dim#Temperature",
+    "hasProperty": {
+      "@id": "http://www.w3.org/ns/ssn/hasProperty",
+      "@type": "@id"
+    },
+    "Measure": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Measure",
+    "Triangle": "http://www.opengis.net/ont/sf#Triangle",
+    "note": "skos:note",
+    "observationGroup": {
+      "@id": "http://purl.org/linked-data/cube#observationGroup",
+      "@type": "@id"
+    },
+    "Interval": "http://www.w3.org/2006/time#Interval",
+    "EnergyFlux": "http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux",
+    "StressOrPressure": "http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure",
+    "resultTime": {
+      "@id": "http://www.w3.org/ns/sosa/resultTime",
+      "@type": "xsd:dateTime"
+    },
+    "VolumeDensityRate": "http://purl.oclc.org/NET/ssnx/qu/dim#VolumeDensityRate",
+    "phenomenonTime": {
+      "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
+      "@type": "@id"
+    },
+    "Energy": "http://purl.oclc.org/NET/ssnx/qu/dim#Energy",
+    "foaf.name": "http://xmlns.com/foaf/0.1/name",
+    "Role": "https://schema.org/Role",
+    "hasSerialization": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasSerialization",
+      "@type": "rdfs:Literal"
+    },
+    "hasTime": {
+      "@id": "http://www.w3.org/2006/time#hasTime",
+      "@type": "@id"
+    },
+    "SF_SamplingFeature.sampledFeature": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature",
+      "@type": "@id"
+    },
+    "hasMember": {
+      "@id": "http://www.w3.org/ns/sosa/hasMember",
+      "@type": "@id"
+    },
+    "rangeIncludes": "https://schema.org/rangeIncludes",
+    "hasInput": {
+      "@id": "http://www.w3.org/ns/ssn/hasInput",
+      "@type": "@id"
+    },
+    "Mass": "http://purl.oclc.org/NET/ssnx/qu/dim#Mass",
+    "implementedBy": {
+      "@id": "http://www.w3.org/ns/ssn/implementedBy",
+      "@type": "@id"
+    },
+    "location": {
+      "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#location",
+      "@type": "@id"
+    },
+    "Scheme": "skos:Scheme",
+    "hasEnd": {
+      "@id": "http://www.w3.org/2006/time#hasEnd",
+      "@type": "@id"
+    },
+    "GeometryCollection": "http://www.opengis.net/ont/sf#GeometryCollection",
+    "hasBeginning": {
+      "@id": "http://www.w3.org/2006/time#hasBeginning",
+      "@type": "@id"
+    },
+    "isResultOf": {
+      "@id": "http://www.w3.org/ns/sosa/isResultOf",
+      "@type": "@id"
+    },
+    "SF_SamplingFeature": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
+    "DimensionProperty": "http://purl.org/linked-data/cube#DimensionProperty",
+    "alt": "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
+    "Acceleration": "http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration",
+    "hasSubSystem": {
+      "@id": "http://www.w3.org/ns/ssn/hasSubSystem",
+      "@type": "@id"
+    },
+    "Quantity": "http://qudt.org/schema/qudt/Quantity",
+    "MassFlowRate": "http://purl.oclc.org/NET/ssnx/qu/dim#MassFlowRate",
+    "qu.QuantityKind": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind",
+    "SpatialObjectCollection": "http://www.opengis.net/ont/geosparql#SpatialObjectCollection",
+    "Distance": "http://purl.oclc.org/NET/ssnx/qu/dim#Distance",
+    "deprecated": "owl:deprecated",
+    "Radiance": "http://purl.oclc.org/NET/ssnx/qu/dim#Radiance",
+    "Duration": "http://purl.oclc.org/NET/ssnx/qu/dim#Duration",
+    "TIN": "http://www.opengis.net/ont/sf#TIN",
+    "SurfaceDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceDensity",
+    "wgs84.Point": "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+    "editorialNote": "skos:editorialNote",
+    "observes": {
+      "@id": "http://www.w3.org/ns/sosa/observes",
+      "@type": "@id"
+    },
+    "hasDeployment": {
+      "@id": "http://www.w3.org/ns/ssn/hasDeployment",
+      "@type": "@id"
+    },
+    "hasResult": {
+      "@id": "http://www.w3.org/ns/sosa/hasResult",
+      "@type": "@id"
+    },
+    "order": {
+      "@id": "http://rs.tdwg.org/dwc/terms/order",
+      "@type": "xsd:int"
+    },
+    "hasGeometry": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "@type": "@id"
+    },
+    "usedProcedure": {
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "@id"
+    },
+    "ssn.Property": "http://www.w3.org/ns/ssn/Property",
+    "sfContains": {
+      "@id": "http://www.opengis.net/ont/geosparql#sfContains",
+      "@type": "@id"
+    },
+    "Density": "http://purl.oclc.org/NET/ssnx/qu/dim#Density",
+    "LinearRing": "http://www.opengis.net/ont/sf#LinearRing",
+    "Molality": "http://purl.oclc.org/NET/ssnx/qu/dim#Molality",
+    "inXSDDateTimeStamp": {
+      "@id": "http://www.w3.org/2006/time#inXSDDateTimeStamp",
+      "@type": "xsd:dateTimeStamp"
+    },
+    "PropertyKind": "http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind",
+    "SpatialObject": "http://www.opengis.net/ont/geosparql#SpatialObject",
+    "sliceStructure": {
+      "@id": "http://purl.org/linked-data/cube#sliceStructure",
+      "@type": "@id"
+    },
+    "hasFeatureOfInterest": {
+      "@id": "https://saref.etsi.org/core/hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "NumberPerLength": "http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLength",
+    "lat": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+    "VolumeFlowRate": "http://purl.oclc.org/NET/ssnx/qu/dim#VolumeFlowRate",
+    "SpecificEntropy": "http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropy",
+    "CodedProperty": "http://purl.org/linked-data/cube#CodedProperty",
+    "slice": {
+      "@id": "http://purl.org/linked-data/cube#slice",
+      "@type": "@id"
+    },
+    "madeObservation": {
+      "@id": "http://www.w3.org/ns/sosa/madeObservation",
+      "@type": "@id"
+    },
+    "FeatureCollection": "http://www.opengis.net/ont/geosparql#FeatureCollection",
+    "isPropertyOf": {
+      "@id": "https://saref.etsi.org/core/isPropertyOf",
+      "@type": "@id"
+    },
+    "ObservationGroup": "http://purl.org/linked-data/cube#ObservationGroup",
+    "Sample": "http://www.w3.org/ns/sosa/Sample",
+    "DataSet": "http://purl.org/linked-data/cube#DataSet",
+    "PolyhedralSurface": "http://www.opengis.net/ont/sf#PolyhedralSurface",
+    "ObservableProperty": "http://www.w3.org/ns/sosa/ObservableProperty",
+    "deployedSystem": {
+      "@id": "http://www.w3.org/ns/ssn/deployedSystem",
+      "@type": "@id"
+    },
+    "System": "http://www.w3.org/ns/ssn/System",
+    "unitKind": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#unitKind",
+      "@type": "@id"
+    },
+    "dimension": {
+      "@id": "http://purl.org/linked-data/cube#dimension",
+      "@type": "@id"
+    },
+    "RadianceExposure": "http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposure",
+    "VelocityOrSpeed": "http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed",
+    "deployedOnPlatform": {
+      "@id": "http://www.w3.org/ns/ssn/deployedOnPlatform",
+      "@type": "@id"
+    },
+    "inXSDDate": {
+      "@id": "http://www.w3.org/2006/time#inXSDDate",
+      "@type": "xsd:date"
+    },
+    "GFI_DomainFeature": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
+    "Actuation": "http://www.w3.org/ns/sosa/Actuation",
+    "observation": {
+      "@id": "http://purl.org/linked-data/cube#observation",
+      "@type": "@id"
+    },
+    "Dimensionless": "http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless",
+    "Area": "http://purl.oclc.org/NET/ssnx/qu/dim#Area",
+    "Sampling": "http://www.w3.org/ns/sosa/Sampling",
+    "Power": "http://purl.oclc.org/NET/ssnx/qu/dim#Power",
+    "OM_Observation": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+    "prefLabel": "skos:prefLabel",
+    "Surface": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Surface",
+    "sliceKey": {
+      "@id": "http://purl.org/linked-data/cube#sliceKey",
+      "@type": "@id"
+    },
+    "inScheme": "skos:inScheme",
+    "dct.description": "dct:description",
+    "MultiCurve": "http://www.opengis.net/ont/sf#MultiCurve",
+    "hasQuantityKind": {
+      "@id": "http://qudt.org/schema/qudt/hasQuantityKind",
+      "@type": "@id"
+    },
+    "qb.Observation": "http://purl.org/linked-data/cube#Observation",
+    "EnergyDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensity",
+    "Sensor": "http://www.w3.org/ns/sosa/Sensor",
+    "hasSimpleResult": "http://www.w3.org/ns/sosa/hasSimpleResult",
+    "unitType": {
+      "@id": "http://www.w3.org/2006/time#unitType",
+      "@type": "@id"
+    },
+    "componentProperty": {
+      "@id": "http://purl.org/linked-data/cube#componentProperty",
+      "@type": "@id"
+    },
+    "isFeatureOfInterestOf": {
+      "@id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+      "@type": "@id"
+    },
+    "sf.Geometry": "http://www.opengis.net/ont/sf#Geometry",
+    "schema.Person": "https://schema.org/Person",
+    "Observation": "http://www.w3.org/ns/sosa/Observation",
+    "schema.name": "https://schema.org/name",
+    "QuantityKind": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind",
+    "sampleSizeUnit": "http://rs.tdwg.org/dwc/terms/sampleSizeUnit",
+    "recordNumber": "http://rs.tdwg.org/dwc/terms/recordNumber",
+    "verbatimLongitude": "http://rs.tdwg.org/dwc/terms/verbatimLongitude",
+    "behavior": "http://rs.tdwg.org/dwc/terms/behavior",
+    "organismQuantity": "http://rs.tdwg.org/dwc/terms/organismQuantity",
+    "scientificNameID": "http://rs.tdwg.org/dwc/terms/scientificNameID",
+    "lowestBiostratigraphicZone": "http://rs.tdwg.org/dwc/terms/lowestBiostratigraphicZone",
+    "earliestEonOrLowestEonothem": "http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem",
+    "originalNameUsageID": "http://rs.tdwg.org/dwc/terms/originalNameUsageID",
+    "GeologicalContext": "http://rs.tdwg.org/dwc/terms/GeologicalContext",
+    "countryCode": "http://rs.tdwg.org/dwc/terms/countryCode",
+    "UnitOfMeasure": "https://saref.etsi.org/core/UnitOfMeasure",
+    "verbatimCoordinates": "http://rs.tdwg.org/dwc/terms/verbatimCoordinates",
+    "recordType": "http://mmisw.org/ont/ioos/marine_biogeography/recordType",
+    "maximumDistanceAboveSurfaceInMeters": "http://rs.tdwg.org/dwc/terms/maximumDistanceAboveSurfaceInMeters",
+    "verbatimLocality": "http://rs.tdwg.org/dwc/terms/verbatimLocality",
+    "identificationReferences": "http://rs.tdwg.org/dwc/terms/identificationReferences",
+    "isControlledByDevice": {
+      "@id": "https://saref.etsi.org/core/isControlledByDevice",
+      "@type": "@id"
+    },
+    "verbatimCoordinateSystem": "http://rs.tdwg.org/dwc/terms/verbatimCoordinateSystem",
+    "sampleLengthInMeters": "http://mmisw.org/ont/ioos/marine_biogeography/sampleLengthInMeters",
+    "measurementType": "http://rs.tdwg.org/dwc/terms/measurementType",
+    "sampleWidthInMeters": "http://mmisw.org/ont/ioos/marine_biogeography/sampleWidthInMeters",
+    "measurementAccuracy": "http://rs.tdwg.org/dwc/terms/measurementAccuracy",
+    "genus": "http://rs.tdwg.org/dwc/terms/genus",
+    "coordinatePrecision": "http://rs.tdwg.org/dwc/terms/coordinatePrecision",
+    "weightInKg": "http://mmisw.org/ont/ioos/marine_biogeography/weightInKg",
+    "georeferencedDate": "http://rs.tdwg.org/dwc/terms/georeferencedDate",
+    "taxonomicStatus": "http://rs.tdwg.org/dwc/terms/taxonomicStatus",
+    "validFrom": {
+      "@id": "http://portele.de/ont/inspire/baseInspire#validFrom",
+      "@type": "xsd:dateTime"
+    },
+    "SurfaceMediumMedium": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#SurfaceMediumMedium",
+    "Humidity": "https://saref.etsi.org/core/Humidity",
+    "previousIdentifications": "http://rs.tdwg.org/dwc/terms/previousIdentifications",
+    "Period": "http://def.seegrid.csiro.au/isotc211/iso19108/2002/temporal#Period",
+    "startDayOfYear": "http://rs.tdwg.org/dwc/terms/startDayOfYear",
+    "otherCatalogNumbers": "http://rs.tdwg.org/dwc/terms/otherCatalogNumbers",
+    "MachineObservation": "http://rs.tdwg.org/dwc/terms/MachineObservation",
+    "coordinateUncertaintyInMeters": "http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters",
+    "eventID": "http://rs.tdwg.org/dwc/terms/eventID",
+    "Organism": "http://rs.tdwg.org/dwc/terms/Organism",
+    "identificationID": "http://rs.tdwg.org/dwc/terms/identificationID",
+    "recordedByID": "http://rs.tdwg.org/dwc/terms/recordedByID",
+    "dateCreated": {
+      "@id": "https://smartdatamodels.org/dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "Identification": "http://rs.tdwg.org/dwc/terms/Identification",
+    "WeatherObserved": "https://smartdatamodels.org/dataModel.Weather/WeatherObserved",
+    "quantificationUnit": "http://mmisw.org/ont/ioos/marine_biogeography/quantificationUnit",
+    "country": "http://rs.tdwg.org/dwc/terms/country",
+    "genericName": "http://rs.tdwg.org/dwc/terms/genericName",
+    "bibliographicCitation": "dct:bibliographicCitation",
+    "decimalLongitude": "http://rs.tdwg.org/dwc/terms/decimalLongitude",
+    "scientificName": "http://rs.tdwg.org/dwc/terms/scientificName",
+    "organismQuantityType": "http://rs.tdwg.org/dwc/terms/organismQuantityType",
+    "catalogNumber": "http://rs.tdwg.org/dwc/terms/catalogNumber",
+    "continent": "http://rs.tdwg.org/dwc/terms/continent",
+    "minimumDistanceAboveSurfaceInMeters": "http://rs.tdwg.org/dwc/terms/minimumDistanceAboveSurfaceInMeters",
+    "dateModified": {
+      "@id": "https://smartdatamodels.org/dateModified",
+      "@type": "xsd:dateTime"
+    },
+    "decimalLatitude": "http://rs.tdwg.org/dwc/terms/decimalLatitude",
+    "references": "dct:references",
+    "agroVocConcept": {
+      "@id": "https://smartdatamodels.org/dataModel.Agrifood/agroVocConcept",
+      "@type": "@id"
+    },
+    "higherGeographyID": "http://rs.tdwg.org/dwc/terms/higherGeographyID",
+    "addressRegion": "https://schema.org/addressRegion",
+    "measurementDeterminedBy": "http://rs.tdwg.org/dwc/terms/measurementDeterminedBy",
+    "sampleShape": "http://mmisw.org/ont/ioos/marine_biogeography/sampleShape",
+    "geodeticDatum": "http://rs.tdwg.org/dwc/terms/geodeticDatum",
+    "verbatimSiteDescriptions": "http://rs.tdwg.org/hc/terms/verbatimSiteDescriptions",
+    "dataProvider": "https://smartdatamodels.org/dataProvider",
+    "maximumDepthInMeters": "http://rs.tdwg.org/dwc/terms/maximumDepthInMeters",
+    "measuresProperty": {
+      "@id": "https://saref.etsi.org/core/measuresProperty",
+      "@type": "@id"
+    },
+    "locationAccordingTo": "http://rs.tdwg.org/dwc/terms/locationAccordingTo",
+    "nameAccordingTo": "http://rs.tdwg.org/dwc/terms/nameAccordingTo",
+    "group": "http://rs.tdwg.org/dwc/terms/group",
+    "class": "http://rs.tdwg.org/dwc/terms/class",
+    "footprintWKT": "http://rs.tdwg.org/dwc/terms/footprintWKT",
+    "FossilSpecimen": "http://rs.tdwg.org/dwc/terms/FossilSpecimen",
+    "snowHeight": "https://smartdatamodels.org/dataModel.Weather/snowHeight",
+    "Medium": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Medium",
+    "typeStatus": "http://rs.tdwg.org/dwc/terms/typeStatus",
+    "acceptedNameUsage": "http://rs.tdwg.org/dwc/terms/acceptedNameUsage",
+    "earliestEpochOrLowestSeries": "http://rs.tdwg.org/dwc/terms/earliestEpochOrLowestSeries",
+    "streamGauge": "https://smartdatamodels.org/dataModel.Weather/streamGauge",
+    "parentNameUsageID": "http://rs.tdwg.org/dwc/terms/parentNameUsageID",
+    "dynamicProperties": "http://rs.tdwg.org/dwc/terms/dynamicProperties",
+    "Wind": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Wind",
+    "caste": "http://rs.tdwg.org/dwc/terms/caste",
+    "footprintSpatialFit": "http://rs.tdwg.org/dwc/terms/footprintSpatialFit",
+    "namePublishedInYear": "http://rs.tdwg.org/dwc/terms/namePublishedInYear",
+    "highestBiostratigraphicZone": "http://rs.tdwg.org/dwc/terms/highestBiostratigraphicZone",
+    "fieldNotes": "http://rs.tdwg.org/dwc/terms/fieldNotes",
+    "measurementID": "http://rs.tdwg.org/dwc/terms/measurementID",
+    "parentNameUsage": "http://rs.tdwg.org/dwc/terms/parentNameUsage",
+    "acceptedNameUsageID": "http://rs.tdwg.org/dwc/terms/acceptedNameUsageID",
+    "maximumElevationInMeters": "http://rs.tdwg.org/dwc/terms/maximumElevationInMeters",
+    "visibilityInMeters": "http://mmisw.org/ont/ioos/marine_biogeography/visibilityInMeters",
+    "identificationVerificationStatus": "http://rs.tdwg.org/dwc/terms/identificationVerificationStatus",
+    "Measurement": "https://saref.etsi.org/core/Measurement",
+    "footprintSRS": "http://rs.tdwg.org/dwc/terms/footprintSRS",
+    "individualCount": "http://rs.tdwg.org/dwc/terms/individualCount",
+    "collectionCode": "http://rs.tdwg.org/dwc/terms/collectionCode",
+    "lithostratigraphicTerms": "http://rs.tdwg.org/dwc/terms/lithostratigraphicTerms",
+    "subfamily": "http://rs.tdwg.org/dwc/terms/subfamily",
+    "eventType": "http://rs.tdwg.org/dwc/terms/eventType",
+    "associatedMedia": "http://rs.tdwg.org/dwc/terms/associatedMedia",
+    "Taxon": "http://rs.tdwg.org/dwc/terms/Taxon",
+    "vernacularName": "http://rs.tdwg.org/dwc/terms/vernacularName",
+    "windDirection": "https://smartdatamodels.org/dataModel.Weather/windDirection",
+    "preparations": "http://rs.tdwg.org/dwc/terms/preparations",
+    "Event": "http://rs.tdwg.org/dwc/terms/Event",
+    "observationLocation": "http://mmisw.org/ont/ioos/marine_biogeography/observationLocation",
+    "institutionID": "http://rs.tdwg.org/dwc/terms/institutionID",
+    "WeatherForecast": "https://smartdatamodels.org/dataModel.Weather/WeatherForecast",
+    "verbatimDepth": "http://rs.tdwg.org/dwc/terms/verbatimDepth",
+    "county": "http://rs.tdwg.org/dwc/terms/county",
+    "measurementMadeBy": {
+      "@id": "https://saref.etsi.org/core/measurementMadeBy",
+      "@type": "@id"
+    },
+    "earliestEraOrLowestErathem": "http://rs.tdwg.org/dwc/terms/earliestEraOrLowestErathem",
+    "occurrenceStatus": "http://rs.tdwg.org/dwc/terms/occurrenceStatus",
+    "LocationRelationship": "https://uri.etsi.org/ngsi-ld/LocationRelationship",
+    "observedMinLengthInCm": "http://mmisw.org/ont/ioos/marine_biogeography/observedMinLengthInCm",
+    "verbatimTaxonRank": "http://rs.tdwg.org/dwc/terms/verbatimTaxonRank",
+    "disposition": "http://rs.tdwg.org/dwc/terms/disposition",
+    "visibility": "https://smartdatamodels.org/dataModel.Weather/visibility",
+    "namePublishedInID": "http://rs.tdwg.org/dwc/terms/namePublishedInID",
+    "dateIdentified": "http://rs.tdwg.org/dwc/terms/dateIdentified",
+    "ImageObject": "https://schema.org/ImageObject",
+    "organismRemarks": "http://rs.tdwg.org/dwc/terms/organismRemarks",
+    "latestPeriodOrHighestSystem": "http://rs.tdwg.org/dwc/terms/latestPeriodOrHighestSystem",
+    "Precipitation": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Precipitation",
+    "taxonRemarks": "http://rs.tdwg.org/dwc/terms/taxonRemarks",
+    "georeferencedBy": "http://rs.tdwg.org/dwc/terms/georeferencedBy",
+    "verbatimElevation": "http://rs.tdwg.org/dwc/terms/verbatimElevation",
+    "higherClassification": "http://rs.tdwg.org/dwc/terms/higherClassification",
+    "waterBody": "http://rs.tdwg.org/dwc/terms/waterBody",
+    "Layer": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Layer",
+    "GeoProperty": "https://uri.etsi.org/ngsi-ld/GeoProperty",
+    "namePublishedIn": "http://rs.tdwg.org/dwc/terms/namePublishedIn",
+    "organismID": "http://rs.tdwg.org/dwc/terms/organismID",
+    "stateProvince": "http://rs.tdwg.org/dwc/terms/stateProvince",
+    "endDayOfYear": "http://rs.tdwg.org/dwc/terms/endDayOfYear",
+    "geologicalContextID": "http://rs.tdwg.org/dwc/terms/geologicalContextID",
+    "pathway": "http://rs.tdwg.org/dwc/terms/pathway",
+    "verbatimSiteNames": "http://rs.tdwg.org/hc/terms/verbatimSiteNames",
+    "parentEventID": "http://rs.tdwg.org/dwc/terms/parentEventID",
+    "datasetName": "http://rs.tdwg.org/dwc/terms/datasetName",
+    "temperature": "https://smartdatamodels.org/dataModel.Weather/temperature",
+    "measurementMethod": "http://rs.tdwg.org/dwc/terms/measurementMethod",
+    "verbatimLatitude": "http://rs.tdwg.org/dwc/terms/verbatimLatitude",
+    "parentMeasurementID": "http://rs.tdwg.org/dwc/terms/parentMeasurementID",
+    "sightingCue": "http://mmisw.org/ont/ioos/marine_biogeography/sightingCue",
+    "waterTemperatureInCelsius": "http://mmisw.org/ont/ioos/marine_biogeography/waterTemperatureInCelsius",
+    "tribe": "http://rs.tdwg.org/dwc/terms/tribe",
+    "status": "https://schema.org/status",
+    "superfamily": "http://rs.tdwg.org/dwc/terms/superfamily",
+    "sampleSizeValue": "http://rs.tdwg.org/dwc/terms/sampleSizeValue",
+    "LivingSpecimen": "http://rs.tdwg.org/dwc/terms/LivingSpecimen",
+    "visibilityType": "http://mmisw.org/ont/ioos/marine_biogeography/visibilityType",
+    "locationRemarks": "http://rs.tdwg.org/dwc/terms/locationRemarks",
+    "higherGeography": "http://rs.tdwg.org/dwc/terms/higherGeography",
+    "informationWithheld": "http://rs.tdwg.org/dwc/terms/informationWithheld",
+    "dateObserved": {
+      "@id": "https://smartdatamodels.org/dateObserved",
+      "@type": "xsd:dateTime"
+    },
+    "relatesToMeasurement": {
+      "@id": "https://saref.etsi.org/core/relatesToMeasurement",
+      "@type": "@id"
+    },
+    "atmosphericPressure": "https://smartdatamodels.org/dataModel.Weather/atmosphericPressure",
+    "organismName": "http://rs.tdwg.org/dwc/terms/organismName",
+    "institutionCode": "http://rs.tdwg.org/dwc/terms/institutionCode",
+    "isMeasuredByDevice": {
+      "@id": "https://saref.etsi.org/core/isMeasuredByDevice",
+      "@type": "@id"
+    },
+    "occurrenceID": "http://rs.tdwg.org/dwc/terms/occurrenceID",
+    "quantificationMethod": "http://mmisw.org/ont/ioos/marine_biogeography/quantificationMethod",
+    "measurementUnit": "http://rs.tdwg.org/dwc/terms/measurementUnit",
+    "lengthType": "http://mmisw.org/ont/ioos/marine_biogeography/lengthType",
+    "HumanObservation": "http://rs.tdwg.org/dwc/terms/HumanObservation",
+    "associatedSequences": "http://rs.tdwg.org/dwc/terms/associatedSequences",
+    "phylum": "http://rs.tdwg.org/dwc/terms/phylum",
+    "fieldNumber": "http://rs.tdwg.org/dwc/terms/fieldNumber",
+    "relationshipRemarks": "http://rs.tdwg.org/dwc/terms/relationshipRemarks",
+    "infragenericEpithet": "http://rs.tdwg.org/dwc/terms/infragenericEpithet",
+    "sampleVolumeInCubicMeters": "http://mmisw.org/ont/ioos/marine_biogeography/sampleVolumeInCubicMeters",
+    "resourceRelationshipID": "http://rs.tdwg.org/dwc/terms/resourceRelationshipID",
+    "relationshipOfResource": "http://rs.tdwg.org/dwc/terms/relationshipOfResource",
+    "habitat": "http://rs.tdwg.org/dwc/terms/habitat",
+    "userName": {
+      "@id": "https://w3id.org/demeter/agri/agriCommon#userName",
+      "@type": "xsd:string"
+    },
+    "materialSampleID": "http://rs.tdwg.org/dwc/terms/materialSampleID",
+    "georeferenceVerificationStatus": "http://rs.tdwg.org/dwc/terms/georeferenceVerificationStatus",
+    "bed": "http://rs.tdwg.org/dwc/terms/bed",
+    "locality": "http://rs.tdwg.org/dwc/terms/locality",
+    "MaterialCitation": "http://rs.tdwg.org/dwc/terms/MaterialCitation",
+    "samplingPerformedBy": "http://rs.tdwg.org/hc/terms/samplingPerformedBy",
+    "makesMeasurement": {
+      "@id": "https://saref.etsi.org/core/makesMeasurement",
+      "@type": "@id"
+    },
+    "associatedTaxa": "http://rs.tdwg.org/dwc/terms/associatedTaxa",
+    "measurementDeterminedDate": "http://rs.tdwg.org/dwc/terms/measurementDeterminedDate",
+    "eventDurationUnit": "http://rs.tdwg.org/hc/terms/eventDurationUnit",
+    "vitality": "http://rs.tdwg.org/dwc/terms/vitality",
+    "minimumDepthInMeters": "http://rs.tdwg.org/dwc/terms/minimumDepthInMeters",
+    "samplingEffort": "http://rs.tdwg.org/dwc/terms/samplingEffort",
+    "pressureTendency": "https://smartdatamodels.org/dataModel.Weather/pressureTendency",
+    "streetAddress": "https://schema.org/streetAddress",
+    "eventDate": "http://rs.tdwg.org/dwc/terms/eventDate",
+    "validTo": {
+      "@id": "http://portele.de/ont/inspire/baseInspire#validTo",
+      "@type": "xsd:dateTime"
+    },
+    "Occurrence": "http://rs.tdwg.org/dwc/terms/Occurrence",
+    "year": "http://rs.tdwg.org/dwc/terms/year",
+    "family": "http://rs.tdwg.org/dwc/terms/family",
+    "eppoConcept": {
+      "@id": "https://w3id.org/demeter/agri/agriCommon#eppoConcept",
+      "@type": "@id"
+    },
+    "georeferenceSources": "http://rs.tdwg.org/dwc/terms/georeferenceSources",
+    "resourceType": "dct:type",
+    "weatherType": "https://smartdatamodels.org/dataModel.Weather/weatherType",
+    "MaterialSample": "http://rs.tdwg.org/dwc/terms/MaterialSample",
+    "isMeasuredIn": {
+      "@id": "https://saref.etsi.org/core/isMeasuredIn",
+      "@type": "@id"
+    },
+    "island": "http://rs.tdwg.org/dwc/terms/island",
+    "dewPoint": "https://smartdatamodels.org/dataModel.Weather/dewPoint",
+    "sightingDistanceInMeters": "http://mmisw.org/ont/ioos/marine_biogeography/sightingDistanceInMeters",
+    "taxonRank": "http://rs.tdwg.org/dwc/terms/taxonRank",
+    "locationID": "http://rs.tdwg.org/dwc/terms/locationID",
+    "TemporalProperty": "https://uri.etsi.org/ngsi-ld/TemporalProperty",
+    "identificationRemarks": "http://rs.tdwg.org/dwc/terms/identificationRemarks",
+    "eventDuration": "http://rs.tdwg.org/hc/terms/eventDuration",
+    "associatedOrganisms": "http://rs.tdwg.org/dwc/terms/associatedOrganisms",
+    "sampleAreaInSquareMeters": "http://mmisw.org/ont/ioos/marine_biogeography/sampleAreaInSquareMeters",
+    "password": {
+      "@id": "https://w3id.org/demeter/agri/agriCommon#password",
+      "@type": "xsd:string"
+    },
+    "subgenus": "http://rs.tdwg.org/dwc/terms/subgenus",
+    "observedMaxLengthInCm": "http://mmisw.org/ont/ioos/marine_biogeography/observedMaxLengthInCm",
+    "aphiaID": "http://mmisw.org/ont/ioos/marine_biogeography/aphiaID",
+    "relationshipOfResourceID": "http://rs.tdwg.org/dwc/terms/relationshipOfResourceID",
+    "siteCount": "http://rs.tdwg.org/hc/terms/siteCount",
+    "solarRadiation": "https://smartdatamodels.org/dataModel.Weather/solarRadiation",
+    "SurfaceMedium": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#SurfaceMedium",
+    "sampleHeightInMeters": "http://mmisw.org/ont/ioos/marine_biogeography/sampleHeightInMeters",
+    "earliestAgeOrLowestStage": "http://rs.tdwg.org/dwc/terms/earliestAgeOrLowestStage",
+    "relativeHumidity": "https://smartdatamodels.org/dataModel.Weather/relativeHumidity",
+    "kingdom": "http://rs.tdwg.org/dwc/terms/kingdom",
+    "totalInSample": "http://mmisw.org/ont/ioos/marine_biogeography/totalInSample",
+    "latestEonOrHighestEonothem": "http://rs.tdwg.org/dwc/terms/latestEonOrHighestEonothem",
+    "taxonConceptID": "http://rs.tdwg.org/dwc/terms/taxonConceptID",
+    "islandGroup": "http://rs.tdwg.org/dwc/terms/islandGroup",
+    "establishmentMeans": "http://rs.tdwg.org/dwc/terms/establishmentMeans",
+    "relationshipEstablishedDate": "http://rs.tdwg.org/dwc/terms/relationshipEstablishedDate",
+    "identifiedBy": "http://rs.tdwg.org/dwc/terms/identifiedBy",
+    "sex": "http://rs.tdwg.org/dwc/terms/sex",
+    "verbatimLabel": "http://rs.tdwg.org/dwc/terms/verbatimLabel",
+    "relatesToProperty": {
+      "@id": "https://saref.etsi.org/core/relatesToProperty",
+      "@type": "@id"
+    },
+    "verbatimEventDate": "http://rs.tdwg.org/dwc/terms/verbatimEventDate",
+    "month": "http://rs.tdwg.org/dwc/terms/month",
+    "taxonID": "http://rs.tdwg.org/dwc/terms/taxonID",
+    "addressLocality": "https://schema.org/addressLocality",
+    "municipality": "http://rs.tdwg.org/dwc/terms/municipality",
+    "reportedWeather": "http://rs.tdwg.org/hc/terms/reportedWeather",
+    "airTemperatureForecast": "https://smartdatamodels.org/dataModel.Weather/airTemperatureForecast",
+    "nomenclaturalStatus": "http://rs.tdwg.org/dwc/terms/nomenclaturalStatus",
+    "observedIndividualLengthInCm": "http://mmisw.org/ont/ioos/marine_biogeography/observedIndividualLengthInCm",
+    "samplingProtocol": "http://rs.tdwg.org/dwc/terms/samplingProtocol",
+    "earliestPeriodOrLowestSystem": "http://rs.tdwg.org/dwc/terms/earliestPeriodOrLowestSystem",
+    "lifeStage": "http://rs.tdwg.org/dwc/terms/lifeStage",
+    "basisOfRecord": "http://rs.tdwg.org/dwc/terms/basisOfRecord",
+    "day": "http://rs.tdwg.org/dwc/terms/day",
+    "controlsProperty": {
+      "@id": "https://saref.etsi.org/core/controlsProperty",
+      "@type": "@id"
+    },
+    "verticalDatum": "http://rs.tdwg.org/dwc/terms/verticalDatum",
+    "latestEpochOrHighestSeries": "http://rs.tdwg.org/dwc/terms/latestEpochOrHighestSeries",
+    "originalNameUsage": "http://rs.tdwg.org/dwc/terms/originalNameUsage",
+    "cultivarEpithet": "http://rs.tdwg.org/dwc/terms/cultivarEpithet",
+    "identifiedByID": "http://rs.tdwg.org/dwc/terms/identifiedByID",
+    "reproductiveCondition": "http://rs.tdwg.org/dwc/terms/reproductiveCondition",
+    "latestEraOrHighestErathem": "http://rs.tdwg.org/dwc/terms/latestEraOrHighestErathem",
+    "datasetID": "http://rs.tdwg.org/dwc/terms/datasetID",
+    "scientificNameAuthorship": "http://rs.tdwg.org/dwc/terms/scientificNameAuthorship",
+    "Device": "https://saref.etsi.org/core/Device",
+    "collectionID": "http://rs.tdwg.org/dwc/terms/collectionID",
+    "pointRadiusSpatialFit": "http://rs.tdwg.org/dwc/terms/pointRadiusSpatialFit",
+    "nameAccordingToID": "http://rs.tdwg.org/dwc/terms/nameAccordingToID",
+    "subtribe": "http://rs.tdwg.org/dwc/terms/subtribe",
+    "georeferenceProtocol": "http://rs.tdwg.org/dwc/terms/georeferenceProtocol",
+    "eventRemarks": "http://rs.tdwg.org/dwc/terms/eventRemarks",
+    "minimumElevationInMeters": "http://rs.tdwg.org/dwc/terms/minimumElevationInMeters",
+    "verbatimSRS": "http://rs.tdwg.org/dwc/terms/verbatimSRS",
+    "degreeOfEstablishment": "http://rs.tdwg.org/dwc/terms/degreeOfEstablishment",
+    "MeasurementOrFact": "http://rs.tdwg.org/dwc/terms/MeasurementOrFact",
+    "hasTimestamp": "https://saref.etsi.org/core/hasTimestamp",
+    "identificationQualifier": "http://rs.tdwg.org/dwc/terms/identificationQualifier",
+    "infraspecificEpithet": "http://rs.tdwg.org/dwc/terms/infraspecificEpithet",
+    "precipitation": "https://smartdatamodels.org/dataModel.Weather/precipitation",
+    "latestAgeOrHighestStage": "http://rs.tdwg.org/dwc/terms/latestAgeOrHighestStage",
+    "alternateName": "https://smartdatamodels.org/alternateName",
+    "addressCountry": "https://schema.org/addressCountry",
+    "dataGeneralizations": "http://rs.tdwg.org/dwc/terms/dataGeneralizations",
+    "SurfaceLayer": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#SurfaceLayer",
+    "ResourceRelationship": "http://rs.tdwg.org/dwc/terms/ResourceRelationship",
+    "eventTime": "http://rs.tdwg.org/dwc/terms/eventTime",
+    "verbatimIdentification": "http://rs.tdwg.org/dwc/terms/verbatimIdentification",
+    "PeriodOfTime": "dct:PeriodOfTime",
+    "PreservedSpecimen": "http://rs.tdwg.org/dwc/terms/PreservedSpecimen",
+    "associatedReferences": "http://rs.tdwg.org/dwc/terms/associatedReferences",
+    "recordedBy": "http://rs.tdwg.org/dwc/terms/recordedBy",
+    "specificEpithet": "http://rs.tdwg.org/dwc/terms/specificEpithet",
+    "formation": "http://rs.tdwg.org/dwc/terms/formation",
+    "nomenclaturalCode": "http://rs.tdwg.org/dwc/terms/nomenclaturalCode",
+    "ResponsibleParty": "http://def.seegrid.csiro.au/isotc211/iso19115/2003/citation#ResponsibleParty",
+    "observedMeanLengthInCm": "http://mmisw.org/ont/ioos/marine_biogeography/observedMeanLengthInCm",
+    "ownerInstitutionCode": "http://rs.tdwg.org/dwc/terms/ownerInstitutionCode",
+    "relatedResourceID": "http://rs.tdwg.org/dwc/terms/relatedResourceID",
+    "windSpeed": "https://smartdatamodels.org/dataModel.Weather/windSpeed",
+    "measurementValue": "http://rs.tdwg.org/dwc/terms/measurementValue",
+    "occurrenceRemarks": "http://rs.tdwg.org/dwc/terms/occurrenceRemarks",
+    "measurementRemarks": "http://rs.tdwg.org/dwc/terms/measurementRemarks",
+    "illuminance": "https://smartdatamodels.org/dataModel.Weather/illuminance",
+    "georeferenceRemarks": "http://rs.tdwg.org/dwc/terms/georeferenceRemarks",
+    "organismScope": "http://rs.tdwg.org/dwc/terms/organismScope",
+    "resourceID": "http://rs.tdwg.org/dwc/terms/resourceID",
+    "associatedOccurrences": "http://rs.tdwg.org/dwc/terms/associatedOccurrences",
+    "relationshipAccordingTo": "http://rs.tdwg.org/dwc/terms/relationshipAccordingTo",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dct": "http://purl.org/dc/terms/",
+    "qudt": "http://qudt.org/schema/qudt#",
+    "covjson": "https://covjson.org/def/core#",
+    "ignf": "http://data.ign.fr/def/ignf#",
+    "inspiregloss": "http://inspire.ec.europa.eu/glossary/",
+    "ssn": "http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "covjsondt": "https://covjson.org/def/domainTypes#",
+    "rel": "http://www.iana.org/assignments/relation/",
+    "cpm": "http://purl.org/voc/cpm#",
+    "void": "http://rdfs.org/ns/void#",
+    "pav": "http://purl.org/pav/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dce": "http://purl.org/dc/elements/1.1/",
+    "ns0": "http://www.w3.org/ns/dx/conneg/altr#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "iop": "https://w3id.org/iadopt/ont#",
+    "ns1": "http://www.w3.org/ns/dx/prof/",
+    "puv": "https://w3id.org/env/puv#",
+    "semapv": "http://w3id.org/semapv/vocab/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "reg": "http://purl.org/linked-data/registry#",
+    "sssom": "https://w3id.org/sssom/schema/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "grg": "http://www.isotc211.org/schemas/grg/",
+    "prov": "https://www.w3.org/ns/prov#",
+    "dc": "http://purl.org/dc/terms/",
+    "@version": 1.1
+  }
+}

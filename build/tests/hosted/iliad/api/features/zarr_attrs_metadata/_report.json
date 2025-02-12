@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.zarr_attrs_metadata - GeoZarr Attributes description metadata",
   "bblockName": "GeoZarr Attributes description metadata",
   "bblockId": "ogc.hosted.iliad.api.features.zarr_attrs_metadata",
-  "generated": "2024-10-23T10:19:59.240142+00:00",
+  "generated": "2025-02-12T12:12:51.023661+00:00",
   "result": false,
   "items": [
     {
@@ -13,7 +13,7 @@
         "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
-        "language": "json"
+        "language": "application/json"
       },
       "result": false,
       "sections": [
@@ -68,7 +68,7 @@
         "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_2_1.json",
         "exampleIndex": 2,
         "snippetIndex": 1,
-        "language": "json"
+        "language": "application/json"
       },
       "result": false,
       "sections": [
@@ -123,7 +123,7 @@
         "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_3_1.json",
         "exampleIndex": 3,
         "snippetIndex": 1,
-        "language": "json"
+        "language": "application/json"
       },
       "result": false,
       "sections": [
@@ -180,7 +180,7 @@
         "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_4_1.json",
         "exampleIndex": 4,
         "snippetIndex": 1,
-        "language": "json"
+        "language": "application/json"
       },
       "result": false,
       "sections": [
@@ -235,7 +235,7 @@
         "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_5_1.json",
         "exampleIndex": 5,
         "snippetIndex": 1,
-        "language": "json"
+        "language": "application/json"
       },
       "result": false,
       "sections": [
@@ -292,7 +292,7 @@
         "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_6_1.json",
         "exampleIndex": 6,
         "snippetIndex": 1,
-        "language": "json"
+        "language": "application/json"
       },
       "result": false,
       "sections": [
@@ -349,7 +349,7 @@
         "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_7_1.json",
         "exampleIndex": 7,
         "snippetIndex": 1,
-        "language": "json"
+        "language": "application/json"
       },
       "result": false,
       "sections": [
@@ -406,7 +406,7 @@
         "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_8_1.json",
         "exampleIndex": 8,
         "snippetIndex": 1,
-        "language": "json"
+        "language": "application/json"
       },
       "result": false,
       "sections": [
