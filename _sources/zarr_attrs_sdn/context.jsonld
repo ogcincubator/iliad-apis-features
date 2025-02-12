@@ -3,7 +3,7 @@
     "https://covjson.org/context.jsonld",
     "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/refs/heads/master/_sources/zarr_attrs_sdn/P01.json",
     "http://vocab.nerc.ac.uk/collection/P31/current/?_profile=nvs&_mediatype=application/ld+json",
-    "http://vocab.nerc.ac.uk/collection/P31/current/?_profile=nvs&_mediatype=application/ld+json",
+    "https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/refs/heads/master/_sources/zarr_attrs_sdn/P31.json",
     "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/main/jsonld/metadata-context.jsonld",
     "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/main/jsonld/crossDomain-context.jsonld",
     "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/main/jsonld/oimOceanProfile-context.jsonld"
