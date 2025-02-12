@@ -1,0 +1,16 @@
+{
+  "_ARRAY_DIMENSIONS": [
+    "INSTANCE",
+    "MAXT"
+  ],
+  "ancillary_variables": "TIME_SEADATANET_QC",
+  "axis": "T",
+  "calendar": "julian",
+  "long_name": "Chronological Julian Date",
+  "sdn_parameter_name": "Julian Date (chronological)",
+  "sdn_parameter_urn": "SDN:P01::CJDY1101",
+  "sdn_uom_name": "Days",
+  "sdn_uom_urn": "SDN:P06::UTAA",
+  "standard_name": "time",
+  "units": "seconds since 2024-10-01 01:00:00.000000"
+}

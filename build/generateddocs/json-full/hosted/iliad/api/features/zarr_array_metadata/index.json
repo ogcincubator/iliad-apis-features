@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2024-10-23",
+  "dateOfLastChange": "2025-02-12",
   "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_array_metadata",
   "sources": [
     {
@@ -39,6 +39,7 @@
   "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_array_metadata/schema.yaml",
   "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_array_metadata/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_array_metadata/",
+  "rdfData": [],
   "validationPassed": false,
   "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/zarr_array_metadata/",
   "description": "## Zarr Array Metadata\n\n[Source: https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays](https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays)\n\nEach array requires essential configuration metadata to be stored, enabling correct interpretation of the stored data. This metadata is encoded using JSON and stored as the value of the \u201d.zarray\u201d key within an array store.\n\nThe metadata resource is a JSON object. The following keys MUST be present within the object:\n\n* zarr_format - \nAn integer defining the version of the storage specification to which the array store adheres.\n* shape - \nA list of integers defining the length of each dimension of the array.\n* chunks - \nA list of integers defining the length of each dimension of a chunk of the array. Note that all chunks within a Zarr array have the same shape.\n* dtype - \nA string or list defining a valid data type for the array. See also the subsection below on data type encoding.\n* compressor - \nA JSON object identifying the primary compression codec and providing configuration parameters, or null if no compressor is to be used. The object MUST contain an \"id\" key identifying the codec to be used.\n* fill_value - \nA scalar value providing the default value to use for uninitialized portions of the array, or null if no fill_value is to be used.\n* order - \nEither \u201cC\u201d or \u201cF\u201d, defining the layout of bytes within each chunk of the array. \u201cC\u201d means row-major order, i.e., the last dimension varies fastest; \u201cF\u201d means column-major order, i.e., the first dimension varies fastest.\n* filters - \nA list of JSON objects providing codec configurations, or null if no filters are to be applied. Each codec configuration object MUST contain a \"id\" key identifying the codec to be used.\nOther keys MUST NOT be present within the metadata object.",

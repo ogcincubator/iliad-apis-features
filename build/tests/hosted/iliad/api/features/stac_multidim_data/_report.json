@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.stac_multidim_data - STAC records with dcat mapping",
   "bblockName": "STAC records with dcat mapping",
   "bblockId": "ogc.hosted.iliad.api.features.stac_multidim_data",
-  "generated": "2024-10-23T10:19:59.197772+00:00",
+  "generated": "2025-02-12T12:12:50.987476+00:00",
   "result": false,
   "items": [
     {
@@ -13,7 +13,7 @@
         "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/stac_multidim_data/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
-        "language": "json"
+        "language": "application/json"
       },
       "result": false,
       "sections": [
@@ -40,7 +40,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 153,
+              "size": 161,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }

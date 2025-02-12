@@ -1,7 +1,7 @@
+@prefix : <https://w3id.org/iliad/oim/default-context/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix iliad: <https://w3id.org/iliad/property/> .
-@prefix jf-density: <https://w3id.org/iliad/jellyfish/property/densityOfJF/> .
-@prefix jf-property: <https://w3id.org/iliad/jellyfish/property/> .
+@prefix ns1: <https://saref.etsi.org/core/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
@@ -10,17 +10,17 @@
 <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,
         geojson:Feature ;
     rdfs:label "Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"@en ;
-    sosa:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/feature/1-18> ;
-    sosa:hasResult [ jf-property:beachedJF "1" ;
-            jf-property:densityOfJF jf-density:Some ;
-            jf-property:quantityOfJF 50 ;
-            jf-property:stingByJF "Unspecified" ;
+    sosa:hasResult [ :beachedJF "1" ;
+            :densityOfJF "Some" ;
+            :quantityOfJF 50 ;
+            :stingByJF "Unspecified" ;
             iliad:sampleSizeValue "10-30" ;
             iliad:speciesScientificName "Phyllorhiza punctata" ;
             iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;
-    sosa:observedProperty jf-property:jellyFishAbundanceProperty ;
+    sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;
     sosa:phenomenonTime <2011-07-01T09:00:00> ;
     sosa:resultTime "2011-07-01T09:00:00" ;
     geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ] .
+            geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ] ;
+    ns1:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/observation/1-18> .
 

@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.zarr_array_metadata - GeoZarr Array description metadata",
   "bblockName": "GeoZarr Array description metadata",
   "bblockId": "ogc.hosted.iliad.api.features.zarr_array_metadata",
-  "generated": "2024-10-23T10:19:59.211472+00:00",
+  "generated": "2025-02-12T12:12:50.999203+00:00",
   "result": false,
   "items": [
     {
@@ -13,7 +13,7 @@
         "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_array_metadata/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
-        "language": "json"
+        "language": "application/json"
       },
       "result": false,
       "sections": [

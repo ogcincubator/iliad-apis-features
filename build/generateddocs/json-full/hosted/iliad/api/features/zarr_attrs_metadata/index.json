@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2024-10-23",
+  "dateOfLastChange": "2025-02-12",
   "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_attrs_metadata",
   "sources": [
     {
@@ -39,6 +39,7 @@
   "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/schema.yaml",
   "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/",
+  "rdfData": [],
   "validationPassed": false,
   "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/",
   "description": "## OGC Coverage JSON\n\n\nlong_name:\n    type: string\n  standard_name:\n    type: string\n  units:\n    type: string\n    enum:\n    - degrees_north\n    - degreesN\n  _ARRAY_DIMENSIONS:\n    type: array\n    items:\n      type: string\n  \"Conventions\":\n    \"type\": \"string\"\n  \"units_metadata\":\n    \"type\": \"string\"\n  \"cell_methods\":\n    \"type\": \"string\"\n  \"created_by\":\n    \"type\": \"string\"\n  \"date\":\n    \"type\": \"string\"\n  \"crs_wkt\":\n    \"type\": \"string\"\n  \"geotransform\":\n    \"type\": \"string\"\n  \"proj4\": \n    \"type\": \"string\"\n  \"spatial_ref\": \n    \"type\": \"string\"",

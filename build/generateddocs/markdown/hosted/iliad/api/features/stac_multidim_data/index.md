@@ -1233,16 +1233,17 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
 ```ttl
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <http://www.opengis.net/swe/2.0/> .
-@prefix ns3: <cube:> .
-@prefix ns4: <http://qudt.org/schema/qudt/> .
-@prefix ns5: <cf:> .
-@prefix ns6: <dqv:> .
-@prefix ns7: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ns2: <cube:> .
+@prefix ns3: <http://qudt.org/schema/qudt/> .
+@prefix ns4: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ns5: <dqv:> .
+@prefix ns6: <cf:> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rec: <https://www.opengis.net/def/ogc-api/records/> .
@@ -1251,13 +1252,13 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
 
 <http://w3id.org/ogcincubator/simulation> a geojson:Feature ;
     rdfs:label "No Title" ;
-    ns5:parameter [ ns4:unit <https://qudt.org/2.1/vocab/unit/GM-PER-KiloGM> ;
-            ns2:name "sea_water_salinity"^^xsd:string ] ;
-    ns3:dimensions [ dcterms:temporal [ a dcterms:temporal ] ] ;
-    ns3:variables [ ns7:lat [ a <http://w3id.org/ogcincubator/data> ;
-                    ns4:unit <http://w3id.org/ogcincubator/degrees_north> ] ] ;
-    ns6:hasQualityMeasurement "optional description of the quality measures used to generate the content, use wasGeneratedBy.used for cases whereever you can assign quality measure to particular processing step" ;
-    ns6:hasQualityMetadata "optional quality metadata as string or object (with structure TBD)" ;
+    ns6:parameter [ ns3:unit <https://qudt.org/2.1/vocab/unit/GM-PER-KiloGM> ;
+            foaf:name "sea_water_salinity"^^rdfs:Literal ] ;
+    ns2:dimensions [ dcterms:temporal [ a dcterms:temporal ] ] ;
+    ns2:variables [ ns4:lat [ a <http://w3id.org/ogcincubator/data> ;
+                    ns3:unit <http://w3id.org/ogcincubator/degrees_north> ] ] ;
+    ns5:hasQualityMeasurement "optional description of the quality measures used to generate the content, use wasGeneratedBy.used for cases whereever you can assign quality measure to particular processing step" ;
+    ns5:hasQualityMetadata "optional quality metadata as string or object (with structure TBD)" ;
     dcterms:conformsTo <https://ogcincubator.github.io/geodcat-ogcapi-records/bblock/ogc.geo.geodcat.geodcat-stac-eo/>,
         <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.stac_record>,
         <https://stac-extensions.github.io/cf/v0.2.0/schema.json>,
@@ -1271,68 +1272,77 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
     dcterms:modified "2024-10-03T10:59:34.887874Z" ;
     dcterms:temporal [ time:hasTime ( "2023-04-09 01:00:00+00:00" "2023-04-12 01:00:00+00:00" ) ;
             rec:iso8601period "P1D" ] ;
-    rdfs:seeAlso [ rdfs:label "optional link to this record" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            oa:hasTarget <http://w3id.org/ogcincubator/tests/simulation/simulation.json> ],
+    rdfs:seeAlso [ rdfs:label "link to the resource confirmance speficication" ;
+            dcterms:type "text/html" ;
+            ns1:relation <http://www.iana.org/assignments/relation/conformance> ;
+            oa:hasTarget <https://cfconventions.org/Data/cf-conventions/cf-conventions-1.11/cf-conventions.pdf> ],
         [ rdfs:label "optional link to the web service (not raw file) like OGC Web Map Service (WMS) either one enclosure or service is required in Iliad profile" ;
             dcterms:type "application/xml" ;
             ns1:relation <http://www.iana.org/assignments/relation/service> ;
             oa:hasTarget <https://example.com/ows/wms> ],
-        [ rdfs:label "link to the data, either one enclosure or service is required in Iliad profile" ;
-            dcterms:type "application/x-hdf" ;
-            ns1:relation <http://www.iana.org/assignments/relation/sample> ;
-            oa:hasTarget <http://w3id.org/ogcincubator/tests/simulation/simulation.zip> ],
+        [ rdfs:label "optional link to this record" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            oa:hasTarget <http://w3id.org/ogcincubator/tests/simulation/simulation.json> ],
         [ rdfs:label "optional link to the license" ;
             dcterms:type "text/html" ;
             ns1:relation <http://www.iana.org/assignments/relation/license> ;
             oa:hasTarget <https://example.com/license> ],
-        [ rdfs:label "optional raw file" ;
-            dcterms:type "application/x-hdf" ;
-            ns1:relation <http://www.iana.org/assignments/relation/enclosure> ;
-            oa:hasTarget <http://w3id.org/ogcincubator/~/Downloads/simulation.nc> ],
-        [ rdfs:label "optional link to the next in the serie" ;
-            dcterms:type "text/html" ;
-            ns1:relation <http://www.iana.org/assignments/relation/next> ;
-            oa:hasTarget <https://example.com/next_data_record> ],
         [ rdfs:label "optional thumbnail image preview" ;
             dcterms:type "image/png" ;
             ns1:relation <http://www.iana.org/assignments/relation/preview> ;
+            oa:hasTarget <http://w3id.org/ogcincubator/~/Downloads/simulation.nc> ],
+        [ rdfs:label "optional raw file" ;
+            dcterms:type "application/x-hdf" ;
+            ns1:relation <http://www.iana.org/assignments/relation/enclosure> ;
             oa:hasTarget <http://w3id.org/ogcincubator/~/Downloads/simulation.nc> ],
         [ rdfs:label "optional link to the previous in the serie" ;
             dcterms:type "text/html" ;
             ns1:relation <http://www.iana.org/assignments/relation/prev> ;
             oa:hasTarget <https://example.com/prev_data_record> ],
-        [ rdfs:label "optional link to the parent if data in series or other parent in the hierarchy" ;
-            dcterms:type "text/html" ;
-            ns1:relation <http://www.iana.org/assignments/relation/parent> ;
-            oa:hasTarget <https://example.com/prev_data_record> ],
         [ rdfs:label "optional link to the sample data, either one enclosure or service is required in Iliad profile" ;
             dcterms:type "application/x-hdf" ;
             ns1:relation <http://www.iana.org/assignments/relation/sample> ;
             oa:hasTarget <http://w3id.org/ogcincubator/tests/simulation/simulation.zip> ],
-        [ rdfs:label "link to the resource confirmance speficication" ;
+        [ rdfs:label "link to the data, either one enclosure or service is required in Iliad profile" ;
+            dcterms:type "application/x-hdf" ;
+            ns1:relation <http://www.iana.org/assignments/relation/sample> ;
+            oa:hasTarget <http://w3id.org/ogcincubator/tests/simulation/simulation.zip> ],
+        [ rdfs:label "optional link to the parent if data in series or other parent in the hierarchy" ;
             dcterms:type "text/html" ;
-            ns1:relation <http://www.iana.org/assignments/relation/conformance> ;
-            oa:hasTarget <https://cfconventions.org/Data/cf-conventions/cf-conventions-1.11/cf-conventions.pdf> ] ;
+            ns1:relation <http://www.iana.org/assignments/relation/parent> ;
+            oa:hasTarget <https://example.com/prev_data_record> ],
+        [ rdfs:label "optional link to the next in the serie" ;
+            dcterms:type "text/html" ;
+            ns1:relation <http://www.iana.org/assignments/relation/next> ;
+            oa:hasTarget <https://example.com/next_data_record> ] ;
     owl:deprecated false ;
     dcat:contactPoint [ dcterms:identifier " optional identifier of the contact" ;
-            ns2:name "name of the contact, name or organisation is required or both, all the other fields are optiopnal. Roles can be defined on the contact or phones|emails|addresses level"^^xsd:string ;
             rdfs:seeAlso [ dcterms:type "text/html" ;
                     ns1:relation <http://www.iana.org/assignments/relation/about> ;
-                    oa:hasTarget <https://woudc.org> ] ] ;
+                    oa:hasTarget <https://woudc.org> ] ;
+            foaf:name "name of the contact, name or organisation is required or both, all the other fields are optiopnal. Roles can be defined on the contact or phones|emails|addresses level"^^rdfs:Literal ] ;
     dcat:keyword "ozoother keyword",
         "water" ;
     dcat:license "optional legal provisions under which this collection is made available. use links where available, preferably from SPDX register" ;
     dcat:rights "optional statement that concerns all rights not addressed by the license such as a copyright statement; string defining access rights inline or as URL" ;
+    dcat:version "optional resource behind the record version string" ;
+    prov:wasGeneratedBy <surveys:DP-1-S1> ;
     geojson:bbox ( 2.435186e+01 4.041341e+01 9.96921e+36 9.96921e+36 ) ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 2.435186e+01 4.041341e+01 ) ( 2.435186e+01 9.96921e+36 ) ( 9.96921e+36 9.96921e+36 ) ( 9.96921e+36 4.041341e+01 ) ( 2.435186e+01 4.041341e+01 ) ) ) ] ;
-    rec:themes [ rec:concept [ rec:conceptID "water_resources_management"^^xsd:string ],
-                [ ns2:name "water resources management"^^xsd:string ;
+    rec:themes [ rec:concept [ dcterms:theme <http://www.eionet.europa.eu/gemet/concept/12301> ;
+                    rec:conceptID "water_resources_management"^^xsd:string ],
+                [ foaf:name "water resources management"^^rdfs:Literal ;
                     rec:conceptID "12301"^^xsd:string ] ;
             rec:scheme "http://www.eionet.europa.eu/gemet/concept/" ],
         [ rec:concept [ rec:conceptID "water_quality"^^xsd:string ] ;
             rec:scheme "http://mmisw.org/ont/ioos/category" ] .
+
+<regulations:Act3> rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            oa:hasTarget <https://some.gov/linktoact/> ] ;
+    prov:wasAttributedTo <agents:someGovernment> .
+
+<surveys:DP-1-S1> prov:used <regulations:Act3> .
 
 
 ```
@@ -1351,14 +1361,26 @@ x-jsonld-extra-terms:
   previewInfo:
     x-jsonld-id: https://w3id.org/iliad/oim/metadata/previewInfo
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  hasEmail:
+    x-jsonld-id: http://www.w3.org/2006/vcard/ns#hasEmail
+    x-jsonld-type: '@id'
+  QualityMeasurement: http://www.w3.org/ns/dqv#QualityMeasurement
   coverage:
     x-jsonld-id: http://www.opengis.net/cis/1.1/coverage
     x-jsonld-type: '@id'
   VideoResource: https://w3id.org/idsa/core/VideoResource
+  scopeNote: http://www.w3.org/2004/02/skos/core#scopeNote
+  endpointDescription:
+    x-jsonld-id: http://www.w3.org/ns/dcat#endpointDescription
+    x-jsonld-type: '@id'
   DigitalContent: https://w3id.org/idsa/core/DigitalContent
   affiliation: https://schema.org/affiliation
   endpointArtifact:
     x-jsonld-id: https://w3id.org/idsa/core/endpointArtifact
+    x-jsonld-type: '@id'
+  Unit: http://qudt.org/schema/qudt/Unit
+  wasGeneratedBy:
+    x-jsonld-id: http://www.w3.org/ns/prov#wasGeneratedBy
     x-jsonld-type: '@id'
   versionInfo: http://www.w3.org/2002/07/owl#versionInfo
   created: http://purl.org/dc/terms/created
@@ -1367,45 +1389,97 @@ x-jsonld-extra-terms:
   lowerBound:
     x-jsonld-id: http://www.opengis.net/cis/1.1/lowerBound
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#integer
+  GeoPoint: https://w3id.org/idsa/core/GeoPoint
+  qualifiedAttribution:
+    x-jsonld-id: http://www.w3.org/ns/prov#qualifiedAttribution
+    x-jsonld-type: '@id'
   Dataset: http://www.w3.org/ns/dcat#Dataset
   EnvelopeByAxisType: http://www.opengis.net/cis/1.1/EnvelopeByAxisType
   width:
     x-jsonld-id: https://w3id.org/idsa/core/width
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#decimal
-  license: http://www.w3.org/ns/dcat#license
-  Representation: https://w3id.org/idsa/core/Representation
-  accrualPeriodicity:
-    x-jsonld-id: https://w3id.org/idsa/core/accrualPeriodicity
+  compressFormat:
+    x-jsonld-id: http://www.w3.org/ns/dcat#compressFormat
     x-jsonld-type: '@id'
+  Relationship: http://www.w3.org/ns/dcat#Relationship
+  license: http://www.w3.org/ns/dcat#license
+  concept:
+    x-jsonld-id: http://purl.org/linked-data/cube#concept
+    x-jsonld-type: '@id'
+  ProvenanceStatement: http://purl.org/dc/terms/ProvenanceStatement
+  accrualPeriodicity: http://purl.org/dc/terms/accrualPeriodicity
+  Asset: http://www.w3.org/ns/odrl/2/Asset
+  adms.Asset: http://www.w3.org/ns/adms#Asset
   model:
     x-jsonld-id: http://www.opengis.net/cis/1.1/model
     x-jsonld-type: '@id'
+  Type: http://www.w3.org/2006/vcard/ns#Type
   MediaType: http://purl.org/dc/terms/MediaType
+  Organization: https://schema.org/Organization
+  vcard.Organization: http://www.w3.org/2006/vcard/ns#Organization
   Distribution: http://www.w3.org/ns/dcat#Distribution
+  issued: http://purl.org/dc/terms/issued
   dataset:
     x-jsonld-id: http://www.w3.org/ns/dcat#dataset
     x-jsonld-type: '@id'
   AudioRepresentation: https://w3id.org/idsa/core/AudioRepresentation
+  wasRevisionOf:
+    x-jsonld-id: http://www.w3.org/ns/prov#wasRevisionOf
+    x-jsonld-type: '@id'
   usageNote: http://purl.org/vocab/vann/usageNote
   AxisExtendType: http://www.opengis.net/cis/1.1/AxisExtendType
   height:
     x-jsonld-id: https://w3id.org/idsa/core/height
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#decimal
+  distribution:
+    x-jsonld-id: http://www.w3.org/ns/dcat#distribution
+    x-jsonld-type: '@id'
+  downloadURL:
+    x-jsonld-id: http://www.w3.org/ns/dcat#downloadURL
+    x-jsonld-type: '@id'
   hasQualityMetadata:
     x-jsonld-id: http://www.w3.org/ns/dqv#hasQualityMetadata
     x-jsonld-type: '@id'
   coordinate:
     x-jsonld-id: http://www.opengis.net/cis/1.1/coordinate
     x-jsonld-type: '@id'
+  ComponentProperty: http://purl.org/linked-data/cube#ComponentProperty
+  hasVersion: http://purl.org/dc/terms/hasVersion
+  dcat.hasVersion:
+    x-jsonld-id: http://www.w3.org/ns/dcat#hasVersion
+    x-jsonld-type: '@id'
+  wasAttributedTo:
+    x-jsonld-id: http://www.w3.org/ns/prov#wasAttributedTo
+    x-jsonld-type: '@id'
   frameRate:
     x-jsonld-id: https://w3id.org/idsa/core/frameRate
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#decimal
   QualityMetadata: http://www.w3.org/ns/dqv#QualityMetadata
+  Geometry: http://www.opengis.net/ont/geosparql#Geometry
+  locn.Geometry: http://www.w3.org/ns/locn#Geometry
   GridLimitsType: http://www.opengis.net/cis/1.1/GridLimitsType
+  hasValue:
+    x-jsonld-id: http://www.w3.org/2006/vcard/ns#hasValue
+    x-jsonld-type: '@id'
   temporalResolution: http://www.w3.org/ns/dcat#temporalResolution
+  versionNotes:
+    x-jsonld-id: http://www.w3.org/ns/adms#versionNotes
+    x-jsonld-type: http://www.w3.org/2000/01/rdf-schema#Literal
   VideoRepresentation: https://w3id.org/idsa/core/VideoRepresentation
-  maker: http://xmlns.com/foaf/0.1/maker
+  GeoFeature: https://w3id.org/idsa/core/GeoFeature
+  landingPage:
+    x-jsonld-id: http://www.w3.org/ns/dcat#landingPage
+    x-jsonld-type: '@id'
+  maker:
+    x-jsonld-id: http://xmlns.com/foaf/0.1/maker
+    x-jsonld-type: '@id'
+  isPrimaryTopicOf:
+    x-jsonld-id: http://xmlns.com/foaf/0.1/isPrimaryTopicOf
+    x-jsonld-type: '@id'
   fileReference: http://www.opengis.net/cis/1.1/fileReference
+  hasAddress:
+    x-jsonld-id: http://www.w3.org/2006/vcard/ns#hasAddress
+    x-jsonld-type: '@id'
   DataRepresentation: https://w3id.org/idsa/core/DataRepresentation
   sensorInstanceRef:
     x-jsonld-id: http://www.sensorml.com/sensorML-2.0/sensorInstanceRef
@@ -1413,18 +1487,39 @@ x-jsonld-extra-terms:
   generalGrid:
     x-jsonld-id: http://www.opengis.net/cis/1.1/generalGrid
     x-jsonld-type: '@id'
+  structure:
+    x-jsonld-id: http://purl.org/linked-data/cube#structure
+    x-jsonld-type: '@id'
   label: http://www.w3.org/2000/01/rdf-schema#label
   positionValuePair:
     x-jsonld-id: http://www.opengis.net/cis/1.1/positionValuePair
     x-jsonld-type: '@id'
   PVPType: http://www.opengis.net/cis/1.1/PVPType
+  hasTelephone:
+    x-jsonld-id: http://www.w3.org/2006/vcard/ns#hasTelephone
+    x-jsonld-type: '@id'
   scaleFactor:
     x-jsonld-id: https://w3id.org/iliad/oim/metadata/scaleFactor
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#float
   AllowedValues: http://www.opengis.net/swe/2.0/AllowedValues
+  DescribedSemantically: https://w3id.org/idsa/core/DescribedSemantically
+  isPartOf: http://purl.org/dc/terms/isPartOf
+  filenameExtension:
+    x-jsonld-id: https://w3id.org/idsa/core/filenameExtension
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
   project: https://w3id.org/iliad/oim/metadata/project
+  Concept: http://www.w3.org/2004/02/skos/core#Concept
+  component:
+    x-jsonld-id: http://purl.org/linked-data/cube#component
+    x-jsonld-type: '@id'
+  measure:
+    x-jsonld-id: http://purl.org/linked-data/cube#measure
+    x-jsonld-type: '@id'
   gridLimits:
     x-jsonld-id: http://www.opengis.net/cis/1.1/gridLimits
+    x-jsonld-type: '@id'
+  user:
+    x-jsonld-id: http://data.europa.eu/930/user
     x-jsonld-type: '@id'
   TextRepresentation: https://w3id.org/idsa/core/TextRepresentation
   TextResource: https://w3id.org/idsa/core/TextResource
@@ -1432,7 +1527,8 @@ x-jsonld-extra-terms:
   rangeSet:
     x-jsonld-id: http://www.opengis.net/cis/1.1/rangeSet
     x-jsonld-type: '@id'
-  Location: https://w3id.org/idsa/core/Location
+  Location: http://purl.org/dc/terms/Location
+  idsa.Location: https://w3id.org/idsa/core/Location
   rangeType:
     x-jsonld-id: http://www.opengis.net/cis/1.1/rangeType
     x-jsonld-type: '@id'
@@ -1448,14 +1544,23 @@ x-jsonld-extra-terms:
   axis:
     x-jsonld-id: http://www.opengis.net/cis/1.1/axis
     x-jsonld-type: '@id'
+  Activity: http://www.w3.org/ns/prov#Activity
   ImageResource: https://w3id.org/idsa/core/ImageResource
   spatialResolutionInMeters: http://www.w3.org/ns/dcat#spatialResolutionInMeters
   partition:
     x-jsonld-id: http://www.opengis.net/cis/1.1/partition
     x-jsonld-type: '@id'
+  fn:
+    x-jsonld-id: http://www.w3.org/2006/vcard/ns#fn
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  used:
+    x-jsonld-id: http://www.w3.org/ns/prov#used
+    x-jsonld-type: '@id'
   CoverageByPartitioningType: http://www.opengis.net/cis/1.1/CoverageByPartitioningType
   GeneralGridCoverageType: http://www.opengis.net/cis/1.1/GeneralGridCoverageType
-  homepage: http://xmlns.com/foaf/0.1/homepage
+  homepage:
+    x-jsonld-id: http://xmlns.com/foaf/0.1/homepage
+    x-jsonld-type: '@id'
   maxValue: https://w3id.org/iliad/oim/metadata/maxValue
   sensorModelRef:
     x-jsonld-id: http://www.sensorml.com/sensorML-2.0/sensorModelRef
@@ -1464,7 +1569,11 @@ x-jsonld-extra-terms:
   appliedModel:
     x-jsonld-id: https://w3id.org/iliad/oim/metadata/appliedModel
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  hasQualityMeasurement:
+    x-jsonld-id: http://www.w3.org/ns/dqv#hasQualityMeasurement
+    x-jsonld-type: '@id'
   Graph: http://www.w3.org/2004/03/trix/rdfg-1/Graph
+  Person: http://xmlns.com/foaf/0.1/Person
   unitsDescription:
     x-jsonld-id: https://w3id.org/iliad/oim/metadata/unitsDescription
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
@@ -1472,84 +1581,127 @@ x-jsonld-extra-terms:
   filters:
     x-jsonld-id: https://w3id.org/iliad/oim/metadata/filters
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  rightsHolder: http://purl.org/dc/terms/rightsHolder
   noDataValue:
     x-jsonld-id: https://w3id.org/iliad/oim/metadata/noDataValue
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  QualityAnnotation: http://www.w3.org/ns/dqv#QualityAnnotation
   searchText:
     x-jsonld-id: https://w3id.org/iliad/oim/metadata/searchText
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  notation: http://www.w3.org/2004/02/skos/core#notation
+  Participant: https://w3id.org/idsa/core/Participant
   profileSchema:
     x-jsonld-id: https://w3id.org/iliad/oim/metadata/profileSchema
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  Described: https://w3id.org/idsa/core/Described
   coverageRef:
     x-jsonld-id: http://www.opengis.net/cis/1.1/coverageRef
     x-jsonld-type: '@id'
   Agent: http://xmlns.com/foaf/0.1/Agent
+  dct.Agent: http://purl.org/dc/terms/Agent
+  prov.Agent: http://www.w3.org/ns/prov#Agent
   ContentType: https://w3id.org/idsa/core/ContentType
   creator: http://purl.org/dc/terms/creator
   name:
-    x-jsonld-id: http://www.opengis.net/swe/2.0/name
-    x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+    x-jsonld-id: http://xmlns.com/foaf/0.1/name
+    x-jsonld-type: http://www.w3.org/2000/01/rdf-schema#Literal
+  swe.name: http://www.opengis.net/swe/2.0/name
   dataBlock:
     x-jsonld-id: http://www.opengis.net/cis/1.1/dataBlock
     x-jsonld-type: '@id'
   DataService: http://www.w3.org/ns/dcat#DataService
+  Individual: http://www.w3.org/2006/vcard/ns#Individual
   representation:
     x-jsonld-id: https://w3id.org/idsa/core/representation
     x-jsonld-type: '@id'
   minDate:
     x-jsonld-id: https://w3id.org/iliad/oim/metadata/minDate
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTimeStamp
+  Attribution: http://www.w3.org/ns/prov#Attribution
   value: http://www.opengis.net/cis/1.1/value
   interval:
     x-jsonld-id: http://www.opengis.net/swe/2.0/interval
     x-jsonld-type: '@id'
+  wasDerivedFrom:
+    x-jsonld-id: http://www.w3.org/ns/prov#wasDerivedFrom
+    x-jsonld-type: '@id'
   uomLabel:
     x-jsonld-id: http://www.opengis.net/cis/1.1/uomLabel
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  schemaAgency:
+    x-jsonld-id: http://www.w3.org/ns/adms#schemaAgency
+    x-jsonld-type: http://www.w3.org/2000/01/rdf-schema#Literal
   RangeSetType: http://www.opengis.net/cis/1.1/RangeSetType
   allowedInterpolation:
     x-jsonld-id: http://www.opengis.net/cis/1.1/allowedInterpolation
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
+  geometry: https://purl.org/geojson/vocab#geometry
+  ComponentSpecification: http://purl.org/linked-data/cube#ComponentSpecification
   axisLabel:
     x-jsonld-id: http://www.opengis.net/cis/1.1/axisLabel
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
   rights: http://www.w3.org/ns/dcat#rights
+  Work: http://www.w3.org/2006/vcard/ns#Work
   TemporalEntity: http://www.w3.org/2006/time#TemporalEntity
   DataRecordType: http://www.opengis.net/swe/2.0/DataRecordType
   IrregularAxisType: http://www.opengis.net/cis/1.1/IrregularAxisType
   field:
     x-jsonld-id: http://www.opengis.net/swe/2.0/field
     x-jsonld-type: '@id'
+  hadPrimarySource:
+    x-jsonld-id: http://www.w3.org/ns/prov#hadPrimarySource
+    x-jsonld-type: '@id'
   PartitionSetType: http://www.opengis.net/cis/1.1/PartitionSetType
   identifier: http://purl.org/dc/terms/identifier
-  keyword: http://www.w3.org/ns/dcat#keyword
+  adms.identifier:
+    x-jsonld-id: http://www.w3.org/ns/adms#identifier
+    x-jsonld-type: '@id'
+  keyword:
+    x-jsonld-id: http://www.w3.org/ns/dcat#keyword
+    x-jsonld-type: http://www.w3.org/2000/01/rdf-schema#Literal
   envelope:
     x-jsonld-id: http://www.opengis.net/cis/1.1/envelope
     x-jsonld-type: '@id'
+  processor:
+    x-jsonld-id: http://data.europa.eu/930/processor
+    x-jsonld-type: '@id'
+  bbox:
+    x-jsonld-id: https://purl.org/geojson/vocab#bbox
+    x-jsonld-type: http://www.w3.org/2000/01/rdf-schema#Literal
+    x-jsonld-container: '@list'
   endpointInformation:
     x-jsonld-id: https://w3id.org/idsa/core/endpointInformation
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  subject: http://purl.org/dc/terms/subject
   fileName:
     x-jsonld-id: https://w3id.org/idsa/core/fileName
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  qualifiedRelation:
+    x-jsonld-id: http://www.w3.org/ns/dcat#qualifiedRelation
+    x-jsonld-type: '@id'
   metadata:
     x-jsonld-id: http://www.opengis.net/cis/1.1/metadata
     x-jsonld-type: '@id'
-  byteSize:
+  byteSize: http://www.w3.org/ns/dcat#byteSize
+  idsa.byteSize:
     x-jsonld-id: https://w3id.org/idsa/core/byteSize
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#integer
   instance:
     x-jsonld-id: https://w3id.org/idsa/core/instance
     x-jsonld-type: '@id'
   isDefinedBy: http://www.w3.org/2000/01/rdf-schema#isDefinedBy
-  definition:
-    x-jsonld-id: http://www.w3.org/2004/02/skos/core#definition
+  definition: http://www.w3.org/2004/02/skos/core#definition
+  swe.definition:
+    x-jsonld-id: http://www.opengis.net/swe/2.0/definition
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
   RangeSetRefType: http://www.opengis.net/cis/1.1/RangeSetRefType
   srsName:
     x-jsonld-id: http://www.opengis.net/cis/1.1/srsName
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
+  principalInvestigator:
+    x-jsonld-id: http://data.europa.eu/930/principalInvestigator
+    x-jsonld-type: '@id'
   QuantityType: http://www.opengis.net/swe/2.0/QuantityType
   technicalManagerInfo:
     x-jsonld-id: https://w3id.org/iliad/oim/metadata/technicalManagerInfo
@@ -1560,39 +1712,56 @@ x-jsonld-extra-terms:
   names:
     x-jsonld-id: http://www.opengis.net/swe/2.0/names
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  Property: http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
   title: http://www.w3.org/2000/01/rdf-schema#label
   dataType:
     x-jsonld-id: https://w3id.org/idsa/core/dataType
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
   source: http://purl.org/dc/terms/source
+  MeasureProperty: http://purl.org/linked-data/cube#MeasureProperty
   type: '@type'
-  publisher:
-    x-jsonld-id: https://w3id.org/idsa/core/publisher
-    x-jsonld-type: '@id'
+  publisher: http://purl.org/dc/terms/publisher
   mediaType: http://purl.org/dc/terms/mediaType
   uom:
     x-jsonld-id: http://www.opengis.net/swe/2.0/uom
     x-jsonld-type: '@id'
-  licence: http://purl.org/dc/terms/licence
   subDatasetName: https://w3id.org/iliad/oim/metadata/subDatasetName
   upperBound:
     x-jsonld-id: http://www.opengis.net/cis/1.1/upperBound
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#integer
+  version: http://www.w3.org/ns/dcat#version
   modified: http://purl.org/dc/terms/modified
-  Frequency: https://w3id.org/idsa/core/Frequency
+  Frequency: http://purl.org/dc/terms/Frequency
+  idsa.Frequency: https://w3id.org/idsa/core/Frequency
   Endpoint: https://w3id.org/idsa/core/Endpoint
+  endpointURL:
+    x-jsonld-id: http://www.w3.org/ns/dcat#endpointURL
+    x-jsonld-type: '@id'
+  provenance: http://purl.org/dc/terms/provenance
   samplingRate:
     x-jsonld-id: https://w3id.org/idsa/core/samplingRate
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#decimal
   CoverageByDomainAndRangeType: http://www.opengis.net/cis/1.1/CoverageByDomainAndRangeType
+  inSeries:
+    x-jsonld-id: http://www.w3.org/ns/dcat#inSeries
+    x-jsonld-type: '@id'
   endpointDocumentation:
     x-jsonld-id: https://w3id.org/idsa/core/endpointDocumentation
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
+  distributor:
+    x-jsonld-id: http://data.europa.eu/930/distributor
+    x-jsonld-type: '@id'
   accessRights: http://purl.org/dc/terms/accessRights
   DCMIType: http://purl.org/dc/terms/DCMIType
+  wasUsedBy:
+    x-jsonld-id: http://www.w3.org/ns/prov#wasUsedBy
+    x-jsonld-type: '@id'
   checkSum:
     x-jsonld-id: https://w3id.org/idsa/core/checkSum
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  unit:
+    x-jsonld-id: http://qudt.org/schema/qudt/unit
+    x-jsonld-type: '@id'
   seeAlso: http://www.w3.org/2000/01/rdf-schema#seeAlso
   contentType:
     x-jsonld-id: https://w3id.org/idsa/core/contentType
@@ -1607,34 +1776,65 @@ x-jsonld-extra-terms:
   contentStandard:
     x-jsonld-id: https://w3id.org/idsa/core/contentStandard
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
+  Entity: http://www.w3.org/ns/prov#Entity
   dataTypeSchema:
     x-jsonld-id: https://w3id.org/idsa/core/dataTypeSchema
     x-jsonld-type: '@id'
   Language: https://w3id.org/idsa/core/Language
-  Resource: https://w3id.org/idsa/core/Resource
+  resourceProvider:
+    x-jsonld-id: http://data.europa.eu/930/resourceProvider
+    x-jsonld-type: '@id'
+  contactPoint:
+    x-jsonld-id: http://www.w3.org/ns/dcat#contactPoint
+    x-jsonld-type: '@id'
+  Resource: http://www.w3.org/ns/dcat#Resource
+  idsa.Resource: https://w3id.org/idsa/core/Resource
+  rdfs.Resource: http://www.w3.org/2000/01/rdf-schema#Resource
+  hasQualityAnnotation:
+    x-jsonld-id: http://www.w3.org/ns/dqv#hasQualityAnnotation
+    x-jsonld-type: '@id'
   domainSet:
     x-jsonld-id: http://www.opengis.net/cis/1.1/domainSet
     x-jsonld-type: '@id'
   SpatialThing: http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+  theme:
+    x-jsonld-id: http://www.w3.org/ns/dcat#theme
+    x-jsonld-type: '@id'
   Party: http://www.w3.org/ns/odrl/2/Party
+  wasQuotedFrom:
+    x-jsonld-id: http://www.w3.org/ns/prov#wasQuotedFrom
+    x-jsonld-type: '@id'
   comment: http://www.w3.org/2000/01/rdf-schema#comment
-  License: http://purl.org/dc/terms/License
+  custodian:
+    x-jsonld-id: http://data.europa.eu/930/custodian
+    x-jsonld-type: '@id'
+  Document: http://xmlns.com/foaf/0.1/Document
   language:
     x-jsonld-id: https://www.opengis.net/def/ogc-api/records/language
     x-jsonld-context:
       code: https://www.opengis.net/def/ogc-api/records/languageCode
       name: http://www.w3.org/2004/02/skos/core#prefLabel
+  page:
+    x-jsonld-id: http://xmlns.com/foaf/0.1/page
+    x-jsonld-type: '@id'
+  Group: http://xmlns.com/foaf/0.1/Group
   TransformationBySensorModelType: http://www.opengis.net/cis/1.1/TransformationBySensorModelType
   uomLabels:
     x-jsonld-id: http://www.opengis.net/cis/1.1/uomLabels
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
   contributor: http://purl.org/dc/terms/contributor
+  originator:
+    x-jsonld-id: http://data.europa.eu/930/originator
+    x-jsonld-type: '@id'
   resolutionUnit:
     x-jsonld-id: https://w3id.org/iliad/oim/metadata/resolutionUnit
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
   AudioResource: https://w3id.org/idsa/core/AudioResource
   DisplacementAxisNestType: http://www.opengis.net/cis/1.1/DisplacementAxisNestType
   DomainSetType: http://www.opengis.net/cis/1.1/DomainSetType
+  generalizationOf:
+    x-jsonld-id: http://www.w3.org/ns/prov#generalizationOf
+    x-jsonld-type: '@id'
   conformsTo:
     x-jsonld-id: http://purl.org/dc/terms/conformsTo
     x-jsonld-container: '@set'
@@ -1644,26 +1844,34 @@ x-jsonld-extra-terms:
     x-jsonld-type: '@id'
   minValue: https://w3id.org/iliad/oim/metadata/minValue
   UnitReference: http://www.opengis.net/swe/2.0/UnitReference
-  acrualPeriodicity: http://purl.org/dc/terms/acrualPeriodicity
-  customLicense:
-    x-jsonld-id: https://w3id.org/idsa/core/customLicense
-    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
+  specializationOf:
+    x-jsonld-id: http://www.w3.org/ns/prov#specializationOf
+    x-jsonld-type: '@id'
   code:
     x-jsonld-id: http://www.opengis.net/swe/2.0/code
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  Identifier: http://www.w3.org/ns/adms#Identifier
   epsg:
     x-jsonld-id: https://w3id.org/iliad/oim/metadata/epsg
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
   description:
     x-jsonld-id: http://purl.org/dc/terms/description
     x-jsonld-container: '@set'
+  Home: http://www.w3.org/2006/vcard/ns#Home
+  ManagedEntity: https://w3id.org/idsa/core/ManagedEntity
   format: http://purl.org/dc/terms/format
   accessURL:
-    x-jsonld-id: https://w3id.org/idsa/core/accessURL
-    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
+    x-jsonld-id: http://www.w3.org/ns/dcat#accessURL
+    x-jsonld-type: '@id'
   credits:
     x-jsonld-id: https://w3id.org/iliad/oim/metadata/credits
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  sample:
+    x-jsonld-id: http://www.w3.org/ns/adms#sample
+    x-jsonld-type: '@id'
+  BoundingPolygon: https://w3id.org/idsa/core/BoundingPolygon
+  Kind: http://www.w3.org/2006/vcard/ns#Kind
+  relation: http://purl.org/dc/terms/relation
   temporal: http://purl.org/dc/terms/temporal
   accrualPolicy: http://purl.org/dc/terms/accrualPolicy
   resolution:
@@ -1676,13 +1884,11 @@ x-jsonld-extra-terms:
     x-jsonld-id: http://www.opengis.net/swe/2.0/constraint
     x-jsonld-type: '@id'
   ConnectorEndpoint: https://w3id.org/idsa/core/ConnectorEndpoint
+  DataStructureDefinition: http://purl.org/linked-data/cube#DataStructureDefinition
   numberOfRecords:
     x-jsonld-id: https://w3id.org/iliad/oim/metadata/numberOfRecords
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#integer
   RegularAxisType: http://www.opengis.net/cis/1.1/RegularAxisType
-  standardLicense:
-    x-jsonld-id: https://w3id.org/idsa/core/standardLicense
-    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
   PhotonFluxDensity: http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity
   implements:
     x-jsonld-id: http://www.w3.org/ns/ssn/implements
@@ -1693,7 +1899,6 @@ x-jsonld-extra-terms:
   MultiLineString: https://purl.org/geojson/vocab#MultiLineString
   Attachable: http://purl.org/linked-data/cube#Attachable
   QuantityValue: http://qudt.org/schema/qudt/QuantityValue
-  Unit: http://qudt.org/schema/qudt/Unit
   Line: http://www.opengis.net/ont/sf#Line
   member:
     x-jsonld-id: http://xmlns.com/foaf/0.1/member
@@ -1711,9 +1916,6 @@ x-jsonld-extra-terms:
     x-jsonld-id: http://purl.org/linked-data/cube#componentAttachment
     x-jsonld-type: '@id'
   Platform: http://www.w3.org/ns/sosa/Platform
-  concept:
-    x-jsonld-id: http://purl.org/linked-data/cube#concept
-    x-jsonld-type: '@id'
   Deployment: http://www.w3.org/ns/ssn/Deployment
   MultiSurface: http://www.opengis.net/ont/sf#MultiSurface
   TemporalDuration: http://www.w3.org/2006/time#TemporalDuration
@@ -1722,7 +1924,6 @@ x-jsonld-extra-terms:
   asGeoJSON:
     x-jsonld-id: http://www.opengis.net/ont/geosparql#asGeoJSON
     x-jsonld-type: http://www.opengis.net/ont/geosparql#geoJSONLiteral
-  Organization: https://schema.org/Organization
   Volume: http://purl.oclc.org/NET/ssnx/qu/dim#Volume
   Thing: http://www.w3.org/2002/07/owl#Thing
   GFI_Feature: http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature
@@ -1744,10 +1945,8 @@ x-jsonld-extra-terms:
   TemperatureDrift: http://purl.oclc.org/NET/ssnx/qu/dim#TemperatureDrift
   RotationalSpeed: http://purl.oclc.org/NET/ssnx/qu/dim#RotationalSpeed
   FeatureOfInterest: http://www.w3.org/ns/sosa/FeatureOfInterest
-  ComponentProperty: http://purl.org/linked-data/cube#ComponentProperty
   Class: http://www.w3.org/2000/01/rdf-schema#Class
   ObservationCollection: http://www.w3.org/ns/sosa/ObservationCollection
-  Geometry: http://www.opengis.net/ont/geosparql#Geometry
   NumberPerArea: http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerArea
   depiction: http://xmlns.com/foaf/0.1/depiction
   Curve: http://www.opengis.net/ont/sf#Curve
@@ -1768,13 +1967,6 @@ x-jsonld-extra-terms:
   Feature: https://purl.org/geojson/vocab#Feature
   LineString: https://purl.org/geojson/vocab#LineString
   numericValue: http://qudt.org/schema/qudt/numericValue
-  Concept: http://www.w3.org/2004/02/skos/core#Concept
-  component:
-    x-jsonld-id: http://purl.org/linked-data/cube#component
-    x-jsonld-type: '@id'
-  measure:
-    x-jsonld-id: http://purl.org/linked-data/cube#measure
-    x-jsonld-type: '@id'
   SliceKey: http://purl.org/linked-data/cube#SliceKey
   Result: http://www.w3.org/ns/sosa/Result
   isHostedBy:
@@ -1795,7 +1987,6 @@ x-jsonld-extra-terms:
     x-jsonld-id: http://www.w3.org/ns/ssn/hasProperty
     x-jsonld-type: '@id'
   Measure: http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Measure
-  Person: http://xmlns.com/foaf/0.1/Person
   Triangle: http://www.opengis.net/ont/sf#Triangle
   note: http://www.w3.org/2004/02/skos/core#note
   observationGroup:
@@ -1837,7 +2028,6 @@ x-jsonld-extra-terms:
   location:
     x-jsonld-id: http://www.w3.org/2003/01/geo/wgs84_pos#location
     x-jsonld-type: '@id'
-  ComponentSpecification: http://purl.org/linked-data/cube#ComponentSpecification
   Scheme: http://www.w3.org/2004/02/skos/core#Scheme
   hasEnd:
     x-jsonld-id: http://www.w3.org/2006/time#hasEnd
@@ -1896,7 +2086,6 @@ x-jsonld-extra-terms:
   inXSDDateTimeStamp:
     x-jsonld-id: http://www.w3.org/2006/time#inXSDDateTimeStamp
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTimeStamp
-  MeasureProperty: http://purl.org/linked-data/cube#MeasureProperty
   PropertyKind: http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind
   SpatialObject: http://www.opengis.net/ont/geosparql#SpatialObject
   sliceStructure:
@@ -1920,9 +2109,6 @@ x-jsonld-extra-terms:
     x-jsonld-id: http://www.w3.org/ns/sosa/madeObservation
     x-jsonld-type: '@id'
   FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
-  unit:
-    x-jsonld-id: http://qudt.org/schema/qudt/unit
-    x-jsonld-type: '@id'
   date: http://purl.org/dc/terms/date
   isPropertyOf:
     x-jsonld-id: http://www.w3.org/ns/ssn/isPropertyOf
@@ -1973,7 +2159,6 @@ x-jsonld-extra-terms:
   hasQuantityKind:
     x-jsonld-id: http://qudt.org/schema/qudt/hasQuantityKind
     x-jsonld-type: '@id'
-  DataStructureDefinition: http://purl.org/linked-data/cube#DataStructureDefinition
   MultiPoint: https://purl.org/geojson/vocab#MultiPoint
   qb.Observation: http://purl.org/linked-data/cube#Observation
   EnergyDensity: http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensity
@@ -1997,9 +2182,6 @@ x-jsonld-extra-terms:
   coordinates:
     x-jsonld-container: '@list'
     x-jsonld-id: https://purl.org/geojson/vocab#coordinates
-  bbox:
-    x-jsonld-container: '@list'
-    x-jsonld-id: https://purl.org/geojson/vocab#bbox
   href:
     x-jsonld-type: '@id'
     x-jsonld-id: http://www.w3.org/ns/oa#hasTarget
@@ -2016,7 +2198,6 @@ x-jsonld-extra-terms:
     x-jsonld-id: http://www.w3.org/ns/oa#hasTarget
   id: '@id'
   properties: '@nest'
-  geometry: https://purl.org/geojson/vocab#geometry
   features:
     x-jsonld-container: '@set'
     x-jsonld-id: https://purl.org/geojson/vocab#features
@@ -2062,6 +2243,9 @@ x-jsonld-extra-terms:
           id:
             '@type': http://www.w3.org/2001/XMLSchema#string
             '@id': https://www.opengis.net/def/ogc-api/records/conceptID
+          url:
+            '@type': '@id'
+            '@id': http://purl.org/dc/terms/theme
       scheme: https://www.opengis.net/def/ogc-api/records/scheme
   formats:
     x-jsonld-container: '@set'
@@ -2223,6 +2407,10 @@ Links to the schema:
             "id": {
               "@type": "xsd:string",
               "@id": "rec:conceptID"
+            },
+            "url": {
+              "@type": "@id",
+              "@id": "dct:theme"
             }
           }
         },
@@ -2256,15 +2444,30 @@ Links to the schema:
       "@id": "https://w3id.org/iliad/oim/metadata/previewInfo",
       "@type": "xsd:string"
     },
+    "hasEmail": {
+      "@id": "vcard:hasEmail",
+      "@type": "@id"
+    },
+    "QualityMeasurement": "http://www.w3.org/ns/dqv#QualityMeasurement",
     "coverage": {
       "@id": "http://www.opengis.net/cis/1.1/coverage",
       "@type": "@id"
     },
     "VideoResource": "https://w3id.org/idsa/core/VideoResource",
+    "scopeNote": "skos:scopeNote",
+    "endpointDescription": {
+      "@id": "dcat:endpointDescription",
+      "@type": "@id"
+    },
     "DigitalContent": "https://w3id.org/idsa/core/DigitalContent",
     "affiliation": "https://schema.org/affiliation",
     "endpointArtifact": {
       "@id": "https://w3id.org/idsa/core/endpointArtifact",
+      "@type": "@id"
+    },
+    "Unit": "http://qudt.org/schema/qudt/Unit",
+    "wasGeneratedBy": {
+      "@id": "prov:wasGeneratedBy",
       "@type": "@id"
     },
     "versionInfo": "owl:versionInfo",
@@ -2274,33 +2477,62 @@ Links to the schema:
       "@id": "http://www.opengis.net/cis/1.1/lowerBound",
       "@type": "xsd:integer"
     },
+    "GeoPoint": "https://w3id.org/idsa/core/GeoPoint",
+    "qualifiedAttribution": {
+      "@id": "prov:qualifiedAttribution",
+      "@type": "@id"
+    },
     "Dataset": "dcat:Dataset",
     "EnvelopeByAxisType": "http://www.opengis.net/cis/1.1/EnvelopeByAxisType",
     "width": {
       "@id": "https://w3id.org/idsa/core/width",
       "@type": "xsd:decimal"
     },
-    "Representation": "https://w3id.org/idsa/core/Representation",
-    "accrualPeriodicity": {
-      "@id": "https://w3id.org/idsa/core/accrualPeriodicity",
+    "compressFormat": {
+      "@id": "dcat:compressFormat",
       "@type": "@id"
     },
+    "Relationship": "dcat:Relationship",
+    "concept": {
+      "@id": "http://purl.org/linked-data/cube#concept",
+      "@type": "@id"
+    },
+    "ProvenanceStatement": "dct:ProvenanceStatement",
+    "accrualPeriodicity": "dct:accrualPeriodicity",
+    "Asset": "http://www.w3.org/ns/odrl/2/Asset",
+    "adms.Asset": "http://www.w3.org/ns/adms#Asset",
     "model": {
       "@id": "http://www.opengis.net/cis/1.1/model",
       "@type": "@id"
     },
+    "Type": "vcard:Type",
     "MediaType": "dct:MediaType",
+    "Organization": "https://schema.org/Organization",
+    "vcard.Organization": "vcard:Organization",
     "Distribution": "dcat:Distribution",
+    "issued": "dct:issued",
     "dataset": {
       "@id": "dcat:dataset",
       "@type": "@id"
     },
     "AudioRepresentation": "https://w3id.org/idsa/core/AudioRepresentation",
+    "wasRevisionOf": {
+      "@id": "prov:wasRevisionOf",
+      "@type": "@id"
+    },
     "usageNote": "http://purl.org/vocab/vann/usageNote",
     "AxisExtendType": "http://www.opengis.net/cis/1.1/AxisExtendType",
     "height": {
       "@id": "https://w3id.org/idsa/core/height",
       "@type": "xsd:decimal"
+    },
+    "distribution": {
+      "@id": "dcat:distribution",
+      "@type": "@id"
+    },
+    "downloadURL": {
+      "@id": "dcat:downloadURL",
+      "@type": "@id"
     },
     "hasQualityMetadata": {
       "@id": "http://www.w3.org/ns/dqv#hasQualityMetadata",
@@ -2310,16 +2542,52 @@ Links to the schema:
       "@id": "http://www.opengis.net/cis/1.1/coordinate",
       "@type": "@id"
     },
+    "ComponentProperty": "http://purl.org/linked-data/cube#ComponentProperty",
+    "hasVersion": "dct:hasVersion",
+    "dcat.hasVersion": {
+      "@id": "dcat:hasVersion",
+      "@type": "@id"
+    },
+    "wasAttributedTo": {
+      "@id": "prov:wasAttributedTo",
+      "@type": "@id"
+    },
     "frameRate": {
       "@id": "https://w3id.org/idsa/core/frameRate",
       "@type": "xsd:decimal"
     },
     "QualityMetadata": "http://www.w3.org/ns/dqv#QualityMetadata",
+    "Geometry": "http://www.opengis.net/ont/geosparql#Geometry",
+    "locn.Geometry": "http://www.w3.org/ns/locn#Geometry",
     "GridLimitsType": "http://www.opengis.net/cis/1.1/GridLimitsType",
+    "hasValue": {
+      "@id": "vcard:hasValue",
+      "@type": "@id"
+    },
     "temporalResolution": "dcat:temporalResolution",
+    "versionNotes": {
+      "@id": "http://www.w3.org/ns/adms#versionNotes",
+      "@type": "rdfs:Literal"
+    },
     "VideoRepresentation": "https://w3id.org/idsa/core/VideoRepresentation",
-    "maker": "foaf:maker",
+    "GeoFeature": "https://w3id.org/idsa/core/GeoFeature",
+    "landingPage": {
+      "@id": "dcat:landingPage",
+      "@type": "@id"
+    },
+    "maker": {
+      "@id": "foaf:maker",
+      "@type": "@id"
+    },
+    "isPrimaryTopicOf": {
+      "@id": "foaf:isPrimaryTopicOf",
+      "@type": "@id"
+    },
     "fileReference": "http://www.opengis.net/cis/1.1/fileReference",
+    "hasAddress": {
+      "@id": "vcard:hasAddress",
+      "@type": "@id"
+    },
     "DataRepresentation": "https://w3id.org/idsa/core/DataRepresentation",
     "sensorInstanceRef": {
       "@id": "http://www.sensorml.com/sensorML-2.0/sensorInstanceRef",
@@ -2329,20 +2597,47 @@ Links to the schema:
       "@id": "http://www.opengis.net/cis/1.1/generalGrid",
       "@type": "@id"
     },
+    "structure": {
+      "@id": "http://purl.org/linked-data/cube#structure",
+      "@type": "@id"
+    },
     "label": "rdfs:label",
     "positionValuePair": {
       "@id": "http://www.opengis.net/cis/1.1/positionValuePair",
       "@type": "@id"
     },
     "PVPType": "http://www.opengis.net/cis/1.1/PVPType",
+    "hasTelephone": {
+      "@id": "vcard:hasTelephone",
+      "@type": "@id"
+    },
     "scaleFactor": {
       "@id": "https://w3id.org/iliad/oim/metadata/scaleFactor",
       "@type": "xsd:float"
     },
     "AllowedValues": "http://www.opengis.net/swe/2.0/AllowedValues",
+    "DescribedSemantically": "https://w3id.org/idsa/core/DescribedSemantically",
+    "isPartOf": "dct:isPartOf",
+    "filenameExtension": {
+      "@id": "https://w3id.org/idsa/core/filenameExtension",
+      "@type": "xsd:string"
+    },
     "project": "https://w3id.org/iliad/oim/metadata/project",
+    "Concept": "skos:Concept",
+    "component": {
+      "@id": "http://purl.org/linked-data/cube#component",
+      "@type": "@id"
+    },
+    "measure": {
+      "@id": "http://purl.org/linked-data/cube#measure",
+      "@type": "@id"
+    },
     "gridLimits": {
       "@id": "http://www.opengis.net/cis/1.1/gridLimits",
+      "@type": "@id"
+    },
+    "user": {
+      "@id": "http://data.europa.eu/930/user",
       "@type": "@id"
     },
     "TextRepresentation": "https://w3id.org/idsa/core/TextRepresentation",
@@ -2352,7 +2647,8 @@ Links to the schema:
       "@id": "http://www.opengis.net/cis/1.1/rangeSet",
       "@type": "@id"
     },
-    "Location": "https://w3id.org/idsa/core/Location",
+    "Location": "dct:Location",
+    "idsa.Location": "https://w3id.org/idsa/core/Location",
     "rangeType": {
       "@id": "http://www.opengis.net/cis/1.1/rangeType",
       "@type": "@id"
@@ -2373,15 +2669,27 @@ Links to the schema:
       "@id": "http://www.opengis.net/cis/1.1/axis",
       "@type": "@id"
     },
+    "Activity": "prov:Activity",
     "ImageResource": "https://w3id.org/idsa/core/ImageResource",
     "spatialResolutionInMeters": "dcat:spatialResolutionInMeters",
     "partition": {
       "@id": "http://www.opengis.net/cis/1.1/partition",
       "@type": "@id"
     },
+    "fn": {
+      "@id": "vcard:fn",
+      "@type": "xsd:string"
+    },
+    "used": {
+      "@id": "prov:used",
+      "@type": "@id"
+    },
     "CoverageByPartitioningType": "http://www.opengis.net/cis/1.1/CoverageByPartitioningType",
     "GeneralGridCoverageType": "http://www.opengis.net/cis/1.1/GeneralGridCoverageType",
-    "homepage": "foaf:homepage",
+    "homepage": {
+      "@id": "foaf:homepage",
+      "@type": "@id"
+    },
     "maxValue": "https://w3id.org/iliad/oim/metadata/maxValue",
     "sensorModelRef": {
       "@id": "http://www.sensorml.com/sensorML-2.0/sensorModelRef",
@@ -2392,7 +2700,12 @@ Links to the schema:
       "@id": "https://w3id.org/iliad/oim/metadata/appliedModel",
       "@type": "xsd:string"
     },
+    "hasQualityMeasurement": {
+      "@id": "http://www.w3.org/ns/dqv#hasQualityMeasurement",
+      "@type": "@id"
+    },
     "Graph": "http://www.w3.org/2004/03/trix/rdfg-1/Graph",
+    "Person": "foaf:Person",
     "unitsDescription": {
       "@id": "https://w3id.org/iliad/oim/metadata/unitsDescription",
       "@type": "xsd:string"
@@ -2402,34 +2715,43 @@ Links to the schema:
       "@id": "https://w3id.org/iliad/oim/metadata/filters",
       "@type": "xsd:string"
     },
+    "rightsHolder": "dct:rightsHolder",
     "noDataValue": {
       "@id": "https://w3id.org/iliad/oim/metadata/noDataValue",
       "@type": "xsd:string"
     },
+    "QualityAnnotation": "http://www.w3.org/ns/dqv#QualityAnnotation",
     "searchText": {
       "@id": "https://w3id.org/iliad/oim/metadata/searchText",
       "@type": "xsd:string"
     },
+    "notation": "skos:notation",
+    "Participant": "https://w3id.org/idsa/core/Participant",
     "profileSchema": {
       "@id": "https://w3id.org/iliad/oim/metadata/profileSchema",
       "@type": "xsd:string"
     },
+    "Described": "https://w3id.org/idsa/core/Described",
     "coverageRef": {
       "@id": "http://www.opengis.net/cis/1.1/coverageRef",
       "@type": "@id"
     },
     "Agent": "foaf:Agent",
+    "dct.Agent": "dct:Agent",
+    "prov.Agent": "prov:Agent",
     "ContentType": "https://w3id.org/idsa/core/ContentType",
     "creator": "dct:creator",
     "name": {
-      "@id": "http://www.opengis.net/swe/2.0/name",
-      "@type": "xsd:string"
+      "@id": "foaf:name",
+      "@type": "rdfs:Literal"
     },
+    "swe.name": "http://www.opengis.net/swe/2.0/name",
     "dataBlock": {
       "@id": "http://www.opengis.net/cis/1.1/dataBlock",
       "@type": "@id"
     },
     "DataService": "dcat:DataService",
+    "Individual": "vcard:Individual",
     "representation": {
       "@id": "https://w3id.org/idsa/core/representation",
       "@type": "@id"
@@ -2438,24 +2760,35 @@ Links to the schema:
       "@id": "https://w3id.org/iliad/oim/metadata/minDate",
       "@type": "xsd:dateTimeStamp"
     },
+    "Attribution": "prov:Attribution",
     "value": "http://www.opengis.net/cis/1.1/value",
     "interval": {
       "@id": "http://www.opengis.net/swe/2.0/interval",
+      "@type": "@id"
+    },
+    "wasDerivedFrom": {
+      "@id": "prov:wasDerivedFrom",
       "@type": "@id"
     },
     "uomLabel": {
       "@id": "http://www.opengis.net/cis/1.1/uomLabel",
       "@type": "xsd:string"
     },
+    "schemaAgency": {
+      "@id": "http://www.w3.org/ns/adms#schemaAgency",
+      "@type": "rdfs:Literal"
+    },
     "RangeSetType": "http://www.opengis.net/cis/1.1/RangeSetType",
     "allowedInterpolation": {
       "@id": "http://www.opengis.net/cis/1.1/allowedInterpolation",
       "@type": "xsd:anyURI"
     },
+    "ComponentSpecification": "http://purl.org/linked-data/cube#ComponentSpecification",
     "axisLabel": {
       "@id": "http://www.opengis.net/cis/1.1/axisLabel",
       "@type": "xsd:string"
     },
+    "Work": "vcard:Work",
     "TemporalEntity": "w3ctime:TemporalEntity",
     "DataRecordType": "http://www.opengis.net/swe/2.0/DataRecordType",
     "IrregularAxisType": "http://www.opengis.net/cis/1.1/IrregularAxisType",
@@ -2463,26 +2796,47 @@ Links to the schema:
       "@id": "http://www.opengis.net/swe/2.0/field",
       "@type": "@id"
     },
+    "hadPrimarySource": {
+      "@id": "prov:hadPrimarySource",
+      "@type": "@id"
+    },
     "PartitionSetType": "http://www.opengis.net/cis/1.1/PartitionSetType",
     "identifier": "dct:identifier",
-    "keyword": "dcat:keyword",
+    "adms.identifier": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "keyword": {
+      "@id": "dcat:keyword",
+      "@type": "rdfs:Literal"
+    },
     "envelope": {
       "@id": "http://www.opengis.net/cis/1.1/envelope",
+      "@type": "@id"
+    },
+    "processor": {
+      "@id": "http://data.europa.eu/930/processor",
       "@type": "@id"
     },
     "endpointInformation": {
       "@id": "https://w3id.org/idsa/core/endpointInformation",
       "@type": "xsd:string"
     },
+    "subject": "dct:subject",
     "fileName": {
       "@id": "https://w3id.org/idsa/core/fileName",
       "@type": "xsd:string"
+    },
+    "qualifiedRelation": {
+      "@id": "dcat:qualifiedRelation",
+      "@type": "@id"
     },
     "metadata": {
       "@id": "http://www.opengis.net/cis/1.1/metadata",
       "@type": "@id"
     },
-    "byteSize": {
+    "byteSize": "dcat:byteSize",
+    "idsa.byteSize": {
       "@id": "https://w3id.org/idsa/core/byteSize",
       "@type": "xsd:integer"
     },
@@ -2491,14 +2845,19 @@ Links to the schema:
       "@type": "@id"
     },
     "isDefinedBy": "rdfs:isDefinedBy",
-    "definition": {
-      "@id": "skos:definition",
+    "definition": "skos:definition",
+    "swe.definition": {
+      "@id": "http://www.opengis.net/swe/2.0/definition",
       "@type": "xsd:string"
     },
     "RangeSetRefType": "http://www.opengis.net/cis/1.1/RangeSetRefType",
     "srsName": {
       "@id": "http://www.opengis.net/cis/1.1/srsName",
       "@type": "xsd:anyURI"
+    },
+    "principalInvestigator": {
+      "@id": "http://data.europa.eu/930/principalInvestigator",
+      "@type": "@id"
     },
     "QuantityType": "http://www.opengis.net/swe/2.0/QuantityType",
     "technicalManagerInfo": {
@@ -2513,43 +2872,64 @@ Links to the schema:
       "@id": "http://www.opengis.net/swe/2.0/names",
       "@type": "xsd:string"
     },
+    "Property": "rdf:Property",
     "dataType": {
       "@id": "https://w3id.org/idsa/core/dataType",
       "@type": "xsd:anyURI"
     },
     "source": "dct:source",
-    "publisher": {
-      "@id": "https://w3id.org/idsa/core/publisher",
-      "@type": "@id"
-    },
+    "MeasureProperty": "http://purl.org/linked-data/cube#MeasureProperty",
+    "publisher": "dct:publisher",
     "mediaType": "dct:mediaType",
     "uom": {
       "@id": "http://www.opengis.net/swe/2.0/uom",
       "@type": "@id"
     },
-    "licence": "dct:licence",
     "subDatasetName": "https://w3id.org/iliad/oim/metadata/subDatasetName",
     "upperBound": {
       "@id": "http://www.opengis.net/cis/1.1/upperBound",
       "@type": "xsd:integer"
     },
+    "version": "dcat:version",
     "modified": "dct:modified",
-    "Frequency": "https://w3id.org/idsa/core/Frequency",
+    "Frequency": "dct:Frequency",
+    "idsa.Frequency": "https://w3id.org/idsa/core/Frequency",
     "Endpoint": "https://w3id.org/idsa/core/Endpoint",
+    "endpointURL": {
+      "@id": "dcat:endpointURL",
+      "@type": "@id"
+    },
+    "provenance": "dct:provenance",
     "samplingRate": {
       "@id": "https://w3id.org/idsa/core/samplingRate",
       "@type": "xsd:decimal"
     },
     "CoverageByDomainAndRangeType": "http://www.opengis.net/cis/1.1/CoverageByDomainAndRangeType",
+    "inSeries": {
+      "@id": "dcat:inSeries",
+      "@type": "@id"
+    },
     "endpointDocumentation": {
       "@id": "https://w3id.org/idsa/core/endpointDocumentation",
       "@type": "xsd:anyURI"
     },
+    "distributor": {
+      "@id": "http://data.europa.eu/930/distributor",
+      "@type": "@id"
+    },
     "accessRights": "dct:accessRights",
     "DCMIType": "dct:DCMIType",
+    "wasUsedBy": {
+      "@id": "prov:wasUsedBy",
+      "@type": "@id"
+    },
     "checkSum": {
       "@id": "https://w3id.org/idsa/core/checkSum",
       "@type": "xsd:string"
+    },
+    "unit": {
+      "@id": "http://qudt.org/schema/qudt/unit",
+      "@type": "@id"
     },
     "seeAlso": "rdfs:seeAlso",
     "contentType": {
@@ -2569,26 +2949,62 @@ Links to the schema:
       "@id": "https://w3id.org/idsa/core/contentStandard",
       "@type": "xsd:anyURI"
     },
+    "Entity": "prov:Entity",
     "dataTypeSchema": {
       "@id": "https://w3id.org/idsa/core/dataTypeSchema",
       "@type": "@id"
     },
     "Language": "https://w3id.org/idsa/core/Language",
-    "Resource": "https://w3id.org/idsa/core/Resource",
+    "resourceProvider": {
+      "@id": "http://data.europa.eu/930/resourceProvider",
+      "@type": "@id"
+    },
+    "contactPoint": {
+      "@id": "dcat:contactPoint",
+      "@type": "@id"
+    },
+    "Resource": "dcat:Resource",
+    "idsa.Resource": "https://w3id.org/idsa/core/Resource",
+    "rdfs.Resource": "rdfs:Resource",
+    "hasQualityAnnotation": {
+      "@id": "http://www.w3.org/ns/dqv#hasQualityAnnotation",
+      "@type": "@id"
+    },
     "domainSet": {
       "@id": "http://www.opengis.net/cis/1.1/domainSet",
       "@type": "@id"
     },
     "SpatialThing": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+    "theme": {
+      "@id": "dcat:theme",
+      "@type": "@id"
+    },
     "Party": "http://www.w3.org/ns/odrl/2/Party",
+    "wasQuotedFrom": {
+      "@id": "prov:wasQuotedFrom",
+      "@type": "@id"
+    },
     "comment": "rdfs:comment",
-    "License": "dct:License",
+    "custodian": {
+      "@id": "http://data.europa.eu/930/custodian",
+      "@type": "@id"
+    },
+    "Document": "foaf:Document",
+    "page": {
+      "@id": "foaf:page",
+      "@type": "@id"
+    },
+    "Group": "foaf:Group",
     "TransformationBySensorModelType": "http://www.opengis.net/cis/1.1/TransformationBySensorModelType",
     "uomLabels": {
       "@id": "http://www.opengis.net/cis/1.1/uomLabels",
       "@type": "xsd:string"
     },
     "contributor": "dct:contributor",
+    "originator": {
+      "@id": "http://data.europa.eu/930/originator",
+      "@type": "@id"
+    },
     "resolutionUnit": {
       "@id": "https://w3id.org/iliad/oim/metadata/resolutionUnit",
       "@type": "xsd:string"
@@ -2596,34 +3012,47 @@ Links to the schema:
     "AudioResource": "https://w3id.org/idsa/core/AudioResource",
     "DisplacementAxisNestType": "http://www.opengis.net/cis/1.1/DisplacementAxisNestType",
     "DomainSetType": "http://www.opengis.net/cis/1.1/DomainSetType",
+    "generalizationOf": {
+      "@id": "prov:generalizationOf",
+      "@type": "@id"
+    },
     "displacement": {
       "@id": "http://www.opengis.net/cis/1.1/displacement",
       "@type": "@id"
     },
     "minValue": "https://w3id.org/iliad/oim/metadata/minValue",
     "UnitReference": "http://www.opengis.net/swe/2.0/UnitReference",
-    "acrualPeriodicity": "dct:acrualPeriodicity",
-    "customLicense": {
-      "@id": "https://w3id.org/idsa/core/customLicense",
-      "@type": "xsd:anyURI"
+    "specializationOf": {
+      "@id": "prov:specializationOf",
+      "@type": "@id"
     },
     "code": {
       "@id": "http://www.opengis.net/swe/2.0/code",
       "@type": "xsd:string"
     },
+    "Identifier": "http://www.w3.org/ns/adms#Identifier",
     "epsg": {
       "@id": "https://w3id.org/iliad/oim/metadata/epsg",
       "@type": "xsd:string"
     },
+    "Home": "vcard:Home",
+    "ManagedEntity": "https://w3id.org/idsa/core/ManagedEntity",
     "format": "dct:format",
     "accessURL": {
-      "@id": "https://w3id.org/idsa/core/accessURL",
-      "@type": "xsd:anyURI"
+      "@id": "dcat:accessURL",
+      "@type": "@id"
     },
     "credits": {
       "@id": "https://w3id.org/iliad/oim/metadata/credits",
       "@type": "xsd:string"
     },
+    "sample": {
+      "@id": "http://www.w3.org/ns/adms#sample",
+      "@type": "@id"
+    },
+    "BoundingPolygon": "https://w3id.org/idsa/core/BoundingPolygon",
+    "Kind": "vcard:Kind",
+    "relation": "dct:relation",
     "temporal": "dct:temporal",
     "accrualPolicy": "dct:accrualPolicy",
     "resolution": {
@@ -2639,15 +3068,12 @@ Links to the schema:
       "@type": "@id"
     },
     "ConnectorEndpoint": "https://w3id.org/idsa/core/ConnectorEndpoint",
+    "DataStructureDefinition": "http://purl.org/linked-data/cube#DataStructureDefinition",
     "numberOfRecords": {
       "@id": "https://w3id.org/iliad/oim/metadata/numberOfRecords",
       "@type": "xsd:integer"
     },
     "RegularAxisType": "http://www.opengis.net/cis/1.1/RegularAxisType",
-    "standardLicense": {
-      "@id": "https://w3id.org/idsa/core/standardLicense",
-      "@type": "xsd:anyURI"
-    },
     "PhotonFluxDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity",
     "implements": {
       "@id": "http://www.w3.org/ns/ssn/implements",
@@ -2659,7 +3085,6 @@ Links to the schema:
     },
     "Attachable": "http://purl.org/linked-data/cube#Attachable",
     "QuantityValue": "http://qudt.org/schema/qudt/QuantityValue",
-    "Unit": "http://qudt.org/schema/qudt/Unit",
     "Line": "http://www.opengis.net/ont/sf#Line",
     "member": {
       "@id": "foaf:member",
@@ -2681,10 +3106,6 @@ Links to the schema:
       "@type": "@id"
     },
     "Platform": "http://www.w3.org/ns/sosa/Platform",
-    "concept": {
-      "@id": "http://purl.org/linked-data/cube#concept",
-      "@type": "@id"
-    },
     "Deployment": "http://www.w3.org/ns/ssn/Deployment",
     "MultiSurface": "http://www.opengis.net/ont/sf#MultiSurface",
     "TemporalDuration": "w3ctime:TemporalDuration",
@@ -2694,7 +3115,6 @@ Links to the schema:
       "@id": "http://www.opengis.net/ont/geosparql#asGeoJSON",
       "@type": "http://www.opengis.net/ont/geosparql#geoJSONLiteral"
     },
-    "Organization": "https://schema.org/Organization",
     "Volume": "http://purl.oclc.org/NET/ssnx/qu/dim#Volume",
     "Thing": "owl:Thing",
     "GFI_Feature": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
@@ -2720,10 +3140,8 @@ Links to the schema:
     "TemperatureDrift": "http://purl.oclc.org/NET/ssnx/qu/dim#TemperatureDrift",
     "RotationalSpeed": "http://purl.oclc.org/NET/ssnx/qu/dim#RotationalSpeed",
     "FeatureOfInterest": "http://www.w3.org/ns/sosa/FeatureOfInterest",
-    "ComponentProperty": "http://purl.org/linked-data/cube#ComponentProperty",
     "Class": "rdfs:Class",
     "ObservationCollection": "http://www.w3.org/ns/sosa/ObservationCollection",
-    "Geometry": "http://www.opengis.net/ont/geosparql#Geometry",
     "NumberPerArea": "http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerArea",
     "depiction": "foaf:depiction",
     "Curve": "http://www.opengis.net/ont/sf#Curve",
@@ -2745,15 +3163,6 @@ Links to the schema:
     "long": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
     "ActuatableProperty": "http://www.w3.org/ns/sosa/ActuatableProperty",
     "numericValue": "http://qudt.org/schema/qudt/numericValue",
-    "Concept": "skos:Concept",
-    "component": {
-      "@id": "http://purl.org/linked-data/cube#component",
-      "@type": "@id"
-    },
-    "measure": {
-      "@id": "http://purl.org/linked-data/cube#measure",
-      "@type": "@id"
-    },
     "SliceKey": "http://purl.org/linked-data/cube#SliceKey",
     "Result": "http://www.w3.org/ns/sosa/Result",
     "isHostedBy": {
@@ -2778,7 +3187,6 @@ Links to the schema:
       "@type": "@id"
     },
     "Measure": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Measure",
-    "Person": "foaf:Person",
     "Triangle": "http://www.opengis.net/ont/sf#Triangle",
     "note": "skos:note",
     "observationGroup": {
@@ -2830,7 +3238,6 @@ Links to the schema:
       "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#location",
       "@type": "@id"
     },
-    "ComponentSpecification": "http://purl.org/linked-data/cube#ComponentSpecification",
     "Scheme": "skos:Scheme",
     "hasEnd": {
       "@id": "w3ctime:hasEnd",
@@ -2900,7 +3307,6 @@ Links to the schema:
       "@id": "w3ctime:inXSDDateTimeStamp",
       "@type": "xsd:dateTimeStamp"
     },
-    "MeasureProperty": "http://purl.org/linked-data/cube#MeasureProperty",
     "PropertyKind": "http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind",
     "SpatialObject": "http://www.opengis.net/ont/geosparql#SpatialObject",
     "sliceStructure": {
@@ -2926,10 +3332,6 @@ Links to the schema:
     },
     "madeObservation": {
       "@id": "http://www.w3.org/ns/sosa/madeObservation",
-      "@type": "@id"
-    },
-    "unit": {
-      "@id": "http://qudt.org/schema/qudt/unit",
       "@type": "@id"
     },
     "date": "dct:date",
@@ -2989,7 +3391,6 @@ Links to the schema:
       "@id": "http://qudt.org/schema/qudt/hasQuantityKind",
       "@type": "@id"
     },
-    "DataStructureDefinition": "http://purl.org/linked-data/cube#DataStructureDefinition",
     "qb.Observation": "http://purl.org/linked-data/cube#Observation",
     "EnergyDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensity",
     "Sensor": "http://www.w3.org/ns/sosa/Sensor",
