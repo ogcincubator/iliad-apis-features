@@ -1,0 +1,1816 @@
+{
+    "@graph": [
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/grid_mapping/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/grid_mapping/1/"
+            },
+            "dce:identifier": "SDN:P31::grid_mapping",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::grid_mapping",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "grid_mapping"
+            },
+            "dc:identifier": "SDN:P31::grid_mapping",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies a variable that defines a grid mapping."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/leap_year/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/leap_year/1/"
+            },
+            "dce:identifier": "SDN:P31::leap_year",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::leap_year",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "leap_year"
+            },
+            "dc:identifier": "SDN:P31::leap_year",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Provides an example of a leap year for a user defined calendar. It is assumed that all years that differ from this year by a multiple of four are also leap years."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/cell_measures/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/cell_measures/1/"
+            },
+            "dce:identifier": "SDN:P31::cell_measures",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::cell_measures",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "cell_measures"
+            },
+            "dc:identifier": "SDN:P31::cell_measures",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies variables that contain cell areas or volumes."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/computed_standard_name/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/computed_standard_name/1/"
+            },
+            "dce:identifier": "SDN:P31::computed_standard_name",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::computed_standard_name",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "computed_standard_name"
+            },
+            "dc:identifier": "SDN:P31::computed_standard_name",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Indicates the standard name, from the standard name table, of the computed vertical coordinate values, computed according to the formula in the definition."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/valid_min/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/valid_min/1/"
+            },
+            "dce:identifier": "SDN:P31::valid_min",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::valid_min",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "valid_min"
+            },
+            "dc:identifier": "SDN:P31::valid_min",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Smallest valid value of a variable."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/references/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/references/1/"
+            },
+            "dce:identifier": "SDN:P31::references",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::references",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "references"
+            },
+            "dc:identifier": "SDN:P31::references",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "References that describe the data or methods used to produce it."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/Conventions/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/Conventions/1/"
+            },
+            "dce:identifier": "SDN:P31::Conventions",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::Conventions",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "Conventions"
+            },
+            "dc:identifier": "SDN:P31::Conventions",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Name of the conventions followed by the dataset."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/flag_meanings/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/flag_meanings/1/"
+            },
+            "dce:identifier": "SDN:P31::flag_meanings",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::flag_meanings",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "flag_meanings"
+            },
+            "dc:identifier": "SDN:P31::flag_meanings",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Use in conjunction with flag_values to provide descriptive words or phrases for each flag value. If multi-word phrases are used to describe the flag values, then the words within a phrase should be connected with underscores."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/node_count/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/node_count/1/"
+            },
+            "dce:identifier": "SDN:P31::node_count",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::node_count",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "node_count"
+            },
+            "dc:identifier": "SDN:P31::node_count",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies a variable indicating the count of nodes per geometry."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/coordinates/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/coordinates/1/"
+            },
+            "dce:identifier": "SDN:P31::coordinates",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::coordinates",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "coordinates"
+            },
+            "dc:identifier": "SDN:P31::coordinates",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies auxiliary coordinate variables, label variables, and alternate coordinate variables."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/calendar/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/calendar/1/"
+            },
+            "dce:identifier": "SDN:P31::calendar",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::calendar",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "calendar"
+            },
+            "dc:identifier": "SDN:P31::calendar",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Calendar used for encoding time axes."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/source/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/source/1/"
+            },
+            "dce:identifier": "SDN:P31::source",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::source",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "source"
+            },
+            "dc:identifier": "SDN:P31::source",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Method of production of the original data."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/geometry/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/geometry/1/"
+            },
+            "dce:identifier": "SDN:P31::geometry",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::geometry",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "geometry"
+            },
+            "dc:identifier": "SDN:P31::geometry",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies a variable that defines geometry."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/comment/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/comment/1/"
+            },
+            "dce:identifier": "SDN:P31::comment",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::comment",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "comment"
+            },
+            "dc:identifier": "SDN:P31::comment",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Miscellaneous information about the data or methods used to produce it."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/flag_values/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/flag_values/1/"
+            },
+            "dce:identifier": "SDN:P31::flag_values",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::flag_values",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "flag_values"
+            },
+            "dc:identifier": "SDN:P31::flag_values",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Provides a list of the flag values. Use in conjunction with flag_meanings."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/month_lengths/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/month_lengths/1/"
+            },
+            "dce:identifier": "SDN:P31::month_lengths",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::month_lengths",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "month_lengths"
+            },
+            "dc:identifier": "SDN:P31::month_lengths",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Specifies the length of each month in a non-leap year for a user defined calendar."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/valid_max/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/valid_max/1/"
+            },
+            "dce:identifier": "SDN:P31::valid_max",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::valid_max",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "valid_max"
+            },
+            "dc:identifier": "SDN:P31::valid_max",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Largest valid value of a variable."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/interior_ring/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/interior_ring/1/"
+            },
+            "dce:identifier": "SDN:P31::interior_ring",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::interior_ring",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "interior_ring"
+            },
+            "dc:identifier": "SDN:P31::interior_ring",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies a variable that indicates if polygon parts are interior rings (i.e., holes) or not."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/standard_error_multiplier/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/standard_error_multiplier/1/"
+            },
+            "dce:identifier": "SDN:P31::standard_error_multiplier",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::standard_error_multiplier",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "standard_error_multiplier"
+            },
+            "dc:identifier": "SDN:P31::standard_error_multiplier",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "If a data variable with a standard_name modifier of standard_error has this attribute, it indicates that the values are the stated multiple of one standard error."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/axis/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/axis/1/"
+            },
+            "dce:identifier": "SDN:P31::axis",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::axis",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "axis"
+            },
+            "dc:identifier": "SDN:P31::axis",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies latitude, longitude, vertical, or time axes."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/coordinate_interpolation/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/coordinate_interpolation/1/"
+            },
+            "dce:identifier": "SDN:P31::coordinate_interpolation",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::coordinate_interpolation",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "coordinate_interpolation"
+            },
+            "dc:identifier": "SDN:P31::coordinate_interpolation",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Indicates that coordinates have been compressed by sampling and identifies the tie point coordinate variables and their associated interpolation variables."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/sample_dimension/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/sample_dimension/1/"
+            },
+            "dce:identifier": "SDN:P31::sample_dimension",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::sample_dimension",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "sample_dimension"
+            },
+            "dc:identifier": "SDN:P31::sample_dimension",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "An attribute which identifies a count variable and names the sample dimension to which it applies. The count variable indicates that the contiguous ragged array representation is being used for a collection of features."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/scale_factor/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/scale_factor/1/"
+            },
+            "dce:identifier": "SDN:P31::scale_factor",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::scale_factor",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "scale_factor"
+            },
+            "dc:identifier": "SDN:P31::scale_factor",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "If present for a variable, the data are to be multiplied by this factor after the data are read by an application. See also the add_offset attribute. In cases where there is a strong constraint on dataset size, it is allowed to pack the coordinate variables (using add_offset and/or scale_factor), but this is not recommended in general."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/instance_dimension/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/instance_dimension/1/"
+            },
+            "dce:identifier": "SDN:P31::instance_dimension",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::instance_dimension",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "instance_dimension"
+            },
+            "dc:identifier": "SDN:P31::instance_dimension",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "An attribute which identifies an index variable and names the instance dimension to which it applies. The index variable indicates that the indexed ragged array representation is being used for a collection of features."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/ancillary_variables/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/ancillary_variables/1/"
+            },
+            "dce:identifier": "SDN:P31::ancillary_variables",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::ancillary_variables",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "ancillary_variables"
+            },
+            "dc:identifier": "SDN:P31::ancillary_variables",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies a variable that contains closely associated data, e.g., the measurement uncertainties of instrument data."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/missing_value/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/missing_value/1/"
+            },
+            "dce:identifier": "SDN:P31::missing_value",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::missing_value",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "missing_value"
+            },
+            "dc:identifier": "SDN:P31::missing_value",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "A value or values used to represent missing or undefined data. Allowed for auxiliary coordinate variables but not allowed for coordinate variables."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/cf_role/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/cf_role/1/"
+            },
+            "dce:identifier": "SDN:P31::cf_role",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::cf_role",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "cf_role"
+            },
+            "dc:identifier": "SDN:P31::cf_role",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies the roles of variables that identify features in discrete sampling geometries"
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/positive/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/positive/1/"
+            },
+            "dce:identifier": "SDN:P31::positive",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::positive",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "positive"
+            },
+            "dc:identifier": "SDN:P31::positive",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Direction of increasing vertical coordinate value."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/formula_terms/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/formula_terms/1/"
+            },
+            "dce:identifier": "SDN:P31::formula_terms",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::formula_terms",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "formula_terms"
+            },
+            "dc:identifier": "SDN:P31::formula_terms",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies variables that correspond to the terms in a formula."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/history/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/history/1/"
+            },
+            "dce:identifier": "SDN:P31::history",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::history",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "history"
+            },
+            "dc:identifier": "SDN:P31::history",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "List of the applications that have modified the original data."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/external_variables/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/external_variables/1/"
+            },
+            "dce:identifier": "SDN:P31::external_variables",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::external_variables",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "external_variables"
+            },
+            "dc:identifier": "SDN:P31::external_variables",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies variables which are named by cell_measures attributes in the file but which are not present in the file."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/nodes/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/nodes/1/"
+            },
+            "dce:identifier": "SDN:P31::nodes",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::nodes",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "nodes"
+            },
+            "dc:identifier": "SDN:P31::nodes",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies a coordinate node variable."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/valid_range/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/valid_range/1/"
+            },
+            "dce:identifier": "SDN:P31::valid_range",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::valid_range",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "valid_range"
+            },
+            "dc:identifier": "SDN:P31::valid_range",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Smallest and largest valid values of a variable."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/institution/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/institution/1/"
+            },
+            "dce:identifier": "SDN:P31::institution",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::institution",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "institution"
+            },
+            "dc:identifier": "SDN:P31::institution",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Where the original data was produced."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/standard_name/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/standard_name/1/"
+            },
+            "dce:identifier": "SDN:P31::standard_name",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::standard_name",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "standard_name"
+            },
+            "dc:identifier": "SDN:P31::standard_name",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "A standard name that references a description of a variable's content in the standard name table."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/climatology/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/climatology/1/"
+            },
+            "dce:identifier": "SDN:P31::climatology",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::climatology",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "climatology"
+            },
+            "dc:identifier": "SDN:P31::climatology",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies a climatology variable."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/cell_methods/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/cell_methods/1/"
+            },
+            "dce:identifier": "SDN:P31::cell_methods",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::cell_methods",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "cell_methods"
+            },
+            "dc:identifier": "SDN:P31::cell_methods",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Records the method used to derive data that represents cell values."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/geometry_type/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/geometry_type/1/"
+            },
+            "dce:identifier": "SDN:P31::geometry_type",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::geometry_type",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "geometry_type"
+            },
+            "dc:identifier": "SDN:P31::geometry_type",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Indicates the type of geometry present."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/featureType/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/featureType/1/"
+            },
+            "dce:identifier": "SDN:P31::featureType",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::featureType",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "featureType"
+            },
+            "dc:identifier": "SDN:P31::featureType",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Specifies the type of discrete sampling geometry to which the data in the scope of this attribute belongs, and implies that all data variables in the scope of this attribute contain collections of features of that type."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/long_name/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/long_name/1/"
+            },
+            "dce:identifier": "SDN:P31::long_name",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::long_name",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "long_name"
+            },
+            "dc:identifier": "SDN:P31::long_name",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "A descriptive name that indicates a variable's content. This name is not standardized."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/part_node_count/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/part_node_count/1/"
+            },
+            "dce:identifier": "SDN:P31::part_node_count",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::part_node_count",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "part_node_count"
+            },
+            "dc:identifier": "SDN:P31::part_node_count",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies a variable providing the count of nodes per geometry part."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/add_offset/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/add_offset/1/"
+            },
+            "dce:identifier": "SDN:P31::add_offset",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::add_offset",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "add_offset"
+            },
+            "dc:identifier": "SDN:P31::add_offset",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "If present for a variable, this number is to be added to the data after it is read by an application. If both scale_factor and add_offset attributes are present, the data are first scaled before the offset is added. In cases where there is a strong constraint on dataset size, it is allowed to pack the coordinate variables (using add_offset and/or scale_factor), but this is not recommended in general."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/actual_range/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/actual_range/1/"
+            },
+            "dce:identifier": "SDN:P31::actual_range",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::actual_range",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "actual_range"
+            },
+            "dc:identifier": "SDN:P31::actual_range",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "The smallest and the largest valid non-missing values occurring in the variable."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/units/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/units/1/"
+            },
+            "dce:identifier": "SDN:P31::units",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::units",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "units"
+            },
+            "dc:identifier": "SDN:P31::units",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Units of a variable's content."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/leap_month/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/leap_month/1/"
+            },
+            "dce:identifier": "SDN:P31::leap_month",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::leap_month",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "leap_month"
+            },
+            "dc:identifier": "SDN:P31::leap_month",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Specifies which month is lengthened by a day in leap years for a user defined calendar."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/title/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/title/1/"
+            },
+            "dce:identifier": "SDN:P31::title",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::title",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "title"
+            },
+            "dc:identifier": "SDN:P31::title",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Short description of the file contents."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/flag_masks/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/flag_masks/1/"
+            },
+            "dce:identifier": "SDN:P31::flag_masks",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::flag_masks",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "flag_masks"
+            },
+            "dc:identifier": "SDN:P31::flag_masks",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Provides a list of bit fields expressing Boolean or enumerated flags."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/compress/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/compress/1/"
+            },
+            "dce:identifier": "SDN:P31::compress",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::compress",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "compress"
+            },
+            "dc:identifier": "SDN:P31::compress",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Records dimensions which have been compressed by gathering."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/node_coordinates/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/node_coordinates/1/"
+            },
+            "dce:identifier": "SDN:P31::node_coordinates",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::node_coordinates",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "node_coordinates"
+            },
+            "dc:identifier": "SDN:P31::node_coordinates",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies variables that contain geometry node coordinates."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/dimensions/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/dimensions/1/"
+            },
+            "dce:identifier": "SDN:P31::dimensions",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::dimensions",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "dimensions"
+            },
+            "dc:identifier": "SDN:P31::dimensions",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies the dimensions that define a domain variable."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/bounds/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/bounds/1/"
+            },
+            "dce:identifier": "SDN:P31::bounds",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::bounds",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "bounds"
+            },
+            "dc:identifier": "SDN:P31::bounds",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Identifies a boundary variable."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/_FillValue/",
+            "pav:authoredOn": "2023-03-14 14:42:43.0",
+            "pav:hasCurrentVersion": {
+                "@id": "http://vocab.nerc.ac.uk/collection/P31/current/_FillValue/1/"
+            },
+            "dce:identifier": "SDN:P31::_FillValue",
+            "pav:version": "1",
+            "skos:notation": "SDN:P31::_FillValue",
+            "skos:altLabel": "",
+            "dc:date": "2023-03-14 14:42:43.0",
+            "owl:versionInfo": "1",
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "_FillValue"
+            },
+            "dc:identifier": "SDN:P31::_FillValue",
+            "skos:note": {
+                "@language": "en",
+                "@value": "accepted"
+            },
+            "owl:deprecated": "false",
+            "void:inDataset": {
+                "@id": "http://vocab.nerc.ac.uk/.well-known/void"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "A value used to represent missing or undefined data. Allowed for auxiliary coordinate variables but not allowed for coordinate variables."
+            },
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "http://vocab.nerc.ac.uk/collection/P31/current/",
+            "skos:member": [
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/grid_mapping/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/leap_year/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/cell_measures/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/computed_standard_name/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/valid_min/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/references/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/Conventions/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/flag_meanings/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/node_count/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/coordinates/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/calendar/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/source/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/geometry/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/comment/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/flag_values/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/month_lengths/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/valid_max/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/interior_ring/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/standard_error_multiplier/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/axis/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/coordinate_interpolation/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/sample_dimension/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/scale_factor/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/instance_dimension/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/ancillary_variables/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/missing_value/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/cf_role/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/positive/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/formula_terms/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/history/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/external_variables/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/nodes/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/valid_range/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/institution/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/standard_name/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/climatology/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/cell_methods/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/geometry_type/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/featureType/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/long_name/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/part_node_count/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/add_offset/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/actual_range/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/units/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/leap_month/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/title/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/flag_masks/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/compress/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/node_coordinates/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/dimensions/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/_FillValue/"
+                },
+                {
+                    "@id": "http://vocab.nerc.ac.uk/collection/P31/current/bounds/"
+                }
+            ],
+            "@type": "skos:Collection",
+            "dc:publisher": "Natural Environment Research Council",
+            "dc:description": "Terms used to define the recognised metadata attributes for the description of CF-compliant data stored in NetCDF files.",
+            "dc:title": "Climate and Forecast Attribute Names",
+            "skos:prefLabel": "Climate and Forecast Attribute Names",
+            "owl:versionInfo": "1",
+            "dc:date": "2023-03-15 02:00:02.0",
+            "skos:altLabel": "CF Attributes",
+            "dc:creator": "Climate and Forecast Standard Names Committee",
+            "dc:alternative": "CF Attributes",
+            "rdfs:comment": "Formal vocabulary specialist group within the governance of the Climate and Forecast Community Metadata Standard.",
+            "grg:RE_RegisterOwner": "Climate and Forecast Standard Names Committee",
+            "grg:RE_RegisterManager": "British Oceanographic Data Centre",
+            "dc:license": {
+                "@id": "https://creativecommons.org/licenses/by/4.0/"
+            }
+        }
+    ],
+    "@context": {
+        "cpm": "http://purl.org/voc/cpm#",
+        "qudt": "https://qudt.org/2.1/schema/qudt#",
+        "void": "http://rdfs.org/ns/void#",
+        "pav": "http://purl.org/pav/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "dce": "http://purl.org/dc/elements/1.1/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "ns0": "http://www.w3.org/ns/dx/conneg/altr#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "iop": "https://w3id.org/iadopt/ont#",
+        "ns1": "http://www.w3.org/ns/dx/prof/",
+        "puv": "https://w3id.org/env/puv#",
+        "semapv": "http://w3id.org/semapv/vocab/",
+        "dct": "http://purl.org/dc/terms/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "reg": "http://purl.org/linked-data/registry#",
+        "sssom": "https://w3id.org/sssom/schema/",
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "grg": "http://www.isotc211.org/schemas/grg/",
+        "prov": "https://www.w3.org/ns/prov#",
+        "dc": "http://purl.org/dc/terms/"
+    }
+}
