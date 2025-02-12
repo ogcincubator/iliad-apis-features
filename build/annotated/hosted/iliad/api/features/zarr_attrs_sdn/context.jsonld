@@ -162,6 +162,78 @@
     "MultiPolygonSeries": "covjsondt:MultiPolygonSeries",
     "MultiPolygon": "covjsondt:MultiPolygon",
     "Polygon": "covjsondt:Polygon",
+    "broader": {
+      "@id": "skos:broader",
+      "@type": "@id"
+    },
+    "prefLabel": "skos:prefLabel",
+    "identifier": "dct:identifier",
+    "inDataset": {
+      "@id": "void:inDataset",
+      "@type": "@id"
+    },
+    "related": {
+      "@id": "skos:related",
+      "@type": "@id"
+    },
+    "altLabel": "skos:altLabel",
+    "definition": "skos:definition",
+    "note": "skos:note",
+    "authoredOn": "pav:authoredOn",
+    "notation": "skos:notation",
+    "version": "dcat:version",
+    "hasVersion": {
+      "@id": "dct:hasVersion",
+      "@type": "@id"
+    },
+    "versionInfo": "owl:versionInfo",
+    "deprecated": "owl:deprecated",
+    "hasCurrentVersion": {
+      "@id": "pav:hasCurrentVersion",
+      "@type": "@id"
+    },
+    "inScheme": {
+      "@id": "skos:inScheme",
+      "@type": "@id"
+    },
+    "sameAs": {
+      "@id": "owl:sameAs",
+      "@type": "@id"
+    },
+    "narrower": {
+      "@id": "skos:narrower",
+      "@type": "@id"
+    },
+    "isReplacedBy": {
+      "@id": "dct:isReplacedBy",
+      "@type": "@id"
+    },
+    "replaces": {
+      "@id": "dct:replaces",
+      "@type": "@id"
+    },
+    "member": {
+      "@id": "http://rs.tdwg.org/dwc/terms/member",
+      "@type": "@id"
+    },
+    "conformsTo": {
+      "@id": "dct:conformsTo",
+      "@type": "@id"
+    },
+    "creator": "dct:creator",
+    "seeAlso": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id"
+    },
+    "RE_RegisterManager": "grg:RE_RegisterManager",
+    "publisher": "dct:publisher",
+    "comment": "rdfs:comment",
+    "RE_RegisterOwner": "grg:RE_RegisterOwner",
+    "license": {
+      "@id": "dct:license",
+      "@type": "@id"
+    },
+    "alternative": "dct:alternative",
     "IndexAxisType": "http://www.opengis.net/cis/1.1/IndexAxisType",
     "spatial": "dct:spatial",
     "previewInfo": {
@@ -194,7 +266,6 @@
       "@id": "http://www.w3.org/ns/prov#wasGeneratedBy",
       "@type": "@id"
     },
-    "versionInfo": "owl:versionInfo",
     "created": "dct:created",
     "VDataBlockType": "http://www.opengis.net/cis/1.1/VDataBlockType",
     "ImageRepresentation": "https://w3id.org/idsa/core/ImageRepresentation",
@@ -218,7 +289,6 @@
       "@type": "@id"
     },
     "Relationship": "https://uri.etsi.org/ngsi-ld/Relationship",
-    "license": "dct:license",
     "concept": {
       "@id": "http://purl.org/linked-data/cube#concept",
       "@type": "@id"
@@ -269,7 +339,6 @@
       "@type": "@id"
     },
     "ComponentProperty": "http://purl.org/linked-data/cube#ComponentProperty",
-    "hasVersion": "dct:hasVersion",
     "dcat.hasVersion": {
       "@id": "dcat:hasVersion",
       "@type": "@id"
@@ -446,7 +515,6 @@
       "@id": "https://w3id.org/iliad/oim/metadata/searchText",
       "@type": "xsd:string"
     },
-    "notation": "skos:notation",
     "Participant": "https://w3id.org/idsa/core/Participant",
     "profileSchema": {
       "@id": "https://w3id.org/iliad/oim/metadata/profileSchema",
@@ -461,7 +529,6 @@
     "dct.Agent": "dct:Agent",
     "prov.Agent": "http://www.w3.org/ns/prov#Agent",
     "ContentType": "https://w3id.org/idsa/core/ContentType",
-    "creator": "dct:creator",
     "name": {
       "@id": "https://schema.org/name",
       "@type": "rdfs:Literal"
@@ -526,7 +593,6 @@
       "@type": "@id"
     },
     "PartitionSetType": "http://www.opengis.net/cis/1.1/PartitionSetType",
-    "identifier": "dct:identifier",
     "adms.identifier": {
       "@id": "http://www.w3.org/ns/adms#identifier",
       "@type": "@id"
@@ -574,7 +640,6 @@
       "@type": "@id"
     },
     "isDefinedBy": "rdfs:isDefinedBy",
-    "definition": "skos:definition",
     "swe.definition": {
       "@id": "http://www.opengis.net/swe/2.0/definition",
       "@type": "xsd:string"
@@ -604,7 +669,6 @@
     "Property": "https://saref.etsi.org/core/Property",
     "source": "https://smartdatamodels.org/source",
     "MeasureProperty": "http://purl.org/linked-data/cube#MeasureProperty",
-    "publisher": "dct:publisher",
     "mediaType": "dct:mediaType",
     "uom": {
       "@id": "http://www.opengis.net/swe/2.0/uom",
@@ -615,7 +679,6 @@
       "@id": "http://www.opengis.net/cis/1.1/upperBound",
       "@type": "xsd:integer"
     },
-    "version": "dcat:version",
     "modified": "dct:modified",
     "Frequency": "dct:Frequency",
     "idsa.Frequency": "https://w3id.org/idsa/core/Frequency",
@@ -652,7 +715,6 @@
       "@id": "https://w3id.org/idsa/core/checkSum",
       "@type": "xsd:string"
     },
-    "seeAlso": "rdfs:seeAlso",
     "contentType": {
       "@id": "https://w3id.org/idsa/core/contentType",
       "@type": "@id"
@@ -705,7 +767,6 @@
       "@id": "http://www.w3.org/ns/prov#wasQuotedFrom",
       "@type": "@id"
     },
-    "comment": "rdfs:comment",
     "custodian": {
       "@id": "http://data.europa.eu/930/custodian",
       "@type": "@id"
@@ -738,7 +799,6 @@
       "@id": "http://www.w3.org/ns/prov#generalizationOf",
       "@type": "@id"
     },
-    "conformsTo": "dct:conformsTo",
     "displacement": {
       "@id": "http://www.opengis.net/cis/1.1/displacement",
       "@type": "@id"
@@ -810,10 +870,6 @@
     "Attachable": "http://purl.org/linked-data/cube#Attachable",
     "QuantityValue": "http://qudt.org/schema/qudt/QuantityValue",
     "Line": "http://www.opengis.net/ont/sf#Line",
-    "member": {
-      "@id": "http://rs.tdwg.org/dwc/terms/member",
-      "@type": "@id"
-    },
     "generatedAtTime": {
       "@id": "http://www.w3.org/ns/prov#generatedAtTime",
       "@type": "xsd:dateTime"
@@ -914,7 +970,6 @@
     },
     "Measure": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Measure",
     "Triangle": "http://www.opengis.net/ont/sf#Triangle",
-    "note": "skos:note",
     "observationGroup": {
       "@id": "http://purl.org/linked-data/cube#observationGroup",
       "@type": "@id"
@@ -991,7 +1046,6 @@
     "qu.QuantityKind": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind",
     "SpatialObjectCollection": "http://www.opengis.net/ont/geosparql#SpatialObjectCollection",
     "Distance": "http://purl.oclc.org/NET/ssnx/qu/dim#Distance",
-    "deprecated": "owl:deprecated",
     "Radiance": "http://purl.oclc.org/NET/ssnx/qu/dim#Radiance",
     "Duration": "http://purl.oclc.org/NET/ssnx/qu/dim#Duration",
     "TIN": "http://www.opengis.net/ont/sf#TIN",
@@ -1101,13 +1155,11 @@
     "Sampling": "http://www.w3.org/ns/sosa/Sampling",
     "Power": "http://purl.oclc.org/NET/ssnx/qu/dim#Power",
     "OM_Observation": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-    "prefLabel": "skos:prefLabel",
     "Surface": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Surface",
     "sliceKey": {
       "@id": "http://purl.org/linked-data/cube#sliceKey",
       "@type": "@id"
     },
-    "inScheme": "skos:inScheme",
     "dct.description": "dct:description",
     "MultiCurve": "http://www.opengis.net/ont/sf#MultiCurve",
     "hasQuantityKind": {
@@ -1503,9 +1555,6 @@
     "hydra": "http://www.w3.org/ns/hydra/core#",
     "covjsondt": "https://covjson.org/def/domainTypes#",
     "rel": "http://www.iana.org/assignments/relation/",
-    "cpm": "http://purl.org/voc/cpm#",
-    "void": "http://rdfs.org/ns/void#",
-    "pav": "http://purl.org/pav/",
     "owl": "http://www.w3.org/2002/07/owl#",
     "dce": "http://purl.org/dc/elements/1.1/",
     "ns0": "http://www.w3.org/ns/dx/conneg/altr#",
@@ -1514,12 +1563,15 @@
     "ns1": "http://www.w3.org/ns/dx/prof/",
     "puv": "https://w3id.org/env/puv#",
     "semapv": "http://w3id.org/semapv/vocab/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "reg": "http://purl.org/linked-data/registry#",
-    "sssom": "https://w3id.org/sssom/schema/",
     "dcat": "http://www.w3.org/ns/dcat#",
     "grg": "http://www.isotc211.org/schemas/grg/",
     "prov": "https://www.w3.org/ns/prov#",
+    "cpm": "http://purl.org/voc/cpm#",
+    "void": "http://rdfs.org/ns/void#",
+    "pav": "http://purl.org/pav/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "sssom": "https://w3id.org/sssom/schema/",
     "dc": "http://purl.org/dc/terms/",
     "@version": 1.1
   }
