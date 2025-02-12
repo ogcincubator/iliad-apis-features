@@ -51,9 +51,9 @@
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2024-10-11T10:01:17.174894+00:00</small>
+            <small class="datetime">Generated at 2024-10-23T10:20:01.577119+00:00</small>
                 <p class="summary fw-semibold text-danger">
-                    Number of passing building blocks: 5 / 9 (55.56%)
+                    Number of passing building blocks: 5 / 10 (50%)
                 </p>
             <div class="text-end small" id="expand-collapse">
                 <a href="#" class="expand-all">Expand all</a>
@@ -302,6 +302,67 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.hosted.iliad.api.features.stac_multidim_data" id="bblock-ogc.hosted.iliad.api.features.stac_multidim_data">
+                            <h2 class="accordion-header bblock-title">
+                                <button class="accordion-button " type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.hosted\.iliad\.api\.features\.stac_multidim_data">
+                                    <div class="flex-fill">
+                                        STAC records with dcat mapping
+                                        <small class="ms-2 bblock-id">ogc.hosted.iliad.api.features.stac_multidim_data</small>
+                                    </div>
+
+                                    <span class="badge text-bg-danger me-2">
+                                            Tests Failed
+                                            (0% passed)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse show" id="bblock-collapse-ogc.hosted.iliad.api.features.stac_multidim_data">
+                                <div class="accordion-body">
+                                        <p class="summary fw-semibold text-danger">
+                                            Test passed: 0 / 1
+                                        </p>
+                                        <div class="card mb-2 validation-item ">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-7"
+                                                            aria-expanded="false" aria-controls="uid-7"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="hosted/iliad/api/features/stac_multidim_data/example_1_1.json" target="_blank">example_1_1.json</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-danger me-2">Failed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-7">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                    <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
+                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                    <div class="font-monospace entry-message section-json_schema text-danger">ValidationError: {&#x27;interval&#x27;: [&#x27;2023-04-09 01:00:00+00:00&#x27;, &#x27;2023-04-12 01:00:00+00:00&#x27;], &#x27;resolution&#x27;: &#x27;P1D&#x27;} is not valid under any of the given schemas
+
+Failed validating &#x27;oneOf&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;properties&#x27;][&#x27;time&#x27;]:
+    {&#x27;oneOf&#x27;: [{&#x27;enum&#x27;: [None]},
+               {&#x27;$ref&#x27;: &#x27;https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/time/schema.json&#x27;}]}
+
+On instance[&#x27;time&#x27;]:
+    {&#x27;interval&#x27;: [&#x27;2023-04-09 01:00:00+00:00&#x27;, &#x27;2023-04-12 01:00:00+00:00&#x27;],
+     &#x27;resolution&#x27;: &#x27;P1D&#x27;}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.hosted.iliad.api.features.zarr_array_metadata" id="bblock-ogc.hosted.iliad.api.features.zarr_array_metadata">
                             <h2 class="accordion-header bblock-title">
                                 <button class="accordion-button " type="button"
@@ -327,8 +388,8 @@
                                             <div class="card-body">
                                                 <div class="card-title mb-0">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-7"
-                                                            aria-expanded="false" aria-controls="uid-7"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-8"
+                                                            aria-expanded="false" aria-controls="uid-8"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -339,7 +400,7 @@
                                                             <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-7">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-8">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
@@ -388,8 +449,8 @@ On instance[&#x27;dtype&#x27;]:
                                             <div class="card-body">
                                                 <div class="card-title mb-0">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-8"
-                                                            aria-expanded="false" aria-controls="uid-8"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-9"
+                                                            aria-expanded="false" aria-controls="uid-9"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -400,7 +461,7 @@ On instance[&#x27;dtype&#x27;]:
                                                             <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-8">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-9">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
@@ -417,8 +478,8 @@ On instance[&#x27;dtype&#x27;]:
                                             <div class="card-body">
                                                 <div class="card-title mb-0">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-9"
-                                                            aria-expanded="false" aria-controls="uid-9"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-10"
+                                                            aria-expanded="false" aria-controls="uid-10"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -429,7 +490,7 @@ On instance[&#x27;dtype&#x27;]:
                                                             <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-9">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-10">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_2_1.json from examples</div>
@@ -446,8 +507,8 @@ On instance[&#x27;dtype&#x27;]:
                                             <div class="card-body">
                                                 <div class="card-title mb-0">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-10"
-                                                            aria-expanded="false" aria-controls="uid-10"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-11"
+                                                            aria-expanded="false" aria-controls="uid-11"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -458,7 +519,7 @@ On instance[&#x27;dtype&#x27;]:
                                                             <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-10">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-11">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_3_1.json from examples</div>
@@ -483,8 +544,8 @@ On instance[&#x27;units&#x27;]:
                                             <div class="card-body">
                                                 <div class="card-title mb-0">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-11"
-                                                            aria-expanded="false" aria-controls="uid-11"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-12"
+                                                            aria-expanded="false" aria-controls="uid-12"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -495,7 +556,7 @@ On instance[&#x27;units&#x27;]:
                                                             <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-11">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-12">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_4_1.json from examples</div>
@@ -512,8 +573,8 @@ On instance[&#x27;units&#x27;]:
                                             <div class="card-body">
                                                 <div class="card-title mb-0">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-12"
-                                                            aria-expanded="false" aria-controls="uid-12"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-13"
+                                                            aria-expanded="false" aria-controls="uid-13"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -524,7 +585,7 @@ On instance[&#x27;units&#x27;]:
                                                             <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-12">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-13">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_5_1.json from examples</div>
@@ -549,8 +610,8 @@ On instance[&#x27;units&#x27;]:
                                             <div class="card-body">
                                                 <div class="card-title mb-0">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-13"
-                                                            aria-expanded="false" aria-controls="uid-13"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-14"
+                                                            aria-expanded="false" aria-controls="uid-14"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -561,7 +622,7 @@ On instance[&#x27;units&#x27;]:
                                                             <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-13">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-14">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_6_1.json from examples</div>
@@ -586,8 +647,8 @@ On instance[&#x27;units&#x27;]:
                                             <div class="card-body">
                                                 <div class="card-title mb-0">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-14"
-                                                            aria-expanded="false" aria-controls="uid-14"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-15"
+                                                            aria-expanded="false" aria-controls="uid-15"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -598,7 +659,7 @@ On instance[&#x27;units&#x27;]:
                                                             <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-14">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-15">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_7_1.json from examples</div>
@@ -623,8 +684,8 @@ On instance[&#x27;units&#x27;]:
                                             <div class="card-body">
                                                 <div class="card-title mb-0">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-15"
-                                                            aria-expanded="false" aria-controls="uid-15"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-16"
+                                                            aria-expanded="false" aria-controls="uid-16"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -635,7 +696,7 @@ On instance[&#x27;units&#x27;]:
                                                             <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-15">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-16">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_8_1.json from examples</div>
@@ -676,8 +737,8 @@ On instance[&#x27;units&#x27;]:
                                             <div class="card-body">
                                                 <div class="card-title mb-0">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-16"
-                                                            aria-expanded="false" aria-controls="uid-16"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-17"
+                                                            aria-expanded="false" aria-controls="uid-17"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -688,7 +749,7 @@ On instance[&#x27;units&#x27;]:
                                                             <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-16">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-17">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
@@ -783,8 +844,8 @@ On instance[&#x27;parameters&#x27;][&#x27;PLE_fishing_suitability&#x27;][&#x27;d
                                             <div class="card-body">
                                                 <div class="card-title mb-0">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-17"
-                                                            aria-expanded="false" aria-controls="uid-17"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-18"
+                                                            aria-expanded="false" aria-controls="uid-18"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -795,7 +856,7 @@ On instance[&#x27;parameters&#x27;][&#x27;PLE_fishing_suitability&#x27;][&#x27;d
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-17">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-18">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
@@ -817,61 +878,12 @@ On instance[&#x27;parameters&#x27;][&#x27;PLE_fishing_suitability&#x27;][&#x27;d
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
-</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card mb-2 validation-item ">
-                                            <div class="card-body">
-                                                <div class="card-title mb-0">
-                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-18"
-                                                            aria-expanded="false" aria-controls="uid-18"
-                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                                        <i class="bi bi-caret-right-fill caret"></i>
-                                                        Details
-                                                    </button>
-                                                    <a href="hosted/iliad/api/features/iliad-jellyfish/example_2_1.json" target="_blank">example_2_1.json</a>
-                                                    <span class="badge bg-secondary example">Example</span>
-                                                    <div class="float-end">
-                                                            <span class="badge text-bg-success me-2">Passed</span>
-                                                    </div>
-                                                </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-18">
-                                                    <div class="validation-text-inner">
-                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                    <div class="font-monospace entry-message section-files ">Using example_2_1.json from examples</div>
-                                                                    <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                                    <div class="font-monospace entry-message section-files ">Output JSON-LD example_2_1.jsonld created</div>
-                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_2_1.ttl created</div>
-                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
-                                                                    <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
-                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/oim-obs/rules.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/oim-obs/rules.shacl:
- - Shape :force-linked-data-observedProperty: _:Nddf75e8648d547c2a2e6903f46dbb510,&lt;https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
 </div>
                                                     </div>
                                                 </div>
@@ -887,13 +899,62 @@ On instance[&#x27;parameters&#x27;][&#x27;PLE_fishing_suitability&#x27;][&#x27;d
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
                                                     </button>
-                                                    <a href="hosted/iliad/api/features/iliad-jellyfish/example_3_1.ttl" target="_blank">example_3_1.ttl</a>
+                                                    <a href="hosted/iliad/api/features/iliad-jellyfish/example_2_1.json" target="_blank">example_2_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-19">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                    <div class="font-monospace entry-message section-files ">Using example_2_1.json from examples</div>
+                                                                    <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output JSON-LD example_2_1.jsonld created</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_2_1.ttl created</div>
+                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                    <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/oim-obs/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/oim-obs/rules.shacl:
+ - Shape :force-linked-data-observedProperty: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;,_:N2ab4d9186b1441d3bf9d07d7fa667499,&lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata&gt;
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-2 validation-item ">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-20"
+                                                            aria-expanded="false" aria-controls="uid-20"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="hosted/iliad/api/features/iliad-jellyfish/example_3_1.ttl" target="_blank">example_3_1.ttl</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-20">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_3_1.ttl from examples</div>
@@ -911,12 +972,12 @@ On instance[&#x27;parameters&#x27;][&#x27;PLE_fishing_suitability&#x27;][&#x27;d
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata&gt;
 </div>
                                                     </div>
                                                 </div>
