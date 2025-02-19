@@ -45,7 +45,9 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
   "epsg_code": "EPSG:4326",
   "grid_mapping_name": "latitude_longitude",
   "inverse_flattening": 298.257223563,
-  "semi_major_axis": 6378137.0
+  "semi_major_axis": 6378137,
+  "sdn_parameter_urn": null,
+  "sdn_uom_urn": null
 }
 ```
 
@@ -57,7 +59,7 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
 [] :epsg_code "EPSG:4326" ;
     :grid_mapping_name "latitude_longitude" ;
     :inverse_flattening 2.982572e+02 ;
-    :semi_major_axis 6.378137e+06 .
+    :semi_major_axis 6378137 .
 
 
 ```
@@ -95,9 +97,13 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
   "grid_mapping": "crs",
   "long_name": "Latitude",
   "sdn_parameter_name": "Latitude north",
-  "sdn_parameter_urn": "SDN:P01::ALATZZ01",
+  "sdn_parameter_urn": {
+    "@id": "http://vocab.nerc.ac.uk/collection/P01/ALATZZ01"
+  },
   "sdn_uom_name": "Degrees north",
-  "sdn_uom_urn": "SDN:P06::DEGN",
+  "sdn_uom_urn": {
+    "@id": "http://vocab.nerc.ac.uk/collection/P06/DEGN"
+  },
   "standard_name": "latitude",
   "units": "degrees_north"
 }
@@ -114,9 +120,9 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
     :grid_mapping "crs" ;
     :long_name "Latitude" ;
     :sdn_parameter_name "Latitude north" ;
-    :sdn_parameter_urn "SDN:P01::ALATZZ01" ;
+    :sdn_parameter_urn <http://vocab.nerc.ac.uk/collection/P01/ALATZZ01> ;
     :sdn_uom_name "Degrees north" ;
-    :sdn_uom_urn "SDN:P06::DEGN" ;
+    :sdn_uom_urn <http://vocab.nerc.ac.uk/collection/P06/DEGN> ;
     :standard_name "latitude" ;
     :units "degrees_north" .
 
@@ -158,9 +164,13 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
   "calendar": "julian",
   "long_name": "Chronological Julian Date",
   "sdn_parameter_name": "Julian Date (chronological)",
-  "sdn_parameter_urn": "SDN:P01::CJDY1101",
+  "sdn_parameter_urn": {
+    "@id": "http://vocab.nerc.ac.uk/collection/P01/CJDY1101"
+  },
   "sdn_uom_name": "Days",
-  "sdn_uom_urn": "SDN:P06::UTAA",
+  "sdn_uom_urn": {
+    "@id": "http://vocab.nerc.ac.uk/collection/P06/UTAA"
+  },
   "standard_name": "time",
   "units": "seconds since 2024-10-01 01:00:00.000000"
 }
@@ -179,9 +189,9 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
     :ancillary_variables "TIME_SEADATANET_QC" ;
     :long_name "Chronological Julian Date" ;
     :sdn_parameter_name "Julian Date (chronological)" ;
-    :sdn_parameter_urn "SDN:P01::CJDY1101" ;
+    :sdn_parameter_urn <http://vocab.nerc.ac.uk/collection/P01/CJDY1101> ;
     :sdn_uom_name "Days" ;
-    :sdn_uom_urn "SDN:P06::UTAA" ;
+    :sdn_uom_urn <http://vocab.nerc.ac.uk/collection/P06/UTAA> ;
     :standard_name "time" ;
     :units "seconds since 2024-10-01 01:00:00.000000" .
 
@@ -221,9 +231,13 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
   "coordinates": "TIME DEPTH LATITUDE LONGITUDE",
   "long_name": "SST",
   "sdn_parameter_name": "Temperature of the water body by in-situ thermistor on acoustic doppler current profiler (ADCP) transducer",
-  "sdn_parameter_urn": "SDN:P01::TEMPTADC",
+  "sdn_parameter_urn": {
+    "@id": "http://vocab.nerc.ac.uk/collection/P01/TEMPTADC"
+  },
   "sdn_uom_name": "Degrees Celsius",
-  "sdn_uom_urn": "SDN:P06::UPAA",
+  "sdn_uom_urn": {
+    "@id": "http://vocab.nerc.ac.uk/collection/P06/UPAA"
+  },
   "standard_name": "sea_surface_temperature",
   "units": "degrees celsius"
 }
@@ -239,9 +253,9 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
     :coordinates "TIME DEPTH LATITUDE LONGITUDE" ;
     :long_name "SST" ;
     :sdn_parameter_name "Temperature of the water body by in-situ thermistor on acoustic doppler current profiler (ADCP) transducer" ;
-    :sdn_parameter_urn "SDN:P01::TEMPTADC" ;
+    :sdn_parameter_urn <http://vocab.nerc.ac.uk/collection/P01/TEMPTADC> ;
     :sdn_uom_name "Degrees Celsius" ;
-    :sdn_uom_urn "SDN:P06::UPAA" ;
+    :sdn_uom_urn <http://vocab.nerc.ac.uk/collection/P06/UPAA> ;
     :standard_name "sea_surface_temperature" ;
     :units "degrees celsius" .
 

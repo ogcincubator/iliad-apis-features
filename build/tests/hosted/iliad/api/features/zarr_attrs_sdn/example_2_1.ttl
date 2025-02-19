@@ -7,9 +7,9 @@
     :grid_mapping "crs" ;
     :long_name "Latitude" ;
     :sdn_parameter_name "Latitude north" ;
-    :sdn_parameter_urn "SDN:P01::ALATZZ01" ;
+    :sdn_parameter_urn <http://vocab.nerc.ac.uk/collection/P01/ALATZZ01> ;
     :sdn_uom_name "Degrees north" ;
-    :sdn_uom_urn "SDN:P06::DEGN" ;
+    :sdn_uom_urn <http://vocab.nerc.ac.uk/collection/P06/DEGN> ;
     :standard_name "latitude" ;
     :units "degrees_north" .
 
