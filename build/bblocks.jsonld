@@ -106,7 +106,7 @@
   "name": "Building Blocks - ILIAD API Profiles",
   "abstract": "(Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability.",
   "description": "Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. \n\nThus, a pilot project to monitor Jellyfish swarms using Citizen Science will reuse common patterns for Citizen Science observations, which in turn we reuse a common pattern for observations, using an underlying component of the OIM - the OGC Observations model (SOSA ontology). \n",
-  "modified": "2025-03-21T15:43:24.680309",
+  "modified": "2025-03-21T16:12:02.295692",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"e8df6b22cb38da4f600f3a0292c58fdef7734f97",
@@ -665,10 +665,10 @@
         ]
       },
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
         "ogc.sosa.properties.observation",
-        "ogc.sosa.features.observationCollection",
-        "ogc.sosa.features.observation"
+        "ogc.sosa.features.observation",
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.sosa.features.observationCollection"
       ],
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
       "schema": {
@@ -815,7 +815,7 @@
       "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish/",
       "rdfData": [],
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/iliad-jellyfish/",
       "documentation": {
         "markdown": {
