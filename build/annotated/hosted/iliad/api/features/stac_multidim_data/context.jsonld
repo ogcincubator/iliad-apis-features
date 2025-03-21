@@ -871,6 +871,10 @@
     "long": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
     "ActuatableProperty": "http://www.w3.org/ns/sosa/ActuatableProperty",
     "numericValue": "http://qudt.org/schema/qudt/numericValue",
+    "attribute": {
+      "@id": "http://purl.org/linked-data/cube#attribute",
+      "@type": "@id"
+    },
     "SliceKey": "http://purl.org/linked-data/cube#SliceKey",
     "Result": "http://www.w3.org/ns/sosa/Result",
     "isHostedBy": {

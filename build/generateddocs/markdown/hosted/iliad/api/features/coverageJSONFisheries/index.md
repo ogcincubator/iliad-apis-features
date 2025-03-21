@@ -791,13 +791,13 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 
 [] a covjson:Coverage ;
     covjson:domain [ a covjson:Domain ;
-            covjson:axis [ covjson:num 13 ;
+            covjson:axis [ ],
+                [ covjson:num 13 ;
                     covjson:start -1.496301e+01 ;
                     covjson:stop -1.451857e+01 ],
                 [ covjson:num 23 ;
                     covjson:start 4.60003e+01 ;
-                    covjson:stop 4.648921e+01 ],
-                [ ] ;
+                    covjson:stop 4.648921e+01 ] ;
             covjson:domainType covjsondt:Grid ;
             covjson:referencing [ covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/4326> ] ] ;
     covjson:parameter [ a covjson:Parameter ;
@@ -1529,6 +1529,9 @@ x-jsonld-extra-terms:
   Feature: http://www.opengis.net/ont/geosparql#Feature
   LineString: http://www.opengis.net/ont/sf#LineString
   numericValue: http://qudt.org/schema/qudt/numericValue
+  attribute:
+    x-jsonld-id: http://purl.org/linked-data/cube#attribute
+    x-jsonld-type: '@id'
   SliceKey: http://purl.org/linked-data/cube#SliceKey
   Result: http://www.w3.org/ns/sosa/Result
   isHostedBy:
@@ -2966,6 +2969,10 @@ Links to the schema:
     "Feature": "http://www.opengis.net/ont/geosparql#Feature",
     "LineString": "http://www.opengis.net/ont/sf#LineString",
     "numericValue": "http://qudt.org/schema/qudt/numericValue",
+    "attribute": {
+      "@id": "http://purl.org/linked-data/cube#attribute",
+      "@type": "@id"
+    },
     "SliceKey": "http://purl.org/linked-data/cube#SliceKey",
     "Result": "http://www.w3.org/ns/sosa/Result",
     "isHostedBy": {

@@ -759,6 +759,10 @@
     "Feature": "https://purl.org/geojson/vocab#Feature",
     "LineString": "https://purl.org/geojson/vocab#LineString",
     "numericValue": "http://qudt.org/schema/qudt/numericValue",
+    "attribute": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#attribute",
+      "x-jsonld-type": "@id"
+    },
     "SliceKey": "http://purl.org/linked-data/cube#SliceKey",
     "Result": "http://www.w3.org/ns/sosa/Result",
     "isHostedBy": {

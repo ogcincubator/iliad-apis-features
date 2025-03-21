@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish - Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "bblockName": "Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "bblockId": "ogc.hosted.iliad.api.features.iliad-jellyfish",
-  "generated": "2025-02-19T11:51:38.010505+00:00",
+  "generated": "2025-03-21T15:43:46.241679+00:00",
   "result": false,
   "items": [
     {
@@ -15,7 +15,7 @@
         "snippetIndex": 1,
         "language": "application/json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -40,7 +40,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 22,
+              "size": 18,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }
@@ -84,14 +84,20 @@
             {
               "op": "shacl-report",
               "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
-              "graph": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix sosa: <http://www.w3.org/ns/sosa/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> ;\n            sh:resultMessage \"Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )\" ;\n            sh:resultPath ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath ( [ ] [ ] ) ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] ) ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape [ sh:maxCount 1 ;\n                    sh:minCount 1 ;\n                    sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath [ ] ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] ) ] ] .\n\n",
-              "isError": true,
-              "message": "Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] ) ]\n  \tFocus Node: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n  \tResult Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )\n  \tMessage: Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )\n  "
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
               "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                   "nodes": [
                     "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
                   ]
@@ -101,13 +107,7 @@
                     "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
                   ]
                 },
-                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                  "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
-                  "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
                   "nodes": [
                     "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
                   ]
@@ -119,7 +119,7 @@
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n"
             }
           ]
         }
@@ -135,7 +135,7 @@
         "snippetIndex": 1,
         "language": "application/json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -160,7 +160,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_2_1.ttl",
-              "size": 50,
+              "size": 40,
               "isError": false,
               "message": "Output Turtle example_2_1.ttl created"
             }
@@ -194,68 +194,58 @@
               "focusNodes": {
                 ":force-linked-data-observedProperty": {
                   "nodes": [
-                    "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>",
-                    "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>/:properties",
-                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>/:properties",
+                    "_:N3081e4ac5ab54108a8f89814a18dc9c8",
                     "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>",
-                    "_:Nbd2af2853f2040b297e4960903668ed8"
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>/:properties,<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>/:properties,<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,_:Nbd2af2853f2040b297e4960903668ed8\n"
+              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: _:N3081e4ac5ab54108a8f89814a18dc9c8,<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n"
             },
             {
               "op": "shacl-report",
               "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
-              "graph": "@prefix ns1: <https://w3id.org/iliad/oim/default-context/> .\n@prefix ns2: <https://w3id.org/iliad/property/> .\n@prefix ns3: <https://saref.etsi.org/core/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix sosa: <http://www.w3.org/ns/sosa/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> ;\n            sh:resultMessage \"Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>->[ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ]\" ;\n            sh:resultPath _:n524ef562432f4652befc6b19b20173b8b54 ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n524ef562432f4652befc6b19b20173b8b53 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> ;\n            sh:resultMessage \"Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )\" ;\n            sh:resultPath _:n524ef562432f4652befc6b19b20173b8b37 ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n524ef562432f4652befc6b19b20173b8b29 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode [ rdfs:label \"Jelly fish observation #1 location id: 18 sensor: 528 species: Phyllorhiza punctata\"@en ;\n                    sosa:hasResult [ ns1:beachedJF \"0\" ;\n                            ns1:densityOfJF \"Some\" ;\n                            ns1:quantityOfJF 30 ;\n                            ns1:stingByJF \"Unspecified\" ;\n                            ns2:sampleSizeValue \"1-10\" ;\n                            ns2:speciesScientificName \"Phyllorhiza punctata\" ;\n                            ns2:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;\n                    sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;\n                    sosa:phenomenonTime <2011-07-01T09:00:00> ;\n                    sosa:resultTime \"2011-07-01T09:00:00\" ;\n                    ns3:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/observation/1-18> ] ;\n            sh:resultMessage \"Less than 1 values on [ ns1:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/observation/1-18> ; rdfs:label Literal(\\\"Jelly fish observation #1 location id: 18 sensor: 528 species: Phyllorhiza punctata\\\", lang=en) ; sosa:hasResult [ :beachedJF Literal(\\\"0\\\") ; :densityOfJF Literal(\\\"Some\\\") ; :quantityOfJF Literal(\\\"30\\\", datatype=xsd:integer) ; :stingByJF Literal(\\\"Unspecified\\\") ; iliad:sampleSizeValue Literal(\\\"1-10\\\") ; iliad:speciesScientificName Literal(\\\"Phyllorhiza punctata\\\") ; iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ; sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ; sosa:phenomenonTime <2011-07-01T09:00:00> ; sosa:resultTime Literal(\\\"2011-07-01T09:00:00\\\") ]->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )\" ;\n            sh:resultPath _:n524ef562432f4652befc6b19b20173b8b51 ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n524ef562432f4652befc6b19b20173b8b39 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> ;\n            sh:resultMessage \"Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )\" ;\n            sh:resultPath _:n524ef562432f4652befc6b19b20173b8b51 ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n524ef562432f4652befc6b19b20173b8b39 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> ;\n            sh:resultMessage \"sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed\" ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:OrConstraintComponent ;\n            sh:sourceShape <https://www.ogc.org/rules/sosa/#testRequiredTime> ;\n            sh:value <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> ;\n            sh:resultMessage \"Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )\" ;\n            sh:resultPath _:n524ef562432f4652befc6b19b20173b8b37 ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n524ef562432f4652befc6b19b20173b8b29 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> ;\n            sh:resultMessage \"sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed\" ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:OrConstraintComponent ;\n            sh:sourceShape <https://www.ogc.org/rules/sosa/#testRequiredTime> ;\n            sh:value <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> ],\n        [ a sh:ValidationResult ;\n            sh:focusNode [ rdfs:label \"Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata\"@en ;\n                    sosa:hasResult [ ns1:beachedJF \"1\" ;\n                            ns1:densityOfJF \"Some\" ;\n                            ns1:quantityOfJF 50 ;\n                            ns1:stingByJF \"Unspecified\" ;\n                            ns2:sampleSizeValue \"10-30\" ;\n                            ns2:speciesScientificName \"Phyllorhiza punctata\" ;\n                            ns2:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;\n                    sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;\n                    sosa:phenomenonTime <2011-07-01T09:00:00> ;\n                    sosa:resultTime \"2011-07-01T09:00:00\" ;\n                    ns3:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/observation/1-18> ] ;\n            sh:resultMessage \"Less than 1 values on [ ns1:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/observation/1-18> ; rdfs:label Literal(\\\"Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata\\\", lang=en) ; sosa:hasResult [ :beachedJF Literal(\\\"1\\\") ; :densityOfJF Literal(\\\"Some\\\") ; :quantityOfJF Literal(\\\"50\\\", datatype=xsd:integer) ; :stingByJF Literal(\\\"Unspecified\\\") ; iliad:sampleSizeValue Literal(\\\"10-30\\\") ; iliad:speciesScientificName Literal(\\\"Phyllorhiza punctata\\\") ; iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ; sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ; sosa:phenomenonTime <2011-07-01T09:00:00> ; sosa:resultTime Literal(\\\"2011-07-01T09:00:00\\\") ]->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )\" ;\n            sh:resultPath _:n524ef562432f4652befc6b19b20173b8b51 ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n524ef562432f4652befc6b19b20173b8b39 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> ;\n            sh:resultMessage \"Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>->[ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ]\" ;\n            sh:resultPath _:n524ef562432f4652befc6b19b20173b8b54 ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n524ef562432f4652befc6b19b20173b8b53 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> ;\n            sh:resultMessage \"Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )\" ;\n            sh:resultPath _:n524ef562432f4652befc6b19b20173b8b51 ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n524ef562432f4652befc6b19b20173b8b39 ] .\n\n_:N0166105c85034dd183de18b1720a24a1 sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) .\n\n_:N1f2222bc6cc94fd3a2e4e72312484d3d sh:alternativePath [ ] .\n\n_:N1f3b330f60e94a5cad8c265e553b458e sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath ( [ ] [ ] ) ] ] .\n\n_:N232386d69b8145de825b10736cf8fa6b rdf:first [ ] ;\n    rdf:rest ( [ ] ) .\n\n_:N2bab4411d17744fbb6ad180bfa56e988 sh:oneOrMorePath [ sh:alternativePath _:N232386d69b8145de825b10736cf8fa6b ] .\n\n_:N32365551e5e64143bdd7965ae013faca sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) .\n\n_:N38b4e8e44b39460f9c8b125395bd6696 rdf:first sosa:observedProperty ;\n    rdf:rest () .\n\n_:N38e8a374aa5f40f088c79d6db5601761 rdf:first sosa:hasResult ;\n    rdf:rest ( sosa:hasSimpleResult ) .\n\n_:N3a9500c7bf034c9db12cc23c0bdbd609 sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath [ ] ] ] .\n\n_:N53754580e984431bb15bb0d7afa58017 rdf:first sosa:hasResult ;\n    rdf:rest ( sosa:hasSimpleResult ) .\n\n_:N61a25f78091c474881347ea1efbe07c2 rdf:first _:N32365551e5e64143bdd7965ae013faca ;\n    rdf:rest () .\n\n_:N61e7bfdd0f4845108e497643695b471a rdf:first _:N3a9500c7bf034c9db12cc23c0bdbd609 ;\n    rdf:rest ( sosa:observedProperty ) .\n\n_:N6214553da8dd44e281baee5699125bd3 sh:oneOrMorePath _:N1f2222bc6cc94fd3a2e4e72312484d3d .\n\n_:N6af4f463ce3f4608862576277f801b8a rdf:first _:N0166105c85034dd183de18b1720a24a1 ;\n    rdf:rest () .\n\n_:N94a0dffd0ec14a9b920459bcffbb3d0c rdf:first [ sh:zeroOrMorePath _:N6214553da8dd44e281baee5699125bd3 ] ;\n    rdf:rest _:N61a25f78091c474881347ea1efbe07c2 .\n\n_:Nd1fda0136ae54d19b679f64d0adcf65c sh:zeroOrMorePath _:N2bab4411d17744fbb6ad180bfa56e988 .\n\n_:Nfbedadc376374a718efa62b5e53b509d sh:alternativePath _:N53754580e984431bb15bb0d7afa58017 .\n\n_:n524ef562432f4652befc6b19b20173b8b29 sh:maxCount 1 ;\n    sh:minCount 1 ;\n    sh:path _:N61e7bfdd0f4845108e497643695b471a .\n\n_:n524ef562432f4652befc6b19b20173b8b37 rdf:first _:N1f3b330f60e94a5cad8c265e553b458e ;\n    rdf:rest _:N38b4e8e44b39460f9c8b125395bd6696 .\n\n_:n524ef562432f4652befc6b19b20173b8b53 sh:maxCount 1 ;\n    sh:minCount 1 ;\n    sh:path _:Nfbedadc376374a718efa62b5e53b509d .\n\n_:n524ef562432f4652befc6b19b20173b8b54 sh:alternativePath _:N38e8a374aa5f40f088c79d6db5601761 .\n\n_:n524ef562432f4652befc6b19b20173b8b39 sh:maxCount 1 ;\n    sh:minCount 1 ;\n    sh:path _:N94a0dffd0ec14a9b920459bcffbb3d0c .\n\n_:n524ef562432f4652befc6b19b20173b8b51 rdf:first _:Nd1fda0136ae54d19b679f64d0adcf65c ;\n    rdf:rest _:N6af4f463ce3f4608862576277f801b8a .\n\n",
-              "isError": true,
-              "message": "Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (10):\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty ) ]\n  \tFocus Node: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n  \tResult Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )\n  \tMessage: Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty ) ]\n  \tFocus Node: <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n  \tResult Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )\n  \tMessage: Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path [ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ] ]\n  \tFocus Node: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n  \tResult Path: [ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ]\n  \tMessage: Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>->[ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ]\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path [ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ] ]\n  \tFocus Node: <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n  \tResult Path: [ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ]\n  \tMessage: Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>->[ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ]\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] ) ]\n  \tFocus Node: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n  \tResult Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )\n  \tMessage: Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] ) ]\n  \tFocus Node: [ ns1:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/observation/1-18> ; rdfs:label Literal(\"Jelly fish observation #1 location id: 18 sensor: 528 species: Phyllorhiza punctata\", lang=en) ; sosa:hasResult [ :beachedJF Literal(\"0\") ; :densityOfJF Literal(\"Some\") ; :quantityOfJF Literal(\"30\", datatype=xsd:integer) ; :stingByJF Literal(\"Unspecified\") ; iliad:sampleSizeValue Literal(\"1-10\") ; iliad:speciesScientificName Literal(\"Phyllorhiza punctata\") ; iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ; sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ; sosa:phenomenonTime <2011-07-01T09:00:00> ; sosa:resultTime Literal(\"2011-07-01T09:00:00\") ]\n  \tResult Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )\n  \tMessage: Less than 1 values on [ ns1:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/observation/1-18> ; rdfs:label Literal(\"Jelly fish observation #1 location id: 18 sensor: 528 species: Phyllorhiza punctata\", lang=en) ; sosa:hasResult [ :beachedJF Literal(\"0\") ; :densityOfJF Literal(\"Some\") ; :quantityOfJF Literal(\"30\", datatype=xsd:integer) ; :stingByJF Literal(\"Unspecified\") ; iliad:sampleSizeValue Literal(\"1-10\") ; iliad:speciesScientificName Literal(\"Phyllorhiza punctata\") ; iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ; sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ; sosa:phenomenonTime <2011-07-01T09:00:00> ; sosa:resultTime Literal(\"2011-07-01T09:00:00\") ]->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] ) ]\n  \tFocus Node: [ ns1:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/observation/1-18> ; rdfs:label Literal(\"Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata\", lang=en) ; sosa:hasResult [ :beachedJF Literal(\"1\") ; :densityOfJF Literal(\"Some\") ; :quantityOfJF Literal(\"50\", datatype=xsd:integer) ; :stingByJF Literal(\"Unspecified\") ; iliad:sampleSizeValue Literal(\"10-30\") ; iliad:speciesScientificName Literal(\"Phyllorhiza punctata\") ; iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ; sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ; sosa:phenomenonTime <2011-07-01T09:00:00> ; sosa:resultTime Literal(\"2011-07-01T09:00:00\") ]\n  \tResult Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )\n  \tMessage: Less than 1 values on [ ns1:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/observation/1-18> ; rdfs:label Literal(\"Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata\", lang=en) ; sosa:hasResult [ :beachedJF Literal(\"1\") ; :densityOfJF Literal(\"Some\") ; :quantityOfJF Literal(\"50\", datatype=xsd:integer) ; :stingByJF Literal(\"Unspecified\") ; iliad:sampleSizeValue Literal(\"10-30\") ; iliad:speciesScientificName Literal(\"Phyllorhiza punctata\") ; iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ; sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ; sosa:phenomenonTime <2011-07-01T09:00:00> ; sosa:resultTime Literal(\"2011-07-01T09:00:00\") ]->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] ) ]\n  \tFocus Node: <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n  \tResult Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )\n  \tMessage: Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )\n  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: <https://www.ogc.org/rules/sosa/#testRequiredTime>\n  \tFocus Node: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n  \tValue Node: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n  \tMessage: sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed\n  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: <https://www.ogc.org/rules/sosa/#testRequiredTime>\n  \tFocus Node: <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n  \tValue Node: <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n  \tMessage: sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed\n  "
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
               "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                   "nodes": [
                     "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>",
-                    "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>/:properties",
-                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>/:properties",
                     "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testResult>": {
                   "nodes": [
                     "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>",
-                    "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>/:properties",
-                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>/:properties",
                     "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>"
                   ]
                 },
-                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                  "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
-                  "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
                   "nodes": [
                     "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>",
-                    "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>/:properties",
-                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>/:properties",
                     "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                   "nodes": [
                     "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>",
-                    "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>/:properties",
-                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>/:properties",
                     "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>/:properties,<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>/:properties,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>/:properties,<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>/:properties,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>/:properties,<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>/:properties,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>/:properties,<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>/:properties,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n"
             }
           ]
         }
@@ -271,7 +261,7 @@
         "snippetIndex": 1,
         "language": "text/turtle"
       },
-      "result": true,
+      "result": false,
       "sections": [
         {
           "name": "FILES",
@@ -317,14 +307,20 @@
             {
               "op": "shacl-report",
               "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
-              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-              "isError": false,
-              "message": "Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> ;\n            sh:resultMessage \"sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed\" ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint [ sh:message \"sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed\" ;\n                    sh:select \"\"\"\n            PREFIX sh: <http://www.w3.org/ns/shacl#>\n            PREFIX sosa: <http://www.w3.org/ns/sosa/>\n            PREFIX geojson: <https://purl.org/geojson/vocab#>\n            SELECT $this (GROUP_CONCAT(?time; separator=';') AS ?value) WHERE {\n                { $this sosa:phenomenonTime|sosa:resultTime ?time }\n                UNION\n                { ?collection sosa:hasMember+|geojson:features+ $this ; sosa:phenomenonTime|sosa:resultTime ?time }\n            }\n            GROUP BY ?time\n            HAVING (count(?time) > 1)\n        \"\"\" ] ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape <https://www.ogc.org/rules/sosa/#testRequiredTime> ;\n            sh:value \"2011-07-01T09:00:00;2011-07-01T09:00:00\" ] .\n\n",
+              "isError": true,
+              "message": "Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: <https://www.ogc.org/rules/sosa/#testRequiredTime>\n  \tFocus Node: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n  \tValue Node: Literal(\"2011-07-01T09:00:00;2011-07-01T09:00:00\")\n  \tSource Constraint: [ sh:message Literal(\"sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed\") ; sh:select Literal(\"\n              PREFIX sh: <http://www.w3.org/ns/shacl#>\n              PREFIX sosa: <http://www.w3.org/ns/sosa/>\n              PREFIX geojson: <https://purl.org/geojson/vocab#>\n              SELECT $this (GROUP_CONCAT(?time; separator=';') AS ?value) WHERE {\n                  { $this sosa:phenomenonTime|sosa:resultTime ?time }\n                  UNION\n                  { ?collection sosa:hasMember+|geojson:features+ $this ; sosa:phenomenonTime|sosa:resultTime ?time }\n              }\n              GROUP BY ?time\n              HAVING (count(?time) > 1)\n          \") ]\n  \tMessage: sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed\n  "
             },
             {
               "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                   "nodes": [
                     "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
                   ]
@@ -334,13 +330,7 @@
                     "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
                   ]
                 },
-                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                  "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
-                  "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
                   "nodes": [
                     "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
                   ]
@@ -352,7 +342,7 @@
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n"
             }
           ]
         }
@@ -362,7 +352,7 @@
   "globalErrors": {},
   "counts": {
     "total": 3,
-    "passed": 1,
-    "failed": 2
+    "passed": 2,
+    "failed": 1
   }
 }

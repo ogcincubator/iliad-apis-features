@@ -556,6 +556,14 @@
       "@id": "http://purl.org/linked-data/cube#measure",
       "@type": "@id"
     },
+    "attribute": {
+      "@id": "http://purl.org/linked-data/cube#attribute",
+      "@type": "@id"
+    },
+    "structure": {
+      "@id": "http://purl.org/linked-data/cube#structure",
+      "@type": "@id"
+    },
     "SliceKey": "http://purl.org/linked-data/cube#SliceKey",
     "Result": "sosa:Result",
     "Compressibility": "http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility",

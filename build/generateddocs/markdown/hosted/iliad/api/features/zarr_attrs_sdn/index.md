@@ -1092,6 +1092,9 @@ x-jsonld-extra-terms:
   Feature: http://www.opengis.net/ont/geosparql#Feature
   LineString: http://www.opengis.net/ont/sf#LineString
   numericValue: http://qudt.org/schema/qudt/numericValue
+  attribute:
+    x-jsonld-id: http://purl.org/linked-data/cube#attribute
+    x-jsonld-type: '@id'
   SliceKey: http://purl.org/linked-data/cube#SliceKey
   Result: http://www.w3.org/ns/sosa/Result
   isHostedBy:
@@ -2621,6 +2624,10 @@ Links to the schema:
     "Feature": "http://www.opengis.net/ont/geosparql#Feature",
     "LineString": "http://www.opengis.net/ont/sf#LineString",
     "numericValue": "http://qudt.org/schema/qudt/numericValue",
+    "attribute": {
+      "@id": "http://purl.org/linked-data/cube#attribute",
+      "@type": "@id"
+    },
     "SliceKey": "http://purl.org/linked-data/cube#SliceKey",
     "Result": "http://www.w3.org/ns/sosa/Result",
     "isHostedBy": {

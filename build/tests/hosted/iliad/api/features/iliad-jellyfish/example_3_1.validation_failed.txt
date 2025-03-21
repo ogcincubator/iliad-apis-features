@@ -1,0 +1,50 @@
+Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish - Observations - ILIAD Jellyfish Pilot for Citizen Science
+Generated 2025-03-21T15:43:46.241600+00:00
+=== Files ===
+Using example_3_1.ttl from examples
+Output Turtle example_3_1.ttl created
+=== End Files ===
+
+=== SHACL ===
+Validation result for _sources/oim-obs/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/oim-obs/rules.shacl:
+ - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+
+
+** Validation error **
+Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+  Validation Report
+  Conforms: False
+  Results (1):
+  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/sosa/#testRequiredTime>
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+  	Value Node: Literal("2011-07-01T09:00:00;2011-07-01T09:00:00")
+  	Source Constraint: [ sh:message Literal("sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed") ; sh:select Literal("
+              PREFIX sh: <http://www.w3.org/ns/shacl#>
+              PREFIX sosa: <http://www.w3.org/ns/sosa/>
+              PREFIX geojson: <https://purl.org/geojson/vocab#>
+              SELECT $this (GROUP_CONCAT(?time; separator=';') AS ?value) WHERE {
+                  { $this sosa:phenomenonTime|sosa:resultTime ?time }
+                  UNION
+                  { ?collection sosa:hasMember+|geojson:features+ $this ; sosa:phenomenonTime|sosa:resultTime ?time }
+              }
+              GROUP BY ?time
+              HAVING (count(?time) > 1)
+          ") ]
+  	Message: sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed
+  
+Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>
+
+=== End SHACL ===
+

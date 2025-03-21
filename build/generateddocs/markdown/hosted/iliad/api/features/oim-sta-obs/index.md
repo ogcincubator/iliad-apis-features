@@ -175,6 +175,12 @@ x-jsonld-extra-terms:
   measure:
     x-jsonld-id: http://purl.org/linked-data/cube#measure
     x-jsonld-type: '@id'
+  attribute:
+    x-jsonld-id: http://purl.org/linked-data/cube#attribute
+    x-jsonld-type: '@id'
+  structure:
+    x-jsonld-id: http://purl.org/linked-data/cube#structure
+    x-jsonld-type: '@id'
   SliceKey: http://purl.org/linked-data/cube#SliceKey
   Result: http://www.w3.org/ns/sosa/Result
   isHostedBy:
@@ -548,6 +554,14 @@ Links to the schema:
     },
     "measure": {
       "@id": "http://purl.org/linked-data/cube#measure",
+      "@type": "@id"
+    },
+    "attribute": {
+      "@id": "http://purl.org/linked-data/cube#attribute",
+      "@type": "@id"
+    },
+    "structure": {
+      "@id": "http://purl.org/linked-data/cube#structure",
       "@type": "@id"
     },
     "SliceKey": "http://purl.org/linked-data/cube#SliceKey",
