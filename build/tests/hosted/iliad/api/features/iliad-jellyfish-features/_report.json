@@ -1,0 +1,358 @@
+{
+  "title": "Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish-features - ILIAD Jellyfish Pilot for Citizen Science",
+  "bblockName": "ILIAD Jellyfish Pilot for Citizen Science",
+  "bblockId": "ogc.hosted.iliad.api.features.iliad-jellyfish-features",
+  "generated": "2025-03-24T12:23:50.619948+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/hosted/iliad/api/features/iliad-jellyfish-features/example_1_1.json",
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish-features/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_1_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_1_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_1_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_1_1.ttl",
+              "size": 18,
+              "isError": false,
+              "message": "Output Turtle example_1_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/oim-obs/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/oim-obs/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/oim-obs/rules.shacl",
+              "focusNodes": {
+                ":force-linked-data-observedProperty": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
+              "focusNodes": {
+                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/hosted/iliad/api/features/iliad-jellyfish-features/example_2_1.json",
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish-features/example_2_1.json",
+        "exampleIndex": 2,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_2_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_2_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_2_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_2_1.ttl",
+              "size": 40,
+              "isError": false,
+              "message": "Output Turtle example_2_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/oim-obs/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/oim-obs/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/oim-obs/rules.shacl",
+              "focusNodes": {
+                ":force-linked-data-observedProperty": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>",
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>",
+                    "_:N81415406ce9542f3b4e7a33e449396c8"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>,_:N81415406ce9542f3b4e7a33e449396c8\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
+              "focusNodes": {
+                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>",
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>",
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>",
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>",
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata>\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/hosted/iliad/api/features/iliad-jellyfish-features/example_3_1.ttl",
+        "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish-features/example_3_1.ttl",
+        "exampleIndex": 3,
+        "snippetIndex": 1,
+        "language": "text/turtle"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_3_1.ttl from examples"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_3_1.ttl",
+              "size": 22,
+              "isError": false,
+              "message": "Output Turtle example_3_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/oim-obs/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/oim-obs/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/oim-obs/rules.shacl",
+              "focusNodes": {
+                ":force-linked-data-observedProperty": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
+              "focusNodes": {
+                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>\n"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0
+  }
+}

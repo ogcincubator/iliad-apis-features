@@ -1,0 +1,32 @@
+
+
+{
+  "itemIdentifier": "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology",
+  "name": "Jellyfish Ontology",
+  "abstract": "Extensions Ontology for the Oceans Information Model, address specific semantics of the Jellyfish Citizen Science Observations Pilot",
+  "status": "under-development",
+  "dateTimeAddition": "2023-09-18T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0",
+  "dateOfLastChange": "2025-03-24",
+  "dependsOn": [],
+  "shaclRules": {},
+  "sources": [],
+  "scope": "dev",
+  "tags": [
+    "iliad",
+    "oim",
+    "citizen-science",
+    "project"
+  ],
+  "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",
+  "remoteCacheDir": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-ontology/remote_cache/",
+  "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish-ontology/",
+  "rdfData": [],
+  "validationPassed": true,
+  "description": "##  Jellyfish Extension Ontology\n\n\nThis ontology defines an extension to the Oceans Informaton Model to capture concepts specific to the Citizen Science Jellyfish Observation pilot.\n\nThis will be linked vi JSON-LD context to various JSON schemas, such as OGC API implementations of OIM.\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/iliad-apis-features",
+  "gitPath": "_sources/iliad-jellyfish-ontology"
+}

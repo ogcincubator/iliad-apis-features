@@ -1,0 +1,91 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Schemas for Ocean Information Model Observations
+$defs:
+  OIMObsProps:
+    allOf:
+    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsProps
+    - properties:
+        hasResult:
+          type: object
+          properties:
+            distanceWalkedInMeters:
+              type: number
+              description: Distance walked in meters.
+              minimum: 0
+              x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/distanceWalkedInMeters
+              x-jsonld-type: http://www.w3.org/2001/XMLSchema#double
+            distanceFromShore:
+              type: number
+              description: Distance from shore in meters.
+              minimum: 0
+              x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/distanceFromShore
+              x-jsonld-type: http://www.w3.org/2001/XMLSchema#double
+            stingByJellyFish:
+              type: string
+              description: Information about a jellyfish sting.
+              x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish
+              x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+            strandedJellyfish:
+              type: string
+              description: Information about stranded jellyfish.
+              x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/strandedJellyfish
+              x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+            agentConfidence:
+              type: number
+              description: Agent confidence information as a percentage.
+              minimum: 0
+              maximum: 100
+              x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/agentConfidence
+              x-jsonld-type: http://www.w3.org/2001/XMLSchema#double
+            abundanceLevel:
+              type: string
+              enum:
+              - low
+              - medium
+              - high
+              description: Level of jellyfish abundance observed.
+            name:
+              type: string
+              description: Name of the human sensor.
+            affiliation:
+              type: string
+              description: Affiliation of the human sensor.
+        hasFeatureOfInterest:
+          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+  OIMObsFeature:
+    allOf:
+    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsFeature
+    - properties:
+        properties:
+          $ref: '#/$defs/OIMObsProps'
+  OIMObsCollection:
+    allOf:
+    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsCollection
+    - properties:
+        features:
+          type: array
+          items:
+            allOf:
+            - $ref: '#/$defs/OIMObsFeature'
+anyOf:
+- $ref: '#/$defs/OIMObsProps'
+- $ref: '#/$defs/OIMObsFeature'
+- $ref: '#/$defs/OIMObsCollection'
+x-jsonld-extra-terms:
+  JellyFishAbundance:
+    x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/JellyFishAbundance
+    x-jsonld-type: '@id'
+  HumanSensor:
+    x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/HumanSensor
+    x-jsonld-type: '@id'
+  comment:
+    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#comment
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+  label:
+    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
+x-jsonld-prefixes:
+  oim-jf: https://w3id.org/iliad/oim/ext/jellyfish/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#

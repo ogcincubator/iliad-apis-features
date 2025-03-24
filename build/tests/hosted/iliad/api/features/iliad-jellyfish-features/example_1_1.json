@@ -1,0 +1,30 @@
+{
+  "@id": "1-18-527-Phyllorhiza_punctata",
+  "type": "Feature",
+  "featureType": "sosa:Observation",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      31.80691,
+      34.634776
+    ]
+  },
+  "properties": {
+    "label": {
+      "en": "Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata"
+    },
+    "phenomenonTime": "2011-07-01T09:00:00",
+    "resultTime": "2011-07-01T09:00:00",
+    "observedProperty": "jellyFishAbundanceProperty",
+    "hasFeatureOfInterest": "1-18",
+    "hasResult": {
+      "densityOfJF": "Some",
+      "quantityOfJF": 50,
+      "sampleSizeValue": "10-30",
+      "speciesScientificName": "Phyllorhiza punctata",
+      "wormsConcept": "https://marinespecies.org/aphia.php?p=taxdetails&id=135298",
+      "stingByJF": "Unspecified",
+      "beachedJF": "1"
+    }
+  }
+}

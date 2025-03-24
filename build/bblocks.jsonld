@@ -106,7 +106,7 @@
   "name": "Building Blocks - ILIAD API Profiles",
   "abstract": "(Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability.",
   "description": "Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. \n\nThus, a pilot project to monitor Jellyfish swarms using Citizen Science will reuse common patterns for Citizen Science observations, which in turn we reuse a common pattern for observations, using an underlying component of the OIM - the OGC Observations model (SOSA ontology). \n",
-  "modified": "2025-03-21T16:12:02.295692",
+  "modified": "2025-03-24T12:23:36.510531",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"e8df6b22cb38da4f600f3a0292c58fdef7734f97",
@@ -138,7 +138,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-21",
+      "dateOfLastChange": "2025-03-24",
       "link": "https://github.com/opengeospatial/CoverageJSON",
       "sources": [
         {
@@ -204,7 +204,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-21",
+      "dateOfLastChange": "2025-03-24",
       "link": "https://github.com/opengeospatial/coverage-implementation-schema",
       "sources": [
         {
@@ -257,6 +257,51 @@
       ]
     },
     {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology",
+      "name": "Jellyfish Ontology",
+      "abstract": "Extensions Ontology for the Oceans Information Model, address specific semantics of the Jellyfish Citizen Science Observations Pilot",
+      "status": "under-development",
+      "dateTimeAddition": "2023-09-18T00:00:00Z",
+      "itemClass": "model",
+      "register": "ogc-incubator",
+      "version": "1.0",
+      "dateOfLastChange": "2025-03-24",
+      "dependsOn": [],
+      "shaclRules": {},
+      "sources": [],
+      "scope": "dev",
+      "tags": [
+        "iliad",
+        "oim",
+        "citizen-science",
+        "project"
+      ],
+      "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",
+      "remoteCacheDir": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-ontology/remote_cache/",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish-ontology/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish-ontology/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/iliad-jellyfish-ontology/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.iliad-jellyfish-ontology"
+        }
+      },
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
       "itemIdentifier": "ogc.hosted.iliad.api.features.oim-sta-obs",
       "name": "OIM STA Observations",
       "abstract": "Defines SensorThings API Observations to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model.",
@@ -265,7 +310,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-21",
+      "dateOfLastChange": "2025-03-24",
       "link": "https://github.com/opengeospatial/iliad-api-features/oim-sta-obs",
       "sources": [
         {
@@ -322,7 +367,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-21",
+      "dateOfLastChange": "2025-03-24",
       "link": "https://github.com/opengeospatial/iliad-api-features/",
       "sources": [
         {
@@ -380,7 +425,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-21",
+      "dateOfLastChange": "2025-03-24",
       "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_array_metadata",
       "sources": [
         {
@@ -442,7 +487,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-21",
+      "dateOfLastChange": "2025-03-24",
       "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_attrs_metadata",
       "sources": [
         {
@@ -504,7 +549,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-21",
+      "dateOfLastChange": "2025-03-24",
       "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_attrs_metadata",
       "sources": [
         {
@@ -566,7 +611,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-21",
+      "dateOfLastChange": "2025-03-24",
       "link": "https://github.com/opengeospatial/CoverageJSON",
       "sources": [
         {
@@ -640,7 +685,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-21",
+      "dateOfLastChange": "2025-03-24",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -665,10 +710,10 @@
         ]
       },
       "dependsOn": [
-        "ogc.sosa.properties.observation",
+        "ogc.sosa.features.observationCollection",
         "ogc.sosa.features.observation",
         "ogc.ogc-utils.iri-or-curie",
-        "ogc.sosa.features.observationCollection"
+        "ogc.sosa.properties.observation"
       ],
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
       "schema": {
@@ -709,7 +754,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-21",
+      "dateOfLastChange": "2025-03-24",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -776,7 +821,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-21",
+      "dateOfLastChange": "2025-03-24",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -829,6 +874,78 @@
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.iliad-jellyfish"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.iliad-jellyfish-features",
+      "name": "ILIAD Jellyfish Pilot for Citizen Science",
+      "abstract": "Defines a project specific interoperability profile of the Features schema, with the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model",
+      "highlighted": true,
+      "status": "under-development",
+      "dateTimeAddition": "2023-04-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "iliad-apis",
+      "version": "0.1",
+      "dateOfLastChange": "2025-03-24",
+      "link": "https://github.com/opengeospatial/bblock-template",
+      "dependsOn": [
+        "ogc.hosted.iliad.api.features.oim-obs-cs",
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology"
+      ],
+      "sources": [
+        {
+          "title": "Reference to ILIAD",
+          "link": "https://example.com/sources/1"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "iliad",
+        "oim",
+        "sosa",
+        "ditto",
+        "citizen-science",
+        "project"
+      ],
+      "shaclRules": {
+        "ogc.hosted.iliad.api.features.oim-obs": [
+          "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
+        ],
+        "ogc.sosa.properties.observation": [
+          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
+        ]
+      },
+      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish-features/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish-features/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish-features/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/iliad-jellyfish-features/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish-features/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/iliad-jellyfish-features/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.iliad-jellyfish-features"
         }
       },
       "@type": [

@@ -1,0 +1,118 @@
+
+
+{
+  "itemIdentifier": "ogc.hosted.iliad.api.features.iliad-jellyfish-features",
+  "name": "ILIAD Jellyfish Pilot for Citizen Science",
+  "abstract": "Defines a project specific interoperability profile of the Features schema, with the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model",
+  "highlighted": true,
+  "status": "under-development",
+  "dateTimeAddition": "2023-04-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2025-03-24",
+  "link": "https://github.com/opengeospatial/bblock-template",
+  "dependsOn": [
+    "ogc.hosted.iliad.api.features.oim-obs-cs",
+    "ogc.ogc-utils.iri-or-curie",
+    "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology"
+  ],
+  "sources": [
+    {
+      "title": "Reference to ILIAD",
+      "link": "https://example.com/sources/1"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "iliad",
+    "oim",
+    "sosa",
+    "ditto",
+    "citizen-science",
+    "project"
+  ],
+  "shaclRules": {
+    "ogc.hosted.iliad.api.features.oim-obs": [
+      "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
+    ],
+    "ogc.sosa.properties.observation": [
+      "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
+    ]
+  },
+  "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish-features/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish-features/context.jsonld",
+  "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish-features/",
+  "rdfData": [],
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/iliad-jellyfish-features/",
+  "description": "## Ocean Information Model Observations Profile for Citizen Science - Jellyfish Pilot\n\nThis specification defines the specific requirements of the ILIAD Jellyfish Pilot as an implementation of the Oceans Information Model, implemented using the SOSA Observation Feature model (compatible with OGC API Features)\n\nNote that binding to specific packaging structures for other APIs or data formats, such as OGC APIs (STA, EDR) or NetCDF  will be done in alternative Building Blocks addressing the peculiar structural aspects of each schema.\n\nConstraints that are not unique to the pilot should be described in one of the \"parent\" profiles in the chain:\n\n- [OIM Observations for Citizen Science](../oim-obs-cs/)\n- [OIM Observations](../oim-obs/)\n- [OGC-API SOSA](https://opengeospatial.github.io/ogcapi-sosa/)\n\n## Key features of this profile:\n\n- based on a generic Feature model for OGC API Features\n- a schema for the hasResult element of observations\n- a JSON-LD context for this result schema\n- JSON-LD context elements defining namespaces for values specific to the pilot context:\n\ne.g. \n```\"observedProperty\": {\n      \"@id\": \"sosa:observedProperty\",\n      \"@type\": \"@id\",\n      \"@context\": {\n        \"@base\": \"https://w3id.org/iliad/jellyfish/property/\"\n      }\n    },\n```\n\n## Future work\nThis profile defines Features for use in OGCAPI Features, and will be part of a suite of options bding alternative APIs to the same information model.\n\nThe SHACL rules (and any other validators developed) will be tested against the semantic annotations of each alternative to demonstrate (and help develop) these to be consistent, thus achieving **schema-agnostic semantic interoperability**.\n  \n  - see the [README](https://github.com/ogcincubator/iliad-apis-features/blob/master/README.md) for more information.\n",
+  "examples": [
+    {
+      "title": "Example of Jellyfish abundance observation",
+      "base-uri": "https://w3id.org/iliad/jellyfish/observation/",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/example.json",
+          "code": "{\n  \"@id\": \"1-18-527-Phyllorhiza_punctata\",\n  \"type\": \"Feature\",\n  \"featureType\": \"sosa:Observation\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      31.806910,\n      34.634776\n    ]\n  },\n  \"properties\": {\n    \"label\": {\n      \"en\": \"Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata\"\n    },\n    \"phenomenonTime\": \"2011-07-01T09:00:00\",\n    \"resultTime\": \"2011-07-01T09:00:00\",\n    \"observedProperty\": \"jellyFishAbundanceProperty\",\n    \"hasFeatureOfInterest\": \"1-18\",\n    \"hasResult\": {\n      \"densityOfJF\": \"Some\",\n      \"quantityOfJF\": 50,\n      \"sampleSizeValue\": \"10-30\",\n      \"speciesScientificName\": \"Phyllorhiza punctata\",\n      \"wormsConcept\": \"https://marinespecies.org/aphia.php?p=taxdetails&id=135298\",\n      \"stingByJF\": \"Unspecified\",\n      \"beachedJF\": \"1\"\n    }\n  }\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish-features/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/context.jsonld\",\n  \"@id\": \"1-18-527-Phyllorhiza_punctata\",\n  \"type\": \"Feature\",\n  \"featureType\": \"sosa:Observation\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      31.80691,\n      34.634776\n    ]\n  },\n  \"properties\": {\n    \"label\": {\n      \"en\": \"Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata\"\n    },\n    \"phenomenonTime\": \"2011-07-01T09:00:00\",\n    \"resultTime\": \"2011-07-01T09:00:00\",\n    \"observedProperty\": \"jellyFishAbundanceProperty\",\n    \"hasFeatureOfInterest\": \"1-18\",\n    \"hasResult\": {\n      \"densityOfJF\": \"Some\",\n      \"quantityOfJF\": 50,\n      \"sampleSizeValue\": \"10-30\",\n      \"speciesScientificName\": \"Phyllorhiza punctata\",\n      \"wormsConcept\": \"https://marinespecies.org/aphia.php?p=taxdetails&id=135298\",\n      \"stingByJF\": \"Unspecified\",\n      \"beachedJF\": \"1\"\n    }\n  }\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish-features/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix iliad: <https://w3id.org/iliad/property/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix sosa: <http://www.w3.org/ns/sosa/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,\n        geojson:Feature ;\n    rdfs:label \"Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata\"@en ;\n    sosa:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/observation/1-18> ;\n    sosa:hasResult [ iliad:sampleSizeValue \"10-30\" ;\n            iliad:speciesScientificName \"Phyllorhiza punctata\" ;\n            iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;\n    sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;\n    sosa:phenomenonTime <2011-07-01T09:00:00> ;\n    sosa:resultTime \"2011-07-01T09:00:00\" ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ] .\n\n",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish-features/example_1_1.ttl"
+        }
+      ]
+    },
+    {
+      "title": "Example of Jellyfish abundance observation collection",
+      "base-uri": "https://w3id.org/iliad/jellyfish/observation/",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/collection.json",
+          "code": "{\n  \"type\": \"FeatureCollection\",\n  \"featureType\": \"sosa:ObservationCollection\",\n\n  \"features\": [\n    {\n      \"@id\": \"1-18-527-Phyllorhiza_punctata\",\n      \"type\": \"Feature\",\n      \"featureType\": \"sosa:Observation\",\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          31.806910,\n          34.634776\n        ]\n      },\n      \"properties\": {\n        \"label\": {\n          \"en\": \"Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata\"\n        },\n        \"phenomenonTime\": \"2011-07-01T09:00:00\",\n        \"resultTime\": \"2011-07-01T09:00:00\",\n        \"observedProperty\": \"jellyFishAbundanceProperty\",\n        \"hasFeatureOfInterest\": \"1-18\",\n        \"hasResult\": {\n          \"densityOfJF\": \"Some\",\n          \"quantityOfJF\": 50,\n          \"sampleSizeValue\": \"10-30\",\n          \"speciesScientificName\": \"Phyllorhiza punctata\",\n          \"wormsConcept\": \"https://marinespecies.org/aphia.php?p=taxdetails&id=135298\",\n          \"stingByJF\": \"Unspecified\",\n          \"beachedJF\": \"1\"\n        }\n      }\n    },\n    {\n      \"@id\": \"1-18-528-Phyllorhiza_punctata\",\n      \"type\": \"Feature\",\n      \"featureType\": \"sosa:Observation\",\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          35.643846, 34.273634\n        ]\n      },\n      \"properties\": {\n        \"label\": {\n          \"en\": \"Jelly fish observation #1 location id: 18 sensor: 528 species: Phyllorhiza punctata\"\n        },\n        \"phenomenonTime\": \"2011-07-01T09:00:00\",\n        \"resultTime\": \"2011-07-01T09:00:00\",\n        \"observedProperty\": \"jellyFishAbundanceProperty\",\n        \"hasFeatureOfInterest\": \"1-18\",\n        \"hasResult\": {\n          \"densityOfJF\": \"Some\",\n          \"quantityOfJF\": 30,\n          \"sampleSizeValue\": \"1-10\",\n          \"speciesScientificName\": \"Phyllorhiza punctata\",\n          \"wormsConcept\": \"https://marinespecies.org/aphia.php?p=taxdetails&id=135298\",\n          \"stingByJF\": \"Unspecified\",\n          \"beachedJF\": \"0\"\n        }\n      }\n    }\n  ]\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish-features/example_2_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/context.jsonld\",\n  \"type\": \"FeatureCollection\",\n  \"featureType\": \"sosa:ObservationCollection\",\n  \"features\": [\n    {\n      \"@id\": \"1-18-527-Phyllorhiza_punctata\",\n      \"type\": \"Feature\",\n      \"featureType\": \"sosa:Observation\",\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          31.80691,\n          34.634776\n        ]\n      },\n      \"properties\": {\n        \"label\": {\n          \"en\": \"Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata\"\n        },\n        \"phenomenonTime\": \"2011-07-01T09:00:00\",\n        \"resultTime\": \"2011-07-01T09:00:00\",\n        \"observedProperty\": \"jellyFishAbundanceProperty\",\n        \"hasFeatureOfInterest\": \"1-18\",\n        \"hasResult\": {\n          \"densityOfJF\": \"Some\",\n          \"quantityOfJF\": 50,\n          \"sampleSizeValue\": \"10-30\",\n          \"speciesScientificName\": \"Phyllorhiza punctata\",\n          \"wormsConcept\": \"https://marinespecies.org/aphia.php?p=taxdetails&id=135298\",\n          \"stingByJF\": \"Unspecified\",\n          \"beachedJF\": \"1\"\n        }\n      }\n    },\n    {\n      \"@id\": \"1-18-528-Phyllorhiza_punctata\",\n      \"type\": \"Feature\",\n      \"featureType\": \"sosa:Observation\",\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          35.643846,\n          34.273634\n        ]\n      },\n      \"properties\": {\n        \"label\": {\n          \"en\": \"Jelly fish observation #1 location id: 18 sensor: 528 species: Phyllorhiza punctata\"\n        },\n        \"phenomenonTime\": \"2011-07-01T09:00:00\",\n        \"resultTime\": \"2011-07-01T09:00:00\",\n        \"observedProperty\": \"jellyFishAbundanceProperty\",\n        \"hasFeatureOfInterest\": \"1-18\",\n        \"hasResult\": {\n          \"densityOfJF\": \"Some\",\n          \"quantityOfJF\": 30,\n          \"sampleSizeValue\": \"1-10\",\n          \"speciesScientificName\": \"Phyllorhiza punctata\",\n          \"wormsConcept\": \"https://marinespecies.org/aphia.php?p=taxdetails&id=135298\",\n          \"stingByJF\": \"Unspecified\",\n          \"beachedJF\": \"0\"\n        }\n      }\n    }\n  ]\n}",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish-features/example_2_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix iliad: <https://w3id.org/iliad/property/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix sosa: <http://www.w3.org/ns/sosa/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,\n        geojson:Feature ;\n    rdfs:label \"Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata\"@en ;\n    sosa:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/observation/1-18> ;\n    sosa:hasResult [ iliad:sampleSizeValue \"10-30\" ;\n            iliad:speciesScientificName \"Phyllorhiza punctata\" ;\n            iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;\n    sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;\n    sosa:phenomenonTime <2011-07-01T09:00:00> ;\n    sosa:resultTime \"2011-07-01T09:00:00\" ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ] .\n\n<https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> a sosa:Observation,\n        geojson:Feature ;\n    rdfs:label \"Jelly fish observation #1 location id: 18 sensor: 528 species: Phyllorhiza punctata\"@en ;\n    sosa:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/observation/1-18> ;\n    sosa:hasResult [ iliad:sampleSizeValue \"1-10\" ;\n            iliad:speciesScientificName \"Phyllorhiza punctata\" ;\n            iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;\n    sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;\n    sosa:phenomenonTime <2011-07-01T09:00:00> ;\n    sosa:resultTime \"2011-07-01T09:00:00\" ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( 3.564385e+01 3.427363e+01 ) ] .\n\n[] a sosa:ObservationCollection,\n        geojson:FeatureCollection ;\n    sosa:hasMember <https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata>,\n        <https://w3id.org/iliad/jellyfish/observation/1-18-528-Phyllorhiza_punctata> .\n\n",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish-features/example_2_1.ttl"
+        }
+      ]
+    },
+    {
+      "title": "Example of Jellyfish abundance observation ontology",
+      "content": "This TTL to be replaced by examples from the ontology development cycle.\n\nNote that the structure of a sosa:Observation is still relevant.\n",
+      "base-uri": "https://w3id.org/iliad/jellyfish/observation/",
+      "snippets": [
+        {
+          "language": "ttl",
+          "ref": "examples/example.ttl",
+          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix iliad: <https://w3id.org/iliad/property/> .\n@prefix jf-density: <https://w3id.org/iliad/jellyfish/property/densityOfJF/> .\n@prefix jf-property: <https://w3id.org/iliad/jellyfish/property/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix sosa: <http://www.w3.org/ns/sosa/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://w3id.org/iliad/jellyfish/observation/1-18-527-Phyllorhiza_punctata> a sosa:Observation,\n        geojson:Feature ;\n    rdfs:label \"Jelly fish observation #1 location id: 18 sensor: 527 species: Phyllorhiza punctata\"@en ;\n    sosa:hasFeatureOfInterest <https://w3id.org/iliad/jellyfish/feature/1-18> ;\n    sosa:hasResult [ jf-property:beachedJF \"1\" ;\n            jf-property:densityOfJF jf-density:Some ;\n            jf-property:quantityOfJF 50 ;\n            jf-property:stingByJF \"Unspecified\" ;\n            iliad:sampleSizeValue \"10-30\" ;\n            iliad:speciesScientificName \"Phyllorhiza punctata\" ;\n            iliad:wormsConcept <https://marinespecies.org/aphia.php?p=taxdetails&id=135298> ] ;\n    sosa:observedProperty jf-property:jellyFishAbundanceProperty ;\n    sosa:phenomenonTime \"2011-07-01T09:00:00\" ;\n    sosa:resultTime \"2011-07-01T09:00:00\" ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ] .\n\n",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/iliad-jellyfish-features/example_3_1.ttl"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Schemas for Ocean Information Model Observations\n$defs:\n  OIMObsProps:\n    allOf:\n    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsProps\n    - properties:\n        hasResult:\n          type: object\n          properties:\n            distanceWalkedInMeters:\n              type: number\n              description: Distance walked in meters.\n              minimum: 0\n              x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/distanceWalkedInMeters\n              x-jsonld-type: http://www.w3.org/2001/XMLSchema#double\n            distanceFromShore:\n              type: number\n              description: Distance from shore in meters.\n              minimum: 0\n              x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/distanceFromShore\n              x-jsonld-type: http://www.w3.org/2001/XMLSchema#double\n            stingByJellyFish:\n              type: string\n              description: Information about a jellyfish sting.\n              x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish\n              x-jsonld-type: http://www.w3.org/2001/XMLSchema#string\n            strandedJellyfish:\n              type: string\n              description: Information about stranded jellyfish.\n              x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/strandedJellyfish\n              x-jsonld-type: http://www.w3.org/2001/XMLSchema#string\n            agentConfidence:\n              type: number\n              description: Agent confidence information as a percentage.\n              minimum: 0\n              maximum: 100\n              x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/agentConfidence\n              x-jsonld-type: http://www.w3.org/2001/XMLSchema#double\n            abundanceLevel:\n              type: string\n              enum:\n              - low\n              - medium\n              - high\n              description: Level of jellyfish abundance observed.\n            name:\n              type: string\n              description: Name of the human sensor.\n            affiliation:\n              type: string\n              description: Affiliation of the human sensor.\n        hasFeatureOfInterest:\n          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n  OIMObsFeature:\n    allOf:\n    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsFeature\n    - properties:\n        properties:\n          $ref: '#/$defs/OIMObsProps'\n  OIMObsCollection:\n    allOf:\n    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsCollection\n    - properties:\n        features:\n          type: array\n          items:\n            allOf:\n            - $ref: '#/$defs/OIMObsFeature'\nanyOf:\n- $ref: '#/$defs/OIMObsProps'\n- $ref: '#/$defs/OIMObsFeature'\n- $ref: '#/$defs/OIMObsCollection'\nx-jsonld-extra-terms:\n  JellyFishAbundance:\n    x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/JellyFishAbundance\n    x-jsonld-type: '@id'\n  HumanSensor:\n    x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/HumanSensor\n    x-jsonld-type: '@id'\n  comment:\n    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#comment\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#string\n  label:\n    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#string\nx-jsonld-prefixes:\n  oim-jf: https://w3id.org/iliad/oim/ext/jellyfish/\n  xsd: http://www.w3.org/2001/XMLSchema#\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#\n",
+  "gitRepository": "https://github.com/ogcincubator/iliad-apis-features",
+  "gitPath": "_sources/iliad-jellyfish-features"
+}

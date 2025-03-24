@@ -1,0 +1,134 @@
+path	@id
+/resultTime	http://www.w3.org/ns/sosa/resultTime
+/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime
+/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest
+/observedProperty	http://www.w3.org/ns/sosa/observedProperty
+/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
+/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor
+/hasResult	
+/result	
+/result@links	
+/hasSimpleResult	
+/label	http://www.w3.org/2000/01/rdf-schema#label
+/sampleSizeValue	https://w3id.org/iliad/property/sampleSizeValue
+/speciesScientificName	https://w3id.org/iliad/property/speciesScientificName
+/wormsConcept	https://w3id.org/iliad/property/wormsConcept
+/hasResult/distanceWalkedInMeters	https://w3id.org/iliad/oim/ext/jellyfish/distanceWalkedInMeters
+/hasResult/distanceFromShore	https://w3id.org/iliad/oim/ext/jellyfish/distanceFromShore
+/hasResult/stingByJellyFish	https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish
+/hasResult/strandedJellyfish	https://w3id.org/iliad/oim/ext/jellyfish/strandedJellyfish
+/hasResult/agentConfidence	https://w3id.org/iliad/oim/ext/jellyfish/agentConfidence
+/hasResult/abundanceLevel	
+/hasResult/name	
+/hasResult/affiliation	
+/type	@type
+/id	@id
+/properties	@nest
+/geometry	https://purl.org/geojson/vocab#geometry
+/geometry/type	@type
+/geometry/coordinates	https://purl.org/geojson/vocab#coordinates
+/geometry/bbox	https://purl.org/geojson/vocab#bbox
+/geometry/geometries	
+/geometry/geometries/type	@type
+/geometry/geometries/coordinates	https://purl.org/geojson/vocab#coordinates
+/geometry/geometries/bbox	https://purl.org/geojson/vocab#bbox
+/bbox	https://purl.org/geojson/vocab#bbox
+/links	http://www.w3.org/2000/01/rdf-schema#seeAlso
+/links/href	http://www.w3.org/ns/oa#hasTarget
+/links/rel	http://www.iana.org/assignments/relation
+/links/anchor	
+/links/type	http://purl.org/dc/terms/type
+/links/hreflang	http://purl.org/dc/terms/language
+/links/title	http://www.w3.org/2000/01/rdf-schema#label
+/links/length	http://purl.org/dc/terms/extent
+/featureType	https://purl.org/geojson/vocab#collectionFeatureType
+/time	http://purl.org/dc/terms/time
+/time/date	http://www.w3.org/2006/time#hasTime
+/time/timestamp	http://www.w3.org/2006/time#hasTime
+/time/interval	http://www.w3.org/2006/time#hasTime
+/coordRefSys	http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS
+/coordRefSys/type	
+/coordRefSys/href	
+/coordRefSys/epoch	
+/place	http://purl.org/dc/terms/spatial
+/place/type	
+/place/coordRefSys	
+/place/coordinates	
+/place/bbox	
+/place/base	
+/place/lower	
+/place/upper	
+/place/prisms	
+/geometry/coordRefSys	
+/properties/resultTime	http://www.w3.org/ns/sosa/resultTime
+/properties/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime
+/properties/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest
+/properties/observedProperty	http://www.w3.org/ns/sosa/observedProperty
+/properties/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
+/properties/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor
+/properties/hasResult	
+/properties/result	
+/properties/result@links	
+/properties/hasSimpleResult	
+/geometryDimension	
+/features	http://www.w3.org/ns/sosa/hasMember
+/features/type	@type
+/features/id	@id
+/features/properties	@nest
+/features/geometry	https://purl.org/geojson/vocab#geometry
+/features/geometry/type	@type
+/features/geometry/coordinates	https://purl.org/geojson/vocab#coordinates
+/features/geometry/bbox	https://purl.org/geojson/vocab#bbox
+/features/geometry/geometries	
+/features/geometry/geometries/type	@type
+/features/geometry/geometries/coordinates	https://purl.org/geojson/vocab#coordinates
+/features/geometry/geometries/bbox	https://purl.org/geojson/vocab#bbox
+/features/bbox	https://purl.org/geojson/vocab#bbox
+/features/links	http://www.w3.org/2000/01/rdf-schema#seeAlso
+/features/links/href	http://www.w3.org/ns/oa#hasTarget
+/features/links/rel	http://www.iana.org/assignments/relation
+/features/links/anchor	
+/features/links/type	http://purl.org/dc/terms/type
+/features/links/hreflang	http://purl.org/dc/terms/language
+/features/links/title	http://www.w3.org/2000/01/rdf-schema#label
+/features/links/length	http://purl.org/dc/terms/extent
+/features/featureType	@type
+/features/time	http://purl.org/dc/terms/time
+/features/time/date	http://www.w3.org/2006/time#hasTime
+/features/time/timestamp	http://www.w3.org/2006/time#hasTime
+/features/time/interval	http://www.w3.org/2006/time#hasTime
+/features/coordRefSys	http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS
+/features/place	http://purl.org/dc/terms/spatial
+/features/place/type	
+/features/place/coordRefSys	
+/features/place/coordinates	
+/features/place/bbox	
+/features/place/base	
+/features/place/lower	
+/features/place/upper	
+/features/place/prisms	
+/features/geometry/coordRefSys	
+/timeStamp	
+/numberMatched	
+/numberReturned	
+/properties/hasMember	http://www.w3.org/ns/sosa/hasMember
+/properties/hasMember/resultTime	http://www.w3.org/ns/sosa/resultTime
+/properties/hasMember/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime
+/properties/hasMember/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest
+/properties/hasMember/observedProperty	http://www.w3.org/ns/sosa/observedProperty
+/properties/hasMember/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
+/properties/hasMember/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor
+/properties/hasMember/hasResult	
+/properties/hasMember/result	
+/properties/hasMember/result@links	
+/properties/hasMember/hasSimpleResult	
+/features/properties/resultTime	http://www.w3.org/ns/sosa/resultTime
+/features/properties/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime
+/features/properties/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest
+/features/properties/observedProperty	http://www.w3.org/ns/sosa/observedProperty
+/features/properties/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
+/features/properties/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor
+/features/properties/hasResult	
+/features/properties/result	
+/features/properties/result@links	
+/features/properties/hasSimpleResult	

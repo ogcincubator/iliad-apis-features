@@ -1236,11 +1236,11 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <cube:> .
-@prefix ns3: <dqv:> .
-@prefix ns4: <http://qudt.org/schema/qudt/> .
-@prefix ns5: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix ns6: <cf:> .
+@prefix ns2: <dqv:> .
+@prefix ns3: <http://qudt.org/schema/qudt/> .
+@prefix ns4: <cube:> .
+@prefix ns5: <cf:> .
+@prefix ns6: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -1252,13 +1252,13 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
 
 <http://w3id.org/ogcincubator/simulation> a geojson:Feature ;
     rdfs:label "No Title" ;
-    ns6:parameter [ ns4:unit <https://qudt.org/2.1/vocab/unit/GM-PER-KiloGM> ;
+    ns5:parameter [ ns3:unit <https://qudt.org/2.1/vocab/unit/GM-PER-KiloGM> ;
             foaf:name "sea_water_salinity"^^rdfs:Literal ] ;
-    ns2:dimensions [ dcterms:temporal [ a dcterms:temporal ] ] ;
-    ns2:variables [ ns5:lat [ a <http://w3id.org/ogcincubator/data> ;
-                    ns4:unit <http://w3id.org/ogcincubator/degrees_north> ] ] ;
-    ns3:hasQualityMeasurement "optional description of the quality measures used to generate the content, use wasGeneratedBy.used for cases whereever you can assign quality measure to particular processing step" ;
-    ns3:hasQualityMetadata "optional quality metadata as string or object (with structure TBD)" ;
+    ns4:dimensions [ dcterms:temporal [ a dcterms:temporal ] ] ;
+    ns4:variables [ ns6:lat [ a <http://w3id.org/ogcincubator/data> ;
+                    ns3:unit <http://w3id.org/ogcincubator/degrees_north> ] ] ;
+    ns2:hasQualityMeasurement "optional description of the quality measures used to generate the content, use wasGeneratedBy.used for cases whereever you can assign quality measure to particular processing step" ;
+    ns2:hasQualityMetadata "optional quality metadata as string or object (with structure TBD)" ;
     dcterms:conformsTo <https://ogcincubator.github.io/geodcat-ogcapi-records/bblock/ogc.geo.geodcat.geodcat-stac-eo/>,
         <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.stac_record>,
         <https://stac-extensions.github.io/cf/v0.2.0/schema.json>,
@@ -1272,49 +1272,49 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
     dcterms:modified "2024-10-03T10:59:34.887874Z" ;
     dcterms:temporal [ time:hasTime ( "2023-04-09 01:00:00+00:00" "2023-04-12 01:00:00+00:00" ) ;
             rec:iso8601period "P1D" ] ;
-    rdfs:seeAlso [ rdfs:label "link to the resource confirmance speficication" ;
-            dcterms:type "text/html" ;
-            ns1:relation <http://www.iana.org/assignments/relation/conformance> ;
-            oa:hasTarget <https://cfconventions.org/Data/cf-conventions/cf-conventions-1.11/cf-conventions.pdf> ],
-        [ rdfs:label "optional link to the previous in the serie" ;
+    rdfs:seeAlso [ rdfs:label "optional link to the previous in the serie" ;
             dcterms:type "text/html" ;
             ns1:relation <http://www.iana.org/assignments/relation/prev> ;
             oa:hasTarget <https://example.com/prev_data_record> ],
-        [ rdfs:label "optional link to the sample data, either one enclosure or service is required in Iliad profile" ;
-            dcterms:type "application/x-hdf" ;
-            ns1:relation <http://www.iana.org/assignments/relation/sample> ;
-            oa:hasTarget <http://w3id.org/ogcincubator/tests/simulation/simulation.zip> ],
+        [ rdfs:label "optional link to this record" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            oa:hasTarget <http://w3id.org/ogcincubator/tests/simulation/simulation.json> ],
         [ rdfs:label "optional thumbnail image preview" ;
             dcterms:type "image/png" ;
             ns1:relation <http://www.iana.org/assignments/relation/preview> ;
             oa:hasTarget <http://w3id.org/ogcincubator/~/Downloads/simulation.nc> ],
-        [ rdfs:label "optional raw file" ;
-            dcterms:type "application/x-hdf" ;
-            ns1:relation <http://www.iana.org/assignments/relation/enclosure> ;
-            oa:hasTarget <http://w3id.org/ogcincubator/~/Downloads/simulation.nc> ],
-        [ rdfs:label "link to the data, either one enclosure or service is required in Iliad profile" ;
+        [ rdfs:label "optional link to the sample data, either one enclosure or service is required in Iliad profile" ;
             dcterms:type "application/x-hdf" ;
             ns1:relation <http://www.iana.org/assignments/relation/sample> ;
             oa:hasTarget <http://w3id.org/ogcincubator/tests/simulation/simulation.zip> ],
-        [ rdfs:label "optional link to the web service (not raw file) like OGC Web Map Service (WMS) either one enclosure or service is required in Iliad profile" ;
-            dcterms:type "application/xml" ;
-            ns1:relation <http://www.iana.org/assignments/relation/service> ;
-            oa:hasTarget <https://example.com/ows/wms> ],
-        [ rdfs:label "optional link to the parent if data in series or other parent in the hierarchy" ;
-            dcterms:type "text/html" ;
-            ns1:relation <http://www.iana.org/assignments/relation/parent> ;
-            oa:hasTarget <https://example.com/prev_data_record> ],
         [ rdfs:label "optional link to the next in the serie" ;
             dcterms:type "text/html" ;
             ns1:relation <http://www.iana.org/assignments/relation/next> ;
             oa:hasTarget <https://example.com/next_data_record> ],
-        [ rdfs:label "optional link to this record" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            oa:hasTarget <http://w3id.org/ogcincubator/tests/simulation/simulation.json> ],
+        [ rdfs:label "link to the resource confirmance speficication" ;
+            dcterms:type "text/html" ;
+            ns1:relation <http://www.iana.org/assignments/relation/conformance> ;
+            oa:hasTarget <https://cfconventions.org/Data/cf-conventions/cf-conventions-1.11/cf-conventions.pdf> ],
+        [ rdfs:label "optional link to the parent if data in series or other parent in the hierarchy" ;
+            dcterms:type "text/html" ;
+            ns1:relation <http://www.iana.org/assignments/relation/parent> ;
+            oa:hasTarget <https://example.com/prev_data_record> ],
+        [ rdfs:label "link to the data, either one enclosure or service is required in Iliad profile" ;
+            dcterms:type "application/x-hdf" ;
+            ns1:relation <http://www.iana.org/assignments/relation/sample> ;
+            oa:hasTarget <http://w3id.org/ogcincubator/tests/simulation/simulation.zip> ],
         [ rdfs:label "optional link to the license" ;
             dcterms:type "text/html" ;
             ns1:relation <http://www.iana.org/assignments/relation/license> ;
-            oa:hasTarget <https://example.com/license> ] ;
+            oa:hasTarget <https://example.com/license> ],
+        [ rdfs:label "optional raw file" ;
+            dcterms:type "application/x-hdf" ;
+            ns1:relation <http://www.iana.org/assignments/relation/enclosure> ;
+            oa:hasTarget <http://w3id.org/ogcincubator/~/Downloads/simulation.nc> ],
+        [ rdfs:label "optional link to the web service (not raw file) like OGC Web Map Service (WMS) either one enclosure or service is required in Iliad profile" ;
+            dcterms:type "application/xml" ;
+            ns1:relation <http://www.iana.org/assignments/relation/service> ;
+            oa:hasTarget <https://example.com/ows/wms> ] ;
     owl:deprecated false ;
     dcat:contactPoint [ dcterms:identifier " optional identifier of the contact" ;
             rdfs:seeAlso [ dcterms:type "text/html" ;
@@ -1332,10 +1332,10 @@ Note that it may have an externally resolvable URI or be a proxy handled by ILIA
             geojson:coordinates ( ( ( 2.435186e+01 4.041341e+01 ) ( 2.435186e+01 9.96921e+36 ) ( 9.96921e+36 9.96921e+36 ) ( 9.96921e+36 4.041341e+01 ) ( 2.435186e+01 4.041341e+01 ) ) ) ] ;
     rec:themes [ rec:concept [ rec:conceptID "water_quality"^^xsd:string ] ;
             rec:scheme "http://mmisw.org/ont/ioos/category" ],
-        [ rec:concept [ foaf:name "water resources management"^^rdfs:Literal ;
-                    rec:conceptID "12301"^^xsd:string ],
-                [ dcterms:theme <http://www.eionet.europa.eu/gemet/concept/12301> ;
-                    rec:conceptID "water_resources_management"^^xsd:string ] ;
+        [ rec:concept [ dcterms:theme <http://www.eionet.europa.eu/gemet/concept/12301> ;
+                    rec:conceptID "water_resources_management"^^xsd:string ],
+                [ foaf:name "water resources management"^^rdfs:Literal ;
+                    rec:conceptID "12301"^^xsd:string ] ;
             rec:scheme "http://www.eionet.europa.eu/gemet/concept/" ] .
 
 <regulations:Act3> rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
