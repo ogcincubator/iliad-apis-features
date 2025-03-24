@@ -1,0 +1,24 @@
+{
+  "name": "Jellyfish Ontology",
+  "abstract": "Extensions Ontology for the Oceans Information Model, address specific semantics of the Jellyfish Citizen Science Observations Pilot",
+  "status": "under-development",
+  "dateTimeAddition": "2023-09-18T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0",
+  "dateOfLastChange": "2023-09-18",
+  "dependsOn": [
+  ],
+  "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",
+  "shaclRules": [
+  ],
+  "sources": [
+  ],
+  "scope": "dev",
+  "tags": [
+    "iliad",
+    "oim",
+    "citizen-science",
+    "project"
+  ]
+}

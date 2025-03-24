@@ -1,0 +1,5 @@
+{
+  "@context": ["https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jsonld/jellyFish-context.jsonld",
+  "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/jsonld/oimOceanProfile-context.jsonld"]
+  
+}

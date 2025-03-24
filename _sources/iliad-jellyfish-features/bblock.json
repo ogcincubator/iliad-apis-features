@@ -1,6 +1,6 @@
 {
-  "name": "Observations - ILIAD Jellyfish Pilot for Citizen Science",
-  "abstract": "Defines a project specific interoperability profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model",
+  "name": "ILIAD Jellyfish Pilot for Citizen Science",
+  "abstract": "Defines a project specific interoperability profile of the Features schema, with the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model",
   "highlighted": true,
   "status": "under-development",
   "dateTimeAddition": "2023-04-05T00:00:00Z",
@@ -9,6 +9,9 @@
   "version": "0.1",
   "dateOfLastChange": "2023-04-05",
   "link": "https://github.com/opengeospatial/bblock-template",
+  "dependsOn": [
+    "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology"
+  ],
   "sources": [
     {
       "title": "Reference to ILIAD",

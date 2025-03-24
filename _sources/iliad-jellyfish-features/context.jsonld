@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "oim-jf": "https://w3id.org/iliad/oim/ext/jellyfish/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "distanceWalkedInMeters": {
+      "@id": "oim-jf:distanceWalkedInMeters",
+      "@type": "xsd:double"
+    },
+    "distanceFromShore": {
+      "@id": "oim-jf:distanceFromShore",
+      "@type": "xsd:double"
+    },
+    "stingByJellyFish": {
+      "@id": "oim-jf:stingByJellyFish",
+      "@type": "xsd:string"
+    },
+    "strandedJellyfish": {
+      "@id": "oim-jf:strandedJellyfish",
+      "@type": "xsd:string"
+    },
+    "agentConfidence": {
+      "@id": "oim-jf:agentConfidence",
+      "@type": "xsd:double"
+    },
+    "JellyFishAbundance": {
+      "@id": "oim-jf:JellyFishAbundance",
+      "@type": "@id"
+    },
+    "HumanSensor": {
+      "@id": "oim-jf:HumanSensor",
+      "@type": "@id"
+    },
+    "comment": {
+      "@id": "rdfs:comment",
+      "@type": "xsd:string"
+    },
+    "label": {
+      "@id": "rdfs:label",
+      "@type": "xsd:string"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+description: 'Schemas for Ocean Information Model Observations'
+$defs:
+  OIMObsProps:
+    allOf:
+      - $ref: '../oim-obs-cs/schema.yaml#/$defs/OIMObsProps'
+      - properties:
+          hasResult:
+            type: object
+            properties:
+              distanceWalkedInMeters:
+                type: "number"
+                description: "Distance walked in meters."
+                minimum: 0
+              distanceFromShore:
+                type: "number"
+                description: "Distance from shore in meters."
+                minimum: 0
+              stingByJellyFish:
+                type: "string"
+                description: "Information about a jellyfish sting."
+              strandedJellyfish:
+                type: "string"
+                description: "Information about stranded jellyfish."
+              agentConfidence:
+                type: "number"
+                description: "Agent confidence information as a percentage."
+                minimum: 0
+                maximum: 100
+              abundanceLevel:
+                type: "string"
+                enum: [ "low", "medium", "high" ]
+                description: "Level of jellyfish abundance observed."
+              name:
+                type: "string"
+                description: "Name of the human sensor."
+              affiliation:
+                type: "string"
+                description: "Affiliation of the human sensor."
+          hasFeatureOfInterest:
+            $ref: bblocks://ogc.ogc-utils.iri-or-curie
+  OIMObsFeature:
+    allOf:
+      - $ref: '../oim-obs-cs/schema.yaml#/$defs/OIMObsFeature'
+      - properties:
+          properties:
+            $ref: '#/$defs/OIMObsProps'
+  OIMObsCollection:
+    allOf:
+      - $ref: '../oim-obs-cs/schema.yaml#/$defs/OIMObsCollection'
+      - properties:
+          features:
+            type: array
+            items:
+              allOf:
+                - $ref: '#/$defs/OIMObsFeature'
+anyOf:
+  - $ref: '#/$defs/OIMObsProps'
+  - $ref: '#/$defs/OIMObsFeature'
+  - $ref: '#/$defs/OIMObsCollection'

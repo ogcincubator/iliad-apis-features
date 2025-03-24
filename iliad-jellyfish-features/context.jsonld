@@ -1,0 +1,73 @@
+{
+  "@context" : {
+    "strandedJellyfish" : {
+      "@id" : "https://w3id.org/iliad/oim/ext/jellyfish/strandedJellyfish"
+    },
+    "JellyFishAbundance" : {
+      "@id" : "https://w3id.org/iliad/oim/ext/jellyfish/JellyFishAbundance"
+    },
+    "affiliation" : {
+      "@id" : "https://schema.org/affiliation"
+    },
+    "distanceFromShore" : {
+      "@id" : "https://w3id.org/iliad/oim/ext/jellyfish/distanceFromShore"
+    },
+    "agentConfidence" : {
+      "@id" : "https://w3id.org/iliad/oim/ext/jellyfish/agentConfidence"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "maker" : {
+      "@id" : "http://xmlns.com/foaf/0.1/maker"
+    },
+    "stingByJellyFish" : {
+      "@id" : "https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Result" : {
+      "@id" : "http://www.w3.org/ns/sosa/Result"
+    },
+    "homepage" : {
+      "@id" : "http://xmlns.com/foaf/0.1/homepage"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/terms/rights"
+    },
+    "HumanSensor" : {
+      "@id" : "https://w3id.org/iliad/oim/ext/jellyfish/HumanSensor"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "distanceWalkedInMeters" : {
+      "@id" : "https://w3id.org/iliad/oim/ext/jellyfish/distanceWalkedInMeters"
+    },
+    "Sensor" : {
+      "@id" : "http://www.w3.org/ns/sosa/Sensor"
+    }
+  }
+}
