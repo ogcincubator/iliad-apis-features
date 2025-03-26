@@ -2,7 +2,7 @@
   "name": "ILIAD API Profiles",
   "abstract": "(Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability.",
   "description": "Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. \n\nThus, a pilot project to monitor Jellyfish swarms using Citizen Science will reuse common patterns for Citizen Science observations, which in turn we reuse a common pattern for observations, using an underlying component of the OIM - the OGC Observations model (SOSA ontology). \n",
-  "modified": "2025-03-24T12:23:36.510531",
+  "modified": "2025-03-26T09:31:50.993249",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"e8df6b22cb38da4f600f3a0292c58fdef7734f97",
@@ -29,7 +29,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-24",
+      "dateOfLastChange": "2025-03-26",
       "link": "https://github.com/opengeospatial/CoverageJSON",
       "sources": [
         {
@@ -90,7 +90,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-24",
+      "dateOfLastChange": "2025-03-26",
       "link": "https://github.com/opengeospatial/coverage-implementation-schema",
       "sources": [
         {
@@ -146,7 +146,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0",
-      "dateOfLastChange": "2025-03-24",
+      "dateOfLastChange": "2025-03-26",
       "dependsOn": [],
       "shaclRules": {},
       "sources": [],
@@ -186,7 +186,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-24",
+      "dateOfLastChange": "2025-03-26",
       "link": "https://github.com/opengeospatial/iliad-api-features/oim-sta-obs",
       "sources": [
         {
@@ -238,7 +238,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-24",
+      "dateOfLastChange": "2025-03-26",
       "link": "https://github.com/opengeospatial/iliad-api-features/",
       "sources": [
         {
@@ -291,7 +291,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-24",
+      "dateOfLastChange": "2025-03-26",
       "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_array_metadata",
       "sources": [
         {
@@ -348,7 +348,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-24",
+      "dateOfLastChange": "2025-03-26",
       "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_attrs_metadata",
       "sources": [
         {
@@ -405,7 +405,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-24",
+      "dateOfLastChange": "2025-03-26",
       "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_attrs_metadata",
       "sources": [
         {
@@ -462,7 +462,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-24",
+      "dateOfLastChange": "2025-03-26",
       "link": "https://github.com/opengeospatial/CoverageJSON",
       "sources": [
         {
@@ -531,7 +531,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-24",
+      "dateOfLastChange": "2025-03-26",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -558,8 +558,8 @@
       "dependsOn": [
         "ogc.sosa.features.observationCollection",
         "ogc.sosa.features.observation",
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.sosa.properties.observation"
+        "ogc.sosa.properties.observation",
+        "ogc.ogc-utils.iri-or-curie"
       ],
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
       "schema": {
@@ -595,7 +595,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-24",
+      "dateOfLastChange": "2025-03-26",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -657,7 +657,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-24",
+      "dateOfLastChange": "2025-03-26",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -723,12 +723,12 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-24",
+      "dateOfLastChange": "2025-03-26",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
         "ogc.hosted.iliad.api.features.oim-obs-cs",
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology"
+        "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology",
+        "ogc.ogc-utils.iri-or-curie"
       ],
       "sources": [
         {

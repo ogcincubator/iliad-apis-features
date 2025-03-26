@@ -908,8 +908,8 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
                     covjson:shape ( 2 ) ] ],
         [ a covjson:Coverage ;
             covjson:domain [ a covjson:Domain ;
-                    covjson:axis [ covjson:dataType covjson:tuple ],
-                        [ ] ] ;
+                    covjson:axis [ ],
+                        [ covjson:dataType covjson:tuple ] ] ;
             covjson:range [ a covjson:NdArray ;
                     covjson:axisNames ( "composite" ) ;
                     covjson:dataType xsd:integer ;
