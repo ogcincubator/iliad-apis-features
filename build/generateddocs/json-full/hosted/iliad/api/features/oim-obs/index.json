@@ -34,10 +34,10 @@
     ]
   },
   "dependsOn": [
-    "ogc.sosa.features.observation",
-    "ogc.sosa.features.observationCollection",
     "ogc.sosa.properties.observation",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.sosa.features.observationCollection",
+    "ogc.ogc-utils.iri-or-curie",
+    "ogc.sosa.features.observation"
   ],
   "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
   "schema": {
