@@ -106,7 +106,7 @@
   "name": "Building Blocks - ILIAD API Profiles",
   "abstract": "(Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability.",
   "description": "Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. \n\nThus, a pilot project to monitor Jellyfish swarms using Citizen Science will reuse common patterns for Citizen Science observations, which in turn we reuse a common pattern for observations, using an underlying component of the OIM - the OGC Observations model (SOSA ontology). \n",
-  "modified": "2025-03-28T09:24:09.065964",
+  "modified": "2025-03-28T09:36:43.970393",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"e8df6b22cb38da4f600f3a0292c58fdef7734f97",
@@ -710,10 +710,10 @@
         ]
       },
       "dependsOn": [
+        "ogc.sosa.features.observationCollection",
         "ogc.sosa.properties.observation",
         "ogc.ogc-utils.iri-or-curie",
-        "ogc.sosa.features.observation",
-        "ogc.sosa.features.observationCollection"
+        "ogc.sosa.features.observation"
       ],
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
       "schema": {
@@ -895,8 +895,8 @@
       "dateOfLastChange": "2025-03-28",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
-        "ogc.hosted.iliad.api.features.oim-obs-cs",
         "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology",
+        "ogc.hosted.iliad.api.features.oim-obs-cs",
         "ogc.ogc-utils.iri-or-curie"
       ],
       "sources": [
