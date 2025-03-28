@@ -13,9 +13,9 @@
   "dateOfLastChange": "2025-03-28",
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [
+    "ogc.ogc-utils.iri-or-curie",
     "ogc.hosted.iliad.api.features.oim-obs-cs",
-    "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology"
   ],
   "sources": [
     {
