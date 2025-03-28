@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2025-03-26",
+  "dateOfLastChange": "2025-03-28",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -34,8 +34,8 @@
     ]
   },
   "dependsOn": [
-    "ogc.sosa.features.observationCollection",
     "ogc.sosa.features.observation",
+    "ogc.sosa.features.observationCollection",
     "ogc.sosa.properties.observation",
     "ogc.ogc-utils.iri-or-curie"
   ],
