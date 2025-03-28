@@ -13,4 +13,9 @@ schema-mapping:
 imports:
   - default
   - https://opengeospatial.github.io/ogcapi-sosa/build/register.json
-  
+
+sparql:
+  push: http://defs-dev.opengis.net/fuseki-hosted/data
+  graph: urn:ogc:hosted/bblocks/ogc.hosted.iliad.api.features
+  resources:
+    ontologies: true
