@@ -854,6 +854,10 @@
       "x-jsonld-id": "http://www.opengis.net/ont/geosparql#sfWithin",
       "x-jsonld-type": "@id"
     },
+    "hasBoundingBox": {
+      "x-jsonld-id": "http://www.opengis.net/ont/geosparql#hasBoundingBox",
+      "x-jsonld-type": "@id"
+    },
     "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",
     "hasUltimateFeatureOfInterest": {
       "x-jsonld-id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest",
@@ -1025,7 +1029,7 @@
       "x-jsonld-type": "@id"
     },
     "hasFeatureOfInterest": {
-      "x-jsonld-id": "https://saref.etsi.org/core/hasFeatureOfInterest",
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
       "x-jsonld-type": "@id"
     },
     "NumberPerLength": "http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLength",

@@ -154,6 +154,9 @@ x-jsonld-extra-terms:
   sfWithin:
     x-jsonld-id: http://www.opengis.net/ont/geosparql#sfWithin
     x-jsonld-type: '@id'
+  hasBoundingBox:
+    x-jsonld-id: http://www.opengis.net/ont/geosparql#hasBoundingBox
+    x-jsonld-type: '@id'
   ThermalConductivity: http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity
   hasUltimateFeatureOfInterest:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest
@@ -529,6 +532,10 @@ Links to the schema:
     "maker": "http://xmlns.com/foaf/0.1/maker",
     "sfWithin": {
       "@id": "http://www.opengis.net/ont/geosparql#sfWithin",
+      "@type": "@id"
+    },
+    "hasBoundingBox": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasBoundingBox",
       "@type": "@id"
     },
     "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",

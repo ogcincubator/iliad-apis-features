@@ -146,6 +146,13 @@
         "@vocab": "https://www.opengis.net/def/ogc-api/records/"
       }
     },
+    "assets": {
+      "@id": "https://w3id.org/ogc/stac/core/assets",
+      "@container": "@id"
+    },
+    "stac_version": "stac:version",
+    "stac_extensions": "stac:extensions",
+    "extent": "dct:extent",
     "IndexAxisType": "http://www.opengis.net/cis/1.1/IndexAxisType",
     "spatial": "dct:spatial",
     "previewInfo": {
@@ -858,6 +865,10 @@
       "@id": "http://www.opengis.net/ont/geosparql#sfWithin",
       "@type": "@id"
     },
+    "hasBoundingBox": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasBoundingBox",
+      "@type": "@id"
+    },
     "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",
     "hasUltimateFeatureOfInterest": {
       "@id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest",
@@ -1139,6 +1150,7 @@
     "vcard": "http://www.w3.org/2006/vcard/ns#",
     "prov": "http://www.w3.org/ns/prov#",
     "foaf": "http://xmlns.com/foaf/0.1/",
+    "stac": "https://www.opengis.net/def/ogc-api/stac/",
     "@version": 1.1
   }
 }

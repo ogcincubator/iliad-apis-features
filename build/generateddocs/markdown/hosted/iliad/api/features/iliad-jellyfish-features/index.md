@@ -1054,6 +1054,10 @@ Links to the schema:
       "@id": "http://www.opengis.net/ont/geosparql#sfWithin",
       "@type": "@id"
     },
+    "hasBoundingBox": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasBoundingBox",
+      "@type": "@id"
+    },
     "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",
     "domainIncludes": "https://schema.org/domainIncludes",
     "long": "http://www.w3.org/2003/01/geo/wgs84_pos#long",

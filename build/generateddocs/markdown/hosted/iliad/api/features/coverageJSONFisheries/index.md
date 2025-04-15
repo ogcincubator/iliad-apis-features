@@ -791,13 +791,13 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 
 [] a covjson:Coverage ;
     covjson:domain [ a covjson:Domain ;
-            covjson:axis [ ],
+            covjson:axis [ covjson:num 23 ;
+                    covjson:start 4.60003e+01 ;
+                    covjson:stop 4.648921e+01 ],
+                [ ],
                 [ covjson:num 13 ;
                     covjson:start -1.496301e+01 ;
-                    covjson:stop -1.451857e+01 ],
-                [ covjson:num 23 ;
-                    covjson:start 4.60003e+01 ;
-                    covjson:stop 4.648921e+01 ] ;
+                    covjson:stop -1.451857e+01 ] ;
             covjson:domainType covjsondt:Grid ;
             covjson:referencing [ covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/4326> ] ] ;
     covjson:parameter [ a covjson:Parameter ;
@@ -1516,6 +1516,9 @@ x-jsonld-extra-terms:
   sfWithin:
     x-jsonld-id: http://www.opengis.net/ont/geosparql#sfWithin
     x-jsonld-type: '@id'
+  hasBoundingBox:
+    x-jsonld-id: http://www.opengis.net/ont/geosparql#hasBoundingBox
+    x-jsonld-type: '@id'
   ThermalConductivity: http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity
   hasUltimateFeatureOfInterest:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest
@@ -1657,7 +1660,7 @@ x-jsonld-extra-terms:
     x-jsonld-id: http://purl.org/linked-data/cube#sliceStructure
     x-jsonld-type: '@id'
   hasFeatureOfInterest:
-    x-jsonld-id: https://saref.etsi.org/core/hasFeatureOfInterest
+    x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
     x-jsonld-type: '@id'
   NumberPerLength: http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLength
   lat: http://www.w3.org/2003/01/geo/wgs84_pos#lat
@@ -2954,6 +2957,10 @@ Links to the schema:
       "@id": "http://www.opengis.net/ont/geosparql#sfWithin",
       "@type": "@id"
     },
+    "hasBoundingBox": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasBoundingBox",
+      "@type": "@id"
+    },
     "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",
     "hasUltimateFeatureOfInterest": {
       "@id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest",
@@ -3125,7 +3132,7 @@ Links to the schema:
       "@type": "@id"
     },
     "hasFeatureOfInterest": {
-      "@id": "https://saref.etsi.org/core/hasFeatureOfInterest",
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
       "@type": "@id"
     },
     "NumberPerLength": "http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLength",
