@@ -12,7 +12,8 @@ schema-mapping:
 
 imports:
   - default
-  - https://opengeospatial.github.io/ogcapi-sosa/build/register.json
+  - https://opengeospatial.github.io/ogcapi-sosa/
+  - https://ogcincubator.github.io/geodcat-ogcapi-records/
 
 sparql:
   push: http://defs-dev.opengis.net/fuseki-hosted/data

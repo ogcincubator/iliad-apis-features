@@ -1,4 +1,4 @@
 "$schema": https://json-schema.org/draft/2020-12/schema
 title: A OIM aligned Records schema
 description: 'Component of Records conformant with STAC. no particular added constraints are added for selected extensions'
-$ref: https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/dcat-records/schema.json
+$ref: bblocks://ogc.geo.geodcat.stac.geodcat-stac-item

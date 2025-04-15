@@ -1,21 +1,29 @@
 {
-    "name": "STAC records with dcat mapping",
-    "abstract": "Defines example records conformant to STAC and OGC Records API",
-    "status": "under-development",
-    "dateTimeAddition": "2024-10-11T00:00:00Z",
-    "itemClass": "schema",
-    "register": "iliad-apis",
-    "version": "0.1",
-    "dateOfLastChange": "2024-10-11",
-    "link": "https://github.com/opengeospatial/iliad-api-features/",
-    "sources": [
-      {
-        "title": "Reference to ILIAD",
-        "link": "https://example.com/sources/1"
-      }
-    ],
-    "maturity": "development",
-    "scope": "unstable",
-    "tags": ["iliad", "records", "stac", "netcdf", "CF-convention"]
-  }
+  "name": "ILIAD STAC/DCAT dimensional data",
+  "abstract": "Defines a mapping from STAC multi-dimensions for ILIAD - should be refactored to a general STAC multi-dimensions profile and an ILIAD sub-profile",
+  "status": "under-development",
+  "dateTimeAddition": "2024-10-11T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2024-10-11",
+  "dependsOn": [
+  ],
+  "link": "https://github.com/opengeospatial/iliad-api-features/",
+  "sources": [
+    {
+      "title": "Reference to ILIAD",
+      "link": "https://example.com/sources/1"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "iliad",
+    "records",
+    "stac",
+    "netcdf",
+    "CF-convention"
+  ]
+}
   
