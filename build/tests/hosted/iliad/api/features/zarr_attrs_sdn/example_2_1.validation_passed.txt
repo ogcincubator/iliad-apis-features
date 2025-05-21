@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.zarr_attrs_sdn - GeoZarr Attributes description metadata aligned to the SeaDataNet time series profile
-Generated 2025-04-15T06:34:33.316818+00:00
+Generated 2025-05-21T02:32:44.178983+00:00
 === Files ===
 Using example_2_1.json from examples
 JSON-LD context is present - uplifting

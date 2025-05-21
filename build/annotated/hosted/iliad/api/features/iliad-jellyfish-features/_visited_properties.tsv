@@ -5,7 +5,7 @@ path	@id
 /observedProperty	http://www.w3.org/ns/sosa/observedProperty
 /usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
 /madeBySensor	http://www.w3.org/ns/sosa/madeBySensor
-/hasResult	
+/hasResult	http://www.w3.org/ns/sosa/hasResult
 /result	
 /result@links	
 /hasSimpleResult	
@@ -13,14 +13,10 @@ path	@id
 /sampleSizeValue	https://w3id.org/iliad/property/sampleSizeValue
 /speciesScientificName	https://w3id.org/iliad/property/speciesScientificName
 /wormsConcept	https://w3id.org/iliad/property/wormsConcept
-/hasResult/distanceWalkedInMeters	https://w3id.org/iliad/oim/ext/jellyfish/distanceWalkedInMeters
-/hasResult/distanceFromShore	https://w3id.org/iliad/oim/ext/jellyfish/distanceFromShore
-/hasResult/stingByJellyFish	https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish
-/hasResult/strandedJellyfish	https://w3id.org/iliad/oim/ext/jellyfish/strandedJellyfish
-/hasResult/agentConfidence	https://w3id.org/iliad/oim/ext/jellyfish/agentConfidence
-/hasResult/abundanceLevel	
-/hasResult/name	
-/hasResult/affiliation	
+/hasResult/quantityOfJF	https://w3id.org/iliad/oim/default-context/quantityOfJF
+/hasResult/densityOfJF	https://w3id.org/iliad/oim/default-context/densityOfJF
+/hasResult/stingByJF	https://w3id.org/iliad/oim/default-context/stingByJF
+/hasResult/beachedJF	https://w3id.org/iliad/oim/default-context/beachedJF
 /type	@type
 /id	@id
 /properties	@nest
@@ -71,7 +67,7 @@ path	@id
 /properties/result@links	
 /properties/hasSimpleResult	
 /geometryDimension	
-/features	http://www.w3.org/ns/sosa/hasMember
+/features	https://w3id.org/iliad/oim/default-context/features
 /features/type	@type
 /features/id	@id
 /features/properties	@nest

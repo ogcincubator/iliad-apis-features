@@ -1,9 +1,32 @@
 Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish-features - Observations - ILIAD Jellyfish Pilot for Citizen Science
-Generated 2025-05-21T02:32:52.585014+00:00
+Generated 2025-05-21T02:32:52.389653+00:00
 === Files ===
-Using example_3_1.ttl from examples
-Output Turtle example_3_1.ttl created
+Using example_1_1.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+Output Turtle example_1_1.ttl created
 === End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: {'type': 'Feature', 'featureType': ['FeatureOfInterest', 'Point', 'Location'], 'lat': 31.80691, 'long': 31.80691, 'coordinateUncertaintyInMeters': 10000, 'locality': 19, 'distanceFromShore': '0-200', 'geometry': {'type': 'Point', 'coordinates': [31.80691, 34.634776]}} is not valid under any of the given schemas
+
+Failed validating 'anyOf' in schema[1]['allOf'][1]['properties']['properties']['allOf'][1]['properties']['hasFeatureOfInterest']:
+    {'anyOf': [{'$ref': '#/$defs/IRI'},
+               {'$ref': '#/$defs/CURIE'},
+               {'$ref': '#/$defs/LocalPart'}]}
+
+On instance['properties']['hasFeatureOfInterest']:
+    {'coordinateUncertaintyInMeters': 10000,
+     'distanceFromShore': '0-200',
+     'featureType': ['FeatureOfInterest', 'Point', 'Location'],
+     'geometry': {'coordinates': [31.80691, 34.634776], 'type': 'Point'},
+     'lat': 31.80691,
+     'locality': 19,
+     'long': 31.80691,
+     'type': 'Feature'}
+=== End JSON Schema ===
 
 === SHACL ===
 Validation result for _sources/oim-obs/rules.shacl:
