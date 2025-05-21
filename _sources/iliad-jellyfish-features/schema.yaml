@@ -8,17 +8,30 @@ $defs:
         hasResult:
           type: object
           properties:
-            quantityOfJF:
+            individualCount:
               type: integer
-            densityOfJF:
+            organismQuantity:
+              type: string
+            organismQuantityType:
+              type: string
+            sampleSizeUnit:
+              type: string
+            sampleSizeValue:
+              type: string
+            densityOfJellyFish:
               type: string
               enum: [None, Some, Swarm, Few]
-            stingByJF:
+            stingByJellyFish:
               type: string
-            beachedJF:
+            strandedJellyFish:
               type: string
-        hasFeatureOfInterest:
-          $ref: bblocks://ogc.ogc-utils.iri-or-curie
+
+#              "aphiaID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
+
+#              "sampleSizeValue": "11-30",
+#              "scientificName": "Rhopilema nomadica",
+#              "scientificNameID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
+
   OIMObsFeature:
     allOf:
     - $ref: '../oim-obs-cs/schema.yaml#/$defs/OIMObsFeature'

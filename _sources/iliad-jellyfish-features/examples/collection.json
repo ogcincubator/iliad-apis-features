@@ -1,42 +1,54 @@
 {
-  "type": "ObservationCollection",
+  "type": "FeatureCollection",
   "hasMember": [
     {
       "@id": "63dc376df84bda32b6bbf78ed3e279e2",
-      "type": "Observation",  
-      "properties": {    
+      "type": "Observation",
+      "properties": {
         "label": {
           "en": "Jelly fish observation location id: 18 sensor: 3604 species: Phyllorhiza punctata"
         },
         "phenomenonTime": "2011-07-01T09:00:00",
-        "resultTime": "2011-07-01T09:00:00",    
+        "resultTime": "2011-07-01T09:00:00",
         "observedProperty": "jellyFishAbundanceProperty",
-        "basisOfRecord" : "HumanObservation",
-        "occurrenceStatus" : "present",
-        "distanceWalkedInMeters" : "1000-2000m",
-        "hasFeatureOfInterest" : {
+        "basisOfRecord": "HumanObservation",
+        "occurrenceStatus": "present",
+        "distanceWalkedInMeters": "1000-2000m",
+        "hasFeatureOfInterest": {
           "type": "Feature",
-          "featureType": ["FeatureOfInterest","Point", "Location"],
-          "lat": 31.806910 ,
-          "long": 31.806910 ,
-          "coordinateUncertaintyInMeters": 10000 ,
-          "locality": 18,
-          "distanceFromShore": "0-200" ,
+          "featureType": [
+            "FeatureOfInterest",
+            "Point",
+            "Location"
+          ],
+          "properties": {
+            "lat": 31.806910,
+            "long": 31.806910,
+            "coordinateUncertaintyInMeters": 10000,
+            "locality": 18,
+            "distanceFromShore": "0-200"
+          },
           "geometry": {
-             "type": "Point",
-             "coordinates": [
-                31.806910,
-                34.634776
-             ]
+            "type": "Point",
+            "coordinates": [
+              31.806910,
+              34.634776
+            ]
           }
         },
-        "madeBySensor" : {
-          "type" :[ "Sensor", "HumanSensor"] ,
+        "madeBySensor": {
+          "type": [
+            "Sensor",
+            "HumanSensor"
+          ],
           "label": "Human sensor: 3604",
           "agentConfidence": "1"
         },
         "hasResult": {
-          "type": ["Result","JellyFishAbundance"],
+          "type": [
+            "Result",
+            "JellyFishAbundance"
+          ],
           "aphiaID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
           "individualCount": 20,
           "organismQuantity": "Some",
@@ -46,46 +58,58 @@
           "scientificName": "Rhopilema nomadica",
           "scientificNameID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
           "stingByJellyFish": "0",
-          "strandedJellyfish": "1"  
+          "strandedJellyfish": "1"
         }
       }
     },
     {
       "@id": "63dc376df84bda32b6bbf78ed3e27333",
-      "type": "Observation",  
-      "properties": {    
+      "type": "Observation",
+      "properties": {
         "label": {
           "en": "Jelly fish observation location id: 19 sensor: 3602 species: Phyllorhiza punctata"
         },
         "phenomenonTime": "2013-07-01T09:00:00",
-        "resultTime": "2013-07-01T09:00:00",    
+        "resultTime": "2013-07-01T09:00:00",
         "observedProperty": "jellyFishAbundanceProperty",
-        "basisOfRecord" : "HumanObservation",
-        "occurrenceStatus" : "present",
-        "distanceWalkedInMeters" : "500-2000m",
-        "hasFeatureOfInterest" : {
+        "basisOfRecord": "HumanObservation",
+        "occurrenceStatus": "present",
+        "distanceWalkedInMeters": "500-2000m",
+        "hasFeatureOfInterest": {
           "type": "Feature",
-          "featureType": ["FeatureOfInterest","Point", "Location"],
-          "lat": 33.806910 ,
-          "long": 36.634776 ,
-          "coordinateUncertaintyInMeters": 10000 ,
-          "locality": 19,
-          "distanceFromShore": "0-200" ,
+          "featureType": [
+            "FeatureOfInterest",
+            "Point",
+            "Location"
+          ],
+          "properties": {
+            "lat": 33.806910,
+            "long": 36.634776,
+            "coordinateUncertaintyInMeters": 10000,
+            "locality": 19,
+            "distanceFromShore": "0-200"
+          },
           "geometry": {
-             "type": "Point",
-             "coordinates": [
-                33.806910,
-                36.634776
-             ]
+            "type": "Point",
+            "coordinates": [
+              33.806910,
+              36.634776
+            ]
           }
         },
-        "madeBySensor" : {
-          "type" :[ "Sensor", "HumanSensor"] ,
+        "madeBySensor": {
+          "type": [
+            "Sensor",
+            "HumanSensor"
+          ],
           "label": "Human sensor: 3602",
           "agentConfidence": "1"
         },
         "hasResult": {
-          "type": ["Result","JellyFishAbundance"],
+          "type": [
+            "Result",
+            "JellyFishAbundance"
+          ],
           "aphiaID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
           "individualCount": 50,
           "organismQuantity": "Some",
@@ -95,11 +119,9 @@
           "scientificName": "Rhopilema nomadica",
           "scientificNameID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
           "stingByJellyFish": "0",
-          "strandedJellyfish": "1"  
+          "strandedJellyfish": "1"
         }
       }
     }
-
   ]
-  
 }
