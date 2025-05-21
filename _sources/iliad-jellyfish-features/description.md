@@ -1,8 +1,6 @@
 ## Ocean Information Model Observations Profile for Citizen Science - Jellyfish Pilot
 
-This specification defines the specific requirements of the ILIAD Jellyfish Pilot as an implementation of the Oceans Information Model, implemented using the SOSA Observation Feature model (compatible with OGC API Features)
-
-Note that binding to specific packaging structures for other APIs or data formats, such as OGC APIs (STA, EDR) or NetCDF  will be done in alternative Building Blocks addressing the peculiar structural aspects of each schema.
+This specification defines the specific requirements of the ILIAD Jellyfish Pilot as an implementation of the Oceans Information Model.
 
 Constraints that are not unique to the pilot should be described in one of the "parent" profiles in the chain:
 
@@ -12,7 +10,6 @@ Constraints that are not unique to the pilot should be described in one of the "
 
 ## Key features of this profile:
 
-- based on a generic Feature model for OGC API Features
 - a schema for the hasResult element of observations
 - a JSON-LD context for this result schema
 - JSON-LD context elements defining namespaces for values specific to the pilot context:
