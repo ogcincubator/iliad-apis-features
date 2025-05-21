@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.coverageJSON - OGC CoverageJSON
-Generated 2025-05-21T02:32:43.160084+00:00
+Generated 2025-05-21T22:39:16.142071+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting

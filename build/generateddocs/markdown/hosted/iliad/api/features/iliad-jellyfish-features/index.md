@@ -49,61 +49,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
 ```json
 {
   "@id": "63dc376df84bda32b6bbf78ed3e279e2",
-  "type": "Observation",  
-  "properties": {    
-    "label": {
-      "en": "Jelly fish observation location id: 18 sensor: 527 species: Phyllorhiza punctata"
-    },
-    "phenomenonTime": "2011-07-01T09:00:00",
-    "resultTime": "2011-07-01T09:00:00",    
-    "observedProperty": "jellyFishAbundanceProperty",
-    "basisOfRecord" : "HumanObservation",
-    "occurrenceStatus" : "present",
-    "distanceWalkedInMeters" : "1000-2000m",
-    "hasFeatureOfInterest" : {
-      "type": "Feature",
-      "featureType": ["FeatureOfInterest","Point", "Location"],
-      "lat": 31.806910 ,
-      "long": 31.806910 ,
-      "coordinateUncertaintyInMeters": 10000 ,
-      "locality": 19,
-      "distanceFromShore": "0-200" ,
-      "geometry": {
-         "type": "Point",
-         "coordinates": [
-            31.806910,
-            34.634776
-         ]
-      }
-    },
-    "madeBySensor" : {
-      "type" :[ "Sensor", "HumanSensor"] ,
-      "label": "Human sensor: 3602",
-      "agentConfidence": "1"
-    },
-    "hasResult": {
-      "type": ["Result","JellyFishAbundance"],
-      "aphiaID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
-      "individualCount": 20,
-      "organismQuantity": "Some",
-      "organismQuantityType": "individuals",
-      "sampleSizeUnit": "cm",
-      "sampleSizeValue": "11-30",
-      "scientificName": "Rhopilema nomadica",
-      "scientificNameID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
-      "stingByJellyFish": "0",
-      "strandedJellyfish": "1"  
-    }
-  }
-}
-```
-
-#### jsonld
-```jsonld
-{
-  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/context.jsonld",
-  "@id": "63dc376df84bda32b6bbf78ed3e279e2",
-  "type": "Observation",
+  "type": "Feature",
+  "geometry": null,
   "properties": {
     "label": {
       "en": "Jelly fish observation location id: 18 sensor: 527 species: Phyllorhiza punctata"
@@ -121,11 +68,80 @@ The SHACL rules (and any other validators developed) will be tested against the 
         "Point",
         "Location"
       ],
-      "lat": 31.80691,
-      "long": 31.80691,
-      "coordinateUncertaintyInMeters": 10000,
-      "locality": 19,
-      "distanceFromShore": "0-200",
+      "properties": {
+        "lat": 31.806910,
+        "long": 31.806910,
+        "coordinateUncertaintyInMeters": 10000,
+        "locality": 19,
+        "distanceFromShore": "0-200"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.806910,
+          34.634776
+        ]
+      }
+    },
+    "madeBySensor": {
+      "type": [
+        "Sensor",
+        "HumanSensor"
+      ],
+      "label": "Human sensor: 3602",
+      "agentConfidence": "1"
+    },
+    "hasResult": {
+      "type": [
+        "Result",
+        "JellyFishAbundance"
+      ],
+      "aphiaID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
+      "individualCount": 20,
+      "organismQuantity": "Some",
+      "organismQuantityType": "individuals",
+      "sampleSizeUnit": "cm",
+      "sampleSizeValue": "11-30",
+      "scientificName": "Rhopilema nomadica",
+      "scientificNameID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
+      "stingByJellyFish": "0",
+      "strandedJellyfish": "1"
+    }
+  }
+}
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/context.jsonld",
+  "@id": "63dc376df84bda32b6bbf78ed3e279e2",
+  "type": "Feature",
+  "geometry": null,
+  "properties": {
+    "label": {
+      "en": "Jelly fish observation location id: 18 sensor: 527 species: Phyllorhiza punctata"
+    },
+    "phenomenonTime": "2011-07-01T09:00:00",
+    "resultTime": "2011-07-01T09:00:00",
+    "observedProperty": "jellyFishAbundanceProperty",
+    "basisOfRecord": "HumanObservation",
+    "occurrenceStatus": "present",
+    "distanceWalkedInMeters": "1000-2000m",
+    "hasFeatureOfInterest": {
+      "type": "Feature",
+      "featureType": [
+        "FeatureOfInterest",
+        "Point",
+        "Location"
+      ],
+      "properties": {
+        "lat": 31.80691,
+        "long": 31.80691,
+        "coordinateUncertaintyInMeters": 10000,
+        "locality": 19,
+        "distanceFromShore": "0-200"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -167,7 +183,6 @@ The SHACL rules (and any other validators developed) will be tested against the 
 @prefix : <https://w3id.org/iliad/oim/default-context/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix iliad: <https://w3id.org/iliad/property/> .
 @prefix ns1: <http://rs.tdwg.org/dwc/terms/> .
 @prefix ns2: <http://mmisw.org/ont/ioos/marine_biogeography/> .
 @prefix ns3: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -176,7 +191,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2> a sosa:Observation ;
+<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2> a geojson:Feature ;
     rdfs:label "Jelly fish observation location id: 18 sensor: 527 species: Phyllorhiza punctata"@en ;
     ns1:basisOfRecord "HumanObservation" ;
     ns1:occurrenceStatus "present" ;
@@ -198,11 +213,11 @@ The SHACL rules (and any other validators developed) will be tested against the 
             ns1:organismQuantity "Some" ;
             ns1:organismQuantityType "individuals" ;
             ns1:sampleSizeUnit "cm" ;
+            ns1:sampleSizeValue "11-30" ;
             ns1:scientificName "Rhopilema nomadica" ;
             ns1:scientificNameID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
             :stingByJellyFish "0" ;
-            :strandedJellyfish "1" ;
-            iliad:sampleSizeValue "11-30" ] ;
+            :strandedJellyfish "1" ] ;
     sosa:madeBySensor [ a sosa:Sensor,
                 :HumanSensor ;
             rdfs:label "Human sensor: 3602" ;
@@ -220,117 +235,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
 #### json
 ```json
 {
-  "type": "ObservationCollection",
-  "hasMember": [
-    {
-      "@id": "63dc376df84bda32b6bbf78ed3e279e2",
-      "type": "Observation",  
-      "properties": {    
-        "label": {
-          "en": "Jelly fish observation location id: 18 sensor: 3604 species: Phyllorhiza punctata"
-        },
-        "phenomenonTime": "2011-07-01T09:00:00",
-        "resultTime": "2011-07-01T09:00:00",    
-        "observedProperty": "jellyFishAbundanceProperty",
-        "basisOfRecord" : "HumanObservation",
-        "occurrenceStatus" : "present",
-        "distanceWalkedInMeters" : "1000-2000m",
-        "hasFeatureOfInterest" : {
-          "type": "Feature",
-          "featureType": ["FeatureOfInterest","Point", "Location"],
-          "lat": 31.806910 ,
-          "long": 31.806910 ,
-          "coordinateUncertaintyInMeters": 10000 ,
-          "locality": 18,
-          "distanceFromShore": "0-200" ,
-          "geometry": {
-             "type": "Point",
-             "coordinates": [
-                31.806910,
-                34.634776
-             ]
-          }
-        },
-        "madeBySensor" : {
-          "type" :[ "Sensor", "HumanSensor"] ,
-          "label": "Human sensor: 3604",
-          "agentConfidence": "1"
-        },
-        "hasResult": {
-          "type": ["Result","JellyFishAbundance"],
-          "aphiaID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
-          "individualCount": 20,
-          "organismQuantity": "Some",
-          "organismQuantityType": "individuals",
-          "sampleSizeUnit": "cm",
-          "sampleSizeValue": "11-30",
-          "scientificName": "Rhopilema nomadica",
-          "scientificNameID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
-          "stingByJellyFish": "0",
-          "strandedJellyfish": "1"  
-        }
-      }
-    },
-    {
-      "@id": "63dc376df84bda32b6bbf78ed3e27333",
-      "type": "Observation",  
-      "properties": {    
-        "label": {
-          "en": "Jelly fish observation location id: 19 sensor: 3602 species: Phyllorhiza punctata"
-        },
-        "phenomenonTime": "2013-07-01T09:00:00",
-        "resultTime": "2013-07-01T09:00:00",    
-        "observedProperty": "jellyFishAbundanceProperty",
-        "basisOfRecord" : "HumanObservation",
-        "occurrenceStatus" : "present",
-        "distanceWalkedInMeters" : "500-2000m",
-        "hasFeatureOfInterest" : {
-          "type": "Feature",
-          "featureType": ["FeatureOfInterest","Point", "Location"],
-          "lat": 33.806910 ,
-          "long": 36.634776 ,
-          "coordinateUncertaintyInMeters": 10000 ,
-          "locality": 19,
-          "distanceFromShore": "0-200" ,
-          "geometry": {
-             "type": "Point",
-             "coordinates": [
-                33.806910,
-                36.634776
-             ]
-          }
-        },
-        "madeBySensor" : {
-          "type" :[ "Sensor", "HumanSensor"] ,
-          "label": "Human sensor: 3602",
-          "agentConfidence": "1"
-        },
-        "hasResult": {
-          "type": ["Result","JellyFishAbundance"],
-          "aphiaID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
-          "individualCount": 50,
-          "organismQuantity": "Some",
-          "organismQuantityType": "individuals",
-          "sampleSizeUnit": "cm",
-          "sampleSizeValue": "5-30",
-          "scientificName": "Rhopilema nomadica",
-          "scientificNameID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
-          "stingByJellyFish": "0",
-          "strandedJellyfish": "1"  
-        }
-      }
-    }
-
-  ]
-  
-}
-```
-
-#### jsonld
-```jsonld
-{
-  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/context.jsonld",
-  "type": "ObservationCollection",
+  "type": "FeatureCollection",
   "hasMember": [
     {
       "@id": "63dc376df84bda32b6bbf78ed3e279e2",
@@ -352,11 +257,145 @@ The SHACL rules (and any other validators developed) will be tested against the 
             "Point",
             "Location"
           ],
-          "lat": 31.80691,
-          "long": 31.80691,
-          "coordinateUncertaintyInMeters": 10000,
-          "locality": 18,
-          "distanceFromShore": "0-200",
+          "properties": {
+            "lat": 31.806910,
+            "long": 31.806910,
+            "coordinateUncertaintyInMeters": 10000,
+            "locality": 18,
+            "distanceFromShore": "0-200"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              31.806910,
+              34.634776
+            ]
+          }
+        },
+        "madeBySensor": {
+          "type": [
+            "Sensor",
+            "HumanSensor"
+          ],
+          "label": "Human sensor: 3604",
+          "agentConfidence": "1"
+        },
+        "hasResult": {
+          "type": [
+            "Result",
+            "JellyFishAbundance"
+          ],
+          "aphiaID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
+          "individualCount": 20,
+          "organismQuantity": "Some",
+          "organismQuantityType": "individuals",
+          "sampleSizeUnit": "cm",
+          "sampleSizeValue": "11-30",
+          "scientificName": "Rhopilema nomadica",
+          "scientificNameID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
+          "stingByJellyFish": "0",
+          "strandedJellyfish": "1"
+        }
+      }
+    },
+    {
+      "@id": "63dc376df84bda32b6bbf78ed3e27333",
+      "type": "Observation",
+      "properties": {
+        "label": {
+          "en": "Jelly fish observation location id: 19 sensor: 3602 species: Phyllorhiza punctata"
+        },
+        "phenomenonTime": "2013-07-01T09:00:00",
+        "resultTime": "2013-07-01T09:00:00",
+        "observedProperty": "jellyFishAbundanceProperty",
+        "basisOfRecord": "HumanObservation",
+        "occurrenceStatus": "present",
+        "distanceWalkedInMeters": "500-2000m",
+        "hasFeatureOfInterest": {
+          "type": "Feature",
+          "featureType": [
+            "FeatureOfInterest",
+            "Point",
+            "Location"
+          ],
+          "properties": {
+            "lat": 33.806910,
+            "long": 36.634776,
+            "coordinateUncertaintyInMeters": 10000,
+            "locality": 19,
+            "distanceFromShore": "0-200"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              33.806910,
+              36.634776
+            ]
+          }
+        },
+        "madeBySensor": {
+          "type": [
+            "Sensor",
+            "HumanSensor"
+          ],
+          "label": "Human sensor: 3602",
+          "agentConfidence": "1"
+        },
+        "hasResult": {
+          "type": [
+            "Result",
+            "JellyFishAbundance"
+          ],
+          "aphiaID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
+          "individualCount": 50,
+          "organismQuantity": "Some",
+          "organismQuantityType": "individuals",
+          "sampleSizeUnit": "cm",
+          "sampleSizeValue": "5-30",
+          "scientificName": "Rhopilema nomadica",
+          "scientificNameID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
+          "stingByJellyFish": "0",
+          "strandedJellyfish": "1"
+        }
+      }
+    }
+  ]
+}
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/context.jsonld",
+  "type": "FeatureCollection",
+  "hasMember": [
+    {
+      "@id": "63dc376df84bda32b6bbf78ed3e279e2",
+      "type": "Observation",
+      "properties": {
+        "label": {
+          "en": "Jelly fish observation location id: 18 sensor: 3604 species: Phyllorhiza punctata"
+        },
+        "phenomenonTime": "2011-07-01T09:00:00",
+        "resultTime": "2011-07-01T09:00:00",
+        "observedProperty": "jellyFishAbundanceProperty",
+        "basisOfRecord": "HumanObservation",
+        "occurrenceStatus": "present",
+        "distanceWalkedInMeters": "1000-2000m",
+        "hasFeatureOfInterest": {
+          "type": "Feature",
+          "featureType": [
+            "FeatureOfInterest",
+            "Point",
+            "Location"
+          ],
+          "properties": {
+            "lat": 31.80691,
+            "long": 31.80691,
+            "coordinateUncertaintyInMeters": 10000,
+            "locality": 18,
+            "distanceFromShore": "0-200"
+          },
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -411,11 +450,13 @@ The SHACL rules (and any other validators developed) will be tested against the 
             "Point",
             "Location"
           ],
-          "lat": 33.80691,
-          "long": 36.634776,
-          "coordinateUncertaintyInMeters": 10000,
-          "locality": 19,
-          "distanceFromShore": "0-200",
+          "properties": {
+            "lat": 33.80691,
+            "long": 36.634776,
+            "coordinateUncertaintyInMeters": 10000,
+            "locality": 19,
+            "distanceFromShore": "0-200"
+          },
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -459,9 +500,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
 @prefix : <https://w3id.org/iliad/oim/default-context/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix iliad: <https://w3id.org/iliad/property/> .
-@prefix ns1: <http://rs.tdwg.org/dwc/terms/> .
-@prefix ns2: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ns1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ns2: <http://rs.tdwg.org/dwc/terms/> .
 @prefix ns3: <http://mmisw.org/ont/ioos/marine_biogeography/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -470,31 +510,31 @@ The SHACL rules (and any other validators developed) will be tested against the 
 
 <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333> a sosa:Observation ;
     rdfs:label "Jelly fish observation location id: 19 sensor: 3602 species: Phyllorhiza punctata"@en ;
-    ns1:basisOfRecord "HumanObservation" ;
-    ns1:occurrenceStatus "present" ;
+    ns2:basisOfRecord "HumanObservation" ;
+    ns2:occurrenceStatus "present" ;
     sosa:hasFeatureOfInterest [ a dcterms:Location,
                 sosa:FeatureOfInterest,
                 geojson:Feature,
                 geojson:Point ;
-            ns1:coordinateUncertaintyInMeters 10000 ;
-            ns1:locality 19 ;
-            ns2:lat 3.380691e+01 ;
-            ns2:long 3.663478e+01 ;
+            ns2:coordinateUncertaintyInMeters 10000 ;
+            ns2:locality 19 ;
+            ns1:lat 3.380691e+01 ;
+            ns1:long 3.663478e+01 ;
             geojson:geometry [ a geojson:Point ;
                     geojson:coordinates ( 3.380691e+01 3.663478e+01 ) ] ;
             :distanceFromShore "0-200" ] ;
     sosa:hasResult [ a sosa:Result,
                 :JellyFishAbundance ;
             ns3:aphiaID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
-            ns1:individualCount 50 ;
-            ns1:organismQuantity "Some" ;
-            ns1:organismQuantityType "individuals" ;
-            ns1:sampleSizeUnit "cm" ;
-            ns1:scientificName "Rhopilema nomadica" ;
-            ns1:scientificNameID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
+            ns2:individualCount 50 ;
+            ns2:organismQuantity "Some" ;
+            ns2:organismQuantityType "individuals" ;
+            ns2:sampleSizeUnit "cm" ;
+            ns2:sampleSizeValue "5-30" ;
+            ns2:scientificName "Rhopilema nomadica" ;
+            ns2:scientificNameID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
             :stingByJellyFish "0" ;
-            :strandedJellyfish "1" ;
-            iliad:sampleSizeValue "5-30" ] ;
+            :strandedJellyfish "1" ] ;
     sosa:madeBySensor [ a sosa:Sensor,
                 :HumanSensor ;
             rdfs:label "Human sensor: 3602" ;
@@ -506,31 +546,31 @@ The SHACL rules (and any other validators developed) will be tested against the 
 
 <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2> a sosa:Observation ;
     rdfs:label "Jelly fish observation location id: 18 sensor: 3604 species: Phyllorhiza punctata"@en ;
-    ns1:basisOfRecord "HumanObservation" ;
-    ns1:occurrenceStatus "present" ;
+    ns2:basisOfRecord "HumanObservation" ;
+    ns2:occurrenceStatus "present" ;
     sosa:hasFeatureOfInterest [ a dcterms:Location,
                 sosa:FeatureOfInterest,
                 geojson:Feature,
                 geojson:Point ;
-            ns1:coordinateUncertaintyInMeters 10000 ;
-            ns1:locality 18 ;
-            ns2:lat 3.180691e+01 ;
-            ns2:long 3.180691e+01 ;
+            ns2:coordinateUncertaintyInMeters 10000 ;
+            ns2:locality 18 ;
+            ns1:lat 3.180691e+01 ;
+            ns1:long 3.180691e+01 ;
             geojson:geometry [ a geojson:Point ;
                     geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ] ;
             :distanceFromShore "0-200" ] ;
     sosa:hasResult [ a sosa:Result,
                 :JellyFishAbundance ;
             ns3:aphiaID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
-            ns1:individualCount 20 ;
-            ns1:organismQuantity "Some" ;
-            ns1:organismQuantityType "individuals" ;
-            ns1:sampleSizeUnit "cm" ;
-            ns1:scientificName "Rhopilema nomadica" ;
-            ns1:scientificNameID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
+            ns2:individualCount 20 ;
+            ns2:organismQuantity "Some" ;
+            ns2:organismQuantityType "individuals" ;
+            ns2:sampleSizeUnit "cm" ;
+            ns2:sampleSizeValue "11-30" ;
+            ns2:scientificName "Rhopilema nomadica" ;
+            ns2:scientificNameID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
             :stingByJellyFish "0" ;
-            :strandedJellyfish "1" ;
-            iliad:sampleSizeValue "11-30" ] ;
+            :strandedJellyfish "1" ] ;
     sosa:madeBySensor [ a sosa:Sensor,
                 :HumanSensor ;
             rdfs:label "Human sensor: 3604" ;
@@ -540,7 +580,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
     sosa:resultTime "2011-07-01T09:00:00" ;
     :distanceWalkedInMeters "1000-2000m" .
 
-[] a sosa:ObservationCollection ;
+[] a geojson:FeatureCollection ;
     sosa:hasMember <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>,
         <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2> .
 
@@ -626,28 +666,36 @@ $defs:
         hasResult:
           type: object
           properties:
-            quantityOfJF:
+            individualCount:
               type: integer
-              x-jsonld-id: https://w3id.org/iliad/oim/default-context/quantityOfJF
-            densityOfJF:
+              x-jsonld-id: http://rs.tdwg.org/dwc/terms/individualCount
+            organismQuantity:
+              type: string
+              x-jsonld-id: http://rs.tdwg.org/dwc/terms/organismQuantity
+            organismQuantityType:
+              type: string
+              x-jsonld-id: http://rs.tdwg.org/dwc/terms/organismQuantityType
+            sampleSizeUnit:
+              type: string
+              x-jsonld-id: http://rs.tdwg.org/dwc/terms/sampleSizeUnit
+            sampleSizeValue:
+              type: string
+              x-jsonld-id: http://rs.tdwg.org/dwc/terms/sampleSizeValue
+            densityOfJellyFish:
               type: string
               enum:
               - None
               - Some
               - Swarm
               - Few
-              x-jsonld-id: https://w3id.org/iliad/oim/default-context/densityOfJF
-            stingByJF:
+              x-jsonld-id: https://w3id.org/iliad/oim/default-context/densityOfJellyFish
+            stingByJellyFish:
               type: string
-              x-jsonld-id: https://w3id.org/iliad/oim/default-context/stingByJF
-            beachedJF:
+              x-jsonld-id: https://w3id.org/iliad/oim/default-context/stingByJellyFish
+            strandedJellyFish:
               type: string
-              x-jsonld-id: https://w3id.org/iliad/oim/default-context/beachedJF
+              x-jsonld-id: https://w3id.org/iliad/oim/default-context/strandedJellyFish
           x-jsonld-id: http://www.w3.org/ns/sosa/hasResult
-        hasFeatureOfInterest:
-          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
-          x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
-          x-jsonld-type: '@id'
   OIMObsFeature:
     allOf:
     - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsFeature
@@ -673,12 +721,10 @@ x-jsonld-extra-terms:
   type: '@type'
   PhotonFluxDensity: http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity
   implements: http://www.w3.org/ns/ssn/implements
-  sampleSizeUnit: http://rs.tdwg.org/dwc/terms/sampleSizeUnit
   recordNumber: http://rs.tdwg.org/dwc/terms/recordNumber
   verbatimLongitude: http://rs.tdwg.org/dwc/terms/verbatimLongitude
   invalidatedAtTime: http://www.w3.org/ns/prov#invalidatedAtTime
   behavior: http://rs.tdwg.org/dwc/terms/behavior
-  organismQuantity: http://rs.tdwg.org/dwc/terms/organismQuantity
   spatial: http://purl.org/dc/terms/spatial
   scientificNameID: http://rs.tdwg.org/dwc/terms/scientificNameID
   lowestBiostratigraphicZone: http://rs.tdwg.org/dwc/terms/lowestBiostratigraphicZone
@@ -759,7 +805,6 @@ x-jsonld-extra-terms:
   scientificName: http://rs.tdwg.org/dwc/terms/scientificName
   Volume: http://purl.oclc.org/NET/ssnx/qu/dim#Volume
   Thing: http://www.w3.org/2002/07/owl#Thing
-  organismQuantityType: http://rs.tdwg.org/dwc/terms/organismQuantityType
   catalogNumber: http://rs.tdwg.org/dwc/terms/catalogNumber
   continent: http://rs.tdwg.org/dwc/terms/continent
   minimumDistanceAboveSurfaceInMeters: http://rs.tdwg.org/dwc/terms/minimumDistanceAboveSurfaceInMeters
@@ -867,7 +912,6 @@ x-jsonld-extra-terms:
   Measurement: https://saref.etsi.org/core/Measurement
   Location: http://purl.org/dc/terms/Location
   footprintSRS: http://rs.tdwg.org/dwc/terms/footprintSRS
-  individualCount: http://rs.tdwg.org/dwc/terms/individualCount
   collectionCode: http://rs.tdwg.org/dwc/terms/collectionCode
   isHostedBy: http://www.w3.org/ns/sosa/isHostedBy
   lithostratigraphicTerms: http://rs.tdwg.org/dwc/terms/lithostratigraphicTerms
@@ -980,7 +1024,6 @@ x-jsonld-extra-terms:
   DimensionProperty: http://purl.org/linked-data/cube#DimensionProperty
   alt: http://www.w3.org/2003/01/geo/wgs84_pos#alt
   superfamily: http://rs.tdwg.org/dwc/terms/superfamily
-  sampleSizeValue: http://rs.tdwg.org/dwc/terms/sampleSizeValue
   Acceleration: http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration
   identifier: http://purl.org/dc/terms/identifier
   LivingSpecimen: http://rs.tdwg.org/dwc/terms/LivingSpecimen
@@ -1085,6 +1128,9 @@ x-jsonld-extra-terms:
   SpatialObject: http://www.opengis.net/ont/geosparql#SpatialObject
   sliceStructure: http://purl.org/linked-data/cube#sliceStructure
   dewPoint: https://smartdatamodels.org/dataModel.Weather/dewPoint
+  hasFeatureOfInterest:
+    x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
+    x-jsonld-type: '@id'
   NumberPerLength: http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLength
   lat: http://www.w3.org/2003/01/geo/wgs84_pos#lat
   sightingDistanceInMeters: http://mmisw.org/ont/ioos/marine_biogeography/sightingDistanceInMeters
@@ -1443,10 +1489,14 @@ Links to the schema:
       "@id": "sosa:hasResult",
       "@type": "@id",
       "@context": {
-        "quantityOfJF": "https://w3id.org/iliad/oim/default-context/quantityOfJF",
-        "densityOfJF": "https://w3id.org/iliad/oim/default-context/densityOfJF",
-        "stingByJF": "https://w3id.org/iliad/oim/default-context/stingByJF",
-        "beachedJF": "https://w3id.org/iliad/oim/default-context/beachedJF"
+        "individualCount": "http://rs.tdwg.org/dwc/terms/individualCount",
+        "organismQuantity": "http://rs.tdwg.org/dwc/terms/organismQuantity",
+        "organismQuantityType": "http://rs.tdwg.org/dwc/terms/organismQuantityType",
+        "sampleSizeUnit": "http://rs.tdwg.org/dwc/terms/sampleSizeUnit",
+        "sampleSizeValue": "http://rs.tdwg.org/dwc/terms/sampleSizeValue",
+        "densityOfJellyFish": "https://w3id.org/iliad/oim/default-context/densityOfJellyFish",
+        "stingByJellyFish": "https://w3id.org/iliad/oim/default-context/stingByJellyFish",
+        "strandedJellyFish": "https://w3id.org/iliad/oim/default-context/strandedJellyFish"
       }
     },
     "hasResultQuality": {
@@ -1768,12 +1818,10 @@ Links to the schema:
       "@container": "@list"
     },
     "PhotonFluxDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity",
-    "sampleSizeUnit": "http://rs.tdwg.org/dwc/terms/sampleSizeUnit",
     "recordNumber": "http://rs.tdwg.org/dwc/terms/recordNumber",
     "verbatimLongitude": "http://rs.tdwg.org/dwc/terms/verbatimLongitude",
     "invalidatedAtTime": "http://www.w3.org/ns/prov#invalidatedAtTime",
     "behavior": "http://rs.tdwg.org/dwc/terms/behavior",
-    "organismQuantity": "http://rs.tdwg.org/dwc/terms/organismQuantity",
     "spatial": "dct:spatial",
     "scientificNameID": "http://rs.tdwg.org/dwc/terms/scientificNameID",
     "lowestBiostratigraphicZone": "http://rs.tdwg.org/dwc/terms/lowestBiostratigraphicZone",
@@ -1855,7 +1903,6 @@ Links to the schema:
     "scientificName": "http://rs.tdwg.org/dwc/terms/scientificName",
     "Volume": "http://purl.oclc.org/NET/ssnx/qu/dim#Volume",
     "Thing": "http://www.w3.org/2002/07/owl#Thing",
-    "organismQuantityType": "http://rs.tdwg.org/dwc/terms/organismQuantityType",
     "catalogNumber": "http://rs.tdwg.org/dwc/terms/catalogNumber",
     "continent": "http://rs.tdwg.org/dwc/terms/continent",
     "minimumDistanceAboveSurfaceInMeters": "http://rs.tdwg.org/dwc/terms/minimumDistanceAboveSurfaceInMeters",
@@ -1961,7 +2008,6 @@ Links to the schema:
     "Measurement": "https://saref.etsi.org/core/Measurement",
     "Location": "dct:Location",
     "footprintSRS": "http://rs.tdwg.org/dwc/terms/footprintSRS",
-    "individualCount": "http://rs.tdwg.org/dwc/terms/individualCount",
     "collectionCode": "http://rs.tdwg.org/dwc/terms/collectionCode",
     "lithostratigraphicTerms": "http://rs.tdwg.org/dwc/terms/lithostratigraphicTerms",
     "subfamily": "http://rs.tdwg.org/dwc/terms/subfamily",

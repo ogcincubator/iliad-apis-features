@@ -12,11 +12,27 @@
             "hasResult": {
               "type": "object",
               "properties": {
-                "quantityOfJF": {
+                "individualCount": {
                   "type": "integer",
-                  "x-jsonld-id": "https://w3id.org/iliad/oim/default-context/quantityOfJF"
+                  "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/individualCount"
                 },
-                "densityOfJF": {
+                "organismQuantity": {
+                  "type": "string",
+                  "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/organismQuantity"
+                },
+                "organismQuantityType": {
+                  "type": "string",
+                  "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/organismQuantityType"
+                },
+                "sampleSizeUnit": {
+                  "type": "string",
+                  "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/sampleSizeUnit"
+                },
+                "sampleSizeValue": {
+                  "type": "string",
+                  "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/sampleSizeValue"
+                },
+                "densityOfJellyFish": {
                   "type": "string",
                   "enum": [
                     "None",
@@ -24,23 +40,18 @@
                     "Swarm",
                     "Few"
                   ],
-                  "x-jsonld-id": "https://w3id.org/iliad/oim/default-context/densityOfJF"
+                  "x-jsonld-id": "https://w3id.org/iliad/oim/default-context/densityOfJellyFish"
                 },
-                "stingByJF": {
+                "stingByJellyFish": {
                   "type": "string",
-                  "x-jsonld-id": "https://w3id.org/iliad/oim/default-context/stingByJF"
+                  "x-jsonld-id": "https://w3id.org/iliad/oim/default-context/stingByJellyFish"
                 },
-                "beachedJF": {
+                "strandedJellyFish": {
                   "type": "string",
-                  "x-jsonld-id": "https://w3id.org/iliad/oim/default-context/beachedJF"
+                  "x-jsonld-id": "https://w3id.org/iliad/oim/default-context/strandedJellyFish"
                 }
               },
               "x-jsonld-id": "http://www.w3.org/ns/sosa/hasResult"
-            },
-            "hasFeatureOfInterest": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json",
-              "x-jsonld-id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-              "x-jsonld-type": "@id"
             }
           }
         }
@@ -99,12 +110,10 @@
     "type": "@type",
     "PhotonFluxDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity",
     "implements": "http://www.w3.org/ns/ssn/implements",
-    "sampleSizeUnit": "http://rs.tdwg.org/dwc/terms/sampleSizeUnit",
     "recordNumber": "http://rs.tdwg.org/dwc/terms/recordNumber",
     "verbatimLongitude": "http://rs.tdwg.org/dwc/terms/verbatimLongitude",
     "invalidatedAtTime": "http://www.w3.org/ns/prov#invalidatedAtTime",
     "behavior": "http://rs.tdwg.org/dwc/terms/behavior",
-    "organismQuantity": "http://rs.tdwg.org/dwc/terms/organismQuantity",
     "spatial": "http://purl.org/dc/terms/spatial",
     "scientificNameID": "http://rs.tdwg.org/dwc/terms/scientificNameID",
     "lowestBiostratigraphicZone": "http://rs.tdwg.org/dwc/terms/lowestBiostratigraphicZone",
@@ -189,7 +198,6 @@
     "scientificName": "http://rs.tdwg.org/dwc/terms/scientificName",
     "Volume": "http://purl.oclc.org/NET/ssnx/qu/dim#Volume",
     "Thing": "http://www.w3.org/2002/07/owl#Thing",
-    "organismQuantityType": "http://rs.tdwg.org/dwc/terms/organismQuantityType",
     "catalogNumber": "http://rs.tdwg.org/dwc/terms/catalogNumber",
     "continent": "http://rs.tdwg.org/dwc/terms/continent",
     "minimumDistanceAboveSurfaceInMeters": "http://rs.tdwg.org/dwc/terms/minimumDistanceAboveSurfaceInMeters",
@@ -308,7 +316,6 @@
     "Measurement": "https://saref.etsi.org/core/Measurement",
     "Location": "http://purl.org/dc/terms/Location",
     "footprintSRS": "http://rs.tdwg.org/dwc/terms/footprintSRS",
-    "individualCount": "http://rs.tdwg.org/dwc/terms/individualCount",
     "collectionCode": "http://rs.tdwg.org/dwc/terms/collectionCode",
     "isHostedBy": "http://www.w3.org/ns/sosa/isHostedBy",
     "lithostratigraphicTerms": "http://rs.tdwg.org/dwc/terms/lithostratigraphicTerms",
@@ -427,7 +434,6 @@
     "DimensionProperty": "http://purl.org/linked-data/cube#DimensionProperty",
     "alt": "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
     "superfamily": "http://rs.tdwg.org/dwc/terms/superfamily",
-    "sampleSizeValue": "http://rs.tdwg.org/dwc/terms/sampleSizeValue",
     "Acceleration": "http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration",
     "identifier": "http://purl.org/dc/terms/identifier",
     "LivingSpecimen": "http://rs.tdwg.org/dwc/terms/LivingSpecimen",
@@ -540,6 +546,10 @@
     "SpatialObject": "http://www.opengis.net/ont/geosparql#SpatialObject",
     "sliceStructure": "http://purl.org/linked-data/cube#sliceStructure",
     "dewPoint": "https://smartdatamodels.org/dataModel.Weather/dewPoint",
+    "hasFeatureOfInterest": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "x-jsonld-type": "@id"
+    },
     "NumberPerLength": "http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLength",
     "lat": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
     "sightingDistanceInMeters": "http://mmisw.org/ont/ioos/marine_biogeography/sightingDistanceInMeters",

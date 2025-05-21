@@ -1,7 +1,6 @@
 @prefix : <https://w3id.org/iliad/oim/default-context/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix iliad: <https://w3id.org/iliad/property/> .
 @prefix ns1: <http://rs.tdwg.org/dwc/terms/> .
 @prefix ns2: <http://mmisw.org/ont/ioos/marine_biogeography/> .
 @prefix ns3: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -10,7 +9,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2> a sosa:Observation ;
+<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2> a geojson:Feature ;
     rdfs:label "Jelly fish observation location id: 18 sensor: 527 species: Phyllorhiza punctata"@en ;
     ns1:basisOfRecord "HumanObservation" ;
     ns1:occurrenceStatus "present" ;
@@ -32,11 +31,11 @@
             ns1:organismQuantity "Some" ;
             ns1:organismQuantityType "individuals" ;
             ns1:sampleSizeUnit "cm" ;
+            ns1:sampleSizeValue "11-30" ;
             ns1:scientificName "Rhopilema nomadica" ;
             ns1:scientificNameID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
             :stingByJellyFish "0" ;
-            :strandedJellyfish "1" ;
-            iliad:sampleSizeValue "11-30" ] ;
+            :strandedJellyfish "1" ] ;
     sosa:madeBySensor [ a sosa:Sensor,
                 :HumanSensor ;
             rdfs:label "Human sensor: 3602" ;

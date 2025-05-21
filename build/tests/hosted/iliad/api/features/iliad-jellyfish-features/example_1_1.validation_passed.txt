@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish-features - Observations - ILIAD Jellyfish Pilot for Citizen Science
-Generated 2025-05-21T02:32:52.389653+00:00
+Generated 2025-05-21T22:39:25.318673+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
@@ -8,24 +8,7 @@ Output Turtle example_1_1.ttl created
 === End Files ===
 
 === JSON Schema ===
-
-** Validation error **
-ValidationError: {'type': 'Feature', 'featureType': ['FeatureOfInterest', 'Point', 'Location'], 'lat': 31.80691, 'long': 31.80691, 'coordinateUncertaintyInMeters': 10000, 'locality': 19, 'distanceFromShore': '0-200', 'geometry': {'type': 'Point', 'coordinates': [31.80691, 34.634776]}} is not valid under any of the given schemas
-
-Failed validating 'anyOf' in schema[1]['allOf'][1]['properties']['properties']['allOf'][1]['properties']['hasFeatureOfInterest']:
-    {'anyOf': [{'$ref': '#/$defs/IRI'},
-               {'$ref': '#/$defs/CURIE'},
-               {'$ref': '#/$defs/LocalPart'}]}
-
-On instance['properties']['hasFeatureOfInterest']:
-    {'coordinateUncertaintyInMeters': 10000,
-     'distanceFromShore': '0-200',
-     'featureType': ['FeatureOfInterest', 'Point', 'Location'],
-     'geometry': {'coordinates': [31.80691, 34.634776], 'type': 'Point'},
-     'lat': 31.80691,
-     'locality': 19,
-     'long': 31.80691,
-     'type': 'Feature'}
+Validation passed
 === End JSON Schema ===
 
 === SHACL ===
@@ -41,12 +24,12 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
  - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
 
 === End SHACL ===
 

@@ -164,10 +164,14 @@
       "@id": "sosa:hasResult",
       "@type": "@id",
       "@context": {
-        "quantityOfJF": "https://w3id.org/iliad/oim/default-context/quantityOfJF",
-        "densityOfJF": "https://w3id.org/iliad/oim/default-context/densityOfJF",
-        "stingByJF": "https://w3id.org/iliad/oim/default-context/stingByJF",
-        "beachedJF": "https://w3id.org/iliad/oim/default-context/beachedJF"
+        "individualCount": "http://rs.tdwg.org/dwc/terms/individualCount",
+        "organismQuantity": "http://rs.tdwg.org/dwc/terms/organismQuantity",
+        "organismQuantityType": "http://rs.tdwg.org/dwc/terms/organismQuantityType",
+        "sampleSizeUnit": "http://rs.tdwg.org/dwc/terms/sampleSizeUnit",
+        "sampleSizeValue": "http://rs.tdwg.org/dwc/terms/sampleSizeValue",
+        "densityOfJellyFish": "https://w3id.org/iliad/oim/default-context/densityOfJellyFish",
+        "stingByJellyFish": "https://w3id.org/iliad/oim/default-context/stingByJellyFish",
+        "strandedJellyFish": "https://w3id.org/iliad/oim/default-context/strandedJellyFish"
       }
     },
     "hasResultQuality": {
@@ -489,12 +493,10 @@
       "@container": "@list"
     },
     "PhotonFluxDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity",
-    "sampleSizeUnit": "http://rs.tdwg.org/dwc/terms/sampleSizeUnit",
     "recordNumber": "http://rs.tdwg.org/dwc/terms/recordNumber",
     "verbatimLongitude": "http://rs.tdwg.org/dwc/terms/verbatimLongitude",
     "invalidatedAtTime": "http://www.w3.org/ns/prov#invalidatedAtTime",
     "behavior": "http://rs.tdwg.org/dwc/terms/behavior",
-    "organismQuantity": "http://rs.tdwg.org/dwc/terms/organismQuantity",
     "spatial": "dct:spatial",
     "scientificNameID": "http://rs.tdwg.org/dwc/terms/scientificNameID",
     "lowestBiostratigraphicZone": "http://rs.tdwg.org/dwc/terms/lowestBiostratigraphicZone",
@@ -576,7 +578,6 @@
     "scientificName": "http://rs.tdwg.org/dwc/terms/scientificName",
     "Volume": "http://purl.oclc.org/NET/ssnx/qu/dim#Volume",
     "Thing": "http://www.w3.org/2002/07/owl#Thing",
-    "organismQuantityType": "http://rs.tdwg.org/dwc/terms/organismQuantityType",
     "catalogNumber": "http://rs.tdwg.org/dwc/terms/catalogNumber",
     "continent": "http://rs.tdwg.org/dwc/terms/continent",
     "minimumDistanceAboveSurfaceInMeters": "http://rs.tdwg.org/dwc/terms/minimumDistanceAboveSurfaceInMeters",
@@ -682,7 +683,6 @@
     "Measurement": "https://saref.etsi.org/core/Measurement",
     "Location": "dct:Location",
     "footprintSRS": "http://rs.tdwg.org/dwc/terms/footprintSRS",
-    "individualCount": "http://rs.tdwg.org/dwc/terms/individualCount",
     "collectionCode": "http://rs.tdwg.org/dwc/terms/collectionCode",
     "lithostratigraphicTerms": "http://rs.tdwg.org/dwc/terms/lithostratigraphicTerms",
     "subfamily": "http://rs.tdwg.org/dwc/terms/subfamily",

@@ -1,6 +1,6 @@
 {
   "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/context.jsonld",
-  "type": "ObservationCollection",
+  "type": "FeatureCollection",
   "hasMember": [
     {
       "@id": "63dc376df84bda32b6bbf78ed3e279e2",
@@ -22,11 +22,13 @@
             "Point",
             "Location"
           ],
-          "lat": 31.80691,
-          "long": 31.80691,
-          "coordinateUncertaintyInMeters": 10000,
-          "locality": 18,
-          "distanceFromShore": "0-200",
+          "properties": {
+            "lat": 31.80691,
+            "long": 31.80691,
+            "coordinateUncertaintyInMeters": 10000,
+            "locality": 18,
+            "distanceFromShore": "0-200"
+          },
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -81,11 +83,13 @@
             "Point",
             "Location"
           ],
-          "lat": 33.80691,
-          "long": 36.634776,
-          "coordinateUncertaintyInMeters": 10000,
-          "locality": 19,
-          "distanceFromShore": "0-200",
+          "properties": {
+            "lat": 33.80691,
+            "long": 36.634776,
+            "coordinateUncertaintyInMeters": 10000,
+            "locality": 19,
+            "distanceFromShore": "0-200"
+          },
           "geometry": {
             "type": "Point",
             "coordinates": [
