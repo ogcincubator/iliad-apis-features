@@ -1,0 +1,33 @@
+{
+  "@context": {
+    "Geometry": {
+      "@id": "http://www.opengis.net/ont/geosparql#Geometry"
+    },
+    "sfWithin": {
+      "@id": "http://www.opengis.net/ont/geosparql#sfWithin",
+      "@type": "@id"
+    },
+    "hasBoundingBox": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasBoundingBox",
+      "@type": "@id"
+    },
+    "Feature": {
+      "@id": "http://www.opengis.net/ont/geosparql#Feature"
+    },
+    "hasSerialization": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasSerialization"
+    },
+    "hasGeometry": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasGeometry"
+    },
+    "sfContains": {
+      "@id": "http://www.opengis.net/ont/geosparql#sfContains"
+    },
+    "SpatialObject": {
+      "@id": "http://www.opengis.net/ont/geosparql#SpatialObject"
+    },
+    "FeatureCollection": {
+      "@id": "http://www.opengis.net/ont/geosparql#FeatureCollection"
+    }
+  }
+}

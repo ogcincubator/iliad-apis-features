@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "QuantityKind": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
+    },
+    "PropertyKind": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"
+    },
+    "unitKind": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#unitKind",
+      "@type": "@id"
+    }
+  }
+}

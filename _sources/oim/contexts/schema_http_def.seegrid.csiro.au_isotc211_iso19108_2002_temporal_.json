@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://def.seegrid.csiro.au/isotc211/iso19108/2002/temporal#",
+  "type": "object",
+  "properties": {
+    "Period": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

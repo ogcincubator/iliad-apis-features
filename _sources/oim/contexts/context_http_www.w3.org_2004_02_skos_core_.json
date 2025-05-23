@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "Concept": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "note": {
+      "@id": "http://www.w3.org/2004/02/skos/core#note"
+    },
+    "Scheme": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Scheme"
+    },
+    "definition": {
+      "@id": "http://www.w3.org/2004/02/skos/core#definition"
+    },
+    "editorialNote": {
+      "@id": "http://www.w3.org/2004/02/skos/core#editorialNote"
+    },
+    "prefLabel": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "inScheme": {
+      "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+    }
+  }
+}

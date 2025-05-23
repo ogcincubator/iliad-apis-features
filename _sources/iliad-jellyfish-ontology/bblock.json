@@ -8,11 +8,17 @@
   "version": "1.0",
   "dateOfLastChange": "2023-09-18",
   "dependsOn": [
+    "ogc.hosted.iliad.api.features.oim",
+    "ogc.hosted.iliad.api.features.oim-bio-tdwg"
   ],
   "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",
   "shaclRules": [
   ],
   "sources": [
+    {
+      "title": "OIM master repository",
+      "link": "https://github.com/ILIAD-ocean-twin/OIM"
+    }
   ],
   "scope": "dev",
   "tags": [

@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "Person": {
+      "@id": "https://schema.org/Person"
+    },
+    "ImageObject": {
+      "@id": "https://schema.org/ImageObject"
+    },
+    "name": {
+      "@id": "https://schema.org/name"
+    },
+    "Role": {
+      "@id": "https://schema.org/Role"
+    },
+    "rangeIncludes": {
+      "@id": "https://schema.org/rangeIncludes"
+    },
+    "status": {
+      "@id": "https://schema.org/status"
+    },
+    "streetAddress": {
+      "@id": "https://schema.org/streetAddress"
+    },
+    "addressLocality": {
+      "@id": "https://schema.org/addressLocality"
+    },
+    "addressCountry": {
+      "@id": "https://schema.org/addressCountry"
+    }
+  }
+}

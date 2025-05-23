@@ -4,24 +4,31 @@ comment: This is a stub for now - with simple proxies for each object where sche
 $defs:
   OIMObsProps:
     allOf:
-    - $ref: '../oim-obs/schema.yaml#/$defs/OIMObsProps'
+    - $ref: 'bblocks://ogc.hosted.iliad.api.features.oim-obs#/$defs/OIMObsProps'
+      #aphiaID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
+
     - properties:
         sampleSizeValue:
           type: string
-        speciesScientificName:
+        scientificName:
           type: string
+        scientificNameID:
+          $ref: 'bblocks://ogc.ogc-utils.iri-or-curie'
         wormsConcept:
+          type: string
+          pattern: '^https://marinespecies\.org/.*'
+        aphiaID:
           type: string
           pattern: '^https://marinespecies\.org/.*'
   OIMObsFeature:
     allOf:
-    - $ref: '../oim-obs/schema.yaml#/$defs/OIMObsFeature'
+    - $ref: 'bblocks://ogc.hosted.iliad.api.features.oim-obs#/$defs/OIMObsFeature'
     - properties:
         properties:
           $ref: '#/$defs/OIMObsProps'
   OIMObsCollection:
     allOf:
-    - $ref: '../oim-obs/schema.yaml#/$defs/OIMObsCollection'
+    - $ref: 'bblocks://ogc.hosted.iliad.api.features.oim-obs#/$defs/OIMObsCollection'
     - properties:
         features:
           type: array

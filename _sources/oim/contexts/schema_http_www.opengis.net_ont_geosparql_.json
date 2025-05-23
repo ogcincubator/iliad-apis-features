@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://www.opengis.net/ont/geosparql#",
+  "type": "object",
+  "properties": {
+    "asWKT": {
+      "type": "string"
+    },
+    "asGeoJSON": {
+      "type": "string"
+    },
+    "Geometry": {
+      "type": "string"
+    },
+    "sfWithin": {
+      "type": "string",
+      "format": "uri"
+    },
+    "hasBoundingBox": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Feature": {
+      "type": "string"
+    },
+    "hasSerialization": {
+      "type": "string"
+    },
+    "hasGeometry": {
+      "type": "string"
+    },
+    "sfContains": {
+      "type": "string"
+    },
+    "SpatialObject": {
+      "type": "string"
+    },
+    "FeatureCollection": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,32 @@
+{
+  "@context": {
+    "inDeployment": {
+      "@id": "http://www.w3.org/ns/ssn/inDeployment"
+    },
+    "hasProperty": {
+      "@id": "http://www.w3.org/ns/ssn/hasProperty",
+      "@type": "@id"
+    },
+    "hasInput": {
+      "@id": "http://www.w3.org/ns/ssn/hasInput"
+    },
+    "implementedBy": {
+      "@id": "http://www.w3.org/ns/ssn/implementedBy"
+    },
+    "hasSubSystem": {
+      "@id": "http://www.w3.org/ns/ssn/hasSubSystem"
+    },
+    "hasDeployment": {
+      "@id": "http://www.w3.org/ns/ssn/hasDeployment"
+    },
+    "deployedSystem": {
+      "@id": "http://www.w3.org/ns/ssn/deployedSystem"
+    },
+    "System": {
+      "@id": "http://www.w3.org/ns/ssn/System"
+    },
+    "deployedOnPlatform": {
+      "@id": "http://www.w3.org/ns/ssn/deployedOnPlatform"
+    }
+  }
+}

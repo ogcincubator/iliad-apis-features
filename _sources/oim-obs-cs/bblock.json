@@ -7,14 +7,19 @@
   "register": "iliad-apis",
   "version": "0.1",
   "dateOfLastChange": "2023-04-05",
-  "link": "https://github.com/opengeospatial/bblock-template",
+  "link": "https://github.com/opengeospatial/bblock-tehttps://ogcincubator.github.io/cross-domain-model/mplate",
   "sources": [
     {
-      "title": "Reference to ILIAD",
-      "link": "https://example.com/sources/1"
+      "title": "Ocean Information Model",
+      "link": "https://github.com/ILIAD-ocean-twin/OIM"
     }
   ],
   "maturity": "development",
   "scope": "unstable",
-  "tags": ["iliad", "oim", "sosa", "ditto"]
+  "tags": [
+    "iliad",
+    "oim",
+    "sosa",
+    "ditto"
+  ]
 }

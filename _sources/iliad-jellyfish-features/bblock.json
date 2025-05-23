@@ -14,8 +14,8 @@
   ],
   "sources": [
     {
-      "title": "Reference to ILIAD",
-      "link": "https://example.com/sources/1"
+      "title": "OIM master repository",
+      "link": "https://github.com/ILIAD-ocean-twin/OIM"
     }
   ],
   "maturity": "development",

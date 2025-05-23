@@ -1,0 +1,7 @@
+{
+  "@context": {
+    "OM_Observation": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+    }
+  }
+}

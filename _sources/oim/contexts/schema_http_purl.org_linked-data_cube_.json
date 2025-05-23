@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://purl.org/linked-data/cube#",
+  "type": "object",
+  "properties": {
+    "Attachable": {
+      "type": "string"
+    },
+    "Slice": {
+      "type": "string"
+    },
+    "dataSet": {
+      "type": "string",
+      "format": "uri"
+    },
+    "componentAttachment": {
+      "type": "string"
+    },
+    "concept": {
+      "type": "string"
+    },
+    "AttributeProperty": {
+      "type": "string"
+    },
+    "ComponentProperty": {
+      "type": "string"
+    },
+    "component": {
+      "type": "string"
+    },
+    "measure": {
+      "type": "string",
+      "format": "uri"
+    },
+    "attribute": {
+      "type": "string",
+      "format": "uri"
+    },
+    "structure": {
+      "type": "string",
+      "format": "uri"
+    },
+    "SliceKey": {
+      "type": "string"
+    },
+    "ComponentSet": {
+      "type": "string"
+    },
+    "observationGroup": {
+      "type": "string"
+    },
+    "ComponentSpecification": {
+      "type": "string"
+    },
+    "DimensionProperty": {
+      "type": "string"
+    },
+    "MeasureProperty": {
+      "type": "string"
+    },
+    "sliceStructure": {
+      "type": "string"
+    },
+    "CodedProperty": {
+      "type": "string"
+    },
+    "slice": {
+      "type": "string",
+      "format": "uri"
+    },
+    "ObservationGroup": {
+      "type": "string"
+    },
+    "DataSet": {
+      "type": "string"
+    },
+    "dimension": {
+      "type": "string",
+      "format": "uri"
+    },
+    "observation": {
+      "type": "string"
+    },
+    "sliceKey": {
+      "type": "string"
+    },
+    "DataStructureDefinition": {
+      "type": "string"
+    },
+    "componentProperty": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

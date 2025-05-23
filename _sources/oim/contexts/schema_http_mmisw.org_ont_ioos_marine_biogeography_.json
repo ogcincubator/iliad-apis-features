@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://mmisw.org/ont/ioos/marine_biogeography/",
+  "type": "object",
+  "properties": {
+    "recordType": {
+      "type": "string"
+    },
+    "sampleLengthInMeters": {
+      "type": "string"
+    },
+    "sampleWidthInMeters": {
+      "type": "string"
+    },
+    "weightInKg": {
+      "type": "string"
+    },
+    "quantificationUnit": {
+      "type": "string"
+    },
+    "sampleShape": {
+      "type": "string"
+    },
+    "visibilityInMeters": {
+      "type": "string"
+    },
+    "observationLocation": {
+      "type": "string"
+    },
+    "observedMinLengthInCm": {
+      "type": "string"
+    },
+    "sightingCue": {
+      "type": "string"
+    },
+    "waterTemperatureInCelsius": {
+      "type": "string"
+    },
+    "visibilityType": {
+      "type": "string"
+    },
+    "quantificationMethod": {
+      "type": "string"
+    },
+    "lengthType": {
+      "type": "string"
+    },
+    "sampleVolumeInCubicMeters": {
+      "type": "string"
+    },
+    "sightingDistanceInMeters": {
+      "type": "string"
+    },
+    "sampleAreaInSquareMeters": {
+      "type": "string"
+    },
+    "observedMaxLengthInCm": {
+      "type": "string"
+    },
+    "aphiaID": {
+      "type": "string"
+    },
+    "sampleHeightInMeters": {
+      "type": "string"
+    },
+    "totalInSample": {
+      "type": "string"
+    },
+    "observedIndividualLengthInCm": {
+      "type": "string"
+    },
+    "observedMeanLengthInCm": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

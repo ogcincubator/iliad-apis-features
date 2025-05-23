@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "Medium": {
+      "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Medium"
+    },
+    "Wind": {
+      "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Wind"
+    },
+    "Precipitation": {
+      "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Precipitation"
+    },
+    "Layer": {
+      "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Layer"
+    },
+    "SurfaceMedium": {
+      "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#SurfaceMedium"
+    },
+    "Surface": {
+      "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Surface"
+    },
+    "SurfaceLayer": {
+      "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#SurfaceLayer"
+    }
+  }
+}

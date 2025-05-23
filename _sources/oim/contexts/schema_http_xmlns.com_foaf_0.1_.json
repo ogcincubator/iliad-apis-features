@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://xmlns.com/foaf/0.1/",
+  "type": "object",
+  "properties": {
+    "depiction": {
+      "type": "string"
+    },
+    "maker": {
+      "type": "string"
+    },
+    "homepage": {
+      "type": "string"
+    },
+    "Agent": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

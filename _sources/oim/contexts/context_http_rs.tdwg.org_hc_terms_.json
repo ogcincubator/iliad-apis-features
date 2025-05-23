@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "verbatimSiteDescriptions": {
+      "@id": "http://rs.tdwg.org/hc/terms/verbatimSiteDescriptions"
+    },
+    "verbatimSiteNames": {
+      "@id": "http://rs.tdwg.org/hc/terms/verbatimSiteNames"
+    },
+    "samplingPerformedBy": {
+      "@id": "http://rs.tdwg.org/hc/terms/samplingPerformedBy"
+    },
+    "eventDurationUnit": {
+      "@id": "http://rs.tdwg.org/hc/terms/eventDurationUnit"
+    },
+    "eventDuration": {
+      "@id": "http://rs.tdwg.org/hc/terms/eventDuration"
+    },
+    "siteCount": {
+      "@id": "http://rs.tdwg.org/hc/terms/siteCount"
+    },
+    "reportedWeather": {
+      "@id": "http://rs.tdwg.org/hc/terms/reportedWeather"
+    }
+  }
+}

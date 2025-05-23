@@ -1,0 +1,37 @@
+{
+  "@context": {
+    "Curve": {
+      "@id": "http://www.opengis.net/ont/sf#Curve"
+    },
+    "LineString": {
+      "@id": "http://www.opengis.net/ont/sf#LineString"
+    },
+    "Triangle": {
+      "@id": "http://www.opengis.net/ont/sf#Triangle"
+    },
+    "GeometryCollection": {
+      "@id": "http://www.opengis.net/ont/sf#GeometryCollection"
+    },
+    "TIN": {
+      "@id": "http://www.opengis.net/ont/sf#TIN"
+    },
+    "LinearRing": {
+      "@id": "http://www.opengis.net/ont/sf#LinearRing"
+    },
+    "PolyhedralSurface": {
+      "@id": "http://www.opengis.net/ont/sf#PolyhedralSurface"
+    },
+    "Polygon": {
+      "@id": "http://www.opengis.net/ont/sf#Polygon"
+    },
+    "MultiPolygon": {
+      "@id": "http://www.opengis.net/ont/sf#MultiPolygon"
+    },
+    "MultiCurve": {
+      "@id": "http://www.opengis.net/ont/sf#MultiCurve"
+    },
+    "MultiPoint": {
+      "@id": "http://www.opengis.net/ont/sf#MultiPoint"
+    }
+  }
+}

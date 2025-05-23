@@ -1,0 +1,20 @@
+{
+  "name": "OIM Biodiversity - TDWG",
+  "abstract": "Defines JSON schema properties mapped to the Taxonomic Database Working Group data model. This is based on Darwin Core.",
+  "status": "under-development",
+  "dateTimeAddition": "2023-04-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2023-04-05",
+  "link": "https://github.com/opengeospatial/bblock-template",
+  "sources": [
+     {
+      "title": "TDWG ",
+      "link": "https://www.tdwg.org/"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": ["iliad", "oim", "tdwg", "biodiversity" ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://purl.oclc.org/NET/ssnx/qu/qu#",
+  "type": "object",
+  "properties": {
+    "QuantityKind": {
+      "type": "string"
+    },
+    "PropertyKind": {
+      "type": "string"
+    },
+    "unitKind": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "additionalProperties": true
+}

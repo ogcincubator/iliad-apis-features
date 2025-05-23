@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace https://saref.etsi.org/core/",
+  "type": "object",
+  "properties": {
+    "UnitOfMeasure": {
+      "type": "string"
+    },
+    "isControlledByDevice": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Humidity": {
+      "type": "string"
+    },
+    "measuresProperty": {
+      "type": "string",
+      "format": "uri"
+    },
+    "hasValue": {
+      "type": "string"
+    },
+    "Measurement": {
+      "type": "string"
+    },
+    "measurementMadeBy": {
+      "type": "string",
+      "format": "uri"
+    },
+    "relatesToMeasurement": {
+      "type": "string",
+      "format": "uri"
+    },
+    "isMeasuredByDevice": {
+      "type": "string",
+      "format": "uri"
+    },
+    "makesMeasurement": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Property": {
+      "type": "string"
+    },
+    "isMeasuredIn": {
+      "type": "string",
+      "format": "uri"
+    },
+    "isPropertyOf": {
+      "type": "string",
+      "format": "uri"
+    },
+    "relatesToProperty": {
+      "type": "string",
+      "format": "uri"
+    },
+    "controlsProperty": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Device": {
+      "type": "string"
+    },
+    "hasTimestamp": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

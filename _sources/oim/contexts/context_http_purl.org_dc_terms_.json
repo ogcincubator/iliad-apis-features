@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "Location": {
+      "@id": "http://purl.org/dc/terms/Location"
+    },
+    "rightsHolder": {
+      "@id": "http://purl.org/dc/terms/rightsHolder"
+    },
+    "creator": {
+      "@id": "http://purl.org/dc/terms/creator"
+    },
+    "rights": {
+      "@id": "http://purl.org/dc/terms/rights"
+    },
+    "identifier": {
+      "@id": "http://purl.org/dc/terms/identifier"
+    },
+    "subject": {
+      "@id": "http://purl.org/dc/terms/subject"
+    },
+    "title": {
+      "@id": "http://purl.org/dc/terms/title"
+    },
+    "resourceType": {
+      "@id": "http://purl.org/dc/terms/type"
+    },
+    "publisher": {
+      "@id": "http://purl.org/dc/terms/publisher"
+    },
+    "modified": {
+      "@id": "http://purl.org/dc/terms/modified"
+    },
+    "accessRights": {
+      "@id": "http://purl.org/dc/terms/accessRights"
+    },
+    "date": {
+      "@id": "http://purl.org/dc/terms/date"
+    },
+    "language": {
+      "@id": "http://purl.org/dc/terms/language"
+    },
+    "contributor": {
+      "@id": "http://purl.org/dc/terms/contributor"
+    },
+    "PeriodOfTime": {
+      "@id": "http://purl.org/dc/terms/PeriodOfTime"
+    },
+    "description": {
+      "@id": "http://purl.org/dc/terms/description"
+    },
+    "temporal": {
+      "@id": "http://purl.org/dc/terms/temporal"
+    }
+  }
+}

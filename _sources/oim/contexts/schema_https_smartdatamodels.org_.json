@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace https://smartdatamodels.org/",
+  "type": "object",
+  "properties": {
+    "dateCreated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "dateModified": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "dataProvider": {
+      "type": "string"
+    },
+    "dateObserved": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source": {
+      "type": "string"
+    },
+    "alternateName": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "measuresProperty": {
+      "@id": "https://saref.etsi.org/core/measuresProperty",
+      "@type": "@id"
+    },
+    "hasValue": {
+      "@id": "https://saref.etsi.org/core/hasValue"
+    },
+    "Measurement": {
+      "@id": "https://saref.etsi.org/core/Measurement"
+    },
+    "measurementMadeBy": {
+      "@id": "https://saref.etsi.org/core/measurementMadeBy",
+      "@type": "@id"
+    },
+    "relatesToMeasurement": {
+      "@id": "https://saref.etsi.org/core/relatesToMeasurement",
+      "@type": "@id"
+    },
+    "isMeasuredByDevice": {
+      "@id": "https://saref.etsi.org/core/isMeasuredByDevice",
+      "@type": "@id"
+    },
+    "makesMeasurement": {
+      "@id": "https://saref.etsi.org/core/makesMeasurement",
+      "@type": "@id"
+    },
+    "Property": {
+      "@id": "https://saref.etsi.org/core/Property"
+    },
+    "isMeasuredIn": {
+      "@id": "https://saref.etsi.org/core/isMeasuredIn",
+      "@type": "@id"
+    },
+    "isPropertyOf": {
+      "@id": "https://saref.etsi.org/core/isPropertyOf",
+      "@type": "@id"
+    },
+    "relatesToProperty": {
+      "@id": "https://saref.etsi.org/core/relatesToProperty",
+      "@type": "@id"
+    },
+    "controlsProperty": {
+      "@id": "https://saref.etsi.org/core/controlsProperty",
+      "@type": "@id"
+    },
+    "Device": {
+      "@id": "https://saref.etsi.org/core/Device"
+    },
+    "hasTimestamp": {
+      "@id": "https://saref.etsi.org/core/hasTimestamp"
+    }
+  }
+}

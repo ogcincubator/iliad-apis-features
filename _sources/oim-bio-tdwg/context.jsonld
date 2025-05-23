@@ -1,0 +1,663 @@
+{
+  "@context":  [ {
+    "dwc": "http://rs.tdwg.org/dwc/terms/", 
+    "hc": "http://rs.tdwg.org/hc/terms/",
+    "sampleSizeUnit": {
+      "@id": "dwc:sampleSizeUnit"
+    },
+    "recordNumber": {
+      "@id": "dwc:recordNumber"
+    },
+    "verbatimLongitude": {
+      "@id": "dwc:verbatimLongitude"
+    },
+    "behavior": {
+      "@id": "dwc:behavior"
+    },
+    "organismQuantity": {
+      "@id": "dwc:organismQuantity"
+    },
+    "scientificNameID": {
+      "@id": "dwc:scientificNameID"
+    },
+    "lowestBiostratigraphicZone": {
+      "@id": "dwc:lowestBiostratigraphicZone"
+    },
+    "earliestEonOrLowestEonothem": {
+      "@id": "dwc:earliestEonOrLowestEonothem"
+    },
+    "originalNameUsageID": {
+      "@id": "dwc:originalNameUsageID"
+    },
+    "GeologicalContext": {
+      "@id": "dwc:GeologicalContext"
+    },
+    "countryCode": {
+      "@id": "dwc:countryCode"
+    },
+    "verbatimCoordinates": {
+      "@id": "dwc:verbatimCoordinates"
+    },
+    "maximumDistanceAboveSurfaceInMeters": {
+      "@id": "dwc:maximumDistanceAboveSurfaceInMeters"
+    },
+    "verbatimLocality": {
+      "@id": "dwc:verbatimLocality"
+    },
+    "identificationReferences": {
+      "@id": "dwc:identificationReferences"
+    },
+    "verbatimCoordinateSystem": {
+      "@id": "dwc:verbatimCoordinateSystem"
+    },
+    "measurementType": {
+      "@id": "dwc:measurementType"
+    },
+    "measurementAccuracy": {
+      "@id": "dwc:measurementAccuracy"
+    },
+    "member": {
+      "@id": "dwc:member"
+    },
+    "genus": {
+      "@id": "dwc:genus"
+    },
+    "coordinatePrecision": {
+      "@id": "dwc:coordinatePrecision"
+    },
+    "georeferencedDate": {
+      "@id": "dwc:georeferencedDate"
+    },
+    "taxonomicStatus": {
+      "@id": "dwc:taxonomicStatus"
+    },
+    "previousIdentifications": {
+      "@id": "dwc:previousIdentifications"
+    },
+    "startDayOfYear": {
+      "@id": "dwc:startDayOfYear"
+    },
+    "otherCatalogNumbers": {
+      "@id": "dwc:otherCatalogNumbers"
+    },
+    "MachineObservation": {
+      "@id": "dwc:MachineObservation"
+    },
+    "coordinateUncertaintyInMeters": {
+      "@id": "dwc:coordinateUncertaintyInMeters"
+    },
+    "eventID": {
+      "@id": "dwc:eventID"
+    },
+    "Organism": {
+      "@id": "dwc:Organism"
+    },
+    "identificationID": {
+      "@id": "dwc:identificationID"
+    },
+    "recordedByID": {
+      "@id": "dwc:recordedByID"
+    },
+    "Identification": {
+      "@id": "dwc:Identification"
+    },
+    "country": {
+      "@id": "dwc:country"
+    },
+    "genericName": {
+      "@id": "dwc:genericName"
+    },
+    "decimalLongitude": {
+      "@id": "dwc:decimalLongitude"
+    },
+    "scientificName": {
+      "@id": "dwc:scientificName"
+    },
+    "organismQuantityType": {
+      "@id": "dwc:organismQuantityType"
+    },
+    "catalogNumber": {
+      "@id": "dwc:catalogNumber"
+    },
+    "continent": {
+      "@id": "dwc:continent"
+    },
+    "minimumDistanceAboveSurfaceInMeters": {
+      "@id": "dwc:minimumDistanceAboveSurfaceInMeters"
+    },
+    "decimalLatitude": {
+      "@id": "dwc:decimalLatitude"
+    },
+    "higherGeographyID": {
+      "@id": "dwc:higherGeographyID"
+    },
+    "measurementDeterminedBy": {
+      "@id": "dwc:measurementDeterminedBy"
+    },
+    "geodeticDatum": {
+      "@id": "dwc:geodeticDatum"
+    },
+    "maximumDepthInMeters": {
+      "@id": "dwc:maximumDepthInMeters"
+    },
+    "locationAccordingTo": {
+      "@id": "dwc:locationAccordingTo"
+    },
+    "nameAccordingTo": {
+      "@id": "dwc:nameAccordingTo"
+    },
+    "group": {
+      "@id": "dwc:group"
+    },
+    "class": {
+      "@id": "dwc:class"
+    },
+    "footprintWKT": {
+      "@id": "dwc:footprintWKT"
+    },
+    "FossilSpecimen": {
+      "@id": "dwc:FossilSpecimen"
+    },
+    "typeStatus": {
+      "@id": "dwc:typeStatus"
+    },
+    "acceptedNameUsage": {
+      "@id": "dwc:acceptedNameUsage"
+    },
+    "earliestEpochOrLowestSeries": {
+      "@id": "dwc:earliestEpochOrLowestSeries"
+    },
+    "parentNameUsageID": {
+      "@id": "dwc:parentNameUsageID"
+    },
+    "dynamicProperties": {
+      "@id": "dwc:dynamicProperties"
+    },
+    "caste": {
+      "@id": "dwc:caste"
+    },
+    "footprintSpatialFit": {
+      "@id": "dwc:footprintSpatialFit"
+    },
+    "namePublishedInYear": {
+      "@id": "dwc:namePublishedInYear"
+    },
+    "highestBiostratigraphicZone": {
+      "@id": "dwc:highestBiostratigraphicZone"
+    },
+    "fieldNotes": {
+      "@id": "dwc:fieldNotes"
+    },
+    "measurementID": {
+      "@id": "dwc:measurementID"
+    },
+    "parentNameUsage": {
+      "@id": "dwc:parentNameUsage"
+    },
+    "acceptedNameUsageID": {
+      "@id": "dwc:acceptedNameUsageID"
+    },
+    "maximumElevationInMeters": {
+      "@id": "dwc:maximumElevationInMeters"
+    },
+    "identificationVerificationStatus": {
+      "@id": "dwc:identificationVerificationStatus"
+    },
+    "footprintSRS": {
+      "@id": "dwc:footprintSRS"
+    },
+    "individualCount": {
+      "@id": "dwc:individualCount"
+    },
+    "collectionCode": {
+      "@id": "dwc:collectionCode"
+    },
+    "lithostratigraphicTerms": {
+      "@id": "dwc:lithostratigraphicTerms"
+    },
+    "subfamily": {
+      "@id": "dwc:subfamily"
+    },
+    "eventType": {
+      "@id": "dwc:eventType"
+    },
+    "associatedMedia": {
+      "@id": "dwc:associatedMedia"
+    },
+    "Taxon": {
+      "@id": "dwc:Taxon"
+    },
+    "vernacularName": {
+      "@id": "dwc:vernacularName"
+    },
+    "preparations": {
+      "@id": "dwc:preparations"
+    },
+    "Event": {
+      "@id": "dwc:Event"
+    },
+    "institutionID": {
+      "@id": "dwc:institutionID"
+    },
+    "verbatimDepth": {
+      "@id": "dwc:verbatimDepth"
+    },
+    "county": {
+      "@id": "dwc:county"
+    },
+    "earliestEraOrLowestErathem": {
+      "@id": "dwc:earliestEraOrLowestErathem"
+    },
+    "occurrenceStatus": {
+      "@id": "dwc:occurrenceStatus"
+    },
+    "verbatimTaxonRank": {
+      "@id": "dwc:verbatimTaxonRank"
+    },
+    "disposition": {
+      "@id": "dwc:disposition"
+    },
+    "namePublishedInID": {
+      "@id": "dwc:namePublishedInID"
+    },
+    "dateIdentified": {
+      "@id": "dwc:dateIdentified"
+    },
+    "organismRemarks": {
+      "@id": "dwc:organismRemarks"
+    },
+    "latestPeriodOrHighestSystem": {
+      "@id": "dwc:latestPeriodOrHighestSystem"
+    },
+    "taxonRemarks": {
+      "@id": "dwc:taxonRemarks"
+    },
+    "georeferencedBy": {
+      "@id": "dwc:georeferencedBy"
+    },
+    "verbatimElevation": {
+      "@id": "dwc:verbatimElevation"
+    },
+    "higherClassification": {
+      "@id": "dwc:higherClassification"
+    },
+    "waterBody": {
+      "@id": "dwc:waterBody"
+    },
+    "namePublishedIn": {
+      "@id": "dwc:namePublishedIn"
+    },
+    "organismID": {
+      "@id": "dwc:organismID"
+    },
+    "stateProvince": {
+      "@id": "dwc:stateProvince"
+    },
+    "endDayOfYear": {
+      "@id": "dwc:endDayOfYear"
+    },
+    "geologicalContextID": {
+      "@id": "dwc:geologicalContextID"
+    },
+    "pathway": {
+      "@id": "dwc:pathway"
+    },
+    "parentEventID": {
+      "@id": "dwc:parentEventID"
+    },
+    "datasetName": {
+      "@id": "dwc:datasetName"
+    },
+    "measurementMethod": {
+      "@id": "dwc:measurementMethod"
+    },
+    "verbatimLatitude": {
+      "@id": "dwc:verbatimLatitude"
+    },
+    "parentMeasurementID": {
+      "@id": "dwc:parentMeasurementID"
+    },
+    "tribe": {
+      "@id": "dwc:tribe"
+    },
+    "superfamily": {
+      "@id": "dwc:superfamily"
+    },
+    "sampleSizeValue": {
+      "@id": "dwc:sampleSizeValue"
+    },
+    "LivingSpecimen": {
+      "@id": "dwc:LivingSpecimen"
+    },
+    "locationRemarks": {
+      "@id": "dwc:locationRemarks"
+    },
+    "higherGeography": {
+      "@id": "dwc:higherGeography"
+    },
+    "informationWithheld": {
+      "@id": "dwc:informationWithheld"
+    },
+    "organismName": {
+      "@id": "dwc:organismName"
+    },
+    "institutionCode": {
+      "@id": "dwc:institutionCode"
+    },
+    "occurrenceID": {
+      "@id": "dwc:occurrenceID"
+    },
+    "measurementUnit": {
+      "@id": "dwc:measurementUnit"
+    },
+    "HumanObservation": {
+      "@id": "dwc:HumanObservation"
+    },
+    "associatedSequences": {
+      "@id": "dwc:associatedSequences"
+    },
+    "phylum": {
+      "@id": "dwc:phylum"
+    },
+    "fieldNumber": {
+      "@id": "dwc:fieldNumber"
+    },
+    "relationshipRemarks": {
+      "@id": "dwc:relationshipRemarks"
+    },
+    "infragenericEpithet": {
+      "@id": "dwc:infragenericEpithet"
+    },
+    "resourceRelationshipID": {
+      "@id": "dwc:resourceRelationshipID"
+    },
+    "relationshipOfResource": {
+      "@id": "dwc:relationshipOfResource"
+    },
+    "habitat": {
+      "@id": "dwc:habitat"
+    },
+    "materialSampleID": {
+      "@id": "dwc:materialSampleID"
+    },
+    "georeferenceVerificationStatus": {
+      "@id": "dwc:georeferenceVerificationStatus"
+    },
+    "bed": {
+      "@id": "dwc:bed"
+    },
+    "locality": {
+      "@id": "dwc:locality"
+    },
+    "MaterialCitation": {
+      "@id": "dwc:MaterialCitation"
+    },
+    "associatedTaxa": {
+      "@id": "dwc:associatedTaxa"
+    },
+    "measurementDeterminedDate": {
+      "@id": "dwc:measurementDeterminedDate"
+    },
+    "order": {
+      "@id": "dwc:order"
+    },
+    "vitality": {
+      "@id": "dwc:vitality"
+    },
+    "minimumDepthInMeters": {
+      "@id": "dwc:minimumDepthInMeters"
+    },
+    "samplingEffort": {
+      "@id": "dwc:samplingEffort"
+    },
+    "eventDate": {
+      "@id": "dwc:eventDate"
+    },
+    "Occurrence": {
+      "@id": "dwc:Occurrence"
+    },
+    "year": {
+      "@id": "dwc:year"
+    },
+    "family": {
+      "@id": "dwc:family"
+    },
+    "georeferenceSources": {
+      "@id": "dwc:georeferenceSources"
+    },
+    "MaterialSample": {
+      "@id": "dwc:MaterialSample"
+    },
+    "island": {
+      "@id": "dwc:island"
+    },
+    "taxonRank": {
+      "@id": "dwc:taxonRank"
+    },
+    "locationID": {
+      "@id": "dwc:locationID"
+    },
+    "identificationRemarks": {
+      "@id": "dwc:identificationRemarks"
+    },
+    "associatedOrganisms": {
+      "@id": "dwc:associatedOrganisms"
+    },
+    "subgenus": {
+      "@id": "dwc:subgenus"
+    },
+    "relationshipOfResourceID": {
+      "@id": "dwc:relationshipOfResourceID"
+    },
+    "earliestAgeOrLowestStage": {
+      "@id": "dwc:earliestAgeOrLowestStage"
+    },
+    "kingdom": {
+      "@id": "dwc:kingdom"
+    },
+    "latestEonOrHighestEonothem": {
+      "@id": "dwc:latestEonOrHighestEonothem"
+    },
+    "taxonConceptID": {
+      "@id": "dwc:taxonConceptID"
+    },
+    "islandGroup": {
+      "@id": "dwc:islandGroup"
+    },
+    "establishmentMeans": {
+      "@id": "dwc:establishmentMeans"
+    },
+    "relationshipEstablishedDate": {
+      "@id": "dwc:relationshipEstablishedDate"
+    },
+    "identifiedBy": {
+      "@id": "dwc:identifiedBy"
+    },
+    "sex": {
+      "@id": "dwc:sex"
+    },
+    "verbatimLabel": {
+      "@id": "dwc:verbatimLabel"
+    },
+    "verbatimEventDate": {
+      "@id": "dwc:verbatimEventDate"
+    },
+    "month": {
+      "@id": "dwc:month"
+    },
+    "taxonID": {
+      "@id": "dwc:taxonID"
+    },
+    "municipality": {
+      "@id": "dwc:municipality"
+    },
+    "nomenclaturalStatus": {
+      "@id": "dwc:nomenclaturalStatus"
+    },
+    "samplingProtocol": {
+      "@id": "dwc:samplingProtocol"
+    },
+    "earliestPeriodOrLowestSystem": {
+      "@id": "dwc:earliestPeriodOrLowestSystem"
+    },
+    "lifeStage": {
+      "@id": "dwc:lifeStage"
+    },
+    "basisOfRecord": {
+      "@id": "dwc:basisOfRecord"
+    },
+    "day": {
+      "@id": "dwc:day"
+    },
+    "verticalDatum": {
+      "@id": "dwc:verticalDatum"
+    },
+    "latestEpochOrHighestSeries": {
+      "@id": "dwc:latestEpochOrHighestSeries"
+    },
+    "originalNameUsage": {
+      "@id": "dwc:originalNameUsage"
+    },
+    "cultivarEpithet": {
+      "@id": "dwc:cultivarEpithet"
+    },
+    "identifiedByID": {
+      "@id": "dwc:identifiedByID"
+    },
+    "reproductiveCondition": {
+      "@id": "dwc:reproductiveCondition"
+    },
+    "latestEraOrHighestErathem": {
+      "@id": "dwc:latestEraOrHighestErathem"
+    },
+    "datasetID": {
+      "@id": "dwc:datasetID"
+    },
+    "scientificNameAuthorship": {
+      "@id": "dwc:scientificNameAuthorship"
+    },
+    "collectionID": {
+      "@id": "dwc:collectionID"
+    },
+    "pointRadiusSpatialFit": {
+      "@id": "dwc:pointRadiusSpatialFit"
+    },
+    "nameAccordingToID": {
+      "@id": "dwc:nameAccordingToID"
+    },
+    "subtribe": {
+      "@id": "dwc:subtribe"
+    },
+    "georeferenceProtocol": {
+      "@id": "dwc:georeferenceProtocol"
+    },
+    "eventRemarks": {
+      "@id": "dwc:eventRemarks"
+    },
+    "minimumElevationInMeters": {
+      "@id": "dwc:minimumElevationInMeters"
+    },
+    "verbatimSRS": {
+      "@id": "dwc:verbatimSRS"
+    },
+    "degreeOfEstablishment": {
+      "@id": "dwc:degreeOfEstablishment"
+    },
+    "MeasurementOrFact": {
+      "@id": "dwc:MeasurementOrFact"
+    },
+    "identificationQualifier": {
+      "@id": "dwc:identificationQualifier"
+    },
+    "infraspecificEpithet": {
+      "@id": "dwc:infraspecificEpithet"
+    },
+    "latestAgeOrHighestStage": {
+      "@id": "dwc:latestAgeOrHighestStage"
+    },
+    "dataGeneralizations": {
+      "@id": "dwc:dataGeneralizations"
+    },
+    "ResourceRelationship": {
+      "@id": "dwc:ResourceRelationship"
+    },
+    "eventTime": {
+      "@id": "dwc:eventTime"
+    },
+    "verbatimIdentification": {
+      "@id": "dwc:verbatimIdentification"
+    },
+    "PreservedSpecimen": {
+      "@id": "dwc:PreservedSpecimen"
+    },
+    "associatedReferences": {
+      "@id": "dwc:associatedReferences"
+    },
+    "recordedBy": {
+      "@id": "dwc:recordedBy"
+    },
+    "specificEpithet": {
+      "@id": "dwc:specificEpithet"
+    },
+    "formation": {
+      "@id": "dwc:formation"
+    },
+    "nomenclaturalCode": {
+      "@id": "dwc:nomenclaturalCode"
+    },
+    "ownerInstitutionCode": {
+      "@id": "dwc:ownerInstitutionCode"
+    },
+    "relatedResourceID": {
+      "@id": "dwc:relatedResourceID"
+    },
+    "measurementValue": {
+      "@id": "dwc:measurementValue"
+    },
+    "occurrenceRemarks": {
+      "@id": "dwc:occurrenceRemarks"
+    },
+    "measurementRemarks": {
+      "@id": "dwc:measurementRemarks"
+    },
+    "georeferenceRemarks": {
+      "@id": "dwc:georeferenceRemarks"
+    },
+    "organismScope": {
+      "@id": "dwc:organismScope"
+    },
+    "resourceID": {
+      "@id": "dwc:resourceID"
+    },
+    "associatedOccurrences": {
+      "@id": "dwc:associatedOccurrences"
+    },
+    "relationshipAccordingTo": {
+      "@id": "dwc:relationshipAccordingTo"
+    }
+  },
+  {
+    "verbatimSiteDescriptions": {
+      "@id": "hc:verbatimSiteDescriptions"
+    },
+    "verbatimSiteNames": {
+      "@id": "hc:verbatimSiteNames"
+    },
+    "samplingPerformedBy": {
+      "@id": "hc:samplingPerformedBy"
+    },
+    "eventDurationUnit": {
+      "@id": "hc:eventDurationUnit"
+    },
+    "eventDuration": {
+      "@id": "hc:eventDuration"
+    },
+    "siteCount": {
+      "@id": "hc:siteCount"
+    },
+    "reportedWeather": {
+      "@id": "hc:reportedWeather"
+    }
+  }
+  ]
+}

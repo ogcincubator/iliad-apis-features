@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://www.w3.org/2004/02/skos/core#",
+  "type": "object",
+  "properties": {
+    "example": {
+      "type": "string"
+    },
+    "Concept": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "Scheme": {
+      "type": "string"
+    },
+    "definition": {
+      "type": "string"
+    },
+    "editorialNote": {
+      "type": "string"
+    },
+    "prefLabel": {
+      "type": "string"
+    },
+    "inScheme": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

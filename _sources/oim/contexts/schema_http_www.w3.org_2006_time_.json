@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://www.w3.org/2006/time#",
+  "type": "object",
+  "properties": {
+    "TemporalDuration": {
+      "type": "string"
+    },
+    "TemporalUnit": {
+      "type": "string"
+    },
+    "Instant": {
+      "type": "string"
+    },
+    "numericDuration": {
+      "type": "string"
+    },
+    "Interval": {
+      "type": "string"
+    },
+    "hasTime": {
+      "type": "string"
+    },
+    "hasEnd": {
+      "type": "string",
+      "format": "uri"
+    },
+    "TemporalEntity": {
+      "type": "string"
+    },
+    "hasBeginning": {
+      "type": "string",
+      "format": "uri"
+    },
+    "inXSDDateTimeStamp": {
+      "type": "string"
+    },
+    "inXSDDate": {
+      "type": "string"
+    },
+    "unitType": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

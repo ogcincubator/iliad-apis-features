@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "userName": {
+      "@id": "https://w3id.org/demeter/agri/agriCommon#userName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "eppoConcept": {
+      "@id": "https://w3id.org/demeter/agri/agriCommon#eppoConcept",
+      "@type": "@id"
+    },
+    "password": {
+      "@id": "https://w3id.org/demeter/agri/agriCommon#password",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  }
+}

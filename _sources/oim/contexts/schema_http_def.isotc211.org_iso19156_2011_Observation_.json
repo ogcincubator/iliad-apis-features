@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://def.isotc211.org/iso19156/2011/Observation#",
+  "type": "object",
+  "properties": {
+    "OM_Observation": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

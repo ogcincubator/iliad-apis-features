@@ -1,0 +1,662 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://rs.tdwg.org/dwc/terms/",
+  "type": "object",
+  "properties": {
+    "verbatimSiteDescriptions": {
+      "type": "string"
+    },
+    "verbatimSiteNames": {
+      "type": "string"
+    },
+    "samplingPerformedBy": {
+      "type": "string"
+    },
+    "eventDurationUnit": {
+      "type": "string"
+    },
+    "eventDuration": {
+      "type": "string"
+    },
+    "siteCount": {
+      "type": "string"
+    },
+    "reportedWeather": {
+      "type": "string"
+    },
+    "sampleSizeUnit": {
+      "type": "string"
+    },
+    "recordNumber": {
+      "type": "string"
+    },
+    "verbatimLongitude": {
+      "type": "string"
+    },
+    "behavior": {
+      "type": "string"
+    },
+    "organismQuantity": {
+      "type": "string"
+    },
+    "scientificNameID": {
+      "type": "string"
+    },
+    "lowestBiostratigraphicZone": {
+      "type": "string"
+    },
+    "earliestEonOrLowestEonothem": {
+      "type": "string"
+    },
+    "originalNameUsageID": {
+      "type": "string"
+    },
+    "GeologicalContext": {
+      "type": "string"
+    },
+    "countryCode": {
+      "type": "string"
+    },
+    "verbatimCoordinates": {
+      "type": "string"
+    },
+    "maximumDistanceAboveSurfaceInMeters": {
+      "type": "string"
+    },
+    "verbatimLocality": {
+      "type": "string"
+    },
+    "identificationReferences": {
+      "type": "string"
+    },
+    "verbatimCoordinateSystem": {
+      "type": "string"
+    },
+    "measurementType": {
+      "type": "string"
+    },
+    "measurementAccuracy": {
+      "type": "string"
+    },
+    "member": {
+      "type": "string"
+    },
+    "genus": {
+      "type": "string"
+    },
+    "coordinatePrecision": {
+      "type": "string"
+    },
+    "georeferencedDate": {
+      "type": "string"
+    },
+    "taxonomicStatus": {
+      "type": "string"
+    },
+    "previousIdentifications": {
+      "type": "string"
+    },
+    "startDayOfYear": {
+      "type": "string"
+    },
+    "otherCatalogNumbers": {
+      "type": "string"
+    },
+    "MachineObservation": {
+      "type": "string"
+    },
+    "coordinateUncertaintyInMeters": {
+      "type": "string"
+    },
+    "eventID": {
+      "type": "string"
+    },
+    "Organism": {
+      "type": "string"
+    },
+    "identificationID": {
+      "type": "string"
+    },
+    "recordedByID": {
+      "type": "string"
+    },
+    "Identification": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "genericName": {
+      "type": "string"
+    },
+    "decimalLongitude": {
+      "type": "string"
+    },
+    "scientificName": {
+      "type": "string"
+    },
+    "organismQuantityType": {
+      "type": "string"
+    },
+    "catalogNumber": {
+      "type": "string"
+    },
+    "continent": {
+      "type": "string"
+    },
+    "minimumDistanceAboveSurfaceInMeters": {
+      "type": "string"
+    },
+    "decimalLatitude": {
+      "type": "string"
+    },
+    "higherGeographyID": {
+      "type": "string"
+    },
+    "measurementDeterminedBy": {
+      "type": "string"
+    },
+    "geodeticDatum": {
+      "type": "string"
+    },
+    "maximumDepthInMeters": {
+      "type": "string"
+    },
+    "locationAccordingTo": {
+      "type": "string"
+    },
+    "nameAccordingTo": {
+      "type": "string"
+    },
+    "group": {
+      "type": "string"
+    },
+    "class": {
+      "type": "string"
+    },
+    "footprintWKT": {
+      "type": "string"
+    },
+    "FossilSpecimen": {
+      "type": "string"
+    },
+    "typeStatus": {
+      "type": "string"
+    },
+    "acceptedNameUsage": {
+      "type": "string"
+    },
+    "earliestEpochOrLowestSeries": {
+      "type": "string"
+    },
+    "parentNameUsageID": {
+      "type": "string"
+    },
+    "dynamicProperties": {
+      "type": "string"
+    },
+    "caste": {
+      "type": "string"
+    },
+    "footprintSpatialFit": {
+      "type": "string"
+    },
+    "namePublishedInYear": {
+      "type": "string"
+    },
+    "highestBiostratigraphicZone": {
+      "type": "string"
+    },
+    "fieldNotes": {
+      "type": "string"
+    },
+    "measurementID": {
+      "type": "string"
+    },
+    "parentNameUsage": {
+      "type": "string"
+    },
+    "acceptedNameUsageID": {
+      "type": "string"
+    },
+    "maximumElevationInMeters": {
+      "type": "string"
+    },
+    "identificationVerificationStatus": {
+      "type": "string"
+    },
+    "footprintSRS": {
+      "type": "string"
+    },
+    "individualCount": {
+      "type": "string"
+    },
+    "collectionCode": {
+      "type": "string"
+    },
+    "lithostratigraphicTerms": {
+      "type": "string"
+    },
+    "subfamily": {
+      "type": "string"
+    },
+    "eventType": {
+      "type": "string"
+    },
+    "associatedMedia": {
+      "type": "string"
+    },
+    "Taxon": {
+      "type": "string"
+    },
+    "vernacularName": {
+      "type": "string"
+    },
+    "preparations": {
+      "type": "string"
+    },
+    "Event": {
+      "type": "string"
+    },
+    "institutionID": {
+      "type": "string"
+    },
+    "verbatimDepth": {
+      "type": "string"
+    },
+    "county": {
+      "type": "string"
+    },
+    "earliestEraOrLowestErathem": {
+      "type": "string"
+    },
+    "occurrenceStatus": {
+      "type": "string"
+    },
+    "verbatimTaxonRank": {
+      "type": "string"
+    },
+    "disposition": {
+      "type": "string"
+    },
+    "namePublishedInID": {
+      "type": "string"
+    },
+    "dateIdentified": {
+      "type": "string"
+    },
+    "organismRemarks": {
+      "type": "string"
+    },
+    "latestPeriodOrHighestSystem": {
+      "type": "string"
+    },
+    "taxonRemarks": {
+      "type": "string"
+    },
+    "georeferencedBy": {
+      "type": "string"
+    },
+    "verbatimElevation": {
+      "type": "string"
+    },
+    "higherClassification": {
+      "type": "string"
+    },
+    "waterBody": {
+      "type": "string"
+    },
+    "namePublishedIn": {
+      "type": "string"
+    },
+    "organismID": {
+      "type": "string"
+    },
+    "stateProvince": {
+      "type": "string"
+    },
+    "endDayOfYear": {
+      "type": "string"
+    },
+    "geologicalContextID": {
+      "type": "string"
+    },
+    "pathway": {
+      "type": "string"
+    },
+    "parentEventID": {
+      "type": "string"
+    },
+    "datasetName": {
+      "type": "string"
+    },
+    "measurementMethod": {
+      "type": "string"
+    },
+    "verbatimLatitude": {
+      "type": "string"
+    },
+    "parentMeasurementID": {
+      "type": "string"
+    },
+    "tribe": {
+      "type": "string"
+    },
+    "superfamily": {
+      "type": "string"
+    },
+    "sampleSizeValue": {
+      "type": "string"
+    },
+    "LivingSpecimen": {
+      "type": "string"
+    },
+    "locationRemarks": {
+      "type": "string"
+    },
+    "higherGeography": {
+      "type": "string"
+    },
+    "informationWithheld": {
+      "type": "string"
+    },
+    "organismName": {
+      "type": "string"
+    },
+    "institutionCode": {
+      "type": "string"
+    },
+    "occurrenceID": {
+      "type": "string"
+    },
+    "measurementUnit": {
+      "type": "string"
+    },
+    "HumanObservation": {
+      "type": "string"
+    },
+    "associatedSequences": {
+      "type": "string"
+    },
+    "phylum": {
+      "type": "string"
+    },
+    "fieldNumber": {
+      "type": "string"
+    },
+    "relationshipRemarks": {
+      "type": "string"
+    },
+    "infragenericEpithet": {
+      "type": "string"
+    },
+    "resourceRelationshipID": {
+      "type": "string"
+    },
+    "relationshipOfResource": {
+      "type": "string"
+    },
+    "habitat": {
+      "type": "string"
+    },
+    "materialSampleID": {
+      "type": "string"
+    },
+    "georeferenceVerificationStatus": {
+      "type": "string"
+    },
+    "bed": {
+      "type": "string"
+    },
+    "locality": {
+      "type": "string"
+    },
+    "MaterialCitation": {
+      "type": "string"
+    },
+    "associatedTaxa": {
+      "type": "string"
+    },
+    "measurementDeterminedDate": {
+      "type": "string"
+    },
+    "order": {
+      "type": "string"
+    },
+    "vitality": {
+      "type": "string"
+    },
+    "minimumDepthInMeters": {
+      "type": "string"
+    },
+    "samplingEffort": {
+      "type": "string"
+    },
+    "eventDate": {
+      "type": "string"
+    },
+    "Occurrence": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "family": {
+      "type": "string"
+    },
+    "georeferenceSources": {
+      "type": "string"
+    },
+    "MaterialSample": {
+      "type": "string"
+    },
+    "island": {
+      "type": "string"
+    },
+    "taxonRank": {
+      "type": "string"
+    },
+    "locationID": {
+      "type": "string"
+    },
+    "identificationRemarks": {
+      "type": "string"
+    },
+    "associatedOrganisms": {
+      "type": "string"
+    },
+    "subgenus": {
+      "type": "string"
+    },
+    "relationshipOfResourceID": {
+      "type": "string"
+    },
+    "earliestAgeOrLowestStage": {
+      "type": "string"
+    },
+    "kingdom": {
+      "type": "string"
+    },
+    "latestEonOrHighestEonothem": {
+      "type": "string"
+    },
+    "taxonConceptID": {
+      "type": "string"
+    },
+    "islandGroup": {
+      "type": "string"
+    },
+    "establishmentMeans": {
+      "type": "string"
+    },
+    "relationshipEstablishedDate": {
+      "type": "string"
+    },
+    "identifiedBy": {
+      "type": "string"
+    },
+    "sex": {
+      "type": "string"
+    },
+    "verbatimLabel": {
+      "type": "string"
+    },
+    "verbatimEventDate": {
+      "type": "string"
+    },
+    "month": {
+      "type": "string"
+    },
+    "taxonID": {
+      "type": "string"
+    },
+    "municipality": {
+      "type": "string"
+    },
+    "nomenclaturalStatus": {
+      "type": "string"
+    },
+    "samplingProtocol": {
+      "type": "string"
+    },
+    "earliestPeriodOrLowestSystem": {
+      "type": "string"
+    },
+    "lifeStage": {
+      "type": "string"
+    },
+    "basisOfRecord": {
+      "type": "string"
+    },
+    "day": {
+      "type": "string"
+    },
+    "verticalDatum": {
+      "type": "string"
+    },
+    "latestEpochOrHighestSeries": {
+      "type": "string"
+    },
+    "originalNameUsage": {
+      "type": "string"
+    },
+    "cultivarEpithet": {
+      "type": "string"
+    },
+    "identifiedByID": {
+      "type": "string"
+    },
+    "reproductiveCondition": {
+      "type": "string"
+    },
+    "latestEraOrHighestErathem": {
+      "type": "string"
+    },
+    "datasetID": {
+      "type": "string"
+    },
+    "scientificNameAuthorship": {
+      "type": "string"
+    },
+    "collectionID": {
+      "type": "string"
+    },
+    "pointRadiusSpatialFit": {
+      "type": "string"
+    },
+    "nameAccordingToID": {
+      "type": "string"
+    },
+    "subtribe": {
+      "type": "string"
+    },
+    "georeferenceProtocol": {
+      "type": "string"
+    },
+    "eventRemarks": {
+      "type": "string"
+    },
+    "minimumElevationInMeters": {
+      "type": "string"
+    },
+    "verbatimSRS": {
+      "type": "string"
+    },
+    "degreeOfEstablishment": {
+      "type": "string"
+    },
+    "MeasurementOrFact": {
+      "type": "string"
+    },
+    "identificationQualifier": {
+      "type": "string"
+    },
+    "infraspecificEpithet": {
+      "type": "string"
+    },
+    "latestAgeOrHighestStage": {
+      "type": "string"
+    },
+    "dataGeneralizations": {
+      "type": "string"
+    },
+    "ResourceRelationship": {
+      "type": "string"
+    },
+    "eventTime": {
+      "type": "string"
+    },
+    "verbatimIdentification": {
+      "type": "string"
+    },
+    "PreservedSpecimen": {
+      "type": "string"
+    },
+    "associatedReferences": {
+      "type": "string"
+    },
+    "recordedBy": {
+      "type": "string"
+    },
+    "specificEpithet": {
+      "type": "string"
+    },
+    "formation": {
+      "type": "string"
+    },
+    "nomenclaturalCode": {
+      "type": "string"
+    },
+    "ownerInstitutionCode": {
+      "type": "string"
+    },
+    "relatedResourceID": {
+      "type": "string"
+    },
+    "measurementValue": {
+      "type": "string"
+    },
+    "occurrenceRemarks": {
+      "type": "string"
+    },
+    "measurementRemarks": {
+      "type": "string"
+    },
+    "georeferenceRemarks": {
+      "type": "string"
+    },
+    "organismScope": {
+      "type": "string"
+    },
+    "resourceID": {
+      "type": "string"
+    },
+    "associatedOccurrences": {
+      "type": "string"
+    },
+    "relationshipAccordingTo": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

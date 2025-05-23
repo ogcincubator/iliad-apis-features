@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "Class": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Class"
+    },
+    "label": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "isDefinedBy": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "seeAlso": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "comment": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#comment"
+    }
+  }
+}

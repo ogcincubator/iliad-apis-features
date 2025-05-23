@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://rs.tdwg.org/hc/terms/",
+  "type": "object",
+  "properties": {
+    "verbatimSiteDescriptions": {
+      "type": "string"
+    },
+    "verbatimSiteNames": {
+      "type": "string"
+    },
+    "samplingPerformedBy": {
+      "type": "string"
+    },
+    "eventDurationUnit": {
+      "type": "string"
+    },
+    "eventDuration": {
+      "type": "string"
+    },
+    "siteCount": {
+      "type": "string"
+    },
+    "reportedWeather": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

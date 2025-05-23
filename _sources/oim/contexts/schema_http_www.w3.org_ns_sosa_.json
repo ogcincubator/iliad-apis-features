@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://www.w3.org/ns/sosa/",
+  "type": "object",
+  "properties": {
+    "Platform": {
+      "type": "string"
+    },
+    "Procedure": {
+      "type": "string"
+    },
+    "hosts": {
+      "type": "string"
+    },
+    "ObservationCollection": {
+      "type": "string"
+    },
+    "hasUltimateFeatureOfInterest": {
+      "type": "string"
+    },
+    "madeBySensor": {
+      "type": "string",
+      "format": "uri"
+    },
+    "ActuatableProperty": {
+      "type": "string"
+    },
+    "Result": {
+      "type": "string"
+    },
+    "isHostedBy": {
+      "type": "string"
+    },
+    "resultTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "phenomenonTime": {
+      "type": "string"
+    },
+    "hasMember": {
+      "type": "string"
+    },
+    "isResultOf": {
+      "type": "string",
+      "format": "uri"
+    },
+    "observes": {
+      "type": "string"
+    },
+    "hasResult": {
+      "type": "string"
+    },
+    "usedProcedure": {
+      "type": "string"
+    },
+    "hasFeatureOfInterest": {
+      "type": "string",
+      "format": "uri"
+    },
+    "observedProperty": {
+      "type": "string",
+      "format": "uri"
+    },
+    "madeObservation": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Sample": {
+      "type": "string"
+    },
+    "ObservableProperty": {
+      "type": "string"
+    },
+    "Actuation": {
+      "type": "string"
+    },
+    "Sampling": {
+      "type": "string"
+    },
+    "Observation": {
+      "type": "string"
+    },
+    "Sensor": {
+      "type": "string"
+    },
+    "hasSimpleResult": {
+      "type": "string"
+    },
+    "isFeatureOfInterestOf": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "additionalProperties": true
+}

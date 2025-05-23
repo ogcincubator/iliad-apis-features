@@ -6,6 +6,10 @@
     "wormsConcept": {
       "@id": "iliad:wormsConcept",
       "@type": "@id"
+    },
+    "aphiaId": {
+      "@id": "iliad:wormsConcept",
+      "@type": "@id"
     }
   }
 }

@@ -1,0 +1,7 @@
+{
+  "@context": {
+    "GFI_DomainFeature": {
+      "@id": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
+    }
+  }
+}

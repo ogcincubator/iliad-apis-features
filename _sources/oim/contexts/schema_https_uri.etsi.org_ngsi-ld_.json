@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace https://uri.etsi.org/ngsi-ld/",
+  "type": "object",
+  "properties": {
+    "Relationship": {
+      "type": "string"
+    },
+    "LocationRelationship": {
+      "type": "string"
+    },
+    "GeoProperty": {
+      "type": "string"
+    },
+    "TemporalProperty": {
+      "type": "string"
+    },
+    "Entity": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,83 @@
+{
+  "@context": {
+    "ObservationCollection": {
+      "@id": "http://www.w3.org/ns/sosa/ObservationCollection"
+    },
+    "hasUltimateFeatureOfInterest": {
+      "@id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest"
+    },
+    "madeBySensor": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "@id"
+    },
+    "ActuatableProperty": {
+      "@id": "http://www.w3.org/ns/sosa/ActuatableProperty"
+    },
+    "Result": {
+      "@id": "http://www.w3.org/ns/sosa/Result"
+    },
+    "isHostedBy": {
+      "@id": "http://www.w3.org/ns/sosa/isHostedBy"
+    },
+    "resultTime": {
+      "@id": "http://www.w3.org/ns/sosa/resultTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "phenomenonTime": {
+      "@id": "http://www.w3.org/ns/sosa/phenomenonTime"
+    },
+    "hasMember": {
+      "@id": "http://www.w3.org/ns/sosa/hasMember"
+    },
+    "isResultOf": {
+      "@id": "http://www.w3.org/ns/sosa/isResultOf",
+      "@type": "@id"
+    },
+    "observes": {
+      "@id": "http://www.w3.org/ns/sosa/observes"
+    },
+    "hasResult": {
+      "@id": "http://www.w3.org/ns/sosa/hasResult"
+    },
+    "usedProcedure": {
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure"
+    },
+    "hasFeatureOfInterest": {
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "observedProperty": {
+      "@id": "http://www.w3.org/ns/sosa/observedProperty",
+      "@type": "@id"
+    },
+    "madeObservation": {
+      "@id": "http://www.w3.org/ns/sosa/madeObservation",
+      "@type": "@id"
+    },
+    "Sample": {
+      "@id": "http://www.w3.org/ns/sosa/Sample"
+    },
+    "ObservableProperty": {
+      "@id": "http://www.w3.org/ns/sosa/ObservableProperty"
+    },
+    "Actuation": {
+      "@id": "http://www.w3.org/ns/sosa/Actuation"
+    },
+    "Sampling": {
+      "@id": "http://www.w3.org/ns/sosa/Sampling"
+    },
+    "Observation": {
+      "@id": "http://www.w3.org/ns/sosa/Observation"
+    },
+    "Sensor": {
+      "@id": "http://www.w3.org/ns/sosa/Sensor"
+    },
+    "hasSimpleResult": {
+      "@id": "http://www.w3.org/ns/sosa/hasSimpleResult"
+    },
+    "isFeatureOfInterestOf": {
+      "@id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+      "@type": "@id"
+    }
+  }
+}
