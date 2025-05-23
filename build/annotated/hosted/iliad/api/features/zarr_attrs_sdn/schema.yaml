@@ -234,7 +234,7 @@ x-jsonld-extra-terms:
     x-jsonld-id: http://purl.org/dc/terms/replaces
     x-jsonld-type: '@id'
   member:
-    x-jsonld-id: dwc:member
+    x-jsonld-id: http://rs.tdwg.org/dwc/terms/member
     x-jsonld-type: '@id'
   conformsTo:
     x-jsonld-id: http://purl.org/dc/terms/conformsTo
@@ -930,7 +930,7 @@ x-jsonld-extra-terms:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasResult
     x-jsonld-type: '@id'
   order:
-    x-jsonld-id: dwc:order
+    x-jsonld-id: http://rs.tdwg.org/dwc/terms/order
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#int
   hasGeometry:
     x-jsonld-id: http://www.opengis.net/ont/geosparql#hasGeometry
@@ -1031,176 +1031,176 @@ x-jsonld-extra-terms:
   Observation: http://www.w3.org/ns/sosa/Observation
   schema.name: https://schema.org/name
   QuantityKind: http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind
-  sampleSizeUnit: dwc:sampleSizeUnit
-  recordNumber: dwc:recordNumber
-  verbatimLongitude: dwc:verbatimLongitude
-  behavior: dwc:behavior
-  organismQuantity: dwc:organismQuantity
-  scientificNameID: dwc:scientificNameID
-  lowestBiostratigraphicZone: dwc:lowestBiostratigraphicZone
-  earliestEonOrLowestEonothem: dwc:earliestEonOrLowestEonothem
-  originalNameUsageID: dwc:originalNameUsageID
-  GeologicalContext: dwc:GeologicalContext
-  countryCode: dwc:countryCode
+  sampleSizeUnit: http://rs.tdwg.org/dwc/terms/sampleSizeUnit
+  recordNumber: http://rs.tdwg.org/dwc/terms/recordNumber
+  verbatimLongitude: http://rs.tdwg.org/dwc/terms/verbatimLongitude
+  behavior: http://rs.tdwg.org/dwc/terms/behavior
+  organismQuantity: http://rs.tdwg.org/dwc/terms/organismQuantity
+  scientificNameID: http://rs.tdwg.org/dwc/terms/scientificNameID
+  lowestBiostratigraphicZone: http://rs.tdwg.org/dwc/terms/lowestBiostratigraphicZone
+  earliestEonOrLowestEonothem: http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem
+  originalNameUsageID: http://rs.tdwg.org/dwc/terms/originalNameUsageID
+  GeologicalContext: http://rs.tdwg.org/dwc/terms/GeologicalContext
+  countryCode: http://rs.tdwg.org/dwc/terms/countryCode
   UnitOfMeasure: https://saref.etsi.org/core/UnitOfMeasure
-  verbatimCoordinates: dwc:verbatimCoordinates
+  verbatimCoordinates: http://rs.tdwg.org/dwc/terms/verbatimCoordinates
   recordType: http://mmisw.org/ont/ioos/marine_biogeography/recordType
-  maximumDistanceAboveSurfaceInMeters: dwc:maximumDistanceAboveSurfaceInMeters
-  verbatimLocality: dwc:verbatimLocality
-  identificationReferences: dwc:identificationReferences
+  maximumDistanceAboveSurfaceInMeters: http://rs.tdwg.org/dwc/terms/maximumDistanceAboveSurfaceInMeters
+  verbatimLocality: http://rs.tdwg.org/dwc/terms/verbatimLocality
+  identificationReferences: http://rs.tdwg.org/dwc/terms/identificationReferences
   isControlledByDevice:
     x-jsonld-id: https://saref.etsi.org/core/isControlledByDevice
     x-jsonld-type: '@id'
-  verbatimCoordinateSystem: dwc:verbatimCoordinateSystem
+  verbatimCoordinateSystem: http://rs.tdwg.org/dwc/terms/verbatimCoordinateSystem
   sampleLengthInMeters: http://mmisw.org/ont/ioos/marine_biogeography/sampleLengthInMeters
-  measurementType: dwc:measurementType
+  measurementType: http://rs.tdwg.org/dwc/terms/measurementType
   sampleWidthInMeters: http://mmisw.org/ont/ioos/marine_biogeography/sampleWidthInMeters
-  measurementAccuracy: dwc:measurementAccuracy
-  genus: dwc:genus
-  coordinatePrecision: dwc:coordinatePrecision
+  measurementAccuracy: http://rs.tdwg.org/dwc/terms/measurementAccuracy
+  genus: http://rs.tdwg.org/dwc/terms/genus
+  coordinatePrecision: http://rs.tdwg.org/dwc/terms/coordinatePrecision
   weightInKg: http://mmisw.org/ont/ioos/marine_biogeography/weightInKg
-  georeferencedDate: dwc:georeferencedDate
-  taxonomicStatus: dwc:taxonomicStatus
+  georeferencedDate: http://rs.tdwg.org/dwc/terms/georeferencedDate
+  taxonomicStatus: http://rs.tdwg.org/dwc/terms/taxonomicStatus
   validFrom:
     x-jsonld-id: http://portele.de/ont/inspire/baseInspire#validFrom
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
   SurfaceMediumMedium: http://purl.oclc.org/NET/ssnx/cf/cf-feature#SurfaceMediumMedium
   Humidity: https://saref.etsi.org/core/Humidity
-  previousIdentifications: dwc:previousIdentifications
+  previousIdentifications: http://rs.tdwg.org/dwc/terms/previousIdentifications
   Period: http://def.seegrid.csiro.au/isotc211/iso19108/2002/temporal#Period
-  startDayOfYear: dwc:startDayOfYear
-  otherCatalogNumbers: dwc:otherCatalogNumbers
-  MachineObservation: dwc:MachineObservation
-  coordinateUncertaintyInMeters: dwc:coordinateUncertaintyInMeters
-  eventID: dwc:eventID
-  Organism: dwc:Organism
-  identificationID: dwc:identificationID
-  recordedByID: dwc:recordedByID
+  startDayOfYear: http://rs.tdwg.org/dwc/terms/startDayOfYear
+  otherCatalogNumbers: http://rs.tdwg.org/dwc/terms/otherCatalogNumbers
+  MachineObservation: http://rs.tdwg.org/dwc/terms/MachineObservation
+  coordinateUncertaintyInMeters: http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters
+  eventID: http://rs.tdwg.org/dwc/terms/eventID
+  Organism: http://rs.tdwg.org/dwc/terms/Organism
+  identificationID: http://rs.tdwg.org/dwc/terms/identificationID
+  recordedByID: http://rs.tdwg.org/dwc/terms/recordedByID
   dateCreated:
     x-jsonld-id: https://smartdatamodels.org/dateCreated
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
-  Identification: dwc:Identification
+  Identification: http://rs.tdwg.org/dwc/terms/Identification
   WeatherObserved: https://smartdatamodels.org/dataModel.Weather/WeatherObserved
   quantificationUnit: http://mmisw.org/ont/ioos/marine_biogeography/quantificationUnit
-  country: dwc:country
-  genericName: dwc:genericName
+  country: http://rs.tdwg.org/dwc/terms/country
+  genericName: http://rs.tdwg.org/dwc/terms/genericName
   bibliographicCitation: http://purl.org/dc/terms/bibliographicCitation
-  decimalLongitude: dwc:decimalLongitude
-  scientificName: dwc:scientificName
-  organismQuantityType: dwc:organismQuantityType
-  catalogNumber: dwc:catalogNumber
-  continent: dwc:continent
-  minimumDistanceAboveSurfaceInMeters: dwc:minimumDistanceAboveSurfaceInMeters
+  decimalLongitude: http://rs.tdwg.org/dwc/terms/decimalLongitude
+  scientificName: http://rs.tdwg.org/dwc/terms/scientificName
+  organismQuantityType: http://rs.tdwg.org/dwc/terms/organismQuantityType
+  catalogNumber: http://rs.tdwg.org/dwc/terms/catalogNumber
+  continent: http://rs.tdwg.org/dwc/terms/continent
+  minimumDistanceAboveSurfaceInMeters: http://rs.tdwg.org/dwc/terms/minimumDistanceAboveSurfaceInMeters
   dateModified:
     x-jsonld-id: https://smartdatamodels.org/dateModified
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
-  decimalLatitude: dwc:decimalLatitude
+  decimalLatitude: http://rs.tdwg.org/dwc/terms/decimalLatitude
   references: http://purl.org/dc/terms/references
   agroVocConcept:
     x-jsonld-id: https://smartdatamodels.org/dataModel.Agrifood/agroVocConcept
     x-jsonld-type: '@id'
-  higherGeographyID: dwc:higherGeographyID
+  higherGeographyID: http://rs.tdwg.org/dwc/terms/higherGeographyID
   addressRegion: https://schema.org/addressRegion
-  measurementDeterminedBy: dwc:measurementDeterminedBy
+  measurementDeterminedBy: http://rs.tdwg.org/dwc/terms/measurementDeterminedBy
   sampleShape: http://mmisw.org/ont/ioos/marine_biogeography/sampleShape
-  geodeticDatum: dwc:geodeticDatum
+  geodeticDatum: http://rs.tdwg.org/dwc/terms/geodeticDatum
   verbatimSiteDescriptions: http://rs.tdwg.org/hc/terms/verbatimSiteDescriptions
   dataProvider: https://smartdatamodels.org/dataProvider
-  maximumDepthInMeters: dwc:maximumDepthInMeters
+  maximumDepthInMeters: http://rs.tdwg.org/dwc/terms/maximumDepthInMeters
   measuresProperty:
     x-jsonld-id: https://saref.etsi.org/core/measuresProperty
     x-jsonld-type: '@id'
-  locationAccordingTo: dwc:locationAccordingTo
-  nameAccordingTo: dwc:nameAccordingTo
-  group: dwc:group
-  class: dwc:class
-  footprintWKT: dwc:footprintWKT
-  FossilSpecimen: dwc:FossilSpecimen
+  locationAccordingTo: http://rs.tdwg.org/dwc/terms/locationAccordingTo
+  nameAccordingTo: http://rs.tdwg.org/dwc/terms/nameAccordingTo
+  group: http://rs.tdwg.org/dwc/terms/group
+  class: http://rs.tdwg.org/dwc/terms/class
+  footprintWKT: http://rs.tdwg.org/dwc/terms/footprintWKT
+  FossilSpecimen: http://rs.tdwg.org/dwc/terms/FossilSpecimen
   snowHeight: https://smartdatamodels.org/dataModel.Weather/snowHeight
   Medium: http://purl.oclc.org/NET/ssnx/cf/cf-feature#Medium
-  typeStatus: dwc:typeStatus
-  acceptedNameUsage: dwc:acceptedNameUsage
-  earliestEpochOrLowestSeries: dwc:earliestEpochOrLowestSeries
+  typeStatus: http://rs.tdwg.org/dwc/terms/typeStatus
+  acceptedNameUsage: http://rs.tdwg.org/dwc/terms/acceptedNameUsage
+  earliestEpochOrLowestSeries: http://rs.tdwg.org/dwc/terms/earliestEpochOrLowestSeries
   streamGauge: https://smartdatamodels.org/dataModel.Weather/streamGauge
-  parentNameUsageID: dwc:parentNameUsageID
-  dynamicProperties: dwc:dynamicProperties
+  parentNameUsageID: http://rs.tdwg.org/dwc/terms/parentNameUsageID
+  dynamicProperties: http://rs.tdwg.org/dwc/terms/dynamicProperties
   Wind: http://purl.oclc.org/NET/ssnx/cf/cf-feature#Wind
-  caste: dwc:caste
-  footprintSpatialFit: dwc:footprintSpatialFit
-  namePublishedInYear: dwc:namePublishedInYear
-  highestBiostratigraphicZone: dwc:highestBiostratigraphicZone
-  fieldNotes: dwc:fieldNotes
-  measurementID: dwc:measurementID
-  parentNameUsage: dwc:parentNameUsage
-  acceptedNameUsageID: dwc:acceptedNameUsageID
-  maximumElevationInMeters: dwc:maximumElevationInMeters
+  caste: http://rs.tdwg.org/dwc/terms/caste
+  footprintSpatialFit: http://rs.tdwg.org/dwc/terms/footprintSpatialFit
+  namePublishedInYear: http://rs.tdwg.org/dwc/terms/namePublishedInYear
+  highestBiostratigraphicZone: http://rs.tdwg.org/dwc/terms/highestBiostratigraphicZone
+  fieldNotes: http://rs.tdwg.org/dwc/terms/fieldNotes
+  measurementID: http://rs.tdwg.org/dwc/terms/measurementID
+  parentNameUsage: http://rs.tdwg.org/dwc/terms/parentNameUsage
+  acceptedNameUsageID: http://rs.tdwg.org/dwc/terms/acceptedNameUsageID
+  maximumElevationInMeters: http://rs.tdwg.org/dwc/terms/maximumElevationInMeters
   visibilityInMeters: http://mmisw.org/ont/ioos/marine_biogeography/visibilityInMeters
-  identificationVerificationStatus: dwc:identificationVerificationStatus
+  identificationVerificationStatus: http://rs.tdwg.org/dwc/terms/identificationVerificationStatus
   Measurement: https://saref.etsi.org/core/Measurement
-  footprintSRS: dwc:footprintSRS
-  individualCount: dwc:individualCount
-  collectionCode: dwc:collectionCode
-  lithostratigraphicTerms: dwc:lithostratigraphicTerms
-  subfamily: dwc:subfamily
-  eventType: dwc:eventType
-  associatedMedia: dwc:associatedMedia
-  Taxon: dwc:Taxon
-  vernacularName: dwc:vernacularName
+  footprintSRS: http://rs.tdwg.org/dwc/terms/footprintSRS
+  individualCount: http://rs.tdwg.org/dwc/terms/individualCount
+  collectionCode: http://rs.tdwg.org/dwc/terms/collectionCode
+  lithostratigraphicTerms: http://rs.tdwg.org/dwc/terms/lithostratigraphicTerms
+  subfamily: http://rs.tdwg.org/dwc/terms/subfamily
+  eventType: http://rs.tdwg.org/dwc/terms/eventType
+  associatedMedia: http://rs.tdwg.org/dwc/terms/associatedMedia
+  Taxon: http://rs.tdwg.org/dwc/terms/Taxon
+  vernacularName: http://rs.tdwg.org/dwc/terms/vernacularName
   windDirection: https://smartdatamodels.org/dataModel.Weather/windDirection
-  preparations: dwc:preparations
-  Event: dwc:Event
+  preparations: http://rs.tdwg.org/dwc/terms/preparations
+  Event: http://rs.tdwg.org/dwc/terms/Event
   observationLocation: http://mmisw.org/ont/ioos/marine_biogeography/observationLocation
-  institutionID: dwc:institutionID
+  institutionID: http://rs.tdwg.org/dwc/terms/institutionID
   WeatherForecast: https://smartdatamodels.org/dataModel.Weather/WeatherForecast
-  verbatimDepth: dwc:verbatimDepth
-  county: dwc:county
+  verbatimDepth: http://rs.tdwg.org/dwc/terms/verbatimDepth
+  county: http://rs.tdwg.org/dwc/terms/county
   measurementMadeBy:
     x-jsonld-id: https://saref.etsi.org/core/measurementMadeBy
     x-jsonld-type: '@id'
-  earliestEraOrLowestErathem: dwc:earliestEraOrLowestErathem
-  occurrenceStatus: dwc:occurrenceStatus
+  earliestEraOrLowestErathem: http://rs.tdwg.org/dwc/terms/earliestEraOrLowestErathem
+  occurrenceStatus: http://rs.tdwg.org/dwc/terms/occurrenceStatus
   LocationRelationship: https://uri.etsi.org/ngsi-ld/LocationRelationship
   observedMinLengthInCm: http://mmisw.org/ont/ioos/marine_biogeography/observedMinLengthInCm
-  verbatimTaxonRank: dwc:verbatimTaxonRank
-  disposition: dwc:disposition
+  verbatimTaxonRank: http://rs.tdwg.org/dwc/terms/verbatimTaxonRank
+  disposition: http://rs.tdwg.org/dwc/terms/disposition
   visibility: https://smartdatamodels.org/dataModel.Weather/visibility
-  namePublishedInID: dwc:namePublishedInID
-  dateIdentified: dwc:dateIdentified
+  namePublishedInID: http://rs.tdwg.org/dwc/terms/namePublishedInID
+  dateIdentified: http://rs.tdwg.org/dwc/terms/dateIdentified
   ImageObject: https://schema.org/ImageObject
-  organismRemarks: dwc:organismRemarks
-  latestPeriodOrHighestSystem: dwc:latestPeriodOrHighestSystem
+  organismRemarks: http://rs.tdwg.org/dwc/terms/organismRemarks
+  latestPeriodOrHighestSystem: http://rs.tdwg.org/dwc/terms/latestPeriodOrHighestSystem
   Precipitation: http://purl.oclc.org/NET/ssnx/cf/cf-feature#Precipitation
-  taxonRemarks: dwc:taxonRemarks
-  georeferencedBy: dwc:georeferencedBy
-  verbatimElevation: dwc:verbatimElevation
-  higherClassification: dwc:higherClassification
-  waterBody: dwc:waterBody
+  taxonRemarks: http://rs.tdwg.org/dwc/terms/taxonRemarks
+  georeferencedBy: http://rs.tdwg.org/dwc/terms/georeferencedBy
+  verbatimElevation: http://rs.tdwg.org/dwc/terms/verbatimElevation
+  higherClassification: http://rs.tdwg.org/dwc/terms/higherClassification
+  waterBody: http://rs.tdwg.org/dwc/terms/waterBody
   Layer: http://purl.oclc.org/NET/ssnx/cf/cf-feature#Layer
   GeoProperty: https://uri.etsi.org/ngsi-ld/GeoProperty
-  namePublishedIn: dwc:namePublishedIn
-  organismID: dwc:organismID
-  stateProvince: dwc:stateProvince
-  endDayOfYear: dwc:endDayOfYear
-  geologicalContextID: dwc:geologicalContextID
-  pathway: dwc:pathway
+  namePublishedIn: http://rs.tdwg.org/dwc/terms/namePublishedIn
+  organismID: http://rs.tdwg.org/dwc/terms/organismID
+  stateProvince: http://rs.tdwg.org/dwc/terms/stateProvince
+  endDayOfYear: http://rs.tdwg.org/dwc/terms/endDayOfYear
+  geologicalContextID: http://rs.tdwg.org/dwc/terms/geologicalContextID
+  pathway: http://rs.tdwg.org/dwc/terms/pathway
   verbatimSiteNames: http://rs.tdwg.org/hc/terms/verbatimSiteNames
-  parentEventID: dwc:parentEventID
-  datasetName: dwc:datasetName
+  parentEventID: http://rs.tdwg.org/dwc/terms/parentEventID
+  datasetName: http://rs.tdwg.org/dwc/terms/datasetName
   temperature: https://smartdatamodels.org/dataModel.Weather/temperature
-  measurementMethod: dwc:measurementMethod
-  verbatimLatitude: dwc:verbatimLatitude
-  parentMeasurementID: dwc:parentMeasurementID
+  measurementMethod: http://rs.tdwg.org/dwc/terms/measurementMethod
+  verbatimLatitude: http://rs.tdwg.org/dwc/terms/verbatimLatitude
+  parentMeasurementID: http://rs.tdwg.org/dwc/terms/parentMeasurementID
   sightingCue: http://mmisw.org/ont/ioos/marine_biogeography/sightingCue
   waterTemperatureInCelsius: http://mmisw.org/ont/ioos/marine_biogeography/waterTemperatureInCelsius
-  tribe: dwc:tribe
+  tribe: http://rs.tdwg.org/dwc/terms/tribe
   status: https://schema.org/status
-  superfamily: dwc:superfamily
-  sampleSizeValue: dwc:sampleSizeValue
-  LivingSpecimen: dwc:LivingSpecimen
+  superfamily: http://rs.tdwg.org/dwc/terms/superfamily
+  sampleSizeValue: http://rs.tdwg.org/dwc/terms/sampleSizeValue
+  LivingSpecimen: http://rs.tdwg.org/dwc/terms/LivingSpecimen
   visibilityType: http://mmisw.org/ont/ioos/marine_biogeography/visibilityType
-  locationRemarks: dwc:locationRemarks
-  higherGeography: dwc:higherGeography
-  informationWithheld: dwc:informationWithheld
+  locationRemarks: http://rs.tdwg.org/dwc/terms/locationRemarks
+  higherGeography: http://rs.tdwg.org/dwc/terms/higherGeography
+  informationWithheld: http://rs.tdwg.org/dwc/terms/informationWithheld
   dateObserved:
     x-jsonld-id: https://smartdatamodels.org/dateObserved
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
@@ -1208,63 +1208,63 @@ x-jsonld-extra-terms:
     x-jsonld-id: https://saref.etsi.org/core/relatesToMeasurement
     x-jsonld-type: '@id'
   atmosphericPressure: https://smartdatamodels.org/dataModel.Weather/atmosphericPressure
-  organismName: dwc:organismName
-  institutionCode: dwc:institutionCode
+  organismName: http://rs.tdwg.org/dwc/terms/organismName
+  institutionCode: http://rs.tdwg.org/dwc/terms/institutionCode
   isMeasuredByDevice:
     x-jsonld-id: https://saref.etsi.org/core/isMeasuredByDevice
     x-jsonld-type: '@id'
-  occurrenceID: dwc:occurrenceID
+  occurrenceID: http://rs.tdwg.org/dwc/terms/occurrenceID
   quantificationMethod: http://mmisw.org/ont/ioos/marine_biogeography/quantificationMethod
-  measurementUnit: dwc:measurementUnit
+  measurementUnit: http://rs.tdwg.org/dwc/terms/measurementUnit
   lengthType: http://mmisw.org/ont/ioos/marine_biogeography/lengthType
-  HumanObservation: dwc:HumanObservation
-  associatedSequences: dwc:associatedSequences
-  phylum: dwc:phylum
-  fieldNumber: dwc:fieldNumber
-  relationshipRemarks: dwc:relationshipRemarks
-  infragenericEpithet: dwc:infragenericEpithet
+  HumanObservation: http://rs.tdwg.org/dwc/terms/HumanObservation
+  associatedSequences: http://rs.tdwg.org/dwc/terms/associatedSequences
+  phylum: http://rs.tdwg.org/dwc/terms/phylum
+  fieldNumber: http://rs.tdwg.org/dwc/terms/fieldNumber
+  relationshipRemarks: http://rs.tdwg.org/dwc/terms/relationshipRemarks
+  infragenericEpithet: http://rs.tdwg.org/dwc/terms/infragenericEpithet
   sampleVolumeInCubicMeters: http://mmisw.org/ont/ioos/marine_biogeography/sampleVolumeInCubicMeters
-  resourceRelationshipID: dwc:resourceRelationshipID
-  relationshipOfResource: dwc:relationshipOfResource
-  habitat: dwc:habitat
+  resourceRelationshipID: http://rs.tdwg.org/dwc/terms/resourceRelationshipID
+  relationshipOfResource: http://rs.tdwg.org/dwc/terms/relationshipOfResource
+  habitat: http://rs.tdwg.org/dwc/terms/habitat
   userName:
     x-jsonld-id: https://w3id.org/demeter/agri/agriCommon#userName
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
-  materialSampleID: dwc:materialSampleID
-  georeferenceVerificationStatus: dwc:georeferenceVerificationStatus
-  bed: dwc:bed
-  locality: dwc:locality
-  MaterialCitation: dwc:MaterialCitation
+  materialSampleID: http://rs.tdwg.org/dwc/terms/materialSampleID
+  georeferenceVerificationStatus: http://rs.tdwg.org/dwc/terms/georeferenceVerificationStatus
+  bed: http://rs.tdwg.org/dwc/terms/bed
+  locality: http://rs.tdwg.org/dwc/terms/locality
+  MaterialCitation: http://rs.tdwg.org/dwc/terms/MaterialCitation
   samplingPerformedBy: http://rs.tdwg.org/hc/terms/samplingPerformedBy
   makesMeasurement:
     x-jsonld-id: https://saref.etsi.org/core/makesMeasurement
     x-jsonld-type: '@id'
-  associatedTaxa: dwc:associatedTaxa
-  measurementDeterminedDate: dwc:measurementDeterminedDate
+  associatedTaxa: http://rs.tdwg.org/dwc/terms/associatedTaxa
+  measurementDeterminedDate: http://rs.tdwg.org/dwc/terms/measurementDeterminedDate
   eventDurationUnit: http://rs.tdwg.org/hc/terms/eventDurationUnit
-  vitality: dwc:vitality
-  minimumDepthInMeters: dwc:minimumDepthInMeters
-  samplingEffort: dwc:samplingEffort
+  vitality: http://rs.tdwg.org/dwc/terms/vitality
+  minimumDepthInMeters: http://rs.tdwg.org/dwc/terms/minimumDepthInMeters
+  samplingEffort: http://rs.tdwg.org/dwc/terms/samplingEffort
   pressureTendency: https://smartdatamodels.org/dataModel.Weather/pressureTendency
   streetAddress: https://schema.org/streetAddress
-  eventDate: dwc:eventDate
+  eventDate: http://rs.tdwg.org/dwc/terms/eventDate
   validTo:
     x-jsonld-id: http://portele.de/ont/inspire/baseInspire#validTo
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
-  Occurrence: dwc:Occurrence
-  year: dwc:year
-  family: dwc:family
+  Occurrence: http://rs.tdwg.org/dwc/terms/Occurrence
+  year: http://rs.tdwg.org/dwc/terms/year
+  family: http://rs.tdwg.org/dwc/terms/family
   eppoConcept:
     x-jsonld-id: https://w3id.org/demeter/agri/agriCommon#eppoConcept
     x-jsonld-type: '@id'
-  georeferenceSources: dwc:georeferenceSources
+  georeferenceSources: http://rs.tdwg.org/dwc/terms/georeferenceSources
   resourceType: http://purl.org/dc/terms/type
   weatherType: https://smartdatamodels.org/dataModel.Weather/weatherType
-  MaterialSample: dwc:MaterialSample
+  MaterialSample: http://rs.tdwg.org/dwc/terms/MaterialSample
   isMeasuredIn:
     x-jsonld-id: https://saref.etsi.org/core/isMeasuredIn
     x-jsonld-type: '@id'
-  island: dwc:island
+  island: http://rs.tdwg.org/dwc/terms/island
   dewPoint: https://smartdatamodels.org/dataModel.Weather/dewPoint
   sightingDistanceInMeters: http://mmisw.org/ont/ioos/marine_biogeography/sightingDistanceInMeters
   taxonRank: http://rs.tdwg.org/dwc/terms/taxonRank

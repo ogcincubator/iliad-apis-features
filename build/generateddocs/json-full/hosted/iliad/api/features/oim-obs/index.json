@@ -9,12 +9,12 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2025-05-21",
+  "dateOfLastChange": "2025-05-23",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
-      "title": "Reference to ILIAD",
-      "link": "https://example.com/sources/1"
+      "title": "OIM master repository",
+      "link": "https://github.com/ILIAD-ocean-twin/OIM"
     }
   ],
   "maturity": "development",
@@ -35,9 +35,9 @@
   },
   "dependsOn": [
     "ogc.ogc-utils.iri-or-curie",
+    "ogc.sosa.features.observation",
     "ogc.sosa.properties.observation",
-    "ogc.sosa.features.observationCollection",
-    "ogc.sosa.features.observation"
+    "ogc.sosa.features.observationCollection"
   ],
   "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
   "schema": {

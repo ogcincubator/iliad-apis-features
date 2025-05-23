@@ -1,0 +1,59 @@
+
+
+{
+  "itemIdentifier": "ogc.hosted.iliad.api.features.oim",
+  "name": "Oceans Information Model",
+  "abstract": "Defines a composable Building Block view of the Oceans Information Model. This view breaks down the OIM into a set of clear dependencies and profiling layers on top of the underlying common Cross Domain Model",
+  "status": "under-development",
+  "dateTimeAddition": "2023-09-18T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0",
+  "dateOfLastChange": "2025-05-23",
+  "dependsOn": [
+    "ogc.model.cross-domain.all"
+  ],
+  "shaclRules": {
+    "ogc.model.cross-domain.qudt": [
+      "http://qudt.org/2.1/schema/shacl/qudt"
+    ],
+    "ogc.model.cross-domain.sosa": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
+    ],
+    "ogc.skos.common": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+    ],
+    "ogc.skos.concept": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "http://qudt.org/2.1/schema/shacl/qudt"
+    ]
+  },
+  "sources": [
+    {
+      "title": "OIM master repository",
+      "link": "https://github.com/ILIAD-ocean-twin/OIM"
+    },
+    {
+      "title": "Cross Domain Model Building Blocks",
+      "link": "https://github.com/ILIAD-ocean-twin/OIM"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "iliad",
+    "oim",
+    "citizen-science",
+    "project"
+  ],
+  "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",
+  "remoteCacheDir": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim/remote_cache/",
+  "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim/",
+  "rdfData": [],
+  "validationPassed": true,
+  "description": "##  Jellyfish Extension Ontology\n\n\nThis ontology defines an extension to the Oceans Informaton Model to capture concepts specific to the Citizen Science Jellyfish Observation pilot.\n\nThis will be linked vi JSON-LD context to various JSON schemas, such as OGC API implementations of OIM.\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/iliad-apis-features",
+  "gitPath": "_sources/oim"
+}

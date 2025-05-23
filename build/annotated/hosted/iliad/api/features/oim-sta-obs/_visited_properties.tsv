@@ -1,11 +1,1 @@
 path	@id
-/@iot.id	@id
-/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self
-/parameters	
-/phenomenonTime	https://www.w3.org/TR/vocab-ssn/#phenomenonTime
-/result	https://www.w3.org/TR/vocab-ssn/#hasSimpleResult
-/resultQuality	https://www.w3.org/TR/vocab-ssn/#resultQuality
-/resultTime	https://www.w3.org/TR/vocab-ssn/#resultTime
-/validTime	https://schemas.opengis.org/sta/def/core#validTime
-/Datastream@iot.navigationLink	https://www.w3.org/TR/vocab-ssn/#isMemberOf
-/FeatureOfInterest@iot.navigationLink	https://www.w3.org/TR/vocab-ssn/#hasFeatureOfInterest

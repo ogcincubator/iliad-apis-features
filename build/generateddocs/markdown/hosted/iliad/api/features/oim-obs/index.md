@@ -1184,7 +1184,7 @@ You can find the full JSON-LD context here:
 
 ## Sources
 
-* [Reference to ILIAD](https://example.com/sources/1)
+* [OIM master repository](https://github.com/ILIAD-ocean-twin/OIM)
 
 # For developers
 

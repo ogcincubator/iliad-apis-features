@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish-features - Observations - ILIAD Jellyfish Pilot for Citizen Science
-Generated 2025-05-21T22:39:25.772025+00:00
+Generated 2025-05-23T12:30:34.401628+00:00
 === Files ===
 Using example_2_1.json from examples
 JSON-LD context is present - uplifting
@@ -8,685 +8,7 @@ Output Turtle example_2_1.ttl created
 === End Files ===
 
 === JSON Schema ===
-
-** Validation error **
-ValidationError: {'type': 'FeatureCollection', 'hasMember': [{'@id': '63dc376df84bda32b6bbf78ed3e279e2', 'type': 'Observation', 'properties': {'label': {'en': 'Jelly fish observation location id: 18 sensor: 3604 species: Phyllorhiza punctata'}, 'phenomenonTime': '2011-07-01T09:00:00', 'resultTime': '2011-07-01T09:00:00', 'observedProperty': 'jellyFishAbundanceProperty', 'basisOfRecord': 'HumanObservation', 'occurrenceStatus': 'present', 'distanceWalkedInMeters': '1000-2000m', 'hasFeatureOfInterest': {'type': 'Feature', 'featureType': ['FeatureOfInterest', 'Point', 'Location'], 'properties': {'lat': 31.80691, 'long': 31.80691, 'coordinateUncertaintyInMeters': 10000, 'locality': 18, 'distanceFromShore': '0-200'}, 'geometry': {'type': 'Point', 'coordinates': [31.80691, 34.634776]}}, 'madeBySensor': {'type': ['Sensor', 'HumanSensor'], 'label': 'Human sensor: 3604', 'agentConfidence': '1'}, 'hasResult': {'type': ['Result', 'JellyFishAbundance'], 'aphiaID': 'https://marinespecies.org/aphia.php?p=taxdetails&id=232032', 'individualCount': 20, 'organismQuantity': 'Some', 'organismQuantityType': 'individuals', 'sampleSizeUnit': 'cm', 'sampleSizeValue': '11-30', 'scientificName': 'Rhopilema nomadica', 'scientificNameID': 'https://marinespecies.org/aphia.php?p=taxdetails&id=232032', 'stingByJellyFish': '0', 'strandedJellyfish': '1'}}}, {'@id': '63dc376df84bda32b6bbf78ed3e27333', 'type': 'Observation', 'properties': {'label': {'en': 'Jelly fish observation location id: 19 sensor: 3602 species: Phyllorhiza punctata'}, 'phenomenonTime': '2013-07-01T09:00:00', 'resultTime': '2013-07-01T09:00:00', 'observedProperty': 'jellyFishAbundanceProperty', 'basisOfRecord': 'HumanObservation', 'occurrenceStatus': 'present', 'distanceWalkedInMeters': '500-2000m', 'hasFeatureOfInterest': {'type': 'Feature', 'featureType': ['FeatureOfInterest', 'Point', 'Location'], 'properties': {'lat': 33.80691, 'long': 36.634776, 'coordinateUncertaintyInMeters': 10000, 'locality': 19, 'distanceFromShore': '0-200'}, 'geometry': {'type': 'Point', 'coordinates': [33.80691, 36.634776]}}, 'madeBySensor': {'type': ['Sensor', 'HumanSensor'], 'label': 'Human sensor: 3602', 'agentConfidence': '1'}, 'hasResult': {'type': ['Result', 'JellyFishAbundance'], 'aphiaID': 'https://marinespecies.org/aphia.php?p=taxdetails&id=232032', 'individualCount': 50, 'organismQuantity': 'Some', 'organismQuantityType': 'individuals', 'sampleSizeUnit': 'cm', 'sampleSizeValue': '5-30', 'scientificName': 'Rhopilema nomadica', 'scientificNameID': 'https://marinespecies.org/aphia.php?p=taxdetails&id=232032', 'stingByJellyFish': '0', 'strandedJellyfish': '1'}}}]} is not valid under any of the given schemas
-
-Failed validating 'anyOf' in schema:
-    {'$defs': {'OIMObsCollection': {'allOf': [{'$ref': 'https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsCollection'},
-                                              {'properties': {'features': {'items': {'allOf': [{'$ref': '#/$defs/OIMObsFeature'}]},
-                                                                           'type': 'array',
-                                                                           'x-jsonld-id': 'https://w3id.org/iliad/oim/default-context/features'}}}]},
-               'OIMObsFeature': {'allOf': [{'$ref': 'https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsFeature'},
-                                           {'properties': {'properties': {'$ref': '#/$defs/OIMObsProps',
-                                                                          'x-jsonld-id': 'https://w3id.org/iliad/oim/default-context/properties'}}}]},
-               'OIMObsProps': {'allOf': [{'$ref': 'https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsProps'},
-                                         {'properties': {'hasResult': {'properties': {'densityOfJellyFish': {'enum': ['None',
-                                                                                                                      'Some',
-                                                                                                                      'Swarm',
-                                                                                                                      'Few'],
-                                                                                                             'type': 'string',
-                                                                                                             'x-jsonld-id': 'https://w3id.org/iliad/oim/default-context/densityOfJellyFish'},
-                                                                                      'individualCount': {'type': 'integer',
-                                                                                                          'x-jsonld-id': 'dwc:individualCount'},
-                                                                                      'organismQuantity': {'type': 'string',
-                                                                                                           'x-jsonld-id': 'dwc:organismQuantity'},
-                                                                                      'organismQuantityType': {'type': 'string',
-                                                                                                               'x-jsonld-id': 'dwc:organismQuantityType'},
-                                                                                      'sampleSizeUnit': {'type': 'string',
-                                                                                                         'x-jsonld-id': 'dwc:sampleSizeUnit'},
-                                                                                      'sampleSizeValue': {'type': 'string',
-                                                                                                          'x-jsonld-id': 'dwc:sampleSizeValue'},
-                                                                                      'stingByJellyFish': {'type': 'string',
-                                                                                                           'x-jsonld-id': 'https://w3id.org/iliad/oim/default-context/stingByJellyFish'},
-                                                                                      'strandedJellyFish': {'type': 'string',
-                                                                                                            'x-jsonld-id': 'https://w3id.org/iliad/oim/default-context/strandedJellyFish'}},
-                                                                       'type': 'object',
-                                                                       'x-jsonld-id': 'http://www.w3.org/ns/sosa/hasResult'}}}]}},
-     '$schema': 'https://json-schema.org/draft/2020-12/schema',
-     'anyOf': [{'$ref': '#/$defs/OIMObsProps'},
-               {'$ref': '#/$defs/OIMObsFeature'},
-               {'$ref': '#/$defs/OIMObsCollection'}],
-     'description': 'Schemas for Ocean Information Model Observations',
-     'x-jsonld-extra-terms': {'Acceleration': 'http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration',
-                              'ActuatableProperty': 'http://www.w3.org/ns/sosa/ActuatableProperty',
-                              'Actuation': 'http://www.w3.org/ns/sosa/Actuation',
-                              'Agent': 'http://xmlns.com/foaf/0.1/Agent',
-                              'Angle': 'http://purl.oclc.org/NET/ssnx/qu/dim#Angle',
-                              'Area': 'http://purl.oclc.org/NET/ssnx/qu/dim#Area',
-                              'Attachable': 'http://purl.org/linked-data/cube#Attachable',
-                              'AttributeProperty': 'http://purl.org/linked-data/cube#AttributeProperty',
-                              'Class': 'http://www.w3.org/2000/01/rdf-schema#Class',
-                              'CodedProperty': 'http://purl.org/linked-data/cube#CodedProperty',
-                              'ComponentProperty': 'http://purl.org/linked-data/cube#ComponentProperty',
-                              'ComponentSet': 'http://purl.org/linked-data/cube#ComponentSet',
-                              'ComponentSpecification': 'http://purl.org/linked-data/cube#ComponentSpecification',
-                              'Compressibility': 'http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility',
-                              'Concentration': 'http://purl.oclc.org/NET/ssnx/qu/dim#Concentration',
-                              'Concept': 'http://www.w3.org/2004/02/skos/core#Concept',
-                              'Curve': 'http://www.opengis.net/ont/sf#Curve',
-                              'DataSet': 'http://purl.org/linked-data/cube#DataSet',
-                              'DataStructureDefinition': 'http://purl.org/linked-data/cube#DataStructureDefinition',
-                              'Density': 'http://purl.oclc.org/NET/ssnx/qu/dim#Density',
-                              'Deployment': 'http://www.w3.org/ns/ssn/Deployment',
-                              'Device': 'https://saref.etsi.org/core/Device',
-                              'DiffusionCoefficient': 'http://purl.oclc.org/NET/ssnx/qu/dim#DiffusionCoefficient',
-                              'DimensionProperty': 'http://purl.org/linked-data/cube#DimensionProperty',
-                              'Dimensionless': 'http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless',
-                              'Distance': 'http://purl.oclc.org/NET/ssnx/qu/dim#Distance',
-                              'Duration': 'http://purl.oclc.org/NET/ssnx/qu/dim#Duration',
-                              'ElectricConductivity': 'http://purl.oclc.org/NET/ssnx/qu/dim#ElectricConductivity',
-                              'Energy': 'http://purl.oclc.org/NET/ssnx/qu/dim#Energy',
-                              'EnergyDensity': 'http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensity',
-                              'EnergyFlux': 'http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux',
-                              'Entity': 'https://uri.etsi.org/ngsi-ld/Entity',
-                              'Event': 'dwc:Event',
-                              'Feature': 'http://www.opengis.net/ont/geosparql#Feature',
-                              'FeatureCollection': 'http://www.opengis.net/ont/geosparql#FeatureCollection',
-                              'FeatureOfInterest': 'http://www.w3.org/ns/sosa/FeatureOfInterest',
-                              'FossilSpecimen': 'dwc:FossilSpecimen',
-                              'GFI_DomainFeature': 'http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature',
-                              'GFI_Feature': 'http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature',
-                              'GeoProperty': 'https://uri.etsi.org/ngsi-ld/GeoProperty',
-                              'GeologicalContext': 'dwc:GeologicalContext',
-                              'Geometry': 'http://www.opengis.net/ont/geosparql#Geometry',
-                              'GeometryCollection': 'http://www.opengis.net/ont/sf#GeometryCollection',
-                              'HumanObservation': 'dwc:HumanObservation',
-                              'Humidity': 'https://saref.etsi.org/core/Humidity',
-                              'Identification': 'dwc:Identification',
-                              'ImageObject': 'https://schema.org/ImageObject',
-                              'Instant': 'http://www.w3.org/2006/time#Instant',
-                              'Interval': 'http://www.w3.org/2006/time#Interval',
-                              'Layer': 'http://purl.oclc.org/NET/ssnx/cf/cf-feature#Layer',
-                              'Line': 'http://www.opengis.net/ont/sf#Line',
-                              'LineString': 'http://www.opengis.net/ont/sf#LineString',
-                              'LinearRing': 'http://www.opengis.net/ont/sf#LinearRing',
-                              'LivingSpecimen': 'dwc:LivingSpecimen',
-                              'Location': 'http://purl.org/dc/terms/Location',
-                              'LocationRelationship': 'https://uri.etsi.org/ngsi-ld/LocationRelationship',
-                              'MachineObservation': 'dwc:MachineObservation',
-                              'Mass': 'http://purl.oclc.org/NET/ssnx/qu/dim#Mass',
-                              'MassFlowRate': 'http://purl.oclc.org/NET/ssnx/qu/dim#MassFlowRate',
-                              'MassPerTimePerArea': 'http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerArea',
-                              'MaterialCitation': 'dwc:MaterialCitation',
-                              'MaterialSample': 'dwc:MaterialSample',
-                              'Measure': 'http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Measure',
-                              'MeasureProperty': 'http://purl.org/linked-data/cube#MeasureProperty',
-                              'Measurement': 'https://saref.etsi.org/core/Measurement',
-                              'MeasurementOrFact': 'dwc:MeasurementOrFact',
-                              'Medium': 'http://purl.oclc.org/NET/ssnx/cf/cf-feature#Medium',
-                              'MultiCurve': 'http://www.opengis.net/ont/sf#MultiCurve',
-                              'MultiLineString': 'http://www.opengis.net/ont/sf#MultiLineString',
-                              'MultiPoint': 'http://www.opengis.net/ont/sf#MultiPoint',
-                              'MultiPolygon': 'http://www.opengis.net/ont/sf#MultiPolygon',
-                              'MultiSurface': 'http://www.opengis.net/ont/sf#MultiSurface',
-                              'NumberPerLength': 'http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLength',
-                              'OM_Observation': 'http://def.isotc211.org/iso19156/2011/Observation#OM_Observation',
-                              'ObservableProperty': 'http://www.w3.org/ns/sosa/ObservableProperty',
-                              'Observation': 'http://www.w3.org/ns/sosa/Observation',
-                              'ObservationCollection': 'http://www.w3.org/ns/sosa/ObservationCollection',
-                              'ObservationGroup': 'http://purl.org/linked-data/cube#ObservationGroup',
-                              'Occurrence': 'dwc:Occurrence',
-                              'Organism': 'dwc:Organism',
-                              'Organization': 'https://schema.org/Organization',
-                              'Period': 'http://def.seegrid.csiro.au/isotc211/iso19108/2002/temporal#Period',
-                              'PeriodOfTime': 'http://purl.org/dc/terms/PeriodOfTime',
-                              'Person': 'https://schema.org/Person',
-                              'PhotonFluxDensity': 'http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity',
-                              'Platform': 'http://www.w3.org/ns/sosa/Platform',
-                              'Point': 'http://www.w3.org/2003/01/geo/wgs84_pos#Point',
-                              'Polygon': 'http://www.opengis.net/ont/sf#Polygon',
-                              'PolyhedralSurface': 'http://www.opengis.net/ont/sf#PolyhedralSurface',
-                              'Power': 'http://purl.oclc.org/NET/ssnx/qu/dim#Power',
-                              'Precipitation': 'http://purl.oclc.org/NET/ssnx/cf/cf-feature#Precipitation',
-                              'PreservedSpecimen': 'dwc:PreservedSpecimen',
-                              'Procedure': 'http://www.w3.org/ns/sosa/Procedure',
-                              'Property': 'https://saref.etsi.org/core/Property',
-                              'PropertyKind': 'http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind',
-                              'Quantity': 'http://qudt.org/schema/qudt/Quantity',
-                              'QuantityKind': 'http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind',
-                              'QuantityValue': 'http://qudt.org/schema/qudt/QuantityValue',
-                              'Radiance': 'http://purl.oclc.org/NET/ssnx/qu/dim#Radiance',
-                              'RadianceExposure': 'http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposure',
-                              'Relationship': 'https://uri.etsi.org/ngsi-ld/Relationship',
-                              'ResourceRelationship': 'dwc:ResourceRelationship',
-                              'ResponsibleParty': 'http://def.seegrid.csiro.au/isotc211/iso19115/2003/citation#ResponsibleParty',
-                              'Result': 'http://www.w3.org/ns/sosa/Result',
-                              'Role': 'https://schema.org/Role',
-                              'RotationalSpeed': 'http://purl.oclc.org/NET/ssnx/qu/dim#RotationalSpeed',
-                              'SF_SamplingFeature': 'http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature',
-                              'SF_SamplingFeature.sampledFeature': 'http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature',
-                              'Sample': 'http://www.w3.org/ns/sosa/Sample',
-                              'Sampling': 'http://www.w3.org/ns/sosa/Sampling',
-                              'Scheme': 'http://www.w3.org/2004/02/skos/core#Scheme',
-                              'Sensor': 'http://www.w3.org/ns/sosa/Sensor',
-                              'Slice': 'http://purl.org/linked-data/cube#Slice',
-                              'SliceKey': 'http://purl.org/linked-data/cube#SliceKey',
-                              'SpatialObject': 'http://www.opengis.net/ont/geosparql#SpatialObject',
-                              'SpecificEntropy': 'http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropy',
-                              'StressOrPressure': 'http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure',
-                              'Surface': 'http://purl.oclc.org/NET/ssnx/cf/cf-feature#Surface',
-                              'SurfaceDensity': 'http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceDensity',
-                              'SurfaceLayer': 'http://purl.oclc.org/NET/ssnx/cf/cf-feature#SurfaceLayer',
-                              'SurfaceMedium': 'http://purl.oclc.org/NET/ssnx/cf/cf-feature#SurfaceMedium',
-                              'SurfaceMediumMedium': 'http://purl.oclc.org/NET/ssnx/cf/cf-feature#SurfaceMediumMedium',
-                              'System': 'http://www.w3.org/ns/ssn/System',
-                              'TIN': 'http://www.opengis.net/ont/sf#TIN',
-                              'Taxon': 'dwc:Taxon',
-                              'Temperature': 'http://purl.oclc.org/NET/ssnx/qu/dim#Temperature',
-                              'TemperatureDrift': 'http://purl.oclc.org/NET/ssnx/qu/dim#TemperatureDrift',
-                              'TemporalDuration': 'http://www.w3.org/2006/time#TemporalDuration',
-                              'TemporalEntity': 'http://www.w3.org/2006/time#TemporalEntity',
-                              'TemporalProperty': 'https://uri.etsi.org/ngsi-ld/TemporalProperty',
-                              'TemporalUnit': 'http://www.w3.org/2006/time#TemporalUnit',
-                              'ThermalConductivity': 'http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity',
-                              'Thing': 'http://www.w3.org/2002/07/owl#Thing',
-                              'Triangle': 'http://www.opengis.net/ont/sf#Triangle',
-                              'Unit': 'http://qudt.org/schema/qudt/Unit',
-                              'UnitOfMeasure': 'https://saref.etsi.org/core/UnitOfMeasure',
-                              'VelocityOrSpeed': 'http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed',
-                              'Volume': 'http://purl.oclc.org/NET/ssnx/qu/dim#Volume',
-                              'VolumeFlowRate': 'http://purl.oclc.org/NET/ssnx/qu/dim#VolumeFlowRate',
-                              'WeatherForecast': 'https://smartdatamodels.org/dataModel.Weather/WeatherForecast',
-                              'WeatherObserved': 'https://smartdatamodels.org/dataModel.Weather/WeatherObserved',
-                              'Wind': 'http://purl.oclc.org/NET/ssnx/cf/cf-feature#Wind',
-                              'acceptedNameUsage': 'dwc:acceptedNameUsage',
-                              'acceptedNameUsageID': 'dwc:acceptedNameUsageID',
-                              'accessRights': 'http://purl.org/dc/terms/accessRights',
-                              'addressCountry': 'https://schema.org/addressCountry',
-                              'addressLocality': 'https://schema.org/addressLocality',
-                              'addressRegion': 'https://schema.org/addressRegion',
-                              'affiliation': 'https://schema.org/affiliation',
-                              'agroVocConcept': {'x-jsonld-id': 'https://smartdatamodels.org/dataModel.Agrifood/agroVocConcept',
-                                                 'x-jsonld-type': '@id'},
-                              'airTemperatureForecast': 'https://smartdatamodels.org/dataModel.Weather/airTemperatureForecast',
-                              'alt': 'http://www.w3.org/2003/01/geo/wgs84_pos#alt',
-                              'alternateName': 'https://smartdatamodels.org/alternateName',
-                              'aphiaID': 'http://mmisw.org/ont/ioos/marine_biogeography/aphiaID',
-                              'asGeoJSON': {'x-jsonld-id': 'http://www.opengis.net/ont/geosparql#asGeoJSON',
-                                            'x-jsonld-type': 'http://www.opengis.net/ont/geosparql#geoJSONLiteral'},
-                              'asWKT': {'x-jsonld-id': 'http://www.opengis.net/ont/geosparql#asWKT',
-                                        'x-jsonld-type': 'http://www.opengis.net/ont/geosparql#wktLiteral'},
-                              'associatedMedia': 'dwc:associatedMedia',
-                              'associatedOccurrences': 'dwc:associatedOccurrences',
-                              'associatedOrganisms': 'dwc:associatedOrganisms',
-                              'associatedReferences': 'dwc:associatedReferences',
-                              'associatedSequences': 'dwc:associatedSequences',
-                              'associatedTaxa': 'dwc:associatedTaxa',
-                              'atmosphericPressure': 'https://smartdatamodels.org/dataModel.Weather/atmosphericPressure',
-                              'attribute': {'x-jsonld-id': 'http://purl.org/linked-data/cube#attribute',
-                                            'x-jsonld-type': '@id'},
-                              'basisOfRecord': 'dwc:basisOfRecord',
-                              'bed': 'dwc:bed',
-                              'behavior': 'dwc:behavior',
-                              'bibliographicCitation': 'http://purl.org/dc/terms/bibliographicCitation',
-                              'caste': 'dwc:caste',
-                              'catalogNumber': 'dwc:catalogNumber',
-                              'class': 'dwc:class',
-                              'collectionCode': 'dwc:collectionCode',
-                              'collectionID': 'dwc:collectionID',
-                              'comment': 'http://www.w3.org/2000/01/rdf-schema#comment',
-                              'component': 'http://purl.org/linked-data/cube#component',
-                              'componentAttachment': 'http://purl.org/linked-data/cube#componentAttachment',
-                              'componentProperty': 'http://purl.org/linked-data/cube#componentProperty',
-                              'concept': 'http://purl.org/linked-data/cube#concept',
-                              'continent': 'dwc:continent',
-                              'contributor': 'http://purl.org/dc/terms/contributor',
-                              'controlsProperty': {'x-jsonld-id': 'https://saref.etsi.org/core/controlsProperty',
-                                                   'x-jsonld-type': '@id'},
-                              'coordinatePrecision': 'dwc:coordinatePrecision',
-                              'coordinateUncertaintyInMeters': 'dwc:coordinateUncertaintyInMeters',
-                              'country': 'dwc:country',
-                              'countryCode': 'dwc:countryCode',
-                              'county': 'dwc:county',
-                              'creator': 'http://purl.org/dc/terms/creator',
-                              'cultivarEpithet': 'dwc:cultivarEpithet',
-                              'dataGeneralizations': 'dwc:dataGeneralizations',
-                              'dataProvider': 'https://smartdatamodels.org/dataProvider',
-                              'dataSet': {'x-jsonld-id': 'http://purl.org/linked-data/cube#dataSet',
-                                          'x-jsonld-type': '@id'},
-                              'datasetID': 'dwc:datasetID',
-                              'datasetName': 'dwc:datasetName',
-                              'date': 'http://purl.org/dc/terms/date',
-                              'dateCreated': {'x-jsonld-id': 'https://smartdatamodels.org/dateCreated',
-                                              'x-jsonld-type': 'http://www.w3.org/2001/XMLSchema#dateTime'},
-                              'dateIdentified': 'dwc:dateIdentified',
-                              'dateModified': {'x-jsonld-id': 'https://smartdatamodels.org/dateModified',
-                                               'x-jsonld-type': 'http://www.w3.org/2001/XMLSchema#dateTime'},
-                              'dateObserved': {'x-jsonld-id': 'https://smartdatamodels.org/dateObserved',
-                                               'x-jsonld-type': 'http://www.w3.org/2001/XMLSchema#dateTime'},
-                              'day': 'dwc:day',
-                              'decimalLatitude': 'dwc:decimalLatitude',
-                              'decimalLongitude': 'dwc:decimalLongitude',
-                              'definition': 'http://www.w3.org/2004/02/skos/core#definition',
-                              'degreeOfEstablishment': 'dwc:degreeOfEstablishment',
-                              'depiction': 'http://xmlns.com/foaf/0.1/depiction',
-                              'deployedOnPlatform': 'http://www.w3.org/ns/ssn/deployedOnPlatform',
-                              'deployedSystem': 'http://www.w3.org/ns/ssn/deployedSystem',
-                              'deprecated': 'http://www.w3.org/2002/07/owl#deprecated',
-                              'description': 'http://purl.org/dc/terms/description',
-                              'dewPoint': 'https://smartdatamodels.org/dataModel.Weather/dewPoint',
-                              'dimension': {'x-jsonld-id': 'http://purl.org/linked-data/cube#dimension',
-                                            'x-jsonld-type': '@id'},
-                              'disposition': 'dwc:disposition',
-                              'domainIncludes': 'https://schema.org/domainIncludes',
-                              'dynamicProperties': 'dwc:dynamicProperties',
-                              'earliestAgeOrLowestStage': 'dwc:earliestAgeOrLowestStage',
-                              'earliestEonOrLowestEonothem': 'dwc:earliestEonOrLowestEonothem',
-                              'earliestEpochOrLowestSeries': 'dwc:earliestEpochOrLowestSeries',
-                              'earliestEraOrLowestErathem': 'dwc:earliestEraOrLowestErathem',
-                              'earliestPeriodOrLowestSystem': 'dwc:earliestPeriodOrLowestSystem',
-                              'editorialNote': 'http://www.w3.org/2004/02/skos/core#editorialNote',
-                              'endDayOfYear': 'dwc:endDayOfYear',
-                              'eppoConcept': {'x-jsonld-id': 'https://w3id.org/demeter/agri/agriCommon#eppoConcept',
-                                              'x-jsonld-type': '@id'},
-                              'establishmentMeans': 'dwc:establishmentMeans',
-                              'eventDate': 'dwc:eventDate',
-                              'eventDuration': 'http://rs.tdwg.org/hc/terms/eventDuration',
-                              'eventDurationUnit': 'http://rs.tdwg.org/hc/terms/eventDurationUnit',
-                              'eventID': 'dwc:eventID',
-                              'eventRemarks': 'dwc:eventRemarks',
-                              'eventTime': 'dwc:eventTime',
-                              'eventType': 'dwc:eventType',
-                              'example': 'http://www.w3.org/2004/02/skos/core#example',
-                              'family': 'dwc:family',
-                              'fieldNotes': 'dwc:fieldNotes',
-                              'fieldNumber': 'dwc:fieldNumber',
-                              'footprintSRS': 'dwc:footprintSRS',
-                              'footprintSpatialFit': 'dwc:footprintSpatialFit',
-                              'footprintWKT': 'dwc:footprintWKT',
-                              'formation': 'dwc:formation',
-                              'generatedAtTime': 'http://www.w3.org/ns/prov#generatedAtTime',
-                              'genericName': 'dwc:genericName',
-                              'genus': 'dwc:genus',
-                              'geodeticDatum': 'dwc:geodeticDatum',
-                              'geologicalContextID': 'dwc:geologicalContextID',
-                              'georeferenceProtocol': 'dwc:georeferenceProtocol',
-                              'georeferenceRemarks': 'dwc:georeferenceRemarks',
-                              'georeferenceSources': 'dwc:georeferenceSources',
-                              'georeferenceVerificationStatus': 'dwc:georeferenceVerificationStatus',
-                              'georeferencedBy': 'dwc:georeferencedBy',
-                              'georeferencedDate': 'dwc:georeferencedDate',
-                              'group': 'dwc:group',
-                              'habitat': 'dwc:habitat',
-                              'hasBeginning': {'x-jsonld-id': 'http://www.w3.org/2006/time#hasBeginning',
-                                               'x-jsonld-type': '@id'},
-                              'hasBoundingBox': {'x-jsonld-id': 'http://www.opengis.net/ont/geosparql#hasBoundingBox',
-                                                 'x-jsonld-type': '@id'},
-                              'hasDeployment': 'http://www.w3.org/ns/ssn/hasDeployment',
-                              'hasEnd': {'x-jsonld-id': 'http://www.w3.org/2006/time#hasEnd',
-                                         'x-jsonld-type': '@id'},
-                              'hasFeatureOfInterest': {'x-jsonld-id': 'http://www.w3.org/ns/sosa/hasFeatureOfInterest',
-                                                       'x-jsonld-type': '@id'},
-                              'hasGeometry': 'http://www.opengis.net/ont/geosparql#hasGeometry',
-                              'hasInput': 'http://www.w3.org/ns/ssn/hasInput',
-                              'hasMember': 'http://www.w3.org/ns/sosa/hasMember',
-                              'hasOutput': 'http://www.w3.org/ns/ssn/hasOutput',
-                              'hasProperty': {'x-jsonld-id': 'http://www.w3.org/ns/ssn/hasProperty',
-                                              'x-jsonld-type': '@id'},
-                              'hasQuantityKind': 'http://qudt.org/schema/qudt/hasQuantityKind',
-                              'hasSerialization': 'http://www.opengis.net/ont/geosparql#hasSerialization',
-                              'hasSimpleResult': 'http://www.w3.org/ns/sosa/hasSimpleResult',
-                              'hasSubSystem': 'http://www.w3.org/ns/ssn/hasSubSystem',
-                              'hasTime': 'http://www.w3.org/2006/time#hasTime',
-                              'hasTimestamp': 'https://saref.etsi.org/core/hasTimestamp',
-                              'hasUltimateFeatureOfInterest': 'http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest',
-                              'hasValue': 'https://saref.etsi.org/core/hasValue',
-                              'higherClassification': 'dwc:higherClassification',
-                              'higherGeography': 'dwc:higherGeography',
-                              'higherGeographyID': 'dwc:higherGeographyID',
-                              'highestBiostratigraphicZone': 'dwc:highestBiostratigraphicZone',
-                              'homepage': 'http://xmlns.com/foaf/0.1/homepage',
-                              'hosts': 'http://www.w3.org/ns/sosa/hosts',
-                              'identificationID': 'dwc:identificationID',
-                              'identificationQualifier': 'dwc:identificationQualifier',
-                              'identificationReferences': 'dwc:identificationReferences',
-                              'identificationRemarks': 'dwc:identificationRemarks',
-                              'identificationVerificationStatus': 'dwc:identificationVerificationStatus',
-                              'identifiedBy': 'dwc:identifiedBy',
-                              'identifiedByID': 'dwc:identifiedByID',
-                              'identifier': 'http://purl.org/dc/terms/identifier',
-                              'illuminance': 'https://smartdatamodels.org/dataModel.Weather/illuminance',
-                              'implementedBy': 'http://www.w3.org/ns/ssn/implementedBy',
-                              'implements': 'http://www.w3.org/ns/ssn/implements',
-                              'inDeployment': 'http://www.w3.org/ns/ssn/inDeployment',
-                              'inScheme': 'http://www.w3.org/2004/02/skos/core#inScheme',
-                              'inXSDDate': 'http://www.w3.org/2006/time#inXSDDate',
-                              'inXSDDateTimeStamp': 'http://www.w3.org/2006/time#inXSDDateTimeStamp',
-                              'informationWithheld': 'dwc:informationWithheld',
-                              'infragenericEpithet': 'dwc:infragenericEpithet',
-                              'infraspecificEpithet': 'dwc:infraspecificEpithet',
-                              'institutionCode': 'dwc:institutionCode',
-                              'institutionID': 'dwc:institutionID',
-                              'invalidatedAtTime': 'http://www.w3.org/ns/prov#invalidatedAtTime',
-                              'isControlledByDevice': {'x-jsonld-id': 'https://saref.etsi.org/core/isControlledByDevice',
-                                                       'x-jsonld-type': '@id'},
-                              'isDefinedBy': 'http://www.w3.org/2000/01/rdf-schema#isDefinedBy',
-                              'isFeatureOfInterestOf': {'x-jsonld-id': 'http://www.w3.org/ns/sosa/isFeatureOfInterestOf',
-                                                        'x-jsonld-type': '@id'},
-                              'isHostedBy': 'http://www.w3.org/ns/sosa/isHostedBy',
-                              'isMeasuredByDevice': {'x-jsonld-id': 'https://saref.etsi.org/core/isMeasuredByDevice',
-                                                     'x-jsonld-type': '@id'},
-                              'isMeasuredIn': {'x-jsonld-id': 'https://saref.etsi.org/core/isMeasuredIn',
-                                               'x-jsonld-type': '@id'},
-                              'isPropertyOf': {'x-jsonld-id': 'https://saref.etsi.org/core/isPropertyOf',
-                                               'x-jsonld-type': '@id'},
-                              'isResultOf': {'x-jsonld-id': 'http://www.w3.org/ns/sosa/isResultOf',
-                                             'x-jsonld-type': '@id'},
-                              'island': 'dwc:island',
-                              'islandGroup': 'dwc:islandGroup',
-                              'kingdom': 'dwc:kingdom',
-                              'label': 'http://www.w3.org/2000/01/rdf-schema#label',
-                              'language': 'http://purl.org/dc/terms/language',
-                              'lat': 'http://www.w3.org/2003/01/geo/wgs84_pos#lat',
-                              'latestAgeOrHighestStage': 'dwc:latestAgeOrHighestStage',
-                              'latestEonOrHighestEonothem': 'dwc:latestEonOrHighestEonothem',
-                              'latestEpochOrHighestSeries': 'dwc:latestEpochOrHighestSeries',
-                              'latestEraOrHighestErathem': 'dwc:latestEraOrHighestErathem',
-                              'latestPeriodOrHighestSystem': 'dwc:latestPeriodOrHighestSystem',
-                              'lengthType': 'http://mmisw.org/ont/ioos/marine_biogeography/lengthType',
-                              'license': 'http://purl.org/dc/terms/license',
-                              'lifeStage': 'dwc:lifeStage',
-                              'lithostratigraphicTerms': 'dwc:lithostratigraphicTerms',
-                              'locality': 'dwc:locality',
-                              'location': 'http://www.w3.org/2003/01/geo/wgs84_pos#location',
-                              'locationAccordingTo': 'dwc:locationAccordingTo',
-                              'locationID': 'dwc:locationID',
-                              'locationRemarks': 'dwc:locationRemarks',
-                              'long': 'http://www.w3.org/2003/01/geo/wgs84_pos#long',
-                              'lowestBiostratigraphicZone': 'dwc:lowestBiostratigraphicZone',
-                              'madeBySensor': {'x-jsonld-id': 'http://www.w3.org/ns/sosa/madeBySensor',
-                                               'x-jsonld-type': '@id'},
-                              'madeObservation': {'x-jsonld-id': 'http://www.w3.org/ns/sosa/madeObservation',
-                                                  'x-jsonld-type': '@id'},
-                              'maker': 'http://xmlns.com/foaf/0.1/maker',
-                              'makesMeasurement': {'x-jsonld-id': 'https://saref.etsi.org/core/makesMeasurement',
-                                                   'x-jsonld-type': '@id'},
-                              'materialSampleID': 'dwc:materialSampleID',
-                              'maximumDepthInMeters': 'dwc:maximumDepthInMeters',
-                              'maximumDistanceAboveSurfaceInMeters': 'dwc:maximumDistanceAboveSurfaceInMeters',
-                              'maximumElevationInMeters': 'dwc:maximumElevationInMeters',
-                              'measure': {'x-jsonld-id': 'http://purl.org/linked-data/cube#measure',
-                                          'x-jsonld-type': '@id'},
-                              'measurementAccuracy': 'dwc:measurementAccuracy',
-                              'measurementDeterminedBy': 'dwc:measurementDeterminedBy',
-                              'measurementDeterminedDate': 'dwc:measurementDeterminedDate',
-                              'measurementID': 'dwc:measurementID',
-                              'measurementMadeBy': {'x-jsonld-id': 'https://saref.etsi.org/core/measurementMadeBy',
-                                                    'x-jsonld-type': '@id'},
-                              'measurementMethod': 'dwc:measurementMethod',
-                              'measurementRemarks': 'dwc:measurementRemarks',
-                              'measurementType': 'dwc:measurementType',
-                              'measurementUnit': 'dwc:measurementUnit',
-                              'measurementValue': 'dwc:measurementValue',
-                              'measuresProperty': {'x-jsonld-id': 'https://saref.etsi.org/core/measuresProperty',
-                                                   'x-jsonld-type': '@id'},
-                              'member': 'dwc:member',
-                              'minimumDepthInMeters': 'dwc:minimumDepthInMeters',
-                              'minimumDistanceAboveSurfaceInMeters': 'dwc:minimumDistanceAboveSurfaceInMeters',
-                              'minimumElevationInMeters': 'dwc:minimumElevationInMeters',
-                              'modified': 'http://purl.org/dc/terms/modified',
-                              'month': 'dwc:month',
-                              'municipality': 'dwc:municipality',
-                              'name': 'https://schema.org/name',
-                              'nameAccordingTo': 'dwc:nameAccordingTo',
-                              'nameAccordingToID': 'dwc:nameAccordingToID',
-                              'namePublishedIn': 'dwc:namePublishedIn',
-                              'namePublishedInID': 'dwc:namePublishedInID',
-                              'namePublishedInYear': 'dwc:namePublishedInYear',
-                              'nomenclaturalCode': 'dwc:nomenclaturalCode',
-                              'nomenclaturalStatus': 'dwc:nomenclaturalStatus',
-                              'note': 'http://www.w3.org/2004/02/skos/core#note',
-                              'numericDuration': 'http://www.w3.org/2006/time#numericDuration',
-                              'numericValue': 'http://qudt.org/schema/qudt/numericValue',
-                              'observation': 'http://purl.org/linked-data/cube#observation',
-                              'observationGroup': 'http://purl.org/linked-data/cube#observationGroup',
-                              'observationLocation': 'http://mmisw.org/ont/ioos/marine_biogeography/observationLocation',
-                              'observedIndividualLengthInCm': 'http://mmisw.org/ont/ioos/marine_biogeography/observedIndividualLengthInCm',
-                              'observedMaxLengthInCm': 'http://mmisw.org/ont/ioos/marine_biogeography/observedMaxLengthInCm',
-                              'observedMeanLengthInCm': 'http://mmisw.org/ont/ioos/marine_biogeography/observedMeanLengthInCm',
-                              'observedMinLengthInCm': 'http://mmisw.org/ont/ioos/marine_biogeography/observedMinLengthInCm',
-                              'observedProperty': {'x-jsonld-id': 'http://www.w3.org/ns/sosa/observedProperty',
-                                                   'x-jsonld-type': '@id'},
-                              'observes': 'http://www.w3.org/ns/sosa/observes',
-                              'occurrenceID': 'dwc:occurrenceID',
-                              'occurrenceRemarks': 'dwc:occurrenceRemarks',
-                              'occurrenceStatus': 'dwc:occurrenceStatus',
-                              'order': 'dwc:order',
-                              'organismID': 'dwc:organismID',
-                              'organismName': 'dwc:organismName',
-                              'organismRemarks': 'dwc:organismRemarks',
-                              'organismScope': 'dwc:organismScope',
-                              'originalNameUsage': 'dwc:originalNameUsage',
-                              'originalNameUsageID': 'dwc:originalNameUsageID',
-                              'otherCatalogNumbers': 'dwc:otherCatalogNumbers',
-                              'ownerInstitutionCode': 'dwc:ownerInstitutionCode',
-                              'parentEventID': 'dwc:parentEventID',
-                              'parentMeasurementID': 'dwc:parentMeasurementID',
-                              'parentNameUsage': 'dwc:parentNameUsage',
-                              'parentNameUsageID': 'dwc:parentNameUsageID',
-                              'password': {'x-jsonld-id': 'https://w3id.org/demeter/agri/agriCommon#password',
-                                           'x-jsonld-type': 'http://www.w3.org/2001/XMLSchema#string'},
-                              'pathway': 'dwc:pathway',
-                              'phenomenonTime': 'http://www.w3.org/ns/sosa/phenomenonTime',
-                              'phylum': 'dwc:phylum',
-                              'pointRadiusSpatialFit': 'dwc:pointRadiusSpatialFit',
-                              'precipitation': 'https://smartdatamodels.org/dataModel.Weather/precipitation',
-                              'prefLabel': 'http://www.w3.org/2004/02/skos/core#prefLabel',
-                              'preparations': 'dwc:preparations',
-                              'pressureTendency': 'https://smartdatamodels.org/dataModel.Weather/pressureTendency',
-                              'previousIdentifications': 'dwc:previousIdentifications',
-                              'publisher': 'http://purl.org/dc/terms/publisher',
-                              'quantificationMethod': 'http://mmisw.org/ont/ioos/marine_biogeography/quantificationMethod',
-                              'quantificationUnit': 'http://mmisw.org/ont/ioos/marine_biogeography/quantificationUnit',
-                              'quantityValue': 'http://qudt.org/schema/qudt/quantityValue',
-                              'rangeIncludes': 'https://schema.org/rangeIncludes',
-                              'recordNumber': 'dwc:recordNumber',
-                              'recordType': 'http://mmisw.org/ont/ioos/marine_biogeography/recordType',
-                              'recordedBy': 'dwc:recordedBy',
-                              'recordedByID': 'dwc:recordedByID',
-                              'references': 'http://purl.org/dc/terms/references',
-                              'relatedResourceID': 'dwc:relatedResourceID',
-                              'relatesToMeasurement': {'x-jsonld-id': 'https://saref.etsi.org/core/relatesToMeasurement',
-                                                       'x-jsonld-type': '@id'},
-                              'relatesToProperty': {'x-jsonld-id': 'https://saref.etsi.org/core/relatesToProperty',
-                                                    'x-jsonld-type': '@id'},
-                              'relationshipAccordingTo': 'dwc:relationshipAccordingTo',
-                              'relationshipEstablishedDate': 'dwc:relationshipEstablishedDate',
-                              'relationshipOfResource': 'dwc:relationshipOfResource',
-                              'relationshipOfResourceID': 'dwc:relationshipOfResourceID',
-                              'relationshipRemarks': 'dwc:relationshipRemarks',
-                              'relativeHumidity': 'https://smartdatamodels.org/dataModel.Weather/relativeHumidity',
-                              'reportedWeather': 'http://rs.tdwg.org/hc/terms/reportedWeather',
-                              'reproductiveCondition': 'dwc:reproductiveCondition',
-                              'resourceID': 'dwc:resourceID',
-                              'resourceRelationshipID': 'dwc:resourceRelationshipID',
-                              'resourceType': 'http://purl.org/dc/terms/type',
-                              'resultTime': {'x-jsonld-id': 'http://www.w3.org/ns/sosa/resultTime',
-                                             'x-jsonld-type': 'http://www.w3.org/2001/XMLSchema#dateTime'},
-                              'rights': 'http://purl.org/dc/terms/rights',
-                              'rightsHolder': 'http://purl.org/dc/terms/rightsHolder',
-                              'sampleAreaInSquareMeters': 'http://mmisw.org/ont/ioos/marine_biogeography/sampleAreaInSquareMeters',
-                              'sampleHeightInMeters': 'http://mmisw.org/ont/ioos/marine_biogeography/sampleHeightInMeters',
-                              'sampleLengthInMeters': 'http://mmisw.org/ont/ioos/marine_biogeography/sampleLengthInMeters',
-                              'sampleShape': 'http://mmisw.org/ont/ioos/marine_biogeography/sampleShape',
-                              'sampleVolumeInCubicMeters': 'http://mmisw.org/ont/ioos/marine_biogeography/sampleVolumeInCubicMeters',
-                              'sampleWidthInMeters': 'http://mmisw.org/ont/ioos/marine_biogeography/sampleWidthInMeters',
-                              'samplingEffort': 'dwc:samplingEffort',
-                              'samplingPerformedBy': 'http://rs.tdwg.org/hc/terms/samplingPerformedBy',
-                              'samplingProtocol': 'dwc:samplingProtocol',
-                              'scientificName': 'dwc:scientificName',
-                              'scientificNameAuthorship': 'dwc:scientificNameAuthorship',
-                              'scientificNameID': 'dwc:scientificNameID',
-                              'seeAlso': 'http://www.w3.org/2000/01/rdf-schema#seeAlso',
-                              'sex': 'dwc:sex',
-                              'sfContains': 'http://www.opengis.net/ont/geosparql#sfContains',
-                              'sfWithin': {'x-jsonld-id': 'http://www.opengis.net/ont/geosparql#sfWithin',
-                                           'x-jsonld-type': '@id'},
-                              'sightingCue': 'http://mmisw.org/ont/ioos/marine_biogeography/sightingCue',
-                              'sightingDistanceInMeters': 'http://mmisw.org/ont/ioos/marine_biogeography/sightingDistanceInMeters',
-                              'siteCount': 'http://rs.tdwg.org/hc/terms/siteCount',
-                              'slice': {'x-jsonld-id': 'http://purl.org/linked-data/cube#slice',
-                                        'x-jsonld-type': '@id'},
-                              'sliceKey': 'http://purl.org/linked-data/cube#sliceKey',
-                              'sliceStructure': 'http://purl.org/linked-data/cube#sliceStructure',
-                              'snowHeight': 'https://smartdatamodels.org/dataModel.Weather/snowHeight',
-                              'solarRadiation': 'https://smartdatamodels.org/dataModel.Weather/solarRadiation',
-                              'source': 'https://smartdatamodels.org/source',
-                              'spatial': 'http://purl.org/dc/terms/spatial',
-                              'specificEpithet': 'dwc:specificEpithet',
-                              'startDayOfYear': 'dwc:startDayOfYear',
-                              'stateProvince': 'dwc:stateProvince',
-                              'status': 'https://schema.org/status',
-                              'streamGauge': 'https://smartdatamodels.org/dataModel.Weather/streamGauge',
-                              'streetAddress': 'https://schema.org/streetAddress',
-                              'structure': {'x-jsonld-id': 'http://purl.org/linked-data/cube#structure',
-                                            'x-jsonld-type': '@id'},
-                              'subfamily': 'dwc:subfamily',
-                              'subgenus': 'dwc:subgenus',
-                              'subject': 'http://purl.org/dc/terms/subject',
-                              'subtribe': 'dwc:subtribe',
-                              'superfamily': 'dwc:superfamily',
-                              'taxonConceptID': 'dwc:taxonConceptID',
-                              'taxonID': 'dwc:taxonID',
-                              'taxonRank': 'dwc:taxonRank',
-                              'taxonRemarks': 'dwc:taxonRemarks',
-                              'taxonomicStatus': 'dwc:taxonomicStatus',
-                              'temperature': 'https://smartdatamodels.org/dataModel.Weather/temperature',
-                              'temporal': 'http://purl.org/dc/terms/temporal',
-                              'title': 'http://purl.org/dc/terms/title',
-                              'totalInSample': 'http://mmisw.org/ont/ioos/marine_biogeography/totalInSample',
-                              'tribe': 'dwc:tribe',
-                              'type': '@type',
-                              'typeStatus': 'dwc:typeStatus',
-                              'unit': {'x-jsonld-id': 'http://qudt.org/schema/qudt/unit',
-                                       'x-jsonld-type': '@id'},
-                              'unitKind': {'x-jsonld-id': 'http://purl.oclc.org/NET/ssnx/qu/qu#unitKind',
-                                           'x-jsonld-type': '@id'},
-                              'unitType': 'http://www.w3.org/2006/time#unitType',
-                              'usedProcedure': 'http://www.w3.org/ns/sosa/usedProcedure',
-                              'userName': {'x-jsonld-id': 'https://w3id.org/demeter/agri/agriCommon#userName',
-                                           'x-jsonld-type': 'http://www.w3.org/2001/XMLSchema#string'},
-                              'validFrom': {'x-jsonld-id': 'http://portele.de/ont/inspire/baseInspire#validFrom',
-                                            'x-jsonld-type': 'http://www.w3.org/2001/XMLSchema#dateTime'},
-                              'validTo': {'x-jsonld-id': 'http://portele.de/ont/inspire/baseInspire#validTo',
-                                          'x-jsonld-type': 'http://www.w3.org/2001/XMLSchema#dateTime'},
-                              'verbatimCoordinateSystem': 'dwc:verbatimCoordinateSystem',
-                              'verbatimCoordinates': 'dwc:verbatimCoordinates',
-                              'verbatimDepth': 'dwc:verbatimDepth',
-                              'verbatimElevation': 'dwc:verbatimElevation',
-                              'verbatimEventDate': 'dwc:verbatimEventDate',
-                              'verbatimIdentification': 'dwc:verbatimIdentification',
-                              'verbatimLabel': 'dwc:verbatimLabel',
-                              'verbatimLatitude': 'dwc:verbatimLatitude',
-                              'verbatimLocality': 'dwc:verbatimLocality',
-                              'verbatimLongitude': 'dwc:verbatimLongitude',
-                              'verbatimSRS': 'dwc:verbatimSRS',
-                              'verbatimSiteDescriptions': 'http://rs.tdwg.org/hc/terms/verbatimSiteDescriptions',
-                              'verbatimSiteNames': 'http://rs.tdwg.org/hc/terms/verbatimSiteNames',
-                              'verbatimTaxonRank': 'dwc:verbatimTaxonRank',
-                              'vernacularName': 'dwc:vernacularName',
-                              'versionInfo': 'http://www.w3.org/2002/07/owl#versionInfo',
-                              'verticalDatum': 'dwc:verticalDatum',
-                              'visibility': 'https://smartdatamodels.org/dataModel.Weather/visibility',
-                              'visibilityInMeters': 'http://mmisw.org/ont/ioos/marine_biogeography/visibilityInMeters',
-                              'visibilityType': 'http://mmisw.org/ont/ioos/marine_biogeography/visibilityType',
-                              'vitality': 'dwc:vitality',
-                              'waterBody': 'dwc:waterBody',
-                              'waterTemperatureInCelsius': 'http://mmisw.org/ont/ioos/marine_biogeography/waterTemperatureInCelsius',
-                              'weatherType': 'https://smartdatamodels.org/dataModel.Weather/weatherType',
-                              'weightInKg': 'http://mmisw.org/ont/ioos/marine_biogeography/weightInKg',
-                              'windDirection': 'https://smartdatamodels.org/dataModel.Weather/windDirection',
-                              'windSpeed': 'https://smartdatamodels.org/dataModel.Weather/windSpeed',
-                              'year': 'dwc:year'},
-     'x-jsonld-vocab': 'https://w3id.org/iliad/oim/default-context/'}
-
-On instance:
-    {'hasMember': [{'@id': '63dc376df84bda32b6bbf78ed3e279e2',
-                    'properties': {'basisOfRecord': 'HumanObservation',
-                                   'distanceWalkedInMeters': '1000-2000m',
-                                   'hasFeatureOfInterest': {'featureType': ['FeatureOfInterest',
-                                                                            'Point',
-                                                                            'Location'],
-                                                            'geometry': {'coordinates': [31.80691,
-                                                                                         34.634776],
-                                                                         'type': 'Point'},
-                                                            'properties': {'coordinateUncertaintyInMeters': 10000,
-                                                                           'distanceFromShore': '0-200',
-                                                                           'lat': 31.80691,
-                                                                           'locality': 18,
-                                                                           'long': 31.80691},
-                                                            'type': 'Feature'},
-                                   'hasResult': {'aphiaID': 'https://marinespecies.org/aphia.php?p=taxdetails&id=232032',
-                                                 'individualCount': 20,
-                                                 'organismQuantity': 'Some',
-                                                 'organismQuantityType': 'individuals',
-                                                 'sampleSizeUnit': 'cm',
-                                                 'sampleSizeValue': '11-30',
-                                                 'scientificName': 'Rhopilema '
-                                                                   'nomadica',
-                                                 'scientificNameID': 'https://marinespecies.org/aphia.php?p=taxdetails&id=232032',
-                                                 'stingByJellyFish': '0',
-                                                 'strandedJellyfish': '1',
-                                                 'type': ['Result',
-                                                          'JellyFishAbundance']},
-                                   'label': {'en': 'Jelly fish observation '
-                                                   'location id: 18 '
-                                                   'sensor: 3604 species: '
-                                                   'Phyllorhiza punctata'},
-                                   'madeBySensor': {'agentConfidence': '1',
-                                                    'label': 'Human '
-                                                             'sensor: 3604',
-                                                    'type': ['Sensor',
-                                                             'HumanSensor']},
-                                   'observedProperty': 'jellyFishAbundanceProperty',
-                                   'occurrenceStatus': 'present',
-                                   'phenomenonTime': '2011-07-01T09:00:00',
-                                   'resultTime': '2011-07-01T09:00:00'},
-                    'type': 'Observation'},
-                   {'@id': '63dc376df84bda32b6bbf78ed3e27333',
-                    'properties': {'basisOfRecord': 'HumanObservation',
-                                   'distanceWalkedInMeters': '500-2000m',
-                                   'hasFeatureOfInterest': {'featureType': ['FeatureOfInterest',
-                                                                            'Point',
-                                                                            'Location'],
-                                                            'geometry': {'coordinates': [33.80691,
-                                                                                         36.634776],
-                                                                         'type': 'Point'},
-                                                            'properties': {'coordinateUncertaintyInMeters': 10000,
-                                                                           'distanceFromShore': '0-200',
-                                                                           'lat': 33.80691,
-                                                                           'locality': 19,
-                                                                           'long': 36.634776},
-                                                            'type': 'Feature'},
-                                   'hasResult': {'aphiaID': 'https://marinespecies.org/aphia.php?p=taxdetails&id=232032',
-                                                 'individualCount': 50,
-                                                 'organismQuantity': 'Some',
-                                                 'organismQuantityType': 'individuals',
-                                                 'sampleSizeUnit': 'cm',
-                                                 'sampleSizeValue': '5-30',
-                                                 'scientificName': 'Rhopilema '
-                                                                   'nomadica',
-                                                 'scientificNameID': 'https://marinespecies.org/aphia.php?p=taxdetails&id=232032',
-                                                 'stingByJellyFish': '0',
-                                                 'strandedJellyfish': '1',
-                                                 'type': ['Result',
-                                                          'JellyFishAbundance']},
-                                   'label': {'en': 'Jelly fish observation '
-                                                   'location id: 19 '
-                                                   'sensor: 3602 species: '
-                                                   'Phyllorhiza punctata'},
-                                   'madeBySensor': {'agentConfidence': '1',
-                                                    'label': 'Human '
-                                                             'sensor: 3602',
-                                                    'type': ['Sensor',
-                                                             'HumanSensor']},
-                                   'observedProperty': 'jellyFishAbundanceProperty',
-                                   'occurrenceStatus': 'present',
-                                   'phenomenonTime': '2013-07-01T09:00:00',
-                                   'resultTime': '2013-07-01T09:00:00'},
-                    'type': 'Observation'}],
-     'type': 'FeatureCollection'}
+Validation passed
 === End JSON Schema ===
 
 === SHACL ===
@@ -695,19 +17,288 @@ Validation result for _sources/oim-obs/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/oim-obs/rules.shacl:
- - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
+ - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>/:properties,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>/:properties,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
 
+
+** Validation error **
 Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+  Validation Report
+  Conforms: False
+  Results (8):
+  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Exactly one of sosa:hasResult or sosa:hasSimpleResult is required per observation") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path [ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ] ]
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
+  	Result Path: [ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ]
+  	Message: Exactly one of sosa:hasResult or sosa:hasSimpleResult is required per observation
+  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Exactly one of sosa:hasResult or sosa:hasSimpleResult is required per observation") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path [ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ] ]
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
+  	Result Path: [ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ]
+  	Message: Exactly one of sosa:hasResult or sosa:hasSimpleResult is required per observation
+  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/sosa/#testObservedProperty>
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
+  	Value Node: Literal("")
+  	Result Path: sosa:observedProperty
+  	Source Constraint: [ sh:message Literal("Exactly 1 of sosa:observedProperty is required") ; sh:select Literal("
+              PREFIX sh: <http://www.w3.org/ns/shacl#>
+              PREFIX sosa: <http://www.w3.org/ns/sosa/>
+              PREFIX geojson: <https://purl.org/geojson/vocab#>
+              SELECT $this (sosa:observedProperty as ?path) (GROUP_CONCAT(?prop; separator=';') AS ?value) WHERE {
+                  OPTIONAL { $this sosa:observedProperty ?prop }
+                  OPTIONAL { ?collection sosa:hasMember+|geojson:features+ $this ; sosa:observedProperty ?prop }
+              }
+              GROUP BY ?prop
+              HAVING (count(?prop) != 1)
+          ") ]
+  	Message: Exactly 1 of sosa:observedProperty is required
+  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/sosa/#testObservedProperty>
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
+  	Value Node: Literal("")
+  	Result Path: sosa:observedProperty
+  	Source Constraint: [ sh:message Literal("Exactly 1 of sosa:observedProperty is required") ; sh:select Literal("
+              PREFIX sh: <http://www.w3.org/ns/shacl#>
+              PREFIX sosa: <http://www.w3.org/ns/sosa/>
+              PREFIX geojson: <https://purl.org/geojson/vocab#>
+              SELECT $this (sosa:observedProperty as ?path) (GROUP_CONCAT(?prop; separator=';') AS ?value) WHERE {
+                  OPTIONAL { $this sosa:observedProperty ?prop }
+                  OPTIONAL { ?collection sosa:hasMember+|geojson:features+ $this ; sosa:observedProperty ?prop }
+              }
+              GROUP BY ?prop
+              HAVING (count(?prop) != 1)
+          ") ]
+  	Message: Exactly 1 of sosa:observedProperty is required
+  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Exactly one feature of interest (sosa:hasFeatureOfInterest/sosa:isFeatureOfInterestOf) is required") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath <http://recursion.too.deep> ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest <http://recursion.too.deep> ) ] ) ]
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
+  	Result Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath <http://recursion.too.deep> ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest <http://recursion.too.deep> ) ] )
+  	Message: Exactly one feature of interest (sosa:hasFeatureOfInterest/sosa:isFeatureOfInterestOf) is required
+  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Exactly one feature of interest (sosa:hasFeatureOfInterest/sosa:isFeatureOfInterestOf) is required") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath <http://recursion.too.deep> ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest <http://recursion.too.deep> ) ] ) ]
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
+  	Result Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath <http://recursion.too.deep> ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest <http://recursion.too.deep> ) ] )
+  	Message: Exactly one feature of interest (sosa:hasFeatureOfInterest/sosa:isFeatureOfInterestOf) is required
+  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/sosa/#testRequiredTime>
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
+  	Value Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
+  	Source Constraint: [ sh:message Literal("sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed") ; sh:select Literal("
+              PREFIX sh: <http://www.w3.org/ns/shacl#>
+              PREFIX sosa: <http://www.w3.org/ns/sosa/>
+              PREFIX geojson: <https://purl.org/geojson/vocab#>
+              SELECT $this (CONCAT(COALESCE(COUNT(?resultTime), 0), ' x sosa:resultTime, ', COALESCE(COUNT(?phenomenonTime), 0), ' x sosa:phenomenonTime') AS ?value) WHERE {
+                  OPTIONAL { $this sosa:phenomenonTime ?phenomenonTime }
+                  OPTIONAL { $this sosa:resultTime ?resultTime}
+                  OPTIONAL { ?collection sosa:hasMember+|geojson:features+ $this ; sosa:phenomenonTime ?phenomenonTime }
+                  OPTIONAL { ?collection sosa:hasMember+|geojson:features+ $this ; sosa:resultTime ?resultTime }
+              }
+              GROUP BY $this
+              HAVING (count(?resultTime) > 1 || count(?phenomenonTime) > 1 || count(?resultTime) + count(?phenomenonTime) < 1)
+          ") ]
+  	Message: sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed
+  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/sosa/#testRequiredTime>
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
+  	Value Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
+  	Source Constraint: [ sh:message Literal("sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed") ; sh:select Literal("
+              PREFIX sh: <http://www.w3.org/ns/shacl#>
+              PREFIX sosa: <http://www.w3.org/ns/sosa/>
+              PREFIX geojson: <https://purl.org/geojson/vocab#>
+              SELECT $this (CONCAT(COALESCE(COUNT(?resultTime), 0), ' x sosa:resultTime, ', COALESCE(COUNT(?phenomenonTime), 0), ' x sosa:phenomenonTime') AS ?value) WHERE {
+                  OPTIONAL { $this sosa:phenomenonTime ?phenomenonTime }
+                  OPTIONAL { $this sosa:resultTime ?resultTime}
+                  OPTIONAL { ?collection sosa:hasMember+|geojson:features+ $this ; sosa:phenomenonTime ?phenomenonTime }
+                  OPTIONAL { ?collection sosa:hasMember+|geojson:features+ $this ; sosa:resultTime ?resultTime }
+              }
+              GROUP BY $this
+              HAVING (count(?resultTime) > 1 || count(?phenomenonTime) > 1 || count(?resultTime) + count(?phenomenonTime) < 1)
+          ") ]
+  	Message: sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed
+  
+Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
+
+Validation result for http://qudt.org/2.1/schema/shacl/qudt:
   Validation Report
   Conforms: True
   
-Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
+Focus nodes for http://qudt.org/2.1/schema/shacl/qudt:
+ - Shape qudt:Quantifiable: *none*
+ - Shape qudt:Symbol: *none*
+ - Shape rdf:nil: *none*
+ - Shape qudt:Datatype: *none*
+ - Shape qudt:Verifiable: *none*
+ - Shape qudt:Rule: *none*
+ - Shape qudt:AngleUnit: *none*
+ - Shape qudt:NumericListShape: *none*
+ - Shape qudt:Scale: *none*
+ - Shape _:n12b7acef62654a14acd8db986067e930b15: *none*
+ - Shape qudt:ConstantValue: *none*
+ - Shape qudt:NumericTypeUnion/rdf:rest/rdf:first: *none*
+ - Shape qudt:BinaryPrefix: *none*
+ - Shape qudt:Organization: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-LH: *none*
+ - Shape qudt:ScaleType: *none*
+ - Shape qudt:NumericListShape/sh:property/sh:or/rdf:first: *none*
+ - Shape qudt:Statement: *none*
+ - Shape qudt:Quantity: *none*
+ - Shape qudt:SystemOfQuantityKinds: *none*
+ - Shape qudt:UCUMcs: *none*
+ - Shape qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first: *none*
+ - Shape _:n12b7acef62654a14acd8db986067e930b18: *none*
+ - Shape qudt:BaseDimensionMagnitude: *none*
+ - Shape qudt:AspectClass: *none*
+ - Shape qudt:AbstractQuantityKind: *none*
+ - Shape qudt:OrdinalScale: *none*
+ - Shape qudt:ScalarDataItem: *none*
+ - Shape qudt:Quantifiable-value/sh:node: *none*
+ - Shape _:n12b7acef62654a14acd8db986067e930b16: *none*
+ - Shape qudt:Figure: *none*
+ - Shape qudt:EnumeratedValue: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-ESU: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-EMU: *none*
+ - Shape qudt:EnumeratedQuantity: *none*
+ - Shape qudt:QuantityKind: *none*
+ - Shape qudt:DataItem: *none*
+ - Shape qudt:Aspect: *none*
+ - Shape qudt:QuantityKindDimensionVector_ISO: *none*
+ - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:first: *none*
+ - Shape qudt:SymmetricRelation: *none*
+ - Shape qudt:NumericTypeUnion/rdf:first: *none*
+ - Shape qudt:UserQuantityKind: *none*
+ - Shape qudt:Prefix: *none*
+ - Shape qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:Discipline: *none*
+ - Shape qudt:QuantityKindDimensionVector_SI: *none*
+ - Shape qudt:Enumeration: *none*
+ - Shape qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first: *none*
+ - Shape qudt:DerivedUnit: *none*
+ - Shape qudt:Comment: *none*
+ - Shape qudt:ScalarDataItem-value/sh:or/rdf:first: *none*
+ - Shape qudt:PlaneAngleUnit: *none*
+ - Shape _:n12b7acef62654a14acd8db986067e930b33: *none*
+ - Shape qudt:LatexString: *none*
+ - Shape qudt:NominalScale: *none*
+ - Shape qudt:IntervalScale: *none*
+ - Shape _:n12b7acef62654a14acd8db986067e930b17: *none*
+ - Shape qudt:QuantityType: *none*
+ - Shape qudt:TransformType: *none*
+ - Shape qudt:QuantityValue: *none*
+ - Shape qudt:NIST_SP811_Comment: *none*
+ - Shape _:n12b7acef62654a14acd8db986067e930b8: *none*
+ - Shape qudt:QuantityKindDimensionVector_Imperial: *none*
+ - Shape qudt:ScalarDatatype: *none*
+ - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:CountingUnit: *none*
+ - Shape qudt:RuleType: *none*
+ - Shape qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:Citation: *none*
+ - Shape qudt:PhysicalConstant: *none*
+ - Shape _:n12b7acef62654a14acd8db986067e930b14: *none*
+ - Shape qudt:Quantifiable-datatype/sh:or/rdf:first: *none*
+ - Shape qudt:SolidAngleUnit: *none*
+ - Shape qudt:QuantityKindDimensionVector: *none*
+ - Shape qudt:DecimalPrefix: *none*
+ - Shape qudt:CurrencyUnit: *none*
+ - Shape qudt:Concept: *none*
+ - Shape qudt:DimensionlessUnit: *none*
+ - Shape qudt:RatioScale: *none*
+ - Shape qudt:Unit: *none*
+ - Shape qudt:LogarithmicUnit: *none*
+ - Shape qudt:SystemOfUnits: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-GAUSS: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS: *none*
+
+
+** Validation error **
+Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
+  Validation Report
+  Conforms: False
+  Results (8):
+  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path [ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ] ]
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
+  	Result Path: [ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ]
+  	Message: Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>->[ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ]
+  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path [ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ] ]
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
+  	Result Path: [ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ]
+  	Message: Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>->[ sh:alternativePath ( sosa:hasResult sosa:hasSimpleResult ) ]
+  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty ) ]
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
+  	Result Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )
+  	Message: Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )
+  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty ) ]
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
+  	Result Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )
+  	Message: Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )
+  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] ) ]
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
+  	Result Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
+  	Message: Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
+  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] ) ]
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
+  	Result Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
+  	Message: Less than 1 values on <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] [ sh:alternativePath ( sosa:hasFeatureOfInterest [ sh:inversePath sosa:isFeatureOfInterestOf ] ) ] )
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/sosa/#testRequiredTime>
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
+  	Value Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
+  	Message: sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/sosa/#testRequiredTime>
+  	Focus Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
+  	Value Node: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
+  	Message: sosa:resultTime or sosa:phenomenonTime is required, and no more than 1 of each is allowed
+  
+Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>
+
+Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
+ - Shape :singlePrefLabel: *none*
+
+Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
+ - Shape :relatedDisjointWithBroaderTransitive: *none*
 
 === End SHACL ===
 

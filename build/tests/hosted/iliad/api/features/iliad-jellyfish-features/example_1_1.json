@@ -25,13 +25,6 @@
         "coordinateUncertaintyInMeters": 10000,
         "locality": 19,
         "distanceFromShore": "0-200"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          31.80691,
-          34.634776
-        ]
       }
     },
     "madeBySensor": {

@@ -1,9 +1,17 @@
 {
   "type": "FeatureCollection",
-  "hasMember": [
+  "features": [
     {
       "@id": "63dc376df84bda32b6bbf78ed3e279e2",
-      "type": "Observation",
+      "type": "Feature",
+      "featureType": "Observation",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.80691,
+          34.634776
+        ]
+      },
       "properties": {
         "label": {
           "en": "Jelly fish observation location id: 18 sensor: 3604 species: Phyllorhiza punctata"
@@ -23,17 +31,10 @@
           ],
           "properties": {
             "lat": 31.80691,
-            "long": 31.80691,
+            "long": 34.65,
             "coordinateUncertaintyInMeters": 10000,
             "locality": 18,
             "distanceFromShore": "0-200"
-          },
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              31.80691,
-              34.634776
-            ]
           }
         },
         "madeBySensor": {
@@ -64,7 +65,15 @@
     },
     {
       "@id": "63dc376df84bda32b6bbf78ed3e27333",
-      "type": "Observation",
+      "type": "Feature",
+      "featureType": "Observation",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.80691,
+          34.634776
+        ]
+      },
       "properties": {
         "label": {
           "en": "Jelly fish observation location id: 19 sensor: 3602 species: Phyllorhiza punctata"

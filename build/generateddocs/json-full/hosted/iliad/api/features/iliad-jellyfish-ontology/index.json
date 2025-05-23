@@ -9,10 +9,34 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "1.0",
-  "dateOfLastChange": "2025-05-21",
-  "dependsOn": [],
-  "shaclRules": {},
-  "sources": [],
+  "dateOfLastChange": "2025-05-23",
+  "dependsOn": [
+    "ogc.hosted.iliad.api.features.oim-bio-tdwg",
+    "ogc.hosted.iliad.api.features.oim"
+  ],
+  "shaclRules": {
+    "ogc.model.cross-domain.qudt": [
+      "http://qudt.org/2.1/schema/shacl/qudt"
+    ],
+    "ogc.model.cross-domain.sosa": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
+    ],
+    "ogc.skos.common": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+    ],
+    "ogc.skos.concept": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "http://qudt.org/2.1/schema/shacl/qudt"
+    ]
+  },
+  "sources": [
+    {
+      "title": "OIM master repository",
+      "link": "https://github.com/ILIAD-ocean-twin/OIM"
+    }
+  ],
   "scope": "dev",
   "tags": [
     "iliad",

@@ -9,12 +9,12 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2025-05-21",
-  "link": "https://github.com/opengeospatial/bblock-template",
+  "dateOfLastChange": "2025-05-23",
+  "link": "https://github.com/opengeospatial/bblock-tehttps://ogcincubator.github.io/cross-domain-model/mplate",
   "sources": [
     {
-      "title": "Reference to ILIAD",
-      "link": "https://example.com/sources/1"
+      "title": "Ocean Information Model",
+      "link": "https://github.com/ILIAD-ocean-twin/OIM"
     }
   ],
   "maturity": "development",
@@ -34,6 +34,7 @@
     ]
   },
   "dependsOn": [
+    "ogc.ogc-utils.iri-or-curie",
     "ogc.hosted.iliad.api.features.oim-obs"
   ],
   "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld",
@@ -53,7 +54,7 @@
       "content": "TBD - see specific sub-profile for examples."
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Schemas for Ocean Information Model Observations\ncomment: This is a stub for now - with simple proxies for each object where schemas\n  can be specialised.\n$defs:\n  OIMObsProps:\n    allOf:\n    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml#/$defs/OIMObsProps\n    - properties:\n        sampleSizeValue:\n          type: string\n          x-jsonld-id: https://w3id.org/iliad/property/sampleSizeValue\n        speciesScientificName:\n          type: string\n          x-jsonld-id: https://w3id.org/iliad/property/speciesScientificName\n        wormsConcept:\n          type: string\n          pattern: ^https://marinespecies\\.org/.*\n          x-jsonld-id: https://w3id.org/iliad/property/wormsConcept\n          x-jsonld-type: '@id'\n  OIMObsFeature:\n    allOf:\n    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml#/$defs/OIMObsFeature\n    - properties:\n        properties:\n          $ref: '#/$defs/OIMObsProps'\n  OIMObsCollection:\n    allOf:\n    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml#/$defs/OIMObsCollection\n    - properties:\n        features:\n          type: array\n          items:\n            allOf:\n            - $ref: '#/$defs/OIMObsFeature'\nanyOf:\n- $ref: '#/$defs/OIMObsProps'\n- $ref: '#/$defs/OIMObsFeature'\n- $ref: '#/$defs/OIMObsCollection'\nx-jsonld-prefixes:\n  iliad: https://w3id.org/iliad/property/\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Schemas for Ocean Information Model Observations\ncomment: This is a stub for now - with simple proxies for each object where schemas\n  can be specialised.\n$defs:\n  OIMObsProps:\n    allOf:\n    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml#/$defs/OIMObsProps\n    - properties:\n        sampleSizeValue:\n          type: string\n          x-jsonld-id: https://w3id.org/iliad/property/sampleSizeValue\n        scientificName:\n          type: string\n        scientificNameID:\n          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n        wormsConcept:\n          type: string\n          pattern: ^https://marinespecies\\.org/.*\n          x-jsonld-id: https://w3id.org/iliad/property/wormsConcept\n          x-jsonld-type: '@id'\n        aphiaID:\n          type: string\n          pattern: ^https://marinespecies\\.org/.*\n  OIMObsFeature:\n    allOf:\n    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml#/$defs/OIMObsFeature\n    - properties:\n        properties:\n          $ref: '#/$defs/OIMObsProps'\n  OIMObsCollection:\n    allOf:\n    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml#/$defs/OIMObsCollection\n    - properties:\n        features:\n          type: array\n          items:\n            allOf:\n            - $ref: '#/$defs/OIMObsFeature'\nanyOf:\n- $ref: '#/$defs/OIMObsProps'\n- $ref: '#/$defs/OIMObsFeature'\n- $ref: '#/$defs/OIMObsCollection'\nx-jsonld-extra-terms:\n  speciesScientificName: https://w3id.org/iliad/property/speciesScientificName\n  aphiaId:\n    x-jsonld-id: https://w3id.org/iliad/property/wormsConcept\n    x-jsonld-type: '@id'\nx-jsonld-prefixes:\n  iliad: https://w3id.org/iliad/property/\n",
   "gitRepository": "https://github.com/ogcincubator/iliad-apis-features",
   "gitPath": "_sources/oim-obs-cs"
 }

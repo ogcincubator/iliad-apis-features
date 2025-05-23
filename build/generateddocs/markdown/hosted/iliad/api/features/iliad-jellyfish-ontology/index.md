@@ -16,6 +16,9 @@ This ontology defines an extension to the Oceans Informaton Model to capture con
 
 This will be linked vi JSON-LD context to various JSON schemas, such as OGC API implementations of OIM.
 
+## Sources
+
+* [OIM master repository](https://github.com/ILIAD-ocean-twin/OIM)
 
 # For developers
 

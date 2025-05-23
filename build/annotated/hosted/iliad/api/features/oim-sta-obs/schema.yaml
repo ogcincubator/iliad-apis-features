@@ -1,8 +1,9 @@
 $schema: https://json-schema.org/draft/2020-12/schema
-title: A OIM aligned STA Observtion schema
+title: A OIM aligned STA Observation schema
 description: Component of OGC STA Observation. no particular added constraints are
   added
-$ref: https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.json
+aalOf:
+- $ref: https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml
 x-jsonld-extra-terms:
   PhotonFluxDensity: http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity
   implements:

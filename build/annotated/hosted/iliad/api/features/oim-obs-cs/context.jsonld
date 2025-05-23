@@ -395,7 +395,6 @@
       "@container": "@language"
     },
     "sampleSizeValue": "iliad:sampleSizeValue",
-    "speciesScientificName": "iliad:speciesScientificName",
     "wormsConcept": {
       "@id": "iliad:wormsConcept",
       "@type": "@id"
@@ -477,6 +476,11 @@
     "geometries": {
       "@id": "geojson:geometry",
       "@container": "@list"
+    },
+    "speciesScientificName": "iliad:speciesScientificName",
+    "aphiaId": {
+      "@id": "iliad:wormsConcept",
+      "@type": "@id"
     },
     "PhotonFluxDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity",
     "invalidatedAtTime": {
