@@ -30,8 +30,8 @@
             "Location"
           ],
           "properties": {
-            "lat": 31.806910,
-            "long": 34.65,
+            "lat": 35.697,
+            "long": 34.656,
             "coordinateUncertaintyInMeters": 10000,
             "locality": 18,
             "distanceFromShore": "0-200"
