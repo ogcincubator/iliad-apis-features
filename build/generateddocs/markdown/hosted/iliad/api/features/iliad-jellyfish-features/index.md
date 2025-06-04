@@ -256,8 +256,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
             "Location"
           ],
           "properties": {
-            "lat": 31.806910,
-            "long": 34.65,
+            "lat": 35.697,
+            "long": 34.656,
             "coordinateUncertaintyInMeters": 10000,
             "locality": 18,
             "distanceFromShore": "0-200"
@@ -397,8 +397,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
             "Location"
           ],
           "properties": {
-            "lat": 31.80691,
-            "long": 34.65,
+            "lat": 35.697,
+            "long": 34.656,
             "coordinateUncertaintyInMeters": 10000,
             "locality": 18,
             "distanceFromShore": "0-200"
@@ -508,8 +508,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
 @prefix : <https://w3id.org/iliad/oim/default-context/> .
 @prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix ns1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix ns2: <https://w3id.org/iliad/oim/ext/jellyfish/> .
+@prefix ns1: <https://w3id.org/iliad/oim/ext/jellyfish/> .
+@prefix ns2: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
@@ -530,18 +530,18 @@ The SHACL rules (and any other validators developed) will be tested against the 
                             geojson:coordinates ( 3.380691e+01 3.663478e+01 ) ] ;
                     :properties [ dwc:coordinateUncertaintyInMeters 10000 ;
                             dwc:locality 19 ;
-                            ns1:lat 3.380691e+01 ;
-                            ns1:long 3.663478e+01 ;
-                            ns2:distanceFromShore "0-200" ] ] ;
+                            ns2:lat 3.380691e+01 ;
+                            ns2:long 3.663478e+01 ;
+                            ns1:distanceFromShore "0-200" ] ] ;
             sosa:madeBySensor [ a sosa:Sensor,
-                        ns2:HumanSensor ;
+                        ns1:HumanSensor ;
                     rdfs:label "Human sensor: 3602" ;
-                    ns2:agentConfidence "1" ] ;
+                    ns1:agentConfidence "1" ] ;
             sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;
             sosa:phenomenonTime <2013-07-01T09:00:00> ;
             sosa:resultTime "2013-07-01T09:00:00" ;
             :hasResult [ a sosa:Result,
-                        ns2:JellyFishAbundance ;
+                        ns1:JellyFishAbundance ;
                     dwc:individualCount 50 ;
                     dwc:organismQuantity "Some" ;
                     dwc:organismQuantityType "individuals" ;
@@ -550,9 +550,9 @@ The SHACL rules (and any other validators developed) will be tested against the 
                     dwc:scientificName "Rhopilema nomadica" ;
                     dwc:scientificNameID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
                     :aphiaID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
-                    ns2:stingByJellyFish "0" ;
-                    ns2:strandedJellyfish "1" ] ;
-            ns2:distanceWalkedInMeters "500-2000m" ] .
+                    ns1:stingByJellyFish "0" ;
+                    ns1:strandedJellyfish "1" ] ;
+            ns1:distanceWalkedInMeters "500-2000m" ] .
 
 <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2> a sosa:Observation,
         geojson:Feature ;
@@ -567,18 +567,18 @@ The SHACL rules (and any other validators developed) will be tested against the 
                         :Location ;
                     :properties [ dwc:coordinateUncertaintyInMeters 10000 ;
                             dwc:locality 18 ;
-                            ns1:lat 3.180691e+01 ;
-                            ns1:long 3.465e+01 ;
-                            ns2:distanceFromShore "0-200" ] ] ;
+                            ns2:lat 3.5697e+01 ;
+                            ns2:long 3.4656e+01 ;
+                            ns1:distanceFromShore "0-200" ] ] ;
             sosa:madeBySensor [ a sosa:Sensor,
-                        ns2:HumanSensor ;
+                        ns1:HumanSensor ;
                     rdfs:label "Human sensor: 3604" ;
-                    ns2:agentConfidence "1" ] ;
+                    ns1:agentConfidence "1" ] ;
             sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;
             sosa:phenomenonTime <2011-07-01T09:00:00> ;
             sosa:resultTime "2011-07-01T09:00:00" ;
             :hasResult [ a sosa:Result,
-                        ns2:JellyFishAbundance ;
+                        ns1:JellyFishAbundance ;
                     dwc:individualCount 20 ;
                     dwc:organismQuantity "Some" ;
                     dwc:organismQuantityType "individuals" ;
@@ -587,9 +587,9 @@ The SHACL rules (and any other validators developed) will be tested against the 
                     dwc:scientificName "Rhopilema nomadica" ;
                     dwc:scientificNameID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
                     :aphiaID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
-                    ns2:stingByJellyFish "0" ;
-                    ns2:strandedJellyfish "1" ] ;
-            ns2:distanceWalkedInMeters "1000-2000m" ] .
+                    ns1:stingByJellyFish "0" ;
+                    ns1:strandedJellyfish "1" ] ;
+            ns1:distanceWalkedInMeters "1000-2000m" ] .
 
 [] a geojson:FeatureCollection ;
     sosa:hasMember <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>,
