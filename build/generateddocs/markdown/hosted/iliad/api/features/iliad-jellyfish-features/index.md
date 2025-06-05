@@ -177,8 +177,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
 @prefix : <https://w3id.org/iliad/oim/default-context/> .
 @prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix ns1: <https://w3id.org/iliad/oim/ext/jellyfish/> .
-@prefix ns2: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ns1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ns2: <https://w3id.org/iliad/oim/ext/jellyfish/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -193,18 +193,18 @@ The SHACL rules (and any other validators developed) will be tested against the 
                 :Location ;
             dwc:coordinateUncertaintyInMeters 10000 ;
             dwc:locality 19 ;
-            ns2:lat 3.180691e+01 ;
-            ns2:long 3.180691e+01 ;
-            ns1:distanceFromShore "0-200" ] ;
+            ns1:lat 3.180691e+01 ;
+            ns1:long 3.180691e+01 ;
+            ns2:distanceFromShore "0-200" ] ;
     sosa:madeBySensor [ a sosa:Sensor,
-                ns1:HumanSensor ;
+                ns2:HumanSensor ;
             rdfs:label "Human sensor: 3602" ;
-            ns1:agentConfidence "1" ] ;
+            ns2:agentConfidence "1" ] ;
     sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;
     sosa:phenomenonTime <2011-07-01T09:00:00> ;
     sosa:resultTime "2011-07-01T09:00:00" ;
     :hasResult [ a sosa:Result,
-                ns1:JellyFishAbundance ;
+                ns2:JellyFishAbundance ;
             dwc:individualCount 20 ;
             dwc:organismQuantity "Some" ;
             dwc:organismQuantityType "individuals" ;
@@ -213,9 +213,9 @@ The SHACL rules (and any other validators developed) will be tested against the 
             dwc:scientificName "Rhopilema nomadica" ;
             dwc:scientificNameID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
             :aphiaID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
-            ns1:stingByJellyFish "0" ;
-            ns1:strandedJellyfish "1" ] ;
-    ns1:distanceWalkedInMeters "1000-2000m" .
+            ns2:stingByJellyFish "0" ;
+            ns2:strandedJellyfish "1" ] ;
+    ns2:distanceWalkedInMeters "1000-2000m" .
 
 
 ```
@@ -231,13 +231,13 @@ The SHACL rules (and any other validators developed) will be tested against the 
       "@id": "63dc376df84bda32b6bbf78ed3e279e2",
       "type": "Feature",
       "featureType": "Observation",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              31.806910,
-              34.634776
-            ]
-          },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.697,
+          34.656
+        ]
+      },
       "properties": {
         "label": {
           "en": "Jelly fish observation location id: 18 sensor: 3604 species: Phyllorhiza punctata"
@@ -255,6 +255,13 @@ The SHACL rules (and any other validators developed) will be tested against the 
             "Point",
             "Location"
           ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              35.697,
+              34.656
+            ]
+          },
           "properties": {
             "lat": 35.697,
             "long": 34.656,
@@ -291,15 +298,15 @@ The SHACL rules (and any other validators developed) will be tested against the 
     },
     {
       "@id": "63dc376df84bda32b6bbf78ed3e27333",
-            "type": "Feature",
+      "type": "Feature",
       "featureType": "Observation",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              31.806910,
-              34.634776
-            ]
-          },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.806910,
+          36.634776
+        ]
+      },
       "properties": {
         "label": {
           "en": "Jelly fish observation location id: 19 sensor: 3602 species: Phyllorhiza punctata"
@@ -375,8 +382,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
       "geometry": {
         "type": "Point",
         "coordinates": [
-          31.80691,
-          34.634776
+          35.697,
+          34.656
         ]
       },
       "properties": {
@@ -396,6 +403,13 @@ The SHACL rules (and any other validators developed) will be tested against the 
             "Point",
             "Location"
           ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              35.697,
+              34.656
+            ]
+          },
           "properties": {
             "lat": 35.697,
             "long": 34.656,
@@ -437,8 +451,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
       "geometry": {
         "type": "Point",
         "coordinates": [
-          31.80691,
-          34.634776
+          33.80691,
+          36.634776
         ]
       },
       "properties": {
@@ -518,7 +532,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
 <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333> a sosa:Observation,
         geojson:Feature ;
     geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ] ;
+            geojson:coordinates ( 3.380691e+01 3.663478e+01 ) ] ;
     :properties [ rdfs:label "Jelly fish observation location id: 19 sensor: 3602 species: Phyllorhiza punctata"@en ;
             dwc:basisOfRecord "HumanObservation" ;
             dwc:occurrenceStatus "present" ;
@@ -557,7 +571,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
 <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2> a sosa:Observation,
         geojson:Feature ;
     geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 3.180691e+01 3.463478e+01 ) ] ;
+            geojson:coordinates ( 3.5697e+01 3.4656e+01 ) ] ;
     :properties [ rdfs:label "Jelly fish observation location id: 18 sensor: 3604 species: Phyllorhiza punctata"@en ;
             dwc:basisOfRecord "HumanObservation" ;
             dwc:occurrenceStatus "present" ;
@@ -565,6 +579,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
                         geojson:Feature,
                         geojson:Point,
                         :Location ;
+                    geojson:geometry [ a geojson:Point ;
+                            geojson:coordinates ( 3.5697e+01 3.4656e+01 ) ] ;
                     :properties [ dwc:coordinateUncertaintyInMeters 10000 ;
                             dwc:locality 18 ;
                             ns2:lat 3.5697e+01 ;

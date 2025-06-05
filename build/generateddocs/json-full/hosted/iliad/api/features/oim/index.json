@@ -9,7 +9,7 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "1.0",
-  "dateOfLastChange": "2025-06-03",
+  "dateOfLastChange": "2025-06-05",
   "dependsOn": [
     "ogc.model.cross-domain.all"
   ],

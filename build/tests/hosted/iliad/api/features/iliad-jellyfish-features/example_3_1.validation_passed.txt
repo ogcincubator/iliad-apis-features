@@ -1,101 +1,17 @@
 Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish-features - Observations - ILIAD Jellyfish Pilot for Citizen Science
-Generated 2025-06-04T13:32:00.448267+00:00
+Generated 2025-06-05T01:10:47.043515+00:00
 === Files ===
 Using example_3_1.ttl from examples
 Output Turtle example_3_1.ttl created
 === End Files ===
 
 === SHACL ===
-Validation result for http://qudt.org/2.1/schema/shacl/qudt:
+Validation result for _sources/oim-obs/rules.shacl:
   Validation Report
   Conforms: True
   
-Focus nodes for http://qudt.org/2.1/schema/shacl/qudt:
- - Shape qudt:DataItem: *none*
- - Shape qudt:Rule: *none*
- - Shape qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first: *none*
- - Shape qudt:OrdinalScale: *none*
- - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:first: *none*
- - Shape qudt:AngleUnit: *none*
- - Shape _:n26407b64524743a3a97e0cf9d6dc2dc4b8: *none*
- - Shape qudt:EnumeratedQuantity: *none*
- - Shape qudt:BinaryPrefix: *none*
- - Shape qudt:ConstantValue: *none*
- - Shape qudt:Verifiable: *none*
- - Shape qudt:Comment: *none*
- - Shape qudt:BaseDimensionMagnitude: *none*
- - Shape qudt:AspectClass: *none*
- - Shape qudt:NominalScale: *none*
- - Shape qudt:Quantifiable-datatype/sh:or/rdf:first: *none*
- - Shape qudt:Organization: *none*
- - Shape qudt:CurrencyUnit: *none*
- - Shape qudt:IntervalScale: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-EMU: *none*
- - Shape qudt:LatexString: *none*
- - Shape qudt:ScalarDataItem: *none*
- - Shape qudt:Datatype: *none*
- - Shape qudt:Enumeration: *none*
- - Shape qudt:PlaneAngleUnit: *none*
- - Shape qudt:UserQuantityKind: *none*
- - Shape rdf:nil: *none*
- - Shape qudt:NumericTypeUnion/rdf:rest/rdf:first: *none*
- - Shape qudt:NumericTypeUnion/rdf:first: *none*
- - Shape qudt:QuantityValue: *none*
- - Shape _:n26407b64524743a3a97e0cf9d6dc2dc4b18: *none*
- - Shape qudt:Quantifiable-value/sh:node: *none*
- - Shape qudt:AbstractQuantityKind: *none*
- - Shape qudt:RuleType: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-ESU: *none*
- - Shape qudt:QuantityType: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-LH: *none*
- - Shape qudt:Unit: *none*
- - Shape qudt:ScalarDatatype: *none*
- - Shape qudt:Statement: *none*
- - Shape qudt:Concept: *none*
- - Shape _:n26407b64524743a3a97e0cf9d6dc2dc4b14: *none*
- - Shape qudt:SystemOfQuantityKinds: *none*
- - Shape _:n26407b64524743a3a97e0cf9d6dc2dc4b16: *none*
- - Shape qudt:Figure: *none*
- - Shape qudt:ScaleType: *none*
- - Shape qudt:Quantity: *none*
- - Shape qudt:DimensionlessUnit: *none*
- - Shape qudt:Symbol: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS: *none*
- - Shape qudt:NumericListShape/sh:property/sh:or/rdf:first: *none*
- - Shape qudt:LogarithmicUnit: *none*
- - Shape qudt:Quantifiable: *none*
- - Shape qudt:SystemOfUnits: *none*
- - Shape qudt:QuantityKindDimensionVector_ISO: *none*
- - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape qudt:Citation: *none*
- - Shape qudt:DecimalPrefix: *none*
- - Shape qudt:QuantityKindDimensionVector_SI: *none*
- - Shape qudt:SolidAngleUnit: *none*
- - Shape qudt:UCUMcs: *none*
- - Shape qudt:QuantityKindDimensionVector_Imperial: *none*
- - Shape qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first: *none*
- - Shape qudt:Discipline: *none*
- - Shape qudt:RatioScale: *none*
- - Shape qudt:PhysicalConstant: *none*
- - Shape qudt:Aspect: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-GAUSS: *none*
- - Shape qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first: *none*
- - Shape qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first: *none*
- - Shape qudt:EnumeratedValue: *none*
- - Shape qudt:NumericListShape: *none*
- - Shape _:n26407b64524743a3a97e0cf9d6dc2dc4b33: *none*
- - Shape qudt:QuantityKind: *none*
- - Shape qudt:Prefix: *none*
- - Shape qudt:CountingUnit: *none*
- - Shape qudt:NIST_SP811_Comment: *none*
- - Shape _:n26407b64524743a3a97e0cf9d6dc2dc4b15: *none*
- - Shape qudt:QuantityKindDimensionVector: *none*
- - Shape qudt:TransformType: *none*
- - Shape _:n26407b64524743a3a97e0cf9d6dc2dc4b17: *none*
- - Shape qudt:DerivedUnit: *none*
- - Shape qudt:Scale: *none*
- - Shape qudt:SymmetricRelation: *none*
- - Shape qudt:ScalarDataItem-value/sh:or/rdf:first: *none*
+Focus nodes for _sources/oim-obs/rules.shacl:
+ - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>
 
 === End SHACL ===
 

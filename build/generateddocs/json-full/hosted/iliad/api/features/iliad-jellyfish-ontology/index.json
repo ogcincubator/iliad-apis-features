@@ -9,7 +9,7 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "1.0",
-  "dateOfLastChange": "2025-06-03",
+  "dateOfLastChange": "2025-06-05",
   "dependsOn": [
     "ogc.hosted.iliad.api.features.oim-bio-tdwg",
     "ogc.hosted.iliad.api.features.oim"
