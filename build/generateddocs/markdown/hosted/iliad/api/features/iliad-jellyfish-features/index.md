@@ -58,7 +58,13 @@ The SHACL rules (and any other validators developed) will be tested against the 
 {
   "@id": "63dc376df84bda32b6bbf78ed3e279e2",
   "type": "Feature",
-  "geometry": null,
+   "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.309888,
+          34.872345
+        ]
+      },
   "properties": {
     "label": {
       "en": "Jelly fish observation location id: 18 sensor: 527 species: Phyllorhiza punctata"
@@ -110,6 +116,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
     }
   }
 }
+
 ```
 
 #### jsonld
@@ -118,7 +125,13 @@ The SHACL rules (and any other validators developed) will be tested against the 
   "@context": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/context.jsonld",
   "@id": "63dc376df84bda32b6bbf78ed3e279e2",
   "type": "Feature",
-  "geometry": null,
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      32.309888,
+      34.872345
+    ]
+  },
   "properties": {
     "label": {
       "en": "Jelly fish observation location id: 18 sensor: 527 species: Phyllorhiza punctata"
@@ -179,6 +192,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix ns1: <https://w3id.org/iliad/oim/ext/jellyfish/> .
 @prefix ns2: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -203,6 +217,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
     sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;
     sosa:phenomenonTime <2011-07-01T09:00:00> ;
     sosa:resultTime "2011-07-01T09:00:00" ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 3.230989e+01 3.487235e+01 ) ] ;
     :hasResult [ a sosa:Result,
                 ns1:JellyFishAbundance ;
             dwc:individualCount 20 ;
