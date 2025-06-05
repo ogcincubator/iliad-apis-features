@@ -11,8 +11,8 @@
   "version": "1.0",
   "dateOfLastChange": "2025-06-05",
   "dependsOn": [
-    "ogc.hosted.iliad.api.features.oim-bio-tdwg",
-    "ogc.hosted.iliad.api.features.oim"
+    "ogc.hosted.iliad.api.features.oim",
+    "ogc.hosted.iliad.api.features.oim-bio-tdwg"
   ],
   "shaclRules": {
     "ogc.model.cross-domain.qudt": [
