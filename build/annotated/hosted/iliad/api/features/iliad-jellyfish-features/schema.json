@@ -97,5 +97,8 @@
     "distanceFromShore": "https://w3id.org/iliad/oim/ext/jellyfish/distanceFromShore",
     "agentConfidence": "https://w3id.org/iliad/oim/ext/jellyfish/agentConfidence"
   },
-  "x-jsonld-vocab": "https://w3id.org/iliad/oim/default-context/"
+  "x-jsonld-vocab": "https://w3id.org/iliad/oim/default-context/",
+  "x-jsonld-prefixes": {
+    "jfsites": "https://w3id.org/iliad/sites/jfpilot/"
+  }
 }

@@ -896,6 +896,15 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 [] a covjson:CoverageCollection ;
     hydra:member [ a covjson:Coverage ;
             covjson:domain [ a covjson:Domain ;
+                    covjson:axis [ covjson:dataType covjson:tuple ],
+                        [ ] ] ;
+            covjson:range [ a covjson:NdArray ;
+                    covjson:axisNames ( "composite" ) ;
+                    covjson:dataType xsd:integer ;
+                    covjson:shape ( 2 ) ],
+                <https://w3id.org/ogcincubator/coverageJSON/POTM_range> ],
+        [ a covjson:Coverage ;
+            covjson:domain [ a covjson:Domain ;
                     covjson:axis [ ],
                         [ covjson:dataType covjson:tuple ] ] ;
             covjson:range [ a covjson:NdArray ;
@@ -905,16 +914,7 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
                 [ a covjson:NdArray ;
                     covjson:axisNames ( "composite" ) ;
                     covjson:dataType xsd:integer ;
-                    covjson:shape ( 2 ) ] ],
-        [ a covjson:Coverage ;
-            covjson:domain [ a covjson:Domain ;
-                    covjson:axis [ covjson:dataType covjson:tuple ],
-                        [ ] ] ;
-            covjson:range [ a covjson:NdArray ;
-                    covjson:axisNames ( "composite" ) ;
-                    covjson:dataType xsd:integer ;
-                    covjson:shape ( 2 ) ],
-                <https://w3id.org/ogcincubator/coverageJSON/POTM_range> ] ;
+                    covjson:shape ( 2 ) ] ] ;
     covjson:domain [ a covjson:Domain ;
             covjson:axis [ ] ] ;
     covjson:domainType covjsondt:MultiPoint ;

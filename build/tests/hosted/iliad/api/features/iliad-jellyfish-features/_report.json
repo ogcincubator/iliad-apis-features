@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish-features - Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "bblockName": "Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "bblockId": "ogc.hosted.iliad.api.features.iliad-jellyfish-features",
-  "generated": "2025-06-05T01:12:10.946131+00:00",
+  "generated": "2025-06-05T02:28:25.669456+00:00",
   "result": true,
   "items": [
     {
@@ -64,272 +64,22 @@
           "entries": [
             {
               "op": "shacl-report",
-              "shaclFile": "http://qudt.org/2.1/schema/shacl/qudt",
+              "shaclFile": "_sources/oim-obs/rules.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for http://qudt.org/2.1/schema/shacl/qudt:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/oim-obs/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "http://qudt.org/2.1/schema/shacl/qudt",
+              "shaclFile": "_sources/oim-obs/rules.shacl",
               "focusNodes": {
-                "qudt:RatioScale": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_CGS": {
-                  "nodes": []
-                },
-                "rdf:nil": {
-                  "nodes": []
-                },
-                "qudt:Quantifiable-value/sh:node": {
-                  "nodes": []
-                },
-                "qudt:SolidAngleUnit": {
-                  "nodes": []
-                },
-                "qudt:DecimalPrefix": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector": {
-                  "nodes": []
-                },
-                "qudt:TransformType": {
-                  "nodes": []
-                },
-                "qudt:CountingUnit": {
-                  "nodes": []
-                },
-                "qudt:SystemOfQuantityKinds": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b18": {
-                  "nodes": []
-                },
-                "qudt:DerivedUnit": {
-                  "nodes": []
-                },
-                "qudt:EnumeratedValue": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b8": {
-                  "nodes": []
-                },
-                "qudt:ScalarDatatype": {
-                  "nodes": []
-                },
-                "qudt:SystemOfUnits": {
-                  "nodes": []
-                },
-                "qudt:UCUMcs": {
-                  "nodes": []
-                },
-                "qudt:Verifiable": {
-                  "nodes": []
-                },
-                "qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:SymmetricRelation": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b14": {
-                  "nodes": []
-                },
-                "qudt:CurrencyUnit": {
-                  "nodes": []
-                },
-                "qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:BinaryPrefix": {
-                  "nodes": []
-                },
-                "qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_CGS-ESU": {
-                  "nodes": []
-                },
-                "qudt:Unit": {
-                  "nodes": []
-                },
-                "qudt:AbstractQuantityKind": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_Imperial": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b15": {
-                  "nodes": []
-                },
-                "qudt:Organization": {
-                  "nodes": []
-                },
-                "qudt:Quantifiable-datatype/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:UserQuantityKind": {
-                  "nodes": []
-                },
-                "qudt:QuantityKind": {
-                  "nodes": []
-                },
-                "qudt:ScalarDataItem-value/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b16": {
-                  "nodes": []
-                },
-                "qudt:Citation": {
-                  "nodes": []
-                },
-                "qudt:BaseDimensionMagnitude": {
-                  "nodes": []
-                },
-                "qudt:NumericListShape": {
-                  "nodes": []
-                },
-                "qudt:NominalScale": {
-                  "nodes": []
-                },
-                "qudt:Rule": {
-                  "nodes": []
-                },
-                "qudt:Quantity": {
-                  "nodes": []
-                },
-                "qudt:AspectClass": {
-                  "nodes": []
-                },
-                "qudt:AngleUnit": {
-                  "nodes": []
-                },
-                "qudt:OrdinalScale": {
-                  "nodes": []
-                },
-                "qudt:Concept": {
-                  "nodes": []
-                },
-                "qudt:NumericTypeUnion/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:Enumeration": {
-                  "nodes": []
-                },
-                "qudt:Datatype": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_CGS-LH": {
-                  "nodes": []
-                },
-                "qudt:ScaleType": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_CGS-EMU": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_CGS-GAUSS": {
-                  "nodes": []
-                },
-                "qudt:NIST_SP811_Comment": {
-                  "nodes": []
-                },
-                "qudt:Aspect": {
-                  "nodes": []
-                },
-                "qudt:Figure": {
-                  "nodes": []
-                },
-                "qudt:Scale": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b17": {
-                  "nodes": []
-                },
-                "qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:Discipline": {
-                  "nodes": []
-                },
-                "qudt:ConstantValue": {
-                  "nodes": []
-                },
-                "qudt:QuantityType": {
-                  "nodes": []
-                },
-                "qudt:RuleType": {
-                  "nodes": []
-                },
-                "qudt:Symbol": {
-                  "nodes": []
-                },
-                "qudt:PlaneAngleUnit": {
-                  "nodes": []
-                },
-                "qudt:InformativeReferencePropertyShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:Comment": {
-                  "nodes": []
-                },
-                "qudt:Prefix": {
-                  "nodes": []
-                },
-                "qudt:EnumeratedQuantity": {
-                  "nodes": []
-                },
-                "qudt:Quantifiable": {
-                  "nodes": []
-                },
-                "qudt:ScalarDataItem": {
-                  "nodes": []
-                },
-                "qudt:LogarithmicUnit": {
-                  "nodes": []
-                },
-                "qudt:PhysicalConstant": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_SI": {
-                  "nodes": []
-                },
-                "qudt:DataItem": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b33": {
-                  "nodes": []
-                },
-                "qudt:NumericTypeUnion/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:NumericListShape/sh:property/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:Statement": {
-                  "nodes": []
-                },
-                "qudt:QuantityValue": {
-                  "nodes": []
-                },
-                "qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:IntervalScale": {
-                  "nodes": []
-                },
-                "qudt:LatexString": {
-                  "nodes": []
-                },
-                "qudt:DimensionlessUnit": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_ISO": {
-                  "nodes": []
+                ":force-linked-data-observedProperty": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for http://qudt.org/2.1/schema/shacl/qudt:\n - Shape qudt:RatioScale: *none*\n - Shape qudt:QuantityKindDimensionVector_CGS: *none*\n - Shape rdf:nil: *none*\n - Shape qudt:Quantifiable-value/sh:node: *none*\n - Shape qudt:SolidAngleUnit: *none*\n - Shape qudt:DecimalPrefix: *none*\n - Shape qudt:QuantityKindDimensionVector: *none*\n - Shape qudt:TransformType: *none*\n - Shape qudt:CountingUnit: *none*\n - Shape qudt:SystemOfQuantityKinds: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b18: *none*\n - Shape qudt:DerivedUnit: *none*\n - Shape qudt:EnumeratedValue: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b8: *none*\n - Shape qudt:ScalarDatatype: *none*\n - Shape qudt:SystemOfUnits: *none*\n - Shape qudt:UCUMcs: *none*\n - Shape qudt:Verifiable: *none*\n - Shape qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first: *none*\n - Shape qudt:SymmetricRelation: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b14: *none*\n - Shape qudt:CurrencyUnit: *none*\n - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape qudt:BinaryPrefix: *none*\n - Shape qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first: *none*\n - Shape qudt:QuantityKindDimensionVector_CGS-ESU: *none*\n - Shape qudt:Unit: *none*\n - Shape qudt:AbstractQuantityKind: *none*\n - Shape qudt:QuantityKindDimensionVector_Imperial: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b15: *none*\n - Shape qudt:Organization: *none*\n - Shape qudt:Quantifiable-datatype/sh:or/rdf:first: *none*\n - Shape qudt:UserQuantityKind: *none*\n - Shape qudt:QuantityKind: *none*\n - Shape qudt:ScalarDataItem-value/sh:or/rdf:first: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b16: *none*\n - Shape qudt:Citation: *none*\n - Shape qudt:BaseDimensionMagnitude: *none*\n - Shape qudt:NumericListShape: *none*\n - Shape qudt:NominalScale: *none*\n - Shape qudt:Rule: *none*\n - Shape qudt:Quantity: *none*\n - Shape qudt:AspectClass: *none*\n - Shape qudt:AngleUnit: *none*\n - Shape qudt:OrdinalScale: *none*\n - Shape qudt:Concept: *none*\n - Shape qudt:NumericTypeUnion/rdf:rest/rdf:first: *none*\n - Shape qudt:Enumeration: *none*\n - Shape qudt:Datatype: *none*\n - Shape qudt:QuantityKindDimensionVector_CGS-LH: *none*\n - Shape qudt:ScaleType: *none*\n - Shape qudt:QuantityKindDimensionVector_CGS-EMU: *none*\n - Shape qudt:QuantityKindDimensionVector_CGS-GAUSS: *none*\n - Shape qudt:NIST_SP811_Comment: *none*\n - Shape qudt:Aspect: *none*\n - Shape qudt:Figure: *none*\n - Shape qudt:Scale: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b17: *none*\n - Shape qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first: *none*\n - Shape qudt:Discipline: *none*\n - Shape qudt:ConstantValue: *none*\n - Shape qudt:QuantityType: *none*\n - Shape qudt:RuleType: *none*\n - Shape qudt:Symbol: *none*\n - Shape qudt:PlaneAngleUnit: *none*\n - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:first: *none*\n - Shape qudt:Comment: *none*\n - Shape qudt:Prefix: *none*\n - Shape qudt:EnumeratedQuantity: *none*\n - Shape qudt:Quantifiable: *none*\n - Shape qudt:ScalarDataItem: *none*\n - Shape qudt:LogarithmicUnit: *none*\n - Shape qudt:PhysicalConstant: *none*\n - Shape qudt:QuantityKindDimensionVector_SI: *none*\n - Shape qudt:DataItem: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b33: *none*\n - Shape qudt:NumericTypeUnion/rdf:first: *none*\n - Shape qudt:NumericListShape/sh:property/sh:or/rdf:first: *none*\n - Shape qudt:Statement: *none*\n - Shape qudt:QuantityValue: *none*\n - Shape qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first: *none*\n - Shape qudt:IntervalScale: *none*\n - Shape qudt:LatexString: *none*\n - Shape qudt:DimensionlessUnit: *none*\n - Shape qudt:QuantityKindDimensionVector_ISO: *none*\n"
+              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>\n"
             }
           ]
         }
@@ -370,7 +120,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_2_1.ttl",
-              "size": 109,
+              "size": 105,
               "isError": false,
               "message": "Output Turtle example_2_1.ttl created"
             }
@@ -394,272 +144,25 @@
           "entries": [
             {
               "op": "shacl-report",
-              "shaclFile": "http://qudt.org/2.1/schema/shacl/qudt",
+              "shaclFile": "_sources/oim-obs/rules.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for http://qudt.org/2.1/schema/shacl/qudt:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/oim-obs/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "http://qudt.org/2.1/schema/shacl/qudt",
+              "shaclFile": "_sources/oim-obs/rules.shacl",
               "focusNodes": {
-                "qudt:RatioScale": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_CGS": {
-                  "nodes": []
-                },
-                "rdf:nil": {
-                  "nodes": []
-                },
-                "qudt:Quantifiable-value/sh:node": {
-                  "nodes": []
-                },
-                "qudt:SolidAngleUnit": {
-                  "nodes": []
-                },
-                "qudt:DecimalPrefix": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector": {
-                  "nodes": []
-                },
-                "qudt:TransformType": {
-                  "nodes": []
-                },
-                "qudt:CountingUnit": {
-                  "nodes": []
-                },
-                "qudt:SystemOfQuantityKinds": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b18": {
-                  "nodes": []
-                },
-                "qudt:DerivedUnit": {
-                  "nodes": []
-                },
-                "qudt:EnumeratedValue": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b8": {
-                  "nodes": []
-                },
-                "qudt:ScalarDatatype": {
-                  "nodes": []
-                },
-                "qudt:SystemOfUnits": {
-                  "nodes": []
-                },
-                "qudt:UCUMcs": {
-                  "nodes": []
-                },
-                "qudt:Verifiable": {
-                  "nodes": []
-                },
-                "qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:SymmetricRelation": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b14": {
-                  "nodes": []
-                },
-                "qudt:CurrencyUnit": {
-                  "nodes": []
-                },
-                "qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:BinaryPrefix": {
-                  "nodes": []
-                },
-                "qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_CGS-ESU": {
-                  "nodes": []
-                },
-                "qudt:Unit": {
-                  "nodes": []
-                },
-                "qudt:AbstractQuantityKind": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_Imperial": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b15": {
-                  "nodes": []
-                },
-                "qudt:Organization": {
-                  "nodes": []
-                },
-                "qudt:Quantifiable-datatype/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:UserQuantityKind": {
-                  "nodes": []
-                },
-                "qudt:QuantityKind": {
-                  "nodes": []
-                },
-                "qudt:ScalarDataItem-value/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b16": {
-                  "nodes": []
-                },
-                "qudt:Citation": {
-                  "nodes": []
-                },
-                "qudt:BaseDimensionMagnitude": {
-                  "nodes": []
-                },
-                "qudt:NumericListShape": {
-                  "nodes": []
-                },
-                "qudt:NominalScale": {
-                  "nodes": []
-                },
-                "qudt:Rule": {
-                  "nodes": []
-                },
-                "qudt:Quantity": {
-                  "nodes": []
-                },
-                "qudt:AspectClass": {
-                  "nodes": []
-                },
-                "qudt:AngleUnit": {
-                  "nodes": []
-                },
-                "qudt:OrdinalScale": {
-                  "nodes": []
-                },
-                "qudt:Concept": {
-                  "nodes": []
-                },
-                "qudt:NumericTypeUnion/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:Enumeration": {
-                  "nodes": []
-                },
-                "qudt:Datatype": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_CGS-LH": {
-                  "nodes": []
-                },
-                "qudt:ScaleType": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_CGS-EMU": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_CGS-GAUSS": {
-                  "nodes": []
-                },
-                "qudt:NIST_SP811_Comment": {
-                  "nodes": []
-                },
-                "qudt:Aspect": {
-                  "nodes": []
-                },
-                "qudt:Figure": {
-                  "nodes": []
-                },
-                "qudt:Scale": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b17": {
-                  "nodes": []
-                },
-                "qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:Discipline": {
-                  "nodes": []
-                },
-                "qudt:ConstantValue": {
-                  "nodes": []
-                },
-                "qudt:QuantityType": {
-                  "nodes": []
-                },
-                "qudt:RuleType": {
-                  "nodes": []
-                },
-                "qudt:Symbol": {
-                  "nodes": []
-                },
-                "qudt:PlaneAngleUnit": {
-                  "nodes": []
-                },
-                "qudt:InformativeReferencePropertyShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:Comment": {
-                  "nodes": []
-                },
-                "qudt:Prefix": {
-                  "nodes": []
-                },
-                "qudt:EnumeratedQuantity": {
-                  "nodes": []
-                },
-                "qudt:Quantifiable": {
-                  "nodes": []
-                },
-                "qudt:ScalarDataItem": {
-                  "nodes": []
-                },
-                "qudt:LogarithmicUnit": {
-                  "nodes": []
-                },
-                "qudt:PhysicalConstant": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_SI": {
-                  "nodes": []
-                },
-                "qudt:DataItem": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b33": {
-                  "nodes": []
-                },
-                "qudt:NumericTypeUnion/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:NumericListShape/sh:property/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:Statement": {
-                  "nodes": []
-                },
-                "qudt:QuantityValue": {
-                  "nodes": []
-                },
-                "qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:IntervalScale": {
-                  "nodes": []
-                },
-                "qudt:LatexString": {
-                  "nodes": []
-                },
-                "qudt:DimensionlessUnit": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_ISO": {
-                  "nodes": []
+                ":force-linked-data-observedProperty": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>/:properties",
+                    "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>/:properties",
+                    "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>",
+                    "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for http://qudt.org/2.1/schema/shacl/qudt:\n - Shape qudt:RatioScale: *none*\n - Shape qudt:QuantityKindDimensionVector_CGS: *none*\n - Shape rdf:nil: *none*\n - Shape qudt:Quantifiable-value/sh:node: *none*\n - Shape qudt:SolidAngleUnit: *none*\n - Shape qudt:DecimalPrefix: *none*\n - Shape qudt:QuantityKindDimensionVector: *none*\n - Shape qudt:TransformType: *none*\n - Shape qudt:CountingUnit: *none*\n - Shape qudt:SystemOfQuantityKinds: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b18: *none*\n - Shape qudt:DerivedUnit: *none*\n - Shape qudt:EnumeratedValue: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b8: *none*\n - Shape qudt:ScalarDatatype: *none*\n - Shape qudt:SystemOfUnits: *none*\n - Shape qudt:UCUMcs: *none*\n - Shape qudt:Verifiable: *none*\n - Shape qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first: *none*\n - Shape qudt:SymmetricRelation: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b14: *none*\n - Shape qudt:CurrencyUnit: *none*\n - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape qudt:BinaryPrefix: *none*\n - Shape qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first: *none*\n - Shape qudt:QuantityKindDimensionVector_CGS-ESU: *none*\n - Shape qudt:Unit: *none*\n - Shape qudt:AbstractQuantityKind: *none*\n - Shape qudt:QuantityKindDimensionVector_Imperial: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b15: *none*\n - Shape qudt:Organization: *none*\n - Shape qudt:Quantifiable-datatype/sh:or/rdf:first: *none*\n - Shape qudt:UserQuantityKind: *none*\n - Shape qudt:QuantityKind: *none*\n - Shape qudt:ScalarDataItem-value/sh:or/rdf:first: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b16: *none*\n - Shape qudt:Citation: *none*\n - Shape qudt:BaseDimensionMagnitude: *none*\n - Shape qudt:NumericListShape: *none*\n - Shape qudt:NominalScale: *none*\n - Shape qudt:Rule: *none*\n - Shape qudt:Quantity: *none*\n - Shape qudt:AspectClass: *none*\n - Shape qudt:AngleUnit: *none*\n - Shape qudt:OrdinalScale: *none*\n - Shape qudt:Concept: *none*\n - Shape qudt:NumericTypeUnion/rdf:rest/rdf:first: *none*\n - Shape qudt:Enumeration: *none*\n - Shape qudt:Datatype: *none*\n - Shape qudt:QuantityKindDimensionVector_CGS-LH: *none*\n - Shape qudt:ScaleType: *none*\n - Shape qudt:QuantityKindDimensionVector_CGS-EMU: *none*\n - Shape qudt:QuantityKindDimensionVector_CGS-GAUSS: *none*\n - Shape qudt:NIST_SP811_Comment: *none*\n - Shape qudt:Aspect: *none*\n - Shape qudt:Figure: *none*\n - Shape qudt:Scale: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b17: *none*\n - Shape qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first: *none*\n - Shape qudt:Discipline: *none*\n - Shape qudt:ConstantValue: *none*\n - Shape qudt:QuantityType: *none*\n - Shape qudt:RuleType: *none*\n - Shape qudt:Symbol: *none*\n - Shape qudt:PlaneAngleUnit: *none*\n - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:first: *none*\n - Shape qudt:Comment: *none*\n - Shape qudt:Prefix: *none*\n - Shape qudt:EnumeratedQuantity: *none*\n - Shape qudt:Quantifiable: *none*\n - Shape qudt:ScalarDataItem: *none*\n - Shape qudt:LogarithmicUnit: *none*\n - Shape qudt:PhysicalConstant: *none*\n - Shape qudt:QuantityKindDimensionVector_SI: *none*\n - Shape qudt:DataItem: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b33: *none*\n - Shape qudt:NumericTypeUnion/rdf:first: *none*\n - Shape qudt:NumericListShape/sh:property/sh:or/rdf:first: *none*\n - Shape qudt:Statement: *none*\n - Shape qudt:QuantityValue: *none*\n - Shape qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first: *none*\n - Shape qudt:IntervalScale: *none*\n - Shape qudt:LatexString: *none*\n - Shape qudt:DimensionlessUnit: *none*\n - Shape qudt:QuantityKindDimensionVector_ISO: *none*\n"
+              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>/:properties,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>/:properties,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>\n"
             }
           ]
         }
@@ -701,272 +204,22 @@
           "entries": [
             {
               "op": "shacl-report",
-              "shaclFile": "http://qudt.org/2.1/schema/shacl/qudt",
+              "shaclFile": "_sources/oim-obs/rules.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for http://qudt.org/2.1/schema/shacl/qudt:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/oim-obs/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "http://qudt.org/2.1/schema/shacl/qudt",
+              "shaclFile": "_sources/oim-obs/rules.shacl",
               "focusNodes": {
-                "qudt:RatioScale": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_CGS": {
-                  "nodes": []
-                },
-                "rdf:nil": {
-                  "nodes": []
-                },
-                "qudt:Quantifiable-value/sh:node": {
-                  "nodes": []
-                },
-                "qudt:SolidAngleUnit": {
-                  "nodes": []
-                },
-                "qudt:DecimalPrefix": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector": {
-                  "nodes": []
-                },
-                "qudt:TransformType": {
-                  "nodes": []
-                },
-                "qudt:CountingUnit": {
-                  "nodes": []
-                },
-                "qudt:SystemOfQuantityKinds": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b18": {
-                  "nodes": []
-                },
-                "qudt:DerivedUnit": {
-                  "nodes": []
-                },
-                "qudt:EnumeratedValue": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b8": {
-                  "nodes": []
-                },
-                "qudt:ScalarDatatype": {
-                  "nodes": []
-                },
-                "qudt:SystemOfUnits": {
-                  "nodes": []
-                },
-                "qudt:UCUMcs": {
-                  "nodes": []
-                },
-                "qudt:Verifiable": {
-                  "nodes": []
-                },
-                "qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:SymmetricRelation": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b14": {
-                  "nodes": []
-                },
-                "qudt:CurrencyUnit": {
-                  "nodes": []
-                },
-                "qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:BinaryPrefix": {
-                  "nodes": []
-                },
-                "qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_CGS-ESU": {
-                  "nodes": []
-                },
-                "qudt:Unit": {
-                  "nodes": []
-                },
-                "qudt:AbstractQuantityKind": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_Imperial": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b15": {
-                  "nodes": []
-                },
-                "qudt:Organization": {
-                  "nodes": []
-                },
-                "qudt:Quantifiable-datatype/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:UserQuantityKind": {
-                  "nodes": []
-                },
-                "qudt:QuantityKind": {
-                  "nodes": []
-                },
-                "qudt:ScalarDataItem-value/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b16": {
-                  "nodes": []
-                },
-                "qudt:Citation": {
-                  "nodes": []
-                },
-                "qudt:BaseDimensionMagnitude": {
-                  "nodes": []
-                },
-                "qudt:NumericListShape": {
-                  "nodes": []
-                },
-                "qudt:NominalScale": {
-                  "nodes": []
-                },
-                "qudt:Rule": {
-                  "nodes": []
-                },
-                "qudt:Quantity": {
-                  "nodes": []
-                },
-                "qudt:AspectClass": {
-                  "nodes": []
-                },
-                "qudt:AngleUnit": {
-                  "nodes": []
-                },
-                "qudt:OrdinalScale": {
-                  "nodes": []
-                },
-                "qudt:Concept": {
-                  "nodes": []
-                },
-                "qudt:NumericTypeUnion/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:Enumeration": {
-                  "nodes": []
-                },
-                "qudt:Datatype": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_CGS-LH": {
-                  "nodes": []
-                },
-                "qudt:ScaleType": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_CGS-EMU": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_CGS-GAUSS": {
-                  "nodes": []
-                },
-                "qudt:NIST_SP811_Comment": {
-                  "nodes": []
-                },
-                "qudt:Aspect": {
-                  "nodes": []
-                },
-                "qudt:Figure": {
-                  "nodes": []
-                },
-                "qudt:Scale": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b17": {
-                  "nodes": []
-                },
-                "qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:Discipline": {
-                  "nodes": []
-                },
-                "qudt:ConstantValue": {
-                  "nodes": []
-                },
-                "qudt:QuantityType": {
-                  "nodes": []
-                },
-                "qudt:RuleType": {
-                  "nodes": []
-                },
-                "qudt:Symbol": {
-                  "nodes": []
-                },
-                "qudt:PlaneAngleUnit": {
-                  "nodes": []
-                },
-                "qudt:InformativeReferencePropertyShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:Comment": {
-                  "nodes": []
-                },
-                "qudt:Prefix": {
-                  "nodes": []
-                },
-                "qudt:EnumeratedQuantity": {
-                  "nodes": []
-                },
-                "qudt:Quantifiable": {
-                  "nodes": []
-                },
-                "qudt:ScalarDataItem": {
-                  "nodes": []
-                },
-                "qudt:LogarithmicUnit": {
-                  "nodes": []
-                },
-                "qudt:PhysicalConstant": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_SI": {
-                  "nodes": []
-                },
-                "qudt:DataItem": {
-                  "nodes": []
-                },
-                "_:n895c60213f7c4cd0b3d6f614d90fe123b33": {
-                  "nodes": []
-                },
-                "qudt:NumericTypeUnion/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:NumericListShape/sh:property/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:Statement": {
-                  "nodes": []
-                },
-                "qudt:QuantityValue": {
-                  "nodes": []
-                },
-                "qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "qudt:IntervalScale": {
-                  "nodes": []
-                },
-                "qudt:LatexString": {
-                  "nodes": []
-                },
-                "qudt:DimensionlessUnit": {
-                  "nodes": []
-                },
-                "qudt:QuantityKindDimensionVector_ISO": {
-                  "nodes": []
+                ":force-linked-data-observedProperty": {
+                  "nodes": [
+                    "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for http://qudt.org/2.1/schema/shacl/qudt:\n - Shape qudt:RatioScale: *none*\n - Shape qudt:QuantityKindDimensionVector_CGS: *none*\n - Shape rdf:nil: *none*\n - Shape qudt:Quantifiable-value/sh:node: *none*\n - Shape qudt:SolidAngleUnit: *none*\n - Shape qudt:DecimalPrefix: *none*\n - Shape qudt:QuantityKindDimensionVector: *none*\n - Shape qudt:TransformType: *none*\n - Shape qudt:CountingUnit: *none*\n - Shape qudt:SystemOfQuantityKinds: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b18: *none*\n - Shape qudt:DerivedUnit: *none*\n - Shape qudt:EnumeratedValue: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b8: *none*\n - Shape qudt:ScalarDatatype: *none*\n - Shape qudt:SystemOfUnits: *none*\n - Shape qudt:UCUMcs: *none*\n - Shape qudt:Verifiable: *none*\n - Shape qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first: *none*\n - Shape qudt:SymmetricRelation: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b14: *none*\n - Shape qudt:CurrencyUnit: *none*\n - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape qudt:BinaryPrefix: *none*\n - Shape qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first: *none*\n - Shape qudt:QuantityKindDimensionVector_CGS-ESU: *none*\n - Shape qudt:Unit: *none*\n - Shape qudt:AbstractQuantityKind: *none*\n - Shape qudt:QuantityKindDimensionVector_Imperial: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b15: *none*\n - Shape qudt:Organization: *none*\n - Shape qudt:Quantifiable-datatype/sh:or/rdf:first: *none*\n - Shape qudt:UserQuantityKind: *none*\n - Shape qudt:QuantityKind: *none*\n - Shape qudt:ScalarDataItem-value/sh:or/rdf:first: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b16: *none*\n - Shape qudt:Citation: *none*\n - Shape qudt:BaseDimensionMagnitude: *none*\n - Shape qudt:NumericListShape: *none*\n - Shape qudt:NominalScale: *none*\n - Shape qudt:Rule: *none*\n - Shape qudt:Quantity: *none*\n - Shape qudt:AspectClass: *none*\n - Shape qudt:AngleUnit: *none*\n - Shape qudt:OrdinalScale: *none*\n - Shape qudt:Concept: *none*\n - Shape qudt:NumericTypeUnion/rdf:rest/rdf:first: *none*\n - Shape qudt:Enumeration: *none*\n - Shape qudt:Datatype: *none*\n - Shape qudt:QuantityKindDimensionVector_CGS-LH: *none*\n - Shape qudt:ScaleType: *none*\n - Shape qudt:QuantityKindDimensionVector_CGS-EMU: *none*\n - Shape qudt:QuantityKindDimensionVector_CGS-GAUSS: *none*\n - Shape qudt:NIST_SP811_Comment: *none*\n - Shape qudt:Aspect: *none*\n - Shape qudt:Figure: *none*\n - Shape qudt:Scale: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b17: *none*\n - Shape qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first: *none*\n - Shape qudt:Discipline: *none*\n - Shape qudt:ConstantValue: *none*\n - Shape qudt:QuantityType: *none*\n - Shape qudt:RuleType: *none*\n - Shape qudt:Symbol: *none*\n - Shape qudt:PlaneAngleUnit: *none*\n - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:first: *none*\n - Shape qudt:Comment: *none*\n - Shape qudt:Prefix: *none*\n - Shape qudt:EnumeratedQuantity: *none*\n - Shape qudt:Quantifiable: *none*\n - Shape qudt:ScalarDataItem: *none*\n - Shape qudt:LogarithmicUnit: *none*\n - Shape qudt:PhysicalConstant: *none*\n - Shape qudt:QuantityKindDimensionVector_SI: *none*\n - Shape qudt:DataItem: *none*\n - Shape _:n895c60213f7c4cd0b3d6f614d90fe123b33: *none*\n - Shape qudt:NumericTypeUnion/rdf:first: *none*\n - Shape qudt:NumericListShape/sh:property/sh:or/rdf:first: *none*\n - Shape qudt:Statement: *none*\n - Shape qudt:QuantityValue: *none*\n - Shape qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first: *none*\n - Shape qudt:IntervalScale: *none*\n - Shape qudt:LatexString: *none*\n - Shape qudt:DimensionlessUnit: *none*\n - Shape qudt:QuantityKindDimensionVector_ISO: *none*\n"
+              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>\n"
             }
           ]
         }

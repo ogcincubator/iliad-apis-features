@@ -17,8 +17,8 @@
                 :Location ;
             dwc:coordinateUncertaintyInMeters 10000 ;
             dwc:locality 19 ;
-            ns2:lat 3.180691e+01 ;
-            ns2:long 3.180691e+01 ;
+            ns2:lat 3.487235e+01 ;
+            ns2:long 3.230989e+01 ;
             ns1:distanceFromShore "0-200" ] ;
     sosa:madeBySensor [ a sosa:Sensor,
                 ns1:HumanSensor ;

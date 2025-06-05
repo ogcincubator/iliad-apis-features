@@ -990,6 +990,7 @@
     "ssn": "http://www.w3.org/ns/ssn/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "iliad": "https://w3id.org/iliad/property/",
+    "jfsites": "https://w3id.org/iliad/sites/jfpilot/",
     "hc": "http://rs.tdwg.org/hc/terms/",
     "dwc": "http://rs.tdwg.org/dwc/terms/",
     "geojson": "https://purl.org/geojson/vocab#",

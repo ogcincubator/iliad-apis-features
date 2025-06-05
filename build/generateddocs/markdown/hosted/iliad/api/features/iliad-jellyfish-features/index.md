@@ -77,8 +77,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
         "Location"
       ],
       "properties": {
-        "lat": 31.806910,
-        "long": 31.806910,
+        "lat": 34.872345,
+        "long": 32.309888,
         "coordinateUncertaintyInMeters": 10000,
         "locality": 19,
         "distanceFromShore": "0-200"
@@ -137,8 +137,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
         "Location"
       ],
       "properties": {
-        "lat": 31.80691,
-        "long": 31.80691,
+        "lat": 34.872345,
+        "long": 32.309888,
         "coordinateUncertaintyInMeters": 10000,
         "locality": 19,
         "distanceFromShore": "0-200"
@@ -193,8 +193,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
                 :Location ;
             dwc:coordinateUncertaintyInMeters 10000 ;
             dwc:locality 19 ;
-            ns2:lat 3.180691e+01 ;
-            ns2:long 3.180691e+01 ;
+            ns2:lat 3.487235e+01 ;
+            ns2:long 3.230989e+01 ;
             ns1:distanceFromShore "0-200" ] ;
     sosa:madeBySensor [ a sosa:Sensor,
                 ns1:HumanSensor ;
@@ -249,6 +249,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
         "occurrenceStatus": "present",
         "distanceWalkedInMeters": "1000-2000m",
         "hasFeatureOfInterest": {
+          "id": "jfsites:18",
           "type": "Feature",
           "featureType": [
             "FeatureOfInterest",
@@ -263,8 +264,6 @@ The SHACL rules (and any other validators developed) will be tested against the 
             ]
           },
           "properties": {
-            "lat": 35.697,
-            "long": 34.656,
             "coordinateUncertaintyInMeters": 10000,
             "locality": 18,
             "distanceFromShore": "0-200"
@@ -303,8 +302,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
       "geometry": {
         "type": "Point",
         "coordinates": [
-          36.634776,
-          33.806910
+          32.309888,
+          34.872345
         ]
       },
       "properties": {
@@ -318,6 +317,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
         "occurrenceStatus": "present",
         "distanceWalkedInMeters": "500-2000m",
         "hasFeatureOfInterest": {
+          "id": "jfsites:19",
           "type": "Feature",
           "featureType": [
             "FeatureOfInterest",
@@ -325,8 +325,6 @@ The SHACL rules (and any other validators developed) will be tested against the 
             "Location"
           ],
           "properties": {
-            "lat": 33.806910,
-            "long": 36.634776,
             "coordinateUncertaintyInMeters": 10000,
             "locality": 19,
             "distanceFromShore": "0-200"
@@ -334,8 +332,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
           "geometry": {
             "type": "Point",
             "coordinates": [
-              36.634776,
-              33.806910
+              32.309888,
+              34.872345
             ]
           }
         },
@@ -397,6 +395,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
         "occurrenceStatus": "present",
         "distanceWalkedInMeters": "1000-2000m",
         "hasFeatureOfInterest": {
+          "id": "jfsites:18",
           "type": "Feature",
           "featureType": [
             "FeatureOfInterest",
@@ -411,8 +410,6 @@ The SHACL rules (and any other validators developed) will be tested against the 
             ]
           },
           "properties": {
-            "lat": 35.697,
-            "long": 34.656,
             "coordinateUncertaintyInMeters": 10000,
             "locality": 18,
             "distanceFromShore": "0-200"
@@ -451,8 +448,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
       "geometry": {
         "type": "Point",
         "coordinates": [
-          36.634776,
-          33.80691
+          32.309888,
+          34.872345
         ]
       },
       "properties": {
@@ -466,6 +463,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
         "occurrenceStatus": "present",
         "distanceWalkedInMeters": "500-2000m",
         "hasFeatureOfInterest": {
+          "id": "jfsites:19",
           "type": "Feature",
           "featureType": [
             "FeatureOfInterest",
@@ -473,8 +471,6 @@ The SHACL rules (and any other validators developed) will be tested against the 
             "Location"
           ],
           "properties": {
-            "lat": 33.80691,
-            "long": 36.634776,
             "coordinateUncertaintyInMeters": 10000,
             "locality": 19,
             "distanceFromShore": "0-200"
@@ -482,8 +478,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
           "geometry": {
             "type": "Point",
             "coordinates": [
-              36.634776,
-              33.80691
+              32.309888,
+              34.872345
             ]
           }
         },
@@ -522,8 +518,8 @@ The SHACL rules (and any other validators developed) will be tested against the 
 @prefix : <https://w3id.org/iliad/oim/default-context/> .
 @prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix ns1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix ns2: <https://w3id.org/iliad/oim/ext/jellyfish/> .
+@prefix jfsites: <https://w3id.org/iliad/sites/jfpilot/> .
+@prefix ns1: <https://w3id.org/iliad/oim/ext/jellyfish/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
@@ -532,30 +528,20 @@ The SHACL rules (and any other validators developed) will be tested against the 
 <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333> a sosa:Observation,
         geojson:Feature ;
     geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 3.663478e+01 3.380691e+01 ) ] ;
+            geojson:coordinates ( 3.230989e+01 3.487235e+01 ) ] ;
     :properties [ rdfs:label "Jelly fish observation location id: 19 sensor: 3602 species: Phyllorhiza punctata"@en ;
             dwc:basisOfRecord "HumanObservation" ;
             dwc:occurrenceStatus "present" ;
-            sosa:hasFeatureOfInterest [ a sosa:FeatureOfInterest,
-                        geojson:Feature,
-                        geojson:Point,
-                        :Location ;
-                    geojson:geometry [ a geojson:Point ;
-                            geojson:coordinates ( 3.663478e+01 3.380691e+01 ) ] ;
-                    :properties [ dwc:coordinateUncertaintyInMeters 10000 ;
-                            dwc:locality 19 ;
-                            ns1:lat 3.380691e+01 ;
-                            ns1:long 3.663478e+01 ;
-                            ns2:distanceFromShore "0-200" ] ] ;
+            sosa:hasFeatureOfInterest jfsites:19 ;
             sosa:madeBySensor [ a sosa:Sensor,
-                        ns2:HumanSensor ;
+                        ns1:HumanSensor ;
                     rdfs:label "Human sensor: 3602" ;
-                    ns2:agentConfidence "1" ] ;
+                    ns1:agentConfidence "1" ] ;
             sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;
             sosa:phenomenonTime <2013-07-01T09:00:00> ;
             sosa:resultTime "2013-07-01T09:00:00" ;
             :hasResult [ a sosa:Result,
-                        ns2:JellyFishAbundance ;
+                        ns1:JellyFishAbundance ;
                     dwc:individualCount 50 ;
                     dwc:organismQuantity "Some" ;
                     dwc:organismQuantityType "individuals" ;
@@ -564,9 +550,9 @@ The SHACL rules (and any other validators developed) will be tested against the 
                     dwc:scientificName "Rhopilema nomadica" ;
                     dwc:scientificNameID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
                     :aphiaID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
-                    ns2:stingByJellyFish "0" ;
-                    ns2:strandedJellyfish "1" ] ;
-            ns2:distanceWalkedInMeters "500-2000m" ] .
+                    ns1:stingByJellyFish "0" ;
+                    ns1:strandedJellyfish "1" ] ;
+            ns1:distanceWalkedInMeters "500-2000m" ] .
 
 <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2> a sosa:Observation,
         geojson:Feature ;
@@ -575,26 +561,16 @@ The SHACL rules (and any other validators developed) will be tested against the 
     :properties [ rdfs:label "Jelly fish observation location id: 18 sensor: 3604 species: Phyllorhiza punctata"@en ;
             dwc:basisOfRecord "HumanObservation" ;
             dwc:occurrenceStatus "present" ;
-            sosa:hasFeatureOfInterest [ a sosa:FeatureOfInterest,
-                        geojson:Feature,
-                        geojson:Point,
-                        :Location ;
-                    geojson:geometry [ a geojson:Point ;
-                            geojson:coordinates ( 3.4656e+01 3.5697e+01 ) ] ;
-                    :properties [ dwc:coordinateUncertaintyInMeters 10000 ;
-                            dwc:locality 18 ;
-                            ns1:lat 3.5697e+01 ;
-                            ns1:long 3.4656e+01 ;
-                            ns2:distanceFromShore "0-200" ] ] ;
+            sosa:hasFeatureOfInterest jfsites:18 ;
             sosa:madeBySensor [ a sosa:Sensor,
-                        ns2:HumanSensor ;
+                        ns1:HumanSensor ;
                     rdfs:label "Human sensor: 3604" ;
-                    ns2:agentConfidence "1" ] ;
+                    ns1:agentConfidence "1" ] ;
             sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;
             sosa:phenomenonTime <2011-07-01T09:00:00> ;
             sosa:resultTime "2011-07-01T09:00:00" ;
             :hasResult [ a sosa:Result,
-                        ns2:JellyFishAbundance ;
+                        ns1:JellyFishAbundance ;
                     dwc:individualCount 20 ;
                     dwc:organismQuantity "Some" ;
                     dwc:organismQuantityType "individuals" ;
@@ -603,9 +579,29 @@ The SHACL rules (and any other validators developed) will be tested against the 
                     dwc:scientificName "Rhopilema nomadica" ;
                     dwc:scientificNameID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
                     :aphiaID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
-                    ns2:stingByJellyFish "0" ;
-                    ns2:strandedJellyfish "1" ] ;
-            ns2:distanceWalkedInMeters "1000-2000m" ] .
+                    ns1:stingByJellyFish "0" ;
+                    ns1:strandedJellyfish "1" ] ;
+            ns1:distanceWalkedInMeters "1000-2000m" ] .
+
+jfsites:18 a sosa:FeatureOfInterest,
+        geojson:Feature,
+        geojson:Point,
+        :Location ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 3.4656e+01 3.5697e+01 ) ] ;
+    :properties [ dwc:coordinateUncertaintyInMeters 10000 ;
+            dwc:locality 18 ;
+            ns1:distanceFromShore "0-200" ] .
+
+jfsites:19 a sosa:FeatureOfInterest,
+        geojson:Feature,
+        geojson:Point,
+        :Location ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 3.230989e+01 3.487235e+01 ) ] ;
+    :properties [ dwc:coordinateUncertaintyInMeters 10000 ;
+            dwc:locality 19 ;
+            ns1:distanceFromShore "0-200" ] .
 
 [] a geojson:FeatureCollection ;
     sosa:hasMember <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>,
@@ -738,6 +734,8 @@ x-jsonld-extra-terms:
   distanceFromShore: https://w3id.org/iliad/oim/ext/jellyfish/distanceFromShore
   agentConfidence: https://w3id.org/iliad/oim/ext/jellyfish/agentConfidence
 x-jsonld-vocab: https://w3id.org/iliad/oim/default-context/
+x-jsonld-prefixes:
+  jfsites: https://w3id.org/iliad/sites/jfpilot/
 
 ```
 
@@ -1742,6 +1740,7 @@ Links to the schema:
     "ssn": "http://www.w3.org/ns/ssn/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "iliad": "https://w3id.org/iliad/property/",
+    "jfsites": "https://w3id.org/iliad/sites/jfpilot/",
     "hc": "http://rs.tdwg.org/hc/terms/",
     "dwc": "http://rs.tdwg.org/dwc/terms/",
     "geojson": "https://purl.org/geojson/vocab#",
