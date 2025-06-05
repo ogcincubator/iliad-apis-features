@@ -1,6 +1,7 @@
 {
   "@context": {
     "@vocab": "https://w3id.org/iliad/oim/default-context/",
+    "jfsites": "https://w3id.org/iliad/sites/jfpilot/",
     "strandedJellyfish": {
       "@id": "https://w3id.org/iliad/oim/ext/jellyfish/strandedJellyfish"
     },

@@ -23,6 +23,7 @@
         "occurrenceStatus": "present",
         "distanceWalkedInMeters": "1000-2000m",
         "hasFeatureOfInterest": {
+          "id": "jfsites:18",
           "type": "Feature",
           "featureType": [
             "FeatureOfInterest",
@@ -37,8 +38,6 @@
             ]
           },
           "properties": {
-            "lat": 35.697,
-            "long": 34.656,
             "coordinateUncertaintyInMeters": 10000,
             "locality": 18,
             "distanceFromShore": "0-200"
@@ -77,8 +76,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          36.634776,
-          33.806910
+          32.309888,
+          34.872345
         ]
       },
       "properties": {
@@ -92,6 +91,7 @@
         "occurrenceStatus": "present",
         "distanceWalkedInMeters": "500-2000m",
         "hasFeatureOfInterest": {
+          "id": "jfsites:19",
           "type": "Feature",
           "featureType": [
             "FeatureOfInterest",
@@ -99,8 +99,6 @@
             "Location"
           ],
           "properties": {
-            "lat": 33.806910,
-            "long": 36.634776,
             "coordinateUncertaintyInMeters": 10000,
             "locality": 19,
             "distanceFromShore": "0-200"
@@ -108,8 +106,8 @@
           "geometry": {
             "type": "Point",
             "coordinates": [
-              36.634776,
-              33.806910
+              32.309888,
+              34.872345
             ]
           }
         },
