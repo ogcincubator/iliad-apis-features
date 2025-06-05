@@ -112,7 +112,7 @@
   "name": "Building Blocks - ILIAD API Profiles",
   "abstract": "(Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability.",
   "description": "Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. \n\nThus, a pilot project to monitor Jellyfish swarms using Citizen Science will reuse common patterns for Citizen Science observations, which in turn we reuse a common pattern for observations, using an underlying component of the OIM - the OGC Observations model (SOSA ontology). \n",
-  "modified": "2025-06-05T01:10:14.813154",
+  "modified": "2025-06-05T01:11:43.610071",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"fefb79b13766e7c935eb926409c3e6816b4f7593",
@@ -676,10 +676,10 @@
         ]
       },
       "dependsOn": [
-        "ogc.sosa.properties.observation",
+        "ogc.ogc-utils.iri-or-curie",
         "ogc.sosa.features.observation",
-        "ogc.sosa.features.observationCollection",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.sosa.properties.observation",
+        "ogc.sosa.features.observationCollection"
       ],
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
       "schema": {
@@ -703,73 +703,6 @@
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-obs"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.hosted.iliad.api.features.oim-obs-cs",
-      "name": "OIM Observations - Citizen Science",
-      "abstract": "Defines observations and collections to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model.",
-      "status": "under-development",
-      "dateTimeAddition": "2023-04-05T00:00:00Z",
-      "itemClass": "schema",
-      "register": "iliad-apis",
-      "version": "0.1",
-      "dateOfLastChange": "2025-06-05",
-      "link": "https://github.com/opengeospatial/bblock-tehttps://ogcincubator.github.io/cross-domain-model/mplate",
-      "sources": [
-        {
-          "title": "Ocean Information Model",
-          "link": "https://github.com/ILIAD-ocean-twin/OIM"
-        }
-      ],
-      "maturity": "development",
-      "scope": "unstable",
-      "tags": [
-        "iliad",
-        "oim",
-        "sosa",
-        "ditto"
-      ],
-      "shaclRules": {
-        "ogc.hosted.iliad.api.features.oim-obs": [
-          "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
-        ],
-        "ogc.sosa.properties.observation": [
-          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
-        ]
-      },
-      "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.hosted.iliad.api.features.oim-obs"
-      ],
-      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld",
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs-cs/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs-cs/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-obs-cs"
         }
       },
       "@type": [
@@ -851,6 +784,142 @@
       ]
     },
     {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.oim-obs-cs",
+      "name": "OIM Observations - Citizen Science",
+      "abstract": "Defines observations and collections to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model.",
+      "status": "under-development",
+      "dateTimeAddition": "2023-04-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "iliad-apis",
+      "version": "0.1",
+      "dateOfLastChange": "2025-06-05",
+      "link": "https://github.com/opengeospatial/bblock-tehttps://ogcincubator.github.io/cross-domain-model/mplate",
+      "sources": [
+        {
+          "title": "Ocean Information Model",
+          "link": "https://github.com/ILIAD-ocean-twin/OIM"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "iliad",
+        "oim",
+        "sosa",
+        "ditto"
+      ],
+      "shaclRules": {
+        "ogc.hosted.iliad.api.features.oim-obs": [
+          "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
+        ],
+        "ogc.sosa.properties.observation": [
+          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
+        ]
+      },
+      "dependsOn": [
+        "ogc.hosted.iliad.api.features.oim-obs",
+        "ogc.ogc-utils.iri-or-curie"
+      ],
+      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs-cs/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs-cs/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-obs-cs"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology",
+      "name": "Jellyfish Ontology",
+      "abstract": "Extensions Ontology for the Oceans Information Model, address specific semantics of the Jellyfish Citizen Science Observations Pilot",
+      "status": "under-development",
+      "dateTimeAddition": "2023-09-18T00:00:00Z",
+      "itemClass": "model",
+      "register": "ogc-incubator",
+      "version": "1.0",
+      "dateOfLastChange": "2025-06-05",
+      "dependsOn": [
+        "ogc.hosted.iliad.api.features.oim",
+        "ogc.hosted.iliad.api.features.oim-bio-tdwg"
+      ],
+      "shaclRules": {
+        "ogc.model.cross-domain.qudt": [
+          "http://qudt.org/2.1/schema/shacl/qudt"
+        ],
+        "ogc.model.cross-domain.sosa": [
+          "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
+        ],
+        "ogc.skos.common": [
+          "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+        ],
+        "ogc.skos.concept": [
+          "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+        ],
+        "ogc.model.cross-domain.prov": [
+          "http://qudt.org/2.1/schema/shacl/qudt"
+        ]
+      },
+      "sources": [
+        {
+          "title": "OIM master repository",
+          "link": "https://github.com/ILIAD-ocean-twin/OIM"
+        }
+      ],
+      "scope": "dev",
+      "tags": [
+        "iliad",
+        "oim",
+        "citizen-science",
+        "project"
+      ],
+      "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",
+      "remoteCacheDir": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-ontology/remote_cache/",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish-ontology/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish-ontology/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/iliad-jellyfish-ontology/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.iliad-jellyfish-ontology"
+        }
+      },
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
       "itemIdentifier": "ogc.hosted.iliad.api.features.stac_multidim_data",
       "name": "ILIAD STAC/DCAT dimensional data",
       "abstract": "Defines a mapping from STAC multi-dimensions for ILIAD - should be refactored to a general STAC multi-dimensions profile and an ILIAD sub-profile",
@@ -916,75 +985,6 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology",
-      "name": "Jellyfish Ontology",
-      "abstract": "Extensions Ontology for the Oceans Information Model, address specific semantics of the Jellyfish Citizen Science Observations Pilot",
-      "status": "under-development",
-      "dateTimeAddition": "2023-09-18T00:00:00Z",
-      "itemClass": "model",
-      "register": "ogc-incubator",
-      "version": "1.0",
-      "dateOfLastChange": "2025-06-05",
-      "dependsOn": [
-        "ogc.hosted.iliad.api.features.oim-bio-tdwg",
-        "ogc.hosted.iliad.api.features.oim"
-      ],
-      "shaclRules": {
-        "ogc.model.cross-domain.qudt": [
-          "http://qudt.org/2.1/schema/shacl/qudt"
-        ],
-        "ogc.model.cross-domain.sosa": [
-          "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
-        ],
-        "ogc.skos.common": [
-          "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
-        ],
-        "ogc.skos.concept": [
-          "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
-        ],
-        "ogc.model.cross-domain.prov": [
-          "http://qudt.org/2.1/schema/shacl/qudt"
-        ]
-      },
-      "sources": [
-        {
-          "title": "OIM master repository",
-          "link": "https://github.com/ILIAD-ocean-twin/OIM"
-        }
-      ],
-      "scope": "dev",
-      "tags": [
-        "iliad",
-        "oim",
-        "citizen-science",
-        "project"
-      ],
-      "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",
-      "remoteCacheDir": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-ontology/remote_cache/",
-      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish-ontology/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish-ontology/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/iliad-jellyfish-ontology/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.iliad-jellyfish-ontology"
-        }
-      },
-      "@type": [
-        "bblocks:Model",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
       "itemIdentifier": "ogc.hosted.iliad.api.features.iliad-jellyfish-features",
       "name": "Observations - ILIAD Jellyfish Pilot for Citizen Science",
       "abstract": "Defines a project specific interoperability profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model",
@@ -997,9 +997,9 @@
       "dateOfLastChange": "2025-06-05",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
+        "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology",
         "ogc.hosted.iliad.api.features.oim-bio-tdwg",
-        "ogc.hosted.iliad.api.features.oim-obs-cs",
-        "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology"
+        "ogc.hosted.iliad.api.features.oim-obs-cs"
       ],
       "sources": [
         {
@@ -1018,12 +1018,6 @@
         "project"
       ],
       "shaclRules": {
-        "ogc.hosted.iliad.api.features.oim-obs": [
-          "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
-        ],
-        "ogc.sosa.properties.observation": [
-          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
-        ],
         "ogc.model.cross-domain.qudt": [
           "http://qudt.org/2.1/schema/shacl/qudt"
         ],
@@ -1038,6 +1032,12 @@
         ],
         "ogc.model.cross-domain.prov": [
           "http://qudt.org/2.1/schema/shacl/qudt"
+        ],
+        "ogc.hosted.iliad.api.features.oim-obs": [
+          "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
+        ],
+        "ogc.sosa.properties.observation": [
+          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
         ]
       },
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/context.jsonld",
