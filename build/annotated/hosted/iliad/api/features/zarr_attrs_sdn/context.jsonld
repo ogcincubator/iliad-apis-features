@@ -930,6 +930,10 @@
       "@id": "http://www.opengis.net/ont/geosparql#sfWithin",
       "@type": "@id"
     },
+    "hasBoundingBox": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasBoundingBox",
+      "@type": "@id"
+    },
     "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",
     "hasUltimateFeatureOfInterest": {
       "@id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest",
@@ -945,6 +949,10 @@
     "Feature": "http://www.opengis.net/ont/geosparql#Feature",
     "LineString": "http://www.opengis.net/ont/sf#LineString",
     "numericValue": "http://qudt.org/schema/qudt/numericValue",
+    "attribute": {
+      "@id": "http://purl.org/linked-data/cube#attribute",
+      "@type": "@id"
+    },
     "SliceKey": "http://purl.org/linked-data/cube#SliceKey",
     "Result": "http://www.w3.org/ns/sosa/Result",
     "isHostedBy": {
@@ -1095,7 +1103,7 @@
       "@type": "@id"
     },
     "hasFeatureOfInterest": {
-      "@id": "https://saref.etsi.org/core/hasFeatureOfInterest",
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
       "@type": "@id"
     },
     "NumberPerLength": "http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLength",

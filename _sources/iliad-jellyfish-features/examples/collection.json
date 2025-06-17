@@ -1,0 +1,141 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "@id": "63dc376df84bda32b6bbf78ed3e279e2",
+      "type": "Feature",
+      "featureType": "Observation",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.656,
+          35.697
+        ]
+      },
+      "properties": {
+        "label": {
+          "en": "Jelly fish observation location id: 18 sensor: 3604 species: Phyllorhiza punctata"
+        },
+        "phenomenonTime": "2011-07-01T09:00:00",
+        "resultTime": "2011-07-01T09:00:00",
+        "observedProperty": "jellyFishAbundanceProperty",
+        "basisOfRecord": "HumanObservation",
+        "occurrenceStatus": "present",
+        "distanceWalkedInMeters": "1000-2000m",
+        "hasFeatureOfInterest": {
+          "id": "jfsites:18",
+          "type": "Feature",
+          "featureType": [
+            "FeatureOfInterest",
+            "Point",
+            "Location"
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              34.656,
+              35.697
+            ]
+          },
+          "properties": {
+            "coordinateUncertaintyInMeters": 10000,
+            "locality": 18,
+            "distanceFromShore": "0-200"
+          }
+        },
+        "madeBySensor": {
+          "type": [
+            "Sensor",
+            "HumanSensor"
+          ],
+          "label": "Human sensor: 3604",
+          "agentConfidence": "1"
+        },
+        "hasResult": {
+          "type": [
+            "Result",
+            "JellyFishAbundance"
+          ],
+          "aphiaID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
+          "individualCount": 20,
+          "organismQuantity": "Some",
+          "organismQuantityType": "individuals",
+          "sampleSizeUnit": "cm",
+          "sampleSizeValue": "11-30",
+          "scientificName": "Rhopilema nomadica",
+          "scientificNameID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
+          "stingByJellyFish": "0",
+          "strandedJellyfish": "1"
+        }
+      }
+    },
+    {
+      "@id": "63dc376df84bda32b6bbf78ed3e27333",
+      "type": "Feature",
+      "featureType": "Observation",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.309888,
+          34.872345
+        ]
+      },
+      "properties": {
+        "label": {
+          "en": "Jelly fish observation location id: 19 sensor: 3602 species: Phyllorhiza punctata"
+        },
+        "phenomenonTime": "2013-07-01T09:00:00",
+        "resultTime": "2013-07-01T09:00:00",
+        "observedProperty": "jellyFishAbundanceProperty",
+        "basisOfRecord": "HumanObservation",
+        "occurrenceStatus": "present",
+        "distanceWalkedInMeters": "500-2000m",
+        "hasFeatureOfInterest": {
+          "id": "jfsites:19",
+          "type": "Feature",
+          "featureType": [
+            "FeatureOfInterest",
+            "Point",
+            "Location"
+          ],
+          "properties": {
+            "coordinateUncertaintyInMeters": 10000,
+            "locality": 19,
+            "distanceFromShore": "0-200"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              32.309888,
+              34.872345
+            ]
+          }
+        },
+        "madeBySensor": {
+          "type": [
+            "Sensor",
+            "HumanSensor"
+          ],
+          "label": "Human sensor: 3602",
+          "agentConfidence": "1"
+        },
+        "hasResult": {
+          "type": [
+            "Result",
+            "JellyFishAbundance"
+          ],
+          "aphiaID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
+          "individualCount": 50,
+          "organismQuantity": "Some",
+          "organismQuantityType": "individuals",
+          "sampleSizeUnit": "cm",
+          "sampleSizeValue": "5-30",
+          "scientificName": "Rhopilema nomadica",
+          "scientificNameID": "https://marinespecies.org/aphia.php?p=taxdetails&id=232032",
+          "stingByJellyFish": "0",
+          "strandedJellyfish": "1"
+        }
+      }
+    }
+  ]
+}

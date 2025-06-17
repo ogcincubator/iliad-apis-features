@@ -1,8 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "A OIM aligned STA Observtion schema",
+  "title": "A OIM aligned STA Observation schema",
   "description": "Component of OGC STA Observation. no particular added constraints are added",
-  "$ref": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.json",
+  "aalOf": [
+    {
+      "$ref": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.json"
+    }
+  ],
   "x-jsonld-extra-terms": {
     "PhotonFluxDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity",
     "implements": {
@@ -92,6 +96,10 @@
       "x-jsonld-id": "http://www.opengis.net/ont/geosparql#sfWithin",
       "x-jsonld-type": "@id"
     },
+    "hasBoundingBox": {
+      "x-jsonld-id": "http://www.opengis.net/ont/geosparql#hasBoundingBox",
+      "x-jsonld-type": "@id"
+    },
     "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",
     "hasUltimateFeatureOfInterest": {
       "x-jsonld-id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest",
@@ -115,6 +123,14 @@
     },
     "measure": {
       "x-jsonld-id": "http://purl.org/linked-data/cube#measure",
+      "x-jsonld-type": "@id"
+    },
+    "attribute": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#attribute",
+      "x-jsonld-type": "@id"
+    },
+    "structure": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#structure",
       "x-jsonld-type": "@id"
     },
     "SliceKey": "http://purl.org/linked-data/cube#SliceKey",

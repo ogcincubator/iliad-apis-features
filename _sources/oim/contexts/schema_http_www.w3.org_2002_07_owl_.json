@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://www.w3.org/2002/07/owl#",
+  "type": "object",
+  "properties": {
+    "versionInfo": {
+      "type": "string"
+    },
+    "Thing": {
+      "type": "string"
+    },
+    "deprecated": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

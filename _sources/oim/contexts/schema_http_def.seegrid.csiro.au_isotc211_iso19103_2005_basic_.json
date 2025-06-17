@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#",
+  "type": "object",
+  "properties": {
+    "Measure": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

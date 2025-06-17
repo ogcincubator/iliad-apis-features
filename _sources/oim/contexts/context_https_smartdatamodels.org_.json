@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "dateObserved": {
+      "@id": "https://smartdatamodels.org/dateObserved",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "source": {
+      "@id": "https://smartdatamodels.org/source"
+    },
+    "alternateName": {
+      "@id": "https://smartdatamodels.org/alternateName"
+    }
+  }
+}

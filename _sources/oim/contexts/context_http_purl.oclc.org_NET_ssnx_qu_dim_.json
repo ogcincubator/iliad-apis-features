@@ -1,0 +1,79 @@
+{
+  "@context": {
+    "ThermalConductivity": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity"
+    },
+    "Compressibility": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility"
+    },
+    "MassPerTimePerArea": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerArea"
+    },
+    "ElectricConductivity": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#ElectricConductivity"
+    },
+    "Temperature": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Temperature"
+    },
+    "EnergyFlux": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux"
+    },
+    "StressOrPressure": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure"
+    },
+    "Energy": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Energy"
+    },
+    "Mass": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Mass"
+    },
+    "Acceleration": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration"
+    },
+    "MassFlowRate": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#MassFlowRate"
+    },
+    "Distance": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Distance"
+    },
+    "Radiance": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Radiance"
+    },
+    "Duration": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Duration"
+    },
+    "SurfaceDensity": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceDensity"
+    },
+    "Density": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Density"
+    },
+    "NumberPerLength": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLength"
+    },
+    "VolumeFlowRate": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#VolumeFlowRate"
+    },
+    "SpecificEntropy": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropy"
+    },
+    "RadianceExposure": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposure"
+    },
+    "VelocityOrSpeed": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed"
+    },
+    "Dimensionless": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless"
+    },
+    "Area": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Area"
+    },
+    "Power": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Power"
+    },
+    "EnergyDensity": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensity"
+    }
+  }
+}

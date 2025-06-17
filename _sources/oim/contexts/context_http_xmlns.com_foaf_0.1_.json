@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "depiction": {
+      "@id": "http://xmlns.com/foaf/0.1/depiction"
+    },
+    "maker": {
+      "@id": "http://xmlns.com/foaf/0.1/maker"
+    },
+    "homepage": {
+      "@id": "http://xmlns.com/foaf/0.1/homepage"
+    },
+    "Agent": {
+      "@id": "http://xmlns.com/foaf/0.1/Agent"
+    }
+  }
+}

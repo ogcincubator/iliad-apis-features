@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace https://schema.org/",
+  "type": "object",
+  "properties": {
+    "affiliation": {
+      "type": "string"
+    },
+    "Organization": {
+      "type": "string"
+    },
+    "addressRegion": {
+      "type": "string"
+    },
+    "Person": {
+      "type": "string"
+    },
+    "ImageObject": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "Role": {
+      "type": "string"
+    },
+    "rangeIncludes": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "streetAddress": {
+      "type": "string"
+    },
+    "addressLocality": {
+      "type": "string"
+    },
+    "addressCountry": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

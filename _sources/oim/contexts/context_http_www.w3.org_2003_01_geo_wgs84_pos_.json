@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "long": {
+      "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+    },
+    "location": {
+      "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#location"
+    },
+    "alt": {
+      "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#alt"
+    },
+    "Point": {
+      "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
+    },
+    "lat": {
+      "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+    }
+  }
+}

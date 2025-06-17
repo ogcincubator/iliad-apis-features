@@ -74,10 +74,11 @@ The mechanisms for handling external vocabulary constraints to be define here: (
 
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
-title: A OIM aligned STA Observtion schema
+title: A OIM aligned STA Observation schema
 description: Component of OGC STA Observation. no particular added constraints are
   added
-$ref: https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.json
+aalOf:
+- $ref: https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml
 x-jsonld-extra-terms:
   PhotonFluxDensity: http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity
   implements:
@@ -154,6 +155,9 @@ x-jsonld-extra-terms:
   sfWithin:
     x-jsonld-id: http://www.opengis.net/ont/geosparql#sfWithin
     x-jsonld-type: '@id'
+  hasBoundingBox:
+    x-jsonld-id: http://www.opengis.net/ont/geosparql#hasBoundingBox
+    x-jsonld-type: '@id'
   ThermalConductivity: http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity
   hasUltimateFeatureOfInterest:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest
@@ -174,6 +178,12 @@ x-jsonld-extra-terms:
     x-jsonld-type: '@id'
   measure:
     x-jsonld-id: http://purl.org/linked-data/cube#measure
+    x-jsonld-type: '@id'
+  attribute:
+    x-jsonld-id: http://purl.org/linked-data/cube#attribute
+    x-jsonld-type: '@id'
+  structure:
+    x-jsonld-id: http://purl.org/linked-data/cube#structure
     x-jsonld-type: '@id'
   SliceKey: http://purl.org/linked-data/cube#SliceKey
   Result: http://www.w3.org/ns/sosa/Result
@@ -428,15 +438,6 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "@iot.id": "@id",
-    "@iot.selfLink": "orel:iana/1.0/self",
-    "phenomenonTime": "sosa:phenomenonTime",
-    "result": "sosa:hasSimpleResult",
-    "resultQuality": "sosa:resultQuality",
-    "resultTime": "sosa:resultTime",
-    "validTime": "sta:validTime",
-    "Datastream@iot.navigationLink": "sosa:isMemberOf",
-    "FeatureOfInterest@iot.navigationLink": "sosa:hasFeatureOfInterest",
     "PhotonFluxDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity",
     "implements": {
       "@id": "http://www.w3.org/ns/ssn/implements",
@@ -525,6 +526,10 @@ Links to the schema:
       "@id": "http://www.opengis.net/ont/geosparql#sfWithin",
       "@type": "@id"
     },
+    "hasBoundingBox": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasBoundingBox",
+      "@type": "@id"
+    },
     "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",
     "hasUltimateFeatureOfInterest": {
       "@id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest",
@@ -548,6 +553,14 @@ Links to the schema:
     },
     "measure": {
       "@id": "http://purl.org/linked-data/cube#measure",
+      "@type": "@id"
+    },
+    "attribute": {
+      "@id": "http://purl.org/linked-data/cube#attribute",
+      "@type": "@id"
+    },
+    "structure": {
+      "@id": "http://purl.org/linked-data/cube#structure",
       "@type": "@id"
     },
     "SliceKey": "http://purl.org/linked-data/cube#SliceKey",
@@ -585,9 +598,11 @@ Links to the schema:
     "Interval": "http://www.w3.org/2006/time#Interval",
     "EnergyFlux": "http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux",
     "StressOrPressure": "http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure",
+    "resultTime": "sosa:resultTime",
     "VolumeDensityRate": "http://purl.oclc.org/NET/ssnx/qu/dim#VolumeDensityRate",
     "Agent": "http://xmlns.com/foaf/0.1/Agent",
     "creator": "http://purl.org/dc/terms/creator",
+    "phenomenonTime": "sosa:phenomenonTime",
     "Energy": "http://purl.oclc.org/NET/ssnx/qu/dim#Energy",
     "foaf.name": "http://xmlns.com/foaf/0.1/name",
     "Role": "https://schema.org/Role",
@@ -817,6 +832,13 @@ Links to the schema:
     "Point": "http://www.opengis.net/ont/sf#Point",
     "schema.name": "https://schema.org/name",
     "QuantityKind": "http://qudt.org/schema/qudt/QuantityKind",
+    "@iot.id": "@id",
+    "@iot.selfLink": "orel:iana/1.0/self",
+    "result": "sosa:hasSimpleResult",
+    "resultQuality": "sosa:resultQuality",
+    "validTime": "sta:validTime",
+    "Datastream@iot.navigationLink": "sosa:isMemberOf",
+    "FeatureOfInterest@iot.navigationLink": "sosa:hasFeatureOfInterest",
     "orel": "http://www.opengis.net/def/rel/",
     "sosa": "https://www.w3.org/TR/vocab-ssn/#",
     "sta": "https://schemas.opengis.org/sta/def/core#",
@@ -831,7 +853,7 @@ You can find the full JSON-LD context here:
 
 ## Sources
 
-* [Reference to ILIAD](https://example.com/sources/1)
+* [Ocean Information Model](https://github.com/ILIAD-ocean-twin/OIM)
 
 # For developers
 

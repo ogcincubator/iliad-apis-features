@@ -1,0 +1,38 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+description: 'Schemas for Ocean Information Model Observations'
+$defs:
+  OIMObsProps:
+    allOf:
+    - $ref: 'bblocks://ogc.hosted.iliad.api.features.oim-obs-cs#/$defs/OIMObsProps'
+    - $ref: 'bblocks://ogc.hosted.iliad.api.features.oim-bio-tdwg'
+    - properties:
+        hasResult:
+          type: object
+          properties:
+            densityOfJellyFish:
+              type: string
+              enum: [None, Some, Swarm, Few]
+            stingByJellyFish:
+              type: string
+            strandedJellyFish:
+              type: string
+
+  OIMObsFeature:
+    allOf:
+    - $ref: 'bblocks://ogc.hosted.iliad.api.features.oim-obs-cs#/$defs/OIMObsFeature'
+    - properties:
+        properties:
+          $ref: '#/$defs/OIMObsProps'
+  OIMObsCollection:
+    allOf:
+    - $ref: 'bblocks://ogc.hosted.iliad.api.features.oim-obs-cs#/$defs/OIMObsCollection'
+    - properties:
+        features:
+          type: array
+          items:
+            allOf:
+              - $ref: '#/$defs/OIMObsFeature'
+anyOf:
+- $ref: '#/$defs/OIMObsProps'
+- $ref: '#/$defs/OIMObsFeature'
+- $ref: '#/$defs/OIMObsCollection'

@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "SF_SamplingFeature.sampledFeature": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature"
+    },
+    "SF_SamplingFeature": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+    }
+  }
+}

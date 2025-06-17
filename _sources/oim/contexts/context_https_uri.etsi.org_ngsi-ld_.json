@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "LocationRelationship": {
+      "@id": "https://uri.etsi.org/ngsi-ld/LocationRelationship"
+    },
+    "GeoProperty": {
+      "@id": "https://uri.etsi.org/ngsi-ld/GeoProperty"
+    },
+    "TemporalProperty": {
+      "@id": "https://uri.etsi.org/ngsi-ld/TemporalProperty"
+    },
+    "Entity": {
+      "@id": "https://uri.etsi.org/ngsi-ld/Entity"
+    }
+  }
+}

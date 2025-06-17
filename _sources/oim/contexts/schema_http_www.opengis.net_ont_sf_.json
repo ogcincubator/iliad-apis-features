@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://www.opengis.net/ont/sf#",
+  "type": "object",
+  "properties": {
+    "MultiLineString": {
+      "type": "string"
+    },
+    "Line": {
+      "type": "string"
+    },
+    "MultiSurface": {
+      "type": "string"
+    },
+    "Curve": {
+      "type": "string"
+    },
+    "LineString": {
+      "type": "string"
+    },
+    "Triangle": {
+      "type": "string"
+    },
+    "GeometryCollection": {
+      "type": "string"
+    },
+    "TIN": {
+      "type": "string"
+    },
+    "LinearRing": {
+      "type": "string"
+    },
+    "PolyhedralSurface": {
+      "type": "string"
+    },
+    "Polygon": {
+      "type": "string"
+    },
+    "MultiPolygon": {
+      "type": "string"
+    },
+    "MultiCurve": {
+      "type": "string"
+    },
+    "MultiPoint": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

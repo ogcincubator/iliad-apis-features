@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://purl.oclc.org/NET/ssnx/cf/cf-feature#",
+  "type": "object",
+  "properties": {
+    "SurfaceMediumMedium": {
+      "type": "string"
+    },
+    "Medium": {
+      "type": "string"
+    },
+    "Wind": {
+      "type": "string"
+    },
+    "Precipitation": {
+      "type": "string"
+    },
+    "Layer": {
+      "type": "string"
+    },
+    "SurfaceMedium": {
+      "type": "string"
+    },
+    "Surface": {
+      "type": "string"
+    },
+    "SurfaceLayer": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

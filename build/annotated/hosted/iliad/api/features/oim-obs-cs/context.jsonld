@@ -395,7 +395,6 @@
       "@container": "@language"
     },
     "sampleSizeValue": "iliad:sampleSizeValue",
-    "speciesScientificName": "iliad:speciesScientificName",
     "wormsConcept": {
       "@id": "iliad:wormsConcept",
       "@type": "@id"
@@ -478,6 +477,11 @@
       "@id": "geojson:geometry",
       "@container": "@list"
     },
+    "speciesScientificName": "iliad:speciesScientificName",
+    "aphiaId": {
+      "@id": "iliad:wormsConcept",
+      "@type": "@id"
+    },
     "PhotonFluxDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity",
     "invalidatedAtTime": {
       "@id": "http://www.w3.org/ns/prov#invalidatedAtTime",
@@ -549,6 +553,10 @@
       "@id": "http://www.opengis.net/ont/geosparql#sfWithin",
       "@type": "@id"
     },
+    "hasBoundingBox": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasBoundingBox",
+      "@type": "@id"
+    },
     "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",
     "domainIncludes": "https://schema.org/domainIncludes",
     "long": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
@@ -560,6 +568,14 @@
     },
     "measure": {
       "@id": "http://purl.org/linked-data/cube#measure",
+      "@type": "@id"
+    },
+    "attribute": {
+      "@id": "http://purl.org/linked-data/cube#attribute",
+      "@type": "@id"
+    },
+    "structure": {
+      "@id": "http://purl.org/linked-data/cube#structure",
       "@type": "@id"
     },
     "SliceKey": "http://purl.org/linked-data/cube#SliceKey",

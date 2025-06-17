@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace https://w3id.org/iliad/oim/default-context/",
+  "type": "object",
+  "properties": {
+    "@vocab": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

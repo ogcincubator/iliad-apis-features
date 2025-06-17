@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://qudt.org/schema/qudt/",
+  "type": "object",
+  "properties": {
+    "QuantityValue": {
+      "type": "string"
+    },
+    "Unit": {
+      "type": "string"
+    },
+    "quantityValue": {
+      "type": "string"
+    },
+    "numericValue": {
+      "type": "string"
+    },
+    "Quantity": {
+      "type": "string"
+    },
+    "unit": {
+      "type": "string",
+      "format": "uri"
+    },
+    "hasQuantityKind": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

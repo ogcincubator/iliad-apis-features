@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://purl.oclc.org/NET/ssnx/qu/dim#",
+  "type": "object",
+  "properties": {
+    "PhotonFluxDensity": {
+      "type": "string"
+    },
+    "Concentration": {
+      "type": "string"
+    },
+    "DiffusionCoefficient": {
+      "type": "string"
+    },
+    "Volume": {
+      "type": "string"
+    },
+    "Angle": {
+      "type": "string"
+    },
+    "TemperatureDrift": {
+      "type": "string"
+    },
+    "RotationalSpeed": {
+      "type": "string"
+    },
+    "ThermalConductivity": {
+      "type": "string"
+    },
+    "Compressibility": {
+      "type": "string"
+    },
+    "MassPerTimePerArea": {
+      "type": "string"
+    },
+    "ElectricConductivity": {
+      "type": "string"
+    },
+    "Temperature": {
+      "type": "string"
+    },
+    "EnergyFlux": {
+      "type": "string"
+    },
+    "StressOrPressure": {
+      "type": "string"
+    },
+    "Energy": {
+      "type": "string"
+    },
+    "Mass": {
+      "type": "string"
+    },
+    "Acceleration": {
+      "type": "string"
+    },
+    "MassFlowRate": {
+      "type": "string"
+    },
+    "Distance": {
+      "type": "string"
+    },
+    "Radiance": {
+      "type": "string"
+    },
+    "Duration": {
+      "type": "string"
+    },
+    "SurfaceDensity": {
+      "type": "string"
+    },
+    "Density": {
+      "type": "string"
+    },
+    "NumberPerLength": {
+      "type": "string"
+    },
+    "VolumeFlowRate": {
+      "type": "string"
+    },
+    "SpecificEntropy": {
+      "type": "string"
+    },
+    "RadianceExposure": {
+      "type": "string"
+    },
+    "VelocityOrSpeed": {
+      "type": "string"
+    },
+    "Dimensionless": {
+      "type": "string"
+    },
+    "Area": {
+      "type": "string"
+    },
+    "Power": {
+      "type": "string"
+    },
+    "EnergyDensity": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,884 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://rs.tdwg.org/dwc/terms/",
+  "type": "object",
+  "properties": {
+    "verbatimSiteDescriptions": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/hc/terms/verbatimSiteDescriptions"
+    },
+    "verbatimSiteNames": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/hc/terms/verbatimSiteNames"
+    },
+    "samplingPerformedBy": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/hc/terms/samplingPerformedBy"
+    },
+    "eventDurationUnit": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/hc/terms/eventDurationUnit"
+    },
+    "eventDuration": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/hc/terms/eventDuration"
+    },
+    "siteCount": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/hc/terms/siteCount"
+    },
+    "reportedWeather": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/hc/terms/reportedWeather"
+    },
+    "sampleSizeUnit": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/sampleSizeUnit"
+    },
+    "recordNumber": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/recordNumber"
+    },
+    "verbatimLongitude": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/verbatimLongitude"
+    },
+    "behavior": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/behavior"
+    },
+    "organismQuantity": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/organismQuantity"
+    },
+    "scientificNameID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/scientificNameID"
+    },
+    "lowestBiostratigraphicZone": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/lowestBiostratigraphicZone"
+    },
+    "earliestEonOrLowestEonothem": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem"
+    },
+    "originalNameUsageID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/originalNameUsageID"
+    },
+    "GeologicalContext": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/GeologicalContext"
+    },
+    "countryCode": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/countryCode"
+    },
+    "verbatimCoordinates": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/verbatimCoordinates"
+    },
+    "maximumDistanceAboveSurfaceInMeters": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/maximumDistanceAboveSurfaceInMeters"
+    },
+    "verbatimLocality": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/verbatimLocality"
+    },
+    "identificationReferences": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/identificationReferences"
+    },
+    "verbatimCoordinateSystem": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/verbatimCoordinateSystem"
+    },
+    "measurementType": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/measurementType"
+    },
+    "measurementAccuracy": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/measurementAccuracy"
+    },
+    "member": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/member"
+    },
+    "genus": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/genus"
+    },
+    "coordinatePrecision": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/coordinatePrecision"
+    },
+    "georeferencedDate": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/georeferencedDate"
+    },
+    "taxonomicStatus": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/taxonomicStatus"
+    },
+    "previousIdentifications": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/previousIdentifications"
+    },
+    "startDayOfYear": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/startDayOfYear"
+    },
+    "otherCatalogNumbers": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/otherCatalogNumbers"
+    },
+    "MachineObservation": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/MachineObservation"
+    },
+    "coordinateUncertaintyInMeters": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters"
+    },
+    "eventID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/eventID"
+    },
+    "Organism": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/Organism"
+    },
+    "identificationID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/identificationID"
+    },
+    "recordedByID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/recordedByID"
+    },
+    "Identification": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/Identification"
+    },
+    "country": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/country"
+    },
+    "genericName": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/genericName"
+    },
+    "decimalLongitude": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/decimalLongitude"
+    },
+    "scientificName": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/scientificName"
+    },
+    "organismQuantityType": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/organismQuantityType"
+    },
+    "catalogNumber": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/catalogNumber"
+    },
+    "continent": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/continent"
+    },
+    "minimumDistanceAboveSurfaceInMeters": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/minimumDistanceAboveSurfaceInMeters"
+    },
+    "decimalLatitude": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/decimalLatitude"
+    },
+    "higherGeographyID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/higherGeographyID"
+    },
+    "measurementDeterminedBy": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/measurementDeterminedBy"
+    },
+    "geodeticDatum": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/geodeticDatum"
+    },
+    "maximumDepthInMeters": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/maximumDepthInMeters"
+    },
+    "locationAccordingTo": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/locationAccordingTo"
+    },
+    "nameAccordingTo": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/nameAccordingTo"
+    },
+    "group": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/group"
+    },
+    "class": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/class"
+    },
+    "footprintWKT": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/footprintWKT"
+    },
+    "FossilSpecimen": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/FossilSpecimen"
+    },
+    "typeStatus": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/typeStatus"
+    },
+    "acceptedNameUsage": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/acceptedNameUsage"
+    },
+    "earliestEpochOrLowestSeries": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/earliestEpochOrLowestSeries"
+    },
+    "parentNameUsageID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/parentNameUsageID"
+    },
+    "dynamicProperties": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/dynamicProperties"
+    },
+    "caste": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/caste"
+    },
+    "footprintSpatialFit": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/footprintSpatialFit"
+    },
+    "namePublishedInYear": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/namePublishedInYear"
+    },
+    "highestBiostratigraphicZone": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/highestBiostratigraphicZone"
+    },
+    "fieldNotes": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/fieldNotes"
+    },
+    "measurementID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/measurementID"
+    },
+    "parentNameUsage": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/parentNameUsage"
+    },
+    "acceptedNameUsageID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/acceptedNameUsageID"
+    },
+    "maximumElevationInMeters": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/maximumElevationInMeters"
+    },
+    "identificationVerificationStatus": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/identificationVerificationStatus"
+    },
+    "footprintSRS": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/footprintSRS"
+    },
+    "individualCount": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/individualCount"
+    },
+    "collectionCode": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/collectionCode"
+    },
+    "lithostratigraphicTerms": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/lithostratigraphicTerms"
+    },
+    "subfamily": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/subfamily"
+    },
+    "eventType": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/eventType"
+    },
+    "associatedMedia": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/associatedMedia"
+    },
+    "Taxon": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/Taxon"
+    },
+    "vernacularName": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/vernacularName"
+    },
+    "preparations": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/preparations"
+    },
+    "Event": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/Event"
+    },
+    "institutionID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/institutionID"
+    },
+    "verbatimDepth": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/verbatimDepth"
+    },
+    "county": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/county"
+    },
+    "earliestEraOrLowestErathem": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/earliestEraOrLowestErathem"
+    },
+    "occurrenceStatus": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/occurrenceStatus"
+    },
+    "verbatimTaxonRank": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/verbatimTaxonRank"
+    },
+    "disposition": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/disposition"
+    },
+    "namePublishedInID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/namePublishedInID"
+    },
+    "dateIdentified": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/dateIdentified"
+    },
+    "organismRemarks": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/organismRemarks"
+    },
+    "latestPeriodOrHighestSystem": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/latestPeriodOrHighestSystem"
+    },
+    "taxonRemarks": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/taxonRemarks"
+    },
+    "georeferencedBy": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/georeferencedBy"
+    },
+    "verbatimElevation": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/verbatimElevation"
+    },
+    "higherClassification": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/higherClassification"
+    },
+    "waterBody": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/waterBody"
+    },
+    "namePublishedIn": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/namePublishedIn"
+    },
+    "organismID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/organismID"
+    },
+    "stateProvince": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/stateProvince"
+    },
+    "endDayOfYear": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/endDayOfYear"
+    },
+    "geologicalContextID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/geologicalContextID"
+    },
+    "pathway": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/pathway"
+    },
+    "parentEventID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/parentEventID"
+    },
+    "datasetName": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/datasetName"
+    },
+    "measurementMethod": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/measurementMethod"
+    },
+    "verbatimLatitude": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/verbatimLatitude"
+    },
+    "parentMeasurementID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/parentMeasurementID"
+    },
+    "tribe": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/tribe"
+    },
+    "superfamily": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/superfamily"
+    },
+    "sampleSizeValue": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/sampleSizeValue"
+    },
+    "LivingSpecimen": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/LivingSpecimen"
+    },
+    "locationRemarks": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/locationRemarks"
+    },
+    "higherGeography": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/higherGeography"
+    },
+    "informationWithheld": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/informationWithheld"
+    },
+    "organismName": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/organismName"
+    },
+    "institutionCode": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/institutionCode"
+    },
+    "occurrenceID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/occurrenceID"
+    },
+    "measurementUnit": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/measurementUnit"
+    },
+    "HumanObservation": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/HumanObservation"
+    },
+    "associatedSequences": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/associatedSequences"
+    },
+    "phylum": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/phylum"
+    },
+    "fieldNumber": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/fieldNumber"
+    },
+    "relationshipRemarks": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/relationshipRemarks"
+    },
+    "infragenericEpithet": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/infragenericEpithet"
+    },
+    "resourceRelationshipID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/resourceRelationshipID"
+    },
+    "relationshipOfResource": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/relationshipOfResource"
+    },
+    "habitat": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/habitat"
+    },
+    "materialSampleID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/materialSampleID"
+    },
+    "georeferenceVerificationStatus": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/georeferenceVerificationStatus"
+    },
+    "bed": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/bed"
+    },
+    "locality": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/locality"
+    },
+    "MaterialCitation": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/MaterialCitation"
+    },
+    "associatedTaxa": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/associatedTaxa"
+    },
+    "measurementDeterminedDate": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/measurementDeterminedDate"
+    },
+    "order": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/order"
+    },
+    "vitality": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/vitality"
+    },
+    "minimumDepthInMeters": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/minimumDepthInMeters"
+    },
+    "samplingEffort": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/samplingEffort"
+    },
+    "eventDate": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/eventDate"
+    },
+    "Occurrence": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/Occurrence"
+    },
+    "year": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/year"
+    },
+    "family": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/family"
+    },
+    "georeferenceSources": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/georeferenceSources"
+    },
+    "MaterialSample": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/MaterialSample"
+    },
+    "island": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/island"
+    },
+    "taxonRank": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/taxonRank"
+    },
+    "locationID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/locationID"
+    },
+    "identificationRemarks": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/identificationRemarks"
+    },
+    "associatedOrganisms": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/associatedOrganisms"
+    },
+    "subgenus": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/subgenus"
+    },
+    "relationshipOfResourceID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/relationshipOfResourceID"
+    },
+    "earliestAgeOrLowestStage": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/earliestAgeOrLowestStage"
+    },
+    "kingdom": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/kingdom"
+    },
+    "latestEonOrHighestEonothem": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/latestEonOrHighestEonothem"
+    },
+    "taxonConceptID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/taxonConceptID"
+    },
+    "islandGroup": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/islandGroup"
+    },
+    "establishmentMeans": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/establishmentMeans"
+    },
+    "relationshipEstablishedDate": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/relationshipEstablishedDate"
+    },
+    "identifiedBy": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/identifiedBy"
+    },
+    "sex": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/sex"
+    },
+    "verbatimLabel": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/verbatimLabel"
+    },
+    "verbatimEventDate": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/verbatimEventDate"
+    },
+    "month": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/month"
+    },
+    "taxonID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/taxonID"
+    },
+    "municipality": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/municipality"
+    },
+    "nomenclaturalStatus": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/nomenclaturalStatus"
+    },
+    "samplingProtocol": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/samplingProtocol"
+    },
+    "earliestPeriodOrLowestSystem": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/earliestPeriodOrLowestSystem"
+    },
+    "lifeStage": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/lifeStage"
+    },
+    "basisOfRecord": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/basisOfRecord"
+    },
+    "day": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/day"
+    },
+    "verticalDatum": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/verticalDatum"
+    },
+    "latestEpochOrHighestSeries": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/latestEpochOrHighestSeries"
+    },
+    "originalNameUsage": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/originalNameUsage"
+    },
+    "cultivarEpithet": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/cultivarEpithet"
+    },
+    "identifiedByID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/identifiedByID"
+    },
+    "reproductiveCondition": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/reproductiveCondition"
+    },
+    "latestEraOrHighestErathem": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/latestEraOrHighestErathem"
+    },
+    "datasetID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/datasetID"
+    },
+    "scientificNameAuthorship": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/scientificNameAuthorship"
+    },
+    "collectionID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/collectionID"
+    },
+    "pointRadiusSpatialFit": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/pointRadiusSpatialFit"
+    },
+    "nameAccordingToID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/nameAccordingToID"
+    },
+    "subtribe": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/subtribe"
+    },
+    "georeferenceProtocol": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/georeferenceProtocol"
+    },
+    "eventRemarks": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/eventRemarks"
+    },
+    "minimumElevationInMeters": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/minimumElevationInMeters"
+    },
+    "verbatimSRS": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/verbatimSRS"
+    },
+    "degreeOfEstablishment": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/degreeOfEstablishment"
+    },
+    "MeasurementOrFact": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/MeasurementOrFact"
+    },
+    "identificationQualifier": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/identificationQualifier"
+    },
+    "infraspecificEpithet": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/infraspecificEpithet"
+    },
+    "latestAgeOrHighestStage": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/latestAgeOrHighestStage"
+    },
+    "dataGeneralizations": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/dataGeneralizations"
+    },
+    "ResourceRelationship": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/ResourceRelationship"
+    },
+    "eventTime": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/eventTime"
+    },
+    "verbatimIdentification": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/verbatimIdentification"
+    },
+    "PreservedSpecimen": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/PreservedSpecimen"
+    },
+    "associatedReferences": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/associatedReferences"
+    },
+    "recordedBy": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/recordedBy"
+    },
+    "specificEpithet": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/specificEpithet"
+    },
+    "formation": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/formation"
+    },
+    "nomenclaturalCode": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/nomenclaturalCode"
+    },
+    "ownerInstitutionCode": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/ownerInstitutionCode"
+    },
+    "relatedResourceID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/relatedResourceID"
+    },
+    "measurementValue": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/measurementValue"
+    },
+    "occurrenceRemarks": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/occurrenceRemarks"
+    },
+    "measurementRemarks": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/measurementRemarks"
+    },
+    "georeferenceRemarks": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/georeferenceRemarks"
+    },
+    "organismScope": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/organismScope"
+    },
+    "resourceID": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/resourceID"
+    },
+    "associatedOccurrences": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/associatedOccurrences"
+    },
+    "relationshipAccordingTo": {
+      "type": "string",
+      "x-jsonld-id": "http://rs.tdwg.org/dwc/terms/relationshipAccordingTo"
+    }
+  },
+  "additionalProperties": true,
+  "x-jsonld-prefixes": {
+    "hc": "http://rs.tdwg.org/hc/terms/",
+    "dwc": "http://rs.tdwg.org/dwc/terms/"
+  }
+}

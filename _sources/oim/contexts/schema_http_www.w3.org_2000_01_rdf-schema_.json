@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://www.w3.org/2000/01/rdf-schema#",
+  "type": "object",
+  "properties": {
+    "Class": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "isDefinedBy": {
+      "type": "string"
+    },
+    "seeAlso": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

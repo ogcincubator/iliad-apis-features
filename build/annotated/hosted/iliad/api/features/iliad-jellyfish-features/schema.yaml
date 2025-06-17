@@ -1,0 +1,57 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Schemas for Ocean Information Model Observations
+$defs:
+  OIMObsProps:
+    allOf:
+    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsProps
+    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+    - properties:
+        hasResult:
+          type: object
+          properties:
+            densityOfJellyFish:
+              type: string
+              enum:
+              - None
+              - Some
+              - Swarm
+              - Few
+              x-jsonld-id: https://w3id.org/iliad/oim/default-context/densityOfJellyFish
+            stingByJellyFish:
+              type: string
+              x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish
+            strandedJellyFish:
+              type: string
+              x-jsonld-id: https://w3id.org/iliad/oim/default-context/strandedJellyFish
+          x-jsonld-id: https://w3id.org/iliad/oim/default-context/hasResult
+  OIMObsFeature:
+    allOf:
+    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsFeature
+    - properties:
+        properties:
+          $ref: '#/$defs/OIMObsProps'
+          x-jsonld-id: https://w3id.org/iliad/oim/default-context/properties
+  OIMObsCollection:
+    allOf:
+    - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsCollection
+    - properties:
+        features:
+          type: array
+          items:
+            allOf:
+            - $ref: '#/$defs/OIMObsFeature'
+          x-jsonld-id: https://w3id.org/iliad/oim/default-context/features
+anyOf:
+- $ref: '#/$defs/OIMObsProps'
+- $ref: '#/$defs/OIMObsFeature'
+- $ref: '#/$defs/OIMObsCollection'
+x-jsonld-extra-terms:
+  strandedJellyfish: https://w3id.org/iliad/oim/ext/jellyfish/strandedJellyfish
+  JellyFishAbundance: https://w3id.org/iliad/oim/ext/jellyfish/JellyFishAbundance
+  HumanSensor: https://w3id.org/iliad/oim/ext/jellyfish/HumanSensor
+  distanceWalkedInMeters: https://w3id.org/iliad/oim/ext/jellyfish/distanceWalkedInMeters
+  distanceFromShore: https://w3id.org/iliad/oim/ext/jellyfish/distanceFromShore
+  agentConfidence: https://w3id.org/iliad/oim/ext/jellyfish/agentConfidence
+x-jsonld-vocab: https://w3id.org/iliad/oim/default-context/
+x-jsonld-prefixes:
+  jfsites: https://w3id.org/iliad/sites/jfpilot/

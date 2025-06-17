@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://purl.org/dc/terms/",
+  "type": "object",
+  "properties": {
+    "spatial": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string"
+    },
+    "bibliographicCitation": {
+      "type": "string"
+    },
+    "references": {
+      "type": "string"
+    },
+    "Location": {
+      "type": "string"
+    },
+    "rightsHolder": {
+      "type": "string"
+    },
+    "creator": {
+      "type": "string"
+    },
+    "rights": {
+      "type": "string"
+    },
+    "identifier": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "resourceType": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "modified": {
+      "type": "string"
+    },
+    "accessRights": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "contributor": {
+      "type": "string"
+    },
+    "PeriodOfTime": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "temporal": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

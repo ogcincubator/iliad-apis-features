@@ -4,5 +4,7 @@
   "epsg_code": "EPSG:4326",
   "grid_mapping_name": "latitude_longitude",
   "inverse_flattening": 298.257223563,
-  "semi_major_axis": 6378137.0
+  "semi_major_axis": 6378137,
+  "sdn_parameter_urn": null,
+  "sdn_uom_urn": null
 }

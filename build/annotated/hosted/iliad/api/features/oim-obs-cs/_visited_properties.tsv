@@ -11,8 +11,10 @@ path	@id
 /hasSimpleResult	
 /label	http://www.w3.org/2000/01/rdf-schema#label
 /sampleSizeValue	https://w3id.org/iliad/property/sampleSizeValue
-/speciesScientificName	https://w3id.org/iliad/property/speciesScientificName
+/scientificName	
+/scientificNameID	
 /wormsConcept	https://w3id.org/iliad/property/wormsConcept
+/aphiaID	
 /type	@type
 /id	@id
 /properties	@nest

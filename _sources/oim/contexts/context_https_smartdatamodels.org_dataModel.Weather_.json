@@ -1,0 +1,52 @@
+{
+  "@context": {
+    "snowHeight": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/snowHeight"
+    },
+    "streamGauge": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/streamGauge"
+    },
+    "windDirection": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/windDirection"
+    },
+    "WeatherForecast": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/WeatherForecast"
+    },
+    "visibility": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/visibility"
+    },
+    "temperature": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/temperature"
+    },
+    "atmosphericPressure": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/atmosphericPressure"
+    },
+    "pressureTendency": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/pressureTendency"
+    },
+    "weatherType": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/weatherType"
+    },
+    "dewPoint": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/dewPoint"
+    },
+    "solarRadiation": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/solarRadiation"
+    },
+    "relativeHumidity": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/relativeHumidity"
+    },
+    "airTemperatureForecast": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/airTemperatureForecast"
+    },
+    "precipitation": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/precipitation"
+    },
+    "windSpeed": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/windSpeed"
+    },
+    "illuminance": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/illuminance"
+    }
+  }
+}

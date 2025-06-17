@@ -1,0 +1,5 @@
+$schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/semantic-uplift.schema.yaml
+
+additionalSteps:
+  - type: jq
+    ref: uplift.jq

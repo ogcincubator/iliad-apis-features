@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace https://smartdatamodels.org/dataModel.Weather/",
+  "type": "object",
+  "properties": {
+    "WeatherObserved": {
+      "type": "string"
+    },
+    "snowHeight": {
+      "type": "string"
+    },
+    "streamGauge": {
+      "type": "string"
+    },
+    "windDirection": {
+      "type": "string"
+    },
+    "WeatherForecast": {
+      "type": "string"
+    },
+    "visibility": {
+      "type": "string"
+    },
+    "temperature": {
+      "type": "string"
+    },
+    "atmosphericPressure": {
+      "type": "string"
+    },
+    "pressureTendency": {
+      "type": "string"
+    },
+    "weatherType": {
+      "type": "string"
+    },
+    "dewPoint": {
+      "type": "string"
+    },
+    "solarRadiation": {
+      "type": "string"
+    },
+    "relativeHumidity": {
+      "type": "string"
+    },
+    "airTemperatureForecast": {
+      "type": "string"
+    },
+    "precipitation": {
+      "type": "string"
+    },
+    "windSpeed": {
+      "type": "string"
+    },
+    "illuminance": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

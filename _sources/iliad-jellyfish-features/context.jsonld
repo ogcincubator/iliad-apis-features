@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/iliad/oim/default-context/",
+    "jfsites": "https://w3id.org/iliad/sites/jfpilot/",
+    "strandedJellyfish": {
+      "@id": "https://w3id.org/iliad/oim/ext/jellyfish/strandedJellyfish"
+    },
+    "JellyFishAbundance": {
+      "@id": "https://w3id.org/iliad/oim/ext/jellyfish/JellyFishAbundance"
+    },
+    "stingByJellyFish": {
+      "@id": "https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish"
+    },
+    "HumanSensor": {
+      "@id": "https://w3id.org/iliad/oim/ext/jellyfish/HumanSensor"
+    },
+    "distanceWalkedInMeters": {
+      "@id": "https://w3id.org/iliad/oim/ext/jellyfish/distanceWalkedInMeters"
+    },
+    "distanceFromShore": {
+      "@id": "https://w3id.org/iliad/oim/ext/jellyfish/distanceFromShore"
+    },
+    "agentConfidence": {
+      "@id": "https://w3id.org/iliad/oim/ext/jellyfish/agentConfidence"
+    }
+  }
+}

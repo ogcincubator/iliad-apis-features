@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://www.w3.org/ns/ssn/",
+  "type": "object",
+  "properties": {
+    "implements": {
+      "type": "string"
+    },
+    "Deployment": {
+      "type": "string"
+    },
+    "hasOutput": {
+      "type": "string"
+    },
+    "inDeployment": {
+      "type": "string"
+    },
+    "hasProperty": {
+      "type": "string",
+      "format": "uri"
+    },
+    "hasInput": {
+      "type": "string"
+    },
+    "implementedBy": {
+      "type": "string"
+    },
+    "hasSubSystem": {
+      "type": "string"
+    },
+    "hasDeployment": {
+      "type": "string"
+    },
+    "deployedSystem": {
+      "type": "string"
+    },
+    "System": {
+      "type": "string"
+    },
+    "deployedOnPlatform": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

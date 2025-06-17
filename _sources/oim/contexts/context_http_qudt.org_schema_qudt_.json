@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "numericValue": {
+      "@id": "http://qudt.org/schema/qudt/numericValue"
+    },
+    "Quantity": {
+      "@id": "http://qudt.org/schema/qudt/Quantity"
+    },
+    "unit": {
+      "@id": "http://qudt.org/schema/qudt/unit",
+      "@type": "@id"
+    },
+    "hasQuantityKind": {
+      "@id": "http://qudt.org/schema/qudt/hasQuantityKind"
+    }
+  }
+}

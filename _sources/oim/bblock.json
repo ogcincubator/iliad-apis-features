@@ -1,0 +1,33 @@
+{
+  "name": "Oceans Information Model",
+  "abstract": "Defines a composable Building Block view of the Oceans Information Model. This view breaks down the OIM into a set of clear dependencies and profiling layers on top of the underlying common Cross Domain Model",
+  "status": "under-development",
+  "dateTimeAddition": "2023-09-18T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0",
+  "dateOfLastChange": "2025-05-22",
+  "dependsOn": [
+    "ogc.model.cross-domain.all"
+  ],
+  "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",
+  "shaclRules": [
+  ],
+  "sources": [
+    {
+      "title": "OIM master repository",
+      "link": "https://github.com/ILIAD-ocean-twin/OIM"
+    },
+    {
+      "title": "Cross Domain Model Building Blocks",
+      "link": "https://github.com/ILIAD-ocean-twin/OIM"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "iliad",
+    "oim",
+    "citizen-science",
+    "project"
+  ]
+}

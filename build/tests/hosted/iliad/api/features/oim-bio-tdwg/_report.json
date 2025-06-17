@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.hosted.iliad.api.features.oim-bio-tdwg - OIM Biodiversity - TDWG",
+  "bblockName": "OIM Biodiversity - TDWG",
+  "bblockId": "ogc.hosted.iliad.api.features.oim-bio-tdwg",
+  "generated": "2025-06-05T02:29:47.925665+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

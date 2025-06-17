@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Schema for namespace http://www.w3.org/ns/prov#",
+  "type": "object",
+  "properties": {
+    "invalidatedAtTime": {
+      "type": "string"
+    },
+    "generatedAtTime": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

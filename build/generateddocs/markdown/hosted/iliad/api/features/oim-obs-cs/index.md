@@ -33,14 +33,18 @@ $defs:
         sampleSizeValue:
           type: string
           x-jsonld-id: https://w3id.org/iliad/property/sampleSizeValue
-        speciesScientificName:
+        scientificName:
           type: string
-          x-jsonld-id: https://w3id.org/iliad/property/speciesScientificName
+        scientificNameID:
+          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
         wormsConcept:
           type: string
           pattern: ^https://marinespecies\.org/.*
           x-jsonld-id: https://w3id.org/iliad/property/wormsConcept
           x-jsonld-type: '@id'
+        aphiaID:
+          type: string
+          pattern: ^https://marinespecies\.org/.*
   OIMObsFeature:
     allOf:
     - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml#/$defs/OIMObsFeature
@@ -60,6 +64,11 @@ anyOf:
 - $ref: '#/$defs/OIMObsProps'
 - $ref: '#/$defs/OIMObsFeature'
 - $ref: '#/$defs/OIMObsCollection'
+x-jsonld-extra-terms:
+  speciesScientificName: https://w3id.org/iliad/property/speciesScientificName
+  aphiaId:
+    x-jsonld-id: https://w3id.org/iliad/property/wormsConcept
+    x-jsonld-type: '@id'
 x-jsonld-prefixes:
   iliad: https://w3id.org/iliad/property/
 
@@ -471,7 +480,6 @@ Links to the schema:
       "@container": "@language"
     },
     "sampleSizeValue": "iliad:sampleSizeValue",
-    "speciesScientificName": "iliad:speciesScientificName",
     "wormsConcept": {
       "@id": "iliad:wormsConcept",
       "@type": "@id"
@@ -554,6 +562,11 @@ Links to the schema:
       "@id": "geojson:geometry",
       "@container": "@list"
     },
+    "speciesScientificName": "iliad:speciesScientificName",
+    "aphiaId": {
+      "@id": "iliad:wormsConcept",
+      "@type": "@id"
+    },
     "PhotonFluxDensity": "http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity",
     "invalidatedAtTime": {
       "@id": "http://www.w3.org/ns/prov#invalidatedAtTime",
@@ -625,6 +638,10 @@ Links to the schema:
       "@id": "http://www.opengis.net/ont/geosparql#sfWithin",
       "@type": "@id"
     },
+    "hasBoundingBox": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasBoundingBox",
+      "@type": "@id"
+    },
     "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",
     "domainIncludes": "https://schema.org/domainIncludes",
     "long": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
@@ -636,6 +653,14 @@ Links to the schema:
     },
     "measure": {
       "@id": "http://purl.org/linked-data/cube#measure",
+      "@type": "@id"
+    },
+    "attribute": {
+      "@id": "http://purl.org/linked-data/cube#attribute",
+      "@type": "@id"
+    },
+    "structure": {
+      "@id": "http://purl.org/linked-data/cube#structure",
       "@type": "@id"
     },
     "SliceKey": "http://purl.org/linked-data/cube#SliceKey",
@@ -835,7 +860,7 @@ You can find the full JSON-LD context here:
 
 ## Sources
 
-* [Reference to ILIAD](https://example.com/sources/1)
+* [Ocean Information Model](https://github.com/ILIAD-ocean-twin/OIM)
 
 # For developers
 

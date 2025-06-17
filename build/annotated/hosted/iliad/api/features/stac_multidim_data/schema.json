@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "A OIM aligned Records schema",
   "description": "Component of Records conformant with STAC. no particular added constraints are added for selected extensions",
-  "$ref": "https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/dcat-records/schema.json",
+  "$ref": "https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/stac/geodcat-stac-item/schema.json",
   "x-jsonld-extra-terms": {
     "IndexAxisType": "http://www.opengis.net/cis/1.1/IndexAxisType",
     "spatial": "http://purl.org/dc/terms/spatial",
@@ -744,6 +744,10 @@
       "x-jsonld-id": "http://www.opengis.net/ont/geosparql#sfWithin",
       "x-jsonld-type": "@id"
     },
+    "hasBoundingBox": {
+      "x-jsonld-id": "http://www.opengis.net/ont/geosparql#hasBoundingBox",
+      "x-jsonld-type": "@id"
+    },
     "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",
     "hasUltimateFeatureOfInterest": {
       "x-jsonld-id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest",
@@ -759,6 +763,10 @@
     "Feature": "https://purl.org/geojson/vocab#Feature",
     "LineString": "https://purl.org/geojson/vocab#LineString",
     "numericValue": "http://qudt.org/schema/qudt/numericValue",
+    "attribute": {
+      "x-jsonld-id": "http://purl.org/linked-data/cube#attribute",
+      "x-jsonld-type": "@id"
+    },
     "SliceKey": "http://purl.org/linked-data/cube#SliceKey",
     "Result": "http://www.w3.org/ns/sosa/Result",
     "isHostedBy": {

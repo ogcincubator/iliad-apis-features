@@ -144,6 +144,9 @@ x-jsonld-extra-terms:
   sfWithin:
     x-jsonld-id: http://www.opengis.net/ont/geosparql#sfWithin
     x-jsonld-type: '@id'
+  hasBoundingBox:
+    x-jsonld-id: http://www.opengis.net/ont/geosparql#hasBoundingBox
+    x-jsonld-type: '@id'
   ThermalConductivity: http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity
   hasUltimateFeatureOfInterest:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest
@@ -163,6 +166,12 @@ x-jsonld-extra-terms:
     x-jsonld-type: '@id'
   measure:
     x-jsonld-id: http://purl.org/linked-data/cube#measure
+    x-jsonld-type: '@id'
+  attribute:
+    x-jsonld-id: http://purl.org/linked-data/cube#attribute
+    x-jsonld-type: '@id'
+  structure:
+    x-jsonld-id: http://purl.org/linked-data/cube#structure
     x-jsonld-type: '@id'
   SliceKey: http://purl.org/linked-data/cube#SliceKey
   Result: http://www.w3.org/ns/sosa/Result
@@ -953,6 +962,10 @@ Links to the schema:
       "@id": "http://www.opengis.net/ont/geosparql#sfWithin",
       "@type": "@id"
     },
+    "hasBoundingBox": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasBoundingBox",
+      "@type": "@id"
+    },
     "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",
     "domainIncludes": "https://schema.org/domainIncludes",
     "long": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
@@ -964,6 +977,14 @@ Links to the schema:
     },
     "measure": {
       "@id": "http://purl.org/linked-data/cube#measure",
+      "@type": "@id"
+    },
+    "attribute": {
+      "@id": "http://purl.org/linked-data/cube#attribute",
+      "@type": "@id"
+    },
+    "structure": {
+      "@id": "http://purl.org/linked-data/cube#structure",
       "@type": "@id"
     },
     "SliceKey": "http://purl.org/linked-data/cube#SliceKey",
@@ -1163,7 +1184,7 @@ You can find the full JSON-LD context here:
 
 ## Sources
 
-* [Reference to ILIAD](https://example.com/sources/1)
+* [OIM master repository](https://github.com/ILIAD-ocean-twin/OIM)
 
 # For developers
 

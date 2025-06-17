@@ -14,15 +14,21 @@
               "type": "string",
               "x-jsonld-id": "https://w3id.org/iliad/property/sampleSizeValue"
             },
-            "speciesScientificName": {
-              "type": "string",
-              "x-jsonld-id": "https://w3id.org/iliad/property/speciesScientificName"
+            "scientificName": {
+              "type": "string"
+            },
+            "scientificNameID": {
+              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
             },
             "wormsConcept": {
               "type": "string",
               "pattern": "^https://marinespecies\\.org/.*",
               "x-jsonld-id": "https://w3id.org/iliad/property/wormsConcept",
               "x-jsonld-type": "@id"
+            },
+            "aphiaID": {
+              "type": "string",
+              "pattern": "^https://marinespecies\\.org/.*"
             }
           }
         }
@@ -75,6 +81,13 @@
       "$ref": "#/$defs/OIMObsCollection"
     }
   ],
+  "x-jsonld-extra-terms": {
+    "speciesScientificName": "https://w3id.org/iliad/property/speciesScientificName",
+    "aphiaId": {
+      "x-jsonld-id": "https://w3id.org/iliad/property/wormsConcept",
+      "x-jsonld-type": "@id"
+    }
+  },
   "x-jsonld-prefixes": {
     "iliad": "https://w3id.org/iliad/property/"
   }

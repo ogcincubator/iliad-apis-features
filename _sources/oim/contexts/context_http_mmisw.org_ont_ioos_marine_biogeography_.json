@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "visibilityInMeters": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/visibilityInMeters"
+    },
+    "observationLocation": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/observationLocation"
+    },
+    "observedMinLengthInCm": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/observedMinLengthInCm"
+    },
+    "sightingCue": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/sightingCue"
+    },
+    "waterTemperatureInCelsius": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/waterTemperatureInCelsius"
+    },
+    "visibilityType": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/visibilityType"
+    },
+    "quantificationMethod": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/quantificationMethod"
+    },
+    "lengthType": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/lengthType"
+    },
+    "sampleVolumeInCubicMeters": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/sampleVolumeInCubicMeters"
+    },
+    "sightingDistanceInMeters": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/sightingDistanceInMeters"
+    },
+    "sampleAreaInSquareMeters": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/sampleAreaInSquareMeters"
+    },
+    "observedMaxLengthInCm": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/observedMaxLengthInCm"
+    },
+    "aphiaID": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/aphiaID"
+    },
+    "sampleHeightInMeters": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/sampleHeightInMeters"
+    },
+    "totalInSample": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/totalInSample"
+    },
+    "observedIndividualLengthInCm": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/observedIndividualLengthInCm"
+    },
+    "observedMeanLengthInCm": {
+      "@id": "http://mmisw.org/ont/ioos/marine_biogeography/observedMeanLengthInCm"
+    }
+  }
+}

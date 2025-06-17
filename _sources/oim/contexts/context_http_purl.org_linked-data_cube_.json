@@ -1,0 +1,69 @@
+{
+  "@context": {
+    "component": {
+      "@id": "http://purl.org/linked-data/cube#component"
+    },
+    "measure": {
+      "@id": "http://purl.org/linked-data/cube#measure",
+      "@type": "@id"
+    },
+    "attribute": {
+      "@id": "http://purl.org/linked-data/cube#attribute",
+      "@type": "@id"
+    },
+    "structure": {
+      "@id": "http://purl.org/linked-data/cube#structure",
+      "@type": "@id"
+    },
+    "SliceKey": {
+      "@id": "http://purl.org/linked-data/cube#SliceKey"
+    },
+    "ComponentSet": {
+      "@id": "http://purl.org/linked-data/cube#ComponentSet"
+    },
+    "observationGroup": {
+      "@id": "http://purl.org/linked-data/cube#observationGroup"
+    },
+    "ComponentSpecification": {
+      "@id": "http://purl.org/linked-data/cube#ComponentSpecification"
+    },
+    "DimensionProperty": {
+      "@id": "http://purl.org/linked-data/cube#DimensionProperty"
+    },
+    "MeasureProperty": {
+      "@id": "http://purl.org/linked-data/cube#MeasureProperty"
+    },
+    "sliceStructure": {
+      "@id": "http://purl.org/linked-data/cube#sliceStructure"
+    },
+    "CodedProperty": {
+      "@id": "http://purl.org/linked-data/cube#CodedProperty"
+    },
+    "slice": {
+      "@id": "http://purl.org/linked-data/cube#slice",
+      "@type": "@id"
+    },
+    "ObservationGroup": {
+      "@id": "http://purl.org/linked-data/cube#ObservationGroup"
+    },
+    "DataSet": {
+      "@id": "http://purl.org/linked-data/cube#DataSet"
+    },
+    "dimension": {
+      "@id": "http://purl.org/linked-data/cube#dimension",
+      "@type": "@id"
+    },
+    "observation": {
+      "@id": "http://purl.org/linked-data/cube#observation"
+    },
+    "sliceKey": {
+      "@id": "http://purl.org/linked-data/cube#sliceKey"
+    },
+    "DataStructureDefinition": {
+      "@id": "http://purl.org/linked-data/cube#DataStructureDefinition"
+    },
+    "componentProperty": {
+      "@id": "http://purl.org/linked-data/cube#componentProperty"
+    }
+  }
+}
