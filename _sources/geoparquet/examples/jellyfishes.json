@@ -1,0 +1,65 @@
+{
+    "version": "0.4.0",
+    "primary_column": "geometry",
+    "columns": {
+        "geometry": {
+            "encoding": "WKB",
+            "geometry_types": ["Point"],
+            "crs": "EPSG:4326",
+            "edges": "planar"
+        },
+        "label": {
+            "type": "struct",
+            "fields": {
+                "en": "string"
+            }
+        },
+        "phenomenonTime": "string",
+        "resultTime": "string",
+        "observedProperty": "string",
+        "basisOfRecord": "string",
+        "occurrenceStatus": "string",
+        "distanceWalkedInMeters": "string",
+        "hasFeatureOfInterest": {
+            "type": "struct",
+            "fields": {
+                "featureType": "list<string>",
+                "properties": {
+                    "type": "struct",
+                    "fields": {
+                        "lat": "double",
+                        "long": "double",
+                        "coordinateUncertaintyInMeters": "int64",
+                        "locality": "int64",
+                        "distanceFromShore": "string"
+                    }
+                },
+                "type": "string"
+            }
+        },
+        "madeBySensor": {
+            "type": "struct",
+            "fields": {
+                "type": "list<string>",
+                "label": "string",
+                "agentConfidence": "string"
+            }
+        },
+        "hasResult": {
+            "type": "struct",
+            "fields": {
+                "aphiaID": "string",
+                "individualCount": "int64",
+                "organismQuantity": "string",
+                "organismQuantityType": "string",
+                "sampleSizeUnit": "string",
+                "sampleSizeValue": "string",
+                "scientificName": "string",
+                "scientificNameID": "string",
+                "stingByJellyFish": "string",
+                "strandedJellyfish": "string",
+                "type": "list<string>"
+            }
+        }
+    }
+}
