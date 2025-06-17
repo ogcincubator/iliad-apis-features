@@ -9,14 +9,11 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "1.0",
-  "dateOfLastChange": "2025-06-05",
+  "dateOfLastChange": "2025-06-17",
   "dependsOn": [
     "ogc.model.cross-domain.all"
   ],
   "shaclRules": {
-    "ogc.model.cross-domain.qudt": [
-      "http://qudt.org/2.1/schema/shacl/qudt"
-    ],
     "ogc.model.cross-domain.sosa": [
       "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
     ],
@@ -27,6 +24,9 @@
       "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
     ],
     "ogc.model.cross-domain.prov": [
+      "https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/shapes/sh-prov-o.ttl"
+    ],
+    "ogc.model.cross-domain.qudt": [
       "http://qudt.org/2.1/schema/shacl/qudt"
     ]
   },

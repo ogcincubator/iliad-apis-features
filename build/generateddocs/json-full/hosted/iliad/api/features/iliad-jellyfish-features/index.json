@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2025-06-05",
+  "dateOfLastChange": "2025-06-17",
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [
     "ogc.hosted.iliad.api.features.oim-obs-cs",
@@ -40,9 +40,6 @@
     "ogc.sosa.properties.observation": [
       "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
     ],
-    "ogc.model.cross-domain.qudt": [
-      "http://qudt.org/2.1/schema/shacl/qudt"
-    ],
     "ogc.model.cross-domain.sosa": [
       "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
     ],
@@ -53,6 +50,9 @@
       "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
     ],
     "ogc.model.cross-domain.prov": [
+      "https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/shapes/sh-prov-o.ttl"
+    ],
+    "ogc.model.cross-domain.qudt": [
       "http://qudt.org/2.1/schema/shacl/qudt"
     ]
   },

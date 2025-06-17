@@ -1,17 +1,17 @@
-@prefix ns1: <http:/w3id.org/iliad/zarr/> .
-@prefix ns2: <http:/w3id.org/iliad/zarr/compressor/> .
+@prefix ns1: <http:/w3id.org/iliad/zarr/compressor/> .
+@prefix ns2: <http:/w3id.org/iliad/zarr/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-[] ns1:chunks 1000 ;
-    ns1:compressor [ ns2:clevel 5 ;
-            ns2:cname "lz4"^^xsd:string ;
-            ns2:id "blosc"^^xsd:string ;
-            ns2:shuffle 1 ] ;
-    ns1:dtype "<f8"^^xsd:string ;
-    ns1:fill_value "NaN"^^xsd:string ;
-    ns1:filters [ ns2:id "delta"^^xsd:string ;
-            ns1:dtype "<f8"^^xsd:string ] ;
-    ns1:order "C"^^xsd:string ;
-    ns1:shape 10000 ;
-    ns1:zarr_format 2 .
+[] ns2:chunks 1000 ;
+    ns2:compressor [ ns1:clevel 5 ;
+            ns1:cname "lz4"^^xsd:string ;
+            ns1:id "blosc"^^xsd:string ;
+            ns1:shuffle 1 ] ;
+    ns2:dtype "<f8"^^xsd:string ;
+    ns2:fill_value "NaN"^^xsd:string ;
+    ns2:filters [ ns1:id "delta"^^xsd:string ;
+            ns2:dtype "<f8"^^xsd:string ] ;
+    ns2:order "C"^^xsd:string ;
+    ns2:shape 10000 ;
+    ns2:zarr_format 2 .
 
