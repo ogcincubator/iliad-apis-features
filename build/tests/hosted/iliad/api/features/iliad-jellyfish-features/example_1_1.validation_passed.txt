@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish-features - Observations - ILIAD Jellyfish Pilot for Citizen Science
-Generated 2025-06-17T07:50:39.591549+00:00
+Generated 2025-06-18T09:48:58.530576+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting

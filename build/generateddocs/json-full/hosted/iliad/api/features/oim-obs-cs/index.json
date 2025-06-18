@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2025-06-17",
+  "dateOfLastChange": "2025-06-18",
   "link": "https://github.com/opengeospatial/bblock-tehttps://ogcincubator.github.io/cross-domain-model/mplate",
   "sources": [
     {
@@ -34,8 +34,8 @@
     ]
   },
   "dependsOn": [
-    "ogc.ogc-utils.iri-or-curie",
-    "ogc.hosted.iliad.api.features.oim-obs"
+    "ogc.hosted.iliad.api.features.oim-obs",
+    "ogc.ogc-utils.iri-or-curie"
   ],
   "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld",
   "schema": {
