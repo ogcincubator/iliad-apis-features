@@ -8,9 +8,9 @@
   "version": "1.0",
   "dateOfLastChange": "2025-09-22",
   "dependsOn": [
-    "ogc.hosted.iliad.api.features.marine-protected-area-emodnet"
+    "ogc.hosted.iliad.api.features.oim"
   ],
-  "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",
+  "ontology": "None",
   "shaclRules": [
   ],
   "sources": [
