@@ -10,9 +10,7 @@
   "register": "ogc-incubator",
   "version": "1.0",
   "dateOfLastChange": "2025-10-03",
-  "dependsOn": [
-    "ogc.hosted.iliad.api.features.oim"
-  ],
+  "dependsOn": [],
   "ontology": "None",
   "shaclRules": [],
   "sources": [
@@ -32,20 +30,7 @@
     "citizen-science",
     "project"
   ],
-  "shaclShapes": {
-    "ogc.model.cross-domain.sosa": [
-      "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
-    ],
-    "ogc.model.cross-domain.qudt": [
-      "http://qudt.org/2.1/schema/shacl/qudt"
-    ],
-    "ogc.skos.concept": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
-    ],
-    "ogc.skos.common": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
-    ]
-  },
+  "shaclShapes": {},
   "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/marine-protected-area-emodnet/",
   "rdfData": [],
   "validationPassed": true,
