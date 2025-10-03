@@ -900,12 +900,9 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
                         [ ] ] ;
             covjson:range [ a covjson:NdArray ;
                     covjson:axisNames ( "composite" ) ;
-                    covjson:dataType xsd:double ;
-                    covjson:shape ( 2 ) ],
-                [ a covjson:NdArray ;
-                    covjson:axisNames ( "composite" ) ;
                     covjson:dataType xsd:integer ;
-                    covjson:shape ( 2 ) ] ],
+                    covjson:shape ( 2 ) ],
+                <https://w3id.org/ogcincubator/coverageJSON/POTM_range> ],
         [ a covjson:Coverage ;
             covjson:domain [ a covjson:Domain ;
                     covjson:axis [ ],
@@ -914,7 +911,10 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
                     covjson:axisNames ( "composite" ) ;
                     covjson:dataType xsd:integer ;
                     covjson:shape ( 2 ) ],
-                <https://w3id.org/ogcincubator/coverageJSON/POTM_range> ] ;
+                [ a covjson:NdArray ;
+                    covjson:axisNames ( "composite" ) ;
+                    covjson:dataType xsd:double ;
+                    covjson:shape ( 2 ) ] ] ;
     covjson:domain [ a covjson:Domain ;
             covjson:axis [ ] ] ;
     covjson:domainType covjsondt:MultiPoint ;
@@ -928,11 +928,11 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
             qudt:unit [ qudt:symbol "nm"^^<http://www.opengis.net/def/uom/UCUM/> ;
                     skos:prefLabel "nanometers"@en ] ;
             ssn1:observedProperty <https://qudt.org/vocab/unit/NanoM> ] ;
-    covjson:referencing [ covjson:referenceSystem [ a inspiregloss:TemporalReferenceSystem ;
-                    covjson:calendar <http://www.opengis.net/def/uom/ISO-8601/0/Gregorian> ] ],
-        [ covjson:referenceSystem [ a ignf:VerticalCRS ;
+    covjson:referencing [ covjson:referenceSystem [ a ignf:VerticalCRS ;
                     ignf:coordinateSystem [ covjson:coordinateSystemAxes ( [ ignf:axisDirection "down" ;
                                         qudt:unit [ qudt:symbol "Pa" ] ] ) ] ] ],
+        [ covjson:referenceSystem [ a inspiregloss:TemporalReferenceSystem ;
+                    covjson:calendar <http://www.opengis.net/def/uom/ISO-8601/0/Gregorian> ] ],
         [ covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] .
 
 

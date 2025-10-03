@@ -34,8 +34,8 @@
     ]
   },
   "dependsOn": [
-    "ogc.hosted.iliad.api.features.oim-obs",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.ogc-utils.iri-or-curie",
+    "ogc.hosted.iliad.api.features.oim-obs"
   ],
   "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld",
   "schema": {
