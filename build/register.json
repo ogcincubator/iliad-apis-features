@@ -2,7 +2,7 @@
   "name": "ILIAD API Profiles",
   "abstract": "(Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability.",
   "description": "Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. \n\nThus, a pilot project to monitor Jellyfish swarms using Citizen Science will reuse common patterns for Citizen Science observations, which in turn we reuse a common pattern for observations, using an underlying component of the OIM - the OGC Observations model (SOSA ontology). \n",
-  "modified": "2025-10-03T14:08:50.224920",
+  "modified": "2025-10-03T14:24:47.090788",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"cbdf0741daa8bb5e8edcce157ff8f4bb6d0d71fa",
@@ -189,58 +189,6 @@
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-bio-tdwg"
-        }
-      }
-    },
-    {
-      "itemIdentifier": "ogc.hosted.iliad.api.features.marine-protected-area-emodnet",
-      "name": "Marine Protected Area FeatureType Building Block",
-      "abstract": "Defines a composable Building Block view of the MPA aligned with the Oceans Information Model.",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-18T00:00:00Z",
-      "itemClass": "model",
-      "register": "ogc-incubator",
-      "version": "1.0",
-      "dateOfLastChange": "2025-10-03",
-      "dependsOn": [
-        "ogc.hosted.iliad.api.features.marine-protected-area-emodnet"
-      ],
-      "shaclRules": [],
-      "sources": [
-        {
-          "title": "OIM master repository",
-          "link": "https://github.com/ILIAD-ocean-twin/OIM"
-        },
-        {
-          "title": "Example data from EMODNet via ODP Features API",
-          "link": "https://app.hubocean.earth/catalog/dataset/0c664d20-2c3b-409e-af43-ac32610f9276/emodnet-human-activities-environment-world-database-on-protected-areas-wdpa-world-database-on-protected-areas"
-        }
-      ],
-      "scope": "dev",
-      "tags": [
-        "iliad",
-        "oim",
-        "citizen-science",
-        "project"
-      ],
-      "shaclShapes": {},
-      "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",
-      "remoteCacheDir": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/marine-protected-area-emodnet/remote_cache/",
-      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/marine-protected-area-emodnet/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/marine-protected-area-emodnet/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/marine-protected-area-emodnet/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.marine-protected-area-emodnet"
         }
       }
     },
@@ -573,10 +521,10 @@
         ]
       },
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
         "ogc.sosa.features.observationCollection",
-        "ogc.sosa.properties.observation",
-        "ogc.sosa.features.observation"
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.sosa.features.observation",
+        "ogc.sosa.properties.observation"
       ],
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
       "schema": {
@@ -702,8 +650,8 @@
         ]
       },
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.hosted.iliad.api.features.oim-obs"
+        "ogc.hosted.iliad.api.features.oim-obs",
+        "ogc.ogc-utils.iri-or-curie"
       ],
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld",
       "schema": {
@@ -793,6 +741,70 @@
       }
     },
     {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.marine-protected-area-emodnet",
+      "name": "Marine Protected Area FeatureType Building Block",
+      "abstract": "Defines a composable Building Block view of the MPA aligned with the Oceans Information Model.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-18T00:00:00Z",
+      "itemClass": "model",
+      "register": "ogc-incubator",
+      "version": "1.0",
+      "dateOfLastChange": "2025-10-03",
+      "dependsOn": [
+        "ogc.hosted.iliad.api.features.oim"
+      ],
+      "ontology": "None",
+      "shaclRules": [],
+      "sources": [
+        {
+          "title": "OIM master repository",
+          "link": "https://github.com/ILIAD-ocean-twin/OIM"
+        },
+        {
+          "title": "Example data from EMODNet via ODP Features API",
+          "link": "https://app.hubocean.earth/catalog/dataset/0c664d20-2c3b-409e-af43-ac32610f9276/emodnet-human-activities-environment-world-database-on-protected-areas-wdpa-world-database-on-protected-areas"
+        }
+      ],
+      "scope": "dev",
+      "tags": [
+        "iliad",
+        "oim",
+        "citizen-science",
+        "project"
+      ],
+      "shaclShapes": {
+        "ogc.model.cross-domain.sosa": [
+          "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
+        ],
+        "ogc.model.cross-domain.qudt": [
+          "http://qudt.org/2.1/schema/shacl/qudt"
+        ],
+        "ogc.skos.concept": [
+          "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+        ],
+        "ogc.skos.common": [
+          "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+        ]
+      },
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/marine-protected-area-emodnet/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/marine-protected-area-emodnet/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/marine-protected-area-emodnet/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.marine-protected-area-emodnet"
+        }
+      }
+    },
+    {
       "itemIdentifier": "ogc.hosted.iliad.api.features.stac_multidim_data",
       "name": "ILIAD STAC/DCAT dimensional data",
       "abstract": "Defines a mapping from STAC multi-dimensions for ILIAD - should be refactored to a general STAC multi-dimensions profile and an ILIAD sub-profile",
@@ -865,9 +877,9 @@
       "dateOfLastChange": "2025-10-03",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
+        "ogc.hosted.iliad.api.features.oim-bio-tdwg",
         "ogc.hosted.iliad.api.features.oim-obs-cs",
-        "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology",
-        "ogc.hosted.iliad.api.features.oim-bio-tdwg"
+        "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology"
       ],
       "sources": [
         {

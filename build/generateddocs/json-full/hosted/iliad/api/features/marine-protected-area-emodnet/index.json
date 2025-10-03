@@ -11,8 +11,9 @@
   "version": "1.0",
   "dateOfLastChange": "2025-10-03",
   "dependsOn": [
-    "ogc.hosted.iliad.api.features.marine-protected-area-emodnet"
+    "ogc.hosted.iliad.api.features.oim"
   ],
+  "ontology": "None",
   "shaclRules": [],
   "sources": [
     {
@@ -31,9 +32,20 @@
     "citizen-science",
     "project"
   ],
-  "shaclShapes": {},
-  "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",
-  "remoteCacheDir": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/marine-protected-area-emodnet/remote_cache/",
+  "shaclShapes": {
+    "ogc.model.cross-domain.sosa": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
+    ],
+    "ogc.model.cross-domain.qudt": [
+      "http://qudt.org/2.1/schema/shacl/qudt"
+    ],
+    "ogc.skos.concept": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+    ],
+    "ogc.skos.common": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+    ]
+  },
   "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/marine-protected-area-emodnet/",
   "rdfData": [],
   "validationPassed": true,
