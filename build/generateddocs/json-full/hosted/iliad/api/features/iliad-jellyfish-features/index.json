@@ -10,12 +10,12 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2025-06-17",
+  "dateOfLastChange": "2025-06-18",
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [
     "ogc.hosted.iliad.api.features.oim-obs-cs",
-    "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology",
-    "ogc.hosted.iliad.api.features.oim-bio-tdwg"
+    "ogc.hosted.iliad.api.features.oim-bio-tdwg",
+    "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology"
   ],
   "sources": [
     {
