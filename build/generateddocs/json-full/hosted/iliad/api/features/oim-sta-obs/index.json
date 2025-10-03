@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2025-06-18",
+  "dateOfLastChange": "2025-10-03",
   "link": "https://github.com/opengeospatial/iliad-api-features/oim-sta-obs",
   "sources": [
     {
@@ -25,7 +25,7 @@
     "sosa",
     "ditto"
   ],
-  "shaclRules": {},
+  "shaclShapes": {},
   "dependsOn": [
     "ogc.api.sta.Observation"
   ],

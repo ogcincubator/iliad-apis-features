@@ -284,7 +284,11 @@ x-jsonld-extra-terms:
   allowedInterpolation:
     x-jsonld-id: http://www.opengis.net/cis/1.1/allowedInterpolation
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
-  geometry: https://purl.org/geojson/vocab#geometry
+  geometry:
+    x-jsonld-id: https://purl.org/geojson/vocab#geometry
+    x-jsonld-type: '@id'
+    x-jsonld-context:
+      type: '@type'
   ComponentSpecification: http://purl.org/linked-data/cube#ComponentSpecification
   axisLabel:
     x-jsonld-id: http://www.opengis.net/cis/1.1/axisLabel
@@ -367,7 +371,7 @@ x-jsonld-extra-terms:
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
   source: http://purl.org/dc/terms/source
   MeasureProperty: http://purl.org/linked-data/cube#MeasureProperty
-  type: '@type'
+  type: http://purl.org/dc/terms/format
   publisher: http://purl.org/dc/terms/publisher
   mediaType: http://purl.org/dc/terms/mediaType
   uom:
@@ -833,6 +837,15 @@ x-jsonld-extra-terms:
   Point: https://purl.org/geojson/vocab#Point
   schema.name: https://schema.org/name
   QuantityKind: http://qudt.org/schema/qudt/QuantityKind
+  features:
+    x-jsonld-container: '@set'
+    x-jsonld-id: https://purl.org/geojson/vocab#features
+  id: '@id'
+  properties: '@nest'
+  links:
+    x-jsonld-context:
+      type: http://purl.org/dc/terms/type
+    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
   coordinates:
     x-jsonld-container: '@list'
     x-jsonld-id: https://purl.org/geojson/vocab#coordinates
@@ -850,15 +863,6 @@ x-jsonld-extra-terms:
   uriTemplate:
     x-jsonld-type: http://www.w3.org/2001/XMLSchema#string
     x-jsonld-id: http://www.w3.org/ns/oa#hasTarget
-  id: '@id'
-  properties: '@nest'
-  features:
-    x-jsonld-container: '@set'
-    x-jsonld-id: https://purl.org/geojson/vocab#features
-  links:
-    x-jsonld-context:
-      type: http://purl.org/dc/terms/type
-    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
   time:
     x-jsonld-id: http://purl.org/dc/terms/temporal
     x-jsonld-context:
@@ -918,9 +922,9 @@ x-jsonld-extra-terms:
       '@vocab': https://www.opengis.net/def/ogc-api/records/
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
-  oa: http://www.w3.org/ns/oa#
   dct: http://purl.org/dc/terms/
   rdfs: http://www.w3.org/2000/01/rdf-schema#
+  oa: http://www.w3.org/ns/oa#
   xsd: http://www.w3.org/2001/XMLSchema#
   w3ctime: http://www.w3.org/2006/time#
   rec: https://www.opengis.net/def/ogc-api/records/

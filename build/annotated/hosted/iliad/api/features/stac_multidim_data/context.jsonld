@@ -1,13 +1,40 @@
 {
   "@context": {
-    "type": "@type",
-    "coordinates": {
-      "@container": "@list",
-      "@id": "geojson:coordinates"
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "features": {
+      "@container": "@set",
+      "@id": "geojson:features"
+    },
+    "type": "dct:format",
+    "id": "@id",
+    "properties": "@nest",
+    "geometry": {
+      "@context": {
+        "type": "@type"
+      },
+      "@id": "geojson:geometry"
     },
     "bbox": {
       "@container": "@list",
       "@id": "geojson:bbox"
+    },
+    "links": {
+      "@context": {
+        "type": "dct:type"
+      },
+      "@id": "rdfs:seeAlso"
+    },
+    "coordinates": {
+      "@container": "@list",
+      "@id": "geojson:coordinates"
     },
     "href": {
       "@type": "@id",
@@ -29,28 +56,6 @@
       "@type": "xsd:string",
       "@id": "oa:hasTarget"
     },
-    "id": "@id",
-    "properties": "@nest",
-    "geometry": "geojson:geometry",
-    "Feature": "geojson:Feature",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "LineString": "geojson:LineString",
-    "MultiLineString": "geojson:MultiLineString",
-    "MultiPoint": "geojson:MultiPoint",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon",
-    "features": {
-      "@container": "@set",
-      "@id": "geojson:features"
-    },
-    "links": {
-      "@context": {
-        "type": "dct:type"
-      },
-      "@id": "rdfs:seeAlso"
-    },
     "time": {
       "@id": "dct:temporal",
       "@context": {
@@ -63,7 +68,7 @@
     },
     "description": {
       "@container": "@set",
-      "@id": "dct:description"
+      "@id": "http://stacspec.org/ontology/core#description"
     },
     "keywords": {
       "@container": "@set",
@@ -135,7 +140,7 @@
       "@id": "dcat:contactPoint",
       "@type": "@id"
     },
-    "license": "dcat:license",
+    "license": "http://stacspec.org/ontology/core#license",
     "rights": "dcat:rights",
     "linkTemplates": "rec:hasLinkTemplate",
     "variables": {
@@ -146,13 +151,26 @@
         "@vocab": "https://www.opengis.net/def/ogc-api/records/"
       }
     },
+    "extent": "http://stacspec.org/ontology/core#extent",
+    "datetime": {
+      "@id": "http://stacspec.org/ontology/core#datetime",
+      "@type": "xsd:dateTime"
+    },
+    "start_datetime": {
+      "@id": "http://stacspec.org/ontology/core#start_datetime",
+      "@type": "xsd:dateTime"
+    },
+    "end_datetime": {
+      "@id": "http://stacspec.org/ontology/core#end_datetime",
+      "@type": "xsd:dateTime"
+    },
     "assets": {
       "@id": "https://w3id.org/ogc/stac/core/assets",
       "@container": "@id"
     },
+    "media_type": "http://stacspec.org/ontology/core#mediaType",
     "stac_version": "stac:version",
     "stac_extensions": "stac:extensions",
-    "extent": "dct:extent",
     "IndexAxisType": "http://www.opengis.net/cis/1.1/IndexAxisType",
     "spatial": "dct:spatial",
     "previewInfo": {
@@ -272,7 +290,7 @@
       "@type": "xsd:decimal"
     },
     "QualityMetadata": "http://www.w3.org/ns/dqv#QualityMetadata",
-    "Geometry": "http://www.opengis.net/ont/geosparql#Geometry",
+    "Geometry": "geo:Geometry",
     "locn.Geometry": "http://www.w3.org/ns/locn#Geometry",
     "GridLimitsType": "http://www.opengis.net/cis/1.1/GridLimitsType",
     "hasValue": {
@@ -827,8 +845,8 @@
     "Procedure": "http://www.w3.org/ns/sosa/Procedure",
     "DiffusionCoefficient": "http://purl.oclc.org/NET/ssnx/qu/dim#DiffusionCoefficient",
     "asGeoJSON": {
-      "@id": "http://www.opengis.net/ont/geosparql#asGeoJSON",
-      "@type": "http://www.opengis.net/ont/geosparql#geoJSONLiteral"
+      "@id": "geo:asGeoJSON",
+      "@type": "geo:geoJSONLiteral"
     },
     "Volume": "http://purl.oclc.org/NET/ssnx/qu/dim#Volume",
     "Thing": "owl:Thing",
@@ -844,8 +862,8 @@
       "@type": "@id"
     },
     "asWKT": {
-      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
-      "@type": "http://www.opengis.net/ont/geosparql#wktLiteral"
+      "@id": "geo:asWKT",
+      "@type": "geo:wktLiteral"
     },
     "hasOutput": {
       "@id": "http://www.w3.org/ns/ssn/hasOutput",
@@ -862,11 +880,11 @@
     "Curve": "http://www.opengis.net/ont/sf#Curve",
     "Instant": "w3ctime:Instant",
     "sfWithin": {
-      "@id": "http://www.opengis.net/ont/geosparql#sfWithin",
+      "@id": "geo:sfWithin",
       "@type": "@id"
     },
     "hasBoundingBox": {
-      "@id": "http://www.opengis.net/ont/geosparql#hasBoundingBox",
+      "@id": "geo:hasBoundingBox",
       "@type": "@id"
     },
     "ThermalConductivity": "http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity",
@@ -932,7 +950,7 @@
     "foaf.name": "foaf:name",
     "Role": "https://schema.org/Role",
     "hasSerialization": {
-      "@id": "http://www.opengis.net/ont/geosparql#hasSerialization",
+      "@id": "geo:hasSerialization",
       "@type": "rdfs:Literal"
     },
     "hasTime": {
@@ -985,7 +1003,7 @@
     "Quantity": "http://qudt.org/schema/qudt/Quantity",
     "MassFlowRate": "http://purl.oclc.org/NET/ssnx/qu/dim#MassFlowRate",
     "qu.QuantityKind": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind",
-    "SpatialObjectCollection": "http://www.opengis.net/ont/geosparql#SpatialObjectCollection",
+    "SpatialObjectCollection": "geo:SpatialObjectCollection",
     "Distance": "http://purl.oclc.org/NET/ssnx/qu/dim#Distance",
     "deprecated": "owl:deprecated",
     "Radiance": "http://purl.oclc.org/NET/ssnx/qu/dim#Radiance",
@@ -1011,7 +1029,7 @@
       "@type": "xsd:int"
     },
     "hasGeometry": {
-      "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "@id": "geo:hasGeometry",
       "@type": "@id"
     },
     "usedProcedure": {
@@ -1020,7 +1038,7 @@
     },
     "ssn.Property": "http://www.w3.org/ns/ssn/Property",
     "sfContains": {
-      "@id": "http://www.opengis.net/ont/geosparql#sfContains",
+      "@id": "geo:sfContains",
       "@type": "@id"
     },
     "Density": "http://purl.oclc.org/NET/ssnx/qu/dim#Density",
@@ -1031,7 +1049,7 @@
       "@type": "xsd:dateTimeStamp"
     },
     "PropertyKind": "http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind",
-    "SpatialObject": "http://www.opengis.net/ont/geosparql#SpatialObject",
+    "SpatialObject": "geo:SpatialObject",
     "sliceStructure": {
       "@id": "http://purl.org/linked-data/cube#sliceStructure",
       "@type": "@id"
@@ -1136,8 +1154,8 @@
     "schema.name": "https://schema.org/name",
     "QuantityKind": "http://qudt.org/schema/qudt/QuantityKind",
     "geojson": "https://purl.org/geojson/vocab#",
-    "oa": "http://www.w3.org/ns/oa#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "w3ctime": "http://www.w3.org/2006/time#",
@@ -1151,6 +1169,7 @@
     "prov": "http://www.w3.org/ns/prov#",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "stac": "https://www.opengis.net/def/ogc-api/stac/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
     "@version": 1.1
   }
 }

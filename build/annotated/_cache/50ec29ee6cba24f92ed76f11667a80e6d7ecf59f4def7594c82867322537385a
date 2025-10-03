@@ -1,0 +1,397 @@
+{
+  "name": "Sensor Things API Building Blocks",
+  "abstract": "This is set of data [building blocks](https://ogcincubator.github.io/bblocks-docs/) describing reusable components of the Sensor Things API 1.1.  Building blocks provide elements that may be reused, and mappings to the underlying OMS model via the SOSA ontology. \n",
+  "description": "Initial work on the bblocks extraction was done for the particular cases of the Iliad project.\nThis initial draft can be missing some elements of the STA and relax on some formal constraints for the better support of the JSON Schema, OpenAPI 3.0.1 and JSON-LD specifications.\nThe mapping of schema elements to formal definitions (JSON-LD context files) shall be treated as draft proposition.\n",
+  "modified": "2025-03-21T17:06:12.606671",
+  "tooling": {
+    "bblocks-postprocess": {
+      "commitId": "\"e8df6b22cb38da4f600f3a0292c58fdef7734f97",
+      "shortCommitId": "\"e8df6b",
+      "date": "2025-03-17T08:34:25+00:00\""
+    }
+  },
+  "gitRepository": "https://github.com/ogcincubator/bblocks-sta",
+  "gitHubRepository": "https://github.com/ogcincubator/bblocks-sta/blob/master/",
+  "baseURL": "https://ogcincubator.github.io/bblocks-sta/",
+  "viewerURL": "https://ogcincubator.github.io/bblocks-sta/",
+  "validationReport": "https://ogcincubator.github.io/bblocks-sta/build/tests/report.html",
+  "imports": [
+    "https://opengeospatial.github.io/bblocks/register.json"
+  ],
+  "bblocks": [
+    {
+      "itemIdentifier": "ogc.api.sta.Observation",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+      "name": "STA Observation",
+      "highlighted": true,
+      "abstract": "Representation of the result of act of measuring or otherwise determining the value of a property. [OGC 10-004r3 / ISO 19156:2011]",
+      "status": "under-development",
+      "dateTimeAddition": "2024-02-09T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2025-03-21",
+      "link": "https://github.com/opengeospatial/bblock-template",
+      "sources": [
+        {
+          "title": "OGC SensorThings API Part 1: Sensing Version 1.1",
+          "link": "https://docs.ogc.org/is/18-088/18-088.html#observation"
+        }
+      ],
+      "maturity": "mature",
+      "scope": "unstable",
+      "tags": [
+        "STA",
+        "OMS",
+        "SOSA"
+      ],
+      "shaclRules": {},
+      "ldContext": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Observation/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-sta/_sources/Observation/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-sta/_sources/Observation/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-sta/_sources/Observation/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/bblocks-sta/blob/master/build/tests/api/sta/Observation/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Observation/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Observation/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-sta/bblock/ogc.api.sta.Observation"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.sta.Datastream",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+      "name": "STA Datastream",
+      "highlighted": true,
+      "abstract": "Metadata about a coherent set of observations, linked to value stream. [OGC 10-004r3 / ISO 19156:2011]",
+      "status": "under-development",
+      "dateTimeAddition": "2024-02-09T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2025-03-21",
+      "link": "https://github.com/opengeospatial/bblock-template",
+      "sources": [
+        {
+          "title": "OGC SensorThings API Part 1: Sensing Version 1.1",
+          "link": "https://docs.ogc.org/is/18-088/18-088.html#datastream"
+        }
+      ],
+      "maturity": "mature",
+      "scope": "unstable",
+      "tags": [
+        "STA",
+        "OMS",
+        "SOSA"
+      ],
+      "shaclRules": {},
+      "ldContext": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Datastream/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Datastream/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Datastream/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-sta/_sources/Datastream/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-sta/_sources/Datastream/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-sta/_sources/Datastream/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/bblocks-sta/blob/master/build/tests/api/sta/Datastream/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Datastream/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Datastream/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-sta/bblock/ogc.api.sta.Datastream"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.sta.FeatureOfInterest",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+      "name": "STA FeatureOfInterest (FOI)",
+      "abstract": "Representation of the result of the FeatureOfInterest. ",
+      "status": "under-development",
+      "dateTimeAddition": "2024-02-09T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2025-03-21",
+      "link": "https://github.com/opengeospatial/bblock-template",
+      "sources": [
+        {
+          "title": "OGC SensorThings API Part 1: Sensing Version 1.1",
+          "link": "https://docs.ogc.org/is/18-088/18-088.html"
+        }
+      ],
+      "maturity": "mature",
+      "scope": "unstable",
+      "tags": [
+        "templates"
+      ],
+      "shaclRules": {},
+      "ldContext": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-sta/_sources/FeatureOfInterest/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-sta/_sources/FeatureOfInterest/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-sta/_sources/FeatureOfInterest/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/bblocks-sta/blob/master/build/tests/api/sta/FeatureOfInterest/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/FeatureOfInterest/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/FeatureOfInterest/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-sta/bblock/ogc.api.sta.FeatureOfInterest"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.sta.Sensor",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+      "name": "STA Sensor",
+      "highlighted": true,
+      "abstract": "A Sensor is an instrument that observes a property or phenomenon with the goal of producing an estimate of the value of the property.",
+      "status": "under-development",
+      "dateTimeAddition": "2024-02-10T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2025-03-21",
+      "link": "https://github.com/opengeospatial/sta-bblock",
+      "sources": [
+        {
+          "title": "OGC SensorThings API Part 1: Sensing Version 1.1",
+          "link": "https://docs.ogc.org/is/18-088/18-088.html#sensor"
+        }
+      ],
+      "maturity": "mature",
+      "scope": "unstable",
+      "tags": [
+        "STA",
+        "OMS",
+        "SOSA"
+      ],
+      "shaclRules": {},
+      "ldContext": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Sensor/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Sensor/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Sensor/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-sta/_sources/Sensor/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-sta/_sources/Sensor/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-sta/_sources/Sensor/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/bblocks-sta/blob/master/build/tests/api/sta/Sensor/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Sensor/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Sensor/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-sta/bblock/ogc.api.sta.Sensor"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.sta.Thing",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+      "name": "STA Thing",
+      "highlighted": true,
+      "abstract": "A thing is an object of the physical world (physical things) or the information world (virtual things) that is capable of being identified and integrated into communication networks. [ITU-T Y.2060]",
+      "status": "under-development",
+      "dateTimeAddition": "2024-02-09T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2025-03-21",
+      "link": "https://github.com/opengeospatial/bblock-template",
+      "sources": [
+        {
+          "title": "OGC SensorThings API Part 1: Sensing Version 1.1",
+          "link": "https://docs.ogc.org/is/18-088/18-088.html#thing"
+        }
+      ],
+      "maturity": "mature",
+      "scope": "unstable",
+      "tags": [
+        "STA",
+        "OMS",
+        "SOSA"
+      ],
+      "shaclRules": {},
+      "ldContext": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Thing/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-sta/_sources/Thing/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-sta/_sources/Thing/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-sta/_sources/Thing/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/bblocks-sta/blob/master/build/tests/api/sta/Thing/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Thing/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Thing/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-sta/bblock/ogc.api.sta.Thing"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.sta.Datastream.Datastream-Values-ObsCollection",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+      "name": "STA Datastream Values as ObservationCollection",
+      "highlighted": true,
+      "abstract": "Profile of STA where the values of a Datastream are modelled as a sub-collection",
+      "status": "under-development",
+      "dateTimeAddition": "2024-02-09T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2025-03-21",
+      "link": "https://github.com/opengeospatial/bblock-template",
+      "sources": [
+        {
+          "title": "OGC SensorThings API Part 1: Sensing Version 1.1",
+          "link": "https://docs.ogc.org/is/18-088/18-088.html#datastream"
+        }
+      ],
+      "maturity": "mature",
+      "scope": "unstable",
+      "tags": [
+        "STA",
+        "OMS",
+        "SOSA"
+      ],
+      "shaclRules": {},
+      "dependsOn": [
+        "ogc.api.sta.Observation"
+      ],
+      "ldContext": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-sta/_sources/Datastream/Datastream-Values-ObsCollection/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-sta/_sources/Datastream/Datastream-Values-ObsCollection/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-sta/_sources/Datastream/Datastream-Values-ObsCollection/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/bblocks-sta/blob/master/build/tests/api/sta/Datastream/Datastream-Values-ObsCollection/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Datastream/Datastream-Values-ObsCollection/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Datastream/Datastream-Values-ObsCollection/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-sta/bblock/ogc.api.sta.Datastream.Datastream-Values-ObsCollection"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.sta.Datastream-Collection",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+      "name": "STA Datastream as ObsCollection",
+      "highlighted": true,
+      "abstract": "Metadata about a coherent set of observations - linked to a stream of observations. [OGC 10-004r3 / ISO 19156:2011]",
+      "status": "under-development",
+      "dateTimeAddition": "2024-02-09T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2025-03-21",
+      "link": "https://github.com/opengeospatial/bblock-template",
+      "sources": [
+        {
+          "title": "OGC SensorThings API Part 1: Sensing Version 1.1",
+          "link": "https://docs.ogc.org/is/18-088/18-088.html#datastream"
+        }
+      ],
+      "maturity": "mature",
+      "scope": "unstable",
+      "tags": [
+        "STA",
+        "OMS",
+        "SOSA"
+      ],
+      "shaclRules": {},
+      "dependsOn": [
+        "ogc.api.sta.Datastream"
+      ],
+      "ldContext": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-sta/_sources/Datastream-Collection/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-sta/_sources/Datastream-Collection/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-sta/_sources/Datastream-Collection/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/bblocks-sta/blob/master/build/tests/api/sta/Datastream-Collection/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Datastream-Collection/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Datastream-Collection/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-sta/bblock/ogc.api.sta.Datastream-Collection"
+        }
+      }
+    }
+  ]
+}

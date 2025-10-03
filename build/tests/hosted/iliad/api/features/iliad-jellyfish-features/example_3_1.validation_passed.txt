@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish-features - Observations - ILIAD Jellyfish Pilot for Citizen Science
-Generated 2025-06-18T09:48:59.305931+00:00
+Generated 2025-10-03T14:09:24.421010+00:00
 === Files ===
 Using example_3_1.ttl from examples
 Output Turtle example_3_1.ttl created
