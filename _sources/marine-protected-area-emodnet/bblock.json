@@ -1,0 +1,33 @@
+{
+  "name": "Marine Protected Area FeatureType Building Block",
+  "abstract": "Defines a composable Building Block view of the MPA aligned with the Oceans Information Model.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-18T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0",
+  "dateOfLastChange": "2025-09-22",
+  "dependsOn": [
+    "ogc.hosted.iliad.api.features.marine-protected-area-emodnet"
+  ],
+  "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",
+  "shaclRules": [
+  ],
+  "sources": [
+    {
+      "title": "OIM master repository",
+      "link": "https://github.com/ILIAD-ocean-twin/OIM"
+    },
+    {
+      "title": "Example data from EMODNet via ODP Features API",
+      "link": "https://app.hubocean.earth/catalog/dataset/0c664d20-2c3b-409e-af43-ac32610f9276/emodnet-human-activities-environment-world-database-on-protected-areas-wdpa-world-database-on-protected-areas"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "iliad",
+    "oim",
+    "citizen-science",
+    "project"
+  ]
+}

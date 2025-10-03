@@ -1,0 +1,127 @@
+$schema: http://json-schema.org/draft-07/schema#
+title: Schemas for Ocean Information Model Marine Protected Area
+comment: Not all the properties are formally mapped to the OIM BB, some are kept for reference. 
+allOf:
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
+- type: object
+  properties:
+    type:
+      FeatureType: string
+      const: MarineProtectedArea
+      description: The type of the feature, fixed to "MarineProtectedArea" for this feature type.
+    properties:
+      type: object
+      own_type:
+        type: string
+        description: Ownership type of the Marine Protected Area.
+      gis_area:
+        type: number
+        description: Geographic area in square kilometers.
+      verif:
+        type: string
+        description: Verification status. E.g., "Verified", "Unverified".
+      iso3:
+        type: string
+        description: ISO3 country code.
+      metadataid:
+        type: integer
+        description: Metadata identifier.
+      no_tk_area:
+        type: number
+        description: No-take area in square kilometers.
+      wdpa_pid:
+        type: string
+        description: WDPA parent identifier.
+      sub_loc:
+        type: string
+        description: Sub-location code.
+      gis_m_area:
+        type: number
+        description: Marine area in square kilometers.
+      shape_area:
+        type: number
+        description: Shape area (unit as per source).
+      desig:
+        type: string
+        description: Designation name.
+      no_take:
+        type: string
+        description: No-take status.
+      supp_info:
+        type: string
+        description: Supplementary information.
+      coast_mar:
+        type: integer
+        description: Coast/marine indicator.
+      desig_eng:
+        type: string
+        description: Designation name in English.
+      shape_leng:
+        type: number
+        description: Shape length (unit as per source).
+      country:
+        type: string
+        description: Country name.
+      marine:
+        type: string
+        description: Marine indicator.
+      mang_auth:
+        type: string
+        description: Managing authority.
+      mang_plan:
+        type: string
+        format: uri
+        description: Management plan URL.
+      int_crit:
+        type: string
+        description: International criteria.
+      rep_m_area:
+        type: number
+        description: Reported marine area.
+      rep_area:
+        type: number
+        description: Reported area.
+      gov_type:
+        type: string
+        description: Governance type.
+      desig_type:
+        type: string
+        description: Designation type.
+      cons_obj:
+        type: string
+        description: Conservation objective.
+      status_yr:
+        type: integer
+        description: Year of status.
+      wdpaid:
+        type: integer
+        description: WDPA identifier.
+      territory:
+        type: string
+        description: Territory name.
+      parent_iso:
+        type: string
+        description: Parent ISO3 code.
+      orig_name:
+        type: string
+        description: Original name.
+      status:
+        type: string
+        description: Status of the Marine Protected Area.
+      iucn_link:
+        type: string
+        description: IUCN link or reference.
+      iucn_cat:
+        type: string
+        description: IUCN category.
+      pa_def:
+        type: string
+        description: Protected area definition indicator.
+      iucn_des:
+        type: string
+        description: IUCN designation.
+      name:
+        type: string
+        description: The name of the Marine Protected Area.
+      required:
+        - name
