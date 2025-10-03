@@ -42,13 +42,23 @@ path	@id
 /place	http://purl.org/dc/terms/spatial
 /place/type	
 /place/coordRefSys	
+/place/measures	
+/place/measures/enabled	
+/place/measures/unit	
+/place/measures/description	
 /place/coordinates	
 /place/bbox	
+/place/geometries	
 /place/base	
 /place/lower	
 /place/upper	
 /place/prisms	
+/place/geometries/type	
 /geometry/coordRefSys	
+/geometry/measures	
+/geometry/measures/enabled	
+/geometry/measures/unit	
+/geometry/measures/description	
 /properties/resultTime	http://www.w3.org/ns/sosa/resultTime
 /properties/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime
 /properties/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest
@@ -90,13 +100,22 @@ path	@id
 /features/place	http://purl.org/dc/terms/spatial
 /features/place/type	
 /features/place/coordRefSys	
+/features/place/measures	
+/features/place/measures/enabled	
+/features/place/measures/unit	
+/features/place/measures/description	
 /features/place/coordinates	
 /features/place/bbox	
+/features/place/geometries	
 /features/place/base	
 /features/place/lower	
 /features/place/upper	
 /features/place/prisms	
 /features/geometry/coordRefSys	
+/features/geometry/measures	
+/features/geometry/measures/enabled	
+/features/geometry/measures/unit	
+/features/geometry/measures/description	
 /timeStamp	
 /numberMatched	
 /numberReturned	

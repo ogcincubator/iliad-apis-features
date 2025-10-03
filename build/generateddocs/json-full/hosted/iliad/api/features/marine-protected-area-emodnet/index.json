@@ -1,0 +1,44 @@
+
+
+{
+  "itemIdentifier": "ogc.hosted.iliad.api.features.marine-protected-area-emodnet",
+  "name": "Marine Protected Area FeatureType Building Block",
+  "abstract": "Defines a composable Building Block view of the MPA aligned with the Oceans Information Model.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-18T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0",
+  "dateOfLastChange": "2025-10-03",
+  "dependsOn": [
+    "ogc.hosted.iliad.api.features.marine-protected-area-emodnet"
+  ],
+  "shaclRules": [],
+  "sources": [
+    {
+      "title": "OIM master repository",
+      "link": "https://github.com/ILIAD-ocean-twin/OIM"
+    },
+    {
+      "title": "Example data from EMODNet via ODP Features API",
+      "link": "https://app.hubocean.earth/catalog/dataset/0c664d20-2c3b-409e-af43-ac32610f9276/emodnet-human-activities-environment-world-database-on-protected-areas-wdpa-world-database-on-protected-areas"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "iliad",
+    "oim",
+    "citizen-science",
+    "project"
+  ],
+  "shaclShapes": {},
+  "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",
+  "remoteCacheDir": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/marine-protected-area-emodnet/remote_cache/",
+  "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/marine-protected-area-emodnet/",
+  "rdfData": [],
+  "validationPassed": true,
+  "description": "## Marine Protected Area Building Block\n\nFeature with properties defined based on the EMODNet and OCean Data Platform properties.\nExamples in Features collection are compliant with OGC API Features and potentially with GeoJSON encoding of the WFS.\nJSON schema and context contain semantic binding to the definion of properties based on the OIM BB herein and specific context binding here.\n\n**schema-agnostic semantic interoperability**.\n  \n  - see the [README](/README.md) for more information.",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/iliad-apis-features",
+  "gitPath": "_sources/marine-protected-area-emodnet"
+}

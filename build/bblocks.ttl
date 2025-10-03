@@ -7,20 +7,35 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://ogcincubator.github.io/iliad-apis-features/build/bblocks.ttl> a prov:Entity ;
+    dct:format "text/turtle" ;
+    prov:wasAttributedTo _:Ne13191af91f349e2bc26bc14ab792139 ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            prov:endedAtTime "2025-10-03T14:09:24.528953"^^xsd:dateTime ;
+            prov:startedAtTime "2025-10-03T14:09:24.438454"^^xsd:dateTime ;
+            prov:used [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+                [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:d6718318b8cedfab51f6695270f250bd04fbc6a4" ;
+                    rdfs:seeAlso <https://ogcincubator.github.io/iliad-apis-features/build/register.json> ] ;
+            prov:wasAssociatedWith _:Ne13191af91f349e2bc26bc14ab792139 ] .
+
 <https://ogcincubator.github.io/ogc.hosted.iliad.api.features.coverageJSONFisheries> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "OGC Iliad CoverageJSON " ;
     dct:abstract "Based on CoverageJSON and Ocean Information Model"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-04-23T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverageJSONFisheries/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.coverageJSONFisheries" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverageJSONFisheries/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverageJSONFisheries/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverageJSONFisheries/index.md" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-06-18"^^xsd:date ;
+    dct:modified "2025-10-03"^^xsd:date ;
     dct:source <https://docs.ogc.org/cs/21-069r2/21-069r2.html>,
         <https://docs.ogc.org/is/09-146r8/09-146r8.html>,
         <https://ogcincubator.github.io/iliad-apis-features> ;
@@ -56,7 +71,7 @@
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.coverage_information_model" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-06-18"^^xsd:date ;
+    dct:modified "2025-10-03"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/09-146r8/09-146r8.html> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     dcat:keyword "Ogcdoc",
@@ -80,14 +95,14 @@
     rdfs:label "Observations - ILIAD Jellyfish Pilot for Citizen Science" ;
     dct:abstract "Defines a project specific interoperability profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/iliad-jellyfish-features/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.iliad-jellyfish-features" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish-features/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish-features/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/iliad-jellyfish-features/index.json" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-06-18"^^xsd:date ;
+    dct:modified "2025-10-03"^^xsd:date ;
     dct:source <https://github.com/ILIAD-ocean-twin/OIM> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     dcat:keyword "citizen-science",
@@ -107,8 +122,7 @@
         <https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl>,
         <https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl>,
         <https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl>,
-        <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl>,
-        <https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/shapes/sh-prov-o.ttl> ;
+        <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl> ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish-features/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
@@ -119,14 +133,14 @@
     rdfs:label "OIM STA Observations" ;
     dct:abstract "Defines SensorThings API Observations to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-06-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-sta-obs/index.md" ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-sta-obs/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-sta-obs" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-sta-obs/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-sta-obs" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-06-18"^^xsd:date ;
+    dct:modified "2025-10-03"^^xsd:date ;
     dct:source <https://github.com/ILIAD-ocean-twin/OIM> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     dcat:keyword "ditto",
@@ -147,14 +161,14 @@
     rdfs:label "ILIAD STAC/DCAT dimensional data" ;
     dct:abstract "Defines a mapping from STAC multi-dimensions for ILIAD - should be refactored to a general STAC multi-dimensions profile and an ILIAD sub-profile"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-10-11T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/stac_multidim_data/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.stac_multidim_data" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/stac_multidim_data/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/stac_multidim_data/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/stac_multidim_data/index.json" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-06-18"^^xsd:date ;
+    dct:modified "2025-10-03"^^xsd:date ;
     dct:source <https://example.com/sources/1> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     dcat:keyword "CF-convention",
@@ -177,14 +191,14 @@
     rdfs:label "GeoZarr Array description metadata" ;
     dct:abstract "based on the https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html and Iliad requiremnts"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-09-24T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.zarr_array_metadata" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/zarr_array_metadata/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/zarr_array_metadata/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/zarr_array_metadata/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.zarr_array_metadata" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-06-18"^^xsd:date ;
+    dct:modified "2025-10-03"^^xsd:date ;
     dct:source <https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     dcat:keyword "JSON",
@@ -216,7 +230,7 @@
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/zarr_attrs_metadata/index.json" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-06-18"^^xsd:date ;
+    dct:modified "2025-10-03"^^xsd:date ;
     dct:source <https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     dcat:keyword "JSON",
@@ -248,7 +262,7 @@
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/zarr_attrs_sdn/index.json" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-06-18"^^xsd:date ;
+    dct:modified "2025-10-03"^^xsd:date ;
     dct:source <https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     dcat:keyword "JSON",
@@ -267,6 +281,8 @@
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
+<https://app.hubocean.earth/catalog/dataset/0c664d20-2c3b-409e-af43-ac32610f9276/emodnet-human-activities-environment-world-database-on-protected-areas-wdpa-world-database-on-protected-areas> rdfs:label "Example data from EMODNet via ODP Features API" .
+
 <https://example.com/sources/1> rdfs:label "Reference to ILIAD" .
 
 <https://ogcincubator.github.io/iliad-apis-features> rdfs:label "Ocean Information Model" .
@@ -277,14 +293,14 @@
     rdfs:label "OGC CoverageJSON" ;
     dct:abstract "Based on JavaScript Object Notation (JSON), CoverageJSON is a format for publishing spatiotemporal data to the Web. The primary design goals are simplicity, machine and human readability and efficiency. While other use cases are possible, the primary CoverageJSON use case is enabling the development of interactive visual websites that display and manipulate environmental data within a web browser."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-12-01T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.coverageJSON" ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverageJSON/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverageJSON/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.coverageJSON" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverageJSON/index.json" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-06-18"^^xsd:date ;
+    dct:modified "2025-10-03"^^xsd:date ;
     dct:source <https://docs.ogc.org/cs/21-069r2/21-069r2.html>,
         <https://docs.ogc.org/is/09-146r8/09-146r8.html> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
@@ -310,14 +326,14 @@
     rdfs:label "Jellyfish Ontology" ;
     dct:abstract "Extensions Ontology for the Oceans Information Model, address specific semantics of the Jellyfish Citizen Science Observations Pilot"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.iliad-jellyfish-ontology" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish-ontology/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.iliad-jellyfish-ontology" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/iliad-jellyfish-ontology/index.json" ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2025-06-18"^^xsd:date ;
+    dct:modified "2025-10-03"^^xsd:date ;
     dct:source <https://github.com/ILIAD-ocean-twin/OIM> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     dcat:keyword "citizen-science",
@@ -329,8 +345,32 @@
     bblocks:hasShaclRule <http://qudt.org/2.1/schema/shacl/qudt>,
         <https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl>,
         <https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl>,
-        <https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl>,
-        <https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/shapes/sh-prov-o.ttl> ;
+        <https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+<https://ogcincubator.github.io/ogc.hosted.iliad.api.features.marine-protected-area-emodnet> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Model ;
+    rdfs:label "Marine Protected Area FeatureType Building Block" ;
+    dct:abstract "Defines a composable Building Block view of the MPA aligned with the Oceans Information Model."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2025-09-18T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/marine-protected-area-emodnet/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.marine-protected-area-emodnet" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/marine-protected-area-emodnet/index.json" ] ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2025-10-03"^^xsd:date ;
+    dct:source <https://app.hubocean.earth/catalog/dataset/0c664d20-2c3b-409e-af43-ac32610f9276/emodnet-human-activities-environment-world-database-on-protected-areas-wdpa-world-database-on-protected-areas>,
+        <https://github.com/ILIAD-ocean-twin/OIM> ;
+    skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
+    dcat:keyword "citizen-science",
+        "iliad",
+        "oim",
+        "project" ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.hosted.iliad.api.features.marine-protected-area-emodnet> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
@@ -340,14 +380,14 @@
     rdfs:label "Oceans Information Model" ;
     dct:abstract "Defines a composable Building Block view of the Oceans Information Model. This view breaks down the OIM into a set of clear dependencies and profiling layers on top of the underlying common Cross Domain Model"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim/index.md" ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2025-06-18"^^xsd:date ;
+    dct:modified "2025-10-03"^^xsd:date ;
     dct:source <https://github.com/ILIAD-ocean-twin/OIM> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     dcat:keyword "citizen-science",
@@ -358,8 +398,7 @@
     bblocks:hasShaclRule <http://qudt.org/2.1/schema/shacl/qudt>,
         <https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl>,
         <https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl>,
-        <https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl>,
-        <https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/shapes/sh-prov-o.ttl> ;
+        <https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
@@ -376,7 +415,7 @@
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs/index.json" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-06-18"^^xsd:date ;
+    dct:modified "2025-10-03"^^xsd:date ;
     dct:source <https://github.com/ILIAD-ocean-twin/OIM> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     dcat:keyword "ditto",
@@ -391,7 +430,7 @@
     bblocks:hasSchema <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.json>,
         <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml> ;
     bblocks:hasShaclRule <https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl>,
-        <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl> ;
+        <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl> ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
@@ -402,14 +441,14 @@
     rdfs:label "OIM Observations - Citizen Science" ;
     dct:abstract "Defines observations and collections to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-obs-cs" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs-cs/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs-cs/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs-cs/index.md" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-obs-cs" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-06-18"^^xsd:date ;
+    dct:modified "2025-10-03"^^xsd:date ;
     dct:source <https://github.com/ILIAD-ocean-twin/OIM> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     dcat:keyword "ditto",
@@ -422,7 +461,7 @@
     bblocks:hasSchema <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.json>,
         <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml> ;
     bblocks:hasShaclRule <https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl>,
-        <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl> ;
+        <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl> ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
@@ -437,14 +476,14 @@
     rdfs:label "OIM Biodiversity - TDWG" ;
     dct:abstract "Defines JSON schema properties mapped to the Taxonomic Database Working Group data model. This is based on Darwin Core."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-bio-tdwg" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-bio-tdwg/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-bio-tdwg" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-bio-tdwg/index.md" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-06-18"^^xsd:date ;
+    dct:modified "2025-10-03"^^xsd:date ;
     dct:source <https://www.tdwg.org/> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     dcat:keyword "biodiversity",
@@ -485,19 +524,9 @@ Thus, a pilot project to monitor Jellyfish swarms using Citizen Science will reu
         <https://opengeospatial.github.io/bblocks/register.json>,
         <https://opengeospatial.github.io/ogcapi-sosa/build/register.json> .
 
-[] a prov:Activity ;
-    prov:endedAtTime "2025-06-18T09:48:59.414395"^^xsd:dateTime ;
-    prov:startedAtTime "2025-06-18T09:48:59.323943"^^xsd:dateTime ;
-    prov:used [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-        [ a prov:Entity ;
-            dct:format "application/json" ;
-            dct:hasVersion "git:df1711bab497989add91330ab05fefd8fed30b5f" ;
-            rdfs:seeAlso <https://ogcincubator.github.io/iliad-apis-features/build/register.json> ] ;
-    prov:wasAssociatedWith [ a prov:Agent,
-                schema:SoftwareApplication ;
-            rdfs:label "OGC-NA tools" ;
-            dct:hasVersion "0.4" ;
-            rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] .
+_:Ne13191af91f349e2bc26bc14ab792139 a prov:Agent,
+        schema:SoftwareApplication ;
+    rdfs:label "OGC-NA tools" ;
+    dct:hasVersion "0.4.4" ;
+    rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 

@@ -12,7 +12,6 @@ path	@id
 /referencing	
 /referencing/coordinates	
 /referencing/system	
-/referencing/system/type	
 /referencing/system/calendar	
 /referencing/system/timeScale	
 /referencing/system/id	
@@ -23,10 +22,11 @@ path	@id
 /referencing/system/targetConcept/label	
 /referencing/system/targetConcept/description	
 /referencing/system/identifiers	
-/dataType	
+/referencing/system/type	
+/values	
 /shape	
 /axisNames	
-/values	
+/dataType	
 /tileSets	
 /tileSets/tileShape	
 /tileSets/urlTemplate	

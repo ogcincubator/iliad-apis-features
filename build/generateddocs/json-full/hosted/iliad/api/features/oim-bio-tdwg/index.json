@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2025-06-18",
+  "dateOfLastChange": "2025-10-03",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -25,7 +25,7 @@
     "tdwg",
     "biodiversity"
   ],
-  "shaclRules": {},
+  "shaclShapes": {},
   "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml",

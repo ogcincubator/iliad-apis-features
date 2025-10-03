@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish-features - Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "bblockName": "Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "bblockId": "ogc.hosted.iliad.api.features.iliad-jellyfish-features",
-  "generated": "2025-06-18T09:48:59.305987+00:00",
+  "generated": "2025-10-03T14:09:24.421060+00:00",
   "result": true,
   "items": [
     {
@@ -155,14 +155,14 @@
                 ":force-linked-data-observedProperty": {
                   "nodes": [
                     "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>",
-                    "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>",
+                    "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>/:properties",
                     "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>/:properties",
-                    "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>/:properties"
+                    "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>/:properties,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>/:properties\n"
+              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>/:properties,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>/:properties,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>\n"
             }
           ]
         }

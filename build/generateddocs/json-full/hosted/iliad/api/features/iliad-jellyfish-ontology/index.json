@@ -9,28 +9,12 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "1.0",
-  "dateOfLastChange": "2025-06-18",
+  "dateOfLastChange": "2025-10-03",
   "dependsOn": [
-    "ogc.hosted.iliad.api.features.oim-bio-tdwg",
-    "ogc.hosted.iliad.api.features.oim"
+    "ogc.hosted.iliad.api.features.oim",
+    "ogc.hosted.iliad.api.features.oim-bio-tdwg"
   ],
-  "shaclRules": {
-    "ogc.model.cross-domain.sosa": [
-      "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
-    ],
-    "ogc.skos.common": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
-    ],
-    "ogc.skos.concept": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
-    ],
-    "ogc.model.cross-domain.prov": [
-      "https://raw.githubusercontent.com/Cyber-Domain-Ontology/CDO-Shapes-PROV-O/refs/heads/main/shapes/sh-prov-o.ttl"
-    ],
-    "ogc.model.cross-domain.qudt": [
-      "http://qudt.org/2.1/schema/shacl/qudt"
-    ]
-  },
+  "shaclRules": [],
   "sources": [
     {
       "title": "OIM master repository",
@@ -44,6 +28,20 @@
     "citizen-science",
     "project"
   ],
+  "shaclShapes": {
+    "ogc.model.cross-domain.sosa": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
+    ],
+    "ogc.model.cross-domain.qudt": [
+      "http://qudt.org/2.1/schema/shacl/qudt"
+    ],
+    "ogc.skos.concept": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+    ],
+    "ogc.skos.common": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+    ]
+  },
   "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",
   "remoteCacheDir": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-ontology/remote_cache/",
   "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish-ontology/",
