@@ -1,0 +1,18 @@
+- title: Isle Island are from the Ocean Data Platform (ODP) Marine Protected Area (MPA) dataset
+  base-uri: http://w3id.org/ogcincubator/coverageJSON/
+  snippets:
+    - language: json
+      ref: examples/Isle_island_MPA_ODP.geojson
+
+
+- title: Lundy Island and surroundings from the EMODnet regional Sea Convention MPAs dataset
+  base-uri: http://w3id.org/ogcincubator/coverageJSON/
+  snippets:
+    - language: json
+      ref: examples/lundy_island_EMODNet.geojson
+
+- title: Lundy island from the Sintef MPA case Protected Areas layer
+  base-uri: http://w3id.org/ogcincubator/coverageJSON/
+  snippets:
+    - language: json
+      ref: examples/Lundy_island_sintef.geojson
