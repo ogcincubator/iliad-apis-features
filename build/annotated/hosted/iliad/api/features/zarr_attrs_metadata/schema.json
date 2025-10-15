@@ -4,63 +4,50 @@
   "type": "object",
   "properties": {
     "long_name": {
-      "type": "string",
-      "x-jsonld-id": "_:_:long_name"
+      "type": "string"
     },
     "standard_name": {
-      "type": "string",
-      "x-jsonld-id": "_:_:standard_name"
+      "type": "string"
     },
     "units": {
       "type": "string",
       "enum": [
         "degrees_north",
         "degreesN"
-      ],
-      "x-jsonld-id": "_:_:units"
+      ]
     },
     "_ARRAY_DIMENSIONS": {
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "x-jsonld-id": "_:_:_ARRAY_DIMENSIONS"
+      }
     },
     "Conventions": {
-      "type": "string",
-      "x-jsonld-id": "_:_:Conventions"
+      "type": "string"
     },
     "units_metadata": {
-      "type": "string",
-      "x-jsonld-id": "_:_:units_metadata"
+      "type": "string"
     },
     "cell_methods": {
-      "type": "string",
-      "x-jsonld-id": "_:_:cell_methods"
+      "type": "string"
     },
     "created_by": {
-      "type": "string",
-      "x-jsonld-id": "_:_:created_by"
+      "type": "string"
     },
     "date": {
-      "type": "string",
-      "x-jsonld-id": "_:_:date"
+      "type": "string"
     },
     "crs_wkt": {
-      "type": "string",
-      "x-jsonld-id": "_:_:crs_wkt"
+      "type": "string"
     },
     "geotransform": {
-      "type": "string",
-      "x-jsonld-id": "_:_:geotransform"
+      "type": "string"
     },
     "proj4": {
-      "type": "string",
-      "x-jsonld-id": "_:_:proj4"
+      "type": "string"
     },
     "spatial_ref": {
-      "type": "string",
-      "x-jsonld-id": "_:_:spatial_ref"
+      "type": "string"
     }
   },
   "x-jsonld-extra-terms": {

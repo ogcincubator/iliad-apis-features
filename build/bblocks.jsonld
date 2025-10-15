@@ -112,12 +112,12 @@
   "name": "Building Blocks - ILIAD API Profiles",
   "abstract": "(Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability.",
   "description": "Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. \n\nThus, a pilot project to monitor Jellyfish swarms using Citizen Science will reuse common patterns for Citizen Science observations, which in turn we reuse a common pattern for observations, using an underlying component of the OIM - the OGC Observations model (SOSA ontology). \n",
-  "modified": "2025-10-03T15:03:23.103176",
+  "modified": "2025-10-15T13:39:34.441879",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"cbdf0741daa8bb5e8edcce157ff8f4bb6d0d71fa",
-      "shortCommitId": "\"cbdf07",
-      "date": "2025-09-30T10:25:21+00:00\""
+      "commitId": "\"bfb0f4bbc2c7fdd539fcd44d5f8e97a73288d480",
+      "shortCommitId": "\"bfb0f4",
+      "date": "2025-10-13T08:32:18+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/iliad-apis-features",
@@ -149,7 +149,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2025-10-15",
       "link": "https://github.com/opengeospatial/CoverageJSON",
       "sources": [
         {
@@ -215,7 +215,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2025-10-15",
       "link": "https://github.com/opengeospatial/coverage-implementation-schema",
       "sources": [
         {
@@ -276,7 +276,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2025-10-15",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -332,7 +332,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2025-10-15",
       "dependsOn": [],
       "shaclRules": [],
       "sources": [
@@ -356,6 +356,7 @@
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/marine-protected-area-emodnet/",
       "rdfData": [],
       "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/marine-protected-area-emodnet/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
@@ -385,7 +386,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2025-10-15",
       "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_array_metadata",
       "sources": [
         {
@@ -447,7 +448,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2025-10-15",
       "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_attrs_metadata",
       "sources": [
         {
@@ -509,7 +510,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2025-10-15",
       "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_attrs_metadata",
       "sources": [
         {
@@ -571,7 +572,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2025-10-15",
       "link": "https://github.com/opengeospatial/iliad-api-features/oim-sta-obs",
       "sources": [
         {
@@ -631,7 +632,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2025-10-15",
       "link": "https://github.com/opengeospatial/CoverageJSON",
       "sources": [
         {
@@ -705,7 +706,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2025-10-15",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -730,10 +731,10 @@
         ]
       },
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.sosa.properties.observation",
+        "ogc.sosa.features.observation",
         "ogc.sosa.features.observationCollection",
-        "ogc.sosa.features.observation"
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.sosa.properties.observation"
       ],
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
       "schema": {
@@ -766,73 +767,6 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.hosted.iliad.api.features.oim-obs-cs",
-      "name": "OIM Observations - Citizen Science",
-      "abstract": "Defines observations and collections to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model.",
-      "status": "under-development",
-      "dateTimeAddition": "2023-04-05T00:00:00Z",
-      "itemClass": "schema",
-      "register": "iliad-apis",
-      "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
-      "link": "https://github.com/opengeospatial/bblock-tehttps://ogcincubator.github.io/cross-domain-model/mplate",
-      "sources": [
-        {
-          "title": "Ocean Information Model",
-          "link": "https://github.com/ILIAD-ocean-twin/OIM"
-        }
-      ],
-      "maturity": "development",
-      "scope": "unstable",
-      "tags": [
-        "iliad",
-        "oim",
-        "sosa",
-        "ditto"
-      ],
-      "shaclShapes": {
-        "ogc.hosted.iliad.api.features.oim-obs": [
-          "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
-        ],
-        "ogc.sosa.properties.observation": [
-          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
-        ]
-      },
-      "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.hosted.iliad.api.features.oim-obs"
-      ],
-      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld",
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs-cs/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs-cs/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-obs-cs"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
       "itemIdentifier": "ogc.hosted.iliad.api.features.oim",
       "name": "Oceans Information Model",
       "abstract": "Defines a composable Building Block view of the Oceans Information Model. This view breaks down the OIM into a set of clear dependencies and profiling layers on top of the underlying common Cross Domain Model",
@@ -841,7 +775,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2025-10-15",
       "dependsOn": [
         "ogc.model.cross-domain.all"
       ],
@@ -903,62 +837,64 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.hosted.iliad.api.features.stac_multidim_data",
-      "name": "ILIAD STAC/DCAT dimensional data",
-      "abstract": "Defines a mapping from STAC multi-dimensions for ILIAD - should be refactored to a general STAC multi-dimensions profile and an ILIAD sub-profile",
+      "itemIdentifier": "ogc.hosted.iliad.api.features.oim-obs-cs",
+      "name": "OIM Observations - Citizen Science",
+      "abstract": "Defines observations and collections to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model.",
       "status": "under-development",
-      "dateTimeAddition": "2024-10-11T00:00:00Z",
+      "dateTimeAddition": "2023-04-05T00:00:00Z",
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
-      "dependsOn": [
-        "ogc.geo.geodcat.stac.geodcat-stac-item"
-      ],
-      "link": "https://github.com/opengeospatial/iliad-api-features/",
+      "dateOfLastChange": "2025-10-15",
+      "link": "https://github.com/opengeospatial/bblock-tehttps://ogcincubator.github.io/cross-domain-model/mplate",
       "sources": [
         {
-          "title": "Reference to ILIAD",
-          "link": "https://example.com/sources/1"
+          "title": "Ocean Information Model",
+          "link": "https://github.com/ILIAD-ocean-twin/OIM"
         }
       ],
       "maturity": "development",
       "scope": "unstable",
       "tags": [
         "iliad",
-        "records",
-        "stac",
-        "netcdf",
-        "CF-convention"
+        "oim",
+        "sosa",
+        "ditto"
       ],
       "shaclShapes": {
-        "ogc.geo.geodcat.records-ontology": [
-          "https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/records-ontology/rules.shacl"
+        "ogc.hosted.iliad.api.features.oim-obs": [
+          "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
+        ],
+        "ogc.sosa.properties.observation": [
+          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
         ]
       },
-      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/stac_multidim_data/context.jsonld",
+      "dependsOn": [
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.hosted.iliad.api.features.oim-obs"
+      ],
+      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld",
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/stac_multidim_data/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/stac_multidim_data/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/stac_multidim_data/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/stac_multidim_data/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/stac_multidim_data/",
+      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/",
       "rdfData": [],
-      "validationPassed": false,
-      "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/stac_multidim_data/",
+      "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/stac_multidim_data/index.md"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs-cs/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/stac_multidim_data/index.json"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs-cs/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.stac_multidim_data"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-obs-cs"
         }
       },
       "@type": [
@@ -976,7 +912,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2025-10-15",
       "dependsOn": [
         "ogc.hosted.iliad.api.features.oim",
         "ogc.hosted.iliad.api.features.oim-bio-tdwg"
@@ -1035,6 +971,71 @@
       ]
     },
     {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.stac_multidim_data",
+      "name": "ILIAD STAC/DCAT dimensional data",
+      "abstract": "Defines a mapping from STAC multi-dimensions for ILIAD - should be refactored to a general STAC multi-dimensions profile and an ILIAD sub-profile",
+      "status": "under-development",
+      "dateTimeAddition": "2024-10-11T00:00:00Z",
+      "itemClass": "schema",
+      "register": "iliad-apis",
+      "version": "0.1",
+      "dateOfLastChange": "2025-10-15",
+      "dependsOn": [
+        "ogc.geo.geodcat.stac.geodcat-stac-item"
+      ],
+      "link": "https://github.com/opengeospatial/iliad-api-features/",
+      "sources": [
+        {
+          "title": "Reference to ILIAD",
+          "link": "https://example.com/sources/1"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "iliad",
+        "records",
+        "stac",
+        "netcdf",
+        "CF-convention"
+      ],
+      "shaclShapes": {
+        "ogc.geo.geodcat.records-ontology": [
+          "https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/records-ontology/rules.shacl"
+        ]
+      },
+      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/stac_multidim_data/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/stac_multidim_data/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/stac_multidim_data/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/stac_multidim_data/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/stac_multidim_data/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/stac_multidim_data/",
+      "rdfData": [],
+      "validationPassed": false,
+      "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/stac_multidim_data/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/stac_multidim_data/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/stac_multidim_data/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.stac_multidim_data"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
       "itemIdentifier": "ogc.hosted.iliad.api.features.iliad-jellyfish-features",
       "name": "Observations - ILIAD Jellyfish Pilot for Citizen Science",
       "abstract": "Defines a project specific interoperability profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model",
@@ -1044,7 +1045,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2025-10-15",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
         "ogc.hosted.iliad.api.features.oim-obs-cs",

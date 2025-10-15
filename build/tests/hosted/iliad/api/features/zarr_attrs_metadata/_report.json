@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.zarr_attrs_metadata - GeoZarr Attributes description metadata",
   "bblockName": "GeoZarr Attributes description metadata",
   "bblockId": "ogc.hosted.iliad.api.features.zarr_attrs_metadata",
-  "generated": "2025-10-03T15:03:44.877753+00:00",
+  "generated": "2025-10-15T13:39:58.044476+00:00",
   "result": false,
   "items": [
     {
@@ -166,7 +166,7 @@
               "exception": "ValidationError",
               "errorMessage": "'degrees_east' is not one of ['degrees_north', 'degreesN']",
               "isError": true,
-              "message": "ValidationError: 'degrees_east' is not one of ['degrees_north', 'degreesN']\n\nFailed validating 'enum' in schema['properties']['units']:\n    {'enum': ['degrees_north', 'degreesN'],\n     'type': 'string',\n     'x-jsonld-id': '_:_:units'}\n\nOn instance['units']:\n    'degrees_east'"
+              "message": "ValidationError: 'degrees_east' is not one of ['degrees_north', 'degreesN']\n\nFailed validating 'enum' in schema['properties']['units']:\n    {'enum': ['degrees_north', 'degreesN'], 'type': 'string'}\n\nOn instance['units']:\n    'degrees_east'"
             }
           ]
         }
@@ -278,7 +278,7 @@
               "exception": "ValidationError",
               "errorMessage": "'seconds since 1970-01-01' is not one of ['degrees_north', 'degreesN']",
               "isError": true,
-              "message": "ValidationError: 'seconds since 1970-01-01' is not one of ['degrees_north', 'degreesN']\n\nFailed validating 'enum' in schema['properties']['units']:\n    {'enum': ['degrees_north', 'degreesN'],\n     'type': 'string',\n     'x-jsonld-id': '_:_:units'}\n\nOn instance['units']:\n    'seconds since 1970-01-01'"
+              "message": "ValidationError: 'seconds since 1970-01-01' is not one of ['degrees_north', 'degreesN']\n\nFailed validating 'enum' in schema['properties']['units']:\n    {'enum': ['degrees_north', 'degreesN'], 'type': 'string'}\n\nOn instance['units']:\n    'seconds since 1970-01-01'"
             }
           ]
         }
@@ -335,7 +335,7 @@
               "exception": "ValidationError",
               "errorMessage": "'degC' is not one of ['degrees_north', 'degreesN']",
               "isError": true,
-              "message": "ValidationError: 'degC' is not one of ['degrees_north', 'degreesN']\n\nFailed validating 'enum' in schema['properties']['units']:\n    {'enum': ['degrees_north', 'degreesN'],\n     'type': 'string',\n     'x-jsonld-id': '_:_:units'}\n\nOn instance['units']:\n    'degC'"
+              "message": "ValidationError: 'degC' is not one of ['degrees_north', 'degreesN']\n\nFailed validating 'enum' in schema['properties']['units']:\n    {'enum': ['degrees_north', 'degreesN'], 'type': 'string'}\n\nOn instance['units']:\n    'degC'"
             }
           ]
         }
@@ -392,7 +392,7 @@
               "exception": "ValidationError",
               "errorMessage": "'percent' is not one of ['degrees_north', 'degreesN']",
               "isError": true,
-              "message": "ValidationError: 'percent' is not one of ['degrees_north', 'degreesN']\n\nFailed validating 'enum' in schema['properties']['units']:\n    {'enum': ['degrees_north', 'degreesN'],\n     'type': 'string',\n     'x-jsonld-id': '_:_:units'}\n\nOn instance['units']:\n    'percent'"
+              "message": "ValidationError: 'percent' is not one of ['degrees_north', 'degreesN']\n\nFailed validating 'enum' in schema['properties']['units']:\n    {'enum': ['degrees_north', 'degreesN'], 'type': 'string'}\n\nOn instance['units']:\n    'percent'"
             }
           ]
         }

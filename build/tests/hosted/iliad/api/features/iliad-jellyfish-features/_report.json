@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.iliad-jellyfish-features - Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "bblockName": "Observations - ILIAD Jellyfish Pilot for Citizen Science",
   "bblockId": "ogc.hosted.iliad.api.features.iliad-jellyfish-features",
-  "generated": "2025-10-03T15:03:54.836622+00:00",
+  "generated": "2025-10-15T13:40:08.289811+00:00",
   "result": true,
   "items": [
     {
@@ -120,7 +120,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_2_1.ttl",
-              "size": 105,
+              "size": 101,
               "isError": false,
               "message": "Output Turtle example_2_1.ttl created"
             }
@@ -154,15 +154,13 @@
               "focusNodes": {
                 ":force-linked-data-observedProperty": {
                   "nodes": [
-                    "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>",
-                    "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>/:properties",
                     "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>",
-                    "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>/:properties"
+                    "<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>/:properties,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>/:properties\n"
+              "message": "Focus nodes for _sources/oim-obs/rules.shacl:\n - Shape :force-linked-data-observedProperty: <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2>,<https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>\n"
             }
           ]
         }

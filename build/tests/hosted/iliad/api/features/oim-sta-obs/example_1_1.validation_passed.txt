@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.oim-sta-obs - OIM STA Observations
-Generated 2025-10-03T15:03:44.974527+00:00
+Generated 2025-10-15T13:39:58.131694+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting

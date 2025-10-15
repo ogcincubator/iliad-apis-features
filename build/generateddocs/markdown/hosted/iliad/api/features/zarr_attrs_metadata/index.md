@@ -304,48 +304,35 @@ type: object
 properties:
   long_name:
     type: string
-    x-jsonld-id: _:_:long_name
   standard_name:
     type: string
-    x-jsonld-id: _:_:standard_name
   units:
     type: string
     enum:
     - degrees_north
     - degreesN
-    x-jsonld-id: _:_:units
   _ARRAY_DIMENSIONS:
     type: array
     items:
       type: string
-    x-jsonld-id: _:_:_ARRAY_DIMENSIONS
   Conventions:
     type: string
-    x-jsonld-id: _:_:Conventions
   units_metadata:
     type: string
-    x-jsonld-id: _:_:units_metadata
   cell_methods:
     type: string
-    x-jsonld-id: _:_:cell_methods
   created_by:
     type: string
-    x-jsonld-id: _:_:created_by
   date:
     type: string
-    x-jsonld-id: _:_:date
   crs_wkt:
     type: string
-    x-jsonld-id: _:_:crs_wkt
   geotransform:
     type: string
-    x-jsonld-id: _:_:geotransform
   proj4:
     type: string
-    x-jsonld-id: _:_:proj4
   spatial_ref:
     type: string
-    x-jsonld-id: _:_:spatial_ref
 x-jsonld-extra-terms:
   id: '@id'
   type: '@type'
@@ -624,19 +611,6 @@ Links to the schema:
     "MultiPolygonSeries": "covjsondt:MultiPolygonSeries",
     "MultiPolygon": "covjsondt:MultiPolygon",
     "Polygon": "covjsondt:Polygon",
-    "long_name": "_:_:long_name",
-    "standard_name": "_:_:standard_name",
-    "units": "_:_:units",
-    "_ARRAY_DIMENSIONS": "_:_:_ARRAY_DIMENSIONS",
-    "Conventions": "_:_:Conventions",
-    "units_metadata": "_:_:units_metadata",
-    "cell_methods": "_:_:cell_methods",
-    "created_by": "_:_:created_by",
-    "date": "_:_:date",
-    "crs_wkt": "_:_:crs_wkt",
-    "geotransform": "_:_:geotransform",
-    "proj4": "_:_:proj4",
-    "spatial_ref": "_:_:spatial_ref",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "dct": "http://purl.org/dc/terms/",
     "qudt": "http://qudt.org/schema/qudt#",
