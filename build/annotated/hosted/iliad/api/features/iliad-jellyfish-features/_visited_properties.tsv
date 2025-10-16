@@ -5,7 +5,7 @@ path	@id
 /observedProperty	http://www.w3.org/ns/sosa/observedProperty
 /usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
 /madeBySensor	http://www.w3.org/ns/sosa/madeBySensor
-/hasResult	https://w3id.org/iliad/oim/default-context/hasResult
+/hasResult	
 /result	
 /result@links	
 /hasSimpleResult	
@@ -230,9 +230,9 @@ path	@id
 /resourceID	http://rs.tdwg.org/dwc/terms/resourceID
 /associatedOccurrences	http://rs.tdwg.org/dwc/terms/associatedOccurrences
 /relationshipAccordingTo	http://rs.tdwg.org/dwc/terms/relationshipAccordingTo
-/hasResult/densityOfJellyFish	https://w3id.org/iliad/oim/default-context/densityOfJellyFish
+/hasResult/densityOfJellyFish	
 /hasResult/stingByJellyFish	https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish
-/hasResult/strandedJellyFish	https://w3id.org/iliad/oim/default-context/strandedJellyFish
+/hasResult/strandedJellyFish	
 /type	@type
 /id	@id
 /properties	@nest
@@ -293,7 +293,7 @@ path	@id
 /properties/result@links	
 /properties/hasSimpleResult	
 /geometryDimension	
-/features	https://w3id.org/iliad/oim/default-context/features
+/features	http://www.w3.org/ns/sosa/hasMember
 /features/type	@type
 /features/id	@id
 /features/properties	@nest

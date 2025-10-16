@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.zarr_attrs_metadata - GeoZarr Attributes description metadata
-Generated 2025-10-03T15:03:44.867651+00:00
+Generated 2025-10-15T13:39:58.035557+00:00
 === Files ===
 Using example_3_1.json from examples
 JSON-LD context is present - uplifting
@@ -15,9 +15,7 @@ Output JSON-LD example_3_1.jsonld created
 ValidationError: 'degrees_east' is not one of ['degrees_north', 'degreesN']
 
 Failed validating 'enum' in schema['properties']['units']:
-    {'enum': ['degrees_north', 'degreesN'],
-     'type': 'string',
-     'x-jsonld-id': '_:_:units'}
+    {'enum': ['degrees_north', 'degreesN'], 'type': 'string'}
 
 On instance['units']:
     'degrees_east'

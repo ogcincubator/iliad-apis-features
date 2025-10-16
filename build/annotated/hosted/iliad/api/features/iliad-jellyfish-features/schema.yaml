@@ -16,21 +16,17 @@ $defs:
               - Some
               - Swarm
               - Few
-              x-jsonld-id: https://w3id.org/iliad/oim/default-context/densityOfJellyFish
             stingByJellyFish:
               type: string
               x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish
             strandedJellyFish:
               type: string
-              x-jsonld-id: https://w3id.org/iliad/oim/default-context/strandedJellyFish
-          x-jsonld-id: https://w3id.org/iliad/oim/default-context/hasResult
   OIMObsFeature:
     allOf:
     - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsFeature
     - properties:
         properties:
           $ref: '#/$defs/OIMObsProps'
-          x-jsonld-id: https://w3id.org/iliad/oim/default-context/properties
   OIMObsCollection:
     allOf:
     - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsCollection
@@ -40,7 +36,6 @@ $defs:
           items:
             allOf:
             - $ref: '#/$defs/OIMObsFeature'
-          x-jsonld-id: https://w3id.org/iliad/oim/default-context/features
 anyOf:
 - $ref: '#/$defs/OIMObsProps'
 - $ref: '#/$defs/OIMObsFeature'

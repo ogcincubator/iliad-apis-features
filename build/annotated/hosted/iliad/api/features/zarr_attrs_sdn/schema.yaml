@@ -4,79 +4,57 @@ type: object
 properties:
   long_name:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/long_name
   standard_name:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/standard_name
   units:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/units
   _ARRAY_DIMENSIONS:
     type: array
     items:
       type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/_ARRAY_DIMENSIONS
   Conventions:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/Conventions
   units_metadata:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/units_metadata
   cell_methods:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/cell_methods
   created_by:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/created_by
   date:
     type: string
     x-jsonld-id: http://purl.org/dc/terms/date
   crs_wkt:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/crs_wkt
   geotransform:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/geotransform
   proj4:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/proj4
   spatial_ref:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/spatial_ref
   epsg_code:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/epsg_code
   grid_mapping_name:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/grid_mapping_name
   inverse_flattening:
     type: number
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/inverse_flattening
   semi_major_axis:
     type: number
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/semi_major_axis
   ancillary_variables:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/ancillary_variables
   axis:
     type: string
     x-jsonld-id: http://www.opengis.net/cis/1.1/axis
     x-jsonld-type: '@id'
   grid_mapping:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/grid_mapping
   sdn_parameter_name:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/sdn_parameter_name
   sdn_parameter_urn:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/sdn_parameter_urn
   sdn_uom_name:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/sdn_uom_name
   sdn_uom_urn:
     type: string
-    x-jsonld-id: https://w3id.org/iliad/oim/default-context/sdn_uom_urn
 x-jsonld-extra-terms:
   id: '@id'
   type: '@type'

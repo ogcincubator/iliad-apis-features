@@ -103,10 +103,7 @@
     "features": {
       "@id": "sosa:hasMember",
       "@type": "@id",
-      "@container": "@set",
-      "@context": {
-        "properties": "https://w3id.org/iliad/oim/default-context/properties"
-      }
+      "@container": "@set"
     },
     "forProperty": {
       "@id": "sosa:forProperty",
@@ -122,13 +119,7 @@
     },
     "hasMember": {
       "@id": "sosa:hasMember",
-      "@type": "@id",
-      "@context": {
-        "hasResult": {
-          "@id": "sosa:hasResult",
-          "@type": "@id"
-        }
-      }
+      "@type": "@id"
     },
     "hasOriginalSample": {
       "@id": "sosa:hasOriginalSample",
@@ -143,13 +134,8 @@
       "@type": "@id"
     },
     "hasResult": {
-      "@id": "https://w3id.org/iliad/oim/default-context/hasResult",
-      "@type": "@id",
-      "@context": {
-        "densityOfJellyFish": "https://w3id.org/iliad/oim/default-context/densityOfJellyFish",
-        "stingByJellyFish": "https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish",
-        "strandedJellyFish": "https://w3id.org/iliad/oim/default-context/strandedJellyFish"
-      }
+      "@id": "sosa:hasResult",
+      "@type": "@id"
     },
     "hasResultQuality": {
       "@id": "sosa:hasResultQuality",
@@ -631,6 +617,7 @@
     "resourceID": "dwc:resourceID",
     "associatedOccurrences": "dwc:associatedOccurrences",
     "relationshipAccordingTo": "dwc:relationshipAccordingTo",
+    "stingByJellyFish": "https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",

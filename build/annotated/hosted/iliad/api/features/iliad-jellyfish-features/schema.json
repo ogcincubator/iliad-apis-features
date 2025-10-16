@@ -22,19 +22,16 @@
                     "Some",
                     "Swarm",
                     "Few"
-                  ],
-                  "x-jsonld-id": "https://w3id.org/iliad/oim/default-context/densityOfJellyFish"
+                  ]
                 },
                 "stingByJellyFish": {
                   "type": "string",
                   "x-jsonld-id": "https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish"
                 },
                 "strandedJellyFish": {
-                  "type": "string",
-                  "x-jsonld-id": "https://w3id.org/iliad/oim/default-context/strandedJellyFish"
+                  "type": "string"
                 }
-              },
-              "x-jsonld-id": "https://w3id.org/iliad/oim/default-context/hasResult"
+              }
             }
           }
         }
@@ -48,8 +45,7 @@
         {
           "properties": {
             "properties": {
-              "$ref": "#/$defs/OIMObsProps",
-              "x-jsonld-id": "https://w3id.org/iliad/oim/default-context/properties"
+              "$ref": "#/$defs/OIMObsProps"
             }
           }
         }
@@ -70,8 +66,7 @@
                     "$ref": "#/$defs/OIMObsFeature"
                   }
                 ]
-              },
-              "x-jsonld-id": "https://w3id.org/iliad/oim/default-context/features"
+              }
             }
           }
         }

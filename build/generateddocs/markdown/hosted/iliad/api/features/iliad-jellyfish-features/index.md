@@ -210,16 +210,7 @@ The SHACL rules (and any other validators developed) will be tested against the 
             ns2:lat 3.487235e+01 ;
             ns2:long 3.230989e+01 ;
             ns1:distanceFromShore "0-200" ] ;
-    sosa:madeBySensor [ a sosa:Sensor,
-                ns1:HumanSensor ;
-            rdfs:label "Human sensor: 3602" ;
-            ns1:agentConfidence "1" ] ;
-    sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;
-    sosa:phenomenonTime <2011-07-01T09:00:00> ;
-    sosa:resultTime "2011-07-01T09:00:00" ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 3.230989e+01 3.487235e+01 ) ] ;
-    :hasResult [ a sosa:Result,
+    sosa:hasResult [ a sosa:Result,
                 ns1:JellyFishAbundance ;
             dwc:individualCount 20 ;
             dwc:organismQuantity "Some" ;
@@ -231,6 +222,15 @@ The SHACL rules (and any other validators developed) will be tested against the 
             :aphiaID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
             ns1:stingByJellyFish "0" ;
             ns1:strandedJellyfish "1" ] ;
+    sosa:madeBySensor [ a sosa:Sensor,
+                ns1:HumanSensor ;
+            rdfs:label "Human sensor: 3602" ;
+            ns1:agentConfidence "1" ] ;
+    sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;
+    sosa:phenomenonTime <2011-07-01T09:00:00> ;
+    sosa:resultTime "2011-07-01T09:00:00" ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 3.230989e+01 3.487235e+01 ) ] ;
     ns1:distanceWalkedInMeters "1000-2000m" .
 
 
@@ -543,81 +543,81 @@ The SHACL rules (and any other validators developed) will be tested against the 
 
 <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333> a sosa:Observation,
         geojson:Feature ;
+    rdfs:label "Jelly fish observation location id: 19 sensor: 3602 species: Phyllorhiza punctata"@en ;
+    dwc:basisOfRecord "HumanObservation" ;
+    dwc:occurrenceStatus "present" ;
+    sosa:hasFeatureOfInterest jfsites:19 ;
+    sosa:hasResult [ a sosa:Result,
+                ns1:JellyFishAbundance ;
+            dwc:individualCount 50 ;
+            dwc:organismQuantity "Some" ;
+            dwc:organismQuantityType "individuals" ;
+            dwc:sampleSizeUnit "cm" ;
+            dwc:sampleSizeValue "5-30" ;
+            dwc:scientificName "Rhopilema nomadica" ;
+            dwc:scientificNameID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
+            :aphiaID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
+            ns1:stingByJellyFish "0" ;
+            ns1:strandedJellyfish "1" ] ;
+    sosa:madeBySensor [ a sosa:Sensor,
+                ns1:HumanSensor ;
+            rdfs:label "Human sensor: 3602" ;
+            ns1:agentConfidence "1" ] ;
+    sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;
+    sosa:phenomenonTime <2013-07-01T09:00:00> ;
+    sosa:resultTime "2013-07-01T09:00:00" ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 3.230989e+01 3.487235e+01 ) ] ;
-    :properties [ rdfs:label "Jelly fish observation location id: 19 sensor: 3602 species: Phyllorhiza punctata"@en ;
-            dwc:basisOfRecord "HumanObservation" ;
-            dwc:occurrenceStatus "present" ;
-            sosa:hasFeatureOfInterest jfsites:19 ;
-            sosa:madeBySensor [ a sosa:Sensor,
-                        ns1:HumanSensor ;
-                    rdfs:label "Human sensor: 3602" ;
-                    ns1:agentConfidence "1" ] ;
-            sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;
-            sosa:phenomenonTime <2013-07-01T09:00:00> ;
-            sosa:resultTime "2013-07-01T09:00:00" ;
-            :hasResult [ a sosa:Result,
-                        ns1:JellyFishAbundance ;
-                    dwc:individualCount 50 ;
-                    dwc:organismQuantity "Some" ;
-                    dwc:organismQuantityType "individuals" ;
-                    dwc:sampleSizeUnit "cm" ;
-                    dwc:sampleSizeValue "5-30" ;
-                    dwc:scientificName "Rhopilema nomadica" ;
-                    dwc:scientificNameID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
-                    :aphiaID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
-                    ns1:stingByJellyFish "0" ;
-                    ns1:strandedJellyfish "1" ] ;
-            ns1:distanceWalkedInMeters "500-2000m" ] .
+    ns1:distanceWalkedInMeters "500-2000m" .
 
 <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2> a sosa:Observation,
         geojson:Feature ;
+    rdfs:label "Jelly fish observation location id: 18 sensor: 3604 species: Phyllorhiza punctata"@en ;
+    dwc:basisOfRecord "HumanObservation" ;
+    dwc:occurrenceStatus "present" ;
+    sosa:hasFeatureOfInterest jfsites:18 ;
+    sosa:hasResult [ a sosa:Result,
+                ns1:JellyFishAbundance ;
+            dwc:individualCount 20 ;
+            dwc:organismQuantity "Some" ;
+            dwc:organismQuantityType "individuals" ;
+            dwc:sampleSizeUnit "cm" ;
+            dwc:sampleSizeValue "11-30" ;
+            dwc:scientificName "Rhopilema nomadica" ;
+            dwc:scientificNameID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
+            :aphiaID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
+            ns1:stingByJellyFish "0" ;
+            ns1:strandedJellyfish "1" ] ;
+    sosa:madeBySensor [ a sosa:Sensor,
+                ns1:HumanSensor ;
+            rdfs:label "Human sensor: 3604" ;
+            ns1:agentConfidence "1" ] ;
+    sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;
+    sosa:phenomenonTime <2011-07-01T09:00:00> ;
+    sosa:resultTime "2011-07-01T09:00:00" ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 3.4656e+01 3.5697e+01 ) ] ;
-    :properties [ rdfs:label "Jelly fish observation location id: 18 sensor: 3604 species: Phyllorhiza punctata"@en ;
-            dwc:basisOfRecord "HumanObservation" ;
-            dwc:occurrenceStatus "present" ;
-            sosa:hasFeatureOfInterest jfsites:18 ;
-            sosa:madeBySensor [ a sosa:Sensor,
-                        ns1:HumanSensor ;
-                    rdfs:label "Human sensor: 3604" ;
-                    ns1:agentConfidence "1" ] ;
-            sosa:observedProperty <https://w3id.org/iliad/jellyfish/property/jellyFishAbundanceProperty> ;
-            sosa:phenomenonTime <2011-07-01T09:00:00> ;
-            sosa:resultTime "2011-07-01T09:00:00" ;
-            :hasResult [ a sosa:Result,
-                        ns1:JellyFishAbundance ;
-                    dwc:individualCount 20 ;
-                    dwc:organismQuantity "Some" ;
-                    dwc:organismQuantityType "individuals" ;
-                    dwc:sampleSizeUnit "cm" ;
-                    dwc:sampleSizeValue "11-30" ;
-                    dwc:scientificName "Rhopilema nomadica" ;
-                    dwc:scientificNameID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
-                    :aphiaID "https://marinespecies.org/aphia.php?p=taxdetails&id=232032" ;
-                    ns1:stingByJellyFish "0" ;
-                    ns1:strandedJellyfish "1" ] ;
-            ns1:distanceWalkedInMeters "1000-2000m" ] .
+    ns1:distanceWalkedInMeters "1000-2000m" .
 
 jfsites:18 a sosa:FeatureOfInterest,
         geojson:Feature,
         geojson:Point,
         :Location ;
+    dwc:coordinateUncertaintyInMeters 10000 ;
+    dwc:locality 18 ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 3.4656e+01 3.5697e+01 ) ] ;
-    :properties [ dwc:coordinateUncertaintyInMeters 10000 ;
-            dwc:locality 18 ;
-            ns1:distanceFromShore "0-200" ] .
+    ns1:distanceFromShore "0-200" .
 
 jfsites:19 a sosa:FeatureOfInterest,
         geojson:Feature,
         geojson:Point,
         :Location ;
+    dwc:coordinateUncertaintyInMeters 10000 ;
+    dwc:locality 19 ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 3.230989e+01 3.487235e+01 ) ] ;
-    :properties [ dwc:coordinateUncertaintyInMeters 10000 ;
-            dwc:locality 19 ;
-            ns1:distanceFromShore "0-200" ] .
+    ns1:distanceFromShore "0-200" .
 
 [] a geojson:FeatureCollection ;
     sosa:hasMember <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>,
@@ -713,21 +713,17 @@ $defs:
               - Some
               - Swarm
               - Few
-              x-jsonld-id: https://w3id.org/iliad/oim/default-context/densityOfJellyFish
             stingByJellyFish:
               type: string
               x-jsonld-id: https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish
             strandedJellyFish:
               type: string
-              x-jsonld-id: https://w3id.org/iliad/oim/default-context/strandedJellyFish
-          x-jsonld-id: https://w3id.org/iliad/oim/default-context/hasResult
   OIMObsFeature:
     allOf:
     - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsFeature
     - properties:
         properties:
           $ref: '#/$defs/OIMObsProps'
-          x-jsonld-id: https://w3id.org/iliad/oim/default-context/properties
   OIMObsCollection:
     allOf:
     - $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml#/$defs/OIMObsCollection
@@ -737,7 +733,6 @@ $defs:
           items:
             allOf:
             - $ref: '#/$defs/OIMObsFeature'
-          x-jsonld-id: https://w3id.org/iliad/oim/default-context/features
 anyOf:
 - $ref: '#/$defs/OIMObsProps'
 - $ref: '#/$defs/OIMObsFeature'
@@ -869,10 +864,7 @@ Links to the schema:
     "features": {
       "@id": "sosa:hasMember",
       "@type": "@id",
-      "@container": "@set",
-      "@context": {
-        "properties": "https://w3id.org/iliad/oim/default-context/properties"
-      }
+      "@container": "@set"
     },
     "forProperty": {
       "@id": "sosa:forProperty",
@@ -888,13 +880,7 @@ Links to the schema:
     },
     "hasMember": {
       "@id": "sosa:hasMember",
-      "@type": "@id",
-      "@context": {
-        "hasResult": {
-          "@id": "sosa:hasResult",
-          "@type": "@id"
-        }
-      }
+      "@type": "@id"
     },
     "hasOriginalSample": {
       "@id": "sosa:hasOriginalSample",
@@ -909,13 +895,8 @@ Links to the schema:
       "@type": "@id"
     },
     "hasResult": {
-      "@id": "https://w3id.org/iliad/oim/default-context/hasResult",
-      "@type": "@id",
-      "@context": {
-        "densityOfJellyFish": "https://w3id.org/iliad/oim/default-context/densityOfJellyFish",
-        "stingByJellyFish": "https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish",
-        "strandedJellyFish": "https://w3id.org/iliad/oim/default-context/strandedJellyFish"
-      }
+      "@id": "sosa:hasResult",
+      "@type": "@id"
     },
     "hasResultQuality": {
       "@id": "sosa:hasResultQuality",
@@ -1397,6 +1378,7 @@ Links to the schema:
     "resourceID": "dwc:resourceID",
     "associatedOccurrences": "dwc:associatedOccurrences",
     "relationshipAccordingTo": "dwc:relationshipAccordingTo",
+    "stingByJellyFish": "https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",
