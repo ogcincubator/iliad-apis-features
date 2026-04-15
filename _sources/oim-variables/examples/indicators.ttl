@@ -1,0 +1,19 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://id3.seadots.eu/indicator/indicators/cdi> a prov:Entity ;
+    rdfs:label "Composite Drought Indicator" ;
+    prov:wasGeneratedBy <https://id3.seadots.eu/indicator/act/cdi-computation> .
+
+<https://id3.seadots.eu/indicator/act/cdi-computation> a <https://id3.seadots.eu/indicator/CompositeIndicatorComputation> ;
+    rdfs:label "CDI computation" ;
+    prov:used <https://id3.seadots.eu/indicator/obs/rainfall-anomaly>,
+        <https://id3.seadots.eu/indicator/obs/soil-moisture-anomaly>,
+        <https://id3.seadots.eu/indicator/obs/vegetation-condition-anomaly> .
+
+<https://id3.seadots.eu/indicator/obs/rainfall-anomaly> rdfs:label "Rainfall Anomaly" .
+
+<https://id3.seadots.eu/indicator/obs/soil-moisture-anomaly> rdfs:label "Soil Moisture Anomaly" .
+
+<https://id3.seadots.eu/indicator/obs/vegetation-condition-anomaly> rdfs:label "Vegetation Condition Anomaly" .
+
