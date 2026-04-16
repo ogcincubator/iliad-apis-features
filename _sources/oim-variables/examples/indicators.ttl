@@ -1,19 +1,171 @@
-@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ses: <http://seadots.eu/ses#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix indo: <https://id3.seadots.eu/indicator/obs/> .
+@prefix ind: <https://id3.seadots.eu/indicator/> .
+@prefix inda: <https://id3.seadots.eu/indicator/activity> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prez: <https://prez.dev> .
 
-<https://id3.seadots.eu/indicator/indicators/cdi> a prov:Entity ;
+# --- CATALOG ENTRY (added for VocPrez/Prez UI visibility) ---
+ind:catalog a dcat:Catalog ;
+    rdfs:label "SEADOTS Resource Catalog"@en ;
+    dcterms:title "SEADOTS Resource Catalog"@en ;
+    dcterms:description "Main catalog for SEADOTS indicators and concepts."@en ;
+    # Prez often needs dcterms:hasPart to show members in the list
+    dcterms:hasPart ind:skos-scheme ; 
+    dcat:dataset ind:skos-scheme .
+
+# --- SCHEME CONFIGURATION ---
+ind:skos-scheme a skos:ConceptScheme ;
+    dcterms:isPartOf ind:catalog ; # Backlink for discovery
+    skos:prefLabel "SEADOTS Indicator Scheme"@en ;
+    skos:definition "A concept scheme for SEADOTS indicator concepts and observed properties."@en ;
+    # --- TOP CONCEPTS (added for VocPrez/Prez UI visibility) ---
+    skos:hasTopConcept ind:cdi , 
+                       indo:rainfall-anomaly , 
+                       indo:soil-moisture-anomaly , 
+                       indo:vegetation-condition-anomaly ,
+                       indo:fisheries-production1 ,
+                       indo:number-of-turbines ,
+                       indo:area-use-by-wind-park ,
+                       indo:number-of-jobs ,
+                       indo:fisheries-production2 ,
+                       indo:bird-tourism .
+
+# Instances
+ind:cdi a prov:Entity, skos:Concept ;
     rdfs:label "Composite Drought Indicator" ;
-    prov:wasGeneratedBy <https://id3.seadots.eu/indicator/act/cdi-computation> .
+    skos:prefLabel "Composite Drought Indicator"@en ;
+    skos:inScheme ind:skos-scheme ;
+    prov:wasGeneratedBy inda:cdi-computation .
 
-<https://id3.seadots.eu/indicator/act/cdi-computation> a <https://id3.seadots.eu/indicator/CompositeIndicatorComputation> ;
+inda:cdi-computation a ind:CompositeIndicatorComputation ;
     rdfs:label "CDI computation" ;
-    prov:used <https://id3.seadots.eu/indicator/obs/rainfall-anomaly>,
-        <https://id3.seadots.eu/indicator/obs/soil-moisture-anomaly>,
-        <https://id3.seadots.eu/indicator/obs/vegetation-condition-anomaly> .
+    skos:prefLabel "CDI computation"@en ;
+    skos:inScheme ind:skos-scheme ;
+    prov:used indo:rainfall-anomaly,
+        indo:soil-moisture-anomaly,
+        indo:vegetation-condition-anomaly .
 
-<https://id3.seadots.eu/indicator/obs/rainfall-anomaly> rdfs:label "Rainfall Anomaly" .
+indo:rainfall-anomaly a skos:Concept ;
+    rdfs:label "Rainfall Anomaly" ;
+    skos:prefLabel "Rainfall Anomaly"@en ;
+    skos:inScheme ind:skos-scheme .
 
-<https://id3.seadots.eu/indicator/obs/soil-moisture-anomaly> rdfs:label "Soil Moisture Anomaly" .
+indo:soil-moisture-anomaly a skos:Concept ;
+    rdfs:label "Soil Moisture Anomaly" ;
+    skos:prefLabel "Soil Moisture Anomaly"@en ;
+    skos:inScheme ind:skos-scheme .
 
-<https://id3.seadots.eu/indicator/obs/vegetation-condition-anomaly> rdfs:label "Vegetation Condition Anomaly" .
+indo:vegetation-condition-anomaly a skos:Concept ;
+    rdfs:label "Vegetation Condition Anomaly" ;
+    skos:prefLabel "Vegetation Condition Anomaly"@en ;
+    skos:inScheme ind:skos-scheme .
 
+indo:number-of-turbines a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Number of turbines" ;
+    skos:prefLabel "Number of turbines"@en ;
+    skos:inScheme ind:skos-scheme .
+
+indo:area-use-by-wind-park a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Area use by wind park" ;
+    skos:prefLabel "Area use by wind park"@en ;
+    skos:inScheme ind:skos-scheme .
+
+indo:area-use-by-wind-park a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Area use by wind park" ;
+    skos:prefLabel "Area use by wind park"@en ;
+    skos:inScheme ind:skos-scheme .
+
+indo:number-of-jobs a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Number of jobs" ;
+    skos:prefLabel "Number of jobs"@en ;
+    skos:inScheme ind:skos-scheme .
+
+indo:bird-tourism a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Bird tourism" ;
+    skos:prefLabel "Bird tourism"@en ;
+    skos:inScheme ind:skos-scheme .
+
+indo:fisheries-production1 a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Fisheries production" ;
+    skos:prefLabel "Fisheries production"@en ;
+    skos:inScheme ind:skos-scheme ;
+    rdfs:comment "The amount of fish caught in a given area over a specific period of time." ;
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/Fisheries_production> ;
+    prov:providedBy "http://seadots.eu" .
+
+
+# Classes
+sosa:observedProperty a rdfs:Class ;
+    rdfs:label "Variable" .
+
+ses:Edge a rdfs:Class ;
+    rdfs:label "Edge" ;
+    prov:wasgeneratedBy inda:edge-computation .
+
+# Properties
+ses:hasEdge a rdf:Property ;
+    rdfs:domain sosa:observedProperty ;
+    rdfs:range ses:Edge .
+
+ses:from a rdf:Property ;
+    rdfs:domain ses:Edge ;
+    rdfs:range sosa:observedProperty .
+
+ses:to a rdf:Property ;
+    rdfs:domain ses:Edge ;
+    rdfs:range sosa:observedProperty .
+
+ses:weight a rdf:Property ;
+    rdfs:domain ses:Edge ;
+    rdfs:range xsd:decimal .
+
+
+
+# Edges
+ses:edge1 a ses:Edge ;
+    ses:from indo:fisheries-production ;
+    ses:to indo:number-of-turbines ;
+    ses:weight 0.5 .
+
+ses:edge2 a ses:Edge ;
+    ses:from indo:fisheries-production ;
+    ses:to indo:area-use-by-wind-park ;
+    ses:weight -0.5 .
+
+ses:edge3 a ses:Edge ;
+    ses:from indo:fisheries-production ;
+    ses:to indo:number-of-jobs ;
+    ses:weight 1 .
+
+ses:edge4 a ses:Edge ;
+    ses:from indo:number-of-turbines ;
+    ses:to indo:area-use-by-wind-park ;
+    ses:weight 0.49 .
+
+ses:edge5 a ses:Edge ;
+    ses:from indo:area-use-by-wind-park ;
+    ses:to indo:fisheries-production ;
+    ses:weight 1 .
+
+ses:edge6 a ses:Edge ;
+    ses:from indo:number-of-jobs ;
+    ses:to indo:bird-tourism ;
+    ses:weight 0.52 .
+
+ses:edge7 a ses:Edge ;
+    ses:from indo:bird-tourism ;
+    ses:to indo:number-of-jobs ;
+    ses:weight 0.7 .
+
+ses:edge8 a ses:Edge ;
+    ses:from indo:bird-tourism ;
+    ses:to indo:bird-tourism ;
+    ses:weight 1 .
