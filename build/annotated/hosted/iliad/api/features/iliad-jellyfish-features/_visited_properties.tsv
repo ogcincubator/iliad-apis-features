@@ -1,365 +1,449 @@
-path	@id
-/resultTime	http://www.w3.org/ns/sosa/resultTime
-/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime
-/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest
-/observedProperty	http://www.w3.org/ns/sosa/observedProperty
-/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
-/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor
-/hasResult	
-/result	
-/result@links	
-/hasSimpleResult	
-/label	http://www.w3.org/2000/01/rdf-schema#label
-/sampleSizeValue	http://rs.tdwg.org/dwc/terms/sampleSizeValue
-/scientificName	http://rs.tdwg.org/dwc/terms/scientificName
-/scientificNameID	http://rs.tdwg.org/dwc/terms/scientificNameID
-/wormsConcept	https://w3id.org/iliad/property/wormsConcept
-/aphiaID	
-/verbatimSiteDescriptions	http://rs.tdwg.org/hc/terms/verbatimSiteDescriptions
-/verbatimSiteNames	http://rs.tdwg.org/hc/terms/verbatimSiteNames
-/samplingPerformedBy	http://rs.tdwg.org/hc/terms/samplingPerformedBy
-/eventDurationUnit	http://rs.tdwg.org/hc/terms/eventDurationUnit
-/eventDuration	http://rs.tdwg.org/hc/terms/eventDuration
-/siteCount	http://rs.tdwg.org/hc/terms/siteCount
-/reportedWeather	http://rs.tdwg.org/hc/terms/reportedWeather
-/sampleSizeUnit	http://rs.tdwg.org/dwc/terms/sampleSizeUnit
-/recordNumber	http://rs.tdwg.org/dwc/terms/recordNumber
-/verbatimLongitude	http://rs.tdwg.org/dwc/terms/verbatimLongitude
-/behavior	http://rs.tdwg.org/dwc/terms/behavior
-/organismQuantity	http://rs.tdwg.org/dwc/terms/organismQuantity
-/lowestBiostratigraphicZone	http://rs.tdwg.org/dwc/terms/lowestBiostratigraphicZone
-/earliestEonOrLowestEonothem	http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem
-/originalNameUsageID	http://rs.tdwg.org/dwc/terms/originalNameUsageID
-/GeologicalContext	http://rs.tdwg.org/dwc/terms/GeologicalContext
-/countryCode	http://rs.tdwg.org/dwc/terms/countryCode
-/verbatimCoordinates	http://rs.tdwg.org/dwc/terms/verbatimCoordinates
-/maximumDistanceAboveSurfaceInMeters	http://rs.tdwg.org/dwc/terms/maximumDistanceAboveSurfaceInMeters
-/verbatimLocality	http://rs.tdwg.org/dwc/terms/verbatimLocality
-/identificationReferences	http://rs.tdwg.org/dwc/terms/identificationReferences
-/verbatimCoordinateSystem	http://rs.tdwg.org/dwc/terms/verbatimCoordinateSystem
-/measurementType	http://rs.tdwg.org/dwc/terms/measurementType
-/measurementAccuracy	http://rs.tdwg.org/dwc/terms/measurementAccuracy
-/member	http://rs.tdwg.org/dwc/terms/member
-/genus	http://rs.tdwg.org/dwc/terms/genus
-/coordinatePrecision	http://rs.tdwg.org/dwc/terms/coordinatePrecision
-/georeferencedDate	http://rs.tdwg.org/dwc/terms/georeferencedDate
-/taxonomicStatus	http://rs.tdwg.org/dwc/terms/taxonomicStatus
-/previousIdentifications	http://rs.tdwg.org/dwc/terms/previousIdentifications
-/startDayOfYear	http://rs.tdwg.org/dwc/terms/startDayOfYear
-/otherCatalogNumbers	http://rs.tdwg.org/dwc/terms/otherCatalogNumbers
-/MachineObservation	http://rs.tdwg.org/dwc/terms/MachineObservation
-/coordinateUncertaintyInMeters	http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters
-/eventID	http://rs.tdwg.org/dwc/terms/eventID
-/Organism	http://rs.tdwg.org/dwc/terms/Organism
-/identificationID	http://rs.tdwg.org/dwc/terms/identificationID
-/recordedByID	http://rs.tdwg.org/dwc/terms/recordedByID
-/Identification	http://rs.tdwg.org/dwc/terms/Identification
-/country	http://rs.tdwg.org/dwc/terms/country
-/genericName	http://rs.tdwg.org/dwc/terms/genericName
-/decimalLongitude	http://rs.tdwg.org/dwc/terms/decimalLongitude
-/organismQuantityType	http://rs.tdwg.org/dwc/terms/organismQuantityType
-/catalogNumber	http://rs.tdwg.org/dwc/terms/catalogNumber
-/continent	http://rs.tdwg.org/dwc/terms/continent
-/minimumDistanceAboveSurfaceInMeters	http://rs.tdwg.org/dwc/terms/minimumDistanceAboveSurfaceInMeters
-/decimalLatitude	http://rs.tdwg.org/dwc/terms/decimalLatitude
-/higherGeographyID	http://rs.tdwg.org/dwc/terms/higherGeographyID
-/measurementDeterminedBy	http://rs.tdwg.org/dwc/terms/measurementDeterminedBy
-/geodeticDatum	http://rs.tdwg.org/dwc/terms/geodeticDatum
-/maximumDepthInMeters	http://rs.tdwg.org/dwc/terms/maximumDepthInMeters
-/locationAccordingTo	http://rs.tdwg.org/dwc/terms/locationAccordingTo
-/nameAccordingTo	http://rs.tdwg.org/dwc/terms/nameAccordingTo
-/group	http://rs.tdwg.org/dwc/terms/group
-/class	http://rs.tdwg.org/dwc/terms/class
-/footprintWKT	http://rs.tdwg.org/dwc/terms/footprintWKT
-/FossilSpecimen	http://rs.tdwg.org/dwc/terms/FossilSpecimen
-/typeStatus	http://rs.tdwg.org/dwc/terms/typeStatus
-/acceptedNameUsage	http://rs.tdwg.org/dwc/terms/acceptedNameUsage
-/earliestEpochOrLowestSeries	http://rs.tdwg.org/dwc/terms/earliestEpochOrLowestSeries
-/parentNameUsageID	http://rs.tdwg.org/dwc/terms/parentNameUsageID
-/dynamicProperties	http://rs.tdwg.org/dwc/terms/dynamicProperties
-/caste	http://rs.tdwg.org/dwc/terms/caste
-/footprintSpatialFit	http://rs.tdwg.org/dwc/terms/footprintSpatialFit
-/namePublishedInYear	http://rs.tdwg.org/dwc/terms/namePublishedInYear
-/highestBiostratigraphicZone	http://rs.tdwg.org/dwc/terms/highestBiostratigraphicZone
-/fieldNotes	http://rs.tdwg.org/dwc/terms/fieldNotes
-/measurementID	http://rs.tdwg.org/dwc/terms/measurementID
-/parentNameUsage	http://rs.tdwg.org/dwc/terms/parentNameUsage
-/acceptedNameUsageID	http://rs.tdwg.org/dwc/terms/acceptedNameUsageID
-/maximumElevationInMeters	http://rs.tdwg.org/dwc/terms/maximumElevationInMeters
-/identificationVerificationStatus	http://rs.tdwg.org/dwc/terms/identificationVerificationStatus
-/footprintSRS	http://rs.tdwg.org/dwc/terms/footprintSRS
-/individualCount	http://rs.tdwg.org/dwc/terms/individualCount
-/collectionCode	http://rs.tdwg.org/dwc/terms/collectionCode
-/lithostratigraphicTerms	http://rs.tdwg.org/dwc/terms/lithostratigraphicTerms
-/subfamily	http://rs.tdwg.org/dwc/terms/subfamily
-/eventType	http://rs.tdwg.org/dwc/terms/eventType
-/associatedMedia	http://rs.tdwg.org/dwc/terms/associatedMedia
-/Taxon	http://rs.tdwg.org/dwc/terms/Taxon
-/vernacularName	http://rs.tdwg.org/dwc/terms/vernacularName
-/preparations	http://rs.tdwg.org/dwc/terms/preparations
-/Event	http://rs.tdwg.org/dwc/terms/Event
-/institutionID	http://rs.tdwg.org/dwc/terms/institutionID
-/verbatimDepth	http://rs.tdwg.org/dwc/terms/verbatimDepth
-/county	http://rs.tdwg.org/dwc/terms/county
-/earliestEraOrLowestErathem	http://rs.tdwg.org/dwc/terms/earliestEraOrLowestErathem
-/occurrenceStatus	http://rs.tdwg.org/dwc/terms/occurrenceStatus
-/verbatimTaxonRank	http://rs.tdwg.org/dwc/terms/verbatimTaxonRank
-/disposition	http://rs.tdwg.org/dwc/terms/disposition
-/namePublishedInID	http://rs.tdwg.org/dwc/terms/namePublishedInID
-/dateIdentified	http://rs.tdwg.org/dwc/terms/dateIdentified
-/organismRemarks	http://rs.tdwg.org/dwc/terms/organismRemarks
-/latestPeriodOrHighestSystem	http://rs.tdwg.org/dwc/terms/latestPeriodOrHighestSystem
-/taxonRemarks	http://rs.tdwg.org/dwc/terms/taxonRemarks
-/georeferencedBy	http://rs.tdwg.org/dwc/terms/georeferencedBy
-/verbatimElevation	http://rs.tdwg.org/dwc/terms/verbatimElevation
-/higherClassification	http://rs.tdwg.org/dwc/terms/higherClassification
-/waterBody	http://rs.tdwg.org/dwc/terms/waterBody
-/namePublishedIn	http://rs.tdwg.org/dwc/terms/namePublishedIn
-/organismID	http://rs.tdwg.org/dwc/terms/organismID
-/stateProvince	http://rs.tdwg.org/dwc/terms/stateProvince
-/endDayOfYear	http://rs.tdwg.org/dwc/terms/endDayOfYear
-/geologicalContextID	http://rs.tdwg.org/dwc/terms/geologicalContextID
-/pathway	http://rs.tdwg.org/dwc/terms/pathway
-/parentEventID	http://rs.tdwg.org/dwc/terms/parentEventID
-/datasetName	http://rs.tdwg.org/dwc/terms/datasetName
-/measurementMethod	http://rs.tdwg.org/dwc/terms/measurementMethod
-/verbatimLatitude	http://rs.tdwg.org/dwc/terms/verbatimLatitude
-/parentMeasurementID	http://rs.tdwg.org/dwc/terms/parentMeasurementID
-/tribe	http://rs.tdwg.org/dwc/terms/tribe
-/superfamily	http://rs.tdwg.org/dwc/terms/superfamily
-/LivingSpecimen	http://rs.tdwg.org/dwc/terms/LivingSpecimen
-/locationRemarks	http://rs.tdwg.org/dwc/terms/locationRemarks
-/higherGeography	http://rs.tdwg.org/dwc/terms/higherGeography
-/informationWithheld	http://rs.tdwg.org/dwc/terms/informationWithheld
-/organismName	http://rs.tdwg.org/dwc/terms/organismName
-/institutionCode	http://rs.tdwg.org/dwc/terms/institutionCode
-/occurrenceID	http://rs.tdwg.org/dwc/terms/occurrenceID
-/measurementUnit	http://rs.tdwg.org/dwc/terms/measurementUnit
-/HumanObservation	http://rs.tdwg.org/dwc/terms/HumanObservation
-/associatedSequences	http://rs.tdwg.org/dwc/terms/associatedSequences
-/phylum	http://rs.tdwg.org/dwc/terms/phylum
-/fieldNumber	http://rs.tdwg.org/dwc/terms/fieldNumber
-/relationshipRemarks	http://rs.tdwg.org/dwc/terms/relationshipRemarks
-/infragenericEpithet	http://rs.tdwg.org/dwc/terms/infragenericEpithet
-/resourceRelationshipID	http://rs.tdwg.org/dwc/terms/resourceRelationshipID
-/relationshipOfResource	http://rs.tdwg.org/dwc/terms/relationshipOfResource
-/habitat	http://rs.tdwg.org/dwc/terms/habitat
-/materialSampleID	http://rs.tdwg.org/dwc/terms/materialSampleID
-/georeferenceVerificationStatus	http://rs.tdwg.org/dwc/terms/georeferenceVerificationStatus
-/bed	http://rs.tdwg.org/dwc/terms/bed
-/locality	http://rs.tdwg.org/dwc/terms/locality
-/MaterialCitation	http://rs.tdwg.org/dwc/terms/MaterialCitation
-/associatedTaxa	http://rs.tdwg.org/dwc/terms/associatedTaxa
-/measurementDeterminedDate	http://rs.tdwg.org/dwc/terms/measurementDeterminedDate
-/order	http://rs.tdwg.org/dwc/terms/order
-/vitality	http://rs.tdwg.org/dwc/terms/vitality
-/minimumDepthInMeters	http://rs.tdwg.org/dwc/terms/minimumDepthInMeters
-/samplingEffort	http://rs.tdwg.org/dwc/terms/samplingEffort
-/eventDate	http://rs.tdwg.org/dwc/terms/eventDate
-/Occurrence	http://rs.tdwg.org/dwc/terms/Occurrence
-/year	http://rs.tdwg.org/dwc/terms/year
-/family	http://rs.tdwg.org/dwc/terms/family
-/georeferenceSources	http://rs.tdwg.org/dwc/terms/georeferenceSources
-/MaterialSample	http://rs.tdwg.org/dwc/terms/MaterialSample
-/island	http://rs.tdwg.org/dwc/terms/island
-/taxonRank	http://rs.tdwg.org/dwc/terms/taxonRank
-/locationID	http://rs.tdwg.org/dwc/terms/locationID
-/identificationRemarks	http://rs.tdwg.org/dwc/terms/identificationRemarks
-/associatedOrganisms	http://rs.tdwg.org/dwc/terms/associatedOrganisms
-/subgenus	http://rs.tdwg.org/dwc/terms/subgenus
-/relationshipOfResourceID	http://rs.tdwg.org/dwc/terms/relationshipOfResourceID
-/earliestAgeOrLowestStage	http://rs.tdwg.org/dwc/terms/earliestAgeOrLowestStage
-/kingdom	http://rs.tdwg.org/dwc/terms/kingdom
-/latestEonOrHighestEonothem	http://rs.tdwg.org/dwc/terms/latestEonOrHighestEonothem
-/taxonConceptID	http://rs.tdwg.org/dwc/terms/taxonConceptID
-/islandGroup	http://rs.tdwg.org/dwc/terms/islandGroup
-/establishmentMeans	http://rs.tdwg.org/dwc/terms/establishmentMeans
-/relationshipEstablishedDate	http://rs.tdwg.org/dwc/terms/relationshipEstablishedDate
-/identifiedBy	http://rs.tdwg.org/dwc/terms/identifiedBy
-/sex	http://rs.tdwg.org/dwc/terms/sex
-/verbatimLabel	http://rs.tdwg.org/dwc/terms/verbatimLabel
-/verbatimEventDate	http://rs.tdwg.org/dwc/terms/verbatimEventDate
-/month	http://rs.tdwg.org/dwc/terms/month
-/taxonID	http://rs.tdwg.org/dwc/terms/taxonID
-/municipality	http://rs.tdwg.org/dwc/terms/municipality
-/nomenclaturalStatus	http://rs.tdwg.org/dwc/terms/nomenclaturalStatus
-/samplingProtocol	http://rs.tdwg.org/dwc/terms/samplingProtocol
-/earliestPeriodOrLowestSystem	http://rs.tdwg.org/dwc/terms/earliestPeriodOrLowestSystem
-/lifeStage	http://rs.tdwg.org/dwc/terms/lifeStage
-/basisOfRecord	http://rs.tdwg.org/dwc/terms/basisOfRecord
-/day	http://rs.tdwg.org/dwc/terms/day
-/verticalDatum	http://rs.tdwg.org/dwc/terms/verticalDatum
-/latestEpochOrHighestSeries	http://rs.tdwg.org/dwc/terms/latestEpochOrHighestSeries
-/originalNameUsage	http://rs.tdwg.org/dwc/terms/originalNameUsage
-/cultivarEpithet	http://rs.tdwg.org/dwc/terms/cultivarEpithet
-/identifiedByID	http://rs.tdwg.org/dwc/terms/identifiedByID
-/reproductiveCondition	http://rs.tdwg.org/dwc/terms/reproductiveCondition
-/latestEraOrHighestErathem	http://rs.tdwg.org/dwc/terms/latestEraOrHighestErathem
-/datasetID	http://rs.tdwg.org/dwc/terms/datasetID
-/scientificNameAuthorship	http://rs.tdwg.org/dwc/terms/scientificNameAuthorship
-/collectionID	http://rs.tdwg.org/dwc/terms/collectionID
-/pointRadiusSpatialFit	http://rs.tdwg.org/dwc/terms/pointRadiusSpatialFit
-/nameAccordingToID	http://rs.tdwg.org/dwc/terms/nameAccordingToID
-/subtribe	http://rs.tdwg.org/dwc/terms/subtribe
-/georeferenceProtocol	http://rs.tdwg.org/dwc/terms/georeferenceProtocol
-/eventRemarks	http://rs.tdwg.org/dwc/terms/eventRemarks
-/minimumElevationInMeters	http://rs.tdwg.org/dwc/terms/minimumElevationInMeters
-/verbatimSRS	http://rs.tdwg.org/dwc/terms/verbatimSRS
-/degreeOfEstablishment	http://rs.tdwg.org/dwc/terms/degreeOfEstablishment
-/MeasurementOrFact	http://rs.tdwg.org/dwc/terms/MeasurementOrFact
-/identificationQualifier	http://rs.tdwg.org/dwc/terms/identificationQualifier
-/infraspecificEpithet	http://rs.tdwg.org/dwc/terms/infraspecificEpithet
-/latestAgeOrHighestStage	http://rs.tdwg.org/dwc/terms/latestAgeOrHighestStage
-/dataGeneralizations	http://rs.tdwg.org/dwc/terms/dataGeneralizations
-/ResourceRelationship	http://rs.tdwg.org/dwc/terms/ResourceRelationship
-/eventTime	http://rs.tdwg.org/dwc/terms/eventTime
-/verbatimIdentification	http://rs.tdwg.org/dwc/terms/verbatimIdentification
-/PreservedSpecimen	http://rs.tdwg.org/dwc/terms/PreservedSpecimen
-/associatedReferences	http://rs.tdwg.org/dwc/terms/associatedReferences
-/recordedBy	http://rs.tdwg.org/dwc/terms/recordedBy
-/specificEpithet	http://rs.tdwg.org/dwc/terms/specificEpithet
-/formation	http://rs.tdwg.org/dwc/terms/formation
-/nomenclaturalCode	http://rs.tdwg.org/dwc/terms/nomenclaturalCode
-/ownerInstitutionCode	http://rs.tdwg.org/dwc/terms/ownerInstitutionCode
-/relatedResourceID	http://rs.tdwg.org/dwc/terms/relatedResourceID
-/measurementValue	http://rs.tdwg.org/dwc/terms/measurementValue
-/occurrenceRemarks	http://rs.tdwg.org/dwc/terms/occurrenceRemarks
-/measurementRemarks	http://rs.tdwg.org/dwc/terms/measurementRemarks
-/georeferenceRemarks	http://rs.tdwg.org/dwc/terms/georeferenceRemarks
-/organismScope	http://rs.tdwg.org/dwc/terms/organismScope
-/resourceID	http://rs.tdwg.org/dwc/terms/resourceID
-/associatedOccurrences	http://rs.tdwg.org/dwc/terms/associatedOccurrences
-/relationshipAccordingTo	http://rs.tdwg.org/dwc/terms/relationshipAccordingTo
-/hasResult/densityOfJellyFish	
-/hasResult/stingByJellyFish	https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish
-/hasResult/strandedJellyFish	
-/type	@type
-/id	@id
-/properties	@nest
-/geometry	https://purl.org/geojson/vocab#geometry
-/geometry/type	@type
-/geometry/coordinates	https://purl.org/geojson/vocab#coordinates
-/geometry/bbox	https://purl.org/geojson/vocab#bbox
-/geometry/geometries	
-/geometry/geometries/type	@type
-/geometry/geometries/coordinates	https://purl.org/geojson/vocab#coordinates
-/geometry/geometries/bbox	https://purl.org/geojson/vocab#bbox
-/bbox	https://purl.org/geojson/vocab#bbox
-/links	http://www.w3.org/2000/01/rdf-schema#seeAlso
-/links/href	http://www.w3.org/ns/oa#hasTarget
-/links/rel	http://www.iana.org/assignments/relation
-/links/anchor	
-/links/type	http://purl.org/dc/terms/type
-/links/hreflang	http://purl.org/dc/terms/language
-/links/title	http://www.w3.org/2000/01/rdf-schema#label
-/links/length	http://purl.org/dc/terms/extent
-/featureType	https://purl.org/geojson/vocab#collectionFeatureType
-/time	http://purl.org/dc/terms/time
-/time/date	http://www.w3.org/2006/time#hasTime
-/time/timestamp	http://www.w3.org/2006/time#hasTime
-/time/interval	http://www.w3.org/2006/time#hasTime
-/coordRefSys	http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS
-/coordRefSys/type	
-/coordRefSys/href	
-/coordRefSys/epoch	
-/place	http://purl.org/dc/terms/spatial
-/place/type	
-/place/coordRefSys	
-/place/measures	
-/place/measures/enabled	
-/place/measures/unit	
-/place/measures/description	
-/place/coordinates	
-/place/bbox	
-/place/geometries	
-/place/base	
-/place/lower	
-/place/upper	
-/place/prisms	
-/place/geometries/type	
-/geometry/coordRefSys	
-/geometry/measures	
-/geometry/measures/enabled	
-/geometry/measures/unit	
-/geometry/measures/description	
-/properties/resultTime	http://www.w3.org/ns/sosa/resultTime
-/properties/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime
-/properties/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest
-/properties/observedProperty	http://www.w3.org/ns/sosa/observedProperty
-/properties/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
-/properties/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor
-/properties/hasResult	
-/properties/result	
-/properties/result@links	
-/properties/hasSimpleResult	
-/geometryDimension	
-/features	http://www.w3.org/ns/sosa/hasMember
-/features/type	@type
-/features/id	@id
-/features/properties	@nest
-/features/geometry	https://purl.org/geojson/vocab#geometry
-/features/geometry/type	@type
-/features/geometry/coordinates	https://purl.org/geojson/vocab#coordinates
-/features/geometry/bbox	https://purl.org/geojson/vocab#bbox
-/features/geometry/geometries	
-/features/geometry/geometries/type	@type
-/features/geometry/geometries/coordinates	https://purl.org/geojson/vocab#coordinates
-/features/geometry/geometries/bbox	https://purl.org/geojson/vocab#bbox
-/features/bbox	https://purl.org/geojson/vocab#bbox
-/features/links	http://www.w3.org/2000/01/rdf-schema#seeAlso
-/features/links/href	http://www.w3.org/ns/oa#hasTarget
-/features/links/rel	http://www.iana.org/assignments/relation
-/features/links/anchor	
-/features/links/type	http://purl.org/dc/terms/type
-/features/links/hreflang	http://purl.org/dc/terms/language
-/features/links/title	http://www.w3.org/2000/01/rdf-schema#label
-/features/links/length	http://purl.org/dc/terms/extent
-/features/featureType	@type
-/features/time	http://purl.org/dc/terms/time
-/features/time/date	http://www.w3.org/2006/time#hasTime
-/features/time/timestamp	http://www.w3.org/2006/time#hasTime
-/features/time/interval	http://www.w3.org/2006/time#hasTime
-/features/coordRefSys	http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS
-/features/place	http://purl.org/dc/terms/spatial
-/features/place/type	
-/features/place/coordRefSys	
-/features/place/measures	
-/features/place/measures/enabled	
-/features/place/measures/unit	
-/features/place/measures/description	
-/features/place/coordinates	
-/features/place/bbox	
-/features/place/geometries	
-/features/place/base	
-/features/place/lower	
-/features/place/upper	
-/features/place/prisms	
-/features/geometry/coordRefSys	
-/features/geometry/measures	
-/features/geometry/measures/enabled	
-/features/geometry/measures/unit	
-/features/geometry/measures/description	
-/timeStamp	
-/numberMatched	
-/numberReturned	
-/properties/hasMember	http://www.w3.org/ns/sosa/hasMember
-/properties/hasMember/resultTime	http://www.w3.org/ns/sosa/resultTime
-/properties/hasMember/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime
-/properties/hasMember/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest
-/properties/hasMember/observedProperty	http://www.w3.org/ns/sosa/observedProperty
-/properties/hasMember/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
-/properties/hasMember/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor
-/properties/hasMember/hasResult	
-/properties/hasMember/result	
-/properties/hasMember/result@links	
-/properties/hasMember/hasSimpleResult	
-/features/properties/resultTime	http://www.w3.org/ns/sosa/resultTime
-/features/properties/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime
-/features/properties/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest
-/features/properties/observedProperty	http://www.w3.org/ns/sosa/observedProperty
-/features/properties/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
-/features/properties/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor
-/features/properties/hasResult	
-/features/properties/result	
-/features/properties/result@links	
-/features/properties/hasSimpleResult	
+path	@id	schema
+/_anyOf/0/resultTime	http://www.w3.org/ns/sosa/resultTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
+/_anyOf/0/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
+/_anyOf/0/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
+/_anyOf/0/observedProperty	http://www.w3.org/ns/sosa/observedProperty	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
+/_anyOf/0/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
+/_anyOf/0/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
+/_anyOf/0/hasResult		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
+/_anyOf/0/result		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
+/_anyOf/0/result@links		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
+/_anyOf/0/hasSimpleResult		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
+/_anyOf/0/label	http://www.w3.org/2000/01/rdf-schema#label	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml
+/_anyOf/0/sampleSizeValue	http://rs.tdwg.org/dwc/terms/sampleSizeValue	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/scientificName	http://rs.tdwg.org/dwc/terms/scientificName	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/scientificNameID	http://rs.tdwg.org/dwc/terms/scientificNameID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/wormsConcept	https://w3id.org/iliad/property/wormsConcept	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml
+/_anyOf/0/aphiaID		https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml
+/_anyOf/0/verbatimSiteDescriptions	http://rs.tdwg.org/hc/terms/verbatimSiteDescriptions	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/verbatimSiteNames	http://rs.tdwg.org/hc/terms/verbatimSiteNames	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/samplingPerformedBy	http://rs.tdwg.org/hc/terms/samplingPerformedBy	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/eventDurationUnit	http://rs.tdwg.org/hc/terms/eventDurationUnit	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/eventDuration	http://rs.tdwg.org/hc/terms/eventDuration	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/siteCount	http://rs.tdwg.org/hc/terms/siteCount	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/reportedWeather	http://rs.tdwg.org/hc/terms/reportedWeather	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/sampleSizeUnit	http://rs.tdwg.org/dwc/terms/sampleSizeUnit	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/recordNumber	http://rs.tdwg.org/dwc/terms/recordNumber	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/verbatimLongitude	http://rs.tdwg.org/dwc/terms/verbatimLongitude	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/behavior	http://rs.tdwg.org/dwc/terms/behavior	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/organismQuantity	http://rs.tdwg.org/dwc/terms/organismQuantity	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/lowestBiostratigraphicZone	http://rs.tdwg.org/dwc/terms/lowestBiostratigraphicZone	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/earliestEonOrLowestEonothem	http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/originalNameUsageID	http://rs.tdwg.org/dwc/terms/originalNameUsageID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/GeologicalContext	http://rs.tdwg.org/dwc/terms/GeologicalContext	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/countryCode	http://rs.tdwg.org/dwc/terms/countryCode	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/verbatimCoordinates	http://rs.tdwg.org/dwc/terms/verbatimCoordinates	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/maximumDistanceAboveSurfaceInMeters	http://rs.tdwg.org/dwc/terms/maximumDistanceAboveSurfaceInMeters	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/verbatimLocality	http://rs.tdwg.org/dwc/terms/verbatimLocality	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/identificationReferences	http://rs.tdwg.org/dwc/terms/identificationReferences	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/verbatimCoordinateSystem	http://rs.tdwg.org/dwc/terms/verbatimCoordinateSystem	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/measurementType	http://rs.tdwg.org/dwc/terms/measurementType	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/measurementAccuracy	http://rs.tdwg.org/dwc/terms/measurementAccuracy	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/member	http://rs.tdwg.org/dwc/terms/member	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/genus	http://rs.tdwg.org/dwc/terms/genus	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/coordinatePrecision	http://rs.tdwg.org/dwc/terms/coordinatePrecision	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/georeferencedDate	http://rs.tdwg.org/dwc/terms/georeferencedDate	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/taxonomicStatus	http://rs.tdwg.org/dwc/terms/taxonomicStatus	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/previousIdentifications	http://rs.tdwg.org/dwc/terms/previousIdentifications	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/startDayOfYear	http://rs.tdwg.org/dwc/terms/startDayOfYear	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/otherCatalogNumbers	http://rs.tdwg.org/dwc/terms/otherCatalogNumbers	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/MachineObservation	http://rs.tdwg.org/dwc/terms/MachineObservation	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/coordinateUncertaintyInMeters	http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/eventID	http://rs.tdwg.org/dwc/terms/eventID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/Organism	http://rs.tdwg.org/dwc/terms/Organism	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/identificationID	http://rs.tdwg.org/dwc/terms/identificationID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/recordedByID	http://rs.tdwg.org/dwc/terms/recordedByID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/Identification	http://rs.tdwg.org/dwc/terms/Identification	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/country	http://rs.tdwg.org/dwc/terms/country	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/genericName	http://rs.tdwg.org/dwc/terms/genericName	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/decimalLongitude	http://rs.tdwg.org/dwc/terms/decimalLongitude	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/organismQuantityType	http://rs.tdwg.org/dwc/terms/organismQuantityType	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/catalogNumber	http://rs.tdwg.org/dwc/terms/catalogNumber	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/continent	http://rs.tdwg.org/dwc/terms/continent	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/minimumDistanceAboveSurfaceInMeters	http://rs.tdwg.org/dwc/terms/minimumDistanceAboveSurfaceInMeters	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/decimalLatitude	http://rs.tdwg.org/dwc/terms/decimalLatitude	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/higherGeographyID	http://rs.tdwg.org/dwc/terms/higherGeographyID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/measurementDeterminedBy	http://rs.tdwg.org/dwc/terms/measurementDeterminedBy	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/geodeticDatum	http://rs.tdwg.org/dwc/terms/geodeticDatum	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/maximumDepthInMeters	http://rs.tdwg.org/dwc/terms/maximumDepthInMeters	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/locationAccordingTo	http://rs.tdwg.org/dwc/terms/locationAccordingTo	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/nameAccordingTo	http://rs.tdwg.org/dwc/terms/nameAccordingTo	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/group	http://rs.tdwg.org/dwc/terms/group	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/class	http://rs.tdwg.org/dwc/terms/class	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/footprintWKT	http://rs.tdwg.org/dwc/terms/footprintWKT	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/FossilSpecimen	http://rs.tdwg.org/dwc/terms/FossilSpecimen	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/typeStatus	http://rs.tdwg.org/dwc/terms/typeStatus	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/acceptedNameUsage	http://rs.tdwg.org/dwc/terms/acceptedNameUsage	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/earliestEpochOrLowestSeries	http://rs.tdwg.org/dwc/terms/earliestEpochOrLowestSeries	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/parentNameUsageID	http://rs.tdwg.org/dwc/terms/parentNameUsageID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/dynamicProperties	http://rs.tdwg.org/dwc/terms/dynamicProperties	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/caste	http://rs.tdwg.org/dwc/terms/caste	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/footprintSpatialFit	http://rs.tdwg.org/dwc/terms/footprintSpatialFit	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/namePublishedInYear	http://rs.tdwg.org/dwc/terms/namePublishedInYear	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/highestBiostratigraphicZone	http://rs.tdwg.org/dwc/terms/highestBiostratigraphicZone	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/fieldNotes	http://rs.tdwg.org/dwc/terms/fieldNotes	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/measurementID	http://rs.tdwg.org/dwc/terms/measurementID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/parentNameUsage	http://rs.tdwg.org/dwc/terms/parentNameUsage	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/acceptedNameUsageID	http://rs.tdwg.org/dwc/terms/acceptedNameUsageID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/maximumElevationInMeters	http://rs.tdwg.org/dwc/terms/maximumElevationInMeters	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/identificationVerificationStatus	http://rs.tdwg.org/dwc/terms/identificationVerificationStatus	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/footprintSRS	http://rs.tdwg.org/dwc/terms/footprintSRS	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/individualCount	http://rs.tdwg.org/dwc/terms/individualCount	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/collectionCode	http://rs.tdwg.org/dwc/terms/collectionCode	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/lithostratigraphicTerms	http://rs.tdwg.org/dwc/terms/lithostratigraphicTerms	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/subfamily	http://rs.tdwg.org/dwc/terms/subfamily	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/eventType	http://rs.tdwg.org/dwc/terms/eventType	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/associatedMedia	http://rs.tdwg.org/dwc/terms/associatedMedia	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/Taxon	http://rs.tdwg.org/dwc/terms/Taxon	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/vernacularName	http://rs.tdwg.org/dwc/terms/vernacularName	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/preparations	http://rs.tdwg.org/dwc/terms/preparations	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/Event	http://rs.tdwg.org/dwc/terms/Event	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/institutionID	http://rs.tdwg.org/dwc/terms/institutionID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/verbatimDepth	http://rs.tdwg.org/dwc/terms/verbatimDepth	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/county	http://rs.tdwg.org/dwc/terms/county	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/earliestEraOrLowestErathem	http://rs.tdwg.org/dwc/terms/earliestEraOrLowestErathem	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/occurrenceStatus	http://rs.tdwg.org/dwc/terms/occurrenceStatus	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/verbatimTaxonRank	http://rs.tdwg.org/dwc/terms/verbatimTaxonRank	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/disposition	http://rs.tdwg.org/dwc/terms/disposition	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/namePublishedInID	http://rs.tdwg.org/dwc/terms/namePublishedInID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/dateIdentified	http://rs.tdwg.org/dwc/terms/dateIdentified	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/organismRemarks	http://rs.tdwg.org/dwc/terms/organismRemarks	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/latestPeriodOrHighestSystem	http://rs.tdwg.org/dwc/terms/latestPeriodOrHighestSystem	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/taxonRemarks	http://rs.tdwg.org/dwc/terms/taxonRemarks	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/georeferencedBy	http://rs.tdwg.org/dwc/terms/georeferencedBy	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/verbatimElevation	http://rs.tdwg.org/dwc/terms/verbatimElevation	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/higherClassification	http://rs.tdwg.org/dwc/terms/higherClassification	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/waterBody	http://rs.tdwg.org/dwc/terms/waterBody	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/namePublishedIn	http://rs.tdwg.org/dwc/terms/namePublishedIn	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/organismID	http://rs.tdwg.org/dwc/terms/organismID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/stateProvince	http://rs.tdwg.org/dwc/terms/stateProvince	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/endDayOfYear	http://rs.tdwg.org/dwc/terms/endDayOfYear	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/geologicalContextID	http://rs.tdwg.org/dwc/terms/geologicalContextID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/pathway	http://rs.tdwg.org/dwc/terms/pathway	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/parentEventID	http://rs.tdwg.org/dwc/terms/parentEventID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/datasetName	http://rs.tdwg.org/dwc/terms/datasetName	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/measurementMethod	http://rs.tdwg.org/dwc/terms/measurementMethod	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/verbatimLatitude	http://rs.tdwg.org/dwc/terms/verbatimLatitude	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/parentMeasurementID	http://rs.tdwg.org/dwc/terms/parentMeasurementID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/tribe	http://rs.tdwg.org/dwc/terms/tribe	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/superfamily	http://rs.tdwg.org/dwc/terms/superfamily	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/LivingSpecimen	http://rs.tdwg.org/dwc/terms/LivingSpecimen	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/locationRemarks	http://rs.tdwg.org/dwc/terms/locationRemarks	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/higherGeography	http://rs.tdwg.org/dwc/terms/higherGeography	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/informationWithheld	http://rs.tdwg.org/dwc/terms/informationWithheld	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/organismName	http://rs.tdwg.org/dwc/terms/organismName	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/institutionCode	http://rs.tdwg.org/dwc/terms/institutionCode	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/occurrenceID	http://rs.tdwg.org/dwc/terms/occurrenceID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/measurementUnit	http://rs.tdwg.org/dwc/terms/measurementUnit	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/HumanObservation	http://rs.tdwg.org/dwc/terms/HumanObservation	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/associatedSequences	http://rs.tdwg.org/dwc/terms/associatedSequences	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/phylum	http://rs.tdwg.org/dwc/terms/phylum	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/fieldNumber	http://rs.tdwg.org/dwc/terms/fieldNumber	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/relationshipRemarks	http://rs.tdwg.org/dwc/terms/relationshipRemarks	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/infragenericEpithet	http://rs.tdwg.org/dwc/terms/infragenericEpithet	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/resourceRelationshipID	http://rs.tdwg.org/dwc/terms/resourceRelationshipID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/relationshipOfResource	http://rs.tdwg.org/dwc/terms/relationshipOfResource	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/habitat	http://rs.tdwg.org/dwc/terms/habitat	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/materialSampleID	http://rs.tdwg.org/dwc/terms/materialSampleID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/georeferenceVerificationStatus	http://rs.tdwg.org/dwc/terms/georeferenceVerificationStatus	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/bed	http://rs.tdwg.org/dwc/terms/bed	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/locality	http://rs.tdwg.org/dwc/terms/locality	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/MaterialCitation	http://rs.tdwg.org/dwc/terms/MaterialCitation	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/associatedTaxa	http://rs.tdwg.org/dwc/terms/associatedTaxa	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/measurementDeterminedDate	http://rs.tdwg.org/dwc/terms/measurementDeterminedDate	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/order	http://rs.tdwg.org/dwc/terms/order	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/vitality	http://rs.tdwg.org/dwc/terms/vitality	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/minimumDepthInMeters	http://rs.tdwg.org/dwc/terms/minimumDepthInMeters	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/samplingEffort	http://rs.tdwg.org/dwc/terms/samplingEffort	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/eventDate	http://rs.tdwg.org/dwc/terms/eventDate	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/Occurrence	http://rs.tdwg.org/dwc/terms/Occurrence	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/year	http://rs.tdwg.org/dwc/terms/year	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/family	http://rs.tdwg.org/dwc/terms/family	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/georeferenceSources	http://rs.tdwg.org/dwc/terms/georeferenceSources	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/MaterialSample	http://rs.tdwg.org/dwc/terms/MaterialSample	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/island	http://rs.tdwg.org/dwc/terms/island	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/taxonRank	http://rs.tdwg.org/dwc/terms/taxonRank	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/locationID	http://rs.tdwg.org/dwc/terms/locationID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/identificationRemarks	http://rs.tdwg.org/dwc/terms/identificationRemarks	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/associatedOrganisms	http://rs.tdwg.org/dwc/terms/associatedOrganisms	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/subgenus	http://rs.tdwg.org/dwc/terms/subgenus	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/relationshipOfResourceID	http://rs.tdwg.org/dwc/terms/relationshipOfResourceID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/earliestAgeOrLowestStage	http://rs.tdwg.org/dwc/terms/earliestAgeOrLowestStage	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/kingdom	http://rs.tdwg.org/dwc/terms/kingdom	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/latestEonOrHighestEonothem	http://rs.tdwg.org/dwc/terms/latestEonOrHighestEonothem	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/taxonConceptID	http://rs.tdwg.org/dwc/terms/taxonConceptID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/islandGroup	http://rs.tdwg.org/dwc/terms/islandGroup	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/establishmentMeans	http://rs.tdwg.org/dwc/terms/establishmentMeans	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/relationshipEstablishedDate	http://rs.tdwg.org/dwc/terms/relationshipEstablishedDate	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/identifiedBy	http://rs.tdwg.org/dwc/terms/identifiedBy	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/sex	http://rs.tdwg.org/dwc/terms/sex	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/verbatimLabel	http://rs.tdwg.org/dwc/terms/verbatimLabel	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/verbatimEventDate	http://rs.tdwg.org/dwc/terms/verbatimEventDate	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/month	http://rs.tdwg.org/dwc/terms/month	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/taxonID	http://rs.tdwg.org/dwc/terms/taxonID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/municipality	http://rs.tdwg.org/dwc/terms/municipality	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/nomenclaturalStatus	http://rs.tdwg.org/dwc/terms/nomenclaturalStatus	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/samplingProtocol	http://rs.tdwg.org/dwc/terms/samplingProtocol	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/earliestPeriodOrLowestSystem	http://rs.tdwg.org/dwc/terms/earliestPeriodOrLowestSystem	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/lifeStage	http://rs.tdwg.org/dwc/terms/lifeStage	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/basisOfRecord	http://rs.tdwg.org/dwc/terms/basisOfRecord	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/day	http://rs.tdwg.org/dwc/terms/day	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/verticalDatum	http://rs.tdwg.org/dwc/terms/verticalDatum	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/latestEpochOrHighestSeries	http://rs.tdwg.org/dwc/terms/latestEpochOrHighestSeries	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/originalNameUsage	http://rs.tdwg.org/dwc/terms/originalNameUsage	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/cultivarEpithet	http://rs.tdwg.org/dwc/terms/cultivarEpithet	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/identifiedByID	http://rs.tdwg.org/dwc/terms/identifiedByID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/reproductiveCondition	http://rs.tdwg.org/dwc/terms/reproductiveCondition	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/latestEraOrHighestErathem	http://rs.tdwg.org/dwc/terms/latestEraOrHighestErathem	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/datasetID	http://rs.tdwg.org/dwc/terms/datasetID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/scientificNameAuthorship	http://rs.tdwg.org/dwc/terms/scientificNameAuthorship	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/collectionID	http://rs.tdwg.org/dwc/terms/collectionID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/pointRadiusSpatialFit	http://rs.tdwg.org/dwc/terms/pointRadiusSpatialFit	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/nameAccordingToID	http://rs.tdwg.org/dwc/terms/nameAccordingToID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/subtribe	http://rs.tdwg.org/dwc/terms/subtribe	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/georeferenceProtocol	http://rs.tdwg.org/dwc/terms/georeferenceProtocol	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/eventRemarks	http://rs.tdwg.org/dwc/terms/eventRemarks	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/minimumElevationInMeters	http://rs.tdwg.org/dwc/terms/minimumElevationInMeters	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/verbatimSRS	http://rs.tdwg.org/dwc/terms/verbatimSRS	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/degreeOfEstablishment	http://rs.tdwg.org/dwc/terms/degreeOfEstablishment	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/MeasurementOrFact	http://rs.tdwg.org/dwc/terms/MeasurementOrFact	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/identificationQualifier	http://rs.tdwg.org/dwc/terms/identificationQualifier	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/infraspecificEpithet	http://rs.tdwg.org/dwc/terms/infraspecificEpithet	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/latestAgeOrHighestStage	http://rs.tdwg.org/dwc/terms/latestAgeOrHighestStage	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/dataGeneralizations	http://rs.tdwg.org/dwc/terms/dataGeneralizations	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/ResourceRelationship	http://rs.tdwg.org/dwc/terms/ResourceRelationship	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/eventTime	http://rs.tdwg.org/dwc/terms/eventTime	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/verbatimIdentification	http://rs.tdwg.org/dwc/terms/verbatimIdentification	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/PreservedSpecimen	http://rs.tdwg.org/dwc/terms/PreservedSpecimen	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/associatedReferences	http://rs.tdwg.org/dwc/terms/associatedReferences	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/recordedBy	http://rs.tdwg.org/dwc/terms/recordedBy	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/specificEpithet	http://rs.tdwg.org/dwc/terms/specificEpithet	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/formation	http://rs.tdwg.org/dwc/terms/formation	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/nomenclaturalCode	http://rs.tdwg.org/dwc/terms/nomenclaturalCode	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/ownerInstitutionCode	http://rs.tdwg.org/dwc/terms/ownerInstitutionCode	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/relatedResourceID	http://rs.tdwg.org/dwc/terms/relatedResourceID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/measurementValue	http://rs.tdwg.org/dwc/terms/measurementValue	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/occurrenceRemarks	http://rs.tdwg.org/dwc/terms/occurrenceRemarks	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/measurementRemarks	http://rs.tdwg.org/dwc/terms/measurementRemarks	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/georeferenceRemarks	http://rs.tdwg.org/dwc/terms/georeferenceRemarks	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/organismScope	http://rs.tdwg.org/dwc/terms/organismScope	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/resourceID	http://rs.tdwg.org/dwc/terms/resourceID	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/associatedOccurrences	http://rs.tdwg.org/dwc/terms/associatedOccurrences	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/relationshipAccordingTo	http://rs.tdwg.org/dwc/terms/relationshipAccordingTo	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml
+/_anyOf/0/hasResult/densityOfJellyFish		/github/workspace/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/schema.yaml
+/_anyOf/0/hasResult/stingByJellyFish	https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish	/github/workspace/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/schema.yaml
+/_anyOf/0/hasResult/strandedJellyFish		/github/workspace/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/schema.yaml
+/_anyOf/1/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/_anyOf/1/id	@id	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/_anyOf/1/properties	@nest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.yaml
+/_anyOf/1/geometry	https://purl.org/geojson/vocab#geometry	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/_anyOf/1/geometry/_oneOf/1/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/1/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/1/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/2/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/2/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/2/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/3/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/3/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/3/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/4/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/4/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/4/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/5/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/5/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/5/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/6/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/6/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/6/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/0/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/0/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/0/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/1/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/1/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/1/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/2/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/2/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/2/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/3/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/3/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/3/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/4/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/4/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/4/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/5/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/5/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/5/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/geometry/_oneOf/7/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/_anyOf/1/links	http://www.w3.org/2000/01/rdf-schema#seeAlso	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/_anyOf/1/links/href	http://www.w3.org/ns/oa#hasTarget	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/_anyOf/1/links/rel	http://www.iana.org/assignments/relation	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/_anyOf/1/links/anchor		https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/_anyOf/1/links/type	http://purl.org/dc/terms/type	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/_anyOf/1/links/hreflang	http://purl.org/dc/terms/language	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/_anyOf/1/links/title	http://www.w3.org/2000/01/rdf-schema#label	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/_anyOf/1/links/length	http://purl.org/dc/terms/extent	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/_anyOf/1/featureType	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/_anyOf/1/time	http://purl.org/dc/terms/time	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/_anyOf/1/time/_oneOf/1/date	http://www.w3.org/2006/time#hasTime	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml
+/_anyOf/1/time/_oneOf/1/timestamp	http://www.w3.org/2006/time#hasTime	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml
+/_anyOf/1/time/_oneOf/1/interval	http://www.w3.org/2006/time#hasTime	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml
+/_anyOf/1/coordRefSys	http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/_anyOf/1/coordRefSys/_oneOf/0/_oneOf/1/type		https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+/_anyOf/1/coordRefSys/_oneOf/0/_oneOf/1/href		https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+/_anyOf/1/coordRefSys/_oneOf/0/_oneOf/1/epoch		https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+/_anyOf/1/coordRefSys/_oneOf/0/_oneOf/2/type		https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+/_anyOf/1/place	http://purl.org/dc/terms/spatial	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/_anyOf/1/place/_oneOf/1/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/1/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/1/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/1/measures/enabled		https://beta.schemas.opengis.net/json-fg/measures.json
+/_anyOf/1/place/_oneOf/1/measures/unit		https://beta.schemas.opengis.net/json-fg/measures.json
+/_anyOf/1/place/_oneOf/1/measures/description		https://beta.schemas.opengis.net/json-fg/measures.json
+/_anyOf/1/place/_oneOf/1/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/1/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/2/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/2/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/2/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/2/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/2/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/3/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/3/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/3/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/3/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/3/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/4/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/4/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/4/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/4/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/4/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/5/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/5/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/5/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/5/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/5/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/6/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/6/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/6/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/6/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/6/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/7/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/7/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/7/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/7/geometries		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/7/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/8/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/8/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/8/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/8/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/8/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/9/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/9/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/9/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/9/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/9/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/10/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/10/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/10/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/10/base		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/10/lower		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/10/upper		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/10/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/11/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/11/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/11/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/11/prisms		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/11/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/12/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/12/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/12/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/12/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/12/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/13/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/13/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/13/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/13/geometries		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/13/geometries/_oneOf/2/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/13/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/14/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/14/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/14/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/14/geometries		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/14/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/15/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/15/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/15/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/15/geometries		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/15/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/16/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/16/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/16/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/16/geometries		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/16/geometries/_oneOf/2/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/16/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/place/_oneOf/17/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/1/observedProperty	http://www.w3.org/ns/sosa/observedProperty	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml
+/_anyOf/2/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml
+/_anyOf/2/featureType	https://purl.org/geojson/vocab#collectionFeatureType	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml
+/_anyOf/2/geometryDimension		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml
+/_anyOf/2/coordRefSys		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml
+/_anyOf/2/links	http://www.w3.org/2000/01/rdf-schema#seeAlso	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml
+/_anyOf/2/features	http://www.w3.org/ns/sosa/hasMember	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observationCollection/schema.yaml
+/_anyOf/2/features/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/id		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/properties		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/1/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/1/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/1/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/2/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/2/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/2/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/3/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/3/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/3/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/4/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/4/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/4/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/5/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/5/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/5/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/6/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/6/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/6/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/0/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/0/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/0/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/1/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/1/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/1/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/2/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/2/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/2/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/3/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/3/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/3/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/4/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/4/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/4/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/5/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/5/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/5/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/timeStamp		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml
+/_anyOf/2/numberMatched		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml
+/_anyOf/2/numberReturned		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml
+/_anyOf/2/properties	@nest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observationCollection/schema.yaml
+/_anyOf/2/properties/resultTime	http://www.w3.org/ns/sosa/resultTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml
+/_anyOf/2/properties/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml
+/_anyOf/2/properties/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml
+/_anyOf/2/properties/observedProperty	http://www.w3.org/ns/sosa/observedProperty	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml
+/_anyOf/2/properties/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml
+/_anyOf/2/properties/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml
+/_anyOf/2/properties/hasMember	http://www.w3.org/ns/sosa/hasMember	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml

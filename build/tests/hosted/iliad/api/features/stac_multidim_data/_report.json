@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.stac_multidim_data - ILIAD STAC/DCAT dimensional data",
   "bblockName": "ILIAD STAC/DCAT dimensional data",
   "bblockId": "ogc.hosted.iliad.api.features.stac_multidim_data",
-  "generated": "2025-10-15T13:40:05.034328+00:00",
+  "generated": "2026-04-17T11:00:39.076463+00:00",
   "result": false,
   "items": [
     {
@@ -23,7 +23,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_1_1.json from examples"
+              "message": "Using examples/oilspill_record_example_wth_netcdf_data.json from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -40,7 +40,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 177,
+              "size": 165,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }
@@ -66,20 +66,51 @@
           "entries": [
             {
               "op": "shacl-report",
-              "shaclFile": "https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/records-ontology/rules.shacl",
+              "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/records-ontology/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/records-ontology/rules.shacl",
+              "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/rec/#testVarExists>": {
+                "geojson:FeatureShape": {
+                  "nodes": [
+                    "<http://w3id.org/ogcincubator/simulation>"
+                  ]
+                },
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/records-ontology/rules.shacl:\n - Shape <https://www.ogc.org/rules/rec/#testVarExists>: *none*\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <http://w3id.org/ogcincubator/simulation>\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl",
+              "focusNodes": {
+                "rec:testAllVarsInTemplate": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:\n - Shape rec:testAllVarsInTemplate: *none*\n"
             }
           ]
         }

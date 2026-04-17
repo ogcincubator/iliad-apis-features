@@ -782,7 +782,7 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 @prefix qudt: <http://qudt.org/schema/qudt#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix ssn1: <http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#> .
+@prefix sosa1: <http://www.w3.org/ns/sosa#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://w3id.org/ogcincubator/coverageJSON/PLE_fishing_suitability> skos:prefLabel "Suitability of good catch (>200 kg) for Pleuronectes platessa"@en .
@@ -791,19 +791,19 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 
 [] a covjson:Coverage ;
     covjson:domain [ a covjson:Domain ;
-            covjson:axis [ covjson:num 13 ;
-                    covjson:start -1.496301e+01 ;
-                    covjson:stop -1.451857e+01 ],
-                [ covjson:num 23 ;
+            covjson:axis [ covjson:num 23 ;
                     covjson:start 4.60003e+01 ;
                     covjson:stop 4.648921e+01 ],
-                [ ] ;
+                [ ],
+                [ covjson:num 13 ;
+                    covjson:start -1.496301e+01 ;
+                    covjson:stop -1.451857e+01 ] ;
             covjson:domainType covjsondt:Grid ;
             covjson:referencing [ covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/4326> ] ] ;
     covjson:parameter [ a covjson:Parameter ;
             dcterms:description "Suitability of good catch (>200 kg) for Pleuronectes platessa" ;
             qudt:unit [ qudt:symbol "percent" ] ;
-            ssn1:observedProperty <http://w3id.org/ogcincubator/coverageJSON/PLE_fishing_suitability> ] ;
+            sosa1:observedProperty <http://w3id.org/ogcincubator/coverageJSON/PLE_fishing_suitability> ] ;
     covjson:range [ a covjson:NdArray ;
             covjson:axisNames ( "y" "x" "t" ) ;
             covjson:dataType [ ] ;
@@ -822,6 +822,7 @@ description: 'Component of OGC Coverage Implementation Schema 1.0. Last updated:
   additional rights of use, visit http://www.opengeospatial.org/legal/.'
 $ref: https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema.yaml
 x-jsonld-extra-terms:
+  meteogate: https://api.meteogate.eu/profiles/metocean/covjson
   id: '@id'
   type: '@type'
   value: '@value'
@@ -892,7 +893,10 @@ x-jsonld-extra-terms:
     x-jsonld-id: https://covjson.org/def/core#parameter
     x-jsonld-type: '@id'
     x-jsonld-container: '@index'
-  observedProperty: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#observedProperty
+  observedProperty: http://www.w3.org/ns/sosa#observedProperty
+  usedProcedure: http://www.w3.org/ns/sosa#usedProcedure
+  madeBySensor: http://www.w3.org/ns/sosa#madeBySensor
+  hasFeatureOfInterest: http://www.w3.org/ns/sosa#hasFeatureOfInterest
   categoryEncoding: https://covjson.org/def/core#categoryEncoding
   ParameterGroup: https://covjson.org/def/core#ParameterGroup
   members:
@@ -1524,9 +1528,6 @@ x-jsonld-extra-terms:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest
     x-jsonld-type: '@id'
   domainIncludes: https://schema.org/domainIncludes
-  madeBySensor:
-    x-jsonld-id: http://www.w3.org/ns/sosa/madeBySensor
-    x-jsonld-type: '@id'
   long: http://www.w3.org/2003/01/geo/wgs84_pos#long
   ActuatableProperty: http://www.w3.org/ns/sosa/ActuatableProperty
   Feature: http://www.opengis.net/ont/geosparql#Feature
@@ -1641,9 +1642,6 @@ x-jsonld-extra-terms:
   hasGeometry:
     x-jsonld-id: http://www.opengis.net/ont/geosparql#hasGeometry
     x-jsonld-type: '@id'
-  usedProcedure:
-    x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
-    x-jsonld-type: '@id'
   ssn.Property: http://www.w3.org/ns/ssn/Property
   sfContains:
     x-jsonld-id: http://www.opengis.net/ont/geosparql#sfContains
@@ -1658,9 +1656,6 @@ x-jsonld-extra-terms:
   SpatialObject: http://www.opengis.net/ont/geosparql#SpatialObject
   sliceStructure:
     x-jsonld-id: http://purl.org/linked-data/cube#sliceStructure
-    x-jsonld-type: '@id'
-  hasFeatureOfInterest:
-    x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
     x-jsonld-type: '@id'
   NumberPerLength: http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLength
   lat: http://www.w3.org/2003/01/geo/wgs84_pos#lat
@@ -2087,10 +2082,11 @@ x-jsonld-prefixes:
   covjson: https://covjson.org/def/core#
   ignf: http://data.ign.fr/def/ignf#
   inspiregloss: http://inspire.ec.europa.eu/glossary/
-  ssn: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#
+  sosa: http://www.w3.org/ns/sosa#
   xsd: http://www.w3.org/2001/XMLSchema#
   hydra: http://www.w3.org/ns/hydra/core#
   covjsondt: https://covjson.org/def/domainTypes#
+  ssn: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#
   rel: http://www.iana.org/assignments/relation/
 
 ```
@@ -2106,7 +2102,8 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "@vocab": "_:_:",
+    "@vocab": "_:",
+    "meteogate": "https://api.meteogate.eu/profiles/metocean/covjson",
     "id": "@id",
     "type": "@type",
     "value": "@value",
@@ -2189,7 +2186,10 @@ Links to the schema:
       "@type": "@id",
       "@container": "@index"
     },
-    "observedProperty": "ssn:observedProperty",
+    "observedProperty": "sosa:observedProperty",
+    "usedProcedure": "sosa:usedProcedure",
+    "madeBySensor": "sosa:madeBySensor",
+    "hasFeatureOfInterest": "sosa:hasFeatureOfInterest",
     "categoryEncoding": "covjson:categoryEncoding",
     "ParameterGroup": "covjson:ParameterGroup",
     "members": {
@@ -2967,10 +2967,6 @@ Links to the schema:
       "@type": "@id"
     },
     "domainIncludes": "https://schema.org/domainIncludes",
-    "madeBySensor": {
-      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
-      "@type": "@id"
-    },
     "long": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
     "ActuatableProperty": "http://www.w3.org/ns/sosa/ActuatableProperty",
     "Feature": "http://www.opengis.net/ont/geosparql#Feature",
@@ -3109,10 +3105,6 @@ Links to the schema:
       "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
       "@type": "@id"
     },
-    "usedProcedure": {
-      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
-      "@type": "@id"
-    },
     "ssn.Property": "http://www.w3.org/ns/ssn/Property",
     "sfContains": {
       "@id": "http://www.opengis.net/ont/geosparql#sfContains",
@@ -3129,10 +3121,6 @@ Links to the schema:
     "SpatialObject": "http://www.opengis.net/ont/geosparql#SpatialObject",
     "sliceStructure": {
       "@id": "http://purl.org/linked-data/cube#sliceStructure",
-      "@type": "@id"
-    },
-    "hasFeatureOfInterest": {
-      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
       "@type": "@id"
     },
     "NumberPerLength": "http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLength",
@@ -3590,10 +3578,11 @@ Links to the schema:
     "covjson": "https://covjson.org/def/core#",
     "ignf": "http://data.ign.fr/def/ignf#",
     "inspiregloss": "http://inspire.ec.europa.eu/glossary/",
-    "ssn": "http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#",
+    "sosa": "http://www.w3.org/ns/sosa#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "hydra": "http://www.w3.org/ns/hydra/core#",
     "covjsondt": "https://covjson.org/def/domainTypes#",
+    "ssn": "http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#",
     "rel": "http://www.iana.org/assignments/relation/",
     "@version": 1.1
   }

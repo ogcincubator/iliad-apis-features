@@ -1,65 +1,75 @@
-path	@id
-/type	
-/domainType	
-/axes	
-/axes/.+/dataType	
-/axes/.+/values	
-/axes/.+/coordinates	
-/axes/.+/bounds	
-/axes/.+/start	
-/axes/.+/stop	
-/axes/.+/num	
-/referencing	
-/referencing/coordinates	
-/referencing/system	
-/referencing/system/calendar	
-/referencing/system/timeScale	
-/referencing/system/id	
-/referencing/system/label	
-/referencing/system/description	
-/referencing/system/targetConcept	
-/referencing/system/targetConcept/id	
-/referencing/system/targetConcept/label	
-/referencing/system/targetConcept/description	
-/referencing/system/identifiers	
-/referencing/system/type	
-/values	
-/shape	
-/axisNames	
-/dataType	
-/tileSets	
-/tileSets/tileShape	
-/tileSets/urlTemplate	
-/id	
-/domain	
-/parameters	
-/parameters/.+/id	
-/parameters/.+/type	
-/parameters/.+/description	
-/parameters/.+/observedProperty	
-/parameters/.+/observedProperty/id	
-/parameters/.+/observedProperty/label	
-/parameters/.+/observedProperty/description	
-/parameters/.+/observedProperty/categories	
-/parameters/.+/observedProperty/categories/id	
-/parameters/.+/observedProperty/categories/label	
-/parameters/.+/observedProperty/categories/description	
-/parameters/.+/unit	
-/parameters/.+/unit/id	
-/parameters/.+/unit/label	
-/parameters/.+/unit/symbol	
-/parameters/.+/unit/symbol/type	
-/parameters/.+/unit/symbol/value	
-/parameters/.+/categoryEncoding	
-/parameterGroups	
-/parameterGroups/type	
-/parameterGroups/id	
-/parameterGroups/label	
-/parameterGroups/description	
-/parameterGroups/observedProperty	
-/parameterGroups/members	
-/ranges	
-/ranges/.+/type	
-/rangeAlternates	
-/coverages	
-/coverages/domain	
+path	@id	schema
+/_then/type		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/domainType		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/axes		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/axes/.+/_then/dataType		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/axes/.+/_then/values		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/axes/.+/_then/coordinates		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/axes/.+/_then/bounds		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/axes/.+/_then/_then/values		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/axes/.+/_then/_then/_then/values		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/axes/.+/_then/_then/_then/bounds		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/axes/.+/_then/_then/_else/values		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/axes/.+/_then/_then/_else/bounds		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/axes/.+/_else/start		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/axes/.+/_else/stop		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/axes/.+/_else/num		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/referencing		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/referencing/coordinates		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/referencing/system		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/referencing/system/_then/calendar		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/referencing/system/_then/timeScale		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/referencing/system/_then/id		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/referencing/system/_then/label		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/referencing/system/_then/description		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/referencing/system/_then/targetConcept		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/referencing/system/_then/targetConcept/id		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/referencing/system/_then/targetConcept/label		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/referencing/system/_then/targetConcept/description		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/referencing/system/_then/identifiers		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/referencing/system/type		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/_then/values		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/_then/shape		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/_then/axisNames		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/dataType		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/shape		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/axisNames		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/values		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/tileSets		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/tileSets/tileShape		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/tileSets/urlTemplate		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/id		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/domain		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/id		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/type		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/description		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/observedProperty		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/observedProperty/id		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/observedProperty/label		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/observedProperty/description		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/observedProperty/categories		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/observedProperty/categories/id		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/observedProperty/categories/label		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/observedProperty/categories/description		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/unit		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/unit/id		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/unit/label		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/unit/symbol		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/unit/symbol/_then/type		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/unit/symbol/_then/value		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameters/.+/categoryEncoding		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameterGroups		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameterGroups/type		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameterGroups/id		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameterGroups/label		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameterGroups/description		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameterGroups/observedProperty		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/parameterGroups/members		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/ranges		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/ranges/.+/_then/type		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/rangeAlternates		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/_then/coverages		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/_then/coverages/domain		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/_then/coverages		https://schemas.opengis.net/covjson/1.0/coveragejson.json
+/type		https://schemas.opengis.net/covjson/1.0/coveragejson.json

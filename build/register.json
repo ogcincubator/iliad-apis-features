@@ -2,12 +2,12 @@
   "name": "ILIAD API Profiles",
   "abstract": "(Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability.",
   "description": "Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. \n\nThus, a pilot project to monitor Jellyfish swarms using Citizen Science will reuse common patterns for Citizen Science observations, which in turn we reuse a common pattern for observations, using an underlying component of the OIM - the OGC Observations model (SOSA ontology). \n",
-  "modified": "2025-10-15T13:39:34.441879",
+  "modified": "2026-04-17T11:00:00.851326",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"bfb0f4bbc2c7fdd539fcd44d5f8e97a73288d480",
-      "shortCommitId": "\"bfb0f4",
-      "date": "2025-10-13T08:32:18+00:00\""
+      "commitId": "\"82fc8650df6a65be1e17f7c6440191f0b7c6ccff",
+      "shortCommitId": "\"82fc86",
+      "date": "2026-04-17T09:37:57+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/iliad-apis-features",
@@ -15,6 +15,7 @@
   "baseURL": "https://ogcincubator.github.io/iliad-apis-features/",
   "viewerURL": "https://ogcincubator.github.io/iliad-apis-features/",
   "validationReport": "https://ogcincubator.github.io/iliad-apis-features/build/tests/report.html",
+  "validationReportJson": "https://ogcincubator.github.io/iliad-apis-features/build/tests/report.json",
   "imports": [
     "https://opengeospatial.github.io/bblocks/register.json",
     "https://opengeospatial.github.io/ogcapi-sosa/build/register.json",
@@ -33,7 +34,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-15",
+      "dateOfLastChange": "2026-04-17",
       "link": "https://github.com/opengeospatial/CoverageJSON",
       "sources": [
         {
@@ -66,18 +67,19 @@
       },
       "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverageJSON/schema.yaml",
       "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverageJSON/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverageJSON/",
       "rdfData": [],
       "validationPassed": false,
       "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/coverageJSON/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverageJSON/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverageJSON/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverageJSON/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -94,7 +96,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-15",
+      "dateOfLastChange": "2026-04-17",
       "link": "https://github.com/opengeospatial/coverage-implementation-schema",
       "sources": [
         {
@@ -122,18 +124,19 @@
       },
       "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverage_information_model/schema.yaml",
       "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverage_information_model/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverage_information_model/",
       "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/coverage_information_model/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverage_information_model/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverage_information_model/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverage_information_model/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -150,7 +153,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-15",
+      "dateOfLastChange": "2026-04-17",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -174,17 +177,18 @@
       },
       "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-bio-tdwg/schema.json",
       "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-bio-tdwg/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-bio-tdwg/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-bio-tdwg/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-bio-tdwg/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-bio-tdwg/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -193,51 +197,67 @@
       }
     },
     {
-      "itemIdentifier": "ogc.hosted.iliad.api.features.marine-protected-area-emodnet",
-      "name": "Marine Protected Area FeatureType Building Block",
-      "abstract": "Defines a composable Building Block view of the MPA aligned with the Oceans Information Model.",
+      "itemIdentifier": "ogc.hosted.iliad.api.features.macroobservation",
+      "id": "helcom-macroobservation",
+      "name": "HELCOM Macroobservation",
+      "title": "HELCOM Macroobservation Building Block",
+      "version": "0.1.0",
+      "dateTimeAddition": "2026-04-17T00:00:00Z",
       "status": "under-development",
-      "dateTimeAddition": "2025-09-18T00:00:00Z",
-      "itemClass": "model",
-      "register": "ogc-incubator",
-      "version": "1.0",
-      "dateOfLastChange": "2025-10-15",
-      "dependsOn": [],
-      "shaclRules": [],
-      "sources": [
+      "itemClass": "schema",
+      "description": "A source-level building block for HELCOM macroobservation point data within the Swedish EEZ, including provenance-aware marine observation properties and linked-data context.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "keywords": [
+        "HELCOM",
+        "macroobservation",
+        "marine observation",
+        "GeoJSON",
+        "SOSA",
+        "SKOS",
+        "EEZ",
+        "Sweden"
+      ],
+      "authors": [
         {
-          "title": "OIM master repository",
-          "link": "https://github.com/ILIAD-ocean-twin/OIM"
-        },
-        {
-          "title": "Example data from EMODNet via ODP Features API",
-          "link": "https://app.hubocean.earth/catalog/dataset/0c664d20-2c3b-409e-af43-ac32610f9276/emodnet-human-activities-environment-world-database-on-protected-areas-wdpa-world-database-on-protected-areas"
+          "name": "ILIAD Marine Data Team",
+          "organization": "ILIAD",
+          "email": "info@example.com"
         }
       ],
-      "scope": "dev",
-      "tags": [
-        "iliad",
-        "oim",
-        "citizen-science",
-        "project"
+      "standards": [
+        "https://www.opengis.net/def/standard/geojson",
+        "https://www.w3.org/TR/sosa/",
+        "http://www.w3.org/TR/vocab-dcat-2/",
+        "http://www.w3.org/TR/skos-reference/",
+        "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
       ],
+      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/macroobservation/context.jsonld",
+      "tests": "tests/test.yaml",
       "shaclShapes": {},
-      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/marine-protected-area-emodnet/",
+      "dateOfLastChange": "2026-04-17",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/macroobservation/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/macroobservation/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/macroobservation/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/macroobservation/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/macroobservation/resolvedProperties.json",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/macroobservation/",
       "rdfData": [],
-      "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/marine-protected-area-emodnet/",
+      "validationPassed": false,
+      "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/macroobservation/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/marine-protected-area-emodnet/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/marine-protected-area-emodnet/index.json"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/macroobservation/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/macroobservation/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.marine-protected-area-emodnet"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.macroobservation"
         }
       }
     },
@@ -250,7 +270,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-15",
+      "dateOfLastChange": "2026-04-17",
       "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_array_metadata",
       "sources": [
         {
@@ -279,18 +299,19 @@
       },
       "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_array_metadata/schema.yaml",
       "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_array_metadata/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_array_metadata/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_array_metadata/",
       "rdfData": [],
       "validationPassed": false,
       "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/zarr_array_metadata/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/zarr_array_metadata/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/zarr_array_metadata/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/zarr_array_metadata/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -307,7 +328,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-15",
+      "dateOfLastChange": "2026-04-17",
       "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_attrs_metadata",
       "sources": [
         {
@@ -336,18 +357,19 @@
       },
       "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/schema.yaml",
       "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/",
       "rdfData": [],
       "validationPassed": false,
       "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/zarr_attrs_metadata/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/zarr_attrs_metadata/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/zarr_attrs_metadata/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -364,7 +386,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-15",
+      "dateOfLastChange": "2026-04-17",
       "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_attrs_metadata",
       "sources": [
         {
@@ -393,18 +415,19 @@
       },
       "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/schema.yaml",
       "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_sdn/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/",
       "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/zarr_attrs_sdn/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/zarr_attrs_sdn/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/zarr_attrs_sdn/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -421,7 +444,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-15",
+      "dateOfLastChange": "2026-04-17",
       "link": "https://github.com/opengeospatial/iliad-api-features/oim-sta-obs",
       "sources": [
         {
@@ -453,13 +476,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/oim-sta-obs/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-sta-obs/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-sta-obs/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-sta-obs/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -476,7 +499,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-15",
+      "dateOfLastChange": "2026-04-17",
       "link": "https://github.com/opengeospatial/CoverageJSON",
       "sources": [
         {
@@ -517,22 +540,86 @@
       },
       "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverageJSONFisheries/schema.yaml",
       "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverageJSONFisheries/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSONFisheries/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/coverageJSONFisheries/",
       "rdfData": [],
       "validationPassed": false,
       "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/coverageJSONFisheries/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverageJSONFisheries/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverageJSONFisheries/index.json"
         },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverageJSONFisheries/index.md"
+        },
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.coverageJSONFisheries"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.marine-protected-area-emodnet",
+      "name": "Marine Protected Area FeatureType Building Block",
+      "abstract": "Defines a composable Building Block view of the MPA aligned with the Oceans Information Model.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-18T00:00:00Z",
+      "itemClass": "model",
+      "register": "ogc-incubator",
+      "version": "1.0",
+      "dateOfLastChange": "2026-04-17",
+      "dependsOn": [
+        "ogc.geo.features.feature"
+      ],
+      "shaclRules": [],
+      "sources": [
+        {
+          "title": "OIM master repository",
+          "link": "https://github.com/ILIAD-ocean-twin/OIM"
+        },
+        {
+          "title": "Example data from EMODNet via ODP Features API",
+          "link": "https://app.hubocean.earth/catalog/dataset/0c664d20-2c3b-409e-af43-ac32610f9276/emodnet-human-activities-environment-world-database-on-protected-areas-wdpa-world-database-on-protected-areas"
+        }
+      ],
+      "scope": "dev",
+      "tags": [
+        "iliad",
+        "oim",
+        "citizen-science",
+        "project"
+      ],
+      "shaclShapes": {
+        "ogc.geo.features.feature": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+        ]
+      },
+      "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/marine-protected-area-emodnet/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/marine-protected-area-emodnet/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/marine-protected-area-emodnet/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/marine-protected-area-emodnet/schema.yml",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/marine-protected-area-emodnet/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/marine-protected-area-emodnet/resolvedProperties.json",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/marine-protected-area-emodnet/",
+      "rdfData": [],
+      "validationPassed": false,
+      "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/marine-protected-area-emodnet/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/marine-protected-area-emodnet/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/marine-protected-area-emodnet/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.marine-protected-area-emodnet"
         }
       }
     },
@@ -545,7 +632,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-15",
+      "dateOfLastChange": "2026-04-17",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -565,15 +652,21 @@
         "ogc.hosted.iliad.api.features.oim-obs": [
           "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
         ],
+        "ogc.geo.features.featureCollection": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
+        ],
+        "ogc.geo.features.feature": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+        ],
         "ogc.sosa.properties.observation": [
           "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
         ]
       },
       "dependsOn": [
-        "ogc.sosa.features.observation",
         "ogc.sosa.features.observationCollection",
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.sosa.properties.observation"
+        "ogc.sosa.properties.observation",
+        "ogc.sosa.features.observation",
+        "ogc.ogc-utils.iri-or-curie"
       ],
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
       "schema": {
@@ -582,17 +675,18 @@
       },
       "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/schema.yaml",
       "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -609,7 +703,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0",
-      "dateOfLastChange": "2025-10-15",
+      "dateOfLastChange": "2026-04-17",
       "dependsOn": [
         "ogc.model.cross-domain.all"
       ],
@@ -632,11 +726,11 @@
         "project"
       ],
       "shaclShapes": {
-        "ogc.model.cross-domain.sosa": [
-          "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
-        ],
         "ogc.model.cross-domain.qudt": [
           "http://qudt.org/2.1/schema/shacl/qudt"
+        ],
+        "ogc.model.cross-domain.sosa": [
+          "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
         ],
         "ogc.skos.concept": [
           "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
@@ -651,13 +745,13 @@
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -674,7 +768,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-15",
+      "dateOfLastChange": "2026-04-17",
       "link": "https://github.com/opengeospatial/bblock-tehttps://ogcincubator.github.io/cross-domain-model/mplate",
       "sources": [
         {
@@ -694,13 +788,19 @@
         "ogc.hosted.iliad.api.features.oim-obs": [
           "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
         ],
+        "ogc.geo.features.featureCollection": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
+        ],
+        "ogc.geo.features.feature": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+        ],
         "ogc.sosa.properties.observation": [
           "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
         ]
       },
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.hosted.iliad.api.features.oim-obs"
+        "ogc.hosted.iliad.api.features.oim-obs",
+        "ogc.ogc-utils.iri-or-curie"
       ],
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld",
       "schema": {
@@ -709,17 +809,18 @@
       },
       "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/schema.yaml",
       "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs-cs/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs-cs/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs-cs/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs-cs/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -736,7 +837,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0",
-      "dateOfLastChange": "2025-10-15",
+      "dateOfLastChange": "2026-04-17",
       "dependsOn": [
         "ogc.hosted.iliad.api.features.oim",
         "ogc.hosted.iliad.api.features.oim-bio-tdwg"
@@ -756,11 +857,11 @@
         "project"
       ],
       "shaclShapes": {
-        "ogc.model.cross-domain.sosa": [
-          "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
-        ],
         "ogc.model.cross-domain.qudt": [
           "http://qudt.org/2.1/schema/shacl/qudt"
+        ],
+        "ogc.model.cross-domain.sosa": [
+          "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
         ],
         "ogc.skos.concept": [
           "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
@@ -775,13 +876,13 @@
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish-ontology/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/iliad-jellyfish-ontology/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish-ontology/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -798,7 +899,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-15",
+      "dateOfLastChange": "2026-04-17",
       "dependsOn": [
         "ogc.geo.geodcat.stac.geodcat-stac-item"
       ],
@@ -819,8 +920,11 @@
         "CF-convention"
       ],
       "shaclShapes": {
-        "ogc.geo.geodcat.records-ontology": [
-          "https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/records-ontology/rules.shacl"
+        "ogc.geo.features.feature": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+        ],
+        "ogc.api.records.v1.schemas.linkTemplate": [
+          "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl"
         ]
       },
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/stac_multidim_data/context.jsonld",
@@ -830,18 +934,19 @@
       },
       "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/stac_multidim_data/schema.yaml",
       "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/stac_multidim_data/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/stac_multidim_data/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/stac_multidim_data/",
       "rdfData": [],
       "validationPassed": false,
       "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/stac_multidim_data/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/stac_multidim_data/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/stac_multidim_data/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/stac_multidim_data/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -859,12 +964,12 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-15",
+      "dateOfLastChange": "2026-04-17",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
-        "ogc.hosted.iliad.api.features.oim-obs-cs",
         "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology",
-        "ogc.hosted.iliad.api.features.oim-bio-tdwg"
+        "ogc.hosted.iliad.api.features.oim-bio-tdwg",
+        "ogc.hosted.iliad.api.features.oim-obs-cs"
       ],
       "sources": [
         {
@@ -883,23 +988,29 @@
         "project"
       ],
       "shaclShapes": {
-        "ogc.hosted.iliad.api.features.oim-obs": [
-          "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
-        ],
-        "ogc.sosa.properties.observation": [
-          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
+        "ogc.model.cross-domain.qudt": [
+          "http://qudt.org/2.1/schema/shacl/qudt"
         ],
         "ogc.model.cross-domain.sosa": [
           "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
-        ],
-        "ogc.model.cross-domain.qudt": [
-          "http://qudt.org/2.1/schema/shacl/qudt"
         ],
         "ogc.skos.concept": [
           "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
         ],
         "ogc.skos.common": [
           "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+        ],
+        "ogc.hosted.iliad.api.features.oim-obs": [
+          "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
+        ],
+        "ogc.geo.features.featureCollection": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
+        ],
+        "ogc.geo.features.feature": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+        ],
+        "ogc.sosa.properties.observation": [
+          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
         ]
       },
       "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/context.jsonld",
@@ -909,18 +1020,19 @@
       },
       "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish-features/schema.yaml",
       "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish-features/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/iliad-jellyfish-features/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/iliad-jellyfish-features/",
       "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/iliad-jellyfish-features/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish-features/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/iliad-jellyfish-features/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish-features/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -929,5 +1041,25 @@
       }
     }
   ],
-  "remoteCacheDir": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/_cache"
+  "remoteCacheDir": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/_cache",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://ogcincubator.github.io/iliad-apis-features/build/register.json",
+      "type": "application/json",
+      "title": "This Building Blocks Register in JSON format"
+    },
+    {
+      "rel": "self",
+      "href": "https://ogcincubator.github.io/iliad-apis-features/build/bblocks.ttl",
+      "type": "text/turtle",
+      "title": "This Building Blocks Register in RDF Turtle format"
+    },
+    {
+      "rel": "self",
+      "href": "https://ogcincubator.github.io/iliad-apis-features/build/bblocks.jsonld",
+      "type": "application/ld+json",
+      "title": "This Building Blocks Register in JSON-LD format"
+    }
+  ]
 }

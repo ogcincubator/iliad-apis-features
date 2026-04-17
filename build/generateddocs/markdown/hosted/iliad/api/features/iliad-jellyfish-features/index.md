@@ -864,7 +864,23 @@ Links to the schema:
     "features": {
       "@id": "sosa:hasMember",
       "@type": "@id",
-      "@container": "@set"
+      "@container": "@set",
+      "@context": {
+        "Prism": {
+          "@id": "geojson:Prism",
+          "@context": {
+            "base": "geojson:prismBase",
+            "lower": "geojson:prismLower",
+            "upper": "geojson:prismUpper"
+          }
+        },
+        "MultiPrism": {
+          "@id": "geojson:MultiPrism",
+          "@context": {
+            "prisms": "geojson:prisms"
+          }
+        }
+      }
     },
     "forProperty": {
       "@id": "sosa:forProperty",
@@ -880,7 +896,14 @@ Links to the schema:
     },
     "hasMember": {
       "@id": "sosa:hasMember",
-      "@type": "@id"
+      "@type": "@id",
+      "@context": {
+        "features": {
+          "@id": "geojson:features",
+          "@type": "@id",
+          "@container": "@set"
+        }
+      }
     },
     "hasOriginalSample": {
       "@id": "sosa:hasOriginalSample",
@@ -896,7 +919,10 @@ Links to the schema:
     },
     "hasResult": {
       "@id": "sosa:hasResult",
-      "@type": "@id"
+      "@type": "@id",
+      "@context": {
+        "stingByJellyFish": "https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish"
+      }
     },
     "hasResultQuality": {
       "@id": "sosa:hasResultQuality",
@@ -1378,7 +1404,6 @@ Links to the schema:
     "resourceID": "dwc:resourceID",
     "associatedOccurrences": "dwc:associatedOccurrences",
     "relationshipAccordingTo": "dwc:relationshipAccordingTo",
-    "stingByJellyFish": "https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",

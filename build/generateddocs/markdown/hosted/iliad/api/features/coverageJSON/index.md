@@ -879,7 +879,7 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
 @prefix qudt: <http://qudt.org/schema/qudt#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix ssn1: <http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#> .
+@prefix sosa1: <http://www.w3.org/ns/sosa#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.com/particletypes> skos:prefLabel "Particle class"@en .
@@ -905,8 +905,8 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
                 <https://w3id.org/ogcincubator/coverageJSON/POTM_range> ],
         [ a covjson:Coverage ;
             covjson:domain [ a covjson:Domain ;
-                    covjson:axis [ covjson:dataType covjson:tuple ],
-                        [ ] ] ;
+                    covjson:axis [ ],
+                        [ covjson:dataType covjson:tuple ] ] ;
             covjson:range [ a covjson:NdArray ;
                     covjson:axisNames ( "composite" ) ;
                     covjson:dataType xsd:double ;
@@ -919,21 +919,21 @@ Relatively large datasets can be handled efficiently in a “web-friendly” way
             covjson:axis [ ] ] ;
     covjson:domainType covjsondt:MultiPoint ;
     covjson:parameter [ a covjson:Parameter ;
-            ssn1:observedProperty <http://example.com/particletypes> ;
-            covjson:categoryEncoding [ ns1:_0 0 ;
-                    ns1:_1 1 ;
-                    ns1:_4 2 ] ],
-        [ a covjson:Parameter ;
             dcterms:description "particle diameter"@en ;
             qudt:unit [ qudt:symbol "nm"^^<http://www.opengis.net/def/uom/UCUM/> ;
                     skos:prefLabel "nanometers"@en ] ;
-            ssn1:observedProperty <https://qudt.org/vocab/unit/NanoM> ] ;
+            sosa1:observedProperty <https://qudt.org/vocab/unit/NanoM> ],
+        [ a covjson:Parameter ;
+            sosa1:observedProperty <http://example.com/particletypes> ;
+            covjson:categoryEncoding [ ns1:_0 0 ;
+                    ns1:_1 1 ;
+                    ns1:_4 2 ] ] ;
     covjson:referencing [ covjson:referenceSystem [ a ignf:VerticalCRS ;
                     ignf:coordinateSystem [ covjson:coordinateSystemAxes ( [ ignf:axisDirection "down" ;
                                         qudt:unit [ qudt:symbol "Pa" ] ] ) ] ] ],
+        [ covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ],
         [ covjson:referenceSystem [ a inspiregloss:TemporalReferenceSystem ;
-                    covjson:calendar <http://www.opengis.net/def/uom/ISO-8601/0/Gregorian> ] ],
-        [ covjson:referenceSystem <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] .
+                    covjson:calendar <http://www.opengis.net/def/uom/ISO-8601/0/Gregorian> ] ] .
 
 
 ```
@@ -948,6 +948,7 @@ description: 'Component of OGC Coverage Implementation Schema 1.0. Last updated:
   additional rights of use, visit http://www.opengeospatial.org/legal/.'
 $ref: https://schemas.opengis.net/covjson/1.0/coveragejson.json
 x-jsonld-extra-terms:
+  meteogate: https://api.meteogate.eu/profiles/metocean/covjson
   id: '@id'
   type: '@type'
   value: '@value'
@@ -1018,7 +1019,10 @@ x-jsonld-extra-terms:
     x-jsonld-id: https://covjson.org/def/core#parameter
     x-jsonld-type: '@id'
     x-jsonld-container: '@index'
-  observedProperty: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#observedProperty
+  observedProperty: http://www.w3.org/ns/sosa#observedProperty
+  usedProcedure: http://www.w3.org/ns/sosa#usedProcedure
+  madeBySensor: http://www.w3.org/ns/sosa#madeBySensor
+  hasFeatureOfInterest: http://www.w3.org/ns/sosa#hasFeatureOfInterest
   categoryEncoding: https://covjson.org/def/core#categoryEncoding
   ParameterGroup: https://covjson.org/def/core#ParameterGroup
   members:
@@ -1063,7 +1067,7 @@ x-jsonld-extra-terms:
   MultiPolygonSeries: https://covjson.org/def/domainTypes#MultiPolygonSeries
   MultiPolygon: https://covjson.org/def/domainTypes#MultiPolygon
   Polygon: https://covjson.org/def/domainTypes#Polygon
-x-jsonld-vocab: '_:_:'
+x-jsonld-vocab: '_:'
 x-jsonld-prefixes:
   skos: http://www.w3.org/2004/02/skos/core#
   dct: http://purl.org/dc/terms/
@@ -1071,10 +1075,11 @@ x-jsonld-prefixes:
   covjson: https://covjson.org/def/core#
   ignf: http://data.ign.fr/def/ignf#
   inspiregloss: http://inspire.ec.europa.eu/glossary/
-  ssn: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#
+  sosa: http://www.w3.org/ns/sosa#
   xsd: http://www.w3.org/2001/XMLSchema#
   hydra: http://www.w3.org/ns/hydra/core#
   covjsondt: https://covjson.org/def/domainTypes#
+  ssn: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#
   rel: http://www.iana.org/assignments/relation/
 
 ```
@@ -1090,7 +1095,8 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "@vocab": "_:_:",
+    "@vocab": "_:",
+    "meteogate": "https://api.meteogate.eu/profiles/metocean/covjson",
     "id": "@id",
     "type": "@type",
     "value": "@value",
@@ -1173,7 +1179,10 @@ Links to the schema:
       "@type": "@id",
       "@container": "@index"
     },
-    "observedProperty": "ssn:observedProperty",
+    "observedProperty": "sosa:observedProperty",
+    "usedProcedure": "sosa:usedProcedure",
+    "madeBySensor": "sosa:madeBySensor",
+    "hasFeatureOfInterest": "sosa:hasFeatureOfInterest",
     "categoryEncoding": "covjson:categoryEncoding",
     "ParameterGroup": "covjson:ParameterGroup",
     "members": {
@@ -1231,10 +1240,11 @@ Links to the schema:
     "covjson": "https://covjson.org/def/core#",
     "ignf": "http://data.ign.fr/def/ignf#",
     "inspiregloss": "http://inspire.ec.europa.eu/glossary/",
-    "ssn": "http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#",
+    "sosa": "http://www.w3.org/ns/sosa#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "hydra": "http://www.w3.org/ns/hydra/core#",
     "covjsondt": "https://covjson.org/def/domainTypes#",
+    "ssn": "http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#",
     "rel": "http://www.iana.org/assignments/relation/",
     "@version": 1.1
   }

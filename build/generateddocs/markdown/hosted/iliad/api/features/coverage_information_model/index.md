@@ -163,11 +163,11 @@ Coverages can be encoded in any suitable format (such as GML, JSON, GeoTIFF, or 
     cis:domainSet [ a cis:DomainSetType ;
             cis:generalGrid [ a cis:GeneralGridCoverageType ;
                     cis:axis [ a cis:IndexAxisType ;
-                            cis:axisLabel "j" ;
+                            cis:axisLabel "i" ;
                             cis:lowerBound 0 ;
                             cis:upperBound 2 ],
                         [ a cis:IndexAxisType ;
-                            cis:axisLabel "i" ;
+                            cis:axisLabel "j" ;
                             cis:lowerBound 0 ;
                             cis:upperBound 2 ] ;
                     cis:axisLabels ( "i" "j" ) ;
@@ -494,14 +494,14 @@ Links to the schema:
   "@context": {
     "id": "@id",
     "type": "@type",
-    "CoverageByDomainAndRangeType": "cis:CoverageByDomainAndRangeType",
-    "CoverageByPartitioningType": "cis:CoverageByPartitioningType",
     "envelope": "cis:envelope",
     "domainSet": "cis:domainSet",
     "rangeSet": "cis:rangeSet",
-    "partitionSet": "cis:partitionSet",
     "rangeType": "cis:rangeType",
     "metadata": "cis:metadata",
+    "partitionSet": "cis:partitionSet",
+    "CoverageByDomainAndRangeType": "cis:CoverageByDomainAndRangeType",
+    "CoverageByPartitioningType": "cis:CoverageByPartitioningType",
     "DomainSetType": "cis:DomainSetType",
     "GeneralGridCoverageType": "cis:GeneralGridCoverageType",
     "generalGrid": "cis:generalGrid",

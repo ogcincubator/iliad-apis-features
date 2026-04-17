@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.zarr_attrs_metadata - GeoZarr Attributes description metadata",
   "bblockName": "GeoZarr Attributes description metadata",
   "bblockId": "ogc.hosted.iliad.api.features.zarr_attrs_metadata",
-  "generated": "2025-10-15T13:39:58.044476+00:00",
+  "generated": "2026-04-17T11:00:16.755472+00:00",
   "result": false,
   "items": [
     {
@@ -23,7 +23,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_1_1.json from examples"
+              "message": "Using examples/.zattrs-crs from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -78,7 +78,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_2_1.json from examples"
+              "message": "Using examples/.zattrs-latitude from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -133,7 +133,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_3_1.json from examples"
+              "message": "Using examples/.zattrs-longitude from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -190,7 +190,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_4_1.json from examples"
+              "message": "Using examples/.zattrs-root from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -245,7 +245,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_5_1.json from examples"
+              "message": "Using examples/.zattrs-time from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -302,7 +302,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_6_1.json from examples"
+              "message": "Using examples/.zattrs-var-temperature from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -359,7 +359,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_7_1.json from examples"
+              "message": "Using examples/.zattrs-variable from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -416,7 +416,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_8_1.json from examples"
+              "message": "Using examples/.zgroups from examples"
             },
             {
               "op": "jsonld-uplift",

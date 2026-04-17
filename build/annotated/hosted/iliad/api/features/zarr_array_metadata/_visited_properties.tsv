@@ -1,16 +1,16 @@
-path	@id
-/chunks	http:/w3id.org/iliad/zarr/chunks
-/compressor	http:/w3id.org/iliad/zarr/compressor
-/compressor/id	http:/w3id.org/iliad/zarr/compressor/id
-/compressor/cname	http:/w3id.org/iliad/zarr/compressor/cname
-/compressor/clevel	http:/w3id.org/iliad/zarr/compressor/clevel
-/compressor/shuffle	http:/w3id.org/iliad/zarr/compressor/shuffle
-/dtype	http:/w3id.org/iliad/zarr/dtype
-/fill_value	http:/w3id.org/iliad/zarr/fill_value
-/filters	http:/w3id.org/iliad/zarr/filters
-/filters/id	http:/w3id.org/iliad/zarr/compressor/id
-/filters/dtype	http:/w3id.org/iliad/zarr/dtype
-/filters/astype	
-/order	http:/w3id.org/iliad/zarr/order
-/shape	http:/w3id.org/iliad/zarr/shape
-/zarr_format	http:/w3id.org/iliad/zarr/zarr_format
+path	@id	schema
+/chunks	http:/w3id.org/iliad/zarr/chunks	/github/workspace/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml
+/compressor	http:/w3id.org/iliad/zarr/compressor	/github/workspace/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml
+/compressor/id	http:/w3id.org/iliad/zarr/compressor/id	/github/workspace/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml
+/compressor/cname	http:/w3id.org/iliad/zarr/compressor/cname	/github/workspace/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml
+/compressor/clevel	http:/w3id.org/iliad/zarr/compressor/clevel	/github/workspace/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml
+/compressor/shuffle	http:/w3id.org/iliad/zarr/compressor/shuffle	/github/workspace/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml
+/dtype	http:/w3id.org/iliad/zarr/dtype	/github/workspace/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml
+/fill_value	http:/w3id.org/iliad/zarr/fill_value	/github/workspace/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml
+/filters	http:/w3id.org/iliad/zarr/filters	/github/workspace/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml
+/filters/id	http:/w3id.org/iliad/zarr/compressor/id	/github/workspace/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml
+/filters/dtype	http:/w3id.org/iliad/zarr/dtype	/github/workspace/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml
+/filters/astype		/github/workspace/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml
+/order	http:/w3id.org/iliad/zarr/order	/github/workspace/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml
+/shape	http:/w3id.org/iliad/zarr/shape	/github/workspace/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml
+/zarr_format	http:/w3id.org/iliad/zarr/zarr_format	/github/workspace/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml
