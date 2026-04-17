@@ -1,5 +1,5 @@
-examples:
-  - name: HELCOM Swedish EEZ macroobservation sample
-    description: "Sample GeoJSON FeatureCollection of macroobservation points from HELCOM data within the Swedish EEZ north of Gotland."
-    file: examples/sample.geojson
-    mediaType: application/geo+json
+- title: HELCOM Swedish EEZ macroobservation sample
+  description: "Sample GeoJSON FeatureCollection of macroobservation points from HELCOM data within the Swedish EEZ north of Gotland."
+  snippets:
+    - language: json
+      code: "{{examples/sample.geojson}}"
