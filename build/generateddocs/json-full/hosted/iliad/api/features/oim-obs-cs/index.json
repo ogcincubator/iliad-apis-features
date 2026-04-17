@@ -29,19 +29,19 @@
     "ogc.hosted.iliad.api.features.oim-obs": [
       "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
     ],
-    "ogc.geo.features.featureCollection": [
-      "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
+    "ogc.sosa.properties.observation": [
+      "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
     ],
     "ogc.geo.features.feature": [
       "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
     ],
-    "ogc.sosa.properties.observation": [
-      "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
+    "ogc.geo.features.featureCollection": [
+      "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
     ]
   },
   "dependsOn": [
-    "ogc.hosted.iliad.api.features.oim-obs",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.ogc-utils.iri-or-curie",
+    "ogc.hosted.iliad.api.features.oim-obs"
   ],
   "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld",
   "schema": {
