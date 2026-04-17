@@ -1,43 +1,43 @@
-@prefix ns1: <http://www.opengis.net/swe/2.0/> .
-@prefix ns2: <http://www.opengis.net/cis/1.1/> .
+@prefix ns1: <http://www.opengis.net/cis/1.1/> .
+@prefix ns2: <http://www.opengis.net/swe/2.0/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<examples:CIS_05_2D> a ns2:CoverageByDomainAndRangeType ;
-    ns2:domainSet <examples:CIS_DS_05_2D> ;
-    ns2:rangeSet <examples:CIS_RS_05_2D> ;
-    ns2:rangeType <examples:CIS_RT_05_2D> .
+<examples:CIS_05_2D> a ns1:CoverageByDomainAndRangeType ;
+    ns1:domainSet <examples:CIS_DS_05_2D> ;
+    ns1:rangeSet <examples:CIS_RS_05_2D> ;
+    ns1:rangeType <examples:CIS_RT_05_2D> .
 
-<examples:CIS_DS_05_2D> a ns2:DomainSetType ;
-    ns2:generalGrid <examples:CIS_DS_GG_05_2D> .
+<examples:CIS_DS_05_2D> a ns1:DomainSetType ;
+    ns1:generalGrid <examples:CIS_DS_GG_05_2D> .
 
-<examples:CIS_DS_GG_05_2D> a ns2:GeneralGridCoverageType ;
-    ns2:axis <examples:CIS_DS_GG_I_05_2D>,
+<examples:CIS_DS_GG_05_2D> a ns1:GeneralGridCoverageType ;
+    ns1:axis <examples:CIS_DS_GG_I_05_2D>,
         <examples:CIS_DS_GG_J_05_2D> ;
-    ns2:axisLabels ( "i" "j" ) ;
-    ns2:srsName <http://www.opengis.net/def/crs/OGC/0/Index2D> .
+    ns1:axisLabels ( "i" "j" ) ;
+    ns1:srsName <http://www.opengis.net/def/crs/OGC/0/Index2D> .
 
-<examples:CIS_DS_GG_I_05_2D> a ns2:IndexAxisType ;
-    ns2:axisLabel "i" ;
-    ns2:lowerBound 0 ;
-    ns2:upperBound 2 .
+<examples:CIS_DS_GG_I_05_2D> a ns1:IndexAxisType ;
+    ns1:axisLabel "i" ;
+    ns1:lowerBound 0 ;
+    ns1:upperBound 2 .
 
-<examples:CIS_DS_GG_J_05_2D> a ns2:IndexAxisType ;
-    ns2:axisLabel "j" ;
-    ns2:lowerBound 0 ;
-    ns2:upperBound 2 .
+<examples:CIS_DS_GG_J_05_2D> a ns1:IndexAxisType ;
+    ns1:axisLabel "j" ;
+    ns1:lowerBound 0 ;
+    ns1:upperBound 2 .
 
-<examples:CIS_RS_05_2D> a ns2:RangeSetType ;
-    ns2:dataBlock [ a ns2:VDataBlockType ] ;
-    ns2:fileReference <http://myserver.com/fileref.tiff> .
+<examples:CIS_RS_05_2D> a ns1:RangeSetType ;
+    ns1:dataBlock [ a ns1:VDataBlockType ] ;
+    ns1:fileReference <http://myserver.com/fileref.tiff> .
 
-<examples:CIS_RT_05_2D> a ns1:DataRecordType ;
-    ns1:field <examples:CIS_RT_F_05_2D> .
+<examples:CIS_RT_05_2D> a ns2:DataRecordType ;
+    ns2:field <examples:CIS_RT_F_05_2D> .
 
-<examples:CIS_RT_F_05_2D> a ns1:QuantityType ;
-    ns1:definition <http://www.opengis.net/def/dataType/OGC/0/unsignedInt> ;
-    ns1:uom <examples:CIS_RT_F_UOM_05_2D> .
+<examples:CIS_RT_F_05_2D> a ns2:QuantityType ;
+    ns2:definition <http://www.opengis.net/def/dataType/OGC/0/unsignedInt> ;
+    ns2:uom <examples:CIS_RT_F_UOM_05_2D> .
 
-<examples:CIS_RT_F_UOM_05_2D> a ns1:UnitReference ;
-    ns1:code "10^0" .
+<examples:CIS_RT_F_UOM_05_2D> a ns2:UnitReference ;
+    ns2:code "10^0" .
 
