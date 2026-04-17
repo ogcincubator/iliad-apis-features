@@ -8,7 +8,7 @@
   base-uri: http://w3id.org/ogcincubator/coverageJSON/
   snippets:
     - language: json
-      ref: examples/Lundy_island_ODP_regional.geojson
+      ref: examples/Lundy_island_ODP_regional conventions_MPA.geojson
 
 - title: Lundy Island and surroundings from the EMODnet regional Sea Convention MPAs dataset
   base-uri: http://w3id.org/ogcincubator/coverageJSON/
