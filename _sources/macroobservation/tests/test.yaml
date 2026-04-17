@@ -1,0 +1,19 @@
+tests:
+  - name: GeoJSON schema validation
+    description: Validate the example GeoJSON against the schema.
+    input: ../examples/sample.geojson
+    schema: ../schema.json
+    expected: valid
+  - name: Provenance content check
+    description: Ensure provenance URLs are present in the README and sample data.
+    input: ../README.md
+    contains:
+      - "provenance_urls"
+      - "HELCOM data services"
+  - name: RDF sample check
+    description: Confirm the RDF sample includes HELCOM observations and species concepts.
+    input: ../sample_macrospecies_observations.ttl
+    contains:
+      - "sosa:Observation"
+      - "skos:Concept"
+      - "dcterms:source"

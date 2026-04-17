@@ -1,0 +1,69 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<urn:helcom:macroobs:dataset> a dcat:Dataset ;
+    dcterms:title "HELCOM Macroobservation Sample - Swedish EEZ north of Gotland" ;
+    dcterms:description "Sample HELCOM macrospecies observations within the Swedish EEZ north of Gotland." ;
+    dcterms:publisher "HELCOM" ;
+    dcterms:spatial <urn:helcom:area:swedish-eez-north-gotland> ;
+    dcterms:temporal [ a dcterms:PeriodOfTime ; dcat:startDate "2024-07-01"^^xsd:date ; dcat:endDate "2024-09-30"^^xsd:date ] ;
+    dcterms:license "CC-BY" ;
+    dcterms:provenance "Sampled from HELCOM data services using spatial filter on Swedish EEZ north of Gotland." ;
+    prov:wasDerivedFrom <https://maps.helcom.fi/arcgis/rest/services/MADS/WFS?SERVICE=WFS&REQUEST=GetFeature&typeName=MacroObservation&bbox=17.8,58.4,18.8,59.0,EPSG:4326> .
+
+<urn:helcom:area:swedish-eez-north-gotland> a dcterms:Location ;
+    geo:lat "58.7"^^xsd:decimal ;
+    geo:long "18.3"^^xsd:decimal ;
+    skos:prefLabel "Swedish EEZ 100 km north of Gotland"@en .
+
+<urn:helcom:obs:1> a sosa:Observation ;
+    sosa:hasFeatureOfInterest <urn:helcom:species:fucus-vesiculosus> ;
+    sosa:observedProperty <urn:helcom:property:abundance> ;
+    sosa:hasResult "high"@en ;
+    sosa:resultTime "2024-09-01T10:00:00Z"^^xsd:dateTime ;
+    geo:lat "58.50"^^xsd:decimal ;
+    geo:long "18.25"^^xsd:decimal ;
+    dcterms:source "HELCOM Biodiversity Database" .
+
+<urn:helcom:obs:2> a sosa:Observation ;
+    sosa:hasFeatureOfInterest <urn:helcom:species:zostera-marina> ;
+    sosa:observedProperty <urn:helcom:property:abundance> ;
+    sosa:hasResult "medium"@en ;
+    sosa:resultTime "2024-08-20T08:30:00Z"^^xsd:dateTime ;
+    geo:lat "58.70"^^xsd:decimal ;
+    geo:long "18.40"^^xsd:decimal ;
+    dcterms:source "HELCOM Biodiversity Database" .
+
+<urn:helcom:obs:3> a sosa:Observation ;
+    sosa:hasFeatureOfInterest <urn:helcom:species:fucus-serratus> ;
+    sosa:observedProperty <urn:helcom:property:abundance> ;
+    sosa:hasResult "low"@en ;
+    sosa:resultTime "2024-07-15T14:45:00Z"^^xsd:dateTime ;
+    geo:lat "58.60"^^xsd:decimal ;
+    geo:long "18.10"^^xsd:decimal ;
+    dcterms:source "HELCOM Biodiversity Database" .
+
+<urn:helcom:species:fucus-vesiculosus> a skos:Concept ;
+    skos:prefLabel "Fucus vesiculosus"@en ;
+    skos:inScheme <urn:helcom:species-scheme> .
+
+<urn:helcom:species:zostera-marina> a skos:Concept ;
+    skos:prefLabel "Zostera marina"@en ;
+    skos:inScheme <urn:helcom:species-scheme> .
+
+<urn:helcom:species:fucus-serratus> a skos:Concept ;
+    skos:prefLabel "Fucus serratus"@en ;
+    skos:inScheme <urn:helcom:species-scheme> .
+
+<urn:helcom:species-scheme> a skos:ConceptScheme ;
+    skos:prefLabel "HELCOM Macrospecies Concept Scheme"@en .
+
+<urn:helcom:property:abundance> a sosa:ObservableProperty ;
+    rdfs:label "Abundance"@en .

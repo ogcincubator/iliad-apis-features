@@ -1,0 +1,62 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [18.25, 58.50]},
+      "properties": {
+        "species": "Fucus vesiculosus",
+        "species_uri": "http://www.marinespecies.org/aphia.php?p=taxdetails&id=145135",
+        "abundance": "high",
+        "abundance_value": 0.85,
+        "observationTime": "2024-09-01T10:00:00Z",
+        "depth_m": 12.0,
+        "salinity_psu": 7.8,
+        "sampleMethod": "underwater visual survey",
+        "source": "HELCOM Biodiversity Database",
+        "distance_from_gotland_km": 100.0,
+        "provenance_urls": [
+          "https://maps.helcom.fi/arcgis/rest/services/MADS/WFS?SERVICE=WFS&REQUEST=GetFeature&typeName=MacroObservation&bbox=17.8,58.4,18.8,59.0,EPSG:4326"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [18.40, 58.70]},
+      "properties": {
+        "species": "Zostera marina",
+        "species_uri": "http://www.marinespecies.org/aphia.php?p=taxdetails&id=156441",
+        "abundance": "medium",
+        "abundance_value": 0.55,
+        "observationTime": "2024-08-20T08:30:00Z",
+        "depth_m": 9.0,
+        "salinity_psu": 7.6,
+        "sampleMethod": "seabed transect",
+        "source": "HELCOM Biodiversity Database",
+        "distance_from_gotland_km": 102.5,
+        "provenance_urls": [
+          "https://maps.helcom.fi/arcgis/rest/services/MADS/WFS?SERVICE=WFS&REQUEST=GetFeature&typeName=MacroObservation&bbox=17.8,58.4,18.8,59.0,EPSG:4326"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [18.10, 58.60]},
+      "properties": {
+        "species": "Fucus serratus",
+        "species_uri": "http://www.marinespecies.org/aphia.php?p=taxdetails&id=145136",
+        "abundance": "low",
+        "abundance_value": 0.25,
+        "observationTime": "2024-07-15T14:45:00Z",
+        "depth_m": 14.5,
+        "salinity_psu": 8.0,
+        "sampleMethod": "dive transect",
+        "source": "HELCOM Biodiversity Database",
+        "distance_from_gotland_km": 97.8,
+        "provenance_urls": [
+          "https://maps.helcom.fi/arcgis/rest/services/MADS/WFS?SERVICE=WFS&REQUEST=GetFeature&typeName=MacroObservation&bbox=17.8,58.4,18.8,59.0,EPSG:4326"
+        ]
+      }
+    }
+  ]
+}

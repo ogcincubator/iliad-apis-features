@@ -1,0 +1,42 @@
+{
+  "id": "helcom-macroobservation",
+  "name": "HELCOM Macroobservation",
+  "title": "HELCOM Macroobservation Building Block",
+  "version": "0.1.0",
+  "dateTimeAddition": "2026-04-17T00:00:00Z",
+  "status": "under-development",
+  "itemClass": "schema",
+  "description": "A source-level building block for HELCOM macroobservation point data within the Swedish EEZ, including provenance-aware marine observation properties and linked-data context.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "keywords": ["HELCOM", "macroobservation", "marine observation", "GeoJSON", "SOSA", "SKOS", "EEZ", "Sweden"],
+  "authors": [
+    {
+      "name": "ILIAD Marine Data Team",
+      "organization": "ILIAD",
+      "email": "info@example.com"
+    }
+  ],
+  "standards": [
+    "https://www.opengis.net/def/standard/geojson",
+    "https://www.w3.org/TR/sosa/",
+    "http://www.w3.org/TR/vocab-dcat-2/",
+    "http://www.w3.org/TR/skos-reference/",
+    "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+  ],
+  "ldContext": "context.jsonld",
+  "schema": "schema.json",
+  "examples": [
+    {
+      "title": "HELCOM Swedish EEZ macroobservation sample",
+      "description": "Sample GeoJSON FeatureCollection of macroobservation points from HELCOM data within the Swedish EEZ north of Gotland.",
+      "snippets": [
+        {
+          "language": "json",
+          "code": "{{examples/sample.geojson}}",
+          "ref": "examples/sample.geojson"
+        }
+      ]
+    }
+  ],
+  "tests": "tests/test.yaml"
+}

@@ -1,0 +1,64 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://example.com/helcom-macroobservation.schema.yaml
+title: HELCOM Macroobservation GeoJSON
+description: GeoJSON schema for HELCOM Swedish EEZ macroobservation point data.
+type: object
+properties:
+  type:
+    type: string
+    enum: [FeatureCollection]
+  features:
+    type: array
+    items:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: [Feature]
+        geometry:
+          type: object
+          properties:
+            type:
+              type: string
+              enum: [Point]
+            coordinates:
+              type: array
+              items:
+                type: number
+              minItems: 2
+              maxItems: 2
+          required: [type, coordinates]
+        properties:
+          type: object
+          properties:
+            species:
+              type: string
+            species_uri:
+              type: string
+              format: uri
+            abundance:
+              type: string
+              enum: [low, medium, high]
+            abundance_value:
+              type: number
+            observationTime:
+              type: string
+              format: date-time
+            depth_m:
+              type: number
+            salinity_psu:
+              type: number
+            sampleMethod:
+              type: string
+            source:
+              type: string
+            distance_from_gotland_km:
+              type: number
+            provenance_urls:
+              type: array
+              items:
+                type: string
+                format: uri
+          required: [species, abundance, observationTime, source, provenance_urls]
+      required: [type, geometry, properties]
+required: [type, features]

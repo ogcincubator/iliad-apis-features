@@ -10,6 +10,7 @@
 @prefix inda: <https://id3.seadots.eu/indicator/activity> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prez: <https://prez.dev> .
 
 # --- CATALOG ENTRY (added for VocPrez/Prez UI visibility) ---
@@ -99,6 +100,7 @@ indo:fisheries-production1 a sosa:observedProperty, skos:Concept ;
     skos:inScheme ind:skos-scheme ;
     rdfs:comment "The amount of fish caught in a given area over a specific period of time." ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/Fisheries_production> ;
+    owl:sameAs <http://aims.fao.org/aos/agrovoc/c_2934> ;
     prov:providedBy "http://seadots.eu" .
 
 

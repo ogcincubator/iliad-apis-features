@@ -1,0 +1,90 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@base": "urn:helcom:macroobservation:",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dwc": "http://rs.tdwg.org/dwc/terms/",
+    "nerc": "http://vocab.nerc.ac.uk/collection/",
+    "cf": "http://cf-convention.org/Data/cf-standard-names/current/build/cf-standard-name-table.html",
+    "worms": "http://www.marinespecies.org/",
+    "obis": "http://www.obis.org/",
+    "Dataset": "dcat:Dataset",
+    "title": "dcterms:title",
+    "description": "dcterms:description",
+    "spatial": "dcterms:spatial",
+    "temporal": "dcterms:temporal",
+    "provenance": "dcterms:provenance",
+    "Location": "dcterms:Location",
+    "lat": "geo:lat",
+    "long": "geo:long",
+    "prefLabel": "skos:prefLabel",
+    "Observation": "sosa:Observation",
+    "hasFeatureOfInterest": "sosa:hasFeatureOfInterest",
+    "hasResult": "sosa:hasResult",
+    "resultTime": "sosa:resultTime",
+    "observationTime": {
+      "@id": "sosa:resultTime",
+      "@type": "xsd:dateTime"
+    },
+    "Concept": "skos:Concept",
+    "inScheme": "skos:inScheme",
+    "ConceptScheme": "skos:ConceptScheme",
+    "ObservableProperty": "sosa:ObservableProperty",
+    "source": "dcterms:source",
+    "species": {
+      "@id": "dwc:scientificName",
+      "@type": "xsd:string"
+    },
+    "species_uri": {
+      "@id": "dwc:taxonID",
+      "@type": "@id"
+    },
+    "abundance": {
+      "@id": "nerc:P06",
+      "@comment": "Abundance categorized using NERC marine estimation units"
+    },
+    "abundance_value": {
+      "@id": "sosa:hasResult",
+      "@type": "xsd:double",
+      "@comment": "Numeric abundance measurement"
+    },
+    "observedProperty": {
+      "@id": "sosa:observedProperty",
+      "@type": "@id"
+    },
+    "depth_m": {
+      "@id": "nerc:P01/current/DEPHZZ01",
+      "@type": "xsd:double",
+      "@comment": "Depth in meters (NERC Sea-Bird depth)"
+    },
+    "salinity_psu": {
+      "@id": "nerc:P01/current/PSALST01",
+      "@type": "xsd:double",
+      "@comment": "Practical Salinity (NERC)"
+    },
+    "sampleMethod": {
+      "@id": "nerc:Q01",
+      "@type": "@id",
+      "@comment": "NERC sampling devices and methods"
+    },
+    "distance_from_gotland_km": {
+      "@id": "nerc:P01/current/DISTZZ01",
+      "@type": "xsd:double",
+      "@comment": "Distance in kilometers (NERC)"
+    },
+    "provenance_urls": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "wasDerivedFrom": "prov:wasDerivedFrom"
+  }
+}
