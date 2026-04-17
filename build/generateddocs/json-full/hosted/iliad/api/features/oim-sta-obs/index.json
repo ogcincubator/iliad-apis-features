@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2025-10-15",
+  "dateOfLastChange": "2026-04-17",
   "link": "https://github.com/opengeospatial/iliad-api-features/oim-sta-obs",
   "sources": [
     {
@@ -48,19 +48,19 @@
       "snippets": [
         {
           "language": "json",
-          "ref": "examples/Observation.json",
+          "ref": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/examples/Observation.json",
           "code": "{\n  \"@iot.id\": \"1\",\n  \"@iot.selfLink\": \"http://example.org/v1.1/Observations(1)\",\n  \"FeatureOfInterest@iot.navigationLink\": \"Observations(1)/FeatureOfInterest\",\n  \"Datastream@iot.navigationLink\": \"Observations(1)/Datastream\",\n  \"phenomenonTime\": \"2014-12-31T11:59:59.00+08:00\",\n  \"resultTime\": \"2014-12-31T11:59:59.00+08:00\",\n  \"result\": 70.4\n}\n",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.json"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-sta-obs/context.jsonld\",\n  \"@iot.id\": \"1\",\n  \"@iot.selfLink\": \"http://example.org/v1.1/Observations(1)\",\n  \"FeatureOfInterest@iot.navigationLink\": \"Observations(1)/FeatureOfInterest\",\n  \"Datastream@iot.navigationLink\": \"Observations(1)/Datastream\",\n  \"phenomenonTime\": \"2014-12-31T11:59:59.00+08:00\",\n  \"resultTime\": \"2014-12-31T11:59:59.00+08:00\",\n  \"result\": 70.4\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.jsonld"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix sosa1: <https://www.w3.org/TR/vocab-ssn/#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://w3id.org/ogcincubator/coverageJSON/1> sosa1:hasFeatureOfInterest \"Observations(1)/FeatureOfInterest\" ;\n    sosa1:hasSimpleResult 7.04e+01 ;\n    sosa1:isMemberOf \"Observations(1)/Datastream\" ;\n    sosa1:phenomenonTime \"2014-12-31T11:59:59.00+08:00\" ;\n    sosa1:resultTime \"2014-12-31T11:59:59.00+08:00\" .\n\n",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.ttl"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.ttl"
         }
       ]
     }

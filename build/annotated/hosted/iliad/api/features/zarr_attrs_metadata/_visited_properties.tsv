@@ -1,14 +1,14 @@
-path	@id
-/long_name	
-/standard_name	
-/units	
-/_ARRAY_DIMENSIONS	
-/Conventions	
-/units_metadata	
-/cell_methods	
-/created_by	
-/date	
-/crs_wkt	
-/geotransform	
-/proj4	
-/spatial_ref	
+path	@id	schema
+/long_name		/github/workspace/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml
+/standard_name		/github/workspace/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml
+/units		/github/workspace/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml
+/_ARRAY_DIMENSIONS		/github/workspace/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml
+/Conventions		/github/workspace/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml
+/units_metadata		/github/workspace/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml
+/cell_methods		/github/workspace/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml
+/created_by		/github/workspace/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml
+/date		/github/workspace/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml
+/crs_wkt		/github/workspace/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml
+/geotransform		/github/workspace/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml
+/proj4		/github/workspace/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml
+/spatial_ref		/github/workspace/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml

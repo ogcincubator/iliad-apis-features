@@ -1,6 +1,7 @@
 {
   "@context": {
-    "@vocab": "_:_:",
+    "@vocab": "_:",
+    "meteogate": "https://api.meteogate.eu/profiles/metocean/covjson",
     "id": "@id",
     "type": "@type",
     "value": "@value",
@@ -83,7 +84,10 @@
       "@type": "@id",
       "@container": "@index"
     },
-    "observedProperty": "ssn:observedProperty",
+    "observedProperty": "sosa:observedProperty",
+    "usedProcedure": "sosa:usedProcedure",
+    "madeBySensor": "sosa:madeBySensor",
+    "hasFeatureOfInterest": "sosa:hasFeatureOfInterest",
     "categoryEncoding": "covjson:categoryEncoding",
     "ParameterGroup": "covjson:ParameterGroup",
     "members": {
@@ -141,10 +145,11 @@
     "covjson": "https://covjson.org/def/core#",
     "ignf": "http://data.ign.fr/def/ignf#",
     "inspiregloss": "http://inspire.ec.europa.eu/glossary/",
-    "ssn": "http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#",
+    "sosa": "http://www.w3.org/ns/sosa#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "hydra": "http://www.w3.org/ns/hydra/core#",
     "covjsondt": "https://covjson.org/def/domainTypes#",
+    "ssn": "http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#",
     "rel": "http://www.iana.org/assignments/relation/",
     "@version": 1.1
   }

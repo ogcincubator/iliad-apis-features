@@ -334,6 +334,7 @@ properties:
   spatial_ref:
     type: string
 x-jsonld-extra-terms:
+  meteogate: https://api.meteogate.eu/profiles/metocean/covjson
   id: '@id'
   type: '@type'
   value: '@value'
@@ -404,7 +405,10 @@ x-jsonld-extra-terms:
     x-jsonld-id: https://covjson.org/def/core#parameter
     x-jsonld-type: '@id'
     x-jsonld-container: '@index'
-  observedProperty: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#observedProperty
+  observedProperty: http://www.w3.org/ns/sosa#observedProperty
+  usedProcedure: http://www.w3.org/ns/sosa#usedProcedure
+  madeBySensor: http://www.w3.org/ns/sosa#madeBySensor
+  hasFeatureOfInterest: http://www.w3.org/ns/sosa#hasFeatureOfInterest
   categoryEncoding: https://covjson.org/def/core#categoryEncoding
   ParameterGroup: https://covjson.org/def/core#ParameterGroup
   members:
@@ -449,7 +453,7 @@ x-jsonld-extra-terms:
   MultiPolygonSeries: https://covjson.org/def/domainTypes#MultiPolygonSeries
   MultiPolygon: https://covjson.org/def/domainTypes#MultiPolygon
   Polygon: https://covjson.org/def/domainTypes#Polygon
-x-jsonld-vocab: '_:_:'
+x-jsonld-vocab: '_:'
 x-jsonld-prefixes:
   skos: http://www.w3.org/2004/02/skos/core#
   dct: http://purl.org/dc/terms/
@@ -457,10 +461,11 @@ x-jsonld-prefixes:
   covjson: https://covjson.org/def/core#
   ignf: http://data.ign.fr/def/ignf#
   inspiregloss: http://inspire.ec.europa.eu/glossary/
-  ssn: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#
+  sosa: http://www.w3.org/ns/sosa#
   xsd: http://www.w3.org/2001/XMLSchema#
   hydra: http://www.w3.org/ns/hydra/core#
   covjsondt: https://covjson.org/def/domainTypes#
+  ssn: http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#
   rel: http://www.iana.org/assignments/relation/
 
 ```
@@ -476,7 +481,8 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "@vocab": "_:_:",
+    "@vocab": "_:",
+    "meteogate": "https://api.meteogate.eu/profiles/metocean/covjson",
     "id": "@id",
     "type": "@type",
     "value": "@value",
@@ -559,7 +565,10 @@ Links to the schema:
       "@type": "@id",
       "@container": "@index"
     },
-    "observedProperty": "ssn:observedProperty",
+    "observedProperty": "sosa:observedProperty",
+    "usedProcedure": "sosa:usedProcedure",
+    "madeBySensor": "sosa:madeBySensor",
+    "hasFeatureOfInterest": "sosa:hasFeatureOfInterest",
     "categoryEncoding": "covjson:categoryEncoding",
     "ParameterGroup": "covjson:ParameterGroup",
     "members": {
@@ -617,10 +626,11 @@ Links to the schema:
     "covjson": "https://covjson.org/def/core#",
     "ignf": "http://data.ign.fr/def/ignf#",
     "inspiregloss": "http://inspire.ec.europa.eu/glossary/",
-    "ssn": "http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#",
+    "sosa": "http://www.w3.org/ns/sosa#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "hydra": "http://www.w3.org/ns/hydra/core#",
     "covjsondt": "https://covjson.org/def/domainTypes#",
+    "ssn": "http://www.w3.org/2005/Incubator/ssn/ssnx/ssn#",
     "rel": "http://www.iana.org/assignments/relation/",
     "@version": 1.1
   }

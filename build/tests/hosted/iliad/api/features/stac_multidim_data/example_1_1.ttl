@@ -2,34 +2,31 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix ns1: <https://w3id.org/ogc/stac/core/> .
-@prefix ns2: <http://stacspec.org/ontology/core#> .
-@prefix ns3: <http://www.iana.org/assignments/> .
-@prefix ns4: <cube:> .
-@prefix ns5: <http://qudt.org/schema/qudt/> .
-@prefix ns6: <dqv:> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <cube:> .
+@prefix ns3: <cf:> .
+@prefix ns4: <http://www.opengis.net/cis/1.1/> .
+@prefix ns5: <dqv:> .
+@prefix ns6: <http://www.opengis.net/swe/2.0/> .
 @prefix ns7: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix ns8: <cf:> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rec: <https://www.opengis.net/def/ogc-api/records/> .
-@prefix stac: <https://www.opengis.net/def/ogc-api/stac/> .
-@prefix time: <http://www.w3.org/2006/time#> .
+@prefix stac: <https://w3id.org/ogc/stac/core/> .
+@prefix thns: <https://w3id.org/ogc/stac/themes/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/ogcincubator/simulation> rdfs:label "No Title" ;
-    ns8:parameter [ ns5:unit <https://qudt.org/2.1/vocab/unit/GM-PER-KiloGM> ;
-            foaf:name "sea_water_salinity"^^rdfs:Literal ] ;
-    ns4:dimensions [ dcterms:temporal [ dcterms:format "temporal" ;
-                    ns2:extent "2023-04-09T01:00:00",
+<http://w3id.org/ogcincubator/simulation> a geojson:Feature ;
+    ns3:parameter [ foaf:name "sea_water_salinity"^^rdfs:Literal ] ;
+    ns2:dimensions [ dcterms:temporal [ a dcterms:temporal ;
+                    dcterms:extent "2023-04-09T01:00:00",
                         "2023-04-12T01:00:00" ] ] ;
-    ns4:variables [ ns7:lat [ dcterms:format "data" ;
-                    ns5:unit <http://w3id.org/ogcincubator/degrees_north> ] ] ;
-    ns6:hasQualityMeasurement "optional description of the quality measures used to generate the content, use wasGeneratedBy.used for cases whereever you can assign quality measure to particular processing step" ;
-    ns6:hasQualityMetadata "optional quality metadata as string or object (with structure TBD)" ;
+    ns2:variables [ ns7:lat [ a <http://w3id.org/ogcincubator/data> ] ] ;
+    ns5:hasQualityMeasurement "optional description of the quality measures used to generate the content, use wasGeneratedBy.used for cases whereever you can assign quality measure to particular processing step" ;
+    ns5:hasQualityMetadata "optional quality metadata as string or object (with structure TBD)" ;
     dcterms:conformsTo <https://ogcincubator.github.io/geodcat-ogcapi-records/bblock/ogc.geo.geodcat.geodcat-stac-eo/>,
         <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.stac_record>,
         <https://stac-extensions.github.io/cf/v0.2.0/schema.json>,
@@ -39,93 +36,88 @@
         <https://stac-extensions.github.io/themes/v1.0.0/schema.json>,
         <https://stac-extensions.github.io/version/v1.2.0/schema.json> ;
     dcterms:created "2024-10-03 10:22:35.026590+00:00" ;
-    dcterms:format "Feature" ;
+    dcterms:date "2023-04-09T01:00:00+00:00"^^xsd:dateTime ;
+    dcterms:description "No Description" ;
     dcterms:modified "2024-10-03T10:59:34.887874Z" ;
-    dcterms:temporal [ time:hasTime ( "2023-04-09 01:00:00+00:00" "2023-04-12 01:00:00+00:00" ) ;
-            rec:iso8601period "P1D" ] ;
-    ns2:datetime "2023-04-09T01:00:00+00:00"^^xsd:dateTime ;
-    ns2:description "No Description" ;
-    ns2:end_datetime "2023-04-12T01:00:00+00:00"^^xsd:dateTime ;
-    ns2:license "optional legal provisions under which this collection is made available. use links where available, preferably from SPDX register" ;
-    ns2:start_datetime "2023-04-09T01:00:00+00:00"^^xsd:dateTime ;
-    rdfs:seeAlso [ rdfs:label "optional link to this record" ;
-            ns3:relation <http://www.iana.org/assignments/relation/self> ;
-            oa:hasTarget <http://w3id.org/ogcincubator/tests/simulation/simulation.json> ],
-        [ rdfs:label "optional thumbnail image preview" ;
-            dcterms:type "image/png" ;
-            ns3:relation <http://www.iana.org/assignments/relation/preview> ;
-            oa:hasTarget <http://w3id.org/ogcincubator/~/Downloads/simulation.nc> ],
-        [ rdfs:label "optional link to the parent if data in series or other parent in the hierarchy" ;
+    dcterms:temporal [ ns4:resolution "P1D"^^xsd:string ;
+            ns6:interval <http://w3id.org/ogcincubator/iliad-api-features> ] ;
+    dcterms:title "No Title" ;
+    rdfs:seeAlso [ rdfs:label "optional link to the parent if data in series or other parent in the hierarchy" ;
             dcterms:type "text/html" ;
-            ns3:relation <http://www.iana.org/assignments/relation/parent> ;
+            ns1:relation <http://www.iana.org/assignments/relation/parent> ;
             oa:hasTarget <https://example.com/prev_data_record> ],
-        [ rdfs:label "optional link to the sample data, either one enclosure or service is required in Iliad profile" ;
-            dcterms:type "application/x-hdf" ;
-            ns3:relation <http://www.iana.org/assignments/relation/sample> ;
-            oa:hasTarget <http://w3id.org/ogcincubator/tests/simulation/simulation.zip> ],
-        [ rdfs:label "optional link to the next in the serie" ;
-            dcterms:type "text/html" ;
-            ns3:relation <http://www.iana.org/assignments/relation/next> ;
-            oa:hasTarget <https://example.com/next_data_record> ],
-        [ rdfs:label "optional link to the web service (not raw file) like OGC Web Map Service (WMS) either one enclosure or service is required in Iliad profile" ;
-            dcterms:type "application/xml" ;
-            ns3:relation <http://www.iana.org/assignments/relation/service> ;
-            oa:hasTarget <https://example.com/ows/wms> ],
-        [ rdfs:label "optional raw file" ;
-            dcterms:type "application/x-hdf" ;
-            ns3:relation <http://www.iana.org/assignments/relation/enclosure> ;
-            oa:hasTarget <http://w3id.org/ogcincubator/~/Downloads/simulation.nc> ],
         [ rdfs:label "optional link to the license" ;
             dcterms:type "text/html" ;
-            ns3:relation <http://www.iana.org/assignments/relation/license> ;
+            ns1:relation <http://www.iana.org/assignments/relation/license> ;
             oa:hasTarget <https://example.com/license> ],
-        [ rdfs:label "link to the data, either one enclosure or service is required in Iliad profile" ;
-            dcterms:type "application/x-hdf" ;
-            ns3:relation <http://www.iana.org/assignments/relation/sample> ;
-            oa:hasTarget <http://w3id.org/ogcincubator/tests/simulation/simulation.zip> ],
+        [ rdfs:label "optional link to this record" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            oa:hasTarget <http://w3id.org/ogcincubator/tests/simulation/simulation.json> ],
         [ rdfs:label "link to the resource confirmance speficication" ;
             dcterms:type "text/html" ;
-            ns3:relation <http://www.iana.org/assignments/relation/conformance> ;
+            ns1:relation <http://www.iana.org/assignments/relation/conformance> ;
             oa:hasTarget <https://cfconventions.org/Data/cf-conventions/cf-conventions-1.11/cf-conventions.pdf> ],
+        [ rdfs:label "optional thumbnail image preview" ;
+            dcterms:type "image/png" ;
+            ns1:relation <http://www.iana.org/assignments/relation/preview> ;
+            oa:hasTarget <http://w3id.org/ogcincubator/~/Downloads/simulation.nc> ],
         [ rdfs:label "optional link to the previous in the serie" ;
             dcterms:type "text/html" ;
-            ns3:relation <http://www.iana.org/assignments/relation/prev> ;
-            oa:hasTarget <https://example.com/prev_data_record> ] ;
+            ns1:relation <http://www.iana.org/assignments/relation/prev> ;
+            oa:hasTarget <https://example.com/prev_data_record> ],
+        [ rdfs:label "optional raw file" ;
+            dcterms:type "application/x-hdf" ;
+            ns1:relation <http://www.iana.org/assignments/relation/enclosure> ;
+            oa:hasTarget <http://w3id.org/ogcincubator/~/Downloads/simulation.nc> ],
+        [ rdfs:label "optional link to the next in the serie" ;
+            dcterms:type "text/html" ;
+            ns1:relation <http://www.iana.org/assignments/relation/next> ;
+            oa:hasTarget <https://example.com/next_data_record> ],
+        [ rdfs:label "link to the data, either one enclosure or service is required in Iliad profile" ;
+            dcterms:type "application/x-hdf" ;
+            ns1:relation <http://www.iana.org/assignments/relation/sample> ;
+            oa:hasTarget <http://w3id.org/ogcincubator/tests/simulation/simulation.zip> ],
+        [ rdfs:label "optional link to the web service (not raw file) like OGC Web Map Service (WMS) either one enclosure or service is required in Iliad profile" ;
+            dcterms:type "application/xml" ;
+            ns1:relation <http://www.iana.org/assignments/relation/service> ;
+            oa:hasTarget <https://example.com/ows/wms> ],
+        [ rdfs:label "optional link to the sample data, either one enclosure or service is required in Iliad profile" ;
+            dcterms:type "application/x-hdf" ;
+            ns1:relation <http://www.iana.org/assignments/relation/sample> ;
+            oa:hasTarget <http://w3id.org/ogcincubator/tests/simulation/simulation.zip> ] ;
     owl:deprecated false ;
     dcat:contactPoint [ dcterms:identifier " optional identifier of the contact" ;
             rdfs:seeAlso [ dcterms:type "text/html" ;
-                    ns3:relation <http://www.iana.org/assignments/relation/about> ;
+                    ns1:relation <http://www.iana.org/assignments/relation/about> ;
                     oa:hasTarget <https://woudc.org> ] ;
             foaf:name "name of the contact, name or organisation is required or both, all the other fields are optiopnal. Roles can be defined on the contact or phones|emails|addresses level"^^rdfs:Literal ] ;
     dcat:keyword "ozoother keyword",
         "water" ;
+    dcat:license "optional legal provisions under which this collection is made available. use links where available, preferably from SPDX register" ;
     dcat:rights "optional statement that concerns all rights not addressed by the license such as a copyright statement; string defining access rights inline or as URL" ;
     dcat:version "optional resource behind the record version string" ;
     prov:wasGeneratedBy <surveys:DP-1-S1> ;
     geojson:bbox ( 2.435186e+01 4.041341e+01 9.96921e+36 9.96921e+36 ) ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 2.435186e+01 4.041341e+01 ) ( 2.435186e+01 9.96921e+36 ) ( 9.96921e+36 9.96921e+36 ) ( 9.96921e+36 4.041341e+01 ) ( 2.435186e+01 4.041341e+01 ) ) ) ] ;
-    ns1:assets <http://w3id.org/ogcincubator/data> ;
-    rec:themes [ rec:concept [ foaf:name "water resources management"^^rdfs:Literal ;
-                    rec:conceptID "12301"^^xsd:string ],
-                [ dcterms:theme <http://www.eionet.europa.eu/gemet/concept/12301> ;
-                    rec:conceptID "water_resources_management"^^xsd:string ] ;
-            rec:scheme "http://www.eionet.europa.eu/gemet/concept/" ],
-        [ rec:concept [ rec:conceptID "water_quality"^^xsd:string ] ;
-            rec:scheme "http://mmisw.org/ont/ioos/category" ] ;
-    stac:extensions "https://stac-extensions.github.io/cf/v0.2.0/schema.json",
+    stac:hasAsset [ ] ;
+    stac:hasExtension "https://stac-extensions.github.io/cf/v0.2.0/schema.json",
         "https://stac-extensions.github.io/contacts/v0.1.1/schema.json",
         "https://stac-extensions.github.io/datacube/v2.2.0/schema.json",
         "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
         "https://stac-extensions.github.io/themes/v1.0.0/schema.json",
         "https://stac-extensions.github.io/version/v1.2.0/schema.json" ;
-    stac:version "1.1.0" .
+    stac:version "1.1.0" ;
+    rec:themes [ thns:concepts [ thns:id "water_quality"^^xsd:string ] ;
+            thns:scheme "http://mmisw.org/ont/ioos/category" ],
+        [ thns:concepts [ foaf:name "water resources management"^^rdfs:Literal ;
+                    thns:id "12301"^^xsd:string ],
+                <http://www.eionet.europa.eu/gemet/concept/12301> ;
+            thns:scheme "http://www.eionet.europa.eu/gemet/concept/" ] .
 
-<http://w3id.org/ogcincubator/data> rdfs:label "NetCDF Data" ;
-    ns2:mediaType "application/x-netcdf" ;
-    oa:hasTarget <http://w3id.org/ogcincubator/~/Downloads/simulation.nc> .
+<http://www.eionet.europa.eu/gemet/concept/12301> thns:id "water_resources_management"^^xsd:string .
 
-<regulations:Act3> rdfs:seeAlso [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+<regulations:Act3> rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             oa:hasTarget <https://some.gov/linktoact/> ] ;
     prov:wasAttributedTo <agents:someGovernment> .
 

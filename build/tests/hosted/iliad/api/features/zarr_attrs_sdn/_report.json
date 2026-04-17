@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.zarr_attrs_sdn - GeoZarr Attributes description metadata aligned to the SeaDataNet time series profile",
   "bblockName": "GeoZarr Attributes description metadata aligned to the SeaDataNet time series profile",
   "bblockId": "ogc.hosted.iliad.api.features.zarr_attrs_sdn",
-  "generated": "2025-10-15T13:39:58.118049+00:00",
+  "generated": "2026-04-17T11:00:16.864589+00:00",
   "result": true,
   "items": [
     {
@@ -23,7 +23,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_1_1.json from examples"
+              "message": "Using examples/.zattrs-crs from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -88,7 +88,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_2_1.json from examples"
+              "message": "Using examples/.zattrs-LATITUDE from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -153,7 +153,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_3_1.json from examples"
+              "message": "Using examples/.zattrs-TIME from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -218,7 +218,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_4_1.json from examples"
+              "message": "Using examples/.zattrs-TEMPTADC from examples"
             },
             {
               "op": "jsonld-uplift",

@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.coverage_information_model - OGC Coverage Implementation Schema",
   "bblockName": "OGC Coverage Implementation Schema",
   "bblockId": "ogc.hosted.iliad.api.features.coverage_information_model",
-  "generated": "2025-10-15T13:39:57.656334+00:00",
+  "generated": "2026-04-17T11:00:16.648563+00:00",
   "result": true,
   "items": [
     {
@@ -23,7 +23,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_1_1.json from examples"
+              "message": "Using examples/example.json from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -78,7 +78,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_2_1.json from examples"
+              "message": "Using examples/example.json from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -133,7 +133,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_3_1.ttl from examples"
+              "message": "Using examples/example.ttl from examples"
             },
             {
               "op": "ttl-create",

@@ -187,7 +187,23 @@ Links to the schema:
     "features": {
       "@id": "sosa:hasMember",
       "@type": "@id",
-      "@container": "@set"
+      "@container": "@set",
+      "@context": {
+        "Prism": {
+          "@id": "geojson:Prism",
+          "@context": {
+            "base": "geojson:prismBase",
+            "lower": "geojson:prismLower",
+            "upper": "geojson:prismUpper"
+          }
+        },
+        "MultiPrism": {
+          "@id": "geojson:MultiPrism",
+          "@context": {
+            "prisms": "geojson:prisms"
+          }
+        }
+      }
     },
     "forProperty": {
       "@id": "sosa:forProperty",

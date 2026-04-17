@@ -1,111 +1,131 @@
-path	@id
-/id	
-/type	
-/envelope	
-/envelope/type	
-/envelope/id	
-/envelope/srsName	
-/envelope/axisLabels	
-/envelope/axis	
-/envelope/axis/type	
-/envelope/axis/id	
-/envelope/axis/axisLabel	
-/envelope/axis/lowerBound	
-/envelope/axis/upperBound	
-/envelope/axis/uomLabel	
-/domainSet	
-/domainSet/type	
-/domainSet/generalGrid	
-/domainSet/generalGrid/type	
-/domainSet/generalGrid/id	
-/domainSet/generalGrid/srsName	
-/domainSet/generalGrid/axisLabels	
-/domainSet/generalGrid/axis	
-/domainSet/generalGrid/axis/type	
-/domainSet/generalGrid/axis/id	
-/domainSet/generalGrid/axis/axisLabel	
-/domainSet/generalGrid/axis/lowerBound	
-/domainSet/generalGrid/axis/upperBound	
-/domainSet/generalGrid/axis/uomLabel	
-/domainSet/generalGrid/axis/resolution	
-/domainSet/generalGrid/axis/coordinate	
-/domainSet/generalGrid/displacement	
-/domainSet/generalGrid/displacement/type	
-/domainSet/generalGrid/displacement/id	
-/domainSet/generalGrid/displacement/axisLabel	
-/domainSet/generalGrid/displacement/srsName	
-/domainSet/generalGrid/displacement/axisLabels	
-/domainSet/generalGrid/displacement/uomLabels	
-/domainSet/generalGrid/displacement/coordinates	
-/domainSet/generalGrid/displacement/coordinatesRef	
-/domainSet/generalGrid/model	
-/domainSet/generalGrid/model/type	
-/domainSet/generalGrid/model/id	
-/domainSet/generalGrid/model/axisLabels	
-/domainSet/generalGrid/model/uomLabels	
-/domainSet/generalGrid/model/sensorModelRef	
-/domainSet/generalGrid/model/sensorInstanceRef	
-/domainSet/generalGrid/gridLimits	
-/domainSet/generalGrid/gridLimits/indexAxis	
-/domainSet/generalGrid/gridLimits/indexAxis/type	
-/domainSet/generalGrid/gridLimits/indexAxis/id	
-/domainSet/generalGrid/gridLimits/indexAxis/axisLabel	
-/domainSet/generalGrid/gridLimits/indexAxis/lowerBound	
-/domainSet/generalGrid/gridLimits/indexAxis/upperBound	
-/domainSet/generalGrid/gridLimits/srsName	
-/domainSet/generalGrid/gridLimits/axisLabels	
-/domainSet/directMultiPoint	
-/domainSet/directMultiPoint/type	
-/domainSet/directMultiPoint/coordinates	
-/domainSet/directMultiPoint/coordinatesRef	
-/domainSet/id	
-/domainSet/fileReference	
-/rangeSet	
-/rangeSet/type	
-/rangeSet/dataBlock	
-/rangeSet/dataBlock/type	
-/rangeSet/dataBlock/values	
-/rangeSet/fileReference	
-/rangeType	
-/rangeType/type	
-/rangeType/field	
-/rangeType/field/type	
-/rangeType/field/id	
-/rangeType/field/name	
-/rangeType/field/definition	
-/rangeType/field/uom	
-/rangeType/field/uom/type	
-/rangeType/field/uom/id	
-/rangeType/field/uom/code	
-/rangeType/field/constraint	
-/rangeType/field/constraint/type	
-/rangeType/field/constraint/id	
-/rangeType/field/constraint/interval	
-/rangeType/interpolationRestriction	
-/rangeType/interpolationRestriction/type	
-/rangeType/interpolationRestriction/id	
-/rangeType/interpolationRestriction/allowedInterpolation	
-/rangeType/id	
-/rangeType/fileReference	
-/metadata	
-/partitionSet	
-/partitionSet/type	
-/partitionSet/partition	
-/partitionSet/partition/id	
-/partitionSet/partition/type	
-/partitionSet/partition/envelope	
-/partitionSet/partition/coverageRef	
-/partitionSet/partition/coverage	
-/partitionSet/partition/coverage/id	
-/partitionSet/partition/coverage/type	
-/partitionSet/partition/coverage/envelope	
-/partitionSet/partition/coverage/domainSet	
-/partitionSet/partition/coverage/rangeSet	
-/partitionSet/partition/coverage/rangeType	
-/partitionSet/partition/coverage/metadata	
-/partitionSet/partition/coverage/partitionSet	
-/partitionSet/positionValuePair	
-/partitionSet/positionValuePair/id	
-/partitionSet/positionValuePair/type	
-/partitionSet/positionValuePair/coordinate	
-/partitionSet/positionValuePair/value	
+path	@id	schema
+/_oneOf/0/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/envelope		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/envelope/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/envelope/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/envelope/srsName		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/envelope/axisLabels		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/envelope/axis		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/envelope/axis/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/envelope/axis/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/envelope/axis/axisLabel		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/envelope/axis/lowerBound		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/envelope/axis/upperBound		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/envelope/axis/uomLabel		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/srsName		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axisLabels		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/0/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/0/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/0/axisLabel		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/0/lowerBound		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/0/upperBound		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/1/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/1/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/1/axisLabel		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/1/lowerBound		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/1/upperBound		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/1/uomLabel		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/1/resolution		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/2/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/2/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/2/axisLabel		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/2/uomLabel		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/axis/_oneOf/2/coordinate		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/displacement		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/displacement/_oneOf/0/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/displacement/_oneOf/0/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/displacement/_oneOf/0/axisLabel		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/displacement/_oneOf/0/srsName		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/displacement/_oneOf/0/axisLabels		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/displacement/_oneOf/0/uomLabels		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/displacement/_oneOf/0/coordinates		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/displacement/_oneOf/1/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/displacement/_oneOf/1/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/displacement/_oneOf/1/axisLabel		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/displacement/_oneOf/1/srsName		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/displacement/_oneOf/1/axisLabels		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/displacement/_oneOf/1/uomLabels		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/displacement/_oneOf/1/coordinatesRef		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/model		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/model/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/model/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/model/axisLabels		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/model/uomLabels		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/model/sensorModelRef		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/model/sensorInstanceRef		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/gridLimits		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/gridLimits/indexAxis		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/gridLimits/indexAxis/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/gridLimits/indexAxis/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/gridLimits/indexAxis/axisLabel		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/gridLimits/indexAxis/lowerBound		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/gridLimits/indexAxis/upperBound		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/gridLimits/srsName		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/0/generalGrid/gridLimits/axisLabels		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/1/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/1/directMultiPoint		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/1/directMultiPoint/_oneOf/0/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/1/directMultiPoint/_oneOf/0/coordinates		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/1/directMultiPoint/_oneOf/1/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/1/directMultiPoint/_oneOf/1/coordinatesRef		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/2/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/2/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/domainSet/_oneOf/2/fileReference		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeSet		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeSet/_oneOf/0/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeSet/_oneOf/0/dataBlock		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeSet/_oneOf/0/dataBlock/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeSet/_oneOf/0/dataBlock/values		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeSet/_oneOf/1/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeSet/_oneOf/1/fileReference		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/field		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/field/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/field/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/field/name		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/field/definition		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/field/uom		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/field/uom/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/field/uom/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/field/uom/code		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/field/constraint		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/field/constraint/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/field/constraint/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/field/constraint/interval		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/interpolationRestriction		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/interpolationRestriction/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/interpolationRestriction/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/0/interpolationRestriction/allowedInterpolation		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/1/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/1/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/rangeType/_oneOf/1/fileReference		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/0/metadata		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/envelope		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/partitionSet		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/partitionSet/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/partitionSet/partition		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/partitionSet/partition/_oneOf/0/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/partitionSet/partition/_oneOf/0/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/partitionSet/partition/_oneOf/0/envelope		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/partitionSet/partition/_oneOf/0/coverageRef		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/partitionSet/partition/_oneOf/1/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/partitionSet/partition/_oneOf/1/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/partitionSet/partition/_oneOf/1/envelope		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/partitionSet/partition/_oneOf/1/coverage		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/partitionSet/positionValuePair		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/partitionSet/positionValuePair/id		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/partitionSet/positionValuePair/type		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/partitionSet/positionValuePair/coordinate		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/partitionSet/positionValuePair/value		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/rangeType		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json
+/_oneOf/1/metadata		https://schemas.opengis.net/cis/1.1/json/coverage-schema.json

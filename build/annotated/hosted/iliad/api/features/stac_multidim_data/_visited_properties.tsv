@@ -1,237 +1,277 @@
-path	@id
-/type	@type
-/id	@id
-/properties	@nest
-/geometry	https://purl.org/geojson/vocab#geometry
-/geometry/type	@type
-/geometry/coordinates	https://purl.org/geojson/vocab#coordinates
-/geometry/bbox	https://purl.org/geojson/vocab#bbox
-/geometry/geometries	
-/geometry/geometries/type	@type
-/geometry/geometries/coordinates	https://purl.org/geojson/vocab#coordinates
-/geometry/geometries/bbox	https://purl.org/geojson/vocab#bbox
-/bbox	https://purl.org/geojson/vocab#bbox
-/links	http://www.w3.org/2000/01/rdf-schema#seeAlso
-/links/href	http://www.w3.org/ns/oa#hasTarget
-/links/rel	http://www.iana.org/assignments/relation
-/links/anchor	
-/links/type	http://purl.org/dc/terms/format
-/links/hreflang	http://purl.org/dc/terms/language
-/links/title	http://www.w3.org/2000/01/rdf-schema#label
-/links/length	http://purl.org/dc/terms/extent
-/conformsTo	
-/time	
-/time/date	
-/time/timestamp	
-/time/interval	
-/time/resolution	
-/properties/created	
-/properties/updated	
-/properties/type	
-/properties/title	
-/properties/description	
-/properties/keywords	
-/properties/language	
-/properties/language/code	
-/properties/language/name	
-/properties/language/alternate	
-/properties/language/dir	
-/properties/languages	
-/properties/languages/code	
-/properties/languages/name	
-/properties/languages/alternate	
-/properties/languages/dir	
-/properties/resourceLanguages	
-/properties/resourceLanguages/code	
-/properties/resourceLanguages/name	
-/properties/resourceLanguages/alternate	
-/properties/resourceLanguages/dir	
-/properties/externalIds	
-/properties/externalIds/scheme	
-/properties/externalIds/value	
-/properties/themes	
-/properties/themes/concepts	
-/properties/themes/concepts/id	
-/properties/themes/concepts/title	
-/properties/themes/concepts/description	
-/properties/themes/concepts/url	
-/properties/themes/scheme	
-/properties/formats	
-/properties/contacts	
-/properties/contacts/identifier	
-/properties/contacts/name	
-/properties/contacts/position	
-/properties/contacts/organization	
-/properties/contacts/logo	
-/properties/contacts/logo/href	http://www.w3.org/ns/oa#hasTarget
-/properties/contacts/logo/rel	http://www.iana.org/assignments/relation
-/properties/contacts/logo/anchor	
-/properties/contacts/logo/type	http://purl.org/dc/terms/type
-/properties/contacts/logo/hreflang	http://purl.org/dc/terms/language
-/properties/contacts/logo/title	http://www.w3.org/2000/01/rdf-schema#label
-/properties/contacts/logo/length	http://purl.org/dc/terms/extent
-/properties/contacts/phones	
-/properties/contacts/phones/value	
-/properties/contacts/phones/roles	
-/properties/contacts/emails	
-/properties/contacts/emails/value	
-/properties/contacts/emails/roles	
-/properties/contacts/addresses	
-/properties/contacts/addresses/deliveryPoint	
-/properties/contacts/addresses/city	
-/properties/contacts/addresses/administrativeArea	
-/properties/contacts/addresses/postalCode	
-/properties/contacts/addresses/country	
-/properties/contacts/addresses/roles	
-/properties/contacts/links	
-/properties/contacts/links/href	http://www.w3.org/ns/oa#hasTarget
-/properties/contacts/links/rel	http://www.iana.org/assignments/relation
-/properties/contacts/links/anchor	
-/properties/contacts/links/type	http://purl.org/dc/terms/type
-/properties/contacts/links/hreflang	http://purl.org/dc/terms/language
-/properties/contacts/links/title	http://www.w3.org/2000/01/rdf-schema#label
-/properties/contacts/links/length	http://purl.org/dc/terms/extent
-/properties/contacts/hoursOfService	
-/properties/contacts/contactInstructions	
-/properties/contacts/roles	
-/properties/license	
-/properties/rights	
-/links/created	http://purl.org/dc/terms/created
-/links/updated	http://purl.org/dc/terms/modified
-/linkTemplates	
-/linkTemplates/rel	http://www.iana.org/assignments/relation
-/linkTemplates/type	http://purl.org/dc/terms/format
-/linkTemplates/hreflang	http://purl.org/dc/terms/language
-/linkTemplates/title	http://www.w3.org/2000/01/rdf-schema#label
-/linkTemplates/length	http://purl.org/dc/terms/extent
-/linkTemplates/created	http://purl.org/dc/terms/created
-/linkTemplates/updated	http://purl.org/dc/terms/modified
-/linkTemplates/uriTemplate	http://www.w3.org/ns/oa#hasTarget
-/linkTemplates/varBase	
-/linkTemplates/variables	
-/collection	
-/properties/bands	
-/properties/bands/title	
-/properties/bands/description	
-/properties/bands/keywords	
-/properties/bands/roles	
-/properties/bands/datetime	
-/properties/bands/start_datetime	
-/properties/bands/end_datetime	
-/properties/bands/created	
-/properties/bands/updated	
-/properties/bands/data_type	
-/properties/bands/nodata	
-/properties/bands/statistics	
-/properties/bands/statistics/minimum	
-/properties/bands/statistics/maximum	
-/properties/bands/statistics/mean	
-/properties/bands/statistics/stddev	
-/properties/bands/statistics/count	
-/properties/bands/statistics/valid_percent	
-/properties/bands/unit	
-/properties/bands/platform	
-/properties/bands/instruments	
-/properties/bands/constellation	
-/properties/bands/mission	
-/properties/bands/gsd	
-/properties/bands/license	
-/properties/bands/providers	
-/properties/bands/providers/name	
-/properties/bands/providers/description	
-/properties/bands/providers/roles	
-/properties/bands/providers/url	
-/properties/bands/name	
-/stac_version	
-/stac_extensions	
-/links/method	
-/links/headers	
-/links/body	
-/links/description	
-/links/keywords	
-/links/roles	
-/links/bands	
-/links/bands/name	
-/links/datetime	
-/links/start_datetime	
-/links/end_datetime	
-/links/data_type	
-/links/nodata	
-/links/statistics	
-/links/statistics/minimum	
-/links/statistics/maximum	
-/links/statistics/mean	
-/links/statistics/stddev	
-/links/statistics/count	
-/links/statistics/valid_percent	
-/links/unit	
-/links/platform	
-/links/instruments	
-/links/constellation	
-/links/mission	
-/links/gsd	
-/links/license	
-/links/providers	
-/links/providers/name	
-/links/providers/description	
-/links/providers/roles	
-/links/providers/url	
-/assets	
-/assets/href	
-/assets/title	
-/assets/description	
-/assets/type	
-/assets/roles	
-/assets/keywords	
-/assets/bands	
-/assets/bands/name	
-/assets/datetime	
-/assets/start_datetime	
-/assets/end_datetime	
-/assets/created	
-/assets/updated	
-/assets/data_type	
-/assets/nodata	
-/assets/statistics	
-/assets/statistics/minimum	
-/assets/statistics/maximum	
-/assets/statistics/mean	
-/assets/statistics/stddev	
-/assets/statistics/count	
-/assets/statistics/valid_percent	
-/assets/unit	
-/assets/platform	
-/assets/instruments	
-/assets/constellation	
-/assets/mission	
-/assets/gsd	
-/assets/license	
-/assets/providers	
-/assets/providers/name	
-/assets/providers/description	
-/assets/providers/roles	
-/assets/providers/url	
-/properties/roles	
-/properties/datetime	
-/properties/start_datetime	
-/properties/end_datetime	
-/properties/data_type	
-/properties/nodata	
-/properties/statistics	
-/properties/statistics/minimum	
-/properties/statistics/maximum	
-/properties/statistics/mean	
-/properties/statistics/stddev	
-/properties/statistics/count	
-/properties/statistics/valid_percent	
-/properties/unit	
-/properties/platform	
-/properties/instruments	
-/properties/constellation	
-/properties/mission	
-/properties/gsd	
-/properties/providers	
-/properties/providers/name	
-/properties/providers/description	
-/properties/providers/roles	
-/properties/providers/url	
+path	@id	schema
+/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
+/id	@id	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/properties	@nest	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry	https://purl.org/geojson/vocab#geometry	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/1/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/1/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/1/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/2/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/2/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/2/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/3/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/3/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/3/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/4/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/4/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/4/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/5/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/5/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/5/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/6/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/6/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/6/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/0/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/0/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/0/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/1/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/1/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/1/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/2/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/2/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/2/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/3/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/3/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/3/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/4/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/4/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/4/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/5/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/5/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/5/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/links	http://www.w3.org/2000/01/rdf-schema#seeAlso	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/links/href	http://www.w3.org/ns/oa#hasTarget	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/links/rel	http://www.iana.org/assignments/relation	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/linkBase/schema.yaml
+/links/anchor		https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/links/type	http://purl.org/dc/terms/format	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/linkBase/schema.yaml
+/links/hreflang	http://purl.org/dc/terms/language	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/linkBase/schema.yaml
+/links/title	http://www.w3.org/2000/01/rdf-schema#label	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/linkBase/schema.yaml
+/links/length	http://purl.org/dc/terms/extent	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/linkBase/schema.yaml
+/conformsTo	http://purl.org/dc/terms/conformsTo	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/time	http://purl.org/dc/terms/temporal	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/time/_oneOf/1/date		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/time/schema.yaml
+/time/_oneOf/1/timestamp		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/time/schema.yaml
+/time/_oneOf/1/interval		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/time/schema.yaml
+/time/_oneOf/1/resolution		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/time/schema.yaml
+/properties/created	http://purl.org/dc/terms/created	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/updated	http://purl.org/dc/terms/modified	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/type		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/title	http://purl.org/dc/terms/title	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/description	http://purl.org/dc/terms/description	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/keywords	http://www.w3.org/ns/dcat#keyword	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/language	https://www.opengis.net/def/ogc-api/records/language	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/language/code		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/language/schema.yaml
+/properties/language/name		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/language/schema.yaml
+/properties/language/alternate		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/language/schema.yaml
+/properties/language/dir		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/language/schema.yaml
+/properties/languages	https://www.opengis.net/def/ogc-api/records/languages	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/resourceLanguages	https://www.opengis.net/def/ogc-api/records/resourceLanguages	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/externalIds	https://www.opengis.net/def/ogc-api/records/scopedIdentifier	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/externalIds/scheme	https://www.opengis.net/def/ogc-api/records/scheme	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/externalIds/value	https://www.opengis.net/def/ogc-api/records/id	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/themes	https://www.opengis.net/def/ogc-api/records/themes	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/themes/concepts	https://w3id.org/ogc/stac/themes/concepts	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/theme/schema.yaml
+/properties/themes/concepts/id	https://w3id.org/ogc/stac/themes/id	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/theme/schema.yaml
+/properties/themes/concepts/title	http://purl.org/dc/terms/title	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/theme/schema.yaml
+/properties/themes/concepts/description	http://purl.org/dc/terms/description	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/theme/schema.yaml
+/properties/themes/concepts/url	@id	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/theme/schema.yaml
+/properties/themes/scheme	https://w3id.org/ogc/stac/themes/scheme	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/theme/schema.yaml
+/properties/formats	https://www.opengis.net/def/ogc-api/records/format	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/formats/name	https://www.opengis.net/def/ogc-api/records/name	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/formats/mediaType	https://www.opengis.net/def/ogc-api/records/mediaType	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/contacts	http://www.w3.org/ns/dcat#contactPoint	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/contacts/identifier		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/name		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/position		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/organization		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/logo		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/logo/rel		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/phones		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/phones/value		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/phones/roles		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/emails		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/emails/value		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/emails/roles		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/addresses		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/addresses/deliveryPoint		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/addresses/city		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/addresses/administrativeArea		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/addresses/postalCode		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/addresses/country		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/addresses/roles		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/links		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/hoursOfService		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/contactInstructions		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/contacts/roles		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/contact/schema.yaml
+/properties/license	http://www.w3.org/ns/dcat#license	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/rights	http://www.w3.org/ns/dcat#rights	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/links/created	http://purl.org/dc/terms/created	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/linkBase/schema.yaml
+/links/updated	http://purl.org/dc/terms/modified	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/linkBase/schema.yaml
+/linkTemplates	https://www.opengis.net/def/ogc-api/records/hasLinkTemplate	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/linkTemplates/uriTemplate	https://www.opengis.net/def/ogc-api/records/uriTemplate	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/linkTemplate/schema.yaml
+/linkTemplates/varBase	https://www.opengis.net/def/ogc-api/records/varBase	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/linkTemplate/schema.yaml
+/linkTemplates/variables	https://www.opengis.net/def/ogc-api/records/hasVariable	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/linkTemplate/schema.yaml
+/_anyOf/0/_oneOf/0/geometry		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/_oneOf/0/geometry/_oneOf/0/type		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/0/coordinates		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/0/bbox		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/1/type		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/1/coordinates		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/1/bbox		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/2/type		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/2/coordinates		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/2/bbox		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/3/type		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/3/coordinates		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/3/bbox		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/4/type		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/4/coordinates		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/4/bbox		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/5/type		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/5/coordinates		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/geometry/_oneOf/5/bbox		https://geojson.org/schema/Geometry.json
+/_anyOf/0/_oneOf/0/bbox		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/_oneOf/1/geometry		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/_oneOf/1/bbox		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/_then/collection		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/_else/collection		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/_then/properties		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/_then/properties/bands		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/_else/properties		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/_else/properties/bands		https://raw.githubusercontent.com/radiantearth/stac-spec/master/item-spec/json-schema/bands.json
+/_anyOf/0/_else/properties/bands/title		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/basics.json
+/_anyOf/0/_else/properties/bands/description		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/basics.json
+/_anyOf/0/_else/properties/bands/keywords		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/basics.json
+/_anyOf/0/_else/properties/bands/roles		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/basics.json
+/_anyOf/0/_else/properties/bands/bands		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/bands.json
+/_anyOf/0/_else/properties/bands/bands/name		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/bands.json
+/_anyOf/0/_else/properties/bands/datetime		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/datetime.json
+/_anyOf/0/_else/properties/bands/start_datetime		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/datetime.json
+/_anyOf/0/_else/properties/bands/end_datetime		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/datetime.json
+/_anyOf/0/_else/properties/bands/created		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/datetime.json
+/_anyOf/0/_else/properties/bands/updated		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/datetime.json
+/_anyOf/0/_else/properties/bands/data_type		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/data-values.json
+/_anyOf/0/_else/properties/bands/nodata		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/data-values.json
+/_anyOf/0/_else/properties/bands/statistics		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/data-values.json
+/_anyOf/0/_else/properties/bands/statistics/minimum		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/data-values.json
+/_anyOf/0/_else/properties/bands/statistics/maximum		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/data-values.json
+/_anyOf/0/_else/properties/bands/statistics/mean		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/data-values.json
+/_anyOf/0/_else/properties/bands/statistics/stddev		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/data-values.json
+/_anyOf/0/_else/properties/bands/statistics/count		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/data-values.json
+/_anyOf/0/_else/properties/bands/statistics/valid_percent		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/data-values.json
+/_anyOf/0/_else/properties/bands/unit		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/data-values.json
+/_anyOf/0/_else/properties/bands/platform		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/instrument.json
+/_anyOf/0/_else/properties/bands/instruments		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/instrument.json
+/_anyOf/0/_else/properties/bands/constellation		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/instrument.json
+/_anyOf/0/_else/properties/bands/mission		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/instrument.json
+/_anyOf/0/_else/properties/bands/gsd		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/instrument.json
+/_anyOf/0/_else/properties/bands/license		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/licensing.json
+/_anyOf/0/_else/properties/bands/providers		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/provider.json
+/_anyOf/0/_else/properties/bands/providers/name		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/provider.json
+/_anyOf/0/_else/properties/bands/providers/description		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/provider.json
+/_anyOf/0/_else/properties/bands/providers/roles		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/provider.json
+/_anyOf/0/_else/properties/bands/providers/url		https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/provider.json
+/_anyOf/0/_else/properties/bands/name		https://raw.githubusercontent.com/radiantearth/stac-spec/master/item-spec/json-schema/bands.json
+/_anyOf/0/stac_extensions	https://w3id.org/ogc/stac/core/hasExtension	https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/id	@id	https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/links		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/links/_then/href		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/links/href		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/links/rel		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/links/type	@type	https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/links/title	http://purl.org/dc/terms/title	https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/links/method		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/links/headers		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/links/body		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/properties		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/properties/_anyOf/0/datetime	http://purl.org/dc/terms/date	https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item/schema.yaml
+/_anyOf/0/assets	https://w3id.org/ogc/stac/core/hasAsset	https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/components/assets/schema.yaml
+/_anyOf/0/assets/href		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/components/assets/schema.yaml
+/_anyOf/0/assets/title		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/components/assets/schema.yaml
+/_anyOf/0/assets/description		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/components/assets/schema.yaml
+/_anyOf/0/assets/type		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/components/assets/schema.yaml
+/_anyOf/0/assets/roles		https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/components/assets/schema.yaml
+/_anyOf/1/type		https://geojson.org/schema/Feature.json
+/_anyOf/1/id		https://geojson.org/schema/Feature.json
+/_anyOf/1/properties		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/1/type		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/1/coordinates		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/1/bbox		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/2/type		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/2/coordinates		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/2/bbox		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/3/type		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/3/coordinates		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/3/bbox		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/4/type		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/4/coordinates		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/4/bbox		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/5/type		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/5/coordinates		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/5/bbox		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/6/type		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/6/coordinates		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/6/bbox		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/type		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/0/type		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/0/coordinates		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/0/bbox		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/1/type		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/1/coordinates		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/1/bbox		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/2/type		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/2/coordinates		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/2/bbox		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/3/type		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/3/coordinates		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/3/bbox		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/4/type		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/4/coordinates		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/4/bbox		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/5/type		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/5/coordinates		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/5/bbox		https://geojson.org/schema/Feature.json
+/_anyOf/1/geometry/_oneOf/7/bbox		https://geojson.org/schema/Feature.json
+/_anyOf/1/bbox		https://geojson.org/schema/Feature.json
+/_anyOf/1/_oneOf/0/geometry		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/_oneOf/0/bbox		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/_oneOf/1/geometry		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/_oneOf/1/bbox		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/_then/collection		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/_else/collection		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/stac_version		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/stac_extensions		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/links		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/links/href		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/links/rel		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/links/type		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/links/title		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/assets		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/assets/href		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/assets/title		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/assets/description		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/assets/type		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/assets/roles		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
+/_anyOf/1/assets/datetime		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/datetime.json
+/_anyOf/1/assets/start_datetime		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/datetime.json
+/_anyOf/1/assets/end_datetime		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/datetime.json
+/_anyOf/1/assets/created		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/datetime.json
+/_anyOf/1/assets/updated		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/datetime.json
+/_anyOf/1/assets/platform		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/instrument.json
+/_anyOf/1/assets/instruments		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/instrument.json
+/_anyOf/1/assets/constellation		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/instrument.json
+/_anyOf/1/assets/mission		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/instrument.json
+/_anyOf/1/assets/gsd		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/instrument.json
+/_anyOf/1/assets/license		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/licensing.json
+/_anyOf/1/assets/providers		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/provider.json
+/_anyOf/1/assets/providers/name		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/provider.json
+/_anyOf/1/assets/providers/description		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/provider.json
+/_anyOf/1/assets/providers/roles		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/provider.json
+/_anyOf/1/assets/providers/url		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/provider.json
+/_anyOf/1/properties/_anyOf/0/datetime		https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json
