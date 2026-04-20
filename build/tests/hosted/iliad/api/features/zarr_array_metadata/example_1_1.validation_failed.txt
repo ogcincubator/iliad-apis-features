@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.zarr_array_metadata - GeoZarr Array description metadata
-Generated 2026-04-20T08:35:12.225791+00:00
+Generated 2026-04-20T08:38:15.415567+00:00
 === Files ===
 Using examples/.zarray from examples
 JSON-LD context is present - uplifting
