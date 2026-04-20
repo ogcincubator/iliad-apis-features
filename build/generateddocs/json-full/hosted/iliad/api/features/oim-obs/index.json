@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2026-04-17",
+  "dateOfLastChange": "2026-04-20",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -32,18 +32,18 @@
     "ogc.sosa.properties.observation": [
       "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
     ],
-    "ogc.geo.features.featureCollection": [
-      "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
-    ],
     "ogc.geo.features.feature": [
       "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+    ],
+    "ogc.geo.features.featureCollection": [
+      "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
     ]
   },
   "dependsOn": [
     "ogc.sosa.properties.observation",
-    "ogc.sosa.features.observationCollection",
+    "ogc.ogc-utils.iri-or-curie",
     "ogc.sosa.features.observation",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.sosa.features.observationCollection"
   ],
   "ldContext": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
   "schema": {

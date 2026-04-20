@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.stac_multidim_data - ILIAD STAC/DCAT dimensional data",
   "bblockName": "ILIAD STAC/DCAT dimensional data",
   "bblockId": "ogc.hosted.iliad.api.features.stac_multidim_data",
-  "generated": "2026-04-17T11:51:29.613813+00:00",
+  "generated": "2026-04-20T08:35:32.803858+00:00",
   "result": false,
   "items": [
     {
@@ -82,18 +82,18 @@
                     "<http://w3id.org/ogcincubator/simulation>"
                   ]
                 },
+                "geojson:LinkShape": {
+                  "nodes": []
+                },
                 "geojson:GeometryShape": {
                   "nodes": []
                 },
                 "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
-                },
-                "geojson:LinkShape": {
-                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <http://w3id.org/ogcincubator/simulation>\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <http://w3id.org/ogcincubator/simulation>\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
             },
             {
               "op": "shacl-report",

@@ -1,5 +1,5 @@
 Validation report for ogc.hosted.iliad.api.features.zarr_attrs_metadata - GeoZarr Attributes description metadata
-Generated 2026-04-17T11:51:08.330047+00:00
+Generated 2026-04-20T08:35:12.241071+00:00
 === Files ===
 Using examples/.zattrs-longitude from examples
 JSON-LD context is present - uplifting

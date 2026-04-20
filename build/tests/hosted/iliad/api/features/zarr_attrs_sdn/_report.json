@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hosted.iliad.api.features.zarr_attrs_sdn - GeoZarr Attributes description metadata aligned to the SeaDataNet time series profile",
   "bblockName": "GeoZarr Attributes description metadata aligned to the SeaDataNet time series profile",
   "bblockId": "ogc.hosted.iliad.api.features.zarr_attrs_sdn",
-  "generated": "2026-04-17T11:51:08.444311+00:00",
+  "generated": "2026-04-20T08:35:12.373213+00:00",
   "result": true,
   "items": [
     {
