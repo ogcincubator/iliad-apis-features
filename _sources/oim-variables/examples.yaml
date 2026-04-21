@@ -1,0 +1,6 @@
+examples:
+  - title: SEADOTS variable and indicator graph
+    description: A Turtle example showing OIM variable concepts, indicators, and graph edges.
+    snippets:
+      - language: ttl
+        ref: examples/indicators.ttl

@@ -1,6 +1,6 @@
 identifier-prefix: ogc.hosted.iliad.api.features.
 
-name: ILIAD API Profiles
+name: Marine API Profiles
 abstract: (Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability.
 description: |
   Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. 

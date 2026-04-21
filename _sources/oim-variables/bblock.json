@@ -1,0 +1,35 @@
+{
+  "name": "OIM Variables",
+  "abstract": "Defines the OIM variable and indicator concept model for SEADOTS and ILIAD variable observations.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-04-20T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "0.1",
+  "dateOfLastChange": "2026-04-20",
+  "dependsOn": [
+    "ogc.model.cross-domain.all"
+  ],
+  "ontology": "ontology.ttl",
+  "shaclRules": [
+    "rules.shacl"
+  ],
+  "sources": [
+    {
+      "title": "SEADOTS Indicator Vocabulary",
+      "link": "https://id3.seadots.eu/indicator/"
+    },
+    {
+      "title": "OIM Oceans Information Model",
+      "link": "https://github.com/ILIAD-ocean-twin/OIM"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "iliad",
+    "oim",
+    "variables",
+    "indicators",
+    "model"
+  ]
+}

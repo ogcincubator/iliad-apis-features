@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ses: <http://seadots.eu/ses#> .
+@prefix ind: <https://id3.seadots.eu/indicator/> .
+@prefix indo: <https://id3.seadots.eu/indicator/obs/> .
+
+ind:CompositeIndicatorComputation a owl:Class ;
+    rdfs:label "Composite Indicator Computation" ;
+    rdfs:comment "A computation that derives a composite indicator from multiple observed properties." .
+
+ses:Edge a owl:Class ;
+    rdfs:label "Edge" ;
+    rdfs:comment "A directed relationship between two observed properties." .
+
+ses:hasEdge a rdf:Property ;
+    rdfs:label "has edge" ;
+    rdfs:domain sosa:observedProperty ;
+    rdfs:range ses:Edge .
+
+ses:from a rdf:Property ;
+    rdfs:label "from" ;
+    rdfs:domain ses:Edge ;
+    rdfs:range sosa:observedProperty .
+
+ses:to a rdf:Property ;
+    rdfs:label "to" ;
+    rdfs:domain ses:Edge ;
+    rdfs:range sosa:observedProperty .
+
+ses:weight a rdf:Property ;
+    rdfs:label "weight" ;
+    rdfs:domain ses:Edge ;
+    rdfs:range xsd:decimal .

@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ses: <http://seadots.eu/ses#> .
+@prefix ind: <https://id3.seadots.eu/indicator/> .
+
+:ObservedPropertyShape
+    a sh:NodeShape ;
+    sh:targetClass sosa:observedProperty ;
+    sh:message "Observed properties must have a prefLabel and belong to a concept scheme." ;
+    sh:property [
+        sh:path skos:prefLabel ;
+        sh:minCount 1 ;
+    ] , [
+        sh:path skos:inScheme ;
+        sh:minCount 1 ;
+    ] .
+
+:EdgeShape
+    a sh:NodeShape ;
+    sh:targetClass ses:Edge ;
+    sh:message "Edges must connect two observed properties and include a numeric weight." ;
+    sh:property [
+        sh:path ses:from ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] , [
+        sh:path ses:to ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] , [
+        sh:path ses:weight ;
+        sh:minCount 1 ;
+        sh:datatype xsd:decimal ;
+    ] .
+
+:CompositeIndicatorShape
+    a sh:NodeShape ;
+    sh:targetClass ind:CompositeIndicatorComputation ;
+    sh:message "Composite indicator computations should reference at least one observed property." ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minCount 1 ;
+    ] .
