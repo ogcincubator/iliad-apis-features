@@ -56,17 +56,17 @@ inda:cdi-computation a ind:CompositeIndicatorComputation ;
         indo:soil-moisture-anomaly,
         indo:vegetation-condition-anomaly .
 
-indo:rainfall-anomaly a skos:Concept ;
+indo:rainfall-anomaly a sosa:observedProperty, skos:Concept ;
     rdfs:label "Rainfall Anomaly" ;
     skos:prefLabel "Rainfall Anomaly"@en ;
     skos:inScheme ind:indicators-scheme .
 
-indo:soil-moisture-anomaly a skos:Concept ;
+indo:soil-moisture-anomaly a sosa:observedProperty, skos:Concept ;
     rdfs:label "Soil Moisture Anomaly" ;
     skos:prefLabel "Soil Moisture Anomaly"@en ;
     skos:inScheme ind:indicators-scheme .
 
-indo:vegetation-condition-anomaly a skos:Concept ;
+indo:vegetation-condition-anomaly a sosa:observedProperty, skos:Concept ;
     rdfs:label "Vegetation Condition Anomaly" ;
     skos:prefLabel "Vegetation Condition Anomaly"@en ;
     skos:inScheme ind:indicators-scheme .
@@ -101,15 +101,6 @@ indo:fisheries-production a sosa:observedProperty, skos:Concept ;
     prov:providedBy "http://seadots.eu" .
 
 
-# Classes
-sosa:observedProperty a rdfs:Class ;
-    rdfs:label "Variable" .
-
-ses:Edge a rdfs:Class ;
-    rdfs:label "Edge" ;
-    prov:wasgeneratedBy inda:edge-computation .
-
-
 ind:ind-rel-scheme a skos:ConceptScheme ;
     dcterms:isPartOf ind:catalog ; # Backlink for discovery
     skos:prefLabel "SEADOTS Indicator relationships Scheme"@en ;
@@ -118,7 +109,8 @@ ind:ind-rel-scheme a skos:ConceptScheme ;
     skos:hasTopConcept ses:Edge ,
                        ses:PositiveInfluence ,
                        ses:NegativeInfluence ,
-                       ses:FeedbackInfluence .
+                       ses:FeedbackInfluence ,
+                       ses:weight .
 # Properties
 
 ses:hasEdge a rdf:Property ;
@@ -127,7 +119,9 @@ ses:hasEdge a rdf:Property ;
     skos:prefLabel "In relationship"@en ;
     skos:inScheme ind:ind-rel-scheme .
 
-ses:Edge
+ses:Edge a rdfs:Class, skos:Concept ;
+    rdfs:label "Edge" ;
+    prov:wasGeneratedBy inda:edge-computation ;
     rdfs:subClassOf prov:Entity ;
     rdfs:comment "A reified, directed, weighted influence between observed variables." ;
     skos:prefLabel "Relationship"@en ;
@@ -150,12 +144,6 @@ ses:FeedbackInfluence a skos:Concept ;
     skos:prefLabel "Feedback Influence"@en ;
     skos:inScheme ind:ind-rel-scheme .
 
-ses:weight
-    rdfs:comment "Signed influence strength (dimensionless); positive = reinforcing, negative = inhibiting." ;
-    skos:prefLabel "Weight"@en ;
-    skos:inScheme ind:ind-rel-scheme .
-
-
 ses:from a rdf:Property ;
     rdfs:domain ses:Edge ;
     rdfs:range sosa:observedProperty ;
@@ -166,10 +154,12 @@ ses:to a rdf:Property ;
     rdfs:range sosa:observedProperty ;
     rdfs:subPropertyOf prov:influenced .
 
-ses:weight a rdf:Property ;
+ses:weight a rdf:Property, skos:Concept ;
     rdfs:comment "Signed influence strength (dimensionless); positive = reinforcing, negative = inhibiting." ;
     rdfs:domain ses:Edge ;
-    rdfs:range xsd:decimal .
+    rdfs:range xsd:decimal ;
+    skos:prefLabel "Weight"@en ;
+    skos:inScheme ind:ind-rel-scheme .
 
 
 
