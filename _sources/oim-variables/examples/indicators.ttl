@@ -19,11 +19,13 @@ ind:catalog a dcat:Catalog ;
     dcterms:title "SEADOTS Resource Catalog"@en ;
     dcterms:description "Main catalog for SEADOTS indicators and concepts."@en ;
     # Prez often needs dcterms:hasPart to show members in the list
-    dcterms:hasPart ind:skos-scheme ; 
-    dcat:dataset ind:skos-scheme .
+    dcterms:hasPart ind:indicators-scheme ; 
+    dcterms:hasPart ind:ind-rel-scheme ; 
+    dcat:dataset ind:indicators-scheme ;
+    dcat:dataset ind:ind-rel-scheme .
 
 # --- SCHEME CONFIGURATION ---
-ind:skos-scheme a skos:ConceptScheme ;
+ind:indicators-scheme a skos:ConceptScheme ;
     dcterms:isPartOf ind:catalog ; # Backlink for discovery
     skos:prefLabel "SEADOTS Indicator Scheme"@en ;
     skos:definition "A concept scheme for SEADOTS indicator concepts and observed properties."@en ;
@@ -36,20 +38,20 @@ ind:skos-scheme a skos:ConceptScheme ;
                        indo:number-of-turbines ,
                        indo:area-use-by-wind-park ,
                        indo:number-of-jobs ,
-                       indo:fisheries-production2 ,
+                       indo:fisheries-production ,
                        indo:bird-tourism .
 
 # Instances
 ind:cdi a prov:Entity, skos:Concept ;
     rdfs:label "Composite Drought Indicator" ;
     skos:prefLabel "Composite Drought Indicator"@en ;
-    skos:inScheme ind:skos-scheme ;
+    skos:inScheme ind:indicators-scheme ;
     prov:wasGeneratedBy inda:cdi-computation .
 
 inda:cdi-computation a ind:CompositeIndicatorComputation ;
     rdfs:label "CDI computation" ;
     skos:prefLabel "CDI computation"@en ;
-    skos:inScheme ind:skos-scheme ;
+    skos:inScheme ind:indicators-scheme ;
     prov:used indo:rainfall-anomaly,
         indo:soil-moisture-anomaly,
         indo:vegetation-condition-anomaly .
@@ -57,47 +59,42 @@ inda:cdi-computation a ind:CompositeIndicatorComputation ;
 indo:rainfall-anomaly a skos:Concept ;
     rdfs:label "Rainfall Anomaly" ;
     skos:prefLabel "Rainfall Anomaly"@en ;
-    skos:inScheme ind:skos-scheme .
+    skos:inScheme ind:indicators-scheme .
 
 indo:soil-moisture-anomaly a skos:Concept ;
     rdfs:label "Soil Moisture Anomaly" ;
     skos:prefLabel "Soil Moisture Anomaly"@en ;
-    skos:inScheme ind:skos-scheme .
+    skos:inScheme ind:indicators-scheme .
 
 indo:vegetation-condition-anomaly a skos:Concept ;
     rdfs:label "Vegetation Condition Anomaly" ;
     skos:prefLabel "Vegetation Condition Anomaly"@en ;
-    skos:inScheme ind:skos-scheme .
+    skos:inScheme ind:indicators-scheme .
 
 indo:number-of-turbines a sosa:observedProperty, skos:Concept ;
     rdfs:label "Number of turbines" ;
     skos:prefLabel "Number of turbines"@en ;
-    skos:inScheme ind:skos-scheme .
+    skos:inScheme ind:indicators-scheme .
 
 indo:area-use-by-wind-park a sosa:observedProperty, skos:Concept ;
     rdfs:label "Area use by wind park" ;
     skos:prefLabel "Area use by wind park"@en ;
-    skos:inScheme ind:skos-scheme .
-
-indo:area-use-by-wind-park a sosa:observedProperty, skos:Concept ;
-    rdfs:label "Area use by wind park" ;
-    skos:prefLabel "Area use by wind park"@en ;
-    skos:inScheme ind:skos-scheme .
+    skos:inScheme ind:indicators-scheme .
 
 indo:number-of-jobs a sosa:observedProperty, skos:Concept ;
     rdfs:label "Number of jobs" ;
     skos:prefLabel "Number of jobs"@en ;
-    skos:inScheme ind:skos-scheme .
+    skos:inScheme ind:indicators-scheme .
 
 indo:bird-tourism a sosa:observedProperty, skos:Concept ;
     rdfs:label "Bird tourism" ;
     skos:prefLabel "Bird tourism"@en ;
-    skos:inScheme ind:skos-scheme .
+    skos:inScheme ind:indicators-scheme .
 
-indo:fisheries-production1 a sosa:observedProperty, skos:Concept ;
+indo:fisheries-production a sosa:observedProperty, skos:Concept ;
     rdfs:label "Fisheries production" ;
     skos:prefLabel "Fisheries production"@en ;
-    skos:inScheme ind:skos-scheme ;
+    skos:inScheme ind:indicators-scheme ;
     rdfs:comment "The amount of fish caught in a given area over a specific period of time." ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/Fisheries_production> ;
     owl:sameAs <http://aims.fao.org/aos/agrovoc/c_2934> ;
@@ -112,20 +109,65 @@ ses:Edge a rdfs:Class ;
     rdfs:label "Edge" ;
     prov:wasgeneratedBy inda:edge-computation .
 
+
+ind:ind-rel-scheme a skos:ConceptScheme ;
+    dcterms:isPartOf ind:catalog ; # Backlink for discovery
+    skos:prefLabel "SEADOTS Indicator relationships Scheme"@en ;
+    skos:definition "A concept scheme for SEADOTS relationships between indicator concepts and observed properties."@en ;
+    # --- TOP CONCEPTS (added for VocPrez/Prez UI visibility) ---
+    skos:hasTopConcept ses:Edge ,
+                       ses:PositiveInfluence ,
+                       ses:NegativeInfluence ,
+                       ses:FeedbackInfluence .
 # Properties
+
 ses:hasEdge a rdf:Property ;
     rdfs:domain sosa:observedProperty ;
-    rdfs:range ses:Edge .
+    rdfs:range ses:Edge ;
+    skos:prefLabel "In relationship"@en ;
+    skos:inScheme ind:ind-rel-scheme .
+
+ses:Edge
+    rdfs:subClassOf prov:Entity ;
+    rdfs:comment "A reified, directed, weighted influence between observed variables." ;
+    skos:prefLabel "Relationship"@en ;
+    skos:inScheme ind:ind-rel-scheme .
+
+
+ses:influenceType a rdf:Property ;
+    rdfs:domain ses:Edge ;
+    rdfs:range skos:Concept .
+
+ses:PositiveInfluence a skos:Concept ;
+    skos:prefLabel "Positive Influence"@en ;
+    skos:inScheme ind:ind-rel-scheme .
+
+ses:NegativeInfluence a skos:Concept ;
+    skos:prefLabel "Negative Influence"@en ;
+    skos:inScheme ind:ind-rel-scheme .
+
+ses:FeedbackInfluence a skos:Concept ;
+    skos:prefLabel "Feedback Influence"@en ;
+    skos:inScheme ind:ind-rel-scheme .
+
+ses:weight
+    rdfs:comment "Signed influence strength (dimensionless); positive = reinforcing, negative = inhibiting." ;
+    skos:prefLabel "Weight"@en ;
+    skos:inScheme ind:ind-rel-scheme .
+
 
 ses:from a rdf:Property ;
     rdfs:domain ses:Edge ;
-    rdfs:range sosa:observedProperty .
+    rdfs:range sosa:observedProperty ;
+    rdfs:subPropertyOf prov:wasInfluencedBy .
 
 ses:to a rdf:Property ;
     rdfs:domain ses:Edge ;
-    rdfs:range sosa:observedProperty .
+    rdfs:range sosa:observedProperty ;
+    rdfs:subPropertyOf prov:influenced .
 
 ses:weight a rdf:Property ;
+    rdfs:comment "Signed influence strength (dimensionless); positive = reinforcing, negative = inhibiting."
     rdfs:domain ses:Edge ;
     rdfs:range xsd:decimal .
 
