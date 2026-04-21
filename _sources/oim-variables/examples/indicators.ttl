@@ -167,7 +167,7 @@ ses:to a rdf:Property ;
     rdfs:subPropertyOf prov:influenced .
 
 ses:weight a rdf:Property ;
-    rdfs:comment "Signed influence strength (dimensionless); positive = reinforcing, negative = inhibiting."
+    rdfs:comment "Signed influence strength (dimensionless); positive = reinforcing, negative = inhibiting." ;
     rdfs:domain ses:Edge ;
     rdfs:range xsd:decimal .
 
