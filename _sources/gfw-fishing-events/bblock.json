@@ -1,0 +1,45 @@
+{
+  "name": "Global Fishing Watch Fishing Events",
+  "version": "0.1.0",
+  "dateTimeAddition": "2026-04-22T00:00:00Z",
+  "status": "under-development",
+  "itemClass": "schema",
+  "register": "ogc-incubator",
+  "dateOfLastChange": "2026-04-22",
+  "abstract": "A source-level schema building block for recent Global Fishing Watch apparent fishing events returned by the GFW Events API for a Gulf of Gdansk polygon query.",
+  "license": "https://globalfishingwatch.org/our-apis/",
+  "tags": [
+    "Global Fishing Watch",
+    "fishing events",
+    "AIS",
+    "marine activity",
+    "events api"
+  ],
+  "authors": [
+    {
+      "name": "ILIAD Marine Data Team",
+      "organization": "ILIAD"
+    }
+  ],
+  "standards": [
+    "https://json-schema.org/draft/2020-12/schema",
+    "https://globalfishingwatch.org/our-apis/documentation",
+    "https://www.w3.org/TR/vocab-dcat-3/"
+  ],
+  "schema": "schema.yaml",
+  "ldContext": "context.jsonld",
+  "examples": "examples.yaml",
+  "tests": "tests/test.yaml",
+  "dependsOn": [],
+  "sources": [
+    {
+      "title": "Global Fishing Watch API Documentation",
+      "link": "https://globalfishingwatch.org/our-apis/documentation"
+    },
+    {
+      "title": "Global Fishing Watch Events API",
+      "link": "https://gateway.api.globalfishingwatch.org/v3/events"
+    }
+  ],
+  "scope": "dev"
+}

@@ -1,0 +1,45 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@base": "urn:gfw:gdansk-gulf:fishing-events:",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "Dataset": "dcat:Dataset",
+    "metadata": "dcterms:description",
+    "datasets": "dcat:dataset",
+    "dateRange": "dcterms:temporal",
+    "geometry": "dcterms:spatial",
+    "entries": "dcat:distribution",
+    "start": {
+      "@id": "dcterms:created",
+      "@type": "xsd:dateTime"
+    },
+    "end": {
+      "@id": "dcterms:modified",
+      "@type": "xsd:dateTime"
+    },
+    "lat": {
+      "@id": "geo:lat",
+      "@type": "xsd:double"
+    },
+    "lon": {
+      "@id": "geo:long",
+      "@type": "xsd:double"
+    },
+    "vessel": "dcterms:identifier",
+    "flag": "dcterms:spatial",
+    "type": "dcterms:type",
+    "id": "dcterms:identifier",
+    "totalDistanceKm": {
+      "@id": "prov:value",
+      "@type": "xsd:double"
+    },
+    "averageSpeedKnots": {
+      "@id": "prov:value",
+      "@type": "xsd:double"
+    }
+  }
+}

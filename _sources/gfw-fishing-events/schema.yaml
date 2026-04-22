@@ -1,0 +1,191 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://example.com/gfw-gdansk-gulf-fishing-events.schema.yaml
+title: Global Fishing Watch Gulf of Gdansk Fishing Events Response
+description: Schema for a recent Global Fishing Watch Events API response filtered to apparent fishing events in the Gulf of Gdansk.
+type: object
+properties:
+  metadata:
+    type: object
+    properties:
+      datasets:
+        type: array
+        items:
+          type: string
+      dateRange:
+        type: object
+        properties:
+          from:
+            type: string
+            format: date
+          to:
+            type: string
+            format: date
+        required: [from, to]
+      geometry:
+        type: object
+        properties:
+          type:
+            type: string
+          features:
+            type: array
+            items:
+              type: object
+              properties:
+                type:
+                  type: string
+                geometry:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                    coordinates:
+                      type: array
+                  required: [type, coordinates]
+              required: [type, geometry]
+        required: [type, features]
+    required: [datasets, dateRange, geometry]
+  limit:
+    type: integer
+  offset:
+    type: integer
+  nextOffset:
+    type: integer
+  total:
+    type: integer
+  entries:
+    type: array
+    items:
+      type: object
+      properties:
+        start:
+          type: string
+          format: date-time
+        end:
+          type: string
+          format: date-time
+        id:
+          type: string
+        type:
+          type: string
+        position:
+          type: object
+          properties:
+            lat:
+              type: number
+            lon:
+              type: number
+          required: [lat, lon]
+        regions:
+          type: object
+          properties:
+            mpa:
+              type: array
+              items:
+                type: string
+            eez:
+              type: array
+              items:
+                type: string
+            rfmo:
+              type: array
+              items:
+                type: string
+            fao:
+              type: array
+              items:
+                type: string
+            majorFao:
+              type: array
+              items:
+                type: string
+            eez12Nm:
+              type: array
+              items:
+                type: string
+            highSeas:
+              type: array
+              items:
+                type: string
+            mpaNoTakePartial:
+              type: array
+              items:
+                type: string
+            mpaNoTake:
+              type: array
+              items:
+                type: string
+          required: [mpa, eez, rfmo, fao, majorFao, eez12Nm, highSeas, mpaNoTakePartial, mpaNoTake]
+        boundingBox:
+          type: array
+          items:
+            type: number
+          minItems: 4
+          maxItems: 4
+        distances:
+          type: object
+          properties:
+            startDistanceFromShoreKm:
+              type: number
+            endDistanceFromShoreKm:
+              type: number
+            startDistanceFromPortKm:
+              type: number
+            endDistanceFromPortKm:
+              type: number
+          required: [startDistanceFromShoreKm, endDistanceFromShoreKm, startDistanceFromPortKm, endDistanceFromPortKm]
+        vessel:
+          type: object
+          properties:
+            id:
+              type: string
+            name:
+              type: string
+            ssvid:
+              type: string
+            flag:
+              type: string
+            type:
+              type: string
+            publicAuthorizations:
+              type: array
+              items:
+                type: object
+                properties:
+                  hasPubliclyListedAuthorization:
+                    type: string
+                  rfmo:
+                    type: string
+                required: [hasPubliclyListedAuthorization, rfmo]
+            nextPort:
+              type:
+                - "null"
+                - string
+          required: [id, name, ssvid, flag, type, publicAuthorizations, nextPort]
+        fishing:
+          type: object
+          properties:
+            totalDistanceKm:
+              type: number
+            averageSpeedKnots:
+              type: number
+            averageDurationHours:
+              type:
+                - "null"
+                - number
+            potentialRisk:
+              type: boolean
+            vesselPublicAuthorizationStatus:
+              type: string
+          required: [totalDistanceKm, averageSpeedKnots, averageDurationHours, potentialRisk, vesselPublicAuthorizationStatus]
+      required:
+        - start
+        - end
+        - id
+        - type
+        - position
+        - regions
+        - boundingBox
+        - distances
+        - vessel
+        - fishing
+required: [metadata, limit, offset, nextOffset, total, entries]

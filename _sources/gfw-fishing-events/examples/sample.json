@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "datasets": [
+      "public-global-fishing-events:v4.0"
+    ],
+    "dateRange": {
+      "from": "2026-04-14",
+      "to": "2026-04-19"
+    },
+    "geometry": {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [18.0, 54.2],
+                [20.2, 54.2],
+                [20.2, 55.2],
+                [18.0, 55.2],
+                [18.0, 54.2]
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "limit": 5,
+  "offset": 0,
+  "nextOffset": 5,
+  "total": 136,
+  "entries": [
+    {
+      "start": "2026-04-18T17:49:47.000Z",
+      "end": "2026-04-18T19:20:01.000Z",
+      "id": "1f38d4a20d3cb434b4ef19545aed5a98",
+      "type": "fishing",
+      "position": {
+        "lat": 54.9672,
+        "lon": 18.8021
+      },
+      "regions": {
+        "mpa": [],
+        "eez": ["5687"],
+        "rfmo": ["NASCO", "ICCAT", "NAMMCO", "ACAP", "ICES", "IWC"],
+        "fao": ["27.3", "27.3.d", "27", "27.3.d.26"],
+        "majorFao": ["27"],
+        "eez12Nm": ["5687"],
+        "highSeas": [],
+        "mpaNoTakePartial": [],
+        "mpaNoTake": []
+      },
+      "boundingBox": [18.813821666666655, 54.870403333333336, 18.78744333333333, 55.08564166666667],
+      "distances": {
+        "startDistanceFromShoreKm": 20,
+        "endDistanceFromShoreKm": 40,
+        "startDistanceFromPortKm": 20.926334,
+        "endDistanceFromPortKm": 39.603711000000004
+      },
+      "vessel": {
+        "id": "866fd3b15-53f9-dd69-4801-0716769b42f2",
+        "name": "HEL-111",
+        "ssvid": "261001870",
+        "flag": "POL",
+        "type": "fishing",
+        "publicAuthorizations": [
+          {
+            "hasPubliclyListedAuthorization": "pending",
+            "rfmo": "ICCAT"
+          }
+        ],
+        "nextPort": null
+      },
+      "fishing": {
+        "totalDistanceKm": 23.994934144492895,
+        "averageSpeedKnots": 8.574666748046877,
+        "averageDurationHours": null,
+        "potentialRisk": false,
+        "vesselPublicAuthorizationStatus": "pending_info"
+      }
+    },
+    {
+      "start": "2026-04-18T16:03:04.000Z",
+      "end": "2026-04-18T16:29:05.000Z",
+      "id": "9df852e4e02f6633cad98019aa4ec816",
+      "type": "fishing",
+      "position": {
+        "lat": 54.7039,
+        "lon": 19.437
+      },
+      "regions": {
+        "mpa": [],
+        "eez": ["5690"],
+        "rfmo": ["NAMMCO", "ICES", "ICCAT", "IWC", "ACAP", "NASCO"],
+        "fao": ["27.3.d", "27", "27.3", "27.3.d.26"],
+        "majorFao": ["27"],
+        "eez12Nm": [],
+        "highSeas": [],
+        "mpaNoTakePartial": [],
+        "mpaNoTake": []
+      },
+      "boundingBox": [19.427396666666667, 54.70104833333333, 19.44443, 54.707755],
+      "distances": {
+        "startDistanceFromShoreKm": 27,
+        "endDistanceFromShoreKm": 27,
+        "startDistanceFromPortKm": 21.933482,
+        "endDistanceFromPortKm": 21.62648
+      },
+      "vessel": {
+        "id": "496dc779a-a889-82d9-0462-9ab7fadc9b56",
+        "name": "MRTK-1083",
+        "ssvid": "273424330",
+        "flag": "RUS",
+        "type": "fishing",
+        "publicAuthorizations": [
+          {
+            "hasPubliclyListedAuthorization": "pending",
+            "rfmo": "ICCAT"
+          }
+        ],
+        "nextPort": null
+      },
+      "fishing": {
+        "totalDistanceKm": 1.3760776483113115,
+        "averageSpeedKnots": 1.6269230716503582,
+        "averageDurationHours": null,
+        "potentialRisk": false,
+        "vesselPublicAuthorizationStatus": "pending_info"
+      }
+    }
+  ]
+}

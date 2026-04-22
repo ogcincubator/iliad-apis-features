@@ -1,0 +1,13 @@
+tests:
+  - name: GFW fishing events schema validation
+    description: Validate the example JSON against the schema.
+    input: ../examples/sample.json
+    schema: ../schema.yaml
+    expected: valid
+  - name: Description references source API
+    description: Confirm the description mentions Global Fishing Watch and the Events API.
+    input: ../description.md
+    contains:
+      - "Global Fishing Watch"
+      - "POST /v3/events"
+      - "public-global-fishing-events:latest"

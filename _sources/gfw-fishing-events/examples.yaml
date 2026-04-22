@@ -1,0 +1,5 @@
+- title: Global Fishing Watch fishing events sample for the Gulf of Gdansk
+  description: Recent sample of apparent fishing events returned by the GFW Events API for a Gulf of Gdansk polygon filter.
+  snippets:
+    - language: json
+      code: examples/sample.json
