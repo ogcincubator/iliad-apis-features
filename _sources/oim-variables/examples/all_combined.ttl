@@ -1,0 +1,478 @@
+@prefix ses: <http://seadots.eu/ses#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix indo: <https://id3.seadots.eu/indicator/obs/> .
+@prefix ind: <https://id3.seadots.eu/indicator/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+
+ind:indicators-scheme a skos:ConceptScheme ;
+    skos:prefLabel "SEADOTS Indicator Scheme"@en ;
+    skos:definition "A concept scheme for SEADOTS indicator concepts and observed properties."@en ;
+    skos:hasTopConcept indo:sst-degrees-c-germany ,
+                       indo:sst-degrees-c-sweden ,
+                       indo:average-wind-speed-at-hub-height-150-m-extreme-wind-events-norway ,
+                       indo:salinity-germany ,
+                       indo:temporal-dimension-sweden ,
+                       indo:significant-wave-height-wave-direction-variability-norway ,
+                       indo:chlorophyll-germany ,
+                       indo:mussel-growth-germany ,
+                       indo:sea-surface-temperature-norway ,
+                       indo:currents-germany ,
+                       indo:salinity-gradients-norway ,
+                       indo:nutrients-germany ,
+                       indo:north-atlantic-oscillation-nao-and-arctic-amplification-may--norway ,
+                       indo:permanent-residents-time-norway ,
+                       indo:euros-sweden ,
+                       indo:euros-sweden-2 ,
+                       indo:gis-map-sweden ,
+                       indo:number-generation-capacity-status-sweden ,
+                       indo:tonnes-per-50km2-sweden ,
+                       indo:tonnes-per-50km2-sweden-2 ,
+                       indo:gis-data-coordinates-sweden ,
+                       indo:number-of-wind-turbines-norway ,
+                       indo:turbine-height-m-norway ,
+                       indo:spatial-configuration-of-wind-farm-norway ,
+                       indo:coordinates-small-and-or-large-scale-sweden ,
+                       indo:kwh-germany ,
+                       indo:tonnes-sweden ,
+                       indo:tonnes-sweden-2 ,
+                       indo:tonnes-germany ,
+                       indo:tonnes-germany-2 ,
+                       indo:sst-biomass-sweden ,
+                       indo:nautical-miles-from-coast-sweden ,
+                       indo:tonnes-sweden-3 ,
+                       indo:tonnes-sweden-4 ,
+                       indo:index-sweden ,
+                       indo:rate-sweden ,
+                       indo:change-in-rate-sweden ,
+                       indo:change-in-rate-sweden-2 ,
+                       indo:income-sek-sweden ,
+                       indo:tonnes-km2-over-time-sweden ,
+                       indo:john-arild-arno-fagne-no-norway ,
+                       indo:-sweden ,
+                       indo:fuel-price-distance-sweden ,
+                       indo:price-tonnes-price-kwh-sweden ,
+                       indo:initial-weights-from-fcm-workshop-norway ,
+                       indo:updating-seadots-app-norway ,
+                       indo:tonnes-km2-sweden .
+
+
+indo:sst-degrees-c-germany a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "SST (degrees C)" ;
+    skos:prefLabel "SST (degrees C)"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "ECO1: Climate patterns"@en ;
+    ses:sesVariable "Climate changes to North Sea hydrology"@en ;
+    ses:country "Germany"@en ;
+    dcterms:source "Output from the numerical model"@en .
+
+indo:sst-degrees-c-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "SST (degrees C)" ;
+    skos:prefLabel "SST (degrees C)"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "ECO1: Climate patterns"@en ;
+    ses:sesVariable "Warming and marine heatwaves"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input - source TBD"@en .
+
+indo:average-wind-speed-at-hub-height-150-m-extreme-wind-events-norway a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Average wind speed at hub height (150 m)/Extreme wind events" ;
+    skos:prefLabel "Average wind speed at hub height (150 m)/Extreme wind events"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "ECO1: Climate patterns"@en ;
+    ses:sesVariable "Wind Speed and Direction"@en ;
+    ses:country "Norway"@en ;
+    dcterms:source "NORA3 – Norwegian Hindcast Archive"@en .
+
+indo:salinity-germany a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Salinity" ;
+    skos:prefLabel "Salinity"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "ECO1: Climate patterns"@en ;
+    ses:sesVariable "Climate changes to North Sea hydrology"@en ;
+    ses:country "Germany"@en ;
+    dcterms:source "Output from the numerical model"@en .
+
+indo:temporal-dimension-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Temporal dimension" ;
+    skos:prefLabel "Temporal dimension"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "ECO1: Climate patterns"@en ;
+    ses:sesVariable "Warming and marine heatwaves"@en ;
+    ses:country "Sweden"@en .
+
+indo:significant-wave-height-wave-direction-variability-norway a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Significant wave height/Wave direction variability" ;
+    skos:prefLabel "Significant wave height/Wave direction variability"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "ECO1: Climate patterns"@en ;
+    ses:sesVariable "Wave Climate"@en ;
+    ses:country "Norway"@en .
+
+indo:chlorophyll-germany a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Chlorophyll" ;
+    skos:prefLabel "Chlorophyll"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "ECO1: Climate patterns"@en ;
+    ses:sesVariable "Climate changes to North Sea hydrology"@en ;
+    ses:country "Germany"@en ;
+    dcterms:source "Output from the numerical model"@en .
+
+indo:mussel-growth-germany a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "mussel growth" ;
+    skos:prefLabel "mussel growth"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "ECO1: Climate patterns"@en ;
+    ses:sesVariable "Climate changes to North Sea hydrology"@en ;
+    ses:country "Germany"@en ;
+    dcterms:source "Output from the numerical model"@en .
+
+indo:sea-surface-temperature-norway a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Sea surface temperature" ;
+    skos:prefLabel "Sea surface temperature"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "ECO1: Climate patterns"@en ;
+    ses:sesVariable "Sea Temperature"@en ;
+    ses:country "Norway"@en .
+
+indo:currents-germany a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Currents" ;
+    skos:prefLabel "Currents"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "ECO1: Climate patterns"@en ;
+    ses:sesVariable "Climate changes to North Sea hydrology"@en ;
+    ses:country "Germany"@en ;
+    dcterms:source "Output from the numerical model"@en .
+
+indo:salinity-gradients-norway a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Salinity gradients" ;
+    skos:prefLabel "Salinity gradients"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "ECO1: Climate patterns"@en ;
+    ses:sesVariable "Ocean Salinity"@en ;
+    ses:country "Norway"@en ;
+    dcterms:source "World Ocean Database (WOD23) – NOAA/ImpactWind Sørvest Data Portal"@en .
+
+indo:nutrients-germany a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Nutrients" ;
+    skos:prefLabel "Nutrients"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "ECO1: Climate patterns"@en ;
+    ses:sesVariable "Climate changes to North Sea hydrology"@en ;
+    ses:country "Germany"@en ;
+    dcterms:source "Output from the numerical model"@en .
+
+indo:north-atlantic-oscillation-nao-and-arctic-amplification-may--norway a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "North Atlantic Oscillation (NAO) and Arctic amplification may influence storm frequency and wind regimes over time" ;
+    skos:prefLabel "North Atlantic Oscillation (NAO) and Arctic amplification may influence storm frequency and wind regimes over time"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "ECO1: Climate patterns"@en ;
+    ses:sesVariable "Long-Term Climate Trends"@en ;
+    ses:country "Norway"@en .
+
+indo:permanent-residents-time-norway a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "permanent residents/time" ;
+    skos:prefLabel "permanent residents/time"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "S2: Demographic trends"@en ;
+    ses:sesVariable "Local population size (loss, maintenance, gain)"@en ;
+    ses:country "Norway"@en .
+
+indo:euros-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Euros" ;
+    skos:prefLabel "Euros"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "S5: Markets"@en ;
+    ses:sesVariable "Potential increase in herring demand"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input"@en .
+
+indo:euros-sweden-2 a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Euros" ;
+    skos:prefLabel "Euros"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "S5: Markets"@en ;
+    ses:sesVariable "Potential increase in sprat demand"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input"@en .
+
+indo:gis-map-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "GIS map" ;
+    skos:prefLabel "GIS map"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RS1.2 Offshore wind"@en ;
+    ses:sesVariable "Location (and boundaries) current and planned"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input"@en .
+
+indo:number-generation-capacity-status-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "number, generation capacity, status" ;
+    skos:prefLabel "number, generation capacity, status"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RS1.2 Offshore wind"@en ;
+    ses:sesVariable "turbines"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input"@en .
+
+indo:tonnes-per-50km2-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "tonnes per 50km2" ;
+    skos:prefLabel "tonnes per 50km2"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RS1.3 Fisheries"@en ;
+    ses:sesVariable "Herring  fishery"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input and output"@en .
+
+indo:tonnes-per-50km2-sweden-2 a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "tonnes per 50km2" ;
+    skos:prefLabel "tonnes per 50km2"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RS1.3 Fisheries"@en ;
+    ses:sesVariable "Sprat  fishery"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input and output"@en .
+
+indo:gis-data-coordinates-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "GIS data / coordinates" ;
+    skos:prefLabel "GIS data / coordinates"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RS3: Size of resource system"@en ;
+    ses:sesVariable "Approx. 250 × 300 km²"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input"@en .
+
+indo:number-of-wind-turbines-norway a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Number of wind turbines" ;
+    skos:prefLabel "Number of wind turbines"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RS 4.1 Wind development"@en ;
+    ses:sesVariable "Wind farm configuration ( including number and size of turbines)"@en ;
+    ses:country "Norway"@en .
+
+indo:turbine-height-m-norway a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Turbine height (m)" ;
+    skos:prefLabel "Turbine height (m)"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RS 4.1 Wind development"@en ;
+    ses:sesVariable "Wind farm configuration ( including number and size of turbines)"@en ;
+    ses:country "Norway"@en .
+
+indo:spatial-configuration-of-wind-farm-norway a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Spatial configuration of wind farm" ;
+    skos:prefLabel "Spatial configuration of wind farm"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RS 4.1 Wind development"@en ;
+    ses:sesVariable "Wind farm configuration ( including number and size of turbines)"@en ;
+    ses:country "Norway"@en .
+
+indo:coordinates-small-and-or-large-scale-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "coordinates, small and/or large scale" ;
+    skos:prefLabel "coordinates, small and/or large scale"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RS 4.2 Ports and related infrastructure, landing sites"@en ;
+    ses:sesVariable "Landingports"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input"@en .
+
+indo:kwh-germany a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "kWh" ;
+    skos:prefLabel "kWh"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RS5.1 Wind power generation"@en ;
+    ses:sesVariable "Power generated by existing wind park"@en ;
+    ses:country "Germany"@en ;
+    dcterms:source "Meerwind company"@en .
+
+indo:tonnes-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Tonnes" ;
+    skos:prefLabel "Tonnes"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RS5.3 Fisheries catch biomass"@en ;
+    ses:sesVariable "Herring catch"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input and output"@en .
+
+indo:tonnes-sweden-2 a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Tonnes" ;
+    skos:prefLabel "Tonnes"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RS5.3 Fisheries catch biomass"@en ;
+    ses:sesVariable "Sprat catch"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input and output"@en .
+
+indo:tonnes-germany a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Tonnes" ;
+    skos:prefLabel "Tonnes"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RS5.4 Aquaculture production"@en ;
+    ses:sesVariable "Mussels produced"@en ;
+    ses:country "Germany"@en ;
+    dcterms:source "Output from the numerical model"@en .
+
+indo:tonnes-germany-2 a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Tonnes" ;
+    skos:prefLabel "Tonnes"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RS5.4 Aquaculture production"@en ;
+    ses:sesVariable "Oysters produced"@en ;
+    ses:country "Germany"@en ;
+    dcterms:source "Output from the numerical model"@en .
+
+indo:sst-biomass-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "SST-->biomass" ;
+    skos:prefLabel "SST-->biomass"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RS7: Predictability of system dynamics"@en ;
+    ses:sesVariable "Climate-related tipping points"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "output"@en .
+
+indo:nautical-miles-from-coast-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Nautical miles from coast" ;
+    skos:prefLabel "Nautical miles from coast"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "GS5.4 Fisheries regulation"@en ;
+    ses:sesVariable "Trawling limit"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input"@en .
+
+indo:tonnes-sweden-3 a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Tonnes" ;
+    skos:prefLabel "Tonnes"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "GS5.4 Fisheries regulation"@en ;
+    ses:sesVariable "Trawling limit"@en ;
+    ses:country "Sweden"@en .
+
+indo:tonnes-sweden-4 a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Tonnes" ;
+    skos:prefLabel "Tonnes"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "GS5.4 Fisheries regulation"@en ;
+    ses:sesVariable "TAC"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input"@en .
+
+indo:index-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "index" ;
+    skos:prefLabel "index"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RU1: Resource unit mobility"@en ;
+    ses:sesVariable "adult spillover"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input (parameter value from another model)"@en .
+
+indo:rate-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "rate" ;
+    skos:prefLabel "rate"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RU2: Growth or replacement rate"@en ;
+    ses:sesVariable "possible decline in recruitment , normal growth rate"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input (parameter value)"@en .
+
+indo:change-in-rate-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "change in rate" ;
+    skos:prefLabel "change in rate"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RU3.1 Interactions between turbines and environmental components"@en ;
+    ses:sesVariable "OWF impact on herring and sprat growth rates"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input"@en .
+
+indo:change-in-rate-sweden-2 a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "change in rate" ;
+    skos:prefLabel "change in rate"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RU3.2 Interactions between environmental components"@en ;
+    ses:sesVariable "SST on growth rate"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input - output"@en .
+
+indo:income-sek-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "income SEK" ;
+    skos:prefLabel "income SEK"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RU4: Economic value"@en ;
+    ses:sesVariable "market value"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "output"@en .
+
+indo:tonnes-km2-over-time-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "tonnes / km2 over time" ;
+    skos:prefLabel "tonnes / km2 over time"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "RU7: Spatial and temporal distribution"@en ;
+    ses:sesVariable "fish stock density is spatially different over a map"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "output"@en .
+
+indo:john-arild-arno-fagne-no-norway a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "John.Arild.Arno@fagne.no" ;
+    skos:prefLabel "John.Arild.Arno@fagne.no"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "A1.2 Supply chain companies"@en ;
+    ses:sesVariable "Fagne/Hkraft"@en ;
+    ses:country "Norway"@en .
+
+indo:-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "#" ;
+    skos:prefLabel "#"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "A1.6 Fishers"@en ;
+    ses:sesVariable "Vessels small and large"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "input"@en .
+
+indo:fuel-price-distance-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "fuel price * distance" ;
+    skos:prefLabel "fuel price * distance"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "O1.1 Economic costs"@en ;
+    ses:sesVariable "vessel transport"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "output"@en .
+
+indo:price-tonnes-price-kwh-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "price*tonnes, price*kWh" ;
+    skos:prefLabel "price*tonnes, price*kWh"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "O1.2 Economic benefits"@en ;
+    ses:sesVariable "income from landings and windpower"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "output"@en .
+
+indo:initial-weights-from-fcm-workshop-norway a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Initial: Weights from FCM workshop" ;
+    skos:prefLabel "Initial: Weights from FCM workshop"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "O1.4 Well-being"@en ;
+    ses:sesVariable "Perceptions of local population"@en ;
+    ses:country "Norway"@en ;
+    dcterms:source "Direct input from workshop"@en .
+
+indo:updating-seadots-app-norway a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "Updating: SEADOTs app" ;
+    skos:prefLabel "Updating: SEADOTs app"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "O1.4 Well-being"@en ;
+    ses:sesVariable "Perceptions of local population"@en ;
+    ses:country "Norway"@en ;
+    dcterms:source "SEADOTs app"@en .
+
+indo:tonnes-km2-sweden a sosa:ObservableProperty, skos:Concept ;
+    rdfs:label "tonnes / km2" ;
+    skos:prefLabel "tonnes / km2"@en ;
+    skos:inScheme ind:indicators-scheme ;
+    ses:sesCategory "O2.2 Fish stock sustainability"@en ;
+    ses:sesVariable "state of fish stocks"@en ;
+    ses:country "Sweden"@en ;
+    dcterms:source "output"@en .

@@ -98,7 +98,10 @@ indo:fisheries-production a sosa:observedProperty, skos:Concept ;
     rdfs:comment "The amount of fish caught in a given area over a specific period of time." ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/Fisheries_production> ;
     owl:sameAs <http://aims.fao.org/aos/agrovoc/c_2934> ;
+    prov:wasGeneratedBy "description of th action" ;
+    prov:wasGeneratedBy "source of the concept definition" ;
     prov:providedBy "http://seadots.eu" .
+
 
 
 ind:ind-rel-scheme a skos:ConceptScheme ;
