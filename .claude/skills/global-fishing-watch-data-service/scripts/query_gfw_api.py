@@ -239,6 +239,20 @@ def operation_catalog() -> Dict[str, Dict[str, str]]:
     }
 
 
+def usage_notes() -> Dict[str, Any]:
+    return {
+        "terms_and_conditions": "https://globalfishingwatch.org/our-apis/",
+        "api_documentation": "https://globalfishingwatch.org/our-apis/documentation",
+        "commercial_use_faq": "https://globalfishingwatch.org/faqs/can-i-use-global-fishing-watch-apis-for-commercial-purposes/",
+        "license_and_usage_summary": [
+            "Global Fishing Watch APIs are available only for non-commercial purposes.",
+            "Users must agree to the terms of use and attribute Global Fishing Watch in publications.",
+            "Data should be used with the dataset caveats described in the official documentation.",
+            "Some activity datasets are delayed and may only be available up to about 96 hours ago."
+        ],
+    }
+
+
 def main() -> int:
     args = parse_args()
     if args.list_families:
@@ -296,6 +310,7 @@ def main() -> int:
             "query_params": query,
             "body": body,
         },
+        "usage": usage_notes(),
         "response": response,
     }, indent=2 if args.pretty else None))
     return 0

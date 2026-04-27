@@ -1,0 +1,78 @@
+@startuml wizard-flow
+skinparam backgroundColor #0f1115
+skinparam defaultFontColor #e5e7eb
+skinparam defaultFontName "Segoe UI"
+skinparam ArrowColor #4fa3ff
+skinparam activityBorderColor #252a35
+skinparam activityBackgroundColor #181b22
+skinparam activityFontColor #e5e7eb
+skinparam activityBarColor #4fa3ff
+skinparam partitionBorderColor #252a35
+skinparam partitionBackgroundColor #181b22
+
+title ILIAD Check-in — Wizard Flow
+
+|User|
+start
+:Provide source\n(URL / file path);
+
+|System|
+:1. **Sniff**\nDetect format\n(NetCDF, CSV, GeoParquet,\nGeoJSON, WFS, EDR, OPeNDAP);
+
+if (format unknown?) then (yes)
+  :Abort — cannot classify;
+  stop
+endif
+
+:2. **Profile**\nExtract properties, dimensions,\nsample values, spatial/temporal extent;
+
+:3. **Match bblocks**\nRank all _sources/* bblocks\n(leaf overlap 45% · path 20%\n· vocab 20% · format 15%);
+
+|User|
+:Review ranked bblock list;
+:Pick target bblock\nor "generate new";
+
+|System|
+:4. **Related bblocks**\nSuggest siblings linked by\nOGC standards (STAC+Coverage,\nEDR+Features, etc.);
+
+:5. **Vocab mapping**\nMatch each property → local index\n(context.jsonld + OIM TTL)\nand present candidates;
+
+|User|
+:Acknowledge / adjust\nvocabulary mappings\nPer-property URI selection;
+
+|System|
+:6. **Transformer selection**\nFind matching library transformers\n(by input format + canonical output)\nAlways surface json-to-nested-json;
+
+|User|
+:Pick transformer;\n:Configure params\n(lon_field, lat_field, …);\n:Set field mappings\n(source path or ${expression} → target path);
+
+|System|
+:Run transformer\non sampled data;
+
+if (transformer OK?) then (no)
+  |User|
+  :Fix mapping / abort?;
+  if (abort?) then (yes)
+    stop
+  else (fix)
+    :Adjust mappings;
+  endif
+  |System|
+endif
+
+:7. **Emit staged bblock**\nWrite to _sources/_staging/<id>/\nbblock.json · schema.json\ncontext.jsonld · examples/\ntransforms/ · tests/;
+
+|User|
+:Review staged output;
+
+|System|
+:8. **Validate** (optional)\nOGC bblocks-postprocess Docker;
+
+|User|
+:Promote?;
+
+|System|
+:9. **Promote**\nMove _staging/<id>/\n→ _sources/<id>/;
+
+stop
+@enduml

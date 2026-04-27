@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://iliad/checkin/transformers/json-to-geoparquet/canonical.schema.json",
+  "title": "GeoParquet write result",
+  "description": "Validation result for a GeoParquet materialisation step; the produced file on disk is referenced by path and summarised by row count and bbox.",
+  "type": "object",
+  "required": ["path", "rows", "bbox", "crs"],
+  "properties": {
+    "path": {"type": "string"},
+    "rows": {"type": "integer", "minimum": 0},
+    "bbox": {"type": "array", "items": {"type": "number"}, "minItems": 4, "maxItems": 4},
+    "crs": {"type": "string"},
+    "columns": {"type": "array", "items": {"type": "string"}}
+  }
+}

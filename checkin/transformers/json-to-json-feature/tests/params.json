@@ -1,0 +1,5 @@
+{
+  "lon_field": "longitude",
+  "lat_field": "latitude",
+  "id_field": "id"
+}

@@ -1,0 +1,68 @@
+{
+  "transformer_id": "json-to-nested-json",
+  "input": "json",
+  "output": "json",
+  "canonical-ref": "canonical.schema.json",
+  "params": {
+    "target_template": {},
+    "mappings": [
+      {
+        "source": "Data set name",
+        "target": "assets.data",
+        "type": "object"
+      },
+      {
+        "source": "Link to sample",
+        "target": "assets.data.href",
+        "type": "string"
+      },
+      {
+        "source": "Data Format",
+        "target": "assets.data.media_type",
+        "type": "string"
+      },
+      {
+        "source": "Data set name",
+        "target": "assets.data.title",
+        "type": "string"
+      },
+      {
+        "source": "Spatial coverage",
+        "target": "bbox",
+        "type": "array"
+      },
+      {
+        "source": "service type",
+        "target": "geometry.type",
+        "type": "string"
+      },
+      {
+        "source": "Dataset (short) Description",
+        "target": "properties.contacts[0].logo.description",
+        "type": "string"
+      },
+      {
+        "source": "License / Privacy",
+        "target": "properties.license",
+        "type": "string"
+      },
+      {
+        "source": "Version",
+        "target": "properties.version",
+        "type": "string"
+      },
+      {
+        "source": "used by (pilot/app)",
+        "target": "properties.wasGeneratedBy.used",
+        "type": "object"
+      },
+      {
+        "source": "Resolution",
+        "target": "time.resolution",
+        "type": "string"
+      }
+    ],
+    "passthrough_extras": false,
+    "target_bblock": "stac_multidim_data"
+  }
+}

@@ -1,0 +1,59 @@
+@startuml bblock-output
+skinparam backgroundColor #0f1115
+skinparam defaultFontColor #e5e7eb
+skinparam defaultFontName "Segoe UI"
+skinparam ArrowColor #4fa3ff
+skinparam folderBorderColor #252a35
+skinparam folderBackgroundColor #181b22
+skinparam fileBorderColor #252a35
+skinparam fileBackgroundColor #181b22
+skinparam componentBorderColor #252a35
+skinparam componentBackgroundColor #181b22
+skinparam componentFontColor #e5e7eb
+skinparam packageBorderColor #4fa3ff
+skinparam packageBackgroundColor #181b22
+
+title Staged Building Block Output Structure
+
+package "_sources/_staging/<bb-id>/" {
+  [bblock.json\nid · title · abstract\ntags · status · dependsOn\nstandards] as bbj
+  [schema.json\nJSON Schema for output\n(allOf extends target bblock\n+ extra properties)] as sj
+  [context.jsonld\n@context mappings\nfrom acknowledged vocab] as ctx
+  [description.json\nhuman-readable description] as desc
+
+  package "examples/" {
+    [sample.geojson\nor sample.json\n(transformer output)] as ex
+  }
+
+  package "transforms/" {
+    [mapping.json\nbblock-local transformer params\n(if no library transformer used)] as tfp
+  }
+
+  package "tests/" {
+    [test.yaml\nvalidation test cases] as tests
+  }
+}
+
+note right of bbj
+  **dependsOn** references:
+  - matched target bblock id
+  - factored-out transformer bblock id
+end note
+
+note right of ctx
+  One entry per acknowledged mapping:
+  "propertyName": {
+    "@id": "vocab_uri",
+    "@type": "@id"
+  }
+end note
+
+note right of sj
+  When extras present:
+  {
+    "allOf": [{"$ref": "target-bblock-schema"}],
+    "properties": { ...extra props... }
+  }
+end note
+
+@enduml

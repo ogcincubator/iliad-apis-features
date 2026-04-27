@@ -1,0 +1,3 @@
+[console_scripts]
+iliad-checkin = checkin.cli:main
+iliad-checkin-server = checkin.api.server:main

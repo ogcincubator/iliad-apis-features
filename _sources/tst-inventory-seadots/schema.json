@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "seadots inventory",
+  "description": "Extension of stac_multidim_data with extras contributed by check-in.",
+  "allOf": [
+    {
+      "$ref": "bblocks://stac_multidim_data"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "Relevance_to_Demonstrators": {
+          "type": "string",
+          "description": "from source path \ufeffRelevance to Demonstrators"
+        },
+        "source_id_lowercase": {
+          "type": "string",
+          "description": "from source path source_id [lowercase+_]"
+        },
+        "Category": {
+          "type": "string",
+          "description": "from source path Category"
+        },
+        "Owner": {
+          "type": "string",
+          "description": "from source path Owner"
+        },
+        "Contact_Person_SeaDOTS": {
+          "type": "string",
+          "description": "from source path Contact Person (SeaDOTS)"
+        },
+        "Provider_in_SeaDOTS": {
+          "type": "string",
+          "description": "from source path Provider (in SeaDOTS)"
+        },
+        "Availability": {
+          "type": "string",
+          "description": "from source path Availability"
+        },
+        "Currently_available": {
+          "type": "string",
+          "description": "from source path Currently available"
+        },
+        "Comments": {
+          "type": "string",
+          "description": "from source path Comments"
+        },
+        "Relevance": {
+          "type": "string",
+          "description": "from source path Relevance"
+        },
+        "Representativeness": {
+          "type": "string",
+          "description": "from source path Representativeness"
+        },
+        "Reliability": {
+          "type": "string",
+          "description": "from source path Reliability"
+        },
+        "Temporal_validity": {
+          "type": "string",
+          "description": "from source path Temporal validity"
+        },
+        "Ingestability": {
+          "type": "string",
+          "description": "from source path Ingestability"
+        },
+        "Reusability_in_the_DT_framework": {
+          "type": "string",
+          "description": "from source path Reusability in the DT framework"
+        },
+        "Language": {
+          "type": "string",
+          "description": "from source path Language"
+        },
+        "Accessibility": {
+          "type": "string",
+          "description": "from source path Accessibility"
+        },
+        "Recommended_API": {
+          "type": "string",
+          "description": "from source path Recommended API"
+        },
+        "Temporal_coverage": {
+          "type": "string",
+          "description": "from source path Temporal coverage"
+        },
+        "Volume": {
+          "type": "string",
+          "description": "from source path Volume"
+        },
+        "Dependencies_e_g_to_Other_Sources": {
+          "type": "string",
+          "description": "from source path Dependencies (e.g. to Other Sources)"
+        },
+        "Pricing": {
+          "type": "string",
+          "description": "from source path Pricing"
+        },
+        "preprocessing": {
+          "type": "string",
+          "description": "from source path preprocessing?"
+        }
+      }
+    }
+  ]
+}

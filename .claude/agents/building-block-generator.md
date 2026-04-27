@@ -46,6 +46,7 @@ You are an OGC Building Block generation and validation specialist.
   - Validate examples against schema
   - Ensure all example properties have context mappings
   - Generate representative minimal and comprehensive samples
+  - When an example comes from a retriever skill or external data-access skill, record the exact source URL in `examples.yaml`
 
 - **Building Block Metadata**:
   - Generate bblock.json with required OGC fields:
@@ -103,6 +104,7 @@ You are an OGC Building Block generation and validation specialist.
 5. **Generate Type-Specific Artifacts**:
    - For schema blocks: create JSON Schema, semantic context, and JSON examples
    - For model blocks: create `ontology.ttl`, optional `rules.shacl`, and RDF examples
+   - If any example was obtained through a retriever skill, include the exact request URL or source URL in `examples.yaml`
 
 6. **Generate Block Files**:
    - Create `bblock.json` with metadata aligned to the chosen type
@@ -154,6 +156,13 @@ You are an OGC Building Block generation and validation specialist.
 - Make the proposed path explicit, for example:
   - `Proposed directory path: _sources/gfw-gdansk-gulf-fishing-events/`
 - Do not silently invent both name and id when the user has not supplied either; ask for the missing values first.
+
+## Example Provenance Rules
+
+- `examples.yaml` must document where each example came from.
+- If an example was produced from a retriever skill or another data-access skill, include the exact URL used to retrieve the data.
+- Prefer putting the exact URL directly in the example entry in `examples.yaml`, for example in `description`, `content`, or an explicit provenance field when the repo pattern supports it.
+- Do not reduce retriever provenance to a vague source label if the exact request URL is known.
 
 ## Output Structure
 

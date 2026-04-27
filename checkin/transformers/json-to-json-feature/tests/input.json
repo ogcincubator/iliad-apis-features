@@ -1,0 +1,8 @@
+{
+  "id": "obs-1",
+  "longitude": 12.5,
+  "latitude": 55.3,
+  "species": "Aurelia aurita",
+  "count": 7,
+  "observed_at": "2026-03-12T10:05:00Z"
+}

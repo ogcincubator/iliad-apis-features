@@ -1,0 +1,135 @@
+@startuml core-modules
+skinparam backgroundColor #0f1115
+skinparam defaultFontColor #e5e7eb
+skinparam defaultFontName "Segoe UI"
+skinparam ArrowColor #4fa3ff
+skinparam classBorderColor #252a35
+skinparam classBackgroundColor #181b22
+skinparam classFontColor #e5e7eb
+skinparam classHeaderBackgroundColor #1e2330
+skinparam packageBorderColor #252a35
+skinparam packageBackgroundColor #0f1115
+
+title Core Module Data Model
+
+package "core" {
+
+  class SniffResult {
+    + format: str
+    + is_url: bool
+    + hints: list[str]
+    + as_dict(): dict
+  }
+
+  class Profile {
+    + format: str
+    + properties: list[PropertySpec]
+    + dimensions: list[DimensionSpec]
+    + sample: Any
+    + errors: list[str]
+    + as_dict(): dict
+  }
+
+  class PropertySpec {
+    + name: str
+    + dtype: str
+    + sample_values: list
+  }
+
+  class DimensionSpec {
+    + name: str
+    + size: int
+    + units: str
+  }
+
+  class BBlockEntry {
+    + id: str
+    + title: str
+    + abstract: str
+    + tags: list[str]
+    + standards: list[str]
+    + depends_on: list[str]
+    + properties: list[str]
+    + target_fields: list[TargetField]
+    + vocab_uris: dict[str, str]
+  }
+
+  class TargetField {
+    + path: str
+    + type: str
+    + example: Any
+    + source: str
+  }
+
+  class BBlockMatch {
+    + entry: BBlockEntry
+    + score: float
+    + matched_properties: list[str]
+    + reason: str
+  }
+
+  class VocabTerm {
+    + term: str
+    + uri: str
+    + source: str
+    + label: str
+    + kind: str
+    + aliases: list[str]
+  }
+
+  class VocabCandidate {
+    + term: str
+    + uri: str
+    + label: str
+    + source: str
+    + score: float
+  }
+
+  class TransformerSpec {
+    + id: str
+    + path: Path
+    + manifest: dict
+    + params_schema: dict
+    + as_dict(): dict
+  }
+
+  class TransformResult {
+    + ok: bool
+    + output: Any
+    + errors: list[str]
+    + validation_errors: list[str]
+  }
+
+  class AcknowledgedMapping {
+    + property_name: str
+    + uri: str
+    + label: str
+    + source: str
+  }
+
+  class BBlockDraft {
+    + id: str
+    + title: str
+    + abstract: str
+    + tags: list[str]
+    + standards: list[str]
+    + depends_on: list[str]
+    + property_mappings: list[AcknowledgedMapping]
+    + extra_properties: list[dict]
+    + sample_feature: Any
+    + source_endpoint: dict
+    + transformer_kind: str
+    + transformer: TransformerSpec
+    + transformer_params: dict
+  }
+}
+
+Profile "1" *-- "0..*" PropertySpec
+Profile "1" *-- "0..*" DimensionSpec
+BBlockEntry "1" *-- "0..*" TargetField
+BBlockMatch "1" --> "1" BBlockEntry
+TransformResult "1" --> "1" TransformerSpec
+BBlockDraft "1" *-- "0..*" AcknowledgedMapping
+BBlockDraft "1" --> "0..1" TransformerSpec
+
+@enduml

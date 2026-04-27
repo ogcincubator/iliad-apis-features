@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://iliad/checkin/transformers/json-to-nested-json/canonical.schema.json",
+  "title": "Arbitrary JSON object",
+  "description": "Permissive canonical schema. When target_bblock is supplied the runner uses that bblock's schema for validation instead.",
+  "type": "object"
+}

@@ -1,0 +1,169 @@
+{
+  "@context": {
+    "source_id [lowercase+_]": {
+      "@id": "http://rs.tdwg.org/dwc/terms/resourceID",
+      "@label": "resourceID"
+    },
+    "Category": {
+      "@id": "http://purl.org/dc/terms/creator",
+      "@label": "Creator"
+    },
+    "Dataset (short) Description": {
+      "@id": "http://www.w3.org/ns/dcat#Dataset",
+      "@label": "Dataset"
+    },
+    "Data set name": {
+      "@id": "http://purl.org/linked-data/cube#dataSet",
+      "@label": "data set"
+    },
+    "Data Type": {
+      "@id": "https://w3id.org/idsa/core/dataType",
+      "@label": "Data type"
+    },
+    "service type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@label": "type"
+    },
+    "Owner": {
+      "@id": "http://rs.tdwg.org/dwc/terms/ownerInstitutionCode",
+      "@label": "owner institution code"
+    },
+    "Contact Person (SeaDOTS)": {
+      "@id": "http://xmlns.com/foaf/0.1/Person",
+      "@label": "Person"
+    },
+    "License / Privacy": {
+      "@id": "http://purl.org/dc/terms/license",
+      "@label": "license"
+    },
+    "Availability": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/visibility",
+      "@label": "visibility"
+    },
+    "Link to sample": {
+      "@id": "http://www.w3.org/ns/sosa/Sample",
+      "@label": "Sample"
+    },
+    "Link to sample data set": {
+      "@id": "http://purl.org/linked-data/cube#dataSet",
+      "@label": "data set"
+    },
+    "Comments": {
+      "@id": "http://purl.org/linked-data/cube#componentProperty",
+      "@label": "component"
+    },
+    "Relevance": {
+      "@id": "http://purl.org/dc/terms/provenance",
+      "@label": "provenance"
+    },
+    "Representativeness": {
+      "@id": "https://w3id.org/idsa/core/representation",
+      "@label": "representation"
+    },
+    "Reliability": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility",
+      "@label": "Compressibility"
+    },
+    "Temporal validity": {
+      "@id": "http://purl.org/dc/terms/temporal",
+      "@label": "temporal"
+    },
+    "Ingestability": {
+      "@id": "https://smartdatamodels.org/dataModel.Weather/visibility",
+      "@label": "visibility"
+    },
+    "Initial assessment of the data (summary of the quality assessment": {
+      "@id": "http://purl.org/linked-data/cube#dataSet",
+      "@label": "data set"
+    },
+    "Data Format": {
+      "@id": "http://purl.org/dc/terms/format",
+      "@label": "format"
+    },
+    "Language": {
+      "@id": "http://purl.org/dc/terms/language",
+      "@label": "language"
+    },
+    "Version": {
+      "@id": "http://xmlns.com/foaf/0.1/Person",
+      "@label": "Person"
+    },
+    "Accessibility": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility",
+      "@label": "Compressibility"
+    },
+    "Recommended API": {
+      "@id": "http://rs.tdwg.org/dwc/terms/recordedByID",
+      "@label": "recorded by id"
+    },
+    "Spatial coverage": {
+      "@id": "http://purl.org/dc/terms/spatial",
+      "@label": "Spatial Coverage"
+    },
+    "Temporal coverage": {
+      "@id": "http://purl.org/dc/terms/temporal",
+      "@label": "Temporal Coverage"
+    },
+    "Resolution": {
+      "@id": "http://www.opengis.net/cis/1.1/resolution",
+      "@label": "resolution"
+    },
+    "Data Frequency": {
+      "@id": "http://purl.org/dc/terms/Frequency",
+      "@label": "Frequency"
+    },
+    "Data Velocity": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed",
+      "@label": "Velocity Or Speed"
+    },
+    "Volume": {
+      "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Volume",
+      "@label": "Volume"
+    },
+    "Dependencies (e.g. to Other Sources)": {
+      "@id": "http://www.w3.org/2006/time#hasEnd",
+      "@label": "to"
+    },
+    "Link to data set documentation": {
+      "@id": "http://purl.org/linked-data/cube#dataSet",
+      "@label": "data set"
+    },
+    "Pricing": {
+      "@id": "http://xmlns.com/foaf/0.1/depiction",
+      "@label": "depiction"
+    },
+    "how used": {
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@label": "used procedure"
+    },
+    "Relevance_to_Demonstrators": {
+      "@id": "http://www.w3.org/2006/time#hasEnd",
+      "@label": "to"
+    },
+    "source_id_lowercase": {
+      "@id": "http://rs.tdwg.org/dwc/terms/resourceID",
+      "@label": "resourceID"
+    },
+    "Contact_Person_SeaDOTS": {
+      "@id": "http://xmlns.com/foaf/0.1/Person",
+      "@label": "Person"
+    },
+    "Temporal_validity": {
+      "@id": "http://purl.org/dc/terms/temporal",
+      "@label": "temporal"
+    },
+    "Recommended_API": {
+      "@id": "http://rs.tdwg.org/dwc/terms/recordedByID",
+      "@label": "recorded by id"
+    },
+    "Temporal_coverage": {
+      "@id": "http://purl.org/dc/terms/temporal",
+      "@label": "Temporal Coverage"
+    },
+    "Dependencies_e_g_to_Other_Sources": {
+      "@id": "http://www.w3.org/2006/time#hasEnd",
+      "@label": "to"
+    },
+    "@vocab": "https://w3id.org/iliad/checkin/"
+  }
+}

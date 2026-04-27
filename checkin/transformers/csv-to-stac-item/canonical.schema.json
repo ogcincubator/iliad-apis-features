@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://iliad/checkin/transformers/csv-to-stac-item/canonical.schema.json",
+  "title": "Minimal STAC Item",
+  "type": "object",
+  "required": ["type", "stac_version", "id", "geometry", "properties", "links", "assets"],
+  "properties": {
+    "type": {"const": "Feature"},
+    "stac_version": {"type": "string"},
+    "stac_extensions": {"type": "array", "items": {"type": "string"}},
+    "id": {"type": "string"},
+    "bbox": {"type": "array", "items": {"type": "number"}, "minItems": 4},
+    "geometry": {"type": ["object", "null"]},
+    "properties": {
+      "type": "object",
+      "required": ["datetime"],
+      "properties": {
+        "datetime": {"type": ["string", "null"]}
+      }
+    },
+    "collection": {"type": ["string", "null"]},
+    "links": {"type": "array"},
+    "assets": {"type": "object"}
+  }
+}

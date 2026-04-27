@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://iliad/checkin/transformers/json-to-json-feature/canonical.schema.json",
+  "title": "GeoJSON Feature",
+  "type": "object",
+  "required": ["type", "geometry", "properties"],
+  "properties": {
+    "type": {"const": "Feature"},
+    "id": {"type": ["string", "integer", "null"]},
+    "geometry": {
+      "type": "object",
+      "required": ["type", "coordinates"],
+      "properties": {
+        "type": {"enum": ["Point", "MultiPoint", "LineString", "MultiLineString", "Polygon", "MultiPolygon"]},
+        "coordinates": {}
+      }
+    },
+    "properties": {"type": ["object", "null"]}
+  }
+}

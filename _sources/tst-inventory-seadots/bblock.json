@@ -1,0 +1,36 @@
+{
+  "name": "seadots inventory",
+  "version": "0.1.0",
+  "dateTimeAddition": "2026-04-24T10:55:30Z",
+  "status": "under-development",
+  "itemClass": "schema",
+  "register": "ogc-incubator",
+  "dateOfLastChange": "2026-04-24",
+  "abstract": "Auto-generated bblock from a csv source.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "tags": [
+    "csv",
+    "checkin"
+  ],
+  "authors": [
+    {
+      "name": "ILIAD check-in tool",
+      "organization": "ILIAD",
+      "email": "info@example.com"
+    }
+  ],
+  "standards": [],
+  "ldContext": "context.jsonld",
+  "tests": "tests/test.yaml",
+  "dependsOn": [
+    "stac_multidim_data"
+  ],
+  "shaclRules": [],
+  "sources": [
+    {
+      "title": "source",
+      "local_path": "~/tmp/D1.2_data_inventory_extended-2.csv"
+    }
+  ],
+  "scope": "dev"
+}

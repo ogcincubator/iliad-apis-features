@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+iliad_checkin.egg-info/PKG-INFO
+iliad_checkin.egg-info/SOURCES.txt
+iliad_checkin.egg-info/dependency_links.txt
+iliad_checkin.egg-info/entry_points.txt
+iliad_checkin.egg-info/requires.txt
+iliad_checkin.egg-info/top_level.txt

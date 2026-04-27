@@ -1,0 +1,21 @@
+{
+  "target_template": {
+    "type": "Feature",
+    "stac_version": "1.0.0",
+    "geometry": {"type": "Point", "coordinates": [null, null]},
+    "properties": {},
+    "assets": {},
+    "links": []
+  },
+  "mappings": [
+    {"source": "observation_id", "target": "id", "type": "string", "required": true},
+    {"source": "where.lon", "target": "geometry.coordinates[0]", "type": "number", "required": true},
+    {"source": "where.lat", "target": "geometry.coordinates[1]", "type": "number", "required": true},
+    {"source": "when", "target": "properties.datetime", "type": "string"},
+    {"source": "taxa", "target": "properties.species", "type": "string"},
+    {"source": "count", "target": "properties.count", "type": "integer"},
+    {"source": "sensor.id", "target": "properties.sensor_id", "type": "string"},
+    {"source": "tags", "target": "properties.tags", "type": "array"}
+  ],
+  "passthrough_extras": false
+}

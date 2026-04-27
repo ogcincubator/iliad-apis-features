@@ -1,0 +1,64 @@
+@startuml api-sequence
+skinparam backgroundColor #0f1115
+skinparam defaultFontColor #e5e7eb
+skinparam defaultFontName "Segoe UI"
+skinparam ArrowColor #4fa3ff
+skinparam sequenceParticipantBorderColor #252a35
+skinparam sequenceParticipantBackgroundColor #181b22
+skinparam sequenceParticipantFontColor #e5e7eb
+skinparam sequenceLifeLineBorderColor #4fa3ff
+skinparam sequenceArrowFontColor #8b93a7
+skinparam sequenceGroupBorderColor #4fa3ff
+skinparam sequenceGroupBodyBackgroundColor #0f1115
+
+title API Session Sequence
+
+participant "Browser\n(wizard.js)" as br
+participant "FastAPI\nserver.py" as api
+participant "Core\nmodules" as core
+participant "Transformer\nlibrary" as tf
+participant "_sources" as fs
+
+br -> api : POST /api/register {source}
+api -> core : sniff(source)
+api -> core : profile(source, format)
+api -> core : bblock_index.load_index()
+api -> core : bblock_match.rank(profile, index)
+api --> br : {session_id, sniff, profile, matches}
+
+br -> api : POST /api/choose-bblock {session_id, bblock_id}
+api -> core : bblock_match.related(bblock_id, index)
+api --> br : {related}
+
+br -> api : GET /api/vocab-candidates/{session_id}
+api -> core : vocab_index.build_index()
+api -> core : vocab_match.match_properties(props, vocab)
+api --> br : {prop → [candidates]}
+
+br -> api : POST /api/acknowledge-vocab {session_id, mappings}
+api --> br : {ok, count}
+
+br -> api : GET /api/transformers/{session_id}
+api -> tf : transformer_runner.find_matching(format, target)
+api --> br : {candidates, target_output}
+
+br -> api : GET /api/mapping-suggestion/{session_id}
+api -> core : fuzzy leaf matching\nsource fields vs target fields
+api --> br : {target_fields, source_fields,\nsuggestions, extras}
+
+br -> api : POST /api/run-transformer\n{session_id, transformer_id, params}
+api -> tf : transformer_runner.run(spec, sample, params)
+note right : params may contain:\n- source path mappings\n- ${expression} templates\n- target_template
+api --> br : {ok, errors, output_preview}
+
+br -> api : POST /api/finalize\n{session_id, bb_id, title, abstract, extras}
+api -> core : bblock_writer.write_staged(draft)
+api -> fs : writes _sources/_staging/<id>/\nbblock.json · schema.json\ncontext.jsonld · examples/
+api --> br : {ok, staged_path}
+
+br -> api : POST /api/promote {session_id, bb_id}
+api -> core : bblock_writer.promote(bb_id)
+api -> fs : moves _staging/<id>/\n→ _sources/<id>/
+api --> br : {ok, promoted_path}
+
+@enduml

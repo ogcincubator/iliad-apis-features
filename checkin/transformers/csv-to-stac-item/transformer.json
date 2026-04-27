@@ -1,0 +1,19 @@
+{
+  "id": "csv-to-stac-item",
+  "title": "CSV row → STAC Item",
+  "input": "csv",
+  "output": "stac-item",
+  "canonical-ref": "canonical.schema.json",
+  "dependsOn": [],
+  "params-schema": {
+    "type": "object",
+    "properties": {
+      "id_field": {"type": "string"},
+      "lon_field": {"type": "string"},
+      "lat_field": {"type": "string"},
+      "time_field": {"type": "string"},
+      "collection": {"type": "string"}
+    },
+    "required": ["lon_field", "lat_field", "time_field"]
+  }
+}

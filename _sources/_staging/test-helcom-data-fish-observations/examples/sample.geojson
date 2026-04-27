@@ -1,0 +1,92 @@
+[
+  {
+    "type": "Feature",
+    "stac_version": "1.0.0",
+    "stac_extensions": [],
+    "id": "obs-1",
+    "bbox": [
+      12.5,
+      55.3,
+      12.5,
+      55.3
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        12.5,
+        55.3
+      ]
+    },
+    "properties": {
+      "id": "obs-1",
+      "time": "2026-03-12T10:05:00Z",
+      "species": "Aurelia aurita",
+      "depth_m": "5.0",
+      "salinity_psu": "7.2",
+      "abundance": "12",
+      "datetime": "2026-03-12T10:05:00Z"
+    },
+    "links": [],
+    "assets": {}
+  },
+  {
+    "type": "Feature",
+    "stac_version": "1.0.0",
+    "stac_extensions": [],
+    "id": "obs-2",
+    "bbox": [
+      13.1,
+      55.4,
+      13.1,
+      55.4
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        13.1,
+        55.4
+      ]
+    },
+    "properties": {
+      "id": "obs-2",
+      "time": "2026-03-12T10:25:00Z",
+      "species": "Cyanea capillata",
+      "depth_m": "8.0",
+      "salinity_psu": "7.4",
+      "abundance": "2",
+      "datetime": "2026-03-12T10:25:00Z"
+    },
+    "links": [],
+    "assets": {}
+  },
+  {
+    "type": "Feature",
+    "stac_version": "1.0.0",
+    "stac_extensions": [],
+    "id": "obs-3",
+    "bbox": [
+      12.9,
+      55.35,
+      12.9,
+      55.35
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        12.9,
+        55.35
+      ]
+    },
+    "properties": {
+      "id": "obs-3",
+      "time": "2026-03-12T10:45:00Z",
+      "species": "Aurelia aurita",
+      "depth_m": "6.5",
+      "salinity_psu": "7.1",
+      "abundance": "18",
+      "datetime": "2026-03-12T10:45:00Z"
+    },
+    "links": [],
+    "assets": {}
+  }
+]

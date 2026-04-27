@@ -6,21 +6,53 @@
     "dcterms": "http://purl.org/dc/terms/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "geojson": "https://purl.org/geojson/vocab#",
+    "locn": "http://www.w3.org/ns/locn#",
     "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "time": "http://www.w3.org/2006/time#",
+    "gfw": "https://globalfishingwatch.org/ontology/",
     "Dataset": "dcat:Dataset",
-    "metadata": "dcterms:description",
+    "metadata": "gfw:responseMetadata",
     "datasets": "dcat:dataset",
     "dateRange": "dcterms:temporal",
-    "geometry": "dcterms:spatial",
+    "from": {
+      "@id": "time:hasBeginning",
+      "@type": "xsd:date"
+    },
+    "to": {
+      "@id": "time:hasEnd",
+      "@type": "xsd:date"
+    },
+    "geometry": "locn:geometry",
+    "features": "geojson:features",
+    "coordinates": "geojson:coordinates",
+    "limit": {
+      "@id": "gfw:limit",
+      "@type": "xsd:integer"
+    },
+    "offset": {
+      "@id": "gfw:offset",
+      "@type": "xsd:integer"
+    },
+    "nextOffset": {
+      "@id": "gfw:nextOffset",
+      "@type": "xsd:integer"
+    },
+    "total": {
+      "@id": "dcat:byteSize",
+      "@type": "xsd:integer"
+    },
     "entries": "dcat:distribution",
     "start": {
-      "@id": "dcterms:created",
+      "@id": "schema:startDate",
       "@type": "xsd:dateTime"
     },
     "end": {
-      "@id": "dcterms:modified",
+      "@id": "schema:endDate",
       "@type": "xsd:dateTime"
     },
+    "position": "geo:location",
     "lat": {
       "@id": "geo:lat",
       "@type": "xsd:double"
@@ -29,17 +61,60 @@
       "@id": "geo:long",
       "@type": "xsd:double"
     },
-    "vessel": "dcterms:identifier",
-    "flag": "dcterms:spatial",
+    "regions": "dcterms:spatial",
+    "mpa": "gfw:marineProtectedArea",
+    "eez": "gfw:exclusiveEconomicZone",
+    "rfmo": "gfw:regionalFisheriesManagementOrganization",
+    "fao": "gfw:faoArea",
+    "majorFao": "gfw:majorFaoArea",
+    "eez12Nm": "gfw:territorialSea",
+    "highSeas": "gfw:highSeas",
+    "mpaNoTakePartial": "gfw:marineProtectedAreaNoTakePartial",
+    "mpaNoTake": "gfw:marineProtectedAreaNoTake",
+    "boundingBox": "dcterms:spatial",
+    "distances": "gfw:distanceMetrics",
+    "startDistanceFromShoreKm": {
+      "@id": "gfw:startDistanceFromShoreKm",
+      "@type": "xsd:double"
+    },
+    "endDistanceFromShoreKm": {
+      "@id": "gfw:endDistanceFromShoreKm",
+      "@type": "xsd:double"
+    },
+    "startDistanceFromPortKm": {
+      "@id": "gfw:startDistanceFromPortKm",
+      "@type": "xsd:double"
+    },
+    "endDistanceFromPortKm": {
+      "@id": "gfw:endDistanceFromPortKm",
+      "@type": "xsd:double"
+    },
+    "vessel": "schema:vehicle",
+    "name": "schema:name",
+    "ssvid": "schema:identifier",
+    "flag": "schema:countryOfOrigin",
     "type": "dcterms:type",
-    "id": "dcterms:identifier",
+    "id": "schema:identifier",
+    "publicAuthorizations": "gfw:publicAuthorization",
+    "hasPubliclyListedAuthorization": "gfw:hasPubliclyListedAuthorization",
+    "nextPort": "schema:arrivalStation",
+    "fishing": "gfw:fishingMetrics",
     "totalDistanceKm": {
-      "@id": "prov:value",
+      "@id": "gfw:totalDistanceKm",
       "@type": "xsd:double"
     },
     "averageSpeedKnots": {
-      "@id": "prov:value",
+      "@id": "gfw:averageSpeedKnots",
       "@type": "xsd:double"
-    }
+    },
+    "averageDurationHours": {
+      "@id": "gfw:averageDurationHours",
+      "@type": "xsd:double"
+    },
+    "potentialRisk": {
+      "@id": "gfw:potentialRisk",
+      "@type": "xsd:boolean"
+    },
+    "vesselPublicAuthorizationStatus": "gfw:vesselPublicAuthorizationStatus"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "observation_id": "obs-42",
+  "when": "2026-03-12T10:05:00Z",
+  "where": {"lon": 12.5, "lat": 55.3},
+  "taxa": "Aurelia aurita",
+  "count": 7,
+  "sensor": {"id": "S1", "model": "X"},
+  "tags": ["jellyfish", "swarm"]
+}

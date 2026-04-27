@@ -1,0 +1,77 @@
+@startuml overview
+skinparam backgroundColor #0f1115
+skinparam defaultFontColor #e5e7eb
+skinparam defaultFontName "Segoe UI"
+skinparam ArrowColor #4fa3ff
+skinparam componentBorderColor #252a35
+skinparam componentBackgroundColor #181b22
+skinparam packageBorderColor #252a35
+skinparam packageBackgroundColor #181b22
+skinparam noteBorderColor #252a35
+skinparam noteBackgroundColor #181b22
+skinparam componentFontColor #e5e7eb
+skinparam packageFontColor #4fa3ff
+
+title ILIAD Check-in Tool — Component Overview
+
+actor "User" as usr
+
+package "Entry Points" {
+  [CLI\ncli.py] as cli
+  [Web Wizard\nweb/index.html] as ui
+}
+
+package "API Layer" {
+  [FastAPI Server\napi/server.py] as api
+  note right of api : in-memory sessions\nkeyed by session_id
+}
+
+package "Core" {
+  [sniff] as sniff
+  [profile] as profile
+  [bblock_index] as bbidx
+  [bblock_match] as bbmatch
+  [vocab_index] as vidx
+  [vocab_match] as vmatch
+  [transformer_runner] as runner
+  [bblock_writer] as writer
+}
+
+package "Transformer Library" {
+  [csv-to-stac-item] as tf1
+  [json-to-json-feature] as tf2
+  [json-to-geoparquet] as tf3
+  [json-to-nested-json] as tf4
+}
+
+database "_sources/_staging" as staging
+database "_sources/*" as bblocks
+
+usr --> cli
+usr --> ui
+ui --> api : REST/JSON
+cli --> sniff
+cli --> profile
+cli --> bbidx
+cli --> bbmatch
+cli --> vidx
+cli --> vmatch
+cli --> runner
+cli --> writer
+api --> sniff
+api --> profile
+api --> bbidx
+api --> bbmatch
+api --> vidx
+api --> vmatch
+api --> runner
+api --> writer
+runner --> tf1
+runner --> tf2
+runner --> tf3
+runner --> tf4
+bbidx --> bblocks : scans
+writer --> staging : writes
+staging --> bblocks : promote()
+
+@enduml

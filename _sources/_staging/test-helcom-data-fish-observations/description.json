@@ -1,0 +1,69 @@
+{
+  "title": "Fish observations from HELCOM data source",
+  "abstract": "Auto-generated bblock from a csv source.",
+  "source": {
+    "title": "source",
+    "local_path": "/tmp/helcom_sample.csv"
+  },
+  "transformer": {
+    "kind": "library",
+    "id": "csv-to-stac-item",
+    "params": {
+      "lon_field": "lon",
+      "lat_field": "lat",
+      "time_field": "time",
+      "id_field": "id",
+      "crs": "<example.com/data crs>"
+    }
+  },
+  "property_mappings": [
+    {
+      "property_name": "id",
+      "uri": "https://schema.org/identifier",
+      "label": "id",
+      "source": "gfw-fishing-events/context.jsonld"
+    },
+    {
+      "property_name": "lon",
+      "uri": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+      "label": "lon",
+      "source": "gfw-fishing-events/context.jsonld"
+    },
+    {
+      "property_name": "lat",
+      "uri": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+      "label": "lat",
+      "source": "gfw-fishing-events/context.jsonld"
+    },
+    {
+      "property_name": "time",
+      "uri": "http://www.w3.org/2006/time#",
+      "label": "time",
+      "source": "gfw-fishing-events/context.jsonld"
+    },
+    {
+      "property_name": "species",
+      "uri": "http://rs.tdwg.org/dwc/terms/scientificName",
+      "label": "species",
+      "source": "macroobservation/context.jsonld"
+    },
+    {
+      "property_name": "depth_m",
+      "uri": "http://vocab.nerc.ac.uk/collection/P01/current/DEPHZZ01",
+      "label": "depth_m",
+      "source": "macroobservation/context.jsonld"
+    },
+    {
+      "property_name": "salinity_psu",
+      "uri": "http://vocab.nerc.ac.uk/collection/P01/current/PSALST01",
+      "label": "salinity_psu",
+      "source": "macroobservation/context.jsonld"
+    },
+    {
+      "property_name": "abundance",
+      "uri": "http://vocab.nerc.ac.uk/collection/P06",
+      "label": "abundance",
+      "source": "macroobservation/context.jsonld"
+    }
+  ]
+}

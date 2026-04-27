@@ -1,0 +1,39 @@
+{
+  "id": "json-to-nested-json",
+  "title": "Multi-level JSON → multi-level JSON (mapping-driven)",
+  "input": "json",
+  "output": "json",
+  "canonical-ref": "canonical.schema.json",
+  "dependsOn": [],
+  "params-schema": {
+    "type": "object",
+    "description": "Declarative field mapping. The output is built by starting from `target_template` and then applying each mapping — moving or copying a value from a source dotted-path to a target dotted-path, optionally coercing its type and passing it through a simple function.",
+    "properties": {
+      "target_template": {
+        "type": "object",
+        "description": "Starting shape of the output (may be empty). Keys omitted here are created as needed when a mapping writes into them."
+      },
+      "mappings": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["source", "target"],
+          "properties": {
+            "source": {"type": "string", "description": "dotted path in input — supports [N] for list index, [] to append"},
+            "target": {"type": "string", "description": "dotted path in output — same syntax"},
+            "type":   {"type": "string", "enum": ["string", "integer", "number", "boolean", "array", "object", ""], "default": ""},
+            "default": {"description": "used when source path is absent/null"},
+            "required": {"type": "boolean", "default": false}
+          }
+        }
+      },
+      "passthrough_extras": {
+        "type": "boolean",
+        "default": false,
+        "description": "If true, every source leaf not referenced by any mapping is copied into the `extras` key of the output (preserving dotted-path name)."
+      },
+      "target_bblock": {"type": "string", "description": "Optional: id of the target bblock whose schema should be used for validation instead of the transformer's own canonical.schema.json."}
+    },
+    "required": ["mappings"]
+  }
+}

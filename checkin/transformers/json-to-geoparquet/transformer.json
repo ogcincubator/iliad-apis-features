@@ -1,0 +1,18 @@
+{
+  "id": "json-to-geoparquet",
+  "title": "JSON records → GeoParquet",
+  "input": "json",
+  "output": "geoparquet",
+  "canonical-ref": "canonical.schema.json",
+  "dependsOn": [],
+  "params-schema": {
+    "type": "object",
+    "properties": {
+      "output_path": {"type": "string", "description": "where to write the .parquet file"},
+      "lon_field": {"type": "string"},
+      "lat_field": {"type": "string"},
+      "crs": {"type": "string", "default": "EPSG:4326"}
+    },
+    "required": ["output_path", "lon_field", "lat_field"]
+  }
+}

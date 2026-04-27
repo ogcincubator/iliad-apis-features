@@ -1,0 +1,4 @@
+[
+  {"id": "r1", "lon": 12.5, "lat": 55.3, "species": "Aurelia aurita", "count": 7},
+  {"id": "r2", "lon": 13.1, "lat": 55.4, "species": "Cyanea capillata", "count": 2}
+]

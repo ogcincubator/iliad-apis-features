@@ -1,0 +1,40 @@
+{
+  "name": "Fish observations from HELCOM data source",
+  "version": "0.1.0",
+  "dateTimeAddition": "2026-04-24T09:56:03Z",
+  "status": "under-development",
+  "itemClass": "schema",
+  "register": "ogc-incubator",
+  "dateOfLastChange": "2026-04-24",
+  "abstract": "Auto-generated bblock from a csv source.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "tags": [
+    "csv",
+    "checkin"
+  ],
+  "authors": [
+    {
+      "name": "ILIAD check-in tool",
+      "organization": "ILIAD",
+      "email": "info@example.com"
+    }
+  ],
+  "standards": [
+    "https://json-schema.org/draft/2020-12/schema",
+    "https://globalfishingwatch.org/our-apis/documentation",
+    "https://www.w3.org/TR/vocab-dcat-3/"
+  ],
+  "ldContext": "context.jsonld",
+  "tests": "tests/test.yaml",
+  "dependsOn": [
+    "gfw-fishing-events"
+  ],
+  "shaclRules": [],
+  "sources": [
+    {
+      "title": "source",
+      "local_path": "/tmp/helcom_sample.csv"
+    }
+  ],
+  "scope": "dev"
+}

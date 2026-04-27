@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: iliad-checkin
+Version: 0.1.0
+Summary: Check-in tool for ILIAD OGC Building Blocks: register a data source, match bblocks, map vocabularies, generate a tested transformer and staged bblock.
+Requires-Python: >=3.10
+Requires-Dist: fastapi>=0.110
+Requires-Dist: uvicorn>=0.29
+Requires-Dist: python-multipart>=0.0.9
+Requires-Dist: pydantic>=2.6
+Requires-Dist: httpx>=0.27
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: jsonschema>=4.21
+Requires-Dist: rdflib>=7.0
+Requires-Dist: pandas>=2.1
+Requires-Dist: pyarrow>=15.0
+Requires-Dist: xarray>=2024.1
+Requires-Dist: netCDF4>=1.6
+Requires-Dist: rapidfuzz>=3.6
+Requires-Dist: OWSLib>=0.31
+Requires-Dist: click>=8.1
+Requires-Dist: rich>=13.7

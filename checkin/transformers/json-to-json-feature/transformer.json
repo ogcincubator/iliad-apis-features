@@ -1,0 +1,22 @@
+{
+  "id": "json-to-json-feature",
+  "title": "Custom JSON record → GeoJSON Feature",
+  "input": "json",
+  "output": "geojson",
+  "canonical-ref": "canonical.schema.json",
+  "dependsOn": [],
+  "params-schema": {
+    "type": "object",
+    "properties": {
+      "lon_field": {"type": "string", "description": "record path to longitude (dot-notation)"},
+      "lat_field": {"type": "string", "description": "record path to latitude (dot-notation)"},
+      "id_field": {"type": "string", "description": "record path to feature id", "default": "id"},
+      "property_fields": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "fields copied into properties; empty means all non-geometry fields"
+      }
+    },
+    "required": ["lon_field", "lat_field"]
+  }
+}

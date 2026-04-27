@@ -1,0 +1,3117 @@
+[
+  {
+    "assets": {
+      "data": {
+        "value": "North West Shelf Region/ Bio-Geo-Chemical/ L3/ daily observation",
+        "href": "https://data.marine.copernicus.eu/product/OCEANCOLOUR_NWS_BGC_HR_L3_NRT_009_203/description",
+        "media_type": "",
+        "title": "North West Shelf Region/ Bio-Geo-Chemical/ L3/ daily observation"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "ERDDAP(NetCDF/WMTS)"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "e.g. sediment concentration "
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Meerwind s\u00fcd|ost ",
+        "href": "",
+        "media_type": "",
+        "title": "Meerwind s\u00fcd|ost "
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "geo vector"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "geolocation of monopiles"
+          }
+        }
+      ],
+      "license": "company",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "aquaculture growth rates",
+        "href": "",
+        "media_type": "",
+        "title": "aquaculture growth rates"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "scalars"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "literature"
+          }
+        }
+      ],
+      "license": "open access (?)",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "",
+        "href": "",
+        "media_type": "",
+        "title": ""
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "geo vectors"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "operating models of the industry (wind farms - how they are set usually/ what is the physical chracteristic/ aquaculture - physical configurations)"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Abflussdaten",
+        "href": "https://www.kuestendaten.de/DE/Services/Messreihen_Dateien_Download/Download_Zeitreihen_node.html",
+        "media_type": "",
+        "title": "Abflussdaten"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "txt time series"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "river discharge data"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "European riverine nutrient loads",
+        "href": "",
+        "media_type": "",
+        "title": "European riverine nutrient loads"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "?"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "riverine nutrient loads"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Reanalyse COSMO-EU Modell",
+        "href": "https://www.dwd.de/DE/klimaumwelt/klimaueberwachung/reanalyse/reanalyse_node.html",
+        "media_type": "",
+        "title": "Reanalyse COSMO-EU Modell"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "GRIB?"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "time variable atmospheric fields"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Vorhersage COSMO-EU Modell",
+        "href": "",
+        "media_type": "",
+        "title": "Vorhersage COSMO-EU Modell"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "GRIB?"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "time variable atmospheric fields"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Atlantic- European North West Shelf- Ocean Biogeochemistry Reanalysis",
+        "href": "https://data.marine.copernicus.eu/product/NWSHELF_MULTIYEAR_BGC_004_011/description",
+        "media_type": "",
+        "title": "Atlantic- European North West Shelf- Ocean Biogeochemistry Reanalysis"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "ERDDAP(NetCDF/WMTS)"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "time variable ocean biogeochemistry fields"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Atlantic - European North West Shelf - Ocean Physics Analysis and Forecast",
+        "href": "https://data.marine.copernicus.eu/product/NWSHELF_ANALYSISFORECAST_PHY_004_013/description",
+        "media_type": "",
+        "title": "Atlantic - European North West Shelf - Ocean Physics Analysis and Forecast"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "ERDDAP(NetCDF/WMTS)"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "time variable ocean fields"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Bathymetrie",
+        "href": "https://gdi.bsh.de/mapapps/?lang=de",
+        "media_type": "",
+        "title": "Bathymetrie"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "\"WMS 1.3.0/\nLAYERS\nEL.GridCoverage/EL.GridCoverage_balticsea/EL.GridCoverage_northsea\nQUERY_LAYERS\nEL.GridCoverage_northsea\""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "topographic gridded data"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Sedimentologie",
+        "href": "https://datenrepository.baw.de/trefferanzeige?docuuid=882C2C31-2655-43C7-9AA9-52992C6EF9D1&q=trilawatt&rstart=0&currentSelectorPage=1&f=",
+        "media_type": "",
+        "title": "Sedimentologie"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "WMS/ WCS"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Grain size distribution "
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "",
+        "href": "",
+        "media_type": "",
+        "title": ""
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": ""
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Norkyst800",
+        "href": "https://thredds.met.no/thredds/catalog/fou-hi/norkyst800m-1h/catalog.html",
+        "media_type": "",
+        "title": "Norkyst800"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "DAP/ WMSWMTS (THREDDS)"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "800m/ 1 hour operational ocean model data with forecast"
+          }
+        }
+      ],
+      "license": "met",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Environmental impacts of offshore renewables - Norwegian Energy Act determines assessments/data needed for approvals",
+        "href": "https://www.ospar.org/work-areas/eiha/offshore-renewables",
+        "media_type": "pdf",
+        "title": "Environmental impacts of offshore renewables - Norwegian Energy Act determines assessments/data needed for approvals"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "doc"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "agreements "
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "pdf",
+        "href": "https://publikasjoner.nve.no/rapport/2012/rapport2012_47.pdf",
+        "media_type": "",
+        "title": "pdf"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "doc"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "all designated areas for offshore wind in Norway"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Marine Biodiversity Network",
+        "href": "",
+        "media_type": "",
+        "title": "Marine Biodiversity Network"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "?"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Bird population"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "SEAPOP",
+        "href": "",
+        "media_type": "",
+        "title": "SEAPOP"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "?"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Bird population"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "GBIF",
+        "href": "https://www.gbif.org/occurrence/charts?country=NO",
+        "media_type": "",
+        "title": "GBIF"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Bird population"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "MBON",
+        "href": "",
+        "media_type": "",
+        "title": "MBON"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Bird population"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "OBIS",
+        "href": "https://obis.org/data/access/",
+        "media_type": "",
+        "title": "OBIS"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Bird population"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Artsdatabanken",
+        "href": "",
+        "media_type": "",
+        "title": "Artsdatabanken"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Bird population"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "EMODnet Human activities",
+        "href": "",
+        "media_type": "",
+        "title": "EMODnet Human activities"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "ERDDAP(NetCDF/WMTS)"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "data related to fisheries/ traffic/ wind/ aquaculture etc."
+          }
+        }
+      ],
+      "license": "CC-BY",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "coordinates of polygons for development from tender",
+        "href": "https://publikasjoner.nve.no/rapport/2012/rapport2012_47.pdf",
+        "media_type": "coordinates/map or pdf",
+        "title": "coordinates of polygons for development from tender"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "desigated area Utsira Nord"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "SSB",
+        "href": "https://www.ssb.no/en",
+        "media_type": "csv",
+        "title": "SSB"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "employment/ inhabitants/ tourism/ etc"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "SSB - county level",
+        "href": "https://www.ssb.no/en",
+        "media_type": "csv",
+        "title": "SSB - county level"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "tourism/other industry stats"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "https://ec.europa.eu/eurostat/data/database",
+        "media_type": "",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "SDMX like tables"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "employment/ inhabitants/ tourism/ etc"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "spawning grounds",
+        "href": "",
+        "media_type": "",
+        "title": "spawning grounds"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "OGC"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Fish spawning areas"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "",
+        "media_type": "",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "?"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Fish spawning areas"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "kart.kystverket.no",
+        "media_type": "",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "WMS/ WFS/ custom APIs"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "fishing activities (catch and landing)"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "",
+        "href": "",
+        "media_type": "",
+        "title": ""
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "NA"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Infrastructure (cables/ pipelines)"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "datafangst",
+        "href": "https://datafangst.orcalabs.no/live",
+        "media_type": "",
+        "title": "datafangst"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "NA"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "landing data"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "",
+        "href": "",
+        "media_type": "",
+        "title": ""
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "?"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Based on SINTEF-led assessment "
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "",
+        "media_type": "map coordinates",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "vector data"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "location Utsira island"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "https://portal.fiskeridir.no/portal/apps/webappviewer/index.html?id=ea6c536f760548fe9f56e6edcc4825d8",
+        "media_type": "",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "MapServer"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "map layers related to fisheries/ traffic/ wind/ aquaculture etc."
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "AIS data",
+        "href": "kart.kystverket.no",
+        "media_type": "",
+        "title": "AIS data"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "AIS openAPI custom API"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Marine traffic "
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "",
+        "href": "https://www.ssb.no/en",
+        "media_type": "",
+        "title": ""
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "tabular/ time series"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Marine traffic (maritime/ not fisheries)"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "kart.kystverket.no",
+        "media_type": "",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "WMS/ vector (GeoJSON/ SHP/ KML...)"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "ports"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "https://www.ocean24.no/2024/12/10/__trashed-4/",
+        "media_type": "",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "custom API/ geoJSON"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "ports"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": " https://data.marine.copernicus.eu/product/EXT_MARINE-PROTECTED-AREAS/description",
+        "media_type": "",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "custom APIs/ JSON"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Protected areas"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "https://www.regjeringen.no/no/tema/energi/landingssider/havvind/id2830329/",
+        "media_type": "text/pdf",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "map images/ non-georeferenced"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "regulations/ plans"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "https://www.sodir.no/en/facts/offshore-wind/regulations/",
+        "media_type": "",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "doc"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "rules"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "",
+        "media_type": "",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "doc"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "rules"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "MAREANO",
+        "href": "",
+        "media_type": "",
+        "title": "MAREANO"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "?"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "sea floor biodiversity data"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "EMODnet bathymetry",
+        "href": "",
+        "media_type": "",
+        "title": "EMODnet bathymetry"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "ERDDAP(NetCDF/WMTS)"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Sea floor data"
+          }
+        }
+      ],
+      "license": "CC-BY",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Kartverket/GeoNorge",
+        "href": "",
+        "media_type": "",
+        "title": "Kartverket/GeoNorge"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "geotiff/ WMS/ features/ ENH/NED"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Sea floor data"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "https://www.ssb.no/en",
+        "media_type": "",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "CSV/XLS"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "t.b.d."
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "https://www.ssb.no/en",
+        "media_type": "",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "CSV/XLS"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "t.b.d."
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "",
+        "href": "",
+        "media_type": "Word file",
+        "title": ""
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "?"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Data from Grete M\u00f8gster"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "",
+        "media_type": "",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "?"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "t.b.d."
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "",
+        "href": "https://veiledere.nve.no/havvind/strategisk-konsekvensutredning-av-vindkraft-til-havs/bakgrunn-og-metode/utredningsprogram/",
+        "media_type": "Downloadable at link - raw and map files",
+        "title": ""
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "oc/ requriements"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Impact Assessment"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "",
+        "media_type": "Should be csv",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "CSV/XLS"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Utsira survey data"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "",
+        "href": "",
+        "media_type": "Unknown",
+        "title": ""
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "?"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Anthropological data from community engagement in Utsira"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "",
+        "media_type": "",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": "CSV/XLS"
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Micro-social data - perceptions of offshore wind/ social acceptance"
+          }
+        }
+      ],
+      "license": "",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "DOME",
+        "href": "",
+        "media_type": "",
+        "title": "DOME"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Abundance and biomass of open sea phytoplankton/ zooplankton/ zoobenthos and phytobenthos."
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "EU Fleet Register",
+        "href": "",
+        "media_type": "csv",
+        "title": "EU Fleet Register"
+      }
+    },
+    "bbox": [
+      "europe"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "administrative identification/ technical characteristics/ historical events"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Official nominal catches",
+        "href": "",
+        "media_type": "",
+        "title": "Official nominal catches"
+      }
+    },
+    "bbox": [
+      "europe"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "catch statistic per country/ species/ area and year"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": "yearly"
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "",
+        "href": "",
+        "media_type": "",
+        "title": ""
+      }
+    },
+    "bbox": [
+      "Sweden"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "catches by fishing area/ quantities landed and first hand value by month and year"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "CPUE",
+        "href": "",
+        "media_type": "",
+        "title": "CPUE"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "CPUE"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "",
+        "href": "",
+        "media_type": "",
+        "title": ""
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "CPUE/ MPAs/ ecosystems components/ MSP use"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "AIS Apparent Fishing Effort",
+        "href": "",
+        "media_type": "csv",
+        "title": "AIS Apparent Fishing Effort"
+      }
+    },
+    "bbox": [
+      "worldwide"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "data related to position of vessels/ fishing effort/ vessel registry/ gear"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": "10th or 100th degree"
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "",
+        "href": "",
+        "media_type": "",
+        "title": ""
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "employment/ inhabitants/ etc"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Stock assessments",
+        "href": "",
+        "media_type": "",
+        "title": "Stock assessments"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "fish stocks"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Stock assessments",
+        "href": "",
+        "media_type": "",
+        "title": "Stock assessments"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "fish stocks"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "EMODnet Human activities",
+        "href": "",
+        "media_type": "",
+        "title": "EMODnet Human activities"
+      }
+    },
+    "bbox": [
+      "Baltic"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "fisheries (fishing zones/ fishing intensity/ monthly first sales)"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "",
+        "media_type": "",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Logbooks - fisheries landing weights and value"
+          }
+        }
+      ],
+      "license": "probably not public",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "HELCOM Biodiversity database",
+        "href": "",
+        "media_type": "",
+        "title": "HELCOM Biodiversity database"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "macrospecies observations"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "HELCOM Subbasins",
+        "href": "",
+        "media_type": "",
+        "title": "HELCOM Subbasins"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "map of Baltic subbasins"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "EMODnet Human activities",
+        "href": "",
+        "media_type": "",
+        "title": "EMODnet Human activities"
+      }
+    },
+    "bbox": [
+      "Baltic"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "military areas"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "HELCOM MPAs",
+        "href": "",
+        "media_type": "",
+        "title": "HELCOM MPAs"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "MPAs"
+          }
+        }
+      ],
+      "license": "private?",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Baltic Sea Biogeochemistry Analysis and Forecast",
+        "href": "",
+        "media_type": "",
+        "title": "Baltic Sea Biogeochemistry Analysis and Forecast"
+      }
+    },
+    "bbox": [
+      "Baltic"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "oceanographic conditions : biochemestry"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": "Daily/ Monthly // 2x2km"
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Baltic Sea Physics Analysis and Forecast",
+        "href": "",
+        "media_type": "",
+        "title": "Baltic Sea Physics Analysis and Forecast"
+      }
+    },
+    "bbox": [
+      "Baltic"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "oceanographic conditions : physics"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": "Sub-hourly/ Hourly/ Daily/ Monthly // 2x2km"
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "",
+        "media_type": "",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      "worldwide"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "offshore windparks (current and planned)"
+          }
+        }
+      ],
+      "license": "open / private",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Fishery",
+        "href": "",
+        "media_type": "",
+        "title": "Fishery"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "per country : catches of fish products made by vessels in fishing regions/ landings of fishery products in ports/ fishing fleets"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Tourism",
+        "href": "",
+        "media_type": "",
+        "title": "Tourism"
+      }
+    },
+    "bbox": [
+      "EU"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "per country : tourism trips made by EU residents/ including information on destination/ duration/ accommodation/ transport/ expenditure/ etc"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": "monthly/ yearly"
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "The 2024 Annual Economic Report on the EU Fishing Fleet",
+        "href": "",
+        "media_type": "",
+        "title": "The 2024 Annual Economic Report on the EU Fishing Fleet"
+      }
+    },
+    "bbox": [
+      "EU"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "per country per year : landings and value per species/ effort (e.g. fishing days/ days at sea/ energy consumption)/ employment/ capacity (e.g. mean age of vessel/ total vessel power and tonnage)/ income/ expenditure/ capital (e.g. investment/ subsidies/ gross debt)"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": "yearly"
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "The 2022 Annual Economic Report on the EU Fishing Fleet",
+        "href": "",
+        "media_type": "",
+        "title": "The 2022 Annual Economic Report on the EU Fishing Fleet"
+      }
+    },
+    "bbox": [
+      "EU"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "per country social data : technical info (fishing technology and activity/ vessel length)/ gender/ age/ education/ employment status"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": "yearly"
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "EMODnet Human activities",
+        "href": "",
+        "media_type": "",
+        "title": "EMODnet Human activities"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "ports"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Globefish",
+        "href": "",
+        "media_type": "",
+        "title": "Globefish"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "prices"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "EMODnet Human activities",
+        "href": "",
+        "media_type": "",
+        "title": "EMODnet Human activities"
+      }
+    },
+    "bbox": [
+      "Baltic"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "protected areas"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Documentation for the Swedish Marine Spatial Plan data/ version for the government",
+        "href": "",
+        "media_type": "",
+        "title": "Documentation for the Swedish Marine Spatial Plan data/ version for the government"
+      }
+    },
+    "bbox": [
+      "Sweden"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "swedish marine planning (recreation/ cultural value/ commercial fisheries etc)"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Landings",
+        "href": "",
+        "media_type": "",
+        "title": "Landings"
+      }
+    },
+    "bbox": [
+      "europe"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "weekly fishery value and volume per country"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": "weekly"
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "EMODnet Human activities",
+        "href": "",
+        "media_type": "",
+        "title": "EMODnet Human activities"
+      }
+    },
+    "bbox": [
+      "Baltic"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "wind Farms (Number of turbines/ generation capacity/ status)"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "t.b.d.",
+        "href": "",
+        "media_type": "",
+        "title": "t.b.d."
+      }
+    },
+    "bbox": [
+      "Baltic"
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "yearly quotas per species"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": "yearly"
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "SHARK Database",
+        "href": "",
+        "media_type": "",
+        "title": "SHARK Database"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "zooplankton/ phytoplankton/ chlor-a"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "Producer prices for fish (euro/kg)",
+        "href": "",
+        "media_type": "",
+        "title": "Producer prices for fish (euro/kg)"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "Producer prices for fish (euro/kg)"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "ICES Baltic fishery catch",
+        "href": "",
+        "media_type": "",
+        "title": "ICES Baltic fishery catch"
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "catches per country per species per year but sub area of the Baltic"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "",
+        "href": "",
+        "media_type": "",
+        "title": ""
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "landings"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  },
+  {
+    "assets": {
+      "data": {
+        "value": "",
+        "href": "",
+        "media_type": "",
+        "title": ""
+      }
+    },
+    "bbox": [
+      ""
+    ],
+    "geometry": {
+      "type": ""
+    },
+    "properties": {
+      "contacts": [
+        {
+          "logo": {
+            "description": "CPUE/ MPAs/ ecosystems components/ MSP use"
+          }
+        }
+      ],
+      "license": "open",
+      "version": "",
+      "wasGeneratedBy": {
+        "used": {
+          "value": ""
+        }
+      }
+    },
+    "time": {
+      "resolution": ""
+    }
+  }
+]

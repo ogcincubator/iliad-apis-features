@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>ILIAD — Check-in a data source</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<header>
+  <h1>ILIAD · Check-in</h1>
+  <p class="muted">Register a data source, match it against existing building blocks, map fields and vocabularies, generate a tested transformer, stage a new bblock.</p>
+</header>
+
+<main id="app">
+  <section id="step-register" class="step active">
+    <h2>1. Source</h2>
+    <label>File path or URL
+      <input id="source-input" type="text" placeholder="/path/to/file.csv or https://example.org/data.nc" />
+    </label>
+    <button id="btn-register">Detect &amp; profile</button>
+    <pre id="register-output" class="output"></pre>
+  </section>
+
+  <section id="step-match" class="step">
+    <h2>2. Pick a target building block</h2>
+    <div id="matches"></div>
+    <button id="btn-choose">Confirm selection</button>
+    <div id="related" class="note"></div>
+  </section>
+
+  <section id="step-vocab" class="step">
+    <h2>3. Acknowledge vocabulary mappings (for source fields present in both)</h2>
+    <p class="muted">Each property is matched against context.jsonld + OIM/*.ttl. Pick one per row or skip.</p>
+    <div id="vocab-rows"></div>
+    <button id="btn-ack">Acknowledge</button>
+  </section>
+
+  <section id="step-transformer" class="step">
+    <h2>4. Transformer — field mapping</h2>
+    <div id="transformer-list"></div>
+    <details id="params-details" open>
+      <summary>Transformer parameters</summary>
+      <div id="transformer-params"></div>
+    </details>
+
+    <h3>Field mapping (source → target bblock)</h3>
+    <p class="muted">Rows are target-bblock fields. Pick a source field for each. Unmapped source fields appear in the "Extras" panel below.</p>
+    <div id="mapping-matrix"></div>
+
+    <h3>Extras — source fields not in the target bblock</h3>
+    <p class="muted">Name each extra, then map it to a vocabulary. These become additional properties on the new bblock (as an <code>allOf</code> extension of the target).</p>
+    <div id="extras-rows"></div>
+
+    <button id="btn-run">Run transformer</button>
+    <pre id="transformer-output" class="output"></pre>
+  </section>
+
+  <section id="step-finalize" class="step">
+    <h2>5. Stage the new building block</h2>
+    <label>bblock id <input id="bb-id" type="text" placeholder="my-new-bblock" /></label>
+    <label>Title <input id="bb-title" type="text" /></label>
+    <label>Abstract <textarea id="bb-abstract" rows="2"></textarea></label>
+    <button id="btn-finalize">Stage</button>
+    <pre id="finalize-output" class="output"></pre>
+    <button id="btn-promote">Promote to _sources/</button>
+    <pre id="promote-output" class="output"></pre>
+  </section>
+</main>
+
+<script src="/static/wizard.js"></script>
+</body>
+</html>

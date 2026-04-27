@@ -1,0 +1,12 @@
+{
+  "transformer_id": "csv-to-stac-item",
+  "input": "csv",
+  "output": "stac-item",
+  "canonical-ref": "canonical.schema.json",
+  "params": {
+    "lon_field": "lon",
+    "lat_field": "lat",
+    "time_field": "time",
+    "id_field": "id"
+  }
+}

@@ -1,4 +1,0 @@
-@prefix covjson: <https://covjson.org/def/core#> .
-
-[] covjson:calendar [ ] .
-

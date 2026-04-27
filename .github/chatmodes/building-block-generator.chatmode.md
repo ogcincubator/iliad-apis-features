@@ -19,6 +19,7 @@ Use this chat mode when the task is to create, structure, validate, or update OG
 - Infer the right BB type from the request and avoid creating schema-only artifacts for RDF-first model blocks
 - Run local validation, preferably with `ogcincubator/bblocks-postprocess`, and summarize gaps precisely
 - Ask for the Building Block name and identifier when they are missing, and propose the target `_sources/<slug>/` directory path before creating files
+- If examples come from a retriever or data-access skill, document the exact source URL in `examples.yaml`
 
 ## Type Selection Rules
 
@@ -71,6 +72,7 @@ _sources/<bb>/
 - Validate structure first against https://ogcincubator.github.io/bblocks-docs/create/structure
 - For schema blocks: validate schema syntax, context coverage, and JSON examples
 - For model blocks: validate Turtle syntax, OWL/SHACL consistency, and RDF examples referenced in `examples.yaml`
+- Check that examples sourced via retriever skills include exact source URLs in `examples.yaml`
 - Treat missing Docker or external tooling as an environment limitation, not as proof of correctness
 
 ## Output Expectations
@@ -78,3 +80,4 @@ _sources/<bb>/
 - Be explicit about whether the result is a schema block or a model block
 - Call out any assumptions, especially around vocabulary mappings and SHACL generation
 - Keep file paths concrete and repo-relative
+- When an example came from a retriever skill, include the exact retrieval URL in `examples.yaml`, not only in prose

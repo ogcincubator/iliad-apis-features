@@ -1,5 +1,30 @@
 - title: Global Fishing Watch fishing events sample for the Gulf of Gdansk
-  description: Recent sample of apparent fishing events returned by the GFW Events API for a Gulf of Gdansk polygon filter.
+  description: >
+    Sample of 50 recent apparent fishing events returned by the Global Fishing Watch
+    Events API for a Gulf of Gdansk polygon filter.
+  provenance:
+    retriever: global-fishing-watch-data-service
+    request:
+      method: POST
+      url: https://gateway.api.globalfishingwatch.org/v3/events?limit=50&offset=0&sort=-start
+      body:
+        datasets:
+          - public-global-fishing-events:latest
+        startDate: "2026-04-14"
+        endDate: "2026-04-19"
+        geometry:
+          type: Polygon
+          coordinates:
+            - - - 18.0
+                - 54.2
+              - - 20.2
+                - 54.2
+              - - 20.2
+                - 55.2
+              - - 18.0
+                - 55.2
+              - - 18.0
+                - 54.2
   snippets:
     - language: json
       code: examples/sample.json

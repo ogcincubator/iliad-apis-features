@@ -1,0 +1,7 @@
+{
+  "lon_field": "lon",
+  "lat_field": "lat",
+  "time_field": "time",
+  "id_field": "id",
+  "collection": "helcom-macro"
+}

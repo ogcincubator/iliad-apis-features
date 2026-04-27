@@ -15,7 +15,7 @@ Use this skill to:
 - ask the user to choose an API family and operation before querying
 - ask only for the parameters needed by the selected operation
 - check the workspace root `.env` for a GFW API token and optional base URL
-- call the API programmatically and return the executed URL, method, and payload for provenance
+- call the API programmatically and return the retrieved data together with a sanitized log of the API calls used to retrieve it
 
 ## Activation
 
@@ -142,6 +142,18 @@ If the token is not present, ask:
 Use Bearer token authentication:
 
 `Authorization: Bearer <TOKEN>`
+
+Never print, echo, or store the bearer token in returned logs.
+
+When returning request provenance, include only sanitized request details:
+
+- HTTP method
+- URL
+- query parameters
+- request body
+- response status or response data summary
+
+Do not include the raw `Authorization` header value.
 
 Default base URL:
 
@@ -339,10 +351,26 @@ Always report:
 - prompted parameters
 - values supplied by the user
 - values sourced from `.env`
-- executed HTTP method
-- executed URL with query parameters
-- decoded query parameters
-- executed JSON body if any
+- retrieved data
+- sanitized API call log:
+  - executed HTTP method
+  - executed URL with query parameters
+  - decoded query parameters
+  - executed JSON body if any
+  - no bearer token in output
+
+Always include links to:
+
+- GFW APIs overview: https://globalfishingwatch.org/our-apis/
+- GFW API documentation: https://globalfishingwatch.org/our-apis/documentation
+- GFW commercial-use FAQ: https://globalfishingwatch.org/faqs/can-i-use-global-fishing-watch-apis-for-commercial-purposes/
+
+Always highlight usage limitations from the official documentation:
+
+- GFW APIs are available only for non-commercial purposes
+- users must agree to the terms of use and attribute Global Fishing Watch in publications
+- data should be used with the dataset caveats described in the GFW documentation
+- some datasets are delayed or limited in coverage, such as AIS activity products that may only be available up to about 96 hours ago
 
 When the user requests data that may be subject to GFW caveats or terms of use, mention that the official GFW caveats and attribution requirements apply.
 
@@ -351,8 +379,10 @@ When the user requests data that may be subject to GFW caveats or terms of use, 
 - This skill is based on the official Global Fishing Watch API documentation for v3.
 - The helper script is intentionally conservative and supports the core public operations described in the official docs.
 - Global Fishing Watch APIs require a registered account and API access token for use.
+- Returned API provenance must keep credentials secret while still documenting the exact calls used to retrieve the data.
 
 ## References
 
 - GFW APIs overview: https://globalfishingwatch.org/our-apis/
 - GFW API documentation: https://globalfishingwatch.org/our-apis/documentation
+- GFW commercial-use FAQ: https://globalfishingwatch.org/faqs/can-i-use-global-fishing-watch-apis-for-commercial-purposes/

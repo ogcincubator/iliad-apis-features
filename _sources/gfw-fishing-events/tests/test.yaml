@@ -9,5 +9,15 @@ tests:
     input: ../description.md
     contains:
       - "Global Fishing Watch"
-      - "POST /v3/events"
+      - "https://gateway.api.globalfishingwatch.org/v3/events?limit=50&offset=0&sort=-start"
       - "public-global-fishing-events:latest"
+      - "50"
+  - name: Examples record retriever provenance
+    description: Confirm examples.yaml records the exact source URL and request body for the retriever-sourced example.
+    input: ../examples.yaml
+    contains:
+      - "global-fishing-watch-data-service"
+      - "https://gateway.api.globalfishingwatch.org/v3/events?limit=50&offset=0&sort=-start"
+      - "public-global-fishing-events:latest"
+      - "2026-04-14"
+      - "2026-04-19"

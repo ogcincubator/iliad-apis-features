@@ -1,0 +1,70 @@
+@startuml transformer-library
+skinparam backgroundColor #0f1115
+skinparam defaultFontColor #e5e7eb
+skinparam defaultFontName "Segoe UI"
+skinparam ArrowColor #4fa3ff
+skinparam componentBorderColor #252a35
+skinparam componentBackgroundColor #181b22
+skinparam componentFontColor #e5e7eb
+skinparam packageBorderColor #4fa3ff
+skinparam packageBackgroundColor #181b22
+skinparam packageFontColor #4fa3ff
+skinparam noteBorderColor #252a35
+skinparam noteBackgroundColor #181b22
+
+title Transformer Library Structure
+
+package "transformer_runner (core)" {
+  [load_library()\nscan transformers/*/transformer.json] as loader
+  [find_matching(fmt, target)\nfilter by input + output] as finder
+  [run(spec, input, params)\ndynamic import → transform()\n→ jsonschema validate] as runner
+}
+
+package "transformers/csv-to-stac-item" {
+  [transformer.json\ninput: csv\noutput: stac-item] as tf1m
+  [transform.py\nCSV row → STAC Item\n(geometry from lon/lat)] as tf1t
+  [canonical.schema.json\nSTAC Item schema] as tf1s
+}
+
+package "transformers/json-to-json-feature" {
+  [transformer.json\ninput: json\noutput: geojson] as tf2m
+  [transform.py\nJSON → GeoJSON Feature\n(configurable field map)] as tf2t
+  [canonical.schema.json\nGeoJSON Feature schema] as tf2s
+}
+
+package "transformers/json-to-geoparquet" {
+  [transformer.json\ninput: json\noutput: geoparquet] as tf3m
+  [transform.py\nJSON records → GeoParquet] as tf3t
+  [canonical.schema.json\nGeoParquet schema] as tf3s
+}
+
+package "transformers/json-to-nested-json" {
+  [transformer.json\ninput: json/csv/any\noutput: nested-json] as tf4m
+  [transform.py\nMapping + expression engine:\n• source: path → dig()\n• expression: ${a} ${b} → JSON-parse] as tf4t
+  [canonical.schema.json\nany JSON schema] as tf4s
+}
+
+note bottom of tf4t
+  **Expression examples:**
+  "${lon}"  → numeric
+  "[${lon}, ${lat}]"  → array
+  '{"type":"Point",\n "coordinates":[${lon},${lat}]}'  → object
+  "${first} ${last}"  → string
+end note
+
+loader --> tf1m
+loader --> tf2m
+loader --> tf3m
+loader --> tf4m
+finder --> loader
+runner --> finder
+runner --> tf1t
+runner --> tf2t
+runner --> tf3t
+runner --> tf4t
+tf1t ..> tf1s : validates output
+tf2t ..> tf2s : validates output
+tf3t ..> tf3s : validates output
+tf4t ..> tf4s : validates output
+
+@enduml

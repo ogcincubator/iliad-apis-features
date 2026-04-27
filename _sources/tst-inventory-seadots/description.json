@@ -1,0 +1,394 @@
+{
+  "title": "seadots inventory",
+  "abstract": "Auto-generated bblock from a csv source.",
+  "source": {
+    "title": "source",
+    "local_path": "~/tmp/D1.2_data_inventory_extended-2.csv"
+  },
+  "transformer": {
+    "kind": "library",
+    "id": "json-to-nested-json",
+    "params": {
+      "target_template": {},
+      "mappings": [
+        {
+          "source": "Data set name",
+          "target": "assets.data",
+          "type": "object"
+        },
+        {
+          "source": "Link to sample",
+          "target": "assets.data.href",
+          "type": "string"
+        },
+        {
+          "source": "Data Format",
+          "target": "assets.data.media_type",
+          "type": "string"
+        },
+        {
+          "source": "Data set name",
+          "target": "assets.data.title",
+          "type": "string"
+        },
+        {
+          "source": "Spatial coverage",
+          "target": "bbox",
+          "type": "array"
+        },
+        {
+          "source": "service type",
+          "target": "geometry.type",
+          "type": "string"
+        },
+        {
+          "source": "Dataset (short) Description",
+          "target": "properties.contacts[0].logo.description",
+          "type": "string"
+        },
+        {
+          "source": "License / Privacy",
+          "target": "properties.license",
+          "type": "string"
+        },
+        {
+          "source": "Version",
+          "target": "properties.version",
+          "type": "string"
+        },
+        {
+          "source": "used by (pilot/app)",
+          "target": "properties.wasGeneratedBy.used",
+          "type": "object"
+        },
+        {
+          "source": "Resolution",
+          "target": "time.resolution",
+          "type": "string"
+        }
+      ],
+      "passthrough_extras": false,
+      "target_bblock": "stac_multidim_data"
+    }
+  },
+  "property_mappings": [
+    {
+      "property_name": "source_id [lowercase+_]",
+      "uri": "http://rs.tdwg.org/dwc/terms/resourceID",
+      "label": "resourceID",
+      "source": "oim-bio-tdwg/context.jsonld"
+    },
+    {
+      "property_name": "Category",
+      "uri": "http://purl.org/dc/terms/creator",
+      "label": "Creator",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Dataset (short) Description",
+      "uri": "http://www.w3.org/ns/dcat#Dataset",
+      "label": "Dataset",
+      "source": "gfw-fishing-events/context.jsonld"
+    },
+    {
+      "property_name": "Data set name",
+      "uri": "http://purl.org/linked-data/cube#dataSet",
+      "label": "data set",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Data Type",
+      "uri": "https://w3id.org/idsa/core/dataType",
+      "label": "Data type",
+      "source": "OIM/metadata.ttl"
+    },
+    {
+      "property_name": "service type",
+      "uri": "http://purl.org/dc/terms/type",
+      "label": "type",
+      "source": "gfw-fishing-events/context.jsonld"
+    },
+    {
+      "property_name": "Owner",
+      "uri": "http://rs.tdwg.org/dwc/terms/ownerInstitutionCode",
+      "label": "owner institution code",
+      "source": "OIM/oceanCommon.ttl"
+    },
+    {
+      "property_name": "Contact Person (SeaDOTS)",
+      "uri": "http://xmlns.com/foaf/0.1/Person",
+      "label": "Person",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "License / Privacy",
+      "uri": "http://purl.org/dc/terms/license",
+      "label": "license",
+      "source": "OIM/metadata.ttl"
+    },
+    {
+      "property_name": "Availability",
+      "uri": "https://smartdatamodels.org/dataModel.Weather/visibility",
+      "label": "visibility",
+      "source": "OIM/oceanProperty.ttl"
+    },
+    {
+      "property_name": "Link to sample",
+      "uri": "http://www.w3.org/ns/sosa/Sample",
+      "label": "Sample",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Link to sample data set",
+      "uri": "http://purl.org/linked-data/cube#dataSet",
+      "label": "data set",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Comments",
+      "uri": "http://purl.org/linked-data/cube#componentProperty",
+      "label": "component",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Relevance",
+      "uri": "http://purl.org/dc/terms/provenance",
+      "label": "provenance",
+      "source": "macroobservation/context.jsonld"
+    },
+    {
+      "property_name": "Representativeness",
+      "uri": "https://w3id.org/idsa/core/representation",
+      "label": "representation",
+      "source": "OIM/metadata.ttl"
+    },
+    {
+      "property_name": "Reliability",
+      "uri": "http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility",
+      "label": "Compressibility",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Temporal validity",
+      "uri": "http://purl.org/dc/terms/temporal",
+      "label": "temporal",
+      "source": "macroobservation/context.jsonld"
+    },
+    {
+      "property_name": "Ingestability",
+      "uri": "https://smartdatamodels.org/dataModel.Weather/visibility",
+      "label": "visibility",
+      "source": "OIM/oceanProperty.ttl"
+    },
+    {
+      "property_name": "Initial assessment of the data (summary of the quality assessment",
+      "uri": "http://purl.org/linked-data/cube#dataSet",
+      "label": "data set",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Data Format",
+      "uri": "http://purl.org/dc/terms/format",
+      "label": "format",
+      "source": "OIM/metadata.ttl"
+    },
+    {
+      "property_name": "Language",
+      "uri": "http://purl.org/dc/terms/language",
+      "label": "language",
+      "source": "OIM/metadata.ttl"
+    },
+    {
+      "property_name": "Version",
+      "uri": "http://xmlns.com/foaf/0.1/Person",
+      "label": "Person",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Accessibility",
+      "uri": "http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility",
+      "label": "Compressibility",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Recommended API",
+      "uri": "http://rs.tdwg.org/dwc/terms/recordedByID",
+      "label": "recorded by id",
+      "source": "OIM/oceanCommon.ttl"
+    },
+    {
+      "property_name": "Spatial coverage",
+      "uri": "http://purl.org/dc/terms/spatial",
+      "label": "Spatial Coverage",
+      "source": "OIM/oceanCommon.ttl"
+    },
+    {
+      "property_name": "Temporal coverage",
+      "uri": "http://purl.org/dc/terms/temporal",
+      "label": "Temporal Coverage",
+      "source": "OIM/oceanCommon.ttl"
+    },
+    {
+      "property_name": "Resolution",
+      "uri": "http://www.opengis.net/cis/1.1/resolution",
+      "label": "resolution",
+      "source": "OIM/metadata.ttl"
+    },
+    {
+      "property_name": "Data Frequency",
+      "uri": "http://purl.org/dc/terms/Frequency",
+      "label": "Frequency",
+      "source": "OIM/metadata.ttl"
+    },
+    {
+      "property_name": "Data Velocity",
+      "uri": "http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed",
+      "label": "Velocity Or Speed",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Volume",
+      "uri": "http://purl.oclc.org/NET/ssnx/qu/dim#Volume",
+      "label": "Volume",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Dependencies (e.g. to Other Sources)",
+      "uri": "http://www.w3.org/2006/time#hasEnd",
+      "label": "to",
+      "source": "gfw-fishing-events/context.jsonld"
+    },
+    {
+      "property_name": "Link to data set documentation",
+      "uri": "http://purl.org/linked-data/cube#dataSet",
+      "label": "data set",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Pricing",
+      "uri": "http://xmlns.com/foaf/0.1/depiction",
+      "label": "depiction",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "how used",
+      "uri": "http://www.w3.org/ns/sosa/usedProcedure",
+      "label": "used procedure",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Relevance_to_Demonstrators",
+      "uri": "http://www.w3.org/2006/time#hasEnd",
+      "label": "to",
+      "source": "gfw-fishing-events/context.jsonld"
+    },
+    {
+      "property_name": "source_id_lowercase",
+      "uri": "http://rs.tdwg.org/dwc/terms/resourceID",
+      "label": "resourceID",
+      "source": "oim-bio-tdwg/context.jsonld"
+    },
+    {
+      "property_name": "Category",
+      "uri": "http://purl.org/dc/terms/creator",
+      "label": "Creator",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Owner",
+      "uri": "http://rs.tdwg.org/dwc/terms/ownerInstitutionCode",
+      "label": "owner institution code",
+      "source": "OIM/oceanCommon.ttl"
+    },
+    {
+      "property_name": "Contact_Person_SeaDOTS",
+      "uri": "http://xmlns.com/foaf/0.1/Person",
+      "label": "Person",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Availability",
+      "uri": "https://smartdatamodels.org/dataModel.Weather/visibility",
+      "label": "visibility",
+      "source": "OIM/oceanProperty.ttl"
+    },
+    {
+      "property_name": "Comments",
+      "uri": "http://purl.org/linked-data/cube#componentProperty",
+      "label": "component",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Relevance",
+      "uri": "http://purl.org/dc/terms/provenance",
+      "label": "provenance",
+      "source": "macroobservation/context.jsonld"
+    },
+    {
+      "property_name": "Representativeness",
+      "uri": "https://w3id.org/idsa/core/representation",
+      "label": "representation",
+      "source": "OIM/metadata.ttl"
+    },
+    {
+      "property_name": "Reliability",
+      "uri": "http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility",
+      "label": "Compressibility",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Temporal_validity",
+      "uri": "http://purl.org/dc/terms/temporal",
+      "label": "temporal",
+      "source": "macroobservation/context.jsonld"
+    },
+    {
+      "property_name": "Ingestability",
+      "uri": "https://smartdatamodels.org/dataModel.Weather/visibility",
+      "label": "visibility",
+      "source": "OIM/oceanProperty.ttl"
+    },
+    {
+      "property_name": "Language",
+      "uri": "http://purl.org/dc/terms/language",
+      "label": "language",
+      "source": "OIM/metadata.ttl"
+    },
+    {
+      "property_name": "Accessibility",
+      "uri": "http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility",
+      "label": "Compressibility",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Recommended_API",
+      "uri": "http://rs.tdwg.org/dwc/terms/recordedByID",
+      "label": "recorded by id",
+      "source": "OIM/oceanCommon.ttl"
+    },
+    {
+      "property_name": "Temporal_coverage",
+      "uri": "http://purl.org/dc/terms/temporal",
+      "label": "Temporal Coverage",
+      "source": "OIM/oceanCommon.ttl"
+    },
+    {
+      "property_name": "Volume",
+      "uri": "http://purl.oclc.org/NET/ssnx/qu/dim#Volume",
+      "label": "Volume",
+      "source": "OIM/cross-domain.ttl"
+    },
+    {
+      "property_name": "Dependencies_e_g_to_Other_Sources",
+      "uri": "http://www.w3.org/2006/time#hasEnd",
+      "label": "to",
+      "source": "gfw-fishing-events/context.jsonld"
+    },
+    {
+      "property_name": "Pricing",
+      "uri": "http://xmlns.com/foaf/0.1/depiction",
+      "label": "depiction",
+      "source": "OIM/cross-domain.ttl"
+    }
+  ]
+}
