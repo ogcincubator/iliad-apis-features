@@ -1,0 +1,146 @@
+@prefix apkg: <http://purl.org/apkg#> .
+@prefix : <https://w3id.org/iliad/apkg/shapes/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:ApplicationPackageShape
+    a sh:NodeShape ;
+    sh:targetClass apkg:ApplicationPackage ;
+    sh:property [
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path schema:description ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path dct:identifier ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:anyURI
+    ] , [
+        sh:path apkg:family ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path schema:softwareVersion ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path apkg:latest ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean
+    ] , [
+        sh:path schema:dateCreated ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path schema:sdPublisher ;
+        sh:minCount 1 ;
+        sh:class apkg:Registry
+    ] , [
+        sh:path schema:sdDatePublished ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path schema:author ;
+        sh:minCount 1 ;
+        sh:class apkg:Person
+    ] , [
+        sh:path schema:sourceOrganization ;
+        sh:minCount 1 ;
+        sh:class apkg:Organisation
+    ] , [
+        sh:path schema:producer ;
+        sh:minCount 1 ;
+        sh:class apkg:Organisation
+    ] , [
+        sh:path schema:spatialCoverage ;
+        sh:minCount 1
+    ] , [
+        sh:path schema:maintainer ;
+        sh:class apkg:Person
+    ] , [
+        sh:path schema:contributor ;
+        sh:class apkg:Person
+    ] , [
+        sh:path apkg:hasGeometry ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class apkg:Geometry
+    ] , [
+        sh:path apkg:hasLink ;
+        sh:minCount 1 ;
+        sh:class apkg:Link
+    ] .
+
+:ProcessShape
+    a sh:NodeShape ;
+    sh:targetClass apkg:Process ;
+    sh:property [
+        sh:path dct:type ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ("CommandLineTool" "Workflow")
+    ] , [
+        sh:path apkg:hasOutput ;
+        sh:minCount 1 ;
+        sh:class apkg:Parameter
+    ] .
+
+:ParameterShape
+    a sh:NodeShape ;
+    sh:targetClass apkg:Parameter ;
+    sh:property [
+        sh:path dct:identifier ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path dct:type ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ("null" "boolean" "int" "long" "float" "double" "string" "File" "Directory")
+    ] , [
+        sh:path apkg:label ;
+        sh:maxCount 1
+    ] , [
+        sh:path apkg:doc ;
+        sh:maxCount 1
+    ] .
+
+:TemporalCoverageShape
+    a sh:NodeShape ;
+    sh:targetClass apkg:TemporalCoverage ;
+    sh:property [
+        sh:path time:hasBeginning ;
+        sh:maxCount 1 ;
+        sh:class apkg:Instant
+    ] , [
+        sh:path time:hasEnd ;
+        sh:maxCount 1 ;
+        sh:class apkg:Instant
+    ] .
+
+:LinkShape
+    a sh:NodeShape ;
+    sh:targetClass apkg:Link ;
+    sh:property [
+        sh:path schema:url ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path dct:type ;
+        sh:maxCount 1
+    ] , [
+        sh:path dct:title ;
+        sh:maxCount 1
+    ] , [
+        sh:path dcat:mediaType ;
+        sh:maxCount 1
+    ] .

@@ -1,0 +1,17 @@
+{
+  "id": "netcdf-structure-to-json",
+  "title": "NetCDF structure -> templated JSON",
+  "input": "netcdf",
+  "output": "json",
+  "canonical-ref": "canonical.schema.json",
+  "dependsOn": [],
+  "params-schema": {
+    "type": "object",
+    "properties": {
+      "template": {
+        "description": "Recursive JSON template. Supports ${path} interpolation, {$value:path} extraction, and {$for:path, template:{...}} loops over dimensions, variables, coordinates, or nested fields."
+      }
+    },
+    "required": ["template"]
+  }
+}

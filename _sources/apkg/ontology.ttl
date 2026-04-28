@@ -1,0 +1,167 @@
+@prefix apkg: <http://purl.org/apkg#> .
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix cwltool: <http://commonwl.org/cwltool#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+apkg: a owl:Ontology ;
+    rdfs:label "APKG metadata profile terms" ;
+    dct:source <https://raw.githubusercontent.com/ILIAD-ocean-twin/APKG/main/terms/apkg-ms.ttl> ;
+    rdfs:comment "Local ontology aligned as closely as possible to the upstream APKG terms file, with a small number of reused standard terms declared for check-in matching." .
+
+apkg:ApplicationPackage
+    a rdfs:Class ;
+    rdfs:label "Application Package"@en ;
+    rdfs:subClassOf schema:SoftwareApplication ,
+        schema:SoftwareSourceCode .
+
+apkg:Person
+    a rdfs:Class ;
+    rdfs:label "A Person"@en ;
+    rdfs:subClassOf foaf:Person .
+
+apkg:Organisation
+    a rdfs:Class ;
+    rdfs:label "An Organisation"@en ;
+    rdfs:subClassOf schema:Organization .
+
+apkg:PostalAddress
+    a rdfs:Class ;
+    rdfs:label "An Address"@en ;
+    rdfs:subClassOf schema:PostalAddress .
+
+apkg:Process
+    a rdfs:Class ;
+    rdfs:label "A Process"@en ;
+    rdfs:subClassOf cwl:Process .
+
+apkg:Parameter
+    a rdfs:Class ;
+    rdfs:label "A Parameter (input or output)"@en ;
+    rdfs:subClassOf cwl:InputParameter ,
+        cwl:OutputParameter .
+
+apkg:Secrets
+    a rdfs:Class ;
+    rdfs:label "The passwords of the software"@en ;
+    rdfs:subClassOf cwltool:Secrets .
+
+apkg:Instant
+    a rdfs:Class ;
+    rdfs:label "The time instant of the validity of the Application Package"@en ;
+    rdfs:subClassOf time:TemporalEntity .
+
+apkg:TemporalCoverage
+    a rdfs:Class ;
+    rdfs:label "The temporal coverage of the Application Package"@en ;
+    rdfs:subClassOf time:Instant .
+
+apkg:Registry
+    a rdfs:Class ;
+    rdfs:label "The Registry of the Application Package"@en .
+
+apkg:Link
+    a rdfs:Class ;
+    rdfs:label "The Link of the Application Package"@en .
+
+apkg:Geometry
+    a rdfs:Class ;
+    rdfs:label "The Geometry"@en .
+
+apkg:hasInput
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:label "The Input of the process"@en ;
+    rdfs:domain apkg:Process ;
+    rdfs:range apkg:Parameter .
+
+apkg:hasOutput
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:label "The Output of the process"@en ;
+    rdfs:domain apkg:Process ;
+    rdfs:range apkg:Parameter .
+
+apkg:hasTemporalCoverage
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:label "The Application Package has a Time Validity"@en ;
+    rdfs:domain apkg:ApplicationPackage ;
+    rdfs:range apkg:TemporalCoverage .
+
+apkg:hasGeometry
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:label "The Application Package has a geometry"@en ;
+    rdfs:domain apkg:ApplicationPackage ;
+    rdfs:range apkg:Geometry .
+
+apkg:hasLink
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:label "The Application Package has a Link."@en ;
+    rdfs:domain apkg:ApplicationPackage ;
+    rdfs:range apkg:Link .
+
+apkg:label
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:label "A short, human-readable label."@en ;
+    rdfs:domain apkg:Parameter ;
+    rdfs:range xsd:string .
+
+apkg:doc
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:label "A documentation string or an array of strings which should be concatenated."@en ;
+    rdfs:domain apkg:Parameter ;
+    rdfs:range xsd:string .
+
+apkg:family
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:label "The Family of the application package (identifier without version)."@en ;
+    rdfs:domain apkg:ApplicationPackage ;
+    rdfs:range xsd:anyURI .
+
+apkg:latest
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:label "Identifies the latest version of the ApplicationPackage."@en ;
+    rdfs:domain apkg:ApplicationPackage ;
+    rdfs:range xsd:boolean .
+
+apkg:originalURL
+    a rdf:Property ;
+    rdfs:subPropertyOf schema:url ;
+    rdfs:label "Original URL of the application package when registered."@en .
+
+dct:identifier a owl:DatatypeProperty .
+dct:title a owl:DatatypeProperty .
+dct:type a owl:DatatypeProperty .
+schema:address a owl:ObjectProperty .
+schema:addressCountry a owl:DatatypeProperty .
+schema:author a owl:ObjectProperty .
+schema:box a owl:DatatypeProperty .
+schema:citation a owl:DatatypeProperty .
+schema:codeRepository a owl:DatatypeProperty .
+schema:contributor a owl:ObjectProperty .
+schema:dateCreated a owl:DatatypeProperty .
+schema:description a owl:DatatypeProperty .
+schema:email a owl:DatatypeProperty .
+schema:fileFormat a owl:DatatypeProperty .
+schema:geo a owl:ObjectProperty .
+schema:keywords a owl:DatatypeProperty .
+schema:license a owl:DatatypeProperty .
+schema:maintainer a owl:ObjectProperty .
+schema:name a owl:DatatypeProperty .
+schema:producer a owl:ObjectProperty .
+schema:programmingLanguage a owl:DatatypeProperty .
+schema:sdDatePublished a owl:DatatypeProperty .
+schema:sdPublisher a owl:ObjectProperty .
+schema:softwareVersion a owl:DatatypeProperty .
+schema:sourceOrganization a owl:ObjectProperty .
+schema:spatialCoverage a owl:ObjectProperty .
+schema:url a owl:DatatypeProperty .
+dcat:mediaType a owl:DatatypeProperty .
+time:hasBeginning a owl:ObjectProperty .
+time:hasEnd a owl:ObjectProperty .
+time:inXSDDateTime a owl:DatatypeProperty .

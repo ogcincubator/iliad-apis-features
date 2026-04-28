@@ -66,3 +66,4 @@ docker run --rm \
 ## Related Skills
 
 - `bblock-container-validation` - Docker commands, troubleshooting, memory configuration
+- `bblock-register-resolution` - resolve published dependency/import URLs to machine-readable register JSON endpoints

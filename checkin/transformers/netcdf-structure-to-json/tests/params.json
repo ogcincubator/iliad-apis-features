@@ -1,0 +1,35 @@
+{
+  "template": {
+    "dataset": {
+      "title": "${metadata.title}",
+      "institution": "${metadata.institution}",
+      "conventions": "${metadata.Conventions}"
+    },
+    "axes": {
+      "$for": "dimensions",
+      "template": {
+        "name": "${item.name}",
+        "size": {
+          "$value": "item.size"
+        },
+        "units": "${item.units}"
+      }
+    },
+    "measurements": {
+      "$for": "variables",
+      "template": {
+        "id": "${item.name}",
+        "dtype": "${item.dtype}",
+        "shape": {
+          "$value": "item.shape"
+        },
+        "dims": {
+          "$value": "item.dimensions"
+        },
+        "units": "${item.units}",
+        "label": "${item.long_name}"
+      }
+    },
+    "summary": "Dataset ${metadata.title} exposes ${variables.0.name} and ${variables.1.name}."
+  }
+}

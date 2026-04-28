@@ -1,0 +1,48 @@
+@prefix ncf: <https://w3id.org/iliad/nerc-cf-standard-names/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ncf: a owl:Ontology ;
+    rdfs:label "NERC CF Standard Names Profile" ;
+    dct:description "A lightweight profile for using the NERC Vocabulary Server Climate and Forecast Standard Names collection in ILIAD building blocks." ;
+    rdfs:seeAlso <https://vocab.nerc.ac.uk/collection/P07/current/> ,
+        <https://vocab.nerc.ac.uk/standard_name/> .
+
+ncf:CFStandardNameScheme a owl:Class ;
+    rdfs:label "CF standard-name scheme" ;
+    rdfs:subClassOf skos:ConceptScheme .
+
+ncf:CFStandardNameCollection a owl:Class ;
+    rdfs:label "CF standard-name collection" ;
+    rdfs:subClassOf skos:Collection .
+
+ncf:CFStandardName a owl:Class ;
+    rdfs:label "CF standard name" ;
+    rdfs:subClassOf skos:Concept .
+
+ncf:authoritativeConceptURI a owl:DatatypeProperty ;
+    rdfs:label "authoritative concept URI" ;
+    rdfs:comment "Stable HTTP URI of the NERC CF standard-name concept." ;
+    rdfs:domain ncf:CFStandardName ;
+    rdfs:range xsd:anyURI .
+
+ncf:preferredUnit a owl:DatatypeProperty ;
+    rdfs:label "preferred unit" ;
+    rdfs:comment "Human-readable unit associated with a concept when the vocabulary entry indicates one." ;
+    rdfs:domain ncf:CFStandardName ;
+    rdfs:range xsd:string .
+
+skos:prefLabel a owl:DatatypeProperty .
+skos:definition a owl:DatatypeProperty .
+skos:notation a owl:DatatypeProperty .
+skos:inScheme a owl:ObjectProperty .
+skos:member a owl:ObjectProperty .
+skos:broader a owl:ObjectProperty .
+skos:related a owl:ObjectProperty .
+dct:identifier a owl:DatatypeProperty .
+dct:creator a owl:DatatypeProperty .
+owl:versionInfo a owl:DatatypeProperty .

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://iliad/checkin/transformers/netcdf-structure-to-json/canonical.schema.json",
+  "title": "Templated JSON output",
+  "description": "Permissive canonical schema for templated NetCDF structure exports.",
+  "type": ["object", "array"]
+}

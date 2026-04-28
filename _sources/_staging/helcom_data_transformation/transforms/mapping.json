@@ -1,0 +1,61 @@
+{
+  "target_template": {},
+  "mappings": [
+    {
+      "expression": "{\"type\":\"Point\",\"coordinates\":[${lon},${lat}]}",
+      "target": "features[].geometry",
+      "type": "object"
+    },
+    {
+      "expression": "\"low\"",
+      "target": "features[].properties.abundance",
+      "type": "string"
+    },
+    {
+      "source": "depth_m",
+      "target": "features[].properties.depth_m",
+      "type": "number"
+    },
+    {
+      "source": "time",
+      "target": "features[].properties.observationTime",
+      "type": "string"
+    },
+    {
+      "expression": "\"HELCOM OWS\"",
+      "target": "features[].properties.provenance_urls",
+      "type": "array"
+    },
+    {
+      "source": "salinity_psu",
+      "target": "features[].properties.salinity_psu",
+      "type": "number"
+    },
+    {
+      "expression": "\"HELCOM\"",
+      "target": "features[].properties.source",
+      "type": "string"
+    },
+    {
+      "source": "species",
+      "target": "features[].properties.species",
+      "type": "string"
+    },
+    {
+      "expression": "\"Feature\"",
+      "target": "features[].type",
+      "type": "string"
+    },
+    {
+      "expression": "\"FeatureCollection\"",
+      "target": "type",
+      "type": "string"
+    },
+    {
+      "source": "id",
+      "target": "id"
+    }
+  ],
+  "passthrough_extras": false,
+  "target_bblock": "macroobservation"
+}

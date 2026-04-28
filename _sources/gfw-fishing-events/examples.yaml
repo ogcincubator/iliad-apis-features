@@ -1,4 +1,5 @@
 - title: Global Fishing Watch fishing events sample for the Gulf of Gdansk
+  base-uri: https://w3id.org/seadots/fishing-events/
   description: >
     Sample of 50 recent apparent fishing events returned by the Global Fishing Watch
     Events API for a Gulf of Gdansk polygon filter.

@@ -4,7 +4,7 @@
   "description": "Extension of stac_multidim_data with extras contributed by check-in.",
   "allOf": [
     {
-      "$ref": "bblocks://stac_multidim_data"
+      "$ref": "bblocks://ogc.hosted.iliad.api.features.stac_multidim_data"
     },
     {
       "type": "object",

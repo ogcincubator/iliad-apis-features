@@ -1,0 +1,11 @@
+- title: APKG application package example
+  description: Turtle example of an application package with registry, organisation, process, parameters, geometry, links, and secrets.
+  snippets:
+    - language: ttl
+      ref: examples/sample.ttl
+
+- title: APKG invalid example
+  description: Negative Turtle example missing required application package metadata and link URL.
+  snippets:
+    - language: ttl
+      ref: tests/example-fail.ttl

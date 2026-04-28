@@ -61,6 +61,16 @@ You are an OGC Building Block generation and validation specialist.
   - Add links to standards and specifications
   - Declare conformance to OGC standards
 
+- **Validator-Safe Metadata Defaults**:
+  - Do not add metadata entries that duplicate default local artifact discovery by the postprocessor
+  - For model blocks, if the ontology is the local default file `ontology.ttl`, do not also set `"ontology": "ontology.ttl"` in `bblock.json`
+  - For schema blocks, do not add `"examples": "examples.yaml"` as a string in `bblock.json`
+  - Prefer the repository-default artifact names and let the postprocessor discover them automatically unless an external URL is truly required
+  - When declaring `dependsOn` or `bblocks://...` references for local repository blocks, always use the fully qualified building block identifier, not a folder-name shorthand
+  - If transformer or description metadata stores a target building block id, normalize it to the fully qualified identifier before writing files
+  - For schema-block `context.jsonld`, only emit term definitions for actual output/schema property names, use conservative JSON-LD keys (`@id`, `@type`, `@container`, `@vocab`), and avoid unsupported keys such as `@label`
+  - Avoid raw source-column labels with spaces, brackets, or punctuation as JSON-LD term names unless they are explicitly required and known to validate
+
 - **Validation & Compliance Checking**:
   - Run Docker-based OGC Building Blocks postprocessor
   - Validate bblock.json against OGC metadata schema
@@ -75,6 +85,7 @@ You are an OGC Building Block generation and validation specialist.
   - Declare dependencies on other building blocks (e.g., OIM, OGC-standard blocks)
   - Generate proper dependsOn arrays in bblock.json
   - Validate that dependencies are resolvable
+  - When given a published dependency/import site URL, resolve it to a machine-readable register URL using `bblock-register-resolution`
 
 ## Workflow
 
@@ -107,12 +118,17 @@ You are an OGC Building Block generation and validation specialist.
    - If any example was obtained through a retriever skill, include the exact request URL or source URL in `examples.yaml`
 
 6. **Generate Block Files**:
-   - Create `bblock.json` with metadata aligned to the chosen type
-   - Write `description.md` and `examples.yaml`
-   - Add schema/context files only for schema blocks
-   - Add ontology/SHACL files only for model blocks
-   - Generate `description.json` only when another toolchain explicitly needs it
-   - Set up `examples/`, `tests/`, and optional `transforms/` directories
+  - Create `bblock.json` with metadata aligned to the chosen type
+  - Write `description.md` and `examples.yaml`
+  - Add schema/context files only for schema blocks
+  - Add ontology/SHACL files only for model blocks
+  - Generate `description.json` only when another toolchain explicitly needs it
+  - Set up `examples/`, `tests/`, and optional `transforms/` directories
+   - Before writing metadata, apply validator-safe defaults:
+     - omit explicit local-default `ontology` metadata for local `ontology.ttl`
+     - omit string-valued `examples` metadata that points at `examples.yaml`
+     - qualify all local dependency identifiers and `bblocks://` references
+     - keep JSON-LD contexts minimal and schema-facing
 
 7. **Validate & Test**:
    - Run Docker container validation
@@ -210,6 +226,13 @@ _sources/block-name/
 5. **Metadata Validation**: Check `bblock.json` completeness, status enum, dependency resolution, and type-specific fields
 6. **Example Validation**: Load and parse examples, validate against schema or SHACL, and check geometry types only where relevant
 7. **Container-Based Validation**: Run `ghcr.io/opengeospatial/bblocks-postprocess`, generate build artifacts
+
+## Known Pitfalls To Avoid
+
+- Do not use local shorthand ids like `macroobservation`, `gfw-fishing-events`, or `stac_multidim_data` in validator-facing metadata when the repository expects fully qualified identifiers.
+- Do not emit local-artifact pointers in `bblock.json` when the postprocessor already auto-discovers the same file.
+- Do not generate JSON-LD contexts from raw CSV header labels unless those terms are transformed into safe schema-facing names first.
+- Do not add non-JSON-LD term-definition keys just for display convenience.
 
 ## Dependencies & Related Agents
 

@@ -1,0 +1,83 @@
+[
+  {
+    "features": [
+      {
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            12.5,
+            55.3
+          ]
+        },
+        "properties": {
+          "abundance": "low",
+          "depth_m": 5.0,
+          "observationTime": "2026-03-12T10:05:00Z",
+          "provenance_urls": [
+            "HELCOM OWS"
+          ],
+          "salinity_psu": 7.2,
+          "source": "HELCOM",
+          "species": "Aurelia aurita"
+        },
+        "type": "Feature"
+      }
+    ],
+    "type": "FeatureCollection",
+    "id": "obs-1"
+  },
+  {
+    "features": [
+      {
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            13.1,
+            55.4
+          ]
+        },
+        "properties": {
+          "abundance": "low",
+          "depth_m": 8.0,
+          "observationTime": "2026-03-12T10:25:00Z",
+          "provenance_urls": [
+            "HELCOM OWS"
+          ],
+          "salinity_psu": 7.4,
+          "source": "HELCOM",
+          "species": "Cyanea capillata"
+        },
+        "type": "Feature"
+      }
+    ],
+    "type": "FeatureCollection",
+    "id": "obs-2"
+  },
+  {
+    "features": [
+      {
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            12.9,
+            55.35
+          ]
+        },
+        "properties": {
+          "abundance": "low",
+          "depth_m": 6.5,
+          "observationTime": "2026-03-12T10:45:00Z",
+          "provenance_urls": [
+            "HELCOM OWS"
+          ],
+          "salinity_psu": 7.1,
+          "source": "HELCOM",
+          "species": "Aurelia aurita"
+        },
+        "type": "Feature"
+      }
+    ],
+    "type": "FeatureCollection",
+    "id": "obs-3"
+  }
+]

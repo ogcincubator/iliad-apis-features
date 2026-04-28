@@ -1,0 +1,30 @@
+@prefix ncf: <https://w3id.org/iliad/nerc-cf-standard-names/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/iliad/nerc-cf-standard-names/P07>
+    a ncf:CFStandardNameCollection ;
+    dct:identifier "P07" ;
+    owl:versionInfo "93" ;
+    skos:prefLabel "Climate and Forecast Standard Names" ;
+    skos:member <http://vocab.nerc.ac.uk/standard_name/sea_water_temperature/> ,
+        <http://vocab.nerc.ac.uk/standard_name/air_pressure/> .
+
+<http://vocab.nerc.ac.uk/standard_name/sea_water_temperature/>
+    a ncf:CFStandardName ;
+    skos:prefLabel "sea_water_temperature" ;
+    skos:definition "In-situ temperature of sea water." ;
+    skos:notation "CFSN0335" ;
+    skos:inScheme <https://w3id.org/iliad/nerc-cf-standard-names/P07> ;
+    ncf:authoritativeConceptURI "http://vocab.nerc.ac.uk/standard_name/sea_water_temperature/" ;
+    ncf:preferredUnit "kelvin" .
+
+<http://vocab.nerc.ac.uk/standard_name/air_pressure/>
+    a ncf:CFStandardName ;
+    skos:prefLabel "air_pressure" ;
+    skos:definition "Force per unit area exerted by air." ;
+    skos:notation "CFSN0015" ;
+    skos:inScheme <https://w3id.org/iliad/nerc-cf-standard-names/P07> ;
+    ncf:authoritativeConceptURI "http://vocab.nerc.ac.uk/standard_name/air_pressure/" ;
+    ncf:preferredUnit "pascal" .

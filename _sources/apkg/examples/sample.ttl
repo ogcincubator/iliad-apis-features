@@ -1,0 +1,87 @@
+@prefix apkg: <http://purl.org/apkg#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <https://w3id.org/iliad/apkg/examples/> .
+@prefix schema: <http://schema.org/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:registry a apkg:Registry ;
+    schema:name "ILIAD APKG Registry" ;
+    schema:url "https://github.com/ILIAD-ocean-twin/APKG" .
+
+ex:author a apkg:Person ;
+    schema:name "ILIAD Marine Data Team" ;
+    schema:email "info@example.com" .
+
+ex:producer a apkg:Organisation ;
+    schema:name "ILIAD Ocean Twin" ;
+    schema:url "https://github.com/ILIAD-ocean-twin" ;
+    schema:address ex:address .
+
+ex:address a apkg:PostalAddress ;
+    schema:addressCountry "PT" .
+
+ex:geometry a apkg:Geometry ;
+    dct:type "Polygon" ;
+    schema:description "Application package spatial validity polygon for the Baltic pilot region." .
+
+ex:start a apkg:Instant ;
+    time:inXSDDateTime "2025-01-01T00:00:00Z"^^xsd:dateTime .
+
+ex:end a apkg:Instant ;
+    time:inXSDDateTime "2025-12-31T23:59:59Z"^^xsd:dateTime .
+
+ex:temporal a apkg:TemporalCoverage ;
+    time:hasBeginning ex:start ;
+    time:hasEnd ex:end .
+
+ex:inputParam a apkg:Parameter ;
+    dct:identifier "input-netcdf" ;
+    dct:type "File" ;
+    apkg:label "Input NetCDF" ;
+    apkg:doc "Primary NetCDF input file." ;
+    schema:fileFormat "application/x-netcdf" .
+
+ex:outputParam a apkg:Parameter ;
+    dct:identifier "output-json" ;
+    dct:type "File" ;
+    apkg:label "Output JSON" ;
+    apkg:doc "Processed JSON result." ;
+    schema:fileFormat "application/json" .
+
+ex:process a apkg:Process ;
+    dct:type "Workflow" ;
+    apkg:hasInput ex:inputParam ;
+    apkg:hasOutput ex:outputParam .
+
+ex:link a apkg:Link ;
+    dct:title "Source repository" ;
+    dct:type "self" ;
+    schema:url "https://github.com/ILIAD-ocean-twin/APKG" ;
+    dcat:mediaType "text/html" .
+
+ex:pkg a apkg:ApplicationPackage ;
+    schema:name "Baltic Application Package" ;
+    schema:description "An example application package described with the APKG metadata profile." ;
+    schema:keywords "marine", "workflow", "apkg" ;
+    dct:identifier "https://example.org/apkg/baltic-application-package/1.0.0"^^xsd:anyURI ;
+    apkg:family "https://example.org/apkg/baltic-application-package"^^xsd:anyURI ;
+    schema:softwareVersion "1.0.0" ;
+    apkg:latest true ;
+    schema:dateCreated "2025-01-15"^^xsd:date ;
+    schema:sdPublisher ex:registry ;
+    schema:sdDatePublished "2025-01-20"^^xsd:date ;
+    schema:url "https://example.org/apkg/baltic-application-package.cwl" ;
+    schema:license "https://eupl.eu/1.2/en/" ;
+    schema:author ex:author ;
+    schema:maintainer ex:author ;
+    schema:sourceOrganization ex:producer ;
+    schema:producer ex:producer ;
+    schema:spatialCoverage ex:geometry ;
+    schema:codeRepository "https://github.com/example/baltic-apkg" ;
+    schema:programmingLanguage "CWL" ;
+    apkg:originalURL "https://example.org/apkg/baltic-application-package.cwl" ;
+    apkg:hasGeometry ex:geometry ;
+    apkg:hasTemporalCoverage ex:temporal ;
+    apkg:hasLink ex:link .

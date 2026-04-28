@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>ILIAD — Check-in a data source</title>
+<title>SeaDOTs — Check-in a building block</title>
 <link rel="stylesheet" href="/static/style.css" />
 </head>
 <body>
@@ -28,15 +28,27 @@
     <div id="related" class="note"></div>
   </section>
 
+  <section id="step-vocab-sources" class="step">
+    <h2>3. Vocabulary sources</h2>
+    <p class="muted">Select and order the vocabularies used to suggest property mappings. Local bblocks are first by default. Drag rows or use arrows to reorder. Uncheck to exclude.</p>
+    <div id="vocab-source-list"></div>
+    <div class="custom-vocab-row">
+      <input id="custom-vocab-url" type="text" placeholder="https://example.org/my-ontology.ttl" />
+      <button id="btn-load-custom-vocab">Load TTL</button>
+      <span id="custom-vocab-status" class="muted"></span>
+    </div>
+    <button id="btn-confirm-sources">Confirm sources &amp; continue</button>
+  </section>
+
   <section id="step-vocab" class="step">
-    <h2>3. Acknowledge vocabulary mappings (for source fields present in both)</h2>
-    <p class="muted">Each property is matched against context.jsonld + OIM/*.ttl. Pick one per row or skip.</p>
+    <h2>4. Acknowledge vocabulary mappings</h2>
+    <p class="muted">Each property is matched against the selected vocabularies in priority order. Pick one per row or skip.</p>
     <div id="vocab-rows"></div>
     <button id="btn-ack">Acknowledge</button>
   </section>
 
   <section id="step-transformer" class="step">
-    <h2>4. Transformer — field mapping</h2>
+    <h2>5. Transformer — field mapping</h2>
     <div id="transformer-list"></div>
     <details id="params-details" open>
       <summary>Transformer parameters</summary>
@@ -56,16 +68,28 @@
   </section>
 
   <section id="step-finalize" class="step">
-    <h2>5. Stage the new building block</h2>
-    <label>bblock id <input id="bb-id" type="text" placeholder="my-new-bblock" /></label>
+    <h2>6. Stage building blocks</h2>
+    <p class="muted">Two building blocks will be staged: <strong id="bb-id-preview-src">…-source</strong> (raw source format) and <strong id="bb-id-preview-tgt">…</strong> (canonical transformed format).</p>
+    <label>Base id <input id="bb-id" type="text" placeholder="my-new-bblock" /></label>
     <label>Title <input id="bb-title" type="text" /></label>
     <label>Abstract <textarea id="bb-abstract" rows="2"></textarea></label>
-    <button id="btn-finalize">Stage</button>
+    <button id="btn-finalize">Stage both</button>
     <pre id="finalize-output" class="output"></pre>
-    <button id="btn-promote">Promote to _sources/</button>
+    <button id="btn-promote">Promote both to _sources/</button>
     <pre id="promote-output" class="output"></pre>
   </section>
 </main>
+
+<!-- Vocabulary browser popup -->
+<dialog id="vocab-browser" hidden>
+  <div class="vb-header">
+    <strong>Browse vocabulary terms</strong>
+    <button id="vb-close" class="vb-close-btn">✕</button>
+  </div>
+  <input id="vb-search" type="text" placeholder="Filter by name, label or URI…" autocomplete="off" />
+  <div id="vb-status" class="muted" style="font-size:0.8rem;margin:0.3rem 0;"></div>
+  <div id="vb-list" class="vb-list"></div>
+</dialog>
 
 <script src="/static/wizard.js"></script>
 </body>

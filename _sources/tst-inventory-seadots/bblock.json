@@ -23,7 +23,7 @@
   "ldContext": "context.jsonld",
   "tests": "tests/test.yaml",
   "dependsOn": [
-    "stac_multidim_data"
+    "ogc.hosted.iliad.api.features.stac_multidim_data"
   ],
   "shaclRules": [],
   "sources": [

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "helcom_data_transformation",
+  "description": "Extension of macroobservation with extras contributed by check-in.",
+  "allOf": [
+    {
+      "$ref": "bblocks://ogc.hosted.iliad.api.features.macroobservation"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "from source path id"
+        }
+      }
+    }
+  ]
+}

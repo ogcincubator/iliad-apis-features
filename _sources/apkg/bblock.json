@@ -1,0 +1,45 @@
+{
+  "name": "Application Package Metadata Application Profile",
+  "abstract": "Defines the APKG-MAP application package metadata profile for software application packages, processes, parameters, temporal coverage, geometry, links, and secrets as described in the ILIAD APKG repository.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-04-28T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "1.0",
+  "dateOfLastChange": "2026-04-28",
+  "dependsOn": [],
+  "shaclRules": [
+    "rules.shacl"
+  ],
+  "sources": [
+    {
+      "title": "APKG repository",
+      "link": "https://github.com/ILIAD-ocean-twin/APKG"
+    },
+    {
+      "title": "APKG metadata terms",
+      "link": "https://github.com/ILIAD-ocean-twin/APKG/blob/main/terms/apkg-ms.ttl"
+    },
+    {
+      "title": "APKG profile context",
+      "link": "https://github.com/ILIAD-ocean-twin/APKG/blob/main/apkg-profile-context.jsonld"
+    }
+  ],
+  "vocabularies": [
+    {
+      "title": "APKG metadata terms Turtle",
+      "url": "https://raw.githubusercontent.com/ILIAD-ocean-twin/APKG/main/terms/apkg-ms.ttl",
+      "format": "text/turtle",
+      "role": "authoritative"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "iliad",
+    "apkg",
+    "application-package",
+    "metadata",
+    "model",
+    "cwl"
+  ]
+}

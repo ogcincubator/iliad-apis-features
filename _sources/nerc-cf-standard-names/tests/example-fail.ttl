@@ -1,0 +1,6 @@
+@prefix ncf: <https://w3id.org/iliad/nerc-cf-standard-names/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://vocab.nerc.ac.uk/standard_name/sea_water_temperature/>
+    a ncf:CFStandardName ;
+    skos:prefLabel "sea_water_temperature" .

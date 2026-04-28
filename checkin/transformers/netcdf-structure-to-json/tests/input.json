@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "title": "Baltic demo dataset",
+    "institution": "ILIAD",
+    "Conventions": "CF-1.9"
+  },
+  "dimensions": [
+    {
+      "name": "time",
+      "size": 24,
+      "dtype": "datetime64[ns]",
+      "units": "hours since 2026-01-01T00:00:00Z",
+      "attrs": {
+        "standard_name": "time"
+      }
+    },
+    {
+      "name": "depth",
+      "size": 10,
+      "dtype": "float32",
+      "units": "m",
+      "attrs": {
+        "positive": "down"
+      }
+    }
+  ],
+  "dimensions_by_name": {
+    "time": {
+      "name": "time",
+      "size": 24,
+      "dtype": "datetime64[ns]",
+      "units": "hours since 2026-01-01T00:00:00Z",
+      "attrs": {
+        "standard_name": "time"
+      }
+    },
+    "depth": {
+      "name": "depth",
+      "size": 10,
+      "dtype": "float32",
+      "units": "m",
+      "attrs": {
+        "positive": "down"
+      }
+    }
+  },
+  "coordinates": [
+    {
+      "name": "time",
+      "kind": "coordinate",
+      "dtype": "datetime64[ns]",
+      "dimensions": ["time"],
+      "shape": [24],
+      "attrs": {
+        "standard_name": "time",
+        "units": "hours since 2026-01-01T00:00:00Z"
+      },
+      "units": "hours since 2026-01-01T00:00:00Z",
+      "long_name": "time"
+    }
+  ],
+  "coordinates_by_name": {
+    "time": {
+      "name": "time",
+      "kind": "coordinate",
+      "dtype": "datetime64[ns]",
+      "dimensions": ["time"],
+      "shape": [24],
+      "attrs": {
+        "standard_name": "time",
+        "units": "hours since 2026-01-01T00:00:00Z"
+      },
+      "units": "hours since 2026-01-01T00:00:00Z",
+      "long_name": "time"
+    }
+  },
+  "variables": [
+    {
+      "name": "sea_water_temperature",
+      "kind": "data",
+      "dtype": "float32",
+      "dimensions": ["time", "depth"],
+      "shape": [24, 10],
+      "attrs": {
+        "units": "degC",
+        "long_name": "Sea Water Temperature",
+        "standard_name": "sea_water_temperature"
+      },
+      "units": "degC",
+      "long_name": "Sea Water Temperature"
+    },
+    {
+      "name": "salinity",
+      "kind": "data",
+      "dtype": "float32",
+      "dimensions": ["time", "depth"],
+      "shape": [24, 10],
+      "attrs": {
+        "units": "1e-3",
+        "long_name": "Sea Water Salinity"
+      },
+      "units": "1e-3",
+      "long_name": "Sea Water Salinity"
+    }
+  ],
+  "variables_by_name": {
+    "sea_water_temperature": {
+      "name": "sea_water_temperature",
+      "kind": "data",
+      "dtype": "float32",
+      "dimensions": ["time", "depth"],
+      "shape": [24, 10],
+      "attrs": {
+        "units": "degC",
+        "long_name": "Sea Water Temperature",
+        "standard_name": "sea_water_temperature"
+      },
+      "units": "degC",
+      "long_name": "Sea Water Temperature"
+    },
+    "salinity": {
+      "name": "salinity",
+      "kind": "data",
+      "dtype": "float32",
+      "dimensions": ["time", "depth"],
+      "shape": [24, 10],
+      "attrs": {
+        "units": "1e-3",
+        "long_name": "Sea Water Salinity"
+      },
+      "units": "1e-3",
+      "long_name": "Sea Water Salinity"
+    }
+  }
+}

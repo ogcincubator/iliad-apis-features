@@ -27,7 +27,7 @@
   "ldContext": "context.jsonld",
   "tests": "tests/test.yaml",
   "dependsOn": [
-    "gfw-fishing-events"
+    "ogc.hosted.iliad.api.features.gfw-fishing-events"
   ],
   "shaclRules": [],
   "sources": [

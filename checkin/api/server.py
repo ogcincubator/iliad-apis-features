@@ -19,6 +19,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
+import copy
 
 from .. import STAGING_DIR
 from ..core import (
@@ -57,6 +58,46 @@ def _vocab() -> vocab_index.VocabIndex:
     if _VOCAB is None:
         _VOCAB = vocab_index.build_index()
     return _VOCAB
+
+
+def _session_vocab(sess: dict[str, Any]) -> vocab_index.VocabIndex:
+    if "vocab_index" not in sess:
+        sess["vocab_index"] = copy.deepcopy(_vocab())
+    return sess["vocab_index"]
+
+
+def _load_declared_vocabularies(
+    sess: dict[str, Any],
+    entries: list[bblock_index.BBlockEntry],
+) -> dict[str, list[str]]:
+    loaded: list[str] = []
+    failed: list[str] = []
+    declared_urls: list[str] = []
+    existing = {
+        src.uri
+        for src in sess.get("custom_vocab_sources", [])
+        if getattr(src, "uri", "")
+    }
+    sess_vocab = None
+
+    for entry in entries:
+        for vocab_decl in entry.vocabularies:
+            url = vocab_decl.get("url", "").strip()
+            if not url.startswith(("http://", "https://")):
+                continue
+            if url in existing or url in declared_urls:
+                continue
+            declared_urls.append(url)
+            try:
+                sess_vocab = sess_vocab or _session_vocab(sess)
+                source = vocab_index.add_custom_source(url, sess_vocab)
+                sess.setdefault("custom_vocab_sources", []).append(source)
+                existing.add(url)
+                loaded.append(url)
+            except Exception:
+                failed.append(url)
+
+    return {"loaded": loaded, "failed": failed}
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -118,9 +159,139 @@ class ChooseBBlockIn(BaseModel):
 def choose_bblock(body: ChooseBBlockIn) -> dict:
     sess = _require_session(body.session_id)
     sess["chosen_bblock"] = body.bblock_id
-    related_entries = bblock_match.related(body.bblock_id, _bb()) if body.bblock_id else []
+    bb_index = _bb()
+    related_entries = bblock_match.related(body.bblock_id, bb_index) if body.bblock_id else []
     sess["related"] = [{"id": r.id, "title": r.title} for r in related_entries]
-    return {"ok": True, "related": sess["related"]}
+    chosen_entry = next((entry for entry in bb_index if entry.id == body.bblock_id), None) if body.bblock_id else None
+    vocab_load = _load_declared_vocabularies(
+        sess,
+        ([chosen_entry] if chosen_entry else []) + related_entries,
+    )
+    return {"ok": True, "related": sess["related"], "vocabularies": vocab_load}
+
+
+@app.get("/api/vocab-sources/{session_id}")
+def vocab_sources(session_id: str) -> dict:
+    """Return ordered list of vocabulary sources for this session.
+
+    Default order: local (0) → OIM (1) → imported (2) → custom (3).
+    Session may override via /api/configure-vocab-sources.
+    """
+    sess = _require_session(session_id)
+    vocab = _vocab()
+    # Merge session custom sources into the global list
+    session_sources = list(vocab.sources)
+    for cs in sess.get("custom_vocab_sources", []):
+        if not any(s.id == cs.id for s in session_sources):
+            session_sources.append(cs)
+    # Apply session priority override
+    priority_order: list[str] = sess.get("vocab_source_priority", [])
+    disabled: set[str] = set(sess.get("vocab_source_disabled", []))
+    if priority_order:
+        ordered = sorted(
+            session_sources,
+            key=lambda s: (
+                priority_order.index(s.id) if s.id in priority_order else 9999,
+                s.provenance_level,
+            ),
+        )
+    else:
+        ordered = sorted(session_sources, key=lambda s: (s.provenance_level, s.id))
+    return {
+        "sources": [
+            {**s.as_dict(), "enabled": s.id not in disabled}
+            for s in ordered
+        ]
+    }
+
+
+class ConfigureVocabSourcesIn(BaseModel):
+    session_id: str
+    source_priority: list[str] = []   # ordered list of source ids (highest priority first)
+    disabled: list[str] = []          # source ids to exclude from matching
+
+
+@app.post("/api/configure-vocab-sources")
+def configure_vocab_sources(body: ConfigureVocabSourcesIn) -> dict:
+    sess = _require_session(body.session_id)
+    sess["vocab_source_priority"] = body.source_priority
+    sess["vocab_source_disabled"] = body.disabled
+    return {"ok": True}
+
+
+class AddCustomVocabIn(BaseModel):
+    session_id: str
+    url: str
+
+
+@app.post("/api/add-custom-vocab")
+def add_custom_vocab(body: AddCustomVocabIn) -> dict:
+    """Fetch a TTL from *url*, add its terms to a session-local vocab index."""
+    import re
+    sess = _require_session(body.session_id)
+    sess_vocab = _session_vocab(sess)
+    try:
+        source = vocab_index.add_custom_source(body.url, sess_vocab)
+    except Exception as exc:
+        raise HTTPException(400, f"failed to load vocabulary from {body.url}: {exc}") from exc
+    sess.setdefault("custom_vocab_sources", []).append(source)
+    slug = re.sub(r"[^a-z0-9]+", "-", body.url.lower().split("://", 1)[-1]).strip("-")[:48]
+    return {
+        "ok": True,
+        "source": source.as_dict(),
+        "suggested_bb_id": f"vocab-{slug}",
+    }
+
+
+@app.get("/api/vocab-search/{session_id}")
+def vocab_search(session_id: str, q: str = "", limit: int = 200) -> dict:
+    """Return all terms from enabled vocab sources, optionally filtered by *q*.
+
+    Searches term name, label, and URI. Results are ordered by source priority
+    then alphabetically by term. Intended for the browse-all popup in the UI.
+    """
+    sess = _require_session(session_id)
+    vidx = sess.get("vocab_index") or _vocab()
+    priority: list[str] = sess.get("vocab_source_priority") or []
+    disabled: set[str] = set(sess.get("vocab_source_disabled") or [])
+    q_lower = q.strip().lower()
+
+    def _prio(source_id: str) -> int:
+        try:
+            return priority.index(source_id)
+        except ValueError:
+            return 9999
+
+    seen_uris: set[str] = set()
+    results: list[dict] = []
+    # Iterate all unique terms in index order
+    for term_str, terms in vidx.by_term.items():
+        for t in terms:
+            if t.source_id in disabled:
+                continue
+            if t.uri in seen_uris:
+                continue
+            if q_lower and not (
+                q_lower in t.term.lower()
+                or q_lower in (t.label or "").lower()
+                or q_lower in t.uri.lower()
+            ):
+                continue
+            seen_uris.add(t.uri)
+            results.append({
+                "term": t.term,
+                "uri": t.uri,
+                "label": t.label or t.term,
+                "source": t.source,
+                "source_id": t.source_id,
+                "kind": t.kind,
+                "_prio": _prio(t.source_id),
+            })
+
+    results.sort(key=lambda r: (r["_prio"], r["term"].lower()))
+    for r in results:
+        del r["_prio"]
+    return {"terms": results[:limit], "total_matched": len(results)}
 
 
 @app.get("/api/vocab-candidates/{session_id}")
@@ -128,7 +299,13 @@ def vocab_candidates(session_id: str) -> dict:
     sess = _require_session(session_id)
     profile = sess["profile"]
     props = [p["name"] for p in profile["properties"]]
-    cands = vocab_match.match_properties(props, _vocab(), k=5)
+    # Use session-local vocab index if one exists (has custom sources merged in)
+    vidx = sess.get("vocab_index") or _vocab()
+    priority = sess.get("vocab_source_priority") or None
+    disabled = set(sess.get("vocab_source_disabled") or [])
+    cands = vocab_match.match_properties(props, vidx, k=5,
+                                         source_priority=priority,
+                                         disabled_sources=disabled)
     return {p: [c.as_dict() for c in cs] for p, cs in cands.items()}
 
 
@@ -238,11 +415,12 @@ def mapping_suggestion(session_id: str) -> dict:
 
 
 class ExtraProp(BaseModel):
-    source: str          # dotted path in source
+    source: str = ""     # dotted path in source (empty when expression is set)
+    expression: str = "" # expression template (alternative to source)
     name: str            # name in new bblock (user-editable)
     uri: str = ""        # selected vocab URI
     label: str = ""
-    source_src: str = ""  # bblock/ontology that defined the uri
+    source_src: str = "" # bblock/ontology that defined the uri
 
 
 class RunTransformerIn(BaseModel):
@@ -284,19 +462,60 @@ def finalize(body: FinalizeIn) -> dict:
     target_id = sess.get("chosen_bblock")
     target = next((e for e in _bb() if e.id == target_id), None) if target_id else None
 
-    ack = sess.get("acknowledged_vocab") or {}
-    mappings = [
-        bblock_writer.AcknowledgedMapping(
-            property_name=name, uri=info.get("uri", ""), label=info.get("label", ""), source=info.get("source", "")
-        )
-        for name, info in ack.items()
-    ]
-
     tf_state = sess.get("transformer") or {}
     tf_spec = None
     if tf_state.get("id"):
         specs = transformer_runner.load_library()
         tf_spec = next((s for s in specs if s.id == tf_state["id"]), None)
+
+    # Build source-field → output-property-name lookup from the transformer mappings.
+    # This lets us key context.jsonld by the transformed output name, not the raw source name.
+    tf_mappings: list[dict] = (tf_state.get("params") or {}).get("mappings") or []
+
+    def _output_leaf(path: str) -> str:
+        seg = re.sub(r"\[\d*\]$", "", path.rsplit(".", 1)[-1])
+        return seg
+
+    def _is_structural(leaf: str) -> bool:
+        # Numeric leaves (e.g. coordinates[0]) are positional, not semantic properties.
+        return leaf.isdigit() or (len(leaf) <= 2 and leaf.lstrip("-").isdigit())
+
+    # Map source path → output property leaf name.
+    # For single-placeholder expressions (e.g. "${species_name}" → "species") also resolve.
+    source_to_out: dict[str, str] = {}
+    for m in tf_mappings:
+        tgt = m.get("target", "")
+        if not tgt:
+            continue
+        leaf = _output_leaf(tgt)
+        if _is_structural(leaf):
+            continue
+        if "source" in m:
+            source_to_out[m["source"]] = leaf
+        elif "expression" in m:
+            placeholders = re.findall(r"\$\{([^}]+)\}", m["expression"])
+            if len(placeholders) == 1:
+                source_to_out[placeholders[0]] = leaf
+
+    # Build context mappings using transformed output names.
+    ack = sess.get("acknowledged_vocab") or {}
+    seen_out_names: set[str] = set()
+    mappings: list[bblock_writer.AcknowledgedMapping] = []
+    for src_name, info in ack.items():
+        if not info.get("uri"):
+            continue
+        out_name = source_to_out.get(src_name, src_name)
+        if out_name in seen_out_names:
+            continue  # e.g. lon + lat both fold into geometry — keep first
+        seen_out_names.add(out_name)
+        mappings.append(
+            bblock_writer.AcknowledgedMapping(
+                property_name=out_name,
+                uri=info["uri"],
+                label=info.get("label", ""),
+                source=info.get("source", ""),
+            )
+        )
 
     source_endpoint: dict[str, Any]
     source = sess["source"]
@@ -305,7 +524,7 @@ def finalize(body: FinalizeIn) -> dict:
         "local_path": source,
     }
 
-    # Add user-named extras as extra mapping entries with vocab URIs.
+    # Add user-named extras as additional context + schema entries.
     extra_mappings = [
         bblock_writer.AcknowledgedMapping(
             property_name=e.name, uri=e.uri, label=e.label, source=e.source_src
@@ -313,6 +532,34 @@ def finalize(body: FinalizeIn) -> dict:
         for e in (body.extras or [])
         if e.name and e.uri
     ]
+
+    extra_properties = [
+        {
+            "name": e.name,
+            "source": e.source if e.source else None,
+            "expression": e.expression if e.expression else None,
+            "uri": e.uri,
+        }
+        for e in (body.extras or [])
+    ]
+
+    # Source bblock context: source field names → vocab URIs (pre-resolution)
+    source_mappings = [
+        bblock_writer.AcknowledgedMapping(
+            property_name=src_name,
+            uri=info.get("uri", ""),
+            label=info.get("label", ""),
+            source=info.get("source", ""),
+        )
+        for src_name, info in ack.items()
+        if info.get("uri")
+    ]
+
+    # Vocab provenance metadata
+    vidx = sess.get("vocab_index") or _vocab()
+    vocab_versions = {s.id: f"{s.version} ({s.timestamp})" if s.version else s.timestamp
+                      for s in vidx.sources if s.enabled}
+    custom_vocab_urls = [cs.uri for cs in sess.get("custom_vocab_sources", [])]
 
     draft = bblock_writer.BBlockDraft(
         id=body.bb_id,
@@ -322,16 +569,28 @@ def finalize(body: FinalizeIn) -> dict:
         standards=(target.standards if target else []),
         depends_on=([target.id] if target else []),
         property_mappings=mappings + extra_mappings,
-        extra_properties=[{"name": e.name, "source": e.source, "uri": e.uri} for e in (body.extras or [])],
+        source_property_mappings=source_mappings,
+        source_properties=sess["profile"].get("properties") or [],
+        extra_properties=extra_properties,
         sample_feature=tf_state.get("output") or sess["profile"].get("sample"),
         source_endpoint=source_endpoint,
+        source_format=sess["sniff"]["format"],
         transformer_kind="library" if tf_spec else "local",
         transformer=tf_spec,
         transformer_params=tf_state.get("params") or {},
+        custom_vocab_urls=custom_vocab_urls,
+        vocab_source_versions=vocab_versions,
     )
-    target_path = bblock_writer.write_staged(draft, overwrite=body.overwrite)
-    sess["staged_path"] = str(target_path)
-    return {"ok": True, "staged_path": str(target_path)}
+    src_path, tgt_path = bblock_writer.write_staged_pair(draft, overwrite=body.overwrite)
+    sess["staged_source_id"] = f"{body.bb_id}-source"
+    sess["staged_target_id"] = body.bb_id
+    return {
+        "ok": True,
+        "source_id": f"{body.bb_id}-source",
+        "target_id": body.bb_id,
+        "source_path": str(src_path),
+        "target_path": str(tgt_path),
+    }
 
 
 class PromoteIn(BaseModel):
@@ -343,11 +602,14 @@ class PromoteIn(BaseModel):
 def promote(body: PromoteIn) -> dict:
     sess = _require_session(body.session_id)
     try:
-        dest = bblock_writer.promote(body.bb_id)
+        promoted = bblock_writer.promote(body.bb_id)
     except (FileNotFoundError, FileExistsError) as exc:
         raise HTTPException(400, str(exc)) from exc
-    sess["promoted_path"] = str(dest)
-    return {"ok": True, "promoted_path": str(dest)}
+    sess["promoted_paths"] = [str(p) for p in promoted]
+    return {
+        "ok": True,
+        "promoted": [str(p) for p in promoted],
+    }
 
 
 # ---- helpers ----

@@ -1,0 +1,53 @@
+@prefix ncf: <https://w3id.org/iliad/nerc-cf-standard-names/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ncf:CFCollectionShape
+    a sh:NodeShape ;
+    sh:targetClass ncf:CFStandardNameCollection ;
+    sh:property [
+        sh:path dct:identifier ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path owl:versionInfo ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path skos:prefLabel ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path skos:member ;
+        sh:minCount 1 ;
+        sh:class ncf:CFStandardName
+    ] .
+
+ncf:CFStandardNameShape
+    a sh:NodeShape ;
+    sh:targetClass ncf:CFStandardName ;
+    sh:property [
+        sh:path skos:prefLabel ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path skos:definition ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path skos:notation ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path skos:inScheme ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path ncf:authoritativeConceptURI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:anyURI
+    ] .

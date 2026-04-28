@@ -1,0 +1,9 @@
+@prefix apkg: <http://purl.org/apkg#> .
+@prefix ex: <https://w3id.org/iliad/apkg/examples/> .
+@prefix schema: <http://schema.org/> .
+
+ex:brokenLink a apkg:Link .
+
+ex:brokenPkg a apkg:ApplicationPackage ;
+    schema:name "Broken package" ;
+    apkg:hasLink ex:brokenLink .

@@ -26,10 +26,6 @@
     "https://globalfishingwatch.org/our-apis/documentation",
     "https://www.w3.org/TR/vocab-dcat-3/"
   ],
-  "schema": "schema.yaml",
-  "ldContext": "context.jsonld",
-  "examples": "examples.yaml",
-  "tests": "tests/test.yaml",
   "dependsOn": [],
   "sources": [
     {

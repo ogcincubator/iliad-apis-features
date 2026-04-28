@@ -1,0 +1,48 @@
+{
+  "name": "NERC CF Standard Names",
+  "abstract": "Profiles the NERC Vocabulary Server Climate and Forecast Standard Names collection for use in ILIAD and related OGC API metadata workflows.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-04-28T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc-incubator",
+  "version": "0.1",
+  "dateOfLastChange": "2026-04-28",
+  "dependsOn": [
+    "ogc.model.cross-domain.all"
+  ],
+  "shaclRules": [
+    "rules.shacl"
+  ],
+  "sources": [
+    {
+      "title": "NERC Vocabulary Server P07 Climate and Forecast Standard Names",
+      "link": "https://vocab.nerc.ac.uk/collection/P07/current/"
+    },
+    {
+      "title": "NERC CF Standard Name register view",
+      "link": "https://vocab.nerc.ac.uk/standard_name/"
+    },
+    {
+      "title": "CF Standard Name Table",
+      "link": "https://cfconventions.org/Data/cf-standard-names/current/build/cf-standard-name-table.html"
+    }
+  ],
+  "vocabularies": [
+    {
+      "title": "NERC CF standard names Turtle",
+      "url": "https://vocab.nerc.ac.uk/standard_name/?_profile=nvs&_mediatype=text/turtle",
+      "format": "text/turtle",
+      "profile": "nvs",
+      "role": "authoritative"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "iliad",
+    "nerc",
+    "cf",
+    "vocabulary",
+    "skos",
+    "model"
+  ]
+}

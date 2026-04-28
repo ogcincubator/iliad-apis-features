@@ -1,6 +1,6 @@
-# ILIAD Check-in Tool — Architecture
+# SeaDOTs Check-in Tool — Architecture
 
-The check-in tool is a guided wizard that registers a new data source against the ILIAD OGC Building Block ecosystem. It handles format detection, property profiling, building-block matching, vocabulary mapping, transformer configuration, and staged building-block emission — through both a CLI and a browser-based UI backed by a FastAPI server.
+The check-in tool is a guided wizard that registers a new data source against the  OGC Building Block ecosystem. It handles format detection, property profiling, building-block matching, vocabulary mapping, transformer configuration, and staged building-block emission — through both a CLI and a browser-based UI backed by a FastAPI server.
 
 ---
 
@@ -40,6 +40,7 @@ checkin/
 │   └── bblock_writer.py      # Staged bblock emission
 └── transformers/
     ├── csv-to-stac-item/
+    ├── netcdf-structure-to-json/
     ├── json-to-json-feature/
     ├── json-to-geoparquet/
     └── json-to-nested-json/
@@ -139,6 +140,7 @@ transformers/<name>/
 | Transformer | Input | Output | Notes |
 |---|---|---|---|
 | `csv-to-stac-item` | CSV rows (list of dicts) | STAC Item(s) | Derives geometry from `lon_field`/`lat_field` params |
+| `netcdf-structure-to-json` | NetCDF structure summary | JSON | Reorganizes metadata, dimensions, and variables with a recursive template |
 | `json-to-json-feature` | JSON object | GeoJSON Feature | Field-mapping configurable via params |
 | `json-to-geoparquet` | JSON records | GeoParquet | Uses `geopandas` |
 | `json-to-nested-json` | Any (JSON/CSV/…) | Arbitrary nested JSON | Universal; always surfaced regardless of input format |

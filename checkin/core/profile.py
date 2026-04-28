@@ -275,8 +275,64 @@ def _profile_netcdf(source: str) -> Profile:
         )
     _netcdf_extents(ds, p)
     p.meta["global_attrs"] = {k: str(v) for k, v in ds.attrs.items()}
+    p.sample = _netcdf_structure_sample(ds)
     ds.close()
     return p
+
+
+def _netcdf_structure_sample(ds: Any) -> dict[str, Any]:
+    dimensions: list[dict[str, Any]] = []
+    dimensions_by_name: dict[str, dict[str, Any]] = {}
+    for name, size in ds.sizes.items():
+        coord = ds.coords.get(name)
+        entry = {
+            "name": str(name),
+            "size": int(size),
+            "dtype": str(getattr(coord, "dtype", "")),
+            "units": str((getattr(coord, "attrs", {}) or {}).get("units", "")),
+            "attrs": {str(k): _json_safe(v) for k, v in ((getattr(coord, "attrs", {}) or {}).items())},
+        }
+        dimensions.append(entry)
+        dimensions_by_name[entry["name"]] = entry
+
+    coordinates = [_netcdf_variable_entry(name, coord, kind="coordinate") for name, coord in ds.coords.items()]
+    variables = [_netcdf_variable_entry(name, var, kind="data") for name, var in ds.data_vars.items()]
+    return {
+        "metadata": {str(k): _json_safe(v) for k, v in (ds.attrs or {}).items()},
+        "dimensions": dimensions,
+        "dimensions_by_name": dimensions_by_name,
+        "coordinates": coordinates,
+        "coordinates_by_name": {entry["name"]: entry for entry in coordinates},
+        "variables": variables,
+        "variables_by_name": {entry["name"]: entry for entry in variables},
+    }
+
+
+def _netcdf_variable_entry(name: str, var: Any, kind: str) -> dict[str, Any]:
+    attrs = getattr(var, "attrs", {}) or {}
+    return {
+        "name": str(name),
+        "kind": kind,
+        "dtype": str(getattr(var, "dtype", "")),
+        "dimensions": [str(dim) for dim in getattr(var, "dims", ())],
+        "shape": [int(s) for s in getattr(var, "shape", ())],
+        "attrs": {str(k): _json_safe(v) for k, v in attrs.items()},
+        "units": str(attrs.get("units", "")),
+        "long_name": str(attrs.get("long_name") or attrs.get("standard_name") or ""),
+    }
+
+
+def _json_safe(value: Any) -> Any:
+    if value is None or isinstance(value, (str, int, float, bool)):
+        return value
+    if isinstance(value, dict):
+        return {str(k): _json_safe(v) for k, v in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_json_safe(v) for v in value]
+    try:
+        return value.item()
+    except Exception:  # noqa: BLE001
+        return str(value)
 
 
 def _netcdf_extents(ds: Any, p: Profile) -> None:

@@ -1,0 +1,11 @@
+- title: NERC CF vocabulary example
+  description: Turtle example using the NERC P07 collection and two authoritative CF standard-name terms from the NERC Vocabulary Server.
+  snippets:
+    - language: ttl
+      ref: examples/sample.ttl
+
+- title: Invalid NERC CF concept example
+  description: Negative Turtle example missing required concept metadata.
+  snippets:
+    - language: ttl
+      ref: tests/example-fail.ttl

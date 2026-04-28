@@ -1,0 +1,153 @@
+{
+  "title": "helcom_data_transformation",
+  "abstract": "Auto-generated bblock from a csv source.",
+  "source": {
+    "title": "source",
+    "local_path": "/tmp/helcom_sample.csv"
+  },
+  "transformer": {
+    "kind": "library",
+    "id": "json-to-nested-json",
+    "params": {
+      "target_template": {},
+      "mappings": [
+        {
+          "expression": "{\"type\":\"Point\",\"coordinates\":[${lon},${lat}]}",
+          "target": "features[].geometry",
+          "type": "object"
+        },
+        {
+          "expression": "\"low\"",
+          "target": "features[].properties.abundance",
+          "type": "string"
+        },
+        {
+          "source": "depth_m",
+          "target": "features[].properties.depth_m",
+          "type": "number"
+        },
+        {
+          "source": "time",
+          "target": "features[].properties.observationTime",
+          "type": "string"
+        },
+        {
+          "expression": "\"HELCOM OWS\"",
+          "target": "features[].properties.provenance_urls",
+          "type": "array"
+        },
+        {
+          "source": "salinity_psu",
+          "target": "features[].properties.salinity_psu",
+          "type": "number"
+        },
+        {
+          "expression": "\"HELCOM\"",
+          "target": "features[].properties.source",
+          "type": "string"
+        },
+        {
+          "source": "species",
+          "target": "features[].properties.species",
+          "type": "string"
+        },
+        {
+          "expression": "\"Feature\"",
+          "target": "features[].type",
+          "type": "string"
+        },
+        {
+          "expression": "\"FeatureCollection\"",
+          "target": "type",
+          "type": "string"
+        },
+        {
+          "source": "id",
+          "target": "id"
+        }
+      ],
+      "passthrough_extras": false,
+      "target_bblock": "macroobservation"
+    }
+  },
+  "property_mappings": [
+    {
+      "property_name": "id",
+      "uri": "https://schema.org/identifier",
+      "label": "id",
+      "source": "gfw-fishing-events/context.jsonld"
+    },
+    {
+      "property_name": "lon",
+      "uri": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+      "label": "lon",
+      "source": "gfw-fishing-events/context.jsonld"
+    },
+    {
+      "property_name": "lat",
+      "uri": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+      "label": "lat",
+      "source": "gfw-fishing-events/context.jsonld"
+    },
+    {
+      "property_name": "observationTime",
+      "uri": "http://rs.tdwg.org/dwc/terms/eventTime",
+      "label": "event time",
+      "source": "OIM/oceanCommon.ttl"
+    },
+    {
+      "property_name": "species",
+      "uri": "http://rs.tdwg.org/dwc/terms/scientificName",
+      "label": "species",
+      "source": "macroobservation/context.jsonld"
+    },
+    {
+      "property_name": "depth_m",
+      "uri": "http://vocab.nerc.ac.uk/collection/P01/current/DEPHZZ01",
+      "label": "depth_m",
+      "source": "macroobservation/context.jsonld"
+    },
+    {
+      "property_name": "salinity_psu",
+      "uri": "http://vocab.nerc.ac.uk/collection/P01/current/PSALST01",
+      "label": "salinity_psu",
+      "source": "macroobservation/context.jsonld"
+    },
+    {
+      "property_name": "abundance",
+      "uri": "http://vocab.nerc.ac.uk/collection/P06",
+      "label": "abundance",
+      "source": "macroobservation/context.jsonld"
+    },
+    {
+      "property_name": "id",
+      "uri": "https://schema.org/identifier",
+      "label": "id",
+      "source": "gfw-fishing-events/context.jsonld"
+    }
+  ],
+  "vocab_sources": {
+    "local:coverageJSON": "0.1 (2023-12-07)",
+    "local:coverageJSONFisheries": "0.1 (2024-04-23)",
+    "local:coverage_information_model": "0.1 (2023-11-30)",
+    "local:gfw-fishing-events": "0.1.0 (2026-04-22)",
+    "local:iliad-jellyfish-features": "0.1 (2023-04-05)",
+    "local:macroobservation": "0.1.0 (2025-09-22)",
+    "local:marine-protected-area-emodnet": "1.0 (2025-09-22)",
+    "local:oim-bio-tdwg": "0.1 (2023-04-05)",
+    "local:oim-obs": "0.1 (2023-04-05)",
+    "local:oim-obs-cs": "0.1 (2023-04-05)",
+    "local:oim-sta-obs": "0.1 (2023-06-05)",
+    "local:stac_multidim_data": "0.1 (2024-10-11)",
+    "local:tst-inventory-seadots": "0.1.0 (2026-04-24)",
+    "local:zarr_array_metadata": "0.1 (2024-09-25)",
+    "local:zarr_attrs_metadata": "0.1 (2024-09-25)",
+    "local:zarr_attrs_sdn": "0.1 (2025-01-25)",
+    "oim:cross-domain": "3.0 (2024-09-06T09:21:36Z)",
+    "oim:metadata": "1.0 (2024-09-06T09:21:36Z)",
+    "oim:oceanCommon": "1.0 (2024-09-06T09:21:36Z)",
+    "oim:oceanProperty": "1.0 (2024-09-06T09:39:51Z)",
+    "oim:oimOceanProfile": "1.0 (2024-09-06T09:21:36Z)"
+  },
+  "custom_vocab_urls": []
+}

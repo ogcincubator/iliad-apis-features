@@ -62,6 +62,9 @@ def _resolve_expression(expr: str, input_obj: Any) -> Any:
             return "true" if val else "false"
         if isinstance(val, (int, float)):
             return repr(val) if isinstance(val, float) else str(val)
+        num = _maybe_number_literal(val)
+        if num is not None:
+            return num
         return json.dumps(str(val))  # quoted string
 
     result = _PLACEHOLDER_RE.sub(_sub, expr)
@@ -71,6 +74,23 @@ def _resolve_expression(expr: str, input_obj: Any) -> Any:
         return json.loads(result)
     except (json.JSONDecodeError, ValueError):
         return result
+
+
+def _maybe_number_literal(value: Any) -> str | None:
+    if not isinstance(value, str):
+        return None
+    s = value.strip()
+    if not s:
+        return None
+    # Accept decimal commas for common lat/lon CSV inputs like "12,5".
+    normalized = s.replace(",", ".")
+    try:
+        num = float(normalized)
+    except ValueError:
+        return None
+    if num.is_integer() and re.fullmatch(r"[+-]?\d+", normalized):
+        return str(int(num))
+    return repr(num)
 
 
 def dig(obj: Any, path: str) -> Any:
@@ -97,17 +117,21 @@ def dig(obj: Any, path: str) -> Any:
     return cur
 
 
-def put(obj: Any, path: str, value: Any) -> None:
+def put(obj: Any, path: str, value: Any, append_cache: dict[tuple[str, ...], int] | None = None) -> None:
     tokens = _tokens(path)
     if not tokens:
         return
     cur = obj
+    if append_cache is None:
+        append_cache = {}
+    prefix: list[str] = []
     for i, (kind, arg) in enumerate(tokens):
         last = i == len(tokens) - 1
         next_is_list = not last and tokens[i + 1][0] == "list"
         if kind == "key":
             if not isinstance(cur, dict):
                 return
+            prefix.append(str(arg))
             if last:
                 cur[arg] = value
             else:
@@ -118,12 +142,24 @@ def put(obj: Any, path: str, value: Any) -> None:
             if not isinstance(cur, list):
                 return
             if arg is None:
-                # append
+                cache_key = tuple(prefix + ["[]"])
                 if last:
-                    cur.append(value)
+                    idx = append_cache.get(cache_key)
+                    if idx is None or idx >= len(cur):
+                        cur.append(value)
+                        append_cache[cache_key] = len(cur) - 1
+                    else:
+                        cur[idx] = value
                     return
-                cur.append([] if next_is_list else {})
-                cur = cur[-1]
+                idx = append_cache.get(cache_key)
+                if idx is None or idx >= len(cur):
+                    cur.append([] if next_is_list else {})
+                    idx = len(cur) - 1
+                    append_cache[cache_key] = idx
+                elif cur[idx] is None or not _container_matches(cur[idx], next_is_list):
+                    cur[idx] = [] if next_is_list else {}
+                cur = cur[idx]
+                prefix.append("[]")
             else:
                 while len(cur) <= arg:
                     cur.append(None)
@@ -133,6 +169,7 @@ def put(obj: Any, path: str, value: Any) -> None:
                     if cur[arg] is None or not _container_matches(cur[arg], next_is_list):
                         cur[arg] = [] if next_is_list else {}
                     cur = cur[arg]
+                prefix.append(str(arg))
 
 
 def _container_matches(v: Any, want_list: bool) -> bool:
@@ -186,6 +223,7 @@ def _one(input_obj: Any, params: dict) -> Any:
     out: Any = copy.deepcopy(params.get("target_template", {}))
     if not isinstance(out, dict):
         out = {}
+    append_cache: dict[tuple[str, ...], int] = {}
     for m in mappings:
         if "expression" in m:
             value = _resolve_expression(m["expression"], input_obj)
@@ -201,7 +239,7 @@ def _one(input_obj: Any, params: dict) -> Any:
                 else:
                     continue
         value = coerce(value, m.get("type", ""))
-        put(out, m["target"], value)
+        put(out, m["target"], value, append_cache=append_cache)
     if params.get("passthrough_extras") and isinstance(input_obj, dict):
         referenced = _mapping_source_roots(mappings)
         extras = {k: v for k, v in input_obj.items() if k not in referenced}

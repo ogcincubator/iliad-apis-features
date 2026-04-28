@@ -159,14 +159,18 @@ def main(source: str, name: str | None, title: str | None, non_interactive: bool
         standards=target.standards if target else [],
         depends_on=[target.id] if target else [],
         property_mappings=acks,
+        source_property_mappings=acks,  # CLI doesn't resolve source→target names
+        source_properties=[p.__dict__ for p in prof.properties],
+        source_format=sniff.format,
         sample_feature=tf_run.output if tf_run and tf_run.ok else prof.sample,
         source_endpoint={"title": "source", "link": source} if sniff.is_url else {"title": "source", "local_path": source},
         transformer_kind="library" if tf_spec else "local",
         transformer=tf_spec,
         transformer_params=params,
     )
-    out = bblock_writer.write_staged(draft, overwrite=True)
-    console.print(f"[bold green]Staged[/bold green] → {out}")
+    src_out, tgt_out = bblock_writer.write_staged_pair(draft, overwrite=True)
+    console.print(f"[bold green]Staged[/bold green] → {src_out}  (source)")
+    console.print(f"[bold green]Staged[/bold green] → {tgt_out}  (target)")
     console.print("Next: review, then run [cyan]/validate-bblock _sources/_staging/%s[/cyan] and promote." % bb_id)
 
 

@@ -8,7 +8,7 @@ Interactive wizard (CLI + web) that registers a new data source into the ILIAD O
 2. **Profile** the source: detect format, extract properties, dimensions, spatial/temporal extent.
 3. **Match** the profile against existing building blocks in `_sources/`.
 4. **Propose** related bblocks based on OGC standards (STAC alongside Coverage, EDR alongside Features, …).
-5. **Map vocabularies** — properties auto-matched against the local vocab index built from every `context.jsonld` and `OIM/*.ttl`; user acknowledges each mapping.
+5. **Map vocabularies** — properties auto-matched against the local vocab index built from every `context.jsonld`, `OIM/*.ttl`, and any bblock-declared remote vocabulary URLs in `bblock.json > vocabularies`; user acknowledges each mapping.
 6. **Transformer** — reuse a library transformer or generate a bblock-local one; execute it on sample data and validate the output against the canonical schema.
 7. **Stage** a new bblock at `_sources/_staging/<name>/`.
 8. **Validate** via `ogcincubator/bblocks-postprocess`.

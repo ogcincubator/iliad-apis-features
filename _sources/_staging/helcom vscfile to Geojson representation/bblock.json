@@ -29,7 +29,7 @@
   "ldContext": "context.jsonld",
   "tests": "tests/test.yaml",
   "dependsOn": [
-    "macroobservation"
+    "ogc.hosted.iliad.api.features.macroobservation"
   ],
   "shaclRules": [],
   "sources": [

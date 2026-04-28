@@ -10,7 +10,6 @@
   "dependsOn": [
     "ogc.model.cross-domain.all"
   ],
-  "ontology": "ontology.ttl",
   "shaclRules": [
     "rules.shacl"
   ],

@@ -17,6 +17,7 @@ imports:
   - https://ogcincubator.github.io/cross-domain-model/
   - https://ogcincubator.github.io/bblocks-sta/
   - https://ogcincubator.github.io/bblocks-stac/
+  - https://ogcincubator.github.io/bblocks-openscience/
 
 sparql:
   push: http://defs-hosted.opengis.net/fuseki-hosted/data
