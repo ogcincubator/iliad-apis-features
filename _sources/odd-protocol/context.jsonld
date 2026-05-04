@@ -1,0 +1,162 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "odd": "https://w3id.org/iliad/odd#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "qudt": "http://qudt.org/schema/qudt/",
+    "schema": "https://schema.org/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "bibo": "http://purl.org/ontology/bibo/",
+    "osc": "https://github.com/ILIAD-ocean-twin/OIM/blob/main/openscience#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "purpose": {
+      "@id": "odd:purpose"
+    },
+    "patterns": {
+      "@id": "odd:patterns",
+      "@container": "@list"
+    },
+    "entities": {
+      "@id": "odd:entities",
+      "@container": "@list"
+    },
+    "processOverview": {
+      "@id": "odd:processOverview"
+    },
+    "designConcepts": {
+      "@id": "odd:designConcepts"
+    },
+    "initialization": {
+      "@id": "odd:initialization"
+    },
+    "inputData": {
+      "@id": "odd:inputData",
+      "@container": "@list"
+    },
+    "submodels": {
+      "@id": "odd:submodels",
+      "@container": "@list"
+    },
+    "name": {
+      "@id": "dcterms:title"
+    },
+    "description": {
+      "@id": "dcterms:description"
+    },
+    "reference": {
+      "@id": "dcterms:references",
+      "@type": "@id"
+    },
+    "entityType": {
+      "@id": "odd:entityType"
+    },
+    "stateVariables": {
+      "@id": "odd:stateVariables",
+      "@container": "@list"
+    },
+    "scales": {
+      "@id": "odd:scales"
+    },
+    "spatial": {
+      "@id": "odd:spatialScale"
+    },
+    "temporal": {
+      "@id": "odd:temporalScale"
+    },
+    "unit": {
+      "@id": "qudt:unit"
+    },
+    "range": {
+      "@id": "odd:range"
+    },
+    "type": {
+      "@id": "odd:variableType"
+    },
+    "vocabularyTerm": {
+      "@id": "skos:exactMatch",
+      "@type": "@id"
+    },
+    "scheduling": {
+      "@id": "odd:scheduling"
+    },
+    "processes": {
+      "@id": "odd:processes",
+      "@container": "@list"
+    },
+    "executedBy": {
+      "@id": "odd:executedBy"
+    },
+    "basicPrinciples": {
+      "@id": "odd:basicPrinciples"
+    },
+    "emergence": {
+      "@id": "odd:emergence"
+    },
+    "adaptation": {
+      "@id": "odd:adaptation"
+    },
+    "objectives": {
+      "@id": "odd:objectives"
+    },
+    "learning": {
+      "@id": "odd:learning"
+    },
+    "prediction": {
+      "@id": "odd:prediction"
+    },
+    "sensing": {
+      "@id": "odd:sensing"
+    },
+    "interaction": {
+      "@id": "odd:interaction"
+    },
+    "stochasticity": {
+      "@id": "odd:stochasticity"
+    },
+    "collectives": {
+      "@id": "odd:collectives"
+    },
+    "observation": {
+      "@id": "odd:observation"
+    },
+    "seed": {
+      "@id": "odd:randomSeed"
+    },
+    "source": {
+      "@id": "dcat:accessURL",
+      "@type": "@id"
+    },
+    "format": {
+      "@id": "dcterms:format"
+    },
+    "temporalCoverage": {
+      "@id": "dcterms:temporal"
+    },
+    "equations": {
+      "@id": "odd:equations"
+    },
+    "parameterization": {
+      "@id": "odd:parameterization"
+    },
+    "links": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "href": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "rel": {
+      "@id": "odd:linkRel"
+    },
+    "title": {
+      "@id": "dcterms:title"
+    }
+  }
+}

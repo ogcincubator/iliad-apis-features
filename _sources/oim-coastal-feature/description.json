@@ -1,0 +1,65 @@
+{
+  "title": "OIM Coastal Feature",
+  "abstract": "OIM profile for features in the intertidal and coastal zone (the 'white ribbon'), encoding elevation with vertical datum, tidal context, data lineage, gap-fill documentation, and scalable resolution metadata. Implements FMSDI Best Practices 1 (Unified Geospatial Reference), 3 (Mind the Gap), and 5 (Scalable Resolution Management).",
+  "description": "The OIM Coastal Feature building block provides a GeoJSON Feature profile for observations and derived products in the intertidal zone — the 'white ribbon' — and its adjoining land and marine domains. It addresses the five interrelated data challenges identified in the OGC FMSDI 2024 Pilot (document 24-064): multiple data types, multiple resolutions, multiple vertical datums, multiple temporal dimensions, and multiple governance frameworks.\n\n## The White Ribbon Concept\n\nThe intertidal zone, first described as the 'white ribbon' by the British Geological Survey, is the strip of coastline that alternates between exposure at low tide and submersion at high tide. It is notoriously under-surveyed because it lies at the jurisdictional boundary between land agencies (who survey to the low-water mark) and hydrographic offices (who survey from navigable depths). The FMSDI pilot identified this gap as a primary use case: Compusult's demonstrator showed that available elevation datasets extended only to the low water mark, requiring bathymetric data supplementation and interpolation.\n\nThe `featureDomain` property ('land', 'intertidal', 'marine') is a fundamental discriminator. It enables downstream workflows to apply domain-appropriate processing — for example, applying ODN (up convention) to land features and Chart Datum (down convention) to marine features — without guessing from geometry alone.\n\n## 4D Nature of Intertidal Data\n\nFMSDI (document 24-064, section on Multiple Dimensions) states: 'Intertidal data is not static. Elevation, time, and uncertainty are critical dimensions in feature representation, requiring support for 4D spatio-temporal models in analysis and display.'\n\nThis building block enforces:\n1. Elevation value with unit (SI metres mandatory)\n2. Vertical datum including orientation convention\n3. Capture date-time (ISO 8601)\n4. Quantified uncertainty (1-sigma)\n\n## Gap Filling Requirements (FMSDI Best Practice 3)\n\nFMSDI BP3 (Mind the Gap) establishes a strict hierarchy for addressing white ribbon voids:\n1. First, attempt new direct observations: satellite-derived elevation (SDB, stereo), airborne topo-bathy LiDAR, targeted sonar/UAV surveys\n2. Only if direct observation is not feasible, apply interpolation — this is explicitly described as a 'last resort'\n\nWhen interpolation is applied, FMSDI BP3 mandates: (a) select the method based on geomorphology; (b) document all introduced artefacts and assumptions; (c) quantify error metrics and confidence levels.\n\nThe `gapFilled=true` flag triggers a schema requirement for `interpolationMethod`. The `confidenceLevel` field should be set to 'estimated' or 'low' for gap-filled features in dynamic coastal systems where interpolation may misrepresent morphology.\n\n## Vertical Orientation Consistency\n\nThe `verticalOrientation` field in the embedded `verticalDatum` object is the single most critical datum metadata element for land-sea integration. Land surveys (LiDAR, levelling) use orientation='up' where positive values indicate higher elevation. Hydrographic surveys use orientation='down' where positive values indicate greater depth below the chart datum.\n\nThe Compusult FMSDI demonstrator (D100 Gaps and Lessons Learned) documented a concrete failure: tidal data with undocumented datum was assumed to be referenced to Ordnance Datum Newlyn (ODN, orientation=up), but it was actually referenced to Southampton Chart Datum (orientation=down, offset -2.74m relative to ODN). This caused water depths to display incorrectly until the correct datum was applied. This building block prevents recurrence by requiring both `datumName` and `verticalOrientation` in every elevation record.\n\n## Scalable Resolution (FMSDI Best Practice 5)\n\nThe `resolutionInfo.dggsCellRef` property supports the DGGS-based integration approach demonstrated by Pangaea in the FMSDI pilot. DGGS (e.g. H3, ISEA4T, rHEALPix) provides a common spatial index across datasets at different resolutions, enabling cross-domain queries without prior harmonization. The Pangaea demonstrator identified 4D DGGS as 'most effective for FMSDI interoperability challenges'.",
+  "usageGuidance": {
+    "step1": "Set `featureDomain` to 'land', 'intertidal', or 'marine'. Use 'intertidal' for any feature in the white ribbon zone (exposed at low tide, submerged at high tide).",
+    "step2": "Always include `elevation.verticalDatum` when the feature has a height or depth value. Populate both `datumName` and `verticalOrientation` as a minimum.",
+    "step3": "Set `dataLineage.gapFilled=true` for any feature produced by interpolation or modelling to fill a white ribbon data void. This triggers the requirement for `interpolationMethod`.",
+    "step4": "Choose `interpolationMethod` based on geomorphology (TIN for irregular point clouds; cubicSpline for smooth gradients; kriging for statistically characterized surfaces). Document the rationale in `sourceDataset`.",
+    "step5": "Before computing cross-domain elevation differences, normalize both operands to the same `verticalOrientation`. Negate positive depths (down convention) before subtracting from positive heights (up convention).",
+    "step6": "Record `tideContext.waterLevel` and `tideGaugeRef` whenever the observation was synchronized with a tide gauge. This is required for instantaneous observations to be later converted to a tidal datum reference.",
+    "step7": "Populate `resolutionInfo.dggsCellRef` when the data will be ingested into a DGGS-enabled service. Use the scheme prefix (e.g. 'H3:', 'ISEA4T:') to unambiguously identify the system."
+  },
+  "references": [
+    {
+      "title": "OGC FMSDI 2024 Pilot Summary Report (OGC 24-061)",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "OGC FMSDI 2024 Best Practices Report (OGC 24-064)",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "OGC FMSDI 2024-2 Pilot Summary Report",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024-2/"
+    },
+    {
+      "title": "FMSDI Best Practice 1 — Unified Geospatial Reference (vertical separation surfaces, datum, epoch, method, orientation)",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "FMSDI Best Practice 3 — Mind the Gap (interpolation as last resort, documenting assumptions)",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "FMSDI Best Practice 5 — Scalable Resolution Management (DGGS, TIN, point cloud foundations)",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "Compusult D100 — Data gaps, interpolation, and vertical datum inconsistency (ODN vs Southampton Chart Datum -2.74m)",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "Pangaea D100 — DGGS for scalable intertidal data integration, 4D DGGS recommendation",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "TCarta D100 — Satellite-derived bathymetry and intertidal mapping at Hurst Spit",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "IHO S-100 Universal Hydrographic Data Model",
+      "uri": "https://iho.int/en/iho-standards/standard-publications-and-s-100"
+    },
+    {
+      "title": "OGC Discrete Global Grid Systems Abstract Specification Topic 21",
+      "uri": "https://docs.ogc.org/as/20-040r3/20-040r3.html"
+    }
+  ],
+  "relatedBuildingBlocks": [
+    "ogc.hosted.iliad.api.features.vertical-datum-reference",
+    "ogc.hosted.iliad.api.features.dynamic-shoreline",
+    "ogc.hosted.iliad.api.features.oim-obs"
+  ]
+}

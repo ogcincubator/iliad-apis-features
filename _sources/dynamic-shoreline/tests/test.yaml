@@ -1,0 +1,201 @@
+# Validation tests for the Dynamic Shoreline Feature building block
+
+- title: "PASS: Minimal valid instantaneous shoreline with waterLevelAtCapture"
+  description: >
+    Checks that an instantaneous shoreline with required waterLevelAtCapture validates.
+  schema-ref: schema.yaml
+  valid: true
+  content:
+    type: Feature
+    geometry:
+      type: LineString
+      coordinates:
+        - [-1.55, 50.70]
+        - [-1.54, 50.71]
+    properties:
+      shorelineType: instantaneous
+      tidalDatumReference: CD
+      captureMethod: opticalSatellite_NDWI
+      waterLevelAtCapture:
+        value: 0.8
+        unit: m
+        verticalDatum:
+          datumName: Chart Datum
+          verticalOrientation: down
+      temporalValidity:
+        captureDateTime: "2024-04-22T10:43:12Z"
+
+- title: "PASS: Datum contour shoreline without waterLevelAtCapture"
+  description: >
+    Checks that a tidalDatumContour shoreline (no waterLevelAtCapture) validates.
+  schema-ref: schema.yaml
+  valid: true
+  content:
+    type: Feature
+    geometry:
+      type: LineString
+      coordinates:
+        - [-1.55, 50.70]
+        - [-1.54, 50.71]
+    properties:
+      shorelineType: meanHighWater
+      tidalDatumReference: MHW
+      captureMethod: derived_model
+      temporalValidity:
+        captureDateTime: "2024-06-01T00:00:00Z"
+
+- title: "PASS: SAR shoreline with all optional uncertainty fields"
+  description: >
+    Checks that a fully populated SAR-derived shoreline validates.
+  schema-ref: schema.yaml
+  valid: true
+  content:
+    type: Feature
+    geometry:
+      type: LineString
+      coordinates:
+        - [-1.55, 50.70]
+        - [-1.54, 50.71]
+    properties:
+      shorelineType: instantaneous
+      tidalDatumReference: CD
+      captureMethod: SAR_backscatter
+      sensorPlatform: "Capella-4 SAR"
+      waterLevelAtCapture:
+        value: 1.2
+        unit: m
+        verticalDatum:
+          datumName: Chart Datum
+          verticalOrientation: down
+      tideGaugeRef: "https://www.bodc.ac.uk/data/hosted_data_systems/sea_level/uk_network/ngbf/1CE97/"
+      temporalValidity:
+        captureDateTime: "2024-04-22T05:17:44Z"
+        tidalPeriodFraction: "flood:0.6"
+      shorelineUncertainty:
+        horizontalUncertainty: 8.0
+        waterLevelUncertainty: 0.12
+        ihoAccuracyZone: "ZOC B"
+
+- title: "FAIL: Missing required shorelineType"
+  description: >
+    Checks that a feature without shorelineType in properties fails validation.
+  schema-ref: schema.yaml
+  valid: false
+  content:
+    type: Feature
+    geometry:
+      type: LineString
+      coordinates:
+        - [-1.55, 50.70]
+        - [-1.54, 50.71]
+    properties:
+      tidalDatumReference: CD
+      captureMethod: opticalSatellite_NDWI
+      temporalValidity:
+        captureDateTime: "2024-04-22T10:43:12Z"
+
+- title: "FAIL: Missing required tidalDatumReference"
+  description: >
+    Checks that a feature without tidalDatumReference fails validation.
+  schema-ref: schema.yaml
+  valid: false
+  content:
+    type: Feature
+    geometry:
+      type: LineString
+      coordinates:
+        - [-1.55, 50.70]
+        - [-1.54, 50.71]
+    properties:
+      shorelineType: instantaneous
+      captureMethod: opticalSatellite_NDWI
+      waterLevelAtCapture:
+        value: 0.8
+        unit: m
+        verticalDatum:
+          datumName: Chart Datum
+          verticalOrientation: down
+      temporalValidity:
+        captureDateTime: "2024-04-22T10:43:12Z"
+
+- title: "FAIL: Missing required captureMethod"
+  description: >
+    Checks that a feature without captureMethod fails validation.
+  schema-ref: schema.yaml
+  valid: false
+  content:
+    type: Feature
+    geometry:
+      type: LineString
+      coordinates:
+        - [-1.55, 50.70]
+        - [-1.54, 50.71]
+    properties:
+      shorelineType: tidalDatumContour
+      tidalDatumReference: MSL
+      temporalValidity:
+        captureDateTime: "2024-06-01T00:00:00Z"
+
+- title: "FAIL: Instantaneous shoreline missing waterLevelAtCapture"
+  description: >
+    Checks that shorelineType=instantaneous without waterLevelAtCapture fails.
+  schema-ref: schema.yaml
+  valid: false
+  content:
+    type: Feature
+    geometry:
+      type: LineString
+      coordinates:
+        - [-1.55, 50.70]
+        - [-1.54, 50.71]
+    properties:
+      shorelineType: instantaneous
+      tidalDatumReference: CD
+      captureMethod: opticalSatellite_NDWI
+      temporalValidity:
+        captureDateTime: "2024-04-22T10:43:12Z"
+
+- title: "FAIL: Invalid tidalDatumReference enum value"
+  description: >
+    Checks that an unrecognised tidal datum abbreviation fails validation.
+  schema-ref: schema.yaml
+  valid: false
+  content:
+    type: Feature
+    geometry:
+      type: LineString
+      coordinates:
+        - [-1.55, 50.70]
+        - [-1.54, 50.71]
+    properties:
+      shorelineType: tidalDatumContour
+      tidalDatumReference: ODN
+      captureMethod: derived_model
+      temporalValidity:
+        captureDateTime: "2024-06-01T00:00:00Z"
+
+- title: "FAIL: NDWI threshold out of range"
+  description: >
+    Checks that an ndwiThreshold value outside [-1, 1] fails validation.
+  schema-ref: schema.yaml
+  valid: false
+  content:
+    type: Feature
+    geometry:
+      type: LineString
+      coordinates:
+        - [-1.55, 50.70]
+        - [-1.54, 50.71]
+    properties:
+      shorelineType: instantaneous
+      tidalDatumReference: CD
+      captureMethod: opticalSatellite_NDWI
+      ndwiThreshold: 1.5
+      waterLevelAtCapture:
+        value: 0.8
+        unit: m
+        verticalDatum:
+          datumName: Chart Datum
+          verticalOrientation: down
+      temporalValidity:
+        captureDateTime: "2024-04-22T10:43:12Z"

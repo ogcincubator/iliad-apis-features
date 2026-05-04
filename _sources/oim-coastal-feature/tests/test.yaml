@@ -1,0 +1,143 @@
+# Validation tests for the OIM Coastal Feature building block
+
+- title: "PASS: Minimal valid coastal feature — land domain, no elevation"
+  description: >
+    Checks that a GeoJSON Feature with only the required properties fields validates.
+  schema-ref: schema.yaml
+  valid: true
+  content:
+    type: Feature
+    geometry:
+      type: Point
+      coordinates: [-1.5, 50.7]
+    properties:
+      featureDomain: land
+      dataLineage:
+        captureMethod: lidar
+        sourceDataset: "EA National LiDAR Programme"
+        captureDate: "2023-01-01T00:00:00Z"
+        gapFilled: false
+        confidenceLevel: high
+
+- title: "PASS: Intertidal feature with elevation and tidal context"
+  description: >
+    Checks that a fully populated intertidal feature validates correctly.
+  schema-ref: schema.yaml
+  valid: true
+  content:
+    type: Feature
+    geometry:
+      type: Point
+      coordinates: [-1.54, 50.71]
+    properties:
+      featureDomain: intertidal
+      elevation:
+        value: 2.5
+        unit: m
+        uncertainty: 0.2
+        verticalDatum:
+          datumName: Chart Datum
+          verticalOrientation: down
+      tideContext:
+        waterLevel: 1.8
+        tidalState: lowWater
+      dataLineage:
+        captureMethod: bathySonar
+        sourceDataset: "UKHO Survey 2024"
+        captureDate: "2024-05-01T09:00:00Z"
+        gapFilled: false
+        confidenceLevel: high
+
+- title: "PASS: Gap-filled feature with interpolationMethod present"
+  description: >
+    Checks that gapFilled=true with interpolationMethod provided validates correctly.
+  schema-ref: schema.yaml
+  valid: true
+  content:
+    type: Feature
+    geometry:
+      type: Point
+      coordinates: [-1.55, 50.72]
+    properties:
+      featureDomain: intertidal
+      dataLineage:
+        captureMethod: interpolated
+        sourceDataset: "White ribbon TIN fill 2024"
+        captureDate: "2024-09-01T00:00:00Z"
+        gapFilled: true
+        interpolationMethod: TIN
+        confidenceLevel: medium
+
+- title: "FAIL: Missing required featureDomain"
+  description: >
+    Checks that a feature without featureDomain in properties fails validation.
+  schema-ref: schema.yaml
+  valid: false
+  content:
+    type: Feature
+    geometry:
+      type: Point
+      coordinates: [-1.5, 50.7]
+    properties:
+      dataLineage:
+        captureMethod: lidar
+        sourceDataset: "EA LiDAR"
+        captureDate: "2023-01-01T00:00:00Z"
+        gapFilled: false
+        confidenceLevel: high
+
+- title: "FAIL: Missing required dataLineage"
+  description: >
+    Checks that a feature without dataLineage in properties fails validation.
+  schema-ref: schema.yaml
+  valid: false
+  content:
+    type: Feature
+    geometry:
+      type: Point
+      coordinates: [-1.5, 50.7]
+    properties:
+      featureDomain: land
+
+- title: "FAIL: Invalid featureDomain enum value"
+  description: >
+    Checks that a featureDomain value other than land/intertidal/marine fails.
+  schema-ref: schema.yaml
+  valid: false
+  content:
+    type: Feature
+    geometry:
+      type: Point
+      coordinates: [-1.5, 50.7]
+    properties:
+      featureDomain: coastal
+      dataLineage:
+        captureMethod: lidar
+        sourceDataset: "EA LiDAR"
+        captureDate: "2023-01-01T00:00:00Z"
+        gapFilled: false
+        confidenceLevel: high
+
+- title: "FAIL: elevation missing required unit"
+  description: >
+    Checks that an elevation object without unit fails validation.
+  schema-ref: schema.yaml
+  valid: false
+  content:
+    type: Feature
+    geometry:
+      type: Point
+      coordinates: [-1.5, 50.7]
+    properties:
+      featureDomain: marine
+      elevation:
+        value: 10.5
+        verticalDatum:
+          datumName: Chart Datum
+          verticalOrientation: down
+      dataLineage:
+        captureMethod: bathySonar
+        sourceDataset: "Survey"
+        captureDate: "2023-01-01T00:00:00Z"
+        gapFilled: false
+        confidenceLevel: high

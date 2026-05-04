@@ -1,0 +1,59 @@
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [-1.5518, 50.7024],
+      [-1.5495, 50.7029],
+      [-1.5470, 50.7036],
+      [-1.5445, 50.7041],
+      [-1.5418, 50.7046],
+      [-1.5392, 50.7053],
+      [-1.5369, 50.7059],
+      [-1.5347, 50.7065]
+    ]
+  },
+  "properties": {
+    "featureDomain": "intertidal",
+    "shorelineType": "instantaneous",
+    "waterLevelAtCapture": {
+      "value": 1.2,
+      "unit": "m",
+      "verticalDatum": {
+        "datumName": "Chart Datum",
+        "crsIdentifier": "http://www.opengis.net/def/crs/EPSG/0/5861",
+        "separationSurface": {
+          "type": "chart",
+          "modelReference": "UKHO VORF 2022"
+        },
+        "transformationMethod": "BODC tide gauge 1CE97 (Hurst Point) — SAR overpass time interpolation; note non-harmonic station relies on proxy from Bournemouth (1CE97 class C)",
+        "verticalOrientation": "down",
+        "verticalAccuracy": {
+          "value": 0.12,
+          "unit": "m",
+          "confidenceLevel": "95% (2-sigma)"
+        }
+      }
+    },
+    "tidalDatumReference": "CD",
+    "captureMethod": "SAR_backscatter",
+    "sensorPlatform": "Capella-4 SAR",
+    "tideGaugeRef": "https://www.bodc.ac.uk/data/hosted_data_systems/sea_level/uk_network/ngbf/1CE97/",
+    "temporalValidity": {
+      "captureDateTime": "2024-04-22T05:17:44Z",
+      "tidalPeriodFraction": "flood:0.6"
+    },
+    "shorelineUncertainty": {
+      "horizontalUncertainty": 8.0,
+      "waterLevelUncertainty": 0.12,
+      "ihoAccuracyZone": "ZOC B"
+    },
+    "dataLineage": {
+      "captureMethod": "SAR_backscatter",
+      "sourceDataset": "Capella Space SAR scene CAPELLA-4-20240422T051744 (TCarta FMSDI5 demonstrator)",
+      "captureDate": "2024-04-22T05:17:44Z",
+      "gapFilled": false,
+      "confidenceLevel": "medium"
+    }
+  }
+}

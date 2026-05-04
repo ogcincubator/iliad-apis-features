@@ -1,0 +1,79 @@
+# Validation tests for the Vertical Datum Reference building block
+
+- title: "PASS: Minimal valid datum — required fields only"
+  description: >
+    Checks that an object with only the two required fields (datumName and
+    verticalOrientation) validates correctly.
+  schema-ref: schema.yaml
+  valid: true
+  content:
+    datumName: "Ordnance Datum Newlyn"
+    verticalOrientation: "up"
+
+- title: "PASS: Complete Chart Datum record"
+  description: >
+    Checks that a fully populated Chart Datum record including all optional fields
+    validates correctly.
+  schema-ref: schema.yaml
+  valid: true
+  content:
+    datumName: "Chart Datum"
+    datumEpoch: "2005.0"
+    crsIdentifier: "http://www.opengis.net/def/crs/EPSG/0/5861"
+    separationSurface:
+      type: "chart"
+      modelReference: "NOAA VDatum 4.3"
+    transformationMethod: "NOAA VDatum 4.3 web service"
+    verticalOrientation: "down"
+    verticalAccuracy:
+      value: 0.15
+      unit: "m"
+      confidenceLevel: "95% (2-sigma)"
+
+- title: "FAIL: Missing required datumName"
+  description: >
+    Checks that an object missing the required datumName field fails validation.
+  schema-ref: schema.yaml
+  valid: false
+  content:
+    verticalOrientation: "down"
+
+- title: "FAIL: Missing required verticalOrientation"
+  description: >
+    Checks that an object missing the required verticalOrientation field fails validation.
+  schema-ref: schema.yaml
+  valid: false
+  content:
+    datumName: "Mean Sea Level"
+
+- title: "FAIL: Invalid verticalOrientation enum value"
+  description: >
+    Checks that a verticalOrientation value other than 'up' or 'down' fails validation.
+  schema-ref: schema.yaml
+  valid: false
+  content:
+    datumName: "Chart Datum"
+    verticalOrientation: "positive"
+
+- title: "FAIL: Invalid separationSurface type enum value"
+  description: >
+    Checks that an unrecognised separationSurface.type value fails validation.
+  schema-ref: schema.yaml
+  valid: false
+  content:
+    datumName: "Chart Datum"
+    verticalOrientation: "down"
+    separationSurface:
+      type: "magnetic"
+      modelReference: "some model"
+
+- title: "FAIL: verticalAccuracy missing required unit"
+  description: >
+    Checks that a verticalAccuracy object without the required 'unit' field fails validation.
+  schema-ref: schema.yaml
+  valid: false
+  content:
+    datumName: "Mean Sea Level"
+    verticalOrientation: "up"
+    verticalAccuracy:
+      value: 0.1

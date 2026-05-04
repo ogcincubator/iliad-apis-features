@@ -1,0 +1,36 @@
+- title: Instantaneous shoreline from Sentinel-2 NDWI — Hurst Spit, UK
+  description: >
+    Instantaneous shoreline delineated from Sentinel-2A using NDWI threshold 0.0.
+    Water level at overpass was +0.8m Chart Datum (ebb tide), referenced to BODC
+    tide gauge 1CE97 (Hurst Point). shorelineType="instantaneous" requires
+    waterLevelAtCapture. Horizontal uncertainty of 15m accounts for 10m pixel size
+    and NDWI threshold sensitivity on the low-gradient Hurst Spit mudflats.
+    Captures FMSDI BP1 (explicit datum) and BP3 (direct observation preferred over
+    interpolation). Source: ESA Copernicus Open Access Hub.
+  content: examples/ndwi-shoreline-sentinel2.geojson
+  base-uri: http://example.org/fmsdi/shoreline/ndwi-001
+
+- title: SAR-derived shoreline from Capella-4 — Hurst Spit, UK
+  description: >
+    Instantaneous shoreline extracted from Capella-4 X-band SAR imagery using
+    TCarta proprietary SAR backscatter shoreline extraction workflow. Water level
+    +1.2m CD at time of overpass (flood tide), referenced to BODC gauge 1CE97.
+    Note: the Hurst Spit gauge is a non-harmonic station relying on proxy data
+    from Bournemouth — uncertainty increased accordingly (0.12m vs 0.05m for
+    primary station). Implements FMSDI BP1. Source: Capella Space (TCarta FMSDI5
+    demonstrator archive).
+  content: examples/sar-shoreline-capella.geojson
+  base-uri: http://example.org/fmsdi/shoreline/sar-001
+
+- title: Modelled MHW contour — derived from topo-bathy ensemble
+  description: >
+    Mean High Water (MHW) datum contour derived from 18 instantaneous NDWI shorelines
+    and 6 SAR shorelines, stacked and corrected to Chart Datum via UKHO VORF 2022.
+    shorelineType="meanHighWater" — this is NOT an instantaneous observation and must
+    not be compared directly to instantaneous shorelines without explicit conversion.
+    captureMethod="derived_model". waterLevelAtCapture is not applicable; datum is
+    expressed through tidalDatumReference="MHW". Represents FMSDI BP3 outcome: the
+    MHW contour defines the upper boundary of the white ribbon gap zone.
+    Source: TCarta FMSDI5 demonstrator, Hurst Spit ensemble June 2024.
+  content: examples/mhw-datum-contour.geojson
+  base-uri: http://example.org/fmsdi/shoreline/mhw-001

@@ -1,0 +1,60 @@
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [-1.5521, 50.7027],
+      [-1.5498, 50.7031],
+      [-1.5473, 50.7038],
+      [-1.5449, 50.7043],
+      [-1.5421, 50.7048],
+      [-1.5395, 50.7055],
+      [-1.5372, 50.7061],
+      [-1.5350, 50.7067]
+    ]
+  },
+  "properties": {
+    "featureDomain": "intertidal",
+    "shorelineType": "instantaneous",
+    "waterLevelAtCapture": {
+      "value": 0.8,
+      "unit": "m",
+      "verticalDatum": {
+        "datumName": "Chart Datum",
+        "crsIdentifier": "http://www.opengis.net/def/crs/EPSG/0/5861",
+        "separationSurface": {
+          "type": "chart",
+          "modelReference": "UKHO VORF 2022"
+        },
+        "transformationMethod": "BODC tide gauge 1CE97 (Hurst Point) — hourly values, linear interpolation to overpass time",
+        "verticalOrientation": "down",
+        "verticalAccuracy": {
+          "value": 0.08,
+          "unit": "m",
+          "confidenceLevel": "95% (2-sigma)"
+        }
+      }
+    },
+    "tidalDatumReference": "CD",
+    "captureMethod": "opticalSatellite_NDWI",
+    "sensorPlatform": "Sentinel-2A",
+    "ndwiThreshold": 0.0,
+    "tideGaugeRef": "https://www.bodc.ac.uk/data/hosted_data_systems/sea_level/uk_network/ngbf/1CE97/",
+    "temporalValidity": {
+      "captureDateTime": "2024-04-22T10:43:12Z",
+      "tidalPeriodFraction": "ebb:0.4"
+    },
+    "shorelineUncertainty": {
+      "horizontalUncertainty": 15.0,
+      "waterLevelUncertainty": 0.10,
+      "ihoAccuracyZone": "ZOC B"
+    },
+    "dataLineage": {
+      "captureMethod": "opticalSatellite_NDWI",
+      "sourceDataset": "ESA Sentinel-2A L2A scene T30UXC_20240422T104312",
+      "captureDate": "2024-04-22T10:43:12Z",
+      "gapFilled": false,
+      "confidenceLevel": "medium"
+    }
+  }
+}

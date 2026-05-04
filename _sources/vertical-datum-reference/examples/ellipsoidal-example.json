@@ -1,0 +1,15 @@
+{
+  "datumName": "WGS84 Ellipsoid",
+  "datumEpoch": "2020.0",
+  "crsIdentifier": "http://www.opengis.net/def/crs/EPSG/0/4979",
+  "separationSurface": {
+    "type": "ellipsoidal",
+    "modelReference": "WGS84 (G2139)"
+  },
+  "verticalOrientation": "up",
+  "verticalAccuracy": {
+    "value": 0.03,
+    "unit": "m",
+    "confidenceLevel": "95% (2-sigma)"
+  }
+}

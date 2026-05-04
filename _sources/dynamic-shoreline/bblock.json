@@ -1,0 +1,43 @@
+{
+  "id": "ogc.hosted.iliad.api.features.dynamic-shoreline",
+  "name": "Dynamic Shoreline Feature",
+  "abstract": "Feature type for tide-dependent shoreline vectors, encoding shoreline type, water level at capture, tidal datum reference, sensor platform, and spatial/temporal uncertainty. Enables multi-temporal shoreline analysis and supports FMSDI Best Practice 3 (Mind the Gap) and Best Practice 1 (Unified Geospatial Reference). Derived from TCarta FMSDI demonstrator at Hurst Spit using Planet Labs NDWI and Capella SAR data.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-05-04T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2026-05-04",
+  "dependsOn": [
+    "ogc.hosted.iliad.api.features.oim-coastal-feature"
+  ],
+  "tags": ["iliad", "fmsdi", "shoreline", "tidal", "coastal", "satellite", "dynamic"],
+  "sources": [
+    {
+      "title": "OGC FMSDI 2024 Pilot Summary Report (24-061)",
+      "link": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "OGC FMSDI 2024 Best Practices Report (24-064)",
+      "link": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "OGC FMSDI 2024-2 Pilot Summary Report",
+      "link": "http://ogc.pages.ogc.org/FMSDI-2024-2/"
+    },
+    {
+      "title": "TCarta D100 — Space-Based Remote Sensing for Intertidal Awareness (Hurst Spit NDWI + SAR demonstrator)",
+      "link": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "IHO S-32 Hydrographic Dictionary — tidal datum terminology",
+      "link": "https://iho.int/en/iho-standards/standard-publications-and-s-32"
+    },
+    {
+      "title": "IHO CATZOC — Category of Zone of Confidence for vertical/horizontal accuracy",
+      "link": "https://iho.int/en/iho-standards/standard-publications-and-s-44"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable"
+}

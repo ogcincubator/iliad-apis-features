@@ -1,0 +1,42 @@
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-1.5105, 50.8032, 4.7]
+  },
+  "properties": {
+    "featureDomain": "land",
+    "elevation": {
+      "value": 4.7,
+      "unit": "m",
+      "uncertainty": 0.10,
+      "verticalDatum": {
+        "datumName": "Ordnance Datum Newlyn",
+        "datumEpoch": "2020.0",
+        "crsIdentifier": "http://www.opengis.net/def/crs/EPSG/0/7405",
+        "separationSurface": {
+          "type": "geoid",
+          "modelReference": "OSGM15"
+        },
+        "transformationMethod": "OSGM15 geoid model applied via Ordnance Survey OSTN15/OSGM15 transformation",
+        "verticalOrientation": "up",
+        "verticalAccuracy": {
+          "value": 0.10,
+          "unit": "m",
+          "confidenceLevel": "95% (2-sigma)"
+        }
+      }
+    },
+    "dataLineage": {
+      "captureMethod": "lidar",
+      "sourceDataset": "Environment Agency National LIDAR Programme 2m DTM, tile SZ39NE",
+      "captureDate": "2023-03-22T10:15:00Z",
+      "gapFilled": false,
+      "confidenceLevel": "high"
+    },
+    "resolutionInfo": {
+      "horizontalResolution": 2.0,
+      "verticalResolution": 0.05
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "ODD Protocol Description Record",
+  "abstract": "OGC API Records profile for simulation model publications using the ODD Protocol (Overview, Design concepts, Details). Provides a structured, open-ended scaffold for describing agent-based and individual-based models; domain-specific vocabularies (NERC, CF, Darwin Core, ICES) are injected at the entity and variable level by domain profiles.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-04-29T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2026-04-29",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "tags": ["ODD", "simulation", "agent-based-model", "ABM", "IBM", "model-documentation", "open-science", "records"],
+  "authors": [
+    {
+      "name": "ILIAD Marine Data Team",
+      "organization": "ILIAD Ocean Digital Twin"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The ODD Protocol for Describing Agent-Based and Other Simulation Models: A Second Update",
+      "link": "https://doi.org/10.18564/jasss.4259"
+    },
+    {
+      "title": "GeoDCAT mapping for OGC API Records",
+      "link": "https://ogcincubator.github.io/geodcat-ogcapi-records/"
+    },
+    {
+      "title": "Open Science Building Blocks",
+      "link": "https://ogcincubator.github.io/bblocks-openscience/"
+    }
+  ],
+  "dependsOn": [
+    "ogc.geo.geodcat.geodcat-records",
+    "ogc.geo.geodcat.geodcat-records-prov",
+    "ogc.osc.ontology.openscience"
+  ],
+  "ldContext": "context.jsonld",
+  "shaclRules": [],
+  "standards": [
+    "https://doi.org/10.18564/jasss.4259",
+    "http://www.w3.org/TR/vocab-dcat-3/",
+    "http://www.w3.org/TR/prov-o/",
+    "https://ogcincubator.github.io/geodcat-ogcapi-records/"
+  ],
+  "maturity": "development",
+  "scope": "dev"
+}

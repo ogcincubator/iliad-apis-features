@@ -1,0 +1,11 @@
+id,lon,lat,time,depth_m,salinity_psu,species,abundance
+HELCOM-001,19.2341,58.6712,2023-08-14T09:12:00Z,3.5,6.8,Fucus vesiculosus,low
+HELCOM-002,19.2355,58.6719,2023-08-14T09:28:00Z,5.0,7.1,Cladophora glomerata,low
+HELCOM-003,19.2480,58.6803,2023-08-14T10:05:00Z,2.0,6.5,Ceramium tenuicorne,low
+HELCOM-004,19.2612,58.6891,2023-08-14T10:44:00Z,8.2,7.4,Furcellaria lumbricalis,low
+HELCOM-005,19.2750,58.6940,2023-08-14T11:20:00Z,12.0,7.6,Polysiphonia fucoides,low
+HELCOM-006,19.3101,58.7102,2023-08-14T12:03:00Z,6.5,7.2,Fucus vesiculosus,low
+HELCOM-007,19.3254,58.7215,2023-08-14T12:45:00Z,4.1,6.9,Ceramium tenuicorne,low
+HELCOM-008,19.3390,58.7318,2023-08-14T13:22:00Z,9.7,7.5,Furcellaria lumbricalis,low
+HELCOM-009,19.3511,58.7420,2023-08-14T14:01:00Z,15.3,7.8,Polysiphonia fucoides,low
+HELCOM-010,19.3678,58.7533,2023-08-14T14:38:00Z,3.0,6.7,Cladophora glomerata,low

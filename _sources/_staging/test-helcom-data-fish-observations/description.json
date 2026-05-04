@@ -3,7 +3,7 @@
   "abstract": "Auto-generated bblock from a csv source.",
   "source": {
     "title": "source",
-    "local_path": "/tmp/helcom_sample.csv"
+    "local_path": "helcom_sample.csv"
   },
   "transformer": {
     "kind": "library",

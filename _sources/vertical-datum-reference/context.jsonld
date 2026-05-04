@@ -1,0 +1,66 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dct": "http://purl.org/dc/terms/",
+    "qudt": "http://qudt.org/schema/qudt/",
+    "sdo": "https://schema.org/",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "nerc": "http://vocab.nerc.ac.uk/collection/",
+    "fmsdi": "https://w3id.org/iliad/fmsdi/",
+
+    "datumName": {
+      "@id": "rdfs:label",
+      "@type": "xsd:string"
+    },
+
+    "datumEpoch": {
+      "@id": "fmsdi:datumEpoch"
+    },
+
+    "crsIdentifier": {
+      "@id": "dct:conformsTo",
+      "@type": "@id"
+    },
+
+    "separationSurface": {
+      "@id": "fmsdi:separationSurface",
+      "@type": "@id"
+    },
+
+    "type": {
+      "@id": "fmsdi:separationSurfaceType"
+    },
+
+    "modelReference": {
+      "@id": "fmsdi:modelReference"
+    },
+
+    "transformationMethod": {
+      "@id": "prov:wasGeneratedBy"
+    },
+
+    "verticalOrientation": {
+      "@id": "fmsdi:verticalOrientation"
+    },
+
+    "verticalAccuracy": {
+      "@id": "http://vocab.nerc.ac.uk/collection/P01/current/UNCEJJ01/"
+    },
+
+    "value": {
+      "@id": "qudt:value"
+    },
+
+    "unit": {
+      "@id": "qudt:unit"
+    },
+
+    "confidenceLevel": {
+      "@id": "fmsdi:confidenceLevel"
+    },
+
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}

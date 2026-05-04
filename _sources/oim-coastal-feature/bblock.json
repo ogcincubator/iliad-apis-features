@@ -1,0 +1,40 @@
+{
+  "id": "ogc.hosted.iliad.api.features.oim-coastal-feature",
+  "name": "OIM Coastal Feature",
+  "abstract": "OIM profile for features in the intertidal and coastal zone (the 'white ribbon'), encoding elevation with vertical datum, tidal context, data lineage, gap-fill documentation, and scalable resolution metadata. Implements FMSDI Best Practices 1 (Unified Geospatial Reference), 3 (Mind the Gap), and 5 (Scalable Resolution Management).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-05-04T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2026-05-04",
+  "dependsOn": [
+    "ogc.hosted.iliad.api.features.vertical-datum-reference",
+    "ogc.hosted.iliad.api.features.oim-obs"
+  ],
+  "tags": ["iliad", "fmsdi", "coastal", "intertidal", "oim", "elevation", "white-ribbon"],
+  "sources": [
+    {
+      "title": "OGC FMSDI 2024 Pilot Summary Report (24-061)",
+      "link": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "OGC FMSDI 2024 Best Practices Report (24-064)",
+      "link": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "OGC FMSDI 2024-2 Pilot Summary Report",
+      "link": "http://ogc.pages.ogc.org/FMSDI-2024-2/"
+    },
+    {
+      "title": "IHO S-100 Universal Hydrographic Data Model",
+      "link": "https://iho.int/en/iho-standards/standard-publications-and-s-100"
+    },
+    {
+      "title": "OGC Discrete Global Grid Systems Abstract Specification Topic 21",
+      "link": "https://docs.ogc.org/as/20-040r3/20-040r3.html"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable"
+}

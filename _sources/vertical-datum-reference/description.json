@@ -1,0 +1,55 @@
+{
+  "title": "Vertical Datum Reference",
+  "abstract": "Reusable schema component encoding the vertical datum metadata required for unambiguous height referencing across land and marine domains, as mandated by FMSDI Best Practice 1 (Unified Geospatial Reference). Captures datum name, reference epoch, CRS identifier, separation surface model, transformation method, vertical orientation convention, and vertical accuracy.",
+  "description": "The vertical datum is the single most consequential piece of metadata for any elevation or depth observation in the coastal zone. The OGC Federated Marine SDI 2024 Pilot (FMSDI-2024, document 24-064) identified disconnected vertical and horizontal datums between topographic and hydrographic datasets as 'one of the most persistent technical barriers to land-sea integration'.\n\nThe Compusult demonstrator in the FMSDI-2024 pilot encountered this problem directly: early iterations of their vessel navigation process assumed Ordnance Datum Newlyn (ODN, orientation=up) for tidal data that was in fact referenced to Southampton Chart Datum (orientation=down, offset -2.74m relative to ODN). This caused water depths to display incorrectly until the correct datum was applied.\n\nThe Pangaea demonstrator similarly identified that 'inconsistent or missing vertical datum metadata remains a major barrier to automation' in their DGGS-based integration approach.\n\nThis building block provides a standard component that any feature type carrying elevation, depth, or height values can embed to ensure full vertical datum provenance.\n\n## Common Datums Used in Intertidal Zone Work\n\n| Datum | Abbreviation | Orientation | EPSG | Typical Use |\n|---|---|---|---|---|\n| Chart Datum | CD | down | 5861 | UK/IHO navigational charts |\n| Lowest Astronomical Tide | LAT | down | — | IHO standard chart datum |\n| Mean Sea Level | MSL | up | 5714 | General geodetic reference |\n| Mean High Water Springs | MHWS | up | — | Jurisdictional / legal shoreline |\n| Ordnance Datum Newlyn | ODN | up | 5701 | UK national land levelling |\n| WGS84 Ellipsoid | WGS84 | up | 4979 | GNSS, satellite imagery |\n| Southampton Chart Datum | SCD | down | — | The Solent, offset -2.74m from ODN |\n\n## Vertical Separation Surfaces Hierarchy\n\nTransformations between datums follow this hierarchy from geometric to tidal:\n\n```\nEllipsoid (WGS84/G2139, ETRS89)\n   └─► Geoid (EGM2008, OSGM15)\n        └─► Mean Tidal Surface (MSL, MHWS, MLW)\n             └─► Chart Datum (CD, LAT)\n```\n\nNational models implement this hierarchy:\n- NOAA VDatum 4.3 (United States)\n- UKHO VORF 2022 (United Kingdom)\n- CHS HyVSEPs (Canada)\n\nFMSDI BP1 mandates the use of these national models where they exist.\n\n## Usage Guidance\n\n1. Include this object as a nested property (`verticalDatum`) in any GeoJSON feature or observation schema that carries elevation, depth, or height values.\n2. Always set `verticalOrientation`. Do not assume it from context — the same positive numerical value means higher elevation under 'up' (land/topographic convention) but greater depth under 'down' (hydrographic convention). This is the most frequent source of integration errors.\n3. Always record `transformationMethod` when datum conversion has been applied. Its absence implies either no conversion was performed or provenance is unknown.\n4. When `separationSurface.type` is 'tidal', always specify `modelReference` (e.g. 'UKHO VORF 2022') to support reproducibility.\n5. Before merging land elevation grids (orientation=up) with bathymetric grids (orientation=down), convert both to a common orientation and datum. Positive depths (down convention) must be negated before arithmetic comparison with positive heights (up convention).\n6. Record `datumEpoch` whenever using a dynamic reference frame subject to secular change (e.g. tide gauge benchmark migration, vertical land motion).",
+  "usageGuidance": {
+    "step1": "Embed a `verticalDatum` property of this type in every feature schema that includes elevation, depth, or height.",
+    "step2": "Always set `verticalOrientation` to 'up' (land/topographic) or 'down' (hydrographic/bathymetric). This single field prevents the most common integration error.",
+    "step3": "Populate `crsIdentifier` with the EPSG URI from http://www.opengis.net/def/crs/EPSG/0/{code}. Examples: EPSG:5714 (MSL height), EPSG:5861 (LAT depth), EPSG:7405 (ODN height), EPSG:4979 (WGS84 3D).",
+    "step4": "Record `transformationMethod` whenever a datum conversion was applied. For UK coastal work this is typically 'UKHO VORF 2022'; for US work 'NOAA VDatum 4.3'.",
+    "step5": "Quantify `verticalAccuracy` using IHO S-44 confidence levels for hydrographic surveys or ISO 19115 DQ_PositionalAccuracy for topographic data.",
+    "step6": "When aggregating data from multiple sources, normalize to a single `verticalOrientation` before computing differences or generating composite products."
+  },
+  "references": [
+    {
+      "title": "OGC FMSDI 2024 Pilot Summary Report (OGC 24-061)",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "OGC FMSDI 2024 Best Practices Report (OGC 24-064)",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "OGC FMSDI 2024-2 Pilot Summary Report",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024-2/"
+    },
+    {
+      "title": "FMSDI Best Practice 1 (Unified Geospatial Reference) — vertical separation surfaces and transformation models",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "Compusult D100 — Vertical datum consistency lesson learned (ODN vs Southampton Chart Datum -2.74m)",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "Pangaea D100 — Inconsistent vertical datum metadata as automation barrier",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "IHO S-100 Universal Hydrographic Data Model",
+      "uri": "https://iho.int/en/iho-standards/standard-publications-and-s-100"
+    },
+    {
+      "title": "OGC GeoPose Standard (vertical orientation conventions)",
+      "uri": "https://docs.ogc.org/is/21-056r11/21-056r11.html"
+    },
+    {
+      "title": "EPSG Geodetic Registry",
+      "uri": "https://epsg.org/"
+    }
+  ],
+  "relatedBuildingBlocks": [
+    "ogc.hosted.iliad.api.features.oim-coastal-feature",
+    "ogc.hosted.iliad.api.features.dynamic-shoreline"
+  ]
+}

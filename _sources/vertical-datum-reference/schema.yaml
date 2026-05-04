@@ -1,0 +1,137 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Vertical Datum Reference
+description: >
+  Schema component for encoding the vertical datum metadata required for unambiguous
+  height referencing across land and marine domains. Required by FMSDI Best Practice 1
+  (Unified Geospatial Reference). Always record datum, epoch, transformation method, and
+  vertical orientation convention in metadata (FMSDI BP1 mandate).
+type: object
+required:
+  - datumName
+  - verticalOrientation
+properties:
+  datumName:
+    type: string
+    description: >
+      Human-readable name of the vertical datum or reference surface. Examples include
+      "Chart Datum" (CD), "Mean Sea Level" (MSL), "Ordnance Datum Newlyn" (ODN),
+      "WGS84 Ellipsoid", "Lowest Astronomical Tide" (LAT), "Mean High Water Springs" (MHWS),
+      "Southampton Chart Datum".
+    examples:
+      - "Chart Datum"
+      - "Mean Sea Level"
+      - "Ordnance Datum Newlyn"
+      - "WGS84 Ellipsoid"
+      - "Lowest Astronomical Tide"
+      - "Southampton Chart Datum"
+
+  datumEpoch:
+    type: string
+    description: >
+      Reference epoch for the datum, required when using a dynamic reference frame subject
+      to crustal motion or sea-level change. Format follows ISO 8601 decimal year notation.
+    examples:
+      - "2020.0"
+      - "2015.5"
+
+  crsIdentifier:
+    type: string
+    format: uri
+    description: >
+      URI identifying the coordinate reference system in an authoritative registry.
+      Prefer EPSG URIs from the OGC CRS resolver. Examples: EPSG:5714 (MSL height),
+      EPSG:5861 (LAT depth), EPSG:4979 (WGS84 3D), EPSG:7405 (ODN height).
+    examples:
+      - "http://www.opengis.net/def/crs/EPSG/0/5714"
+      - "http://www.opengis.net/def/crs/EPSG/0/5861"
+      - "http://www.opengis.net/def/crs/EPSG/0/4979"
+      - "http://www.opengis.net/def/crs/EPSG/0/7405"
+
+  separationSurface:
+    type: object
+    description: >
+      Describes the separation model used to transform between this datum and another
+      reference surface (ellipsoid, geoid, or tidal datum). FMSDI BP1 recommends using
+      national models such as NOAA VDatum, UKHO VORF, or CHS HyVSEPs.
+    required:
+      - type
+    properties:
+      type:
+        type: string
+        enum:
+          - geoid
+          - tidal
+          - ellipsoidal
+          - chart
+        description: >
+          Category of separation surface: geoid (gravity-based), tidal (derived from
+          tidal observations), ellipsoidal (geometric ellipsoid surface), or chart
+          (hydrographic chart datum surface).
+      modelReference:
+        type: string
+        description: >
+          Name and version of the separation model. Examples: "NOAA VDatum 4.3",
+          "UKHO VORF 2022", "CHS HyVSEPs", "EGM2008", "OSGM15 (UK Geoid)".
+        examples:
+          - "NOAA VDatum 4.3"
+          - "UKHO VORF 2022"
+          - "CHS HyVSEPs"
+          - "EGM2008"
+          - "OSGM15"
+
+  transformationMethod:
+    type: string
+    description: >
+      Tool, model, or procedure used to transform observations to this vertical datum.
+      This field is required when datum conversion has been applied; its absence implies
+      no conversion was performed or the source datum is unknown. Record this to support
+      data lineage under FMSDI BP2 (FAIR Data Principles).
+    examples:
+      - "NOAA VDatum 4.3 web service"
+      - "UKHO VORF vertical offset raster"
+      - "CHS HyVSEPs interpolation"
+      - "Manual offset -2.74m (Southampton Chart Datum)"
+
+  verticalOrientation:
+    type: string
+    enum:
+      - up
+      - down
+    description: >
+      Defines the positive direction of the vertical axis. "up" means positive values
+      indicate higher elevation (land/topographic convention, e.g. MSL height in metres).
+      "down" means positive values indicate greater depth below the datum surface
+      (hydrographic convention, e.g. Chart Datum depth in metres). This is the single
+      most critical field for preventing land-sea data integration errors: the Compusult
+      FMSDI demonstrator encountered exactly this problem when ODN (up) was assumed where
+      Southampton Chart Datum (down, offset -2.74m) was the correct reference.
+
+  verticalAccuracy:
+    type: object
+    description: >
+      Quantifies the vertical accuracy of observations referenced to this datum.
+      Include confidence level to support ISO 19115 quality reporting and FMSDI BP2.
+    required:
+      - value
+      - unit
+    properties:
+      value:
+        type: number
+        description: Accuracy magnitude (1-sigma or as specified by confidenceLevel).
+        minimum: 0
+      unit:
+        type: string
+        description: Unit of measure. Use "m" for metres.
+        examples:
+          - "m"
+          - "cm"
+      confidenceLevel:
+        type: string
+        description: >
+          Statistical confidence level for the accuracy value. IHO S-44 uses
+          95% confidence (2-sigma) for hydrographic surveys. ISO 19115 typically
+          uses 1-sigma or 95%.
+        examples:
+          - "1-sigma (68%)"
+          - "95% (2-sigma)"
+          - "IHO S-44 Order 1a"

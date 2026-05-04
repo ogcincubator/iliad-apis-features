@@ -1,0 +1,175 @@
+{
+  "id": "doi:10.18564/jasss.4259",
+  "type": "Feature",
+  "geometry": null,
+  "time": {
+    "date": "2020-03-31"
+  },
+  "properties": {
+    "type": "ScholarlyArticle",
+    "title": "The ODD Protocol for Describing Agent-Based and Other Simulation Models: A Second Update to Improve Clarity, Replication, and Structural Realism",
+    "description": "The ODD (Overview, Design concepts, Details) protocol for describing agent-based and individual-based models is now widely used but has persistent weaknesses. This second update addresses those limitations through improved guidance, summary templates, hierarchical approaches for complex models, code-linking recommendations, and explicit pattern-oriented modeling integration.",
+    "created": "2020-03-31",
+    "updated": "2020-03-31",
+    "language": "en",
+    "externalIds": [
+      {
+        "scheme": "doi",
+        "value": "10.18564/jasss.4259"
+      },
+      {
+        "scheme": "issn",
+        "value": "1460-7425"
+      }
+    ],
+    "contacts": [
+      {
+        "name": "Volker Grimm",
+        "roles": ["author"],
+        "organization": "Helmholtz Centre for Environmental Research – UFZ; University of Potsdam"
+      },
+      {
+        "name": "Steven F. Railsback",
+        "roles": ["author"],
+        "organization": "Lang, Railsback & Associates; Humboldt State University"
+      },
+      {
+        "name": "Christian E. Vincenot",
+        "roles": ["author"],
+        "organization": "Kyoto University"
+      },
+      {
+        "name": "Uta Berger",
+        "roles": ["author"],
+        "organization": "Technische Universität Dresden"
+      }
+    ],
+    "themes": [
+      {
+        "concepts": [
+          { "id": "agent-based-model",    "label": "Agent-Based Model" },
+          { "id": "individual-based-model","label": "Individual-Based Model" },
+          { "id": "simulation",            "label": "Simulation" },
+          { "id": "model-documentation",   "label": "Model Documentation" },
+          { "id": "protocol",              "label": "Protocol" }
+        ],
+        "scheme": "https://vocabularies.jasss.org/themes"
+      }
+    ],
+    "keywords": [
+      "ODD", "agent-based model", "individual-based model",
+      "simulation", "model documentation", "protocol", "replication",
+      "pattern-oriented modeling", "TRACE"
+    ],
+    "license": "https://creativecommons.org/licenses/by/3.0/",
+    "formats": [
+      { "mediaType": "text/html" }
+    ],
+
+    "odd": {
+      "purpose": "The ODD protocol provides a standardised, community-agreed framework for describing agent-based and individual-based simulation models (ABMs/IBMs). Its purpose is to enable model replication, understanding, and comparison by enforcing complete and logically ordered documentation. This second update improves clarity, supports replication of complex models, and strengthens linkage to Pattern-Oriented Modeling (POM) and the TRACE evaluation framework.",
+
+      "patterns": [
+        {
+          "name": "Pattern-Oriented Modeling (POM)",
+          "description": "A strategy for using multiple observed patterns — at different levels of organisation and for different model structural elements — to constrain, parameterise, and validate a model. Patterns that a model must reproduce become explicit design criteria documented under Purpose.",
+          "reference": "https://doi.org/10.1371/journal.pcbi.1000356"
+        }
+      ],
+
+      "entities": [
+        {
+          "name": "Simulation Model (abstract template)",
+          "entityType": "abstract",
+          "stateVariables": [],
+          "scales": {
+            "spatial": "Domain-specific — must be stated explicitly in the implementing ODD",
+            "temporal": "Domain-specific — must state time step unit and total simulation duration"
+          }
+        }
+      ],
+
+      "processOverview": {
+        "scheduling": "ODD requires an explicit description of temporal ordering: which processes run within each time step, in what order, and whether agent execution is synchronous, asynchronous, or in randomised order. Scheduling must match the implementation exactly.",
+        "processes": [
+          {
+            "name": "Submodel execution",
+            "executedBy": "Simulation engine / scheduling loop",
+            "description": "Each process listed in the process overview is executed per step according to the scheduling rules. All processes are detailed in the Submodels section."
+          }
+        ]
+      },
+
+      "designConcepts": {
+        "basicPrinciples": "What general theoretical or empirical frame underlies the model? Examples: evolutionary optimisation, decision-field theory, patch dynamics, social norms. Reference the theories explicitly.",
+        "emergence": "Which key results emerge from individual agent behaviours and interactions rather than being encoded directly as global model rules? Emergence should be identified and justified, not just asserted.",
+        "adaptation": "What adaptive traits do agents have? What environmental or internal information drives adaptive decisions? Describe the decision algorithm (e.g. if-then rules, utility maximisation, evolved strategies).",
+        "objectives": "What objectives do agents attempt to satisfy? How are objectives measured (fitness proxy, utility function, simple rule)? Objectives need not be explicit if only implicit in adaptive behaviour.",
+        "learning": "Do agents modify their behaviour based on accumulated experience? If so, describe the learning algorithm (reinforcement learning, genetic algorithms, imitation, memory decay).",
+        "prediction": "Do agents anticipate future conditions to make decisions? Describe the prediction horizon, method, and any assumptions about agent cognitive capacity.",
+        "sensing": "What information about the environment and other agents can an agent perceive? Are all sensing assumptions realistic and justified? Consider information cost and error.",
+        "interaction": "What direct interactions occur (e.g. competition, predation, communication, trade)? What indirect interactions occur through shared environmental resources or global variables?",
+        "stochasticity": "Which processes use random numbers and why? What probability distributions are used? Is stochasticity used to represent true variability or to represent uncertainty?",
+        "collectives": "Are agents aggregated into groups, populations, or networks that exhibit their own behaviours? How do collectives emerge or are they predefined? How do they affect individual agent behaviour?",
+        "observation": "How are model outputs collected for analysis? What state variables, aggregated statistics, or emergent patterns are recorded, at what frequency, and at what level of organisation?"
+      },
+
+      "initialization": {
+        "description": "ODD requires: the number and type of agents at t=0, their initial attribute values (means, distributions, or exact values), spatial configuration, and the rationale for the chosen initial state. For stochastic initialisation, describe how seeds are set.",
+        "seed": "Random seeds for initialisation must be reported. State whether results are averaged over multiple seeds or whether a single seed is used for all analyses.",
+        "links": []
+      },
+
+      "inputData": [],
+
+      "submodels": [
+        {
+          "name": "Generic Submodel Documentation Template",
+          "description": "Each submodel in an implementing ODD must describe: (1) purpose and relationship to the process overview, (2) mathematical equations or algorithmic pseudocode, (3) all parameters with units, values, ranges, and sources, (4) simplifying assumptions and their justification.",
+          "equations": "Provide full mathematical specification. Where equations come from published literature, cite sources. Where parameterised empirically, describe the calibration procedure.",
+          "parameterization": "All parameters must be listed with: symbol, description, value, unit, source (empirical data, literature, or calibration). Calibrated parameters must reference Supplement S7 for experiment design.",
+          "links": []
+        }
+      ]
+    }
+  },
+
+  "links": [
+    {
+      "href": "https://www.jasss.org/23/2/7.html",
+      "rel": "canonical",
+      "type": "text/html",
+      "title": "JASSS 23(2)7 — journal article"
+    },
+    {
+      "href": "https://doi.org/10.18564/jasss.4259",
+      "rel": "cite-as",
+      "type": "text/html",
+      "title": "DOI"
+    },
+    {
+      "href": "https://www.jasss.org/23/2/7/S1.pdf",
+      "rel": "related",
+      "type": "application/pdf",
+      "title": "Supplement S1 — ODD Guidance and checklists"
+    },
+    {
+      "href": "https://www.jasss.org/23/2/7/S2.pdf",
+      "rel": "related",
+      "type": "application/pdf",
+      "title": "Supplement S2 — Summary ODD templates"
+    },
+    {
+      "href": "https://www.jasss.org/23/2/7/S3.pdf",
+      "rel": "related",
+      "type": "application/pdf",
+      "title": "Supplement S3 — Nested ODD for complex models"
+    },
+    {
+      "href": "https://www.jasss.org/23/2/7/S4.pdf",
+      "rel": "related",
+      "type": "application/pdf",
+      "title": "Supplement S4 — ODD for modified/reused models"
+    }
+  ]
+}

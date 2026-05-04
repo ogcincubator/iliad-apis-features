@@ -1,0 +1,39 @@
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [-1.5530, 50.7020],
+      [-1.5505, 50.7025],
+      [-1.5480, 50.7030],
+      [-1.5455, 50.7036],
+      [-1.5428, 50.7041],
+      [-1.5401, 50.7048],
+      [-1.5376, 50.7054],
+      [-1.5354, 50.7060]
+    ]
+  },
+  "properties": {
+    "featureDomain": "intertidal",
+    "shorelineType": "meanHighWater",
+    "tidalDatumReference": "MHW",
+    "captureMethod": "derived_model",
+    "sensorPlatform": "Sentinel-2A, Planet Labs SuperDove, Capella-4 SAR (ensemble)",
+    "waterLevelModelRef": "https://resources.marine.copernicus.eu/product-detail/NWSHELF_REANALYSIS_WAV_004_015",
+    "temporalValidity": {
+      "captureDateTime": "2024-06-01T00:00:00Z"
+    },
+    "shorelineUncertainty": {
+      "horizontalUncertainty": 12.0,
+      "waterLevelUncertainty": 0.08,
+      "ihoAccuracyZone": "ZOC B"
+    },
+    "dataLineage": {
+      "captureMethod": "derived_model",
+      "sourceDataset": "TCarta FMSDI5 topo-bathy ensemble model, Hurst Spit, June 2024. Derived from 18 instantaneous NDWI shorelines (Sentinel-2A/B, Planet Labs) and 6 SAR shorelines (Capella), corrected to UKHO VORF 2022 Chart Datum and stacked to derive MHW contour at 0.1m tidal interval.",
+      "captureDate": "2024-06-01T00:00:00Z",
+      "gapFilled": false,
+      "confidenceLevel": "medium"
+    }
+  }
+}

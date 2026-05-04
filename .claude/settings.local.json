@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:ogcincubator.github.io)",
+      "WebFetch(domain:opengeospatial.github.io)",
+      "Bash(mkdir -p /Users/piotr/repos/Iliad/iliad-apis-features/_sources/odd-protocol/examples /Users/piotr/repos/Iliad/iliad-apis-features/_sources/odd-protocol/tests)",
+      "Bash(mkdir -p /Users/piotr/repos/Iliad/iliad-apis-features/.claude/skills/odd-to-bblock)",
+      "WebFetch(domain:www.comses.net)",
+      "WebFetch(domain:www.ecological-modelling.org)",
+      "Read(//Users/piotr/repos/FMSDI-2024/**)",
+      "Read(//Users/piotr/repos/FMSDI-2024-2/**)",
+      "Bash(mkdir -p /Users/piotr/repos/Iliad/iliad-apis-features/_sources/vertical-datum-reference/examples /Users/piotr/repos/Iliad/iliad-apis-features/_sources/vertical-datum-reference/tests)",
+      "Bash(mkdir -p /Users/piotr/repos/Iliad/iliad-apis-features/_sources/oim-coastal-feature/examples /Users/piotr/repos/Iliad/iliad-apis-features/_sources/oim-coastal-feature/tests)",
+      "Bash(mkdir -p /Users/piotr/repos/Iliad/iliad-apis-features/_sources/dynamic-shoreline/examples /Users/piotr/repos/Iliad/iliad-apis-features/_sources/dynamic-shoreline/tests)",
+      "Bash(docker run *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(list\\(d.keys\\(\\)\\)\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\('usageGuidance',''\\)[:600]\\)\")"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "ogc.hosted.iliad.api.features.vertical-datum-reference",
+  "name": "Vertical Datum Reference",
+  "abstract": "Reusable schema component encoding the vertical datum metadata required for unambiguous height referencing across land and marine domains, as mandated by FMSDI Best Practice 1 (Unified Geospatial Reference). Records datum name, epoch, CRS identifier, separation surface model, transformation method, vertical orientation convention, and vertical accuracy.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-05-04T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2026-05-04",
+  "tags": ["iliad", "fmsdi", "vertical-datum", "coastal", "geodesy"],
+  "sources": [
+    {
+      "title": "OGC FMSDI 2024 Pilot Summary Report (24-061)",
+      "link": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "OGC FMSDI 2024 Best Practices Report (24-064)",
+      "link": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "OGC FMSDI 2024-2 Pilot Summary Report",
+      "link": "http://ogc.pages.ogc.org/FMSDI-2024-2/"
+    },
+    {
+      "title": "IHO S-100 Universal Hydrographic Data Model",
+      "link": "https://iho.int/en/iho-standards/standard-publications-and-s-100"
+    },
+    {
+      "title": "OGC CRS ontology",
+      "link": "http://www.opengis.net/ont/crs"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable"
+}

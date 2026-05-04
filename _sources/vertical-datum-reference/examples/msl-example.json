@@ -1,0 +1,15 @@
+{
+  "datumName": "Mean Sea Level",
+  "datumEpoch": "2020.0",
+  "crsIdentifier": "http://www.opengis.net/def/crs/EPSG/0/5714",
+  "separationSurface": {
+    "type": "tidal",
+    "modelReference": "UKHO VORF 2022"
+  },
+  "verticalOrientation": "up",
+  "verticalAccuracy": {
+    "value": 0.05,
+    "unit": "m",
+    "confidenceLevel": "1-sigma (68%)"
+  }
+}

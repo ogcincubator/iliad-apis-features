@@ -1,0 +1,240 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: OIM Coastal Feature
+description: >
+  OIM profile for features in the intertidal and coastal zone (the "white ribbon").
+  Extends GeoJSON Feature with domain classification, elevation with vertical datum,
+  tidal context, data lineage with gap-fill documentation, and resolution metadata.
+  Implements FMSDI Best Practices 1, 3, and 5.
+allOf:
+  - $ref: bblocks://ogc.geo.features.feature
+  - type: object
+    required:
+      - properties
+    properties:
+      properties:
+        type: object
+        required:
+          - featureDomain
+          - dataLineage
+        properties:
+
+          featureDomain:
+            type: string
+            enum:
+              - land
+              - intertidal
+              - marine
+            description: >
+              Domain classification of this feature following the "white ribbon" model
+              (FMSDI 2024). "land" = permanently exposed above MHWS; "intertidal" =
+              alternates between exposed (low tide) and submerged (high tide) — the
+              white ribbon zone; "marine" = permanently submerged below LAT/CD.
+              This discriminator is required for any downstream harmonization or
+              conflict resolution.
+
+          elevation:
+            type: object
+            description: >
+              Elevation or depth value with associated uncertainty and vertical datum.
+              This field encodes the 4D nature of intertidal data (FMSDI BP1): a
+              numerical value alone is meaningless without datum and orientation context.
+              Required whenever a height/depth is recorded.
+            required:
+              - value
+              - unit
+              - verticalDatum
+            properties:
+              value:
+                type: number
+                description: >
+                  Elevation or depth value. Sign and direction are defined by
+                  verticalDatum.verticalOrientation: positive = higher (orientation=up)
+                  or deeper (orientation=down).
+              unit:
+                type: string
+                description: Unit of measure. Use "m" (SI metres).
+                enum: ["m"]
+              uncertainty:
+                type: number
+                minimum: 0
+                description: >
+                  1-sigma vertical uncertainty in the same unit as value. Include this
+                  to satisfy FMSDI BP2 (ISO 19115 data quality indicators) and to
+                  support IHO CATZOC classification.
+              verticalDatum:
+                description: >
+                  The vertical datum to which this value is referenced.
+                  Inline object conforming to the vertical-datum-reference building block.
+                type: object
+                required:
+                  - datumName
+                  - verticalOrientation
+                properties:
+                  datumName:
+                    type: string
+                  datumEpoch:
+                    type: string
+                  crsIdentifier:
+                    type: string
+                    format: uri
+                  separationSurface:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                        enum: [geoid, tidal, ellipsoidal, chart]
+                      modelReference:
+                        type: string
+                  transformationMethod:
+                    type: string
+                  verticalOrientation:
+                    type: string
+                    enum: [up, down]
+                  verticalAccuracy:
+                    type: object
+                    required: [value, unit]
+                    properties:
+                      value:
+                        type: number
+                        minimum: 0
+                      unit:
+                        type: string
+                      confidenceLevel:
+                        type: string
+
+          tideContext:
+            type: object
+            description: >
+              Tidal state at the time of observation or capture. Provides the 4D
+              temporal-tidal context required for correct interpretation of intertidal
+              features (FMSDI: "Elevation, time, and uncertainty are critical dimensions").
+            properties:
+              waterLevel:
+                type: number
+                description: >
+                  Water level at the time of observation in metres, relative to the
+                  datum specified in elevation.verticalDatum.
+              tidalState:
+                type: string
+                enum:
+                  - highWater
+                  - lowWater
+                  - midTide
+                  - meanHighWaterSprings
+                  - chartDatum
+                  - lowestAstronomicalTide
+                description: >
+                  Qualitative tidal state at time of observation. "chartDatum" and
+                  "lowestAstronomicalTide" indicate the water level is at or near
+                  the respective datum surface.
+              tideGaugeRef:
+                type: string
+                format: uri
+                description: >
+                  URI identifying the tide gauge station used for water level attribution.
+                  Reference to BODC, NOAA CO-OPS, or national network station identifier.
+
+          dataLineage:
+            type: object
+            description: >
+              Data lineage, capture methodology, and gap-fill documentation.
+              Required for all features. Implements FMSDI BP2 (FAIR — ISO 19115 lineage),
+              BP3 (Mind the Gap — document all interpolation assumptions).
+            required:
+              - captureMethod
+              - sourceDataset
+              - captureDate
+              - gapFilled
+              - confidenceLevel
+            properties:
+              captureMethod:
+                type: string
+                enum:
+                  - lidar
+                  - bathySonar
+                  - topoBathySurvey
+                  - opticalSatellite
+                  - SAR
+                  - UAV
+                  - interpolated
+                  - modelled
+                description: >
+                  Primary data capture method. "interpolated" and "modelled" indicate
+                  derived rather than directly observed data. Use "topoBathySurvey"
+                  for simultaneous topo-bathymetric systems (airborne topo-bathy LiDAR).
+              sourceDataset:
+                type: string
+                description: >
+                  Name, URI, or DOI of the source dataset. For FMSDI BP2 compliance,
+                  prefer a persistent URI from a federated catalog (OGC API Records,
+                  GeoDCAT-AP endpoint).
+              captureDate:
+                type: string
+                format: date-time
+                description: >
+                  ISO 8601 date-time of data capture or, for modelled/derived products,
+                  the reference date of the source data.
+              gapFilled:
+                type: boolean
+                description: >
+                  True if this feature represents a data void that has been filled
+                  using interpolation or modelling (FMSDI BP3: Mind the Gap).
+                  When true, interpolationMethod is required.
+              interpolationMethod:
+                type: string
+                description: >
+                  Interpolation or modelling method applied to fill the data void.
+                  Required when gapFilled=true. Omitting this field when gapFilled=true
+                  is a validation error. FMSDI BP3: document all assumptions introduced
+                  by interpolation — interpolation is a last resort and risk of
+                  misrepresenting morphology must be acknowledged.
+                examples:
+                  - "TIN"
+                  - "cubicSpline"
+                  - "kriging"
+                  - "IDW"
+                  - "bilinear"
+              confidenceLevel:
+                type: string
+                enum:
+                  - high
+                  - medium
+                  - low
+                  - estimated
+                description: >
+                  Qualitative confidence in this feature's accuracy. "estimated" should
+                  be used for gap-filled features where the interpolation method
+                  introduces significant assumptions about morphology.
+
+          resolutionInfo:
+            type: object
+            description: >
+              Spatial resolution metadata supporting FMSDI BP5 (Scalable Resolution
+              Management). Records original capture resolution and optional DGGS
+              cell reference for scalable multi-resolution integration.
+            properties:
+              horizontalResolution:
+                type: number
+                minimum: 0
+                description: >
+                  Ground sample distance or nominal resolution in metres. Do not
+                  conflate with accuracy; high-resolution data can still have poor accuracy.
+              verticalResolution:
+                type: number
+                minimum: 0
+                description: Vertical resolution or contour interval in metres.
+              dggsCellRef:
+                type: string
+                description: >
+                  DGGS cell identifier for this feature location, enabling scalable
+                  multi-resolution integration without rasterization (FMSDI BP5,
+                  Pangaea DGGS demonstrator). Supported systems include H3, ISEA4T,
+                  rHEALPix. Record the system name as a prefix, e.g. "H3:8928308280fffff".
+
+        if:
+          properties:
+            gapFilled:
+              const: true
+          required: [gapFilled]
+        then:
+          required: [interpolationMethod]

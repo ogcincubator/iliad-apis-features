@@ -1,0 +1,330 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Dynamic Shoreline Feature
+description: >
+  Feature type for tide-dependent shoreline vectors, encoding shoreline type, water
+  level and tidal datum at time of capture, sensor platform, NDWI threshold, and
+  positional uncertainty. Supports multi-temporal shoreline analysis and FMSDI
+  Best Practices 1 (Unified Geospatial Reference) and 3 (Mind the Gap).
+  Geometry must be LineString or MultiLineString.
+allOf:
+  - $ref: bblocks://ogc.geo.features.feature
+  - type: object
+    required:
+      - properties
+    properties:
+      geometry:
+        description: >
+          Shoreline geometry. Must be a LineString or MultiLineString representing
+          the land-water boundary. Coordinates are in WGS84 (EPSG:4326) unless
+          otherwise specified via the CRS metadata.
+        oneOf:
+          - type: object
+            properties:
+              type:
+                type: string
+                const: LineString
+              coordinates:
+                type: array
+                items:
+                  type: array
+                  minItems: 2
+                  maxItems: 3
+                  items:
+                    type: number
+            required: [type, coordinates]
+          - type: object
+            properties:
+              type:
+                type: string
+                const: MultiLineString
+              coordinates:
+                type: array
+                items:
+                  type: array
+                  items:
+                    type: array
+                    minItems: 2
+                    maxItems: 3
+                    items:
+                      type: number
+            required: [type, coordinates]
+      properties:
+        type: object
+        required:
+          - shorelineType
+          - tidalDatumReference
+          - captureMethod
+          - temporalValidity
+        properties:
+
+          shorelineType:
+            type: string
+            enum:
+              - instantaneous
+              - tidalDatumContour
+              - meanHighWater
+              - meanLowWater
+              - chartDatumContour
+              - astronomicalLowestTide
+            description: >
+              Classification of the shoreline's temporal/datum nature.
+              "instantaneous" = captured at a specific moment (satellite snapshot);
+              the actual water level at capture must be recorded in waterLevelAtCapture.
+              Datum contours ("tidalDatumContour", "meanHighWater", etc.) are derived
+              or modelled surfaces, not direct observations. Never use "instantaneous"
+              as a proxy for a tidal datum contour without explicit modelling — this is
+              a primary source of error when comparing shorelines across time.
+
+          waterLevelAtCapture:
+            type: object
+            description: >
+              Water level at the time of capture. Required when shorelineType =
+              "instantaneous". Provides the essential tidal context needed to convert
+              the instantaneous shoreline to a tidal datum reference (FMSDI BP1).
+            required:
+              - value
+              - unit
+              - verticalDatum
+            properties:
+              value:
+                type: number
+                description: Water level in metres relative to the datum specified.
+              unit:
+                type: string
+                enum: ["m"]
+                description: Unit of measure. Always "m" (SI metres).
+              verticalDatum:
+                type: object
+                description: >
+                  The vertical datum to which the water level is referenced.
+                  Inline object conforming to the vertical-datum-reference building block.
+                required:
+                  - datumName
+                  - verticalOrientation
+                properties:
+                  datumName:
+                    type: string
+                  datumEpoch:
+                    type: string
+                  crsIdentifier:
+                    type: string
+                    format: uri
+                  separationSurface:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                        enum: [geoid, tidal, ellipsoidal, chart]
+                      modelReference:
+                        type: string
+                  transformationMethod:
+                    type: string
+                  verticalOrientation:
+                    type: string
+                    enum: [up, down]
+                  verticalAccuracy:
+                    type: object
+                    required: [value, unit]
+                    properties:
+                      value:
+                        type: number
+                        minimum: 0
+                      unit:
+                        type: string
+                      confidenceLevel:
+                        type: string
+
+          tidalDatumReference:
+            type: string
+            enum:
+              - LAT
+              - MLWS
+              - MLW
+              - MSL
+              - MHW
+              - MHWS
+              - HAT
+              - CD
+            description: >
+              IHO S-32 tidal datum to which this shoreline is referenced or normalised.
+              The IHO tidal datum hierarchy (ascending water level) is:
+              LAT (Lowest Astronomical Tide) → MLWS (Mean Low Water Springs) →
+              MLW (Mean Low Water) → MSL (Mean Sea Level) →
+              MHW (Mean High Water) → MHWS (Mean High Water Springs) →
+              HAT (Highest Astronomical Tide). CD (Chart Datum) is typically close to LAT.
+              This field is always required to prevent datum confusion when aggregating
+              shorelines from multiple sources.
+
+          captureMethod:
+            type: string
+            enum:
+              - opticalSatellite_NDWI
+              - opticalSatellite_spectral
+              - SAR_backscatter
+              - airborneLidar
+              - topoBathySurvey
+              - UAV_photogrammetry
+              - derived_model
+            description: >
+              Primary method used to capture or derive this shoreline. The TCarta FMSDI
+              demonstrator used two methods: opticalSatellite_NDWI (Planet Labs
+              multispectral imagery with NDWI threshold) and SAR_backscatter (Capella
+              SAR with proprietary shoreline extraction). "derived_model" indicates a
+              datum contour computed from a topo-bathymetric model rather than direct
+              observation.
+
+          sensorPlatform:
+            type: string
+            description: >
+              Name or designation of the satellite, aircraft, or platform that acquired
+              the source imagery. Examples: "Sentinel-2A", "Planet Labs SuperDove",
+              "Capella-4 SAR", "ICESat-2", "Leica ALS80 airborne LiDAR".
+            examples:
+              - "Sentinel-2A"
+              - "Planet Labs SuperDove"
+              - "Capella-4 SAR"
+              - "ICESat-2"
+
+          ndwiThreshold:
+            type: number
+            description: >
+              NDWI (Normalized Difference Water Index) threshold value used to
+              delineate the water/land boundary in optical imagery. Required when
+              captureMethod = "opticalSatellite_NDWI". The threshold is highly
+              sensitive: a change of ±0.05 can shift the shoreline position by
+              tens of metres depending on coastal slope. Record this value to
+              support reproducibility and comparison across time series.
+            minimum: -1.0
+            maximum: 1.0
+
+          tideGaugeRef:
+            type: string
+            format: uri
+            description: >
+              URI identifying the tide gauge station used to attribute water level
+              to this shoreline. Reference to BODC, NOAA CO-OPS, SHOM, or other
+              national network station identifier. The TCarta demonstrator noted
+              that non-harmonic tide stations near Hurst Spit rely on proxy data
+              from primary stations, introducing additional uncertainty.
+
+          waterLevelModelRef:
+            type: string
+            format: uri
+            description: >
+              URI identifying the water level model used when a tide gauge is not
+              available or for spatial interpolation across the scene. Examples:
+              NOAA ESTOFS, UKHO POLPRED, Copernicus Marine Service CMEMS tides.
+
+          temporalValidity:
+            type: object
+            description: >
+              Temporal metadata for the shoreline capture. For instantaneous shorelines,
+              captureDateTime and waterLevelAtCapture together define the tidal context
+              necessary for inter-comparison and datum conversion (FMSDI BP1 mandate).
+            required:
+              - captureDateTime
+            properties:
+              captureDateTime:
+                type: string
+                format: date-time
+                description: >
+                  ISO 8601 date-time of satellite overpass, LiDAR flight, or model
+                  reference time. For EO-derived shorelines, use the scene acquisition
+                  time (UTC). Note that wide-swath sensors (e.g. Sentinel-2, 290km)
+                  may span multiple tidal states across a single scene.
+              tidalPeriodFraction:
+                type: string
+                description: >
+                  Approximate position within the tidal cycle at capture time.
+                  Format: "phase:fraction" where phase is flood/ebb/slack and
+                  fraction is 0.0–1.0. Example: "ebb:0.7" = 70% through the ebb phase.
+                  Useful for distinguishing shorelines captured at similar water levels
+                  but during different tidal dynamics.
+                pattern: "^(flood|ebb|slackHigh|slackLow):[01](\\.\\d+)?$"
+
+          shorelineUncertainty:
+            type: object
+            description: >
+              Positional and water level uncertainty for this shoreline. The
+              horizontal uncertainty must account for both sensor positioning accuracy
+              AND slope effect: water level uncertainty multiplied by inverse coastal
+              slope gives additional horizontal positional uncertainty. IHO CATZOC
+              provides a standard classification scheme.
+            properties:
+              horizontalUncertainty:
+                type: number
+                minimum: 0
+                description: >
+                  Total horizontal positional uncertainty in metres (1-sigma or 95%).
+                  For NDWI-derived shorelines, this should include: (a) pixel size
+                  effect, (b) NDWI threshold sensitivity × coastal slope^-1,
+                  (c) tide gauge temporal uncertainty × tidal propagation speed.
+              waterLevelUncertainty:
+                type: number
+                minimum: 0
+                description: >
+                  Uncertainty in the water level attribution at time of capture,
+                  in metres. Propagates into horizontal uncertainty via coastal slope.
+              ihoAccuracyZone:
+                type: string
+                description: >
+                  IHO CATZOC (Category of Zone of Confidence) classification.
+                  Standard categories: ZOC A1 (highest, full seafloor coverage),
+                  ZOC A2, ZOC B, ZOC C, ZOC D (lowest), ZOC U (unassessed).
+                  Used by UKHO and applied in TCarta FMSDI demonstrator.
+                enum:
+                  - "ZOC A1"
+                  - "ZOC A2"
+                  - "ZOC B"
+                  - "ZOC C"
+                  - "ZOC D"
+                  - "ZOC U"
+
+          featureDomain:
+            type: string
+            enum:
+              - land
+              - intertidal
+              - marine
+            description: >
+              Domain classification inherited from oim-coastal-feature. For shorelines,
+              this should typically be "intertidal" (the boundary between land and sea).
+
+          dataLineage:
+            type: object
+            description: >
+              Data lineage for the shoreline vector, conforming to oim-coastal-feature
+              data lineage pattern. Required for FMSDI BP2 (FAIR data principles).
+            required:
+              - captureMethod
+              - sourceDataset
+              - captureDate
+              - gapFilled
+              - confidenceLevel
+            properties:
+              captureMethod:
+                type: string
+              sourceDataset:
+                type: string
+              captureDate:
+                type: string
+                format: date-time
+              gapFilled:
+                type: boolean
+              interpolationMethod:
+                type: string
+              confidenceLevel:
+                type: string
+                enum:
+                  - high
+                  - medium
+                  - low
+                  - estimated
+
+        if:
+          properties:
+            shorelineType:
+              const: instantaneous
+          required: [shorelineType]
+        then:
+          required: [waterLevelAtCapture]

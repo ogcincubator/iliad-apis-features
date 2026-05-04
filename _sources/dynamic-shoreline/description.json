@@ -1,0 +1,60 @@
+{
+  "title": "Dynamic Shoreline Feature",
+  "abstract": "Feature type for tide-dependent shoreline vectors, encoding shoreline type, water level at capture, tidal datum reference, sensor platform, NDWI threshold, and spatial/temporal uncertainty. Enables multi-temporal shoreline analysis and supports FMSDI Best Practice 3 (Mind the Gap) and Best Practice 1 (Unified Geospatial Reference). Derived from TCarta FMSDI demonstrator at Hurst Spit using Planet Labs NDWI and Capella SAR imagery.",
+  "description": "A shoreline without water-level attribution cannot be reliably reused for flood modelling, navigation, or multi-temporal comparison. The OGC FMSDI 2024 Pilot (document 24-061, D001) demonstrated this through the TCarta demonstrator at Hurst Spit, The Solent (UK), and through the Compusult comparison of NOAA CUSP and NOAA Historical Composite Shoreline. Both cases showed that shorelines from different sources and methods produce different boundaries — the differences are only interpretable when each shoreline carries its own tidal datum metadata.\n\nThis building block standardises the metadata required for any shoreline vector to be interoperable across time, across methods, and across organisations.\n\n## IHO Tidal Datum Hierarchy\n\nThe `tidalDatumReference` field uses IHO S-32 terminology. The ascending hierarchy of datums by water level is:\n\n- LAT (Lowest Astronomical Tide) — the lowest level that can be predicted under average meteorological conditions\n- MLWS (Mean Low Water Springs) — average of low water heights at spring tides\n- MLW (Mean Low Water) — average of all low water heights\n- MSL (Mean Sea Level) — mean of all hourly water levels; used as geodetic reference\n- MHW (Mean High Water) — average of all high water heights\n- MHWS (Mean High Water Springs) — average of high water heights at spring tides; used as the land/sea boundary in many jurisdictions\n- HAT (Highest Astronomical Tide) — the highest predicted level under any combination of conditions\n- CD (Chart Datum) — the national chart datum, typically close to LAT\n\nThe tidalDatumReference must always be explicit. Shorelines aggregated from different sources that use different implicit datums produce apparent positional discrepancies that are actually datum offsets.\n\n## Distinguishing Instantaneous from Datum Contour Shorelines\n\nThe `shorelineType` field makes this distinction explicit. An 'instantaneous' shoreline is a snapshot of the actual water/land boundary at a known moment; it cannot be treated as a datum contour without explicit tidal modelling.\n\nDatum contour shorelines ('meanHighWater', 'chartDatumContour', etc.) are statistical or modelled surfaces derived from multiple observations or a hydrodynamic model. They represent a long-term average water level rather than a single observation.\n\nConfusing these two types causes the apparent 'shoreline position differences' described in the Compusult demonstrator (NOAA CUSP vs Historical Composite) which were partly attributed to 'differing data capture methodologies'.\n\n## NDWI — Normalized Difference Water Index\n\nThe NDWI (Green − NIR) / (Green + NIR) spectral index is widely used to delineate the land-water boundary in optical satellite imagery. The TCarta FMSDI demonstrator applied it to Planet Labs SuperDove 3m-resolution imagery at Hurst Spit.\n\nKey characteristics:\n- Threshold sensitivity: a change of ±0.05 in the delineation threshold can shift the shoreline horizontally by 10–50 metres on low-gradient beaches and mudflats, depending on the coastal slope\n- Turbidity effects: highly turbid water in estuaries and river mouths may register NDWI values similar to wet soil, causing misclassification\n- Vegetation interference: salt marsh, mangrove, and seagrass produce intermediate NDWI values\n- Intra-scene variation: wide-swath sensors (Sentinel-2 290km, Landsat 185km) may span different tidal stages within a single image\n\nThe `ndwiThreshold` field is required for `captureMethod='opticalSatellite_NDWI'` to support reproducibility and to allow sensitivity analysis.\n\n## SAR Shoreline Extraction\n\nSynthetic Aperture Radar (SAR) backscatter offers an alternative to optical methods that is not affected by cloud cover or solar illumination. The TCarta demonstrator used Capella X-band SAR imagery. SAR methods are affected by:\n- Sea surface roughness: wind-induced roughness increases backscatter of water, reducing contrast with land\n- Layover and shadow effects in areas with steep coastal cliffs\n- Vegetation and urban fringing: may exhibit similar backscatter to water\n\nSAR shorelines can complement optical methods in areas with persistent cloud cover and where tide gauges are absent.\n\n## Usage for Consistency\n\n1. Always pair `captureDateTime` with `waterLevelAtCapture` for every instantaneous shoreline vector. Without this pairing, the vector cannot be converted to a tidal datum reference.\n\n2. When aggregating shorelines across time, normalise all observations to a common `tidalDatumReference` before computing temporal trends or position statistics. Use a tide model (e.g. UKHO POLPRED, NOAA CO-OPS) to convert each instantaneous water level to the target datum.\n\n3. Calculate `horizontalUncertainty` to account for both sensor resolution accuracy and the slope effect: horizontalUncertainty = sqrt(sensorAccuracy² + (waterLevelUncertainty / coastalSlope)²). On a 1:100 slope, 0.1m water level uncertainty contributes 10m horizontal uncertainty.\n\n4. Never use `shorelineType='instantaneous'` as a proxy for a tidal datum contour without explicit modelling. Label the product type correctly.\n\n5. When the tide gauge is a non-harmonic station (as at Hurst Spit), increase `waterLevelUncertainty` to reflect the proxy interpolation error from the primary harmonic station.\n\n6. Record `tideGaugeRef` or `waterLevelModelRef` to enable future recalculation with improved tidal models.\n\n7. Apply IHO CATZOC classification to the `ihoAccuracyZone` field to provide a standardised accuracy statement compatible with hydrographic office requirements.",
+  "usageGuidance": {
+    "step1": "Set `shorelineType` to 'instantaneous' for any shoreline derived from a satellite snapshot or field survey at a specific moment. Use datum contour types for modelled or derived products.",
+    "step2": "For instantaneous shorelines, always populate `waterLevelAtCapture` with the water level relative to a named datum and record the tide gauge or model used.",
+    "step3": "Set `tidalDatumReference` to the IHO S-32 datum code that describes what this shoreline represents. For instantaneous observations this is the datum to which the water level measurement is referenced.",
+    "step4": "Record `ndwiThreshold` when `captureMethod='opticalSatellite_NDWI'`. Test threshold sensitivity by examining the shoreline shift caused by ±0.05 adjustment on your specific coastal morphology.",
+    "step5": "Compute `shorelineUncertainty.horizontalUncertainty` as the combined uncertainty from sensor position, NDWI/SAR accuracy, and the water level-to-horizontal propagation via coastal slope.",
+    "step6": "Use `ihoAccuracyZone` (CATZOC) when the shoreline will be used for navigational products or compared with IHO S-100 datasets.",
+    "step7": "When comparing shorelines from different dates, convert all to a common `tidalDatumReference` before computing position changes."
+  },
+  "references": [
+    {
+      "title": "OGC FMSDI 2024 Pilot Summary Report (OGC 24-061)",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "OGC FMSDI 2024 Best Practices Report (OGC 24-064)",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "OGC FMSDI 2024-2 Pilot Summary Report",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024-2/"
+    },
+    {
+      "title": "TCarta D100 — Space-Based Remote Sensing for Intertidal Awareness (Hurst Spit, NDWI+SAR+tide gauges)",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "Compusult D100 — Shoreline model differences (NOAA CUSP vs Historical Composite)",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "FMSDI Best Practice 1 — Unified Geospatial Reference (all observations must reference a common geodetic framework)",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "FMSDI Best Practice 3 — Mind the Gap (shoreline position defines the gap boundary; must be documented)",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    },
+    {
+      "title": "IHO S-32 Hydrographic Dictionary — tidal datum terminology (LAT, MLWS, MLW, MSL, MHW, MHWS, HAT, CD)",
+      "uri": "https://iho.int/en/iho-standards/standard-publications-and-s-32"
+    },
+    {
+      "title": "IHO S-44 Standards for Hydrographic Surveys — CATZOC accuracy classification",
+      "uri": "https://iho.int/en/iho-standards/standard-publications-and-s-44"
+    },
+    {
+      "title": "OGC document D001 = 24-061 (Summary Report), D002 = 24-064 (Best Practices Report)",
+      "uri": "http://ogc.pages.ogc.org/FMSDI-2024/"
+    }
+  ],
+  "relatedBuildingBlocks": [
+    "ogc.hosted.iliad.api.features.oim-coastal-feature",
+    "ogc.hosted.iliad.api.features.vertical-datum-reference"
+  ]
+}

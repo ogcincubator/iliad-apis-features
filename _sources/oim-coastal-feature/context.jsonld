@@ -1,0 +1,135 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
+    "qudt": "http://qudt.org/schema/qudt/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "sdo": "https://schema.org/",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "nerc": "http://vocab.nerc.ac.uk/collection/",
+    "fmsdi": "https://w3id.org/iliad/fmsdi/",
+    "iliad": "https://w3id.org/iliad/property/",
+
+    "featureDomain": {
+      "@id": "fmsdi:featureDomain"
+    },
+
+    "elevation": {
+      "@id": "fmsdi:elevation"
+    },
+
+    "value": {
+      "@id": "qudt:value"
+    },
+
+    "unit": {
+      "@id": "qudt:unit"
+    },
+
+    "uncertainty": {
+      "@id": "http://vocab.nerc.ac.uk/collection/P01/current/UNCEJJ01/"
+    },
+
+    "verticalDatum": {
+      "@id": "fmsdi:verticalDatum"
+    },
+
+    "datumName": {
+      "@id": "rdfs:label"
+    },
+
+    "datumEpoch": {
+      "@id": "fmsdi:datumEpoch"
+    },
+
+    "crsIdentifier": {
+      "@id": "dct:conformsTo",
+      "@type": "@id"
+    },
+
+    "separationSurface": {
+      "@id": "fmsdi:separationSurface"
+    },
+
+    "modelReference": {
+      "@id": "fmsdi:modelReference"
+    },
+
+    "transformationMethod": {
+      "@id": "prov:wasGeneratedBy"
+    },
+
+    "verticalOrientation": {
+      "@id": "fmsdi:verticalOrientation"
+    },
+
+    "verticalAccuracy": {
+      "@id": "http://vocab.nerc.ac.uk/collection/P01/current/UNCEJJ01/"
+    },
+
+    "tideContext": {
+      "@id": "fmsdi:tideContext"
+    },
+
+    "waterLevel": {
+      "@id": "http://vocab.nerc.ac.uk/collection/P01/current/ASLVZZ01/"
+    },
+
+    "tidalState": {
+      "@id": "http://vocab.nerc.ac.uk/collection/P02/current/TGRD/"
+    },
+
+    "tideGaugeRef": {
+      "@id": "http://vocab.nerc.ac.uk/collection/S13/current/",
+      "@type": "@id"
+    },
+
+    "dataLineage": {
+      "@id": "prov:wasDerivedFrom"
+    },
+
+    "captureMethod": {
+      "@id": "http://vocab.nerc.ac.uk/collection/L05/current/"
+    },
+
+    "sourceDataset": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@id"
+    },
+
+    "captureDate": {
+      "@id": "dct:created",
+      "@type": "xsd:dateTime"
+    },
+
+    "gapFilled": {
+      "@id": "fmsdi:gapFilled",
+      "@type": "xsd:boolean"
+    },
+
+    "interpolationMethod": {
+      "@id": "fmsdi:interpolationMethod"
+    },
+
+    "confidenceLevel": {
+      "@id": "fmsdi:confidenceLevel"
+    },
+
+    "resolutionInfo": {
+      "@id": "fmsdi:resolutionInfo"
+    },
+
+    "horizontalResolution": {
+      "@id": "fmsdi:horizontalResolution"
+    },
+
+    "verticalResolution": {
+      "@id": "fmsdi:verticalResolution"
+    },
+
+    "dggsCellRef": {
+      "@id": "https://www.opengis.net/doc/AS/dggs/2.0#zoneIdentifier"
+    }
+  }
+}

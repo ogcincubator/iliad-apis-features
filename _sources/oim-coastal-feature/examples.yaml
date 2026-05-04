@@ -1,0 +1,28 @@
+- title: Intertidal bathymetry sounding — directly observed, Chart Datum
+  description: >
+    Single bathymetric sounding in the intertidal zone at Hurst Spit, The Solent (UK).
+    Captured by multibeam echo sounder, referenced to Chart Datum (down convention,
+    EPSG:5861, UKHO VORF 2022 separation model). gapFilled=false. Demonstrates FMSDI
+    Best Practice 1 (full vertical datum provenance) and BP2 (ISO 19115 lineage).
+  content: examples/intertidal-bathymetry-sounding.geojson
+  base-uri: http://example.org/fmsdi/coastal/sounding-001
+
+- title: Interpolated intertidal feature — TIN gap fill, medium confidence
+  description: >
+    Intertidal zone feature produced by TIN interpolation to fill a data void in the
+    white ribbon between OS land DEM and UKHO S-102 bathymetry. gapFilled=true requires
+    interpolationMethod. Confidence level set to "medium" reflecting FMSDI BP3 caveat
+    that TIN interpolation may misrepresent morphology in dynamic coastal systems.
+    Includes DGGS H3 cell reference for Pangaea-style scalable integration (BP5).
+  content: examples/interpolated-intertidal-feature.geojson
+  base-uri: http://example.org/fmsdi/coastal/interp-001
+
+- title: Land-domain LiDAR elevation point — ODN datum, orientation up
+  description: >
+    LiDAR-derived ground point in the land domain (above MHWS), referenced to Ordnance
+    Datum Newlyn (ODN, EPSG:7405, orientation=up, OSGM15 geoid model). Shows contrast
+    with hydrographic convention: verticalOrientation=up means positive values = higher
+    elevation. Critical for correct sign convention when merging with marine depth data.
+    Source: Environment Agency National LIDAR Programme.
+  content: examples/lidar-coastal-elevation.geojson
+  base-uri: http://example.org/fmsdi/coastal/lidar-001

@@ -1,0 +1,27 @@
+- title: Chart Datum (CD) — hydrographic convention
+  description: >
+    Vertical datum example for a Chart Datum reference with orientation "down" (positive
+    values = greater depth below chart datum). Uses NOAA VDatum 4.3 as the separation
+    model and records EPSG:5861. This is the convention used in hydrographic charts and
+    navigational products. Implements FMSDI Best Practice 1 (Unified Geospatial Reference).
+  content: examples/chart-datum-example.json
+  base-uri: http://example.org/fmsdi/vdr/chart-datum
+
+- title: Mean Sea Level (MSL) — topographic convention
+  description: >
+    Vertical datum example for Mean Sea Level with orientation "up" (positive values =
+    height above MSL). References EPSG:5714 and UKHO VORF 2022 separation model. Typical
+    for land-derived elevation datasets and combined topo-bathy products. Implements FMSDI
+    Best Practice 1 requirement to record datum and vertical orientation.
+  content: examples/msl-example.json
+  base-uri: http://example.org/fmsdi/vdr/msl
+
+- title: WGS84 Ellipsoid — ellipsoidal height
+  description: >
+    Vertical datum example for WGS84 ellipsoidal height, orientation "up". GNSS-derived
+    observations typically carry ellipsoidal heights referenced to EPSG:4979. Conversion
+    to a gravity-based datum (geoid) or tidal datum is required before mixing with
+    bathymetric or topographic products. Implements FMSDI BP1 recommendation to use a
+    modern vertical control network incorporating GNSS CORS.
+  content: examples/ellipsoidal-example.json
+  base-uri: http://example.org/fmsdi/vdr/wgs84
