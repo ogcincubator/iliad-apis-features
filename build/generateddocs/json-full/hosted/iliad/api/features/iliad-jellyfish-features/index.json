@@ -13,9 +13,9 @@
   "dateOfLastChange": "2026-05-04",
   "link": "https://github.com/opengeospatial/bblock-template",
   "dependsOn": [
-    "ogc.hosted.iliad.api.features.oim-bio-tdwg",
     "ogc.hosted.iliad.api.features.oim-obs-cs",
-    "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology"
+    "ogc.hosted.iliad.api.features.iliad-jellyfish-ontology",
+    "ogc.hosted.iliad.api.features.oim-bio-tdwg"
   ],
   "sources": [
     {
@@ -40,11 +40,11 @@
     "ogc.sosa.properties.observation": [
       "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
     ],
-    "ogc.geo.features.feature": [
-      "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
-    ],
     "ogc.geo.features.featureCollection": [
       "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
+    ],
+    "ogc.geo.features.feature": [
+      "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
     ],
     "ogc.model.cross-domain.qudt": [
       "http://qudt.org/2.1/schema/shacl/qudt"
