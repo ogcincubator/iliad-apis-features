@@ -3,15 +3,23 @@
 **Piotr Zaborowski¹**  
 ¹ OGC Europe
 
-*Generated: 2026-05-04*
+*Generated with Sonnet 4.6 : 2026-05-04*
+*Core building blocks written manually*
+*oim coastal feature, vertical datum-reference and dynamic shoreline generated with building-block-generator from this repository with Sonnet 4.6 : 2026-05-04*
+*reviewed by human 2026-05-04*
+*test data selected and documented manually in SeaDOTs project*
 
 ---
 
 ## Abstract
 
-The OGC Federated Marine SDI 2024 Pilot (FMSDI-2024, OGC documents 24-061 and 24-064) identified five best practices for integrating terrestrial and marine geospatial data across the intertidal zone. This document traces the process of converting those best practices into concrete OGC Building Block packages registered in the ILIAD APIs repository, and reports on an inventory analysis identifying which datasets in the SeaDOTS data catalogue are directly affected. Three building blocks were produced: `vertical-datum-reference`, `oim-coastal-feature`, and `dynamic-shoreline`. Of 88 records in the SeaDOTS data inventory, 19 are directly applicable to at least one building block, with the highest-priority action being mandatory vertical datum annotation for seven bathymetric and ocean physics datasets before they can be safely published to ILIAD OGC API Features endpoints.
+The OGC Federated Marine SDI 2024 Pilot (FMSDI-2024, OGC documents 24-061 and 24-064) identified five best practices for integrating terrestrial and marine geospatial data across the intertidal zone.
+At the same time several initiatives registered OGC incubator building blocks.
+These brought the question if the recommendations from the engineering report are interopretable by the LLMs and can be turned into formalised building blocks and if these building blocks are valueable in the datasets metadata quality assessment.
 
----
+This document traces the process of converting those best practices into concrete OGC Building Block packages registered in the ILIAD APIs repository, and reports on an inventory analysis identifying which datasets in the SeaDOTS data catalogue are directly affected. Three building blocks were produced: `vertical-datum-reference`, `oim-coastal-feature`, and `dynamic-shoreline`. Of 88 records in the SeaDOTS data inventory, 19 are directly applicable to at least one building block, with the highest-priority action being mandatory vertical datum annotation for seven bathymetric and ocean physics datasets before they can be safely published to curated OGC API Features endpoints.
+
+Last chapters traces the comparison of the LLM assisted quality assessment process based on the Engineering report and Building Blocks. Insights are fully machine based interpretation.
 
 ## 1. Introduction and Motivation
 
