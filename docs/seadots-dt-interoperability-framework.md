@@ -1,7 +1,7 @@
 # A standards-based interoperability framework for coastal Digital Twin engines, data catalogs, and indicator systems: the SeaDOTs approach
 
 **Piotr Zaborowski¹, [co-authors]**  
-¹ SINTEF Ocean
+¹ OGC Europe
 
 ---
 
