@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2026-04-20",
+  "dateOfLastChange": "2026-05-04",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -35,7 +35,6 @@
   "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-bio-tdwg/context.jsonld",
   "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-bio-tdwg/",
-  "rdfData": [],
   "validationPassed": true,
   "description": "## TDWG properties\n\nDefines properties for TDWG defined elements for application in Biodiversity Domain.\n\nNote that most of these are based on the Darwin Core - and could be factored out into two separate modules if required.",
   "examples": [

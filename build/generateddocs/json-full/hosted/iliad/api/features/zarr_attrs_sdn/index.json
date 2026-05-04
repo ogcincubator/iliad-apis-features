@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2026-04-20",
+  "dateOfLastChange": "2026-05-04",
   "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_attrs_metadata",
   "sources": [
     {
@@ -40,7 +40,6 @@
   "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/context.jsonld",
   "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_sdn/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/",
-  "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/",
   "description": "## Ocean Information Model Records profile\n\nSeadataNet format example where requirements for OIM implementation can be defined as required.\n\nNote specific profiles will define specific requirements for interaction with external systems.\n\nThe JSON-LD Context declares the default baseURI of Observation with generic STA context and OIM specific context.\n\nTODO: (MVP)\n1 - complete OIM mapping in the context files\n2 - resolve gaps with the OIM and SDN\n\nNote that it may have an externally resolvable URI or be a proxy handled by ILIAD (using the OGC RAINBOW)\n",
@@ -53,17 +52,17 @@
           "language": "json",
           "ref": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/examples/.zattrs-crs",
           "code": "{\n    \"_ARRAY_DIMENSIONS\": [],\n    \"epsg_code\": \"EPSG:4326\",\n    \"grid_mapping_name\": \"latitude_longitude\",\n    \"inverse_flattening\": 298.257223563,\n    \"semi_major_axis\": 6378137.0\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_1_1.json"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_1_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_sdn/context.jsonld\",\n  \"_ARRAY_DIMENSIONS\": [],\n  \"epsg_code\": \"EPSG:4326\",\n  \"grid_mapping_name\": \"latitude_longitude\",\n  \"inverse_flattening\": 298.257223563,\n  \"semi_major_axis\": 6378137,\n  \"sdn_parameter_urn\": null,\n  \"sdn_uom_urn\": null\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_1_1.jsonld"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix : <https://w3id.org/iliad/oim/default-context/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] :epsg_code \"EPSG:4326\" ;\n    :grid_mapping_name \"latitude_longitude\" ;\n    :inverse_flattening 2.982572e+02 ;\n    :semi_major_axis 6378137 .\n\n",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_1_1.ttl"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_1_1.ttl"
         }
       ]
     },
@@ -75,17 +74,17 @@
           "language": "json",
           "ref": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/examples/.zattrs-LATITUDE",
           "code": "{\n    \"_ARRAY_DIMENSIONS\": [\n        \"INSTANCE\"\n    ],\n    \"ancillary_variables\": \"POSITION_SEADATANET_QC\",\n    \"axis\": \"Y\",\n    \"grid_mapping\": \"crs\",\n    \"long_name\": \"Latitude\",\n    \"sdn_parameter_name\": \"Latitude north\",\n    \"sdn_parameter_urn\": \"SDN:P01::ALATZZ01\",\n    \"sdn_uom_name\": \"Degrees north\",\n    \"sdn_uom_urn\": \"SDN:P06::DEGN\",\n    \"standard_name\": \"latitude\",\n    \"units\": \"degrees_north\"\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_2_1.json"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_2_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_sdn/context.jsonld\",\n  \"_ARRAY_DIMENSIONS\": [\n    \"INSTANCE\"\n  ],\n  \"ancillary_variables\": \"POSITION_SEADATANET_QC\",\n  \"axis\": \"Y\",\n  \"grid_mapping\": \"crs\",\n  \"long_name\": \"Latitude\",\n  \"sdn_parameter_name\": \"Latitude north\",\n  \"sdn_parameter_urn\": {\n    \"@id\": \"http://vocab.nerc.ac.uk/collection/P01/ALATZZ01\"\n  },\n  \"sdn_uom_name\": \"Degrees north\",\n  \"sdn_uom_urn\": {\n    \"@id\": \"http://vocab.nerc.ac.uk/collection/P06/DEGN\"\n  },\n  \"standard_name\": \"latitude\",\n  \"units\": \"degrees_north\"\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_2_1.jsonld"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_2_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix : <https://w3id.org/iliad/oim/default-context/> .\n@prefix ns1: <http://www.opengis.net/cis/1.1/> .\n\n[] ns1:axis <http://schemas.opengis.net/Y> ;\n    :_ARRAY_DIMENSIONS \"INSTANCE\" ;\n    :ancillary_variables \"POSITION_SEADATANET_QC\" ;\n    :grid_mapping \"crs\" ;\n    :long_name \"Latitude\" ;\n    :sdn_parameter_name \"Latitude north\" ;\n    :sdn_parameter_urn <http://vocab.nerc.ac.uk/collection/P01/ALATZZ01> ;\n    :sdn_uom_name \"Degrees north\" ;\n    :sdn_uom_urn <http://vocab.nerc.ac.uk/collection/P06/DEGN> ;\n    :standard_name \"latitude\" ;\n    :units \"degrees_north\" .\n\n",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_2_1.ttl"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_2_1.ttl"
         }
       ]
     },
@@ -97,17 +96,17 @@
           "language": "json",
           "ref": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/examples/.zattrs-TIME",
           "code": "{\n    \"_ARRAY_DIMENSIONS\": [\n        \"INSTANCE\",\n        \"MAXT\"\n    ],\n    \"ancillary_variables\": \"TIME_SEADATANET_QC\",\n    \"axis\": \"T\",\n    \"calendar\": \"julian\",\n    \"long_name\": \"Chronological Julian Date\",\n    \"sdn_parameter_name\": \"Julian Date (chronological)\",\n    \"sdn_parameter_urn\": \"SDN:P01::CJDY1101\",\n    \"sdn_uom_name\": \"Days\",\n    \"sdn_uom_urn\": \"SDN:P06::UTAA\",\n    \"standard_name\": \"time\",\n    \"units\": \"seconds since 2024-10-01 01:00:00.000000\"\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_3_1.json"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_3_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_sdn/context.jsonld\",\n  \"_ARRAY_DIMENSIONS\": [\n    \"INSTANCE\",\n    \"MAXT\"\n  ],\n  \"ancillary_variables\": \"TIME_SEADATANET_QC\",\n  \"axis\": \"T\",\n  \"calendar\": \"julian\",\n  \"long_name\": \"Chronological Julian Date\",\n  \"sdn_parameter_name\": \"Julian Date (chronological)\",\n  \"sdn_parameter_urn\": {\n    \"@id\": \"http://vocab.nerc.ac.uk/collection/P01/CJDY1101\"\n  },\n  \"sdn_uom_name\": \"Days\",\n  \"sdn_uom_urn\": {\n    \"@id\": \"http://vocab.nerc.ac.uk/collection/P06/UTAA\"\n  },\n  \"standard_name\": \"time\",\n  \"units\": \"seconds since 2024-10-01 01:00:00.000000\"\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_3_1.jsonld"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_3_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix : <https://w3id.org/iliad/oim/default-context/> .\n@prefix covjson: <https://covjson.org/def/core#> .\n@prefix ns1: <http://www.opengis.net/cis/1.1/> .\n\n[] ns1:axis <http://schemas.opengis.net/T> ;\n    covjson:calendar :julian ;\n    :_ARRAY_DIMENSIONS \"INSTANCE\",\n        \"MAXT\" ;\n    :ancillary_variables \"TIME_SEADATANET_QC\" ;\n    :long_name \"Chronological Julian Date\" ;\n    :sdn_parameter_name \"Julian Date (chronological)\" ;\n    :sdn_parameter_urn <http://vocab.nerc.ac.uk/collection/P01/CJDY1101> ;\n    :sdn_uom_name \"Days\" ;\n    :sdn_uom_urn <http://vocab.nerc.ac.uk/collection/P06/UTAA> ;\n    :standard_name \"time\" ;\n    :units \"seconds since 2024-10-01 01:00:00.000000\" .\n\n",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_3_1.ttl"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_3_1.ttl"
         }
       ]
     },
@@ -119,17 +118,17 @@
           "language": "json",
           "ref": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/examples/.zattrs-TEMPTADC",
           "code": "{\n    \"_ARRAY_DIMENSIONS\": [\n        \"INSTANCE\",\n        \"MAXT\"\n    ],\n    \"ancillary_variables\": \"TEMPTADC_SEADATANET_QC\",\n    \"coordinates\": \"TIME DEPTH LATITUDE LONGITUDE\",\n    \"long_name\": \"SST\",\n    \"sdn_parameter_name\": \"Temperature of the water body by in-situ thermistor on acoustic doppler current profiler (ADCP) transducer\",\n    \"sdn_parameter_urn\": \"SDN:P01::TEMPTADC\",\n    \"sdn_uom_name\": \"Degrees Celsius\",\n    \"sdn_uom_urn\": \"SDN:P06::UPAA\",\n    \"standard_name\": \"sea_surface_temperature\",\n    \"units\": \"degrees celsius\"\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_4_1.json"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_4_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_sdn/context.jsonld\",\n  \"_ARRAY_DIMENSIONS\": [\n    \"INSTANCE\",\n    \"MAXT\"\n  ],\n  \"ancillary_variables\": \"TEMPTADC_SEADATANET_QC\",\n  \"coordinates\": \"TIME DEPTH LATITUDE LONGITUDE\",\n  \"long_name\": \"SST\",\n  \"sdn_parameter_name\": \"Temperature of the water body by in-situ thermistor on acoustic doppler current profiler (ADCP) transducer\",\n  \"sdn_parameter_urn\": {\n    \"@id\": \"http://vocab.nerc.ac.uk/collection/P01/TEMPTADC\"\n  },\n  \"sdn_uom_name\": \"Degrees Celsius\",\n  \"sdn_uom_urn\": {\n    \"@id\": \"http://vocab.nerc.ac.uk/collection/P06/UPAA\"\n  },\n  \"standard_name\": \"sea_surface_temperature\",\n  \"units\": \"degrees celsius\"\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_4_1.jsonld"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_4_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix : <https://w3id.org/iliad/oim/default-context/> .\n\n[] :_ARRAY_DIMENSIONS \"INSTANCE\",\n        \"MAXT\" ;\n    :ancillary_variables \"TEMPTADC_SEADATANET_QC\" ;\n    :coordinates \"TIME DEPTH LATITUDE LONGITUDE\" ;\n    :long_name \"SST\" ;\n    :sdn_parameter_name \"Temperature of the water body by in-situ thermistor on acoustic doppler current profiler (ADCP) transducer\" ;\n    :sdn_parameter_urn <http://vocab.nerc.ac.uk/collection/P01/TEMPTADC> ;\n    :sdn_uom_name \"Degrees Celsius\" ;\n    :sdn_uom_urn <http://vocab.nerc.ac.uk/collection/P06/UPAA> ;\n    :standard_name \"sea_surface_temperature\" ;\n    :units \"degrees celsius\" .\n\n",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_sdn/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_4_1.ttl"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_sdn/example_4_1.ttl"
         }
       ]
     }

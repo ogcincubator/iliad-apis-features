@@ -9,7 +9,7 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "1.0",
-  "dateOfLastChange": "2026-04-20",
+  "dateOfLastChange": "2026-05-04",
   "dependsOn": [
     "ogc.model.cross-domain.all"
   ],
@@ -48,7 +48,6 @@
   "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",
   "remoteCacheDir": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim/remote_cache/",
   "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim/",
-  "rdfData": [],
   "validationPassed": true,
   "description": "##  Jellyfish Extension Ontology\n\n\nThis ontology defines an extension to the Oceans Informaton Model to capture concepts specific to the Citizen Science Jellyfish Observation pilot.\n\nThis will be linked vi JSON-LD context to various JSON schemas, such as OGC API implementations of OIM.\n",
   "annotatedSchema": null,
