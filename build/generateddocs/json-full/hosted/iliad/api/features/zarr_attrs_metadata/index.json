@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2026-04-20",
+  "dateOfLastChange": "2026-05-04",
   "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_attrs_metadata",
   "sources": [
     {
@@ -40,7 +40,6 @@
   "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/context.jsonld",
   "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/",
-  "rdfData": [],
   "validationPassed": false,
   "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/",
   "description": "## OGC Coverage JSON\n\n\nlong_name:\n    type: string\n  standard_name:\n    type: string\n  units:\n    type: string\n    enum:\n    - degrees_north\n    - degreesN\n  _ARRAY_DIMENSIONS:\n    type: array\n    items:\n      type: string\n  \"Conventions\":\n    \"type\": \"string\"\n  \"units_metadata\":\n    \"type\": \"string\"\n  \"cell_methods\":\n    \"type\": \"string\"\n  \"created_by\":\n    \"type\": \"string\"\n  \"date\":\n    \"type\": \"string\"\n  \"crs_wkt\":\n    \"type\": \"string\"\n  \"geotransform\":\n    \"type\": \"string\"\n  \"proj4\": \n    \"type\": \"string\"\n  \"spatial_ref\": \n    \"type\": \"string\"",
@@ -53,17 +52,17 @@
           "language": "json",
           "ref": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/examples/.zattrs-crs",
           "code": "{\n            \"_ARRAY_DIMENSIONS\": [],\n            \"crs_wkt\": \"GEOGCRS[\\\"WGS 84\\\",    ENSEMBLE[\\\"World Geodetic System 1984 ensemble\\\",        MEMBER[\\\"World Geodetic System 1984 (Transit)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G730)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G873)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1150)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1674)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1762)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G2139)\\\"],        ELLIPSOID[\\\"WGS 84\\\",6378137,298.257223563,            LENGTHUNIT[\\\"metre\\\",1]],        ENSEMBLEACCURACY[2.0]],    PRIMEM[\\\"Greenwich\\\",0,        ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],    CS[ellipsoidal,2],        AXIS[\\\"geodetic latitude (Lat)\\\",north,            ORDER[1],            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],        AXIS[\\\"geodetic longitude (Lon)\\\",east,            ORDER[2],            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],    USAGE[        SCOPE[\\\"Horizontal component of 3D system.\\\"],        AREA[\\\"World.\\\"],        BBOX[-90,-180,90,180]],    ID[\\\"EPSG\\\",4326]]\",\n            \"epsg_code\": \"4326\",\n            \"geotransform\": \"-15.01856792000000062615 0.03703666616296295843735 0 61.30106364000000240821 0 -0.02222333317851959630373\",\n            \"proj4\": \"+proj=longlat +datum=WGS84 +no_defs\",\n            \"spatial_ref\": \"GEOGCRS[\\\"WGS 84\\\",    ENSEMBLE[\\\"World Geodetic System 1984 ensemble\\\",        MEMBER[\\\"World Geodetic System 1984 (Transit)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G730)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G873)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1150)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1674)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1762)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G2139)\\\"],        ELLIPSOID[\\\"WGS 84\\\",6378137,298.257223563,            LENGTHUNIT[\\\"metre\\\",1]],        ENSEMBLEACCURACY[2.0]],    PRIMEM[\\\"Greenwich\\\",0,        ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],    CS[ellipsoidal,2],        AXIS[\\\"geodetic latitude (Lat)\\\",north,            ORDER[1],            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],        AXIS[\\\"geodetic longitude (Lon)\\\",east,            ORDER[2],            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],    USAGE[        SCOPE[\\\"Horizontal component of 3D system.\\\"],        AREA[\\\"World.\\\"],        BBOX[-90,-180,90,180]],    ID[\\\"EPSG\\\",4326]]\"\n        }",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_1_1.json"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_1_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld\",\n  \"_ARRAY_DIMENSIONS\": [],\n  \"crs_wkt\": \"GEOGCRS[\\\"WGS 84\\\",    ENSEMBLE[\\\"World Geodetic System 1984 ensemble\\\",        MEMBER[\\\"World Geodetic System 1984 (Transit)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G730)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G873)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1150)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1674)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1762)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G2139)\\\"],        ELLIPSOID[\\\"WGS 84\\\",6378137,298.257223563,            LENGTHUNIT[\\\"metre\\\",1]],        ENSEMBLEACCURACY[2.0]],    PRIMEM[\\\"Greenwich\\\",0,        ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],    CS[ellipsoidal,2],        AXIS[\\\"geodetic latitude (Lat)\\\",north,            ORDER[1],            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],        AXIS[\\\"geodetic longitude (Lon)\\\",east,            ORDER[2],            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],    USAGE[        SCOPE[\\\"Horizontal component of 3D system.\\\"],        AREA[\\\"World.\\\"],        BBOX[-90,-180,90,180]],    ID[\\\"EPSG\\\",4326]]\",\n  \"epsg_code\": \"4326\",\n  \"geotransform\": \"-15.01856792000000062615 0.03703666616296295843735 0 61.30106364000000240821 0 -0.02222333317851959630373\",\n  \"proj4\": \"+proj=longlat +datum=WGS84 +no_defs\",\n  \"spatial_ref\": \"GEOGCRS[\\\"WGS 84\\\",    ENSEMBLE[\\\"World Geodetic System 1984 ensemble\\\",        MEMBER[\\\"World Geodetic System 1984 (Transit)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G730)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G873)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1150)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1674)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G1762)\\\"],        MEMBER[\\\"World Geodetic System 1984 (G2139)\\\"],        ELLIPSOID[\\\"WGS 84\\\",6378137,298.257223563,            LENGTHUNIT[\\\"metre\\\",1]],        ENSEMBLEACCURACY[2.0]],    PRIMEM[\\\"Greenwich\\\",0,        ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],    CS[ellipsoidal,2],        AXIS[\\\"geodetic latitude (Lat)\\\",north,            ORDER[1],            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],        AXIS[\\\"geodetic longitude (Lon)\\\",east,            ORDER[2],            ANGLEUNIT[\\\"degree\\\",0.0174532925199433]],    USAGE[        SCOPE[\\\"Horizontal component of 3D system.\\\"],        AREA[\\\"World.\\\"],        BBOX[-90,-180,90,180]],    ID[\\\"EPSG\\\",4326]]\"\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_1_1.jsonld"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "\n",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_1_1.ttl"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_1_1.ttl"
         }
       ]
     },
@@ -75,17 +74,17 @@
           "language": "json",
           "ref": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/examples/.zattrs-latitude",
           "code": "{\n            \"_ARRAY_DIMENSIONS\": [\n                \"latitude\"\n            ],\n            \"long_name\": \"latitude\",\n            \"units\": \"degrees_north\",\n            \"standard_name\": \"latitude\"\n        }",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_2_1.json"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_2_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld\",\n  \"_ARRAY_DIMENSIONS\": [\n    \"latitude\"\n  ],\n  \"long_name\": \"latitude\",\n  \"units\": \"degrees_north\",\n  \"standard_name\": \"latitude\"\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_2_1.jsonld"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_2_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "\n",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_2_1.ttl"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_2_1.ttl"
         }
       ]
     },
@@ -97,17 +96,17 @@
           "language": "json",
           "ref": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/examples/.zattrs-longitude",
           "code": "{\n            \"_ARRAY_DIMENSIONS\": [\n                \"longitude\"\n            ],\n            \"long_name\": \"longitude\",\n            \"units\": \"degrees_east\"\n        }",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_3_1.json"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_3_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld\",\n  \"_ARRAY_DIMENSIONS\": [\n    \"longitude\"\n  ],\n  \"long_name\": \"longitude\",\n  \"units\": \"degrees_east\"\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_3_1.jsonld"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_3_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "\n",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_3_1.ttl"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_3_1.ttl"
         }
       ]
     },
@@ -119,17 +118,17 @@
           "language": "json",
           "ref": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/examples/.zattrs-root",
           "code": "{\n            \"Conventions\": \"CF-1.4\",\n            \"created_by\": \"R packages ncdf4 and terra (version 1.7-71)\",\n            \"date\": \"2024-04-18 15:50:45\"\n        }",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_4_1.json"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_4_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld\",\n  \"Conventions\": \"CF-1.4\",\n  \"created_by\": \"R packages ncdf4 and terra (version 1.7-71)\",\n  \"date\": \"2024-04-18 15:50:45\"\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_4_1.jsonld"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_4_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "\n",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_4_1.ttl"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_4_1.ttl"
         }
       ]
     },
@@ -141,17 +140,17 @@
           "language": "json",
           "ref": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/examples/.zattrs-time",
           "code": "{\n            \"_ARRAY_DIMENSIONS\": [\n                \"time\"\n            ],\n            \"calendar\": \"standard\",\n            \"long_name\": \"time\",\n            \"units\": \"seconds since 1970-01-01\"\n        }",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_5_1.json"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_5_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld\",\n  \"_ARRAY_DIMENSIONS\": [\n    \"time\"\n  ],\n  \"calendar\": \"standard\",\n  \"long_name\": \"time\",\n  \"units\": \"seconds since 1970-01-01\"\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_5_1.jsonld"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_5_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix covjson: <https://covjson.org/def/core#> .\n\n[] covjson:calendar [ ] .\n\n",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_5_1.ttl"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_5_1.ttl"
         }
       ]
     },
@@ -163,17 +162,17 @@
           "language": "json",
           "ref": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/examples/.zattrs-var-temperature",
           "code": "{\n    \"standard_name\": \"surface_temperature\",\n    \"long_name\": \"global-mean surface temperature\",\n    \"units_metadata\": \"temperature: on_scale\",\n    \"cell_methods\": \"area: mean\",\n    \"units\": \"degC\"\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_6_1.json"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_6_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld\",\n  \"standard_name\": \"surface_temperature\",\n  \"long_name\": \"global-mean surface temperature\",\n  \"units_metadata\": \"temperature: on_scale\",\n  \"cell_methods\": \"area: mean\",\n  \"units\": \"degC\"\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_6_1.jsonld"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_6_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "\n",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_6_1.ttl"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_6_1.ttl"
         }
       ]
     },
@@ -185,17 +184,17 @@
           "language": "json",
           "ref": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/examples/.zattrs-variable",
           "code": "{\n  \"_ARRAY_DIMENSIONS\": [\n      \"time\",\n      \"latitude\",\n      \"longitude\"\n  ],\n  \"grid_mapping\": \"crs\",\n  \"long_name\": \"Suitability of good catch (>200 kg) for Pleuronectes platessa\",\n  \"units\": \"percent\"\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_7_1.json"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_7_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld\",\n  \"_ARRAY_DIMENSIONS\": [\n    \"time\",\n    \"latitude\",\n    \"longitude\"\n  ],\n  \"grid_mapping\": \"crs\",\n  \"long_name\": \"Suitability of good catch (>200 kg) for Pleuronectes platessa\",\n  \"units\": \"percent\"\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_7_1.jsonld"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_7_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "\n",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_7_1.ttl"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_7_1.ttl"
         }
       ]
     },
@@ -207,17 +206,17 @@
           "language": "json",
           "ref": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/examples/.zgroups",
           "code": "{\n    \"zarr_format\": 2\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_8_1.json"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_8_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld\",\n  \"zarr_format\": 2\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_8_1.jsonld"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_8_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "\n",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_8_1.ttl"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_attrs_metadata/example_8_1.ttl"
         }
       ]
     }

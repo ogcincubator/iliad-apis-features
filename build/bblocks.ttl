@@ -2,8 +2,8 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <http://www.w3.org/ns/oa#> .
+@prefix ns1: <http://www.w3.org/ns/oa#> .
+@prefix ns2: <http://www.iana.org/assignments/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -21,14 +21,14 @@
     rdfs:label "OGC Iliad CoverageJSON " ;
     dct:abstract "Based on CoverageJSON and Ocean Information Model"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-04-23T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.coverageJSONFisheries> ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverageJSONFisheries/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverageJSONFisheries/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.coverageJSONFisheries> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverageJSONFisheries/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-04-20"^^xsd:date ;
+    dct:modified "2026-05-04"^^xsd:date ;
     dct:source <https://docs.ogc.org/cs/21-069r2/21-069r2.html>,
         <https://docs.ogc.org/is/09-146r8/09-146r8.html>,
         <https://ogcincubator.github.io/iliad-apis-features> ;
@@ -72,12 +72,12 @@
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverage_information_model/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.coverage_information_model> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverage_information_model/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverage_information_model/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.coverage_information_model> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-04-20"^^xsd:date ;
+    dct:modified "2026-05-04"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/09-146r8/09-146r8.html> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     skos:prefLabel "OGC Coverage Implementation Schema" ;
@@ -90,20 +90,127 @@
         "point cloud",
         "sensor model",
         "timeseries" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/context.jsonld> ;
             prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverage_information_model/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/coverage_information_model/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.hosted.iliad.api.features.dynamic-shoreline> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Dynamic Shoreline Feature" ;
+    dct:abstract "Feature type for tide-dependent shoreline vectors, encoding shoreline type, water level at capture, tidal datum reference, sensor platform, and spatial/temporal uncertainty. Enables multi-temporal shoreline analysis and supports FMSDI Best Practice 3 (Mind the Gap) and Best Practice 1 (Unified Geospatial Reference). Derived from TCarta FMSDI demonstrator at Hurst Spit using Planet Labs NDWI and Capella SAR data."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-05-04T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/dynamic-shoreline/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.dynamic-shoreline> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/dynamic-shoreline/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-05-04"^^xsd:date ;
+    dct:source <http://ogc.pages.ogc.org/FMSDI-2024-2/>,
+        <http://ogc.pages.ogc.org/FMSDI-2024/>,
+        <https://iho.int/en/iho-standards/standard-publications-and-s-32>,
+        <https://iho.int/en/iho-standards/standard-publications-and-s-44> ;
+    skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
+    skos:prefLabel "Dynamic Shoreline Feature" ;
+    skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
+    dcat:keyword "coastal",
+        "dynamic",
+        "fmsdi",
+        "iliad",
+        "satellite",
+        "shoreline",
+        "tidal" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/dynamic-shoreline/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.sosa.properties.observation> ;
+            prof:hasArtifact <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/dynamic-shoreline/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.featureCollection> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/dynamic-shoreline/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.hosted.iliad.api.features.oim-obs> ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://ogc.geo.features.feature>,
+        <bblocks://ogc.hosted.iliad.api.features.oim-coastal-feature> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/dynamic-shoreline/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.hosted.iliad.api.features.helcom_data_transformation> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "helcom_data_transformation" ;
+    dct:abstract "Auto-generated bblock from a csv source."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-04-27T13:04:47+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/helcom_data_transformation/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/helcom_data_transformation/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.helcom_data_transformation> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-05-04"^^xsd:date ;
+    dct:source [ rdfs:label "source" ] ;
+    skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
+    skos:prefLabel "helcom_data_transformation" ;
+    skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
+    dcat:keyword "checkin",
+        "csv" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/helcom_data_transformation/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/helcom_data_transformation/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/helcom_data_transformation/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:dependsOn <bblocks://ogc.hosted.iliad.api.features.macroobservation> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/_staging/helcom_data_transformation/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -114,14 +221,14 @@
     rdfs:label "Observations - ILIAD Jellyfish Pilot for Citizen Science" ;
     dct:abstract "Defines a project specific interoperability profile of the ILIAD Citizen Science profile for Observations in accordance with the Oceans Information Model"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.iliad-jellyfish-features> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish-features/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.iliad-jellyfish-features> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/iliad-jellyfish-features/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-04-20"^^xsd:date ;
+    dct:modified "2026-05-04"^^xsd:date ;
     dct:source <https://github.com/ILIAD-ocean-twin/OIM> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     skos:prefLabel "Observations - ILIAD Jellyfish Pilot for Citizen Science" ;
@@ -138,8 +245,13 @@
             prof:hasRole role:schema ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.model.cross-domain.qudt> ;
-            prof:hasArtifact <http://qudt.org/2.1/schema/shacl/qudt> ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.featureCollection> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.sosa.properties.observation> ;
+            prof:hasArtifact <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
@@ -148,23 +260,8 @@
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.skos.concept> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.geo.features.featureCollection> ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.skos.common> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl> ;
+            rdfs:seeAlso <bblocks://ogc.model.cross-domain.qudt> ;
+            prof:hasArtifact <http://qudt.org/2.1/schema/shacl/qudt> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
@@ -177,8 +274,18 @@
             prof:hasRole role:mapping ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.sosa.properties.observation> ;
-            prof:hasArtifact <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl> ;
+            rdfs:seeAlso <bblocks://ogc.skos.common> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.skos.concept> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
@@ -192,51 +299,6 @@
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
-<bblocks://ogc.hosted.iliad.api.features.macroobservation> a skos:Concept,
-        dcat:Dataset,
-        bblocks:BBlock,
-        bblocks:Schema ;
-    rdfs:label "HELCOM Macroobservation" ;
-    dct:abstract "A source-level building block for HELCOM macroobservation point data within the Swedish EEZ, including provenance-aware marine observation properties and linked-data context."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2026-04-17T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.macroobservation> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/macroobservation/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/macroobservation/index.md> ] ;
-    dct:hasVersion "0.1.0" ;
-    dct:modified "2026-04-20"^^xsd:date ;
-    dct:source <https://app.hubocean.earth/catalog/dataset/0c664d20-2c3b-409e-af43-ac32610f9276/emodnet-human-activities-environment-world-database-on-protected-areas-wdpa-world-database-on-protected-areas>,
-        <https://github.com/ILIAD-ocean-twin/OIM> ;
-    skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
-    skos:prefLabel "HELCOM Macroobservation" ;
-    skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
-    dcat:keyword "EEZ",
-        "GeoJSON",
-        "HELCOM",
-        "SKOS",
-        "SOSA",
-        "Sweden",
-        "macroobservation",
-        "marine observation" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/macroobservation/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/macroobservation/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/macroobservation/context.jsonld> ;
-            prof:hasRole role:mapping ] ;
-    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/macroobservation/context.jsonld> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed false .
-
 <bblocks://ogc.hosted.iliad.api.features.marine-protected-area-emodnet> a skos:Concept,
         dcat:Dataset,
         bblocks:BBlock,
@@ -244,14 +306,14 @@
     rdfs:label "Marine Protected Area FeatureType Building Block" ;
     dct:abstract "Defines a composable Building Block view of the MPA aligned with the Oceans Information Model."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.marine-protected-area-emodnet> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/marine-protected-area-emodnet/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/marine-protected-area-emodnet/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/marine-protected-area-emodnet/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.marine-protected-area-emodnet> ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2026-04-20"^^xsd:date ;
+    dct:modified "2026-05-04"^^xsd:date ;
     dct:source <https://app.hubocean.earth/catalog/dataset/0c664d20-2c3b-409e-af43-ac32610f9276/emodnet-human-activities-environment-world-database-on-protected-areas-wdpa-world-database-on-protected-areas>,
         <https://github.com/ILIAD-ocean-twin/OIM> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
@@ -261,11 +323,7 @@
         "iliad",
         "oim",
         "project" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/marine-protected-area-emodnet/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo shacl: ;
+    prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
@@ -277,9 +335,72 @@
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/marine-protected-area-emodnet/schema.json> ;
-            prof:hasRole role:schema ] ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/marine-protected-area-emodnet/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
     bblocks:dependsOn <bblocks://ogc.geo.features.feature> ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/marine-protected-area-emodnet/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
+
+<bblocks://ogc.hosted.iliad.api.features.odd-protocol> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "ODD Protocol Description Record" ;
+    dct:abstract "OGC API Records profile for simulation model publications using the ODD Protocol (Overview, Design concepts, Details). Provides a structured, open-ended scaffold for describing agent-based and individual-based models; domain-specific vocabularies (NERC, CF, Darwin Core, ICES) are injected at the entity and variable level by domain profiles."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-04-29T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/odd-protocol/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.odd-protocol> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/odd-protocol/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-05-04"^^xsd:date ;
+    dct:source <https://doi.org/10.18564/jasss.4259>,
+        <https://ogcincubator.github.io/bblocks-openscience/>,
+        <https://ogcincubator.github.io/geodcat-ogcapi-records/> ;
+    skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
+    skos:prefLabel "ODD Protocol Description Record" ;
+    skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
+    dcat:keyword "ABM",
+        "IBM",
+        "ODD",
+        "agent-based-model",
+        "model-documentation",
+        "open-science",
+        "records",
+        "simulation" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/odd-protocol/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.api.records.v1.schemas.linkTemplate> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/odd-protocol/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/odd-protocol/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://ogc.geo.geodcat.geodcat-records>,
+        <bblocks://ogc.geo.geodcat.geodcat-records-prov>,
+        <bblocks://ogc.osc.ontology.openscience> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/odd-protocol/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed false .
@@ -291,14 +412,14 @@
     rdfs:label "OIM STA Observations" ;
     dct:abstract "Defines SensorThings API Observations to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-06-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-sta-obs> ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-sta-obs/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-sta-obs> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-sta-obs/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-04-20"^^xsd:date ;
+    dct:modified "2026-05-04"^^xsd:date ;
     dct:source <https://github.com/ILIAD-ocean-twin/OIM> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     skos:prefLabel "OIM STA Observations" ;
@@ -307,14 +428,14 @@
         "iliad",
         "oim",
         "sosa" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-sta-obs/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-sta-obs/context.jsonld> ;
             prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-sta-obs/schema.json> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-sta-obs/schema.yaml> ;
@@ -325,57 +446,85 @@
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
-<bblocks://ogc.hosted.iliad.api.features.stac_multidim_data> a skos:Concept,
+<bblocks://ogc.hosted.iliad.api.features.test-helcom-data-fish-observations> a skos:Concept,
         dcat:Dataset,
         bblocks:BBlock,
         bblocks:Schema ;
-    rdfs:label "ILIAD STAC/DCAT dimensional data" ;
-    dct:abstract "Defines a mapping from STAC multi-dimensions for ILIAD - should be refactored to a general STAC multi-dimensions profile and an ILIAD sub-profile"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2024-10-11T00:00:00+00:00"^^xsd:dateTime ;
+    rdfs:label "Fish observations from HELCOM data source" ;
+    dct:abstract "Auto-generated bblock from a csv source."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-04-24T09:56:03+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.stac_multidim_data> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/stac_multidim_data/index.md> ],
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.test-helcom-data-fish-observations> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/stac_multidim_data/index.json> ] ;
-    dct:hasVersion "0.1" ;
-    dct:modified "2026-04-20"^^xsd:date ;
-    dct:source <https://example.com/sources/1> ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/test-helcom-data-fish-observations/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/test-helcom-data-fish-observations/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-05-04"^^xsd:date ;
+    dct:source [ rdfs:label "source" ] ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
-    skos:prefLabel "ILIAD STAC/DCAT dimensional data" ;
+    skos:prefLabel "Fish observations from HELCOM data source" ;
     skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
-    dcat:keyword "CF-convention",
-        "iliad",
-        "netcdf",
-        "records",
-        "stac" ;
-    prof:hasResource [ dct:conformsTo shacl: ;
+    dcat:keyword "checkin",
+        "csv" ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/_sources/_staging/test-helcom-data-fish-observations/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:dependsOn <bblocks://ogc.hosted.iliad.api.features.gfw-fishing-events> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.hosted.iliad.api.features.tst-inventory-seadots> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "seadots inventory" ;
+    dct:abstract "Auto-generated bblock from a csv source."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-04-24T10:55:30+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/tst-inventory-seadots/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/tst-inventory-seadots/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.tst-inventory-seadots> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-05-04"^^xsd:date ;
+    dct:source [ rdfs:label "source" ] ;
+    skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
+    skos:prefLabel "seadots inventory" ;
+    skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
+    dcat:keyword "checkin",
+        "csv" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/tst-inventory-seadots/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
             prof:hasRole role:validation ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/stac_multidim_data/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/stac_multidim_data/schema.yaml> ;
-            prof:hasRole role:schema ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/stac_multidim_data/context.jsonld> ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/tst-inventory-seadots/context.jsonld> ;
             prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/tst-inventory-seadots/schema.yaml> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.api.records.v1.schemas.linkTemplate> ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl> ;
             prof:hasRole role:validation ] ;
-    bblocks:dependsOn <bblocks://ogc.geo.geodcat.stac.geodcat-stac-item> ;
-    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/stac_multidim_data/context.jsonld> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+    bblocks:dependsOn <bblocks://ogc.hosted.iliad.api.features.stac_multidim_data> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/tst-inventory-seadots/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed false .
+    bblocks:validationPassed true .
 
 <bblocks://ogc.hosted.iliad.api.features.zarr_array_metadata> a skos:Concept,
         dcat:Dataset,
@@ -384,14 +533,14 @@
     rdfs:label "GeoZarr Array description metadata" ;
     dct:abstract "based on the https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html and Iliad requiremnts"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-09-24T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/zarr_array_metadata/index.md> ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/zarr_array_metadata/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/zarr_array_metadata/index.md> ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.zarr_array_metadata> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-04-20"^^xsd:date ;
+    dct:modified "2026-05-04"^^xsd:date ;
     dct:source <https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     skos:prefLabel "GeoZarr Array description metadata" ;
@@ -405,17 +554,17 @@
         "coverage",
         "linked-data",
         "spatiotemporal" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_array_metadata/context.jsonld> ;
             prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_array_metadata/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_array_metadata/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
@@ -429,14 +578,14 @@
     rdfs:label "GeoZarr Attributes description metadata" ;
     dct:abstract "based on the https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html, tooling support constraints and Iliad requiremnts"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-09-24T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/zarr_attrs_metadata/index.json> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.zarr_attrs_metadata> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/zarr_attrs_metadata/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/zarr_attrs_metadata/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-04-20"^^xsd:date ;
+    dct:modified "2026-05-04"^^xsd:date ;
     dct:source <https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     skos:prefLabel "GeoZarr Attributes description metadata" ;
@@ -450,17 +599,17 @@
         "coverage",
         "linked-data",
         "spatiotemporal" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/context.jsonld> ;
             prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_metadata/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_attrs_metadata/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
@@ -474,14 +623,14 @@
     rdfs:label "GeoZarr Attributes description metadata aligned to the SeaDataNet time series profile" ;
     dct:abstract "based on the https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html, tooling support constraints and Iliad requiremnts"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-01-24T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/zarr_attrs_sdn/index.json> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.zarr_attrs_sdn> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/zarr_attrs_sdn/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/zarr_attrs_sdn/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/zarr_attrs_sdn/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-04-20"^^xsd:date ;
+    dct:modified "2026-05-04"^^xsd:date ;
     dct:source <https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html#arrays> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     skos:prefLabel "GeoZarr Attributes description metadata aligned to the SeaDataNet time series profile" ;
@@ -495,14 +644,14 @@
         "coverage",
         "linked-data",
         "spatiotemporal" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_sdn/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_sdn/schema.json> ;
             prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_sdn/context.jsonld> ;
+            prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_attrs_sdn/schema.yaml> ;
@@ -512,26 +661,98 @@
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
+<http://www.opengis.net/ont/crs> rdfs:label "OGC CRS ontology" .
+
+<https://cfconventions.org/Data/cf-standard-names/current/build/cf-standard-name-table.html> rdfs:label "CF Standard Name Table" .
+
+<https://docs.ogc.org/as/20-040r3/20-040r3.html> rdfs:label "OGC Discrete Global Grid Systems Abstract Specification Topic 21" .
+
+<https://doi.org/10.18564/jasss.4259> rdfs:label "The ODD Protocol for Describing Agent-Based and Other Simulation Models: A Second Update" .
+
 <https://example.com/sources/1> rdfs:label "Reference to ILIAD" .
+
+<https://gateway.api.globalfishingwatch.org/v3/events> rdfs:label "Global Fishing Watch Events API" .
+
+<https://github.com/ILIAD-ocean-twin/APKG> rdfs:label "APKG repository" .
+
+<https://github.com/ILIAD-ocean-twin/APKG/blob/main/apkg-profile-context.jsonld> rdfs:label "APKG profile context" .
+
+<https://github.com/ILIAD-ocean-twin/APKG/blob/main/terms/apkg-ms.ttl> rdfs:label "APKG metadata terms" .
+
+<https://globalfishingwatch.org/our-apis/documentation> rdfs:label "Global Fishing Watch API Documentation" .
+
+<https://id3.seadots.eu/indicator/> rdfs:label "SEADOTS Indicator Vocabulary" .
+
+<https://iho.int/en/iho-standards/standard-publications-and-s-32> rdfs:label "IHO S-32 Hydrographic Dictionary — tidal datum terminology" .
+
+<https://iho.int/en/iho-standards/standard-publications-and-s-44> rdfs:label "IHO CATZOC — Category of Zone of Confidence for vertical/horizontal accuracy" .
+
+<https://ogcincubator.github.io/bblocks-openscience/> rdfs:label "Open Science Building Blocks" .
+
+<https://ogcincubator.github.io/geodcat-ogcapi-records/> rdfs:label "GeoDCAT mapping for OGC API Records" .
 
 <https://ogcincubator.github.io/iliad-apis-features> rdfs:label "Ocean Information Model" .
 
 <https://ogcincubator.github.io/iliad-apis-features/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:Nc6b8da13738047f78ac4e0af8b1288a5 ;
+    prov:wasAttributedTo _:N7d810e956eb74fddb1a26151200c9300 ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2026-04-20T08:38:40.879874"^^xsd:dateTime ;
-            prov:startedAtTime "2026-04-20T08:38:40.771793"^^xsd:dateTime ;
+            prov:endedAtTime "2026-05-04T11:36:42.143718"^^xsd:dateTime ;
+            prov:startedAtTime "2026-05-04T11:36:41.901969"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
-                    dct:format "application/json" ;
-                    dct:hasVersion "git:f41d024797375e03661ee3e7673b9ddea23c248d" ;
-                    rdfs:seeAlso <https://ogcincubator.github.io/iliad-apis-features/build/register.json> ],
-                [ a prov:Entity ;
                     dct:format "application/yaml" ;
-                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
-            prov:wasAssociatedWith _:Nc6b8da13738047f78ac4e0af8b1288a5 ] .
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+                [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:4bc7cb44d2189c55f33d119c2ab0ad62158e68a1" ;
+                    rdfs:seeAlso <https://ogcincubator.github.io/iliad-apis-features/build/register.json> ] ;
+            prov:wasAssociatedWith _:N7d810e956eb74fddb1a26151200c9300 ] .
+
+<https://vocab.nerc.ac.uk/collection/P07/current/> rdfs:label "NERC Vocabulary Server P07 Climate and Forecast Standard Names" .
+
+<https://vocab.nerc.ac.uk/standard_name/> rdfs:label "NERC CF Standard Name register view" .
 
 <https://www.tdwg.org/> rdfs:label "TDWG " .
+
+<bblocks://ogc.hosted.iliad.api.features.apkg> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Model ;
+    rdfs:label "Application Package Metadata Application Profile" ;
+    dct:abstract "Defines the APKG-MAP application package metadata profile for software application packages, processes, parameters, temporal coverage, geometry, links, and secrets as described in the ILIAD APKG repository."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-04-28T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/apkg/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/apkg/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.apkg> ] ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2026-05-04"^^xsd:date ;
+    dct:source <https://github.com/ILIAD-ocean-twin/APKG>,
+        <https://github.com/ILIAD-ocean-twin/APKG/blob/main/apkg-profile-context.jsonld>,
+        <https://github.com/ILIAD-ocean-twin/APKG/blob/main/terms/apkg-ms.ttl> ;
+    skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
+    skos:prefLabel "Application Package Metadata Application Profile" ;
+    skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
+    dcat:keyword "apkg",
+        "application-package",
+        "cwl",
+        "iliad",
+        "metadata",
+        "model" ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.hosted.iliad.api.features.apkg> ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/_sources/apkg/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/apkg/ontology.ttl> ;
+            prof:hasRole role:specification ] ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
 
 <bblocks://ogc.hosted.iliad.api.features.coverageJSON> a skos:Concept,
         dcat:Dataset,
@@ -540,14 +761,14 @@
     rdfs:label "OGC CoverageJSON" ;
     dct:abstract "Based on JavaScript Object Notation (JSON), CoverageJSON is a format for publishing spatiotemporal data to the Web. The primary design goals are simplicity, machine and human readability and efficiency. While other use cases are possible, the primary CoverageJSON use case is enabling the development of interactive visual websites that display and manipulate environmental data within a web browser."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-12-01T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverageJSON/index.json> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/coverageJSON/index.md> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.coverageJSON> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.coverageJSON> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/coverageJSON/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-04-20"^^xsd:date ;
+    dct:modified "2026-05-04"^^xsd:date ;
     dct:source <https://docs.ogc.org/cs/21-069r2/21-069r2.html>,
         <https://docs.ogc.org/is/09-146r8/09-146r8.html> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
@@ -566,16 +787,58 @@
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema.json> ;
             prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema.yaml> ;
-            prof:hasRole role:schema ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/context.jsonld> ;
-            prof:hasRole role:mapping ] ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/coverageJSON/schema.yaml> ;
+            prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/coverageJSON/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
+
+<bblocks://ogc.hosted.iliad.api.features.gfw-fishing-events> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Global Fishing Watch Fishing Events" ;
+    dct:abstract "A source-level schema building block for recent Global Fishing Watch apparent fishing events returned by the GFW Events API for a Gulf of Gdansk polygon query."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-04-22T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/gfw-fishing-events/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/gfw-fishing-events/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.gfw-fishing-events> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-05-04"^^xsd:date ;
+    dct:source <https://gateway.api.globalfishingwatch.org/v3/events>,
+        <https://globalfishingwatch.org/our-apis/documentation> ;
+    skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
+    skos:prefLabel "Global Fishing Watch Fishing Events" ;
+    skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
+    dcat:keyword "AIS",
+        "Global Fishing Watch",
+        "events api",
+        "fishing events",
+        "marine activity" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/gfw-fishing-events/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/gfw-fishing-events/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/gfw-fishing-events/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/gfw-fishing-events/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed false .
 
@@ -588,68 +851,15 @@
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.iliad-jellyfish-ontology> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish-ontology/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/iliad-jellyfish-ontology/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/iliad-jellyfish-ontology/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/iliad-jellyfish-ontology/index.md> ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2026-04-20"^^xsd:date ;
+    dct:modified "2026-05-04"^^xsd:date ;
     dct:source <https://github.com/ILIAD-ocean-twin/OIM> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     skos:prefLabel "Jellyfish Ontology" ;
-    skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
-    dcat:keyword "citizen-science",
-        "iliad",
-        "oim",
-        "project" ;
-    prof:hasResource [ dct:conformsTo owl:Ontology ;
-            dct:format "text/turtle" ;
-            prof:hasArtifact <https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl> ;
-            prof:hasRole role:specification ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.skos.common> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.model.cross-domain.sosa> ;
-            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.skos.concept> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.model.cross-domain.qudt> ;
-            prof:hasArtifact <http://qudt.org/2.1/schema/shacl/qudt> ;
-            prof:hasRole role:validation ] ;
-    bblocks:dependsOn <bblocks://ogc.hosted.iliad.api.features.oim>,
-        <bblocks://ogc.hosted.iliad.api.features.oim-bio-tdwg> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed true .
-
-<bblocks://ogc.hosted.iliad.api.features.oim> a skos:Concept,
-        dcat:Dataset,
-        bblocks:BBlock,
-        bblocks:Model ;
-    rdfs:label "Oceans Information Model" ;
-    dct:abstract "Defines a composable Building Block view of the Oceans Information Model. This view breaks down the OIM into a set of clear dependencies and profiling layers on top of the underlying common Cross Domain Model"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim> ] ;
-    dct:hasVersion "1.0" ;
-    dct:modified "2026-04-20"^^xsd:date ;
-    dct:source <https://github.com/ILIAD-ocean-twin/OIM> ;
-    skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
-    skos:prefLabel "Oceans Information Model" ;
     skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
     dcat:keyword "citizen-science",
         "iliad",
@@ -662,8 +872,172 @@
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.model.cross-domain.sosa> ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.model.cross-domain.qudt> ;
             prof:hasArtifact <http://qudt.org/2.1/schema/shacl/qudt> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.skos.concept> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl> ;
+            prof:hasRole role:specification ] ;
+    bblocks:dependsOn <bblocks://ogc.hosted.iliad.api.features.oim>,
+        <bblocks://ogc.hosted.iliad.api.features.oim-bio-tdwg> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.hosted.iliad.api.features.macroobservation> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "HELCOM Macroobservation" ;
+    dct:abstract "A source-level building block for HELCOM macroobservation point data within the Swedish EEZ, including provenance-aware marine observation properties and linked-data context."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-04-17T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/macroobservation/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/macroobservation/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.macroobservation> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-05-04"^^xsd:date ;
+    dct:source <https://app.hubocean.earth/catalog/dataset/0c664d20-2c3b-409e-af43-ac32610f9276/emodnet-human-activities-environment-world-database-on-protected-areas-wdpa-world-database-on-protected-areas>,
+        <https://github.com/ILIAD-ocean-twin/OIM> ;
+    skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
+    skos:prefLabel "HELCOM Macroobservation" ;
+    skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
+    dcat:keyword "EEZ",
+        "GeoJSON",
+        "HELCOM",
+        "SKOS",
+        "SOSA",
+        "Sweden",
+        "macroobservation",
+        "marine observation" ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/macroobservation/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/macroobservation/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/macroobservation/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/macroobservation/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
+
+<bblocks://ogc.hosted.iliad.api.features.nerc-cf-standard-names> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Model ;
+    rdfs:label "NERC CF Standard Names" ;
+    dct:abstract "Profiles the NERC Vocabulary Server Climate and Forecast Standard Names collection for use in ILIAD and related OGC API metadata workflows."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-04-28T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/nerc-cf-standard-names/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.nerc-cf-standard-names> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/nerc-cf-standard-names/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-05-04"^^xsd:date ;
+    dct:source <https://cfconventions.org/Data/cf-standard-names/current/build/cf-standard-name-table.html>,
+        <https://vocab.nerc.ac.uk/collection/P07/current/>,
+        <https://vocab.nerc.ac.uk/standard_name/> ;
+    skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
+    skos:prefLabel "NERC CF Standard Names" ;
+    skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
+    dcat:keyword "cf",
+        "iliad",
+        "model",
+        "nerc",
+        "skos",
+        "vocabulary" ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.hosted.iliad.api.features.nerc-cf-standard-names> ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/_sources/nerc-cf-standard-names/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.skos.concept> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.model.cross-domain.qudt> ;
+            prof:hasArtifact <http://qudt.org/2.1/schema/shacl/qudt> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.model.cross-domain.sosa> ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/nerc-cf-standard-names/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.skos.common> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://ogc.model.cross-domain.all> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
+
+<bblocks://ogc.hosted.iliad.api.features.oim> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Model ;
+    rdfs:label "Oceans Information Model" ;
+    dct:abstract "Defines a composable Building Block view of the Oceans Information Model. This view breaks down the OIM into a set of clear dependencies and profiling layers on top of the underlying common Cross Domain Model"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim/index.json> ] ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2026-05-04"^^xsd:date ;
+    dct:source <https://github.com/ILIAD-ocean-twin/OIM> ;
+    skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
+    skos:prefLabel "Oceans Information Model" ;
+    skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
+    dcat:keyword "citizen-science",
+        "iliad",
+        "oim",
+        "project" ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.model.cross-domain.qudt> ;
+            prof:hasArtifact <http://qudt.org/2.1/schema/shacl/qudt> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.skos.common> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.skos.concept> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo owl:Ontology ;
             dct:format "text/turtle" ;
@@ -673,14 +1047,78 @@
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.model.cross-domain.sosa> ;
             prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.skos.concept> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl> ;
             prof:hasRole role:validation ] ;
     bblocks:dependsOn <bblocks://ogc.model.cross-domain.all> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.hosted.iliad.api.features.oim-coastal-feature> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "OIM Coastal Feature" ;
+    dct:abstract "OIM profile for features in the intertidal and coastal zone (the 'white ribbon'), encoding elevation with vertical datum, tidal context, data lineage, gap-fill documentation, and scalable resolution metadata. Implements FMSDI Best Practices 1 (Unified Geospatial Reference), 3 (Mind the Gap), and 5 (Scalable Resolution Management)."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-05-04T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-coastal-feature> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-coastal-feature/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-coastal-feature/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-05-04"^^xsd:date ;
+    dct:source <http://ogc.pages.ogc.org/FMSDI-2024-2/>,
+        <http://ogc.pages.ogc.org/FMSDI-2024/>,
+        <https://docs.ogc.org/as/20-040r3/20-040r3.html>,
+        <https://iho.int/en/iho-standards/standard-publications-and-s-100> ;
+    skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
+    skos:prefLabel "OIM Coastal Feature" ;
+    skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
+    dcat:keyword "coastal",
+        "elevation",
+        "fmsdi",
+        "iliad",
+        "intertidal",
+        "oim",
+        "white-ribbon" ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-coastal-feature/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.sosa.properties.observation> ;
+            prof:hasArtifact <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-coastal-feature/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-coastal-feature/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.featureCollection> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.hosted.iliad.api.features.oim-obs> ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://ogc.geo.features.feature>,
+        <bblocks://ogc.hosted.iliad.api.features.oim-obs>,
+        <bblocks://ogc.hosted.iliad.api.features.vertical-datum-reference> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/oim-coastal-feature/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -693,12 +1131,12 @@
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs-cs/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs-cs/index.md> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-obs-cs> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-obs-cs> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs-cs/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-04-20"^^xsd:date ;
+    dct:modified "2026-05-04"^^xsd:date ;
     dct:source <https://github.com/ILIAD-ocean-twin/OIM> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     skos:prefLabel "OIM Observations - Citizen Science" ;
@@ -709,8 +1147,26 @@
         "sosa" ;
     prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.hosted.iliad.api.features.oim-obs> ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.features.featureCollection> ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.sosa.properties.observation> ;
+            prof:hasArtifact <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
@@ -720,24 +1176,6 @@
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.hosted.iliad.api.features.oim-obs> ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.sosa.properties.observation> ;
-            prof:hasArtifact <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.hosted.iliad.api.features.oim-obs>,
         <bblocks://ogc.ogc-utils.iri-or-curie> ;
@@ -746,9 +1184,166 @@
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
+<bblocks://ogc.hosted.iliad.api.features.oim-variables> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Model ;
+    rdfs:label "OIM Variables" ;
+    dct:abstract "Defines the OIM variable and indicator concept model for SEADOTS and ILIAD variable observations."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-04-20T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-variables/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-variables> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-variables/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-05-04"^^xsd:date ;
+    dct:source <https://github.com/ILIAD-ocean-twin/OIM>,
+        <https://id3.seadots.eu/indicator/> ;
+    skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
+    skos:prefLabel "OIM Variables" ;
+    skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
+    dcat:keyword "iliad",
+        "indicators",
+        "model",
+        "oim",
+        "variables" ;
+    prof:hasResource [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-variables/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.model.cross-domain.sosa> ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.skos.concept> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.model.cross-domain.qudt> ;
+            prof:hasArtifact <http://qudt.org/2.1/schema/shacl/qudt> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.hosted.iliad.api.features.oim-variables> ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/_sources/oim-variables/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.skos.common> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://ogc.model.cross-domain.all> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
+
+<bblocks://ogc.hosted.iliad.api.features.stac_multidim_data> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "ILIAD STAC/DCAT dimensional data" ;
+    dct:abstract "Defines a mapping from STAC multi-dimensions for ILIAD - should be refactored to a general STAC multi-dimensions profile and an ILIAD sub-profile"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-10-11T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/stac_multidim_data/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.stac_multidim_data> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/stac_multidim_data/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-05-04"^^xsd:date ;
+    dct:source <https://example.com/sources/1> ;
+    skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
+    skos:prefLabel "ILIAD STAC/DCAT dimensional data" ;
+    skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
+    dcat:keyword "CF-convention",
+        "iliad",
+        "netcdf",
+        "records",
+        "stac" ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/stac_multidim_data/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.api.records.v1.schemas.linkTemplate> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/stac_multidim_data/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/stac_multidim_data/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.geo.geodcat.stac.geodcat-stac-item> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/stac_multidim_data/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
+
+<bblocks://ogc.hosted.iliad.api.features.vertical-datum-reference> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Vertical Datum Reference" ;
+    dct:abstract "Reusable schema component encoding the vertical datum metadata required for unambiguous height referencing across land and marine domains, as mandated by FMSDI Best Practice 1 (Unified Geospatial Reference). Records datum name, epoch, CRS identifier, separation surface model, transformation method, vertical orientation convention, and vertical accuracy."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-05-04T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/vertical-datum-reference/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.vertical-datum-reference> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/vertical-datum-reference/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-05-04"^^xsd:date ;
+    dct:source <http://ogc.pages.ogc.org/FMSDI-2024-2/>,
+        <http://ogc.pages.ogc.org/FMSDI-2024/>,
+        <http://www.opengis.net/ont/crs>,
+        <https://iho.int/en/iho-standards/standard-publications-and-s-100> ;
+    skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
+    skos:prefLabel "Vertical Datum Reference" ;
+    skos:topConceptOf <https://ogcincubator.github.io/iliad-apis-features/> ;
+    dcat:keyword "coastal",
+        "fmsdi",
+        "geodesy",
+        "iliad",
+        "vertical-datum" ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/vertical-datum-reference/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/vertical-datum-reference/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/vertical-datum-reference/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/iliad-apis-features/_sources/vertical-datum-reference/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
 <https://app.hubocean.earth/catalog/dataset/0c664d20-2c3b-409e-af43-ac32610f9276/emodnet-human-activities-environment-world-database-on-protected-areas-wdpa-world-database-on-protected-areas> rdfs:label "Example data from EMODNet via ODP Features API" .
 
 <https://docs.ogc.org/cs/21-069r2/21-069r2.html> rdfs:label "CoverageJSON context" .
+
+<https://iho.int/en/iho-standards/standard-publications-and-s-100> rdfs:label "IHO S-100 Universal Hydrographic Data Model" .
 
 <bblocks://ogc.hosted.iliad.api.features.oim-bio-tdwg> a skos:Concept,
         dcat:Dataset,
@@ -757,14 +1352,14 @@
     rdfs:label "OIM Biodiversity - TDWG" ;
     dct:abstract "Defines JSON schema properties mapped to the Taxonomic Database Working Group data model. This is based on Darwin Core."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-bio-tdwg/index.json> ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-bio-tdwg> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-bio-tdwg/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-bio-tdwg/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-bio-tdwg/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-04-20"^^xsd:date ;
+    dct:modified "2026-05-04"^^xsd:date ;
     dct:source <https://www.tdwg.org/> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     skos:prefLabel "OIM Biodiversity - TDWG" ;
@@ -774,12 +1369,12 @@
         "oim",
         "tdwg" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/schema.yaml> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
@@ -789,6 +1384,12 @@
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
+
+<http://ogc.pages.ogc.org/FMSDI-2024-2/> rdfs:label "OGC FMSDI 2024-2 Pilot Summary Report" .
+
+<http://ogc.pages.ogc.org/FMSDI-2024/> rdfs:label "OGC FMSDI 2024 Best Practices Report (24-064)",
+        "OGC FMSDI 2024 Pilot Summary Report (24-061)",
+        "TCarta D100 — Space-Based Remote Sensing for Intertidal Awareness (Hurst Spit NDWI + SAR demonstrator)" .
 
 <https://docs.ogc.org/is/09-146r8/09-146r8.html> rdfs:label "Coverage Implementation Schema",
         "Coverage Implementation Schema that CoverageJSON is based on" .
@@ -803,14 +1404,14 @@
     rdfs:label "OIM Observations" ;
     dct:abstract "Defines observations and collections to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs/index.json> ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs/index.md> ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-obs> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-obs/index.md> ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-obs/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-04-20"^^xsd:date ;
+    dct:modified "2026-05-04"^^xsd:date ;
     dct:source <https://github.com/ILIAD-ocean-twin/OIM> ;
     skos:inScheme <https://ogcincubator.github.io/iliad-apis-features/> ;
     skos:prefLabel "OIM Observations" ;
@@ -819,33 +1420,33 @@
         "iliad",
         "oim",
         "sosa" ;
-    prof:hasResource [ dct:conformsTo shacl: ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
             prof:hasRole role:validation ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld> ;
-            prof:hasRole role:mapping ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.features.featureCollection> ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl> ;
             prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.sosa.properties.observation> ;
             prof:hasArtifact <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl> ;
             prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld> ;
+            prof:hasRole role:mapping ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.hosted.iliad.api.features.oim-obs> ;
@@ -861,58 +1462,71 @@
     bblocks:validationPassed true .
 
 <https://github.com/ILIAD-ocean-twin/OIM> rdfs:label "Cross Domain Model Building Blocks",
+        "OIM Oceans Information Model",
         "OIM master repository",
         "Ocean Information Model" .
 
 <https://ogcincubator.github.io/iliad-apis-features/> a skos:ConceptScheme,
         dcat:Catalog,
         bblocks:BBlocksRegister ;
-    rdfs:label "Building Blocks - ILIAD API Profiles" ;
+    rdfs:label "Building Blocks - Marine API Profiles" ;
     dct:abstract "(Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:description """Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. 
 
 Thus, a pilot project to monitor Jellyfish swarms using Citizen Science will reuse common patterns for Citizen Science observations, which in turn we reuse a common pattern for observations, using an underlying component of the OIM - the OGC Observations model (SOSA ontology). 
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:modified "2026-04-20T08:38:02.548517"^^xsd:dateTime ;
-    owl:imports <https://ogcincubator.github.io/bblocks-sta/build/register.json>,
+    dct:modified "2026-05-04T11:35:48.936020"^^xsd:dateTime ;
+    owl:imports <https://ogcincubator.github.io/bblocks-openscience/build/register.json>,
+        <https://ogcincubator.github.io/bblocks-sta/build/register.json>,
         <https://ogcincubator.github.io/bblocks-stac/build/register.json>,
         <https://ogcincubator.github.io/cross-domain-model/build/register.json>,
         <https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json>,
         <https://opengeospatial.github.io/bblocks/register.json>,
         <https://opengeospatial.github.io/ogcapi-sosa/build/register.json> ;
-    skos:hasTopConcept <bblocks://ogc.hosted.iliad.api.features.coverageJSON>,
+    skos:hasTopConcept <bblocks://ogc.hosted.iliad.api.features.apkg>,
+        <bblocks://ogc.hosted.iliad.api.features.coverageJSON>,
         <bblocks://ogc.hosted.iliad.api.features.coverageJSONFisheries>,
         <bblocks://ogc.hosted.iliad.api.features.coverage_information_model>,
+        <bblocks://ogc.hosted.iliad.api.features.dynamic-shoreline>,
+        <bblocks://ogc.hosted.iliad.api.features.gfw-fishing-events>,
+        <bblocks://ogc.hosted.iliad.api.features.helcom_data_transformation>,
         <bblocks://ogc.hosted.iliad.api.features.iliad-jellyfish-features>,
         <bblocks://ogc.hosted.iliad.api.features.iliad-jellyfish-ontology>,
         <bblocks://ogc.hosted.iliad.api.features.macroobservation>,
         <bblocks://ogc.hosted.iliad.api.features.marine-protected-area-emodnet>,
+        <bblocks://ogc.hosted.iliad.api.features.nerc-cf-standard-names>,
+        <bblocks://ogc.hosted.iliad.api.features.odd-protocol>,
         <bblocks://ogc.hosted.iliad.api.features.oim>,
         <bblocks://ogc.hosted.iliad.api.features.oim-bio-tdwg>,
+        <bblocks://ogc.hosted.iliad.api.features.oim-coastal-feature>,
         <bblocks://ogc.hosted.iliad.api.features.oim-obs>,
         <bblocks://ogc.hosted.iliad.api.features.oim-obs-cs>,
         <bblocks://ogc.hosted.iliad.api.features.oim-sta-obs>,
+        <bblocks://ogc.hosted.iliad.api.features.oim-variables>,
         <bblocks://ogc.hosted.iliad.api.features.stac_multidim_data>,
+        <bblocks://ogc.hosted.iliad.api.features.test-helcom-data-fish-observations>,
+        <bblocks://ogc.hosted.iliad.api.features.tst-inventory-seadots>,
+        <bblocks://ogc.hosted.iliad.api.features.vertical-datum-reference>,
         <bblocks://ogc.hosted.iliad.api.features.zarr_array_metadata>,
         <bblocks://ogc.hosted.iliad.api.features.zarr_attrs_metadata>,
         <bblocks://ogc.hosted.iliad.api.features.zarr_attrs_sdn> ;
-    skos:prefLabel "Building Blocks - ILIAD API Profiles" ;
-    prof:hasResource [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
-            dct:type "text/turtle" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://ogcincubator.github.io/iliad-apis-features/build/bblocks.ttl> ],
-        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+    skos:prefLabel "Building Blocks - Marine API Profiles" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
             dct:type "application/ld+json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://ogcincubator.github.io/iliad-apis-features/build/bblocks.jsonld> ],
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://ogcincubator.github.io/iliad-apis-features/build/bblocks.jsonld> ],
         [ rdfs:label "This Building Blocks Register in JSON format" ;
             dct:type "application/json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://ogcincubator.github.io/iliad-apis-features/build/register.json> ] ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://ogcincubator.github.io/iliad-apis-features/build/register.json> ],
+        [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+            dct:type "text/turtle" ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://ogcincubator.github.io/iliad-apis-features/build/bblocks.ttl> ] ;
     foaf:homepage <https://ogcincubator.github.io/iliad-apis-features/> ;
     bblocks:hasValidationReport <https://ogcincubator.github.io/iliad-apis-features/build/tests/report.html> .
 
-_:Nc6b8da13738047f78ac4e0af8b1288a5 a prov:Agent,
+_:N7d810e956eb74fddb1a26151200c9300 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dct:hasVersion "0.5.28" ;

@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2026-04-20",
+  "dateOfLastChange": "2026-05-04",
   "link": "https://github.com/opengeospatial/iliad-api-features/oim-sta-obs",
   "sources": [
     {
@@ -37,7 +37,6 @@
   "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/schema.yaml",
   "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/",
-  "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/oim-sta-obs/",
   "description": "## Ocean Information Model Observations Profile\n\nCurrently a stub where requirements for OIM implementation can be defined as required.\n\nNote specific profiles will define specific requirements for interaction with external systems.\n\nThe JSON-LD Context declares the default baseURI of Observation with generic STA context and OIM specific context.\n\nTODO: (MVP)\n1 - implement the observableProperties Register as a concept scheme under OGC hosted\n2 - define a SHACL or other rule that requires observableProperties to be registered in the ILIAD observable properties register.\n\nNote that it may have an externally resolvable URI or be a proxy handled by ILIAD (using the OGC RAINBOW)\n\nThe mechanisms for handling external vocabulary constraints to be define here: (TBD)\n",
@@ -50,17 +49,17 @@
           "language": "json",
           "ref": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/examples/Observation.json",
           "code": "{\n  \"@iot.id\": \"1\",\n  \"@iot.selfLink\": \"http://example.org/v1.1/Observations(1)\",\n  \"FeatureOfInterest@iot.navigationLink\": \"Observations(1)/FeatureOfInterest\",\n  \"Datastream@iot.navigationLink\": \"Observations(1)/Datastream\",\n  \"phenomenonTime\": \"2014-12-31T11:59:59.00+08:00\",\n  \"resultTime\": \"2014-12-31T11:59:59.00+08:00\",\n  \"result\": 70.4\n}\n",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.json"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.json"
         },
         {
           "language": "jsonld",
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-sta-obs/context.jsonld\",\n  \"@iot.id\": \"1\",\n  \"@iot.selfLink\": \"http://example.org/v1.1/Observations(1)\",\n  \"FeatureOfInterest@iot.navigationLink\": \"Observations(1)/FeatureOfInterest\",\n  \"Datastream@iot.navigationLink\": \"Observations(1)/Datastream\",\n  \"phenomenonTime\": \"2014-12-31T11:59:59.00+08:00\",\n  \"resultTime\": \"2014-12-31T11:59:59.00+08:00\",\n  \"result\": 70.4\n}",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.jsonld"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix sosa1: <https://www.w3.org/TR/vocab-ssn/#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://w3id.org/ogcincubator/coverageJSON/1> sosa1:hasFeatureOfInterest \"Observations(1)/FeatureOfInterest\" ;\n    sosa1:hasSimpleResult 7.04e+01 ;\n    sosa1:isMemberOf \"Observations(1)/Datastream\" ;\n    sosa1:phenomenonTime \"2014-12-31T11:59:59.00+08:00\" ;\n    sosa1:resultTime \"2014-12-31T11:59:59.00+08:00\" .\n\n",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-sta-obs/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.ttl"
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/oim-sta-obs/example_1_1.ttl"
         }
       ]
     }
