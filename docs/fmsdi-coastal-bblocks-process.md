@@ -1,7 +1,7 @@
 # From Pilot Requirements to OGC Building Blocks: Encoding FMSDI 2024 Coastal Data Integration Standards
 
 **Piotr Zaborowski¹**  
-¹ SINTEF Ocean
+¹ OGC Europe
 
 *Generated: 2026-05-04*
 
@@ -329,7 +329,105 @@ BP4 (Coordinated Governance) does not translate into a schema building block —
 
 ---
 
-## 7. References
+## 7. Comparison: Formalized Building Blocks vs. Raw FMSDI Report Guidance
+
+This section compares what the inventory analysis yields when conducted using the formalized building blocks produced in this work against what the same analysis would yield using the FMSDI reports directly as prose guidelines. The purpose is to assess what formalization adds and where its limits lie.
+
+### 7.1 What the Raw FMSDI Reports Provide
+
+The FMSDI-2024 reports provide best practices as prescriptive prose. BP1, for example, states:
+
+> *"Always record the datum, epoch, transformation method, and vertical orientation convention in metadata."*
+
+BP3 states:
+
+> *"If fresh acquisition is not feasible, interpolation techniques may be applied. However, introduced artefacts or assumptions must be clearly documented, and error metrics and confidence levels should be quantified and included in metadata."*
+
+An analyst reading these reports and applying them to the SeaDOTS inventory would produce a qualitative checklist: *Does this dataset have a declared datum? Is interpolation documented?* The answer would be subjective — recorded as a narrative note, not a structured property name. Two analysts would produce different outputs. Neither output could be fed into a validation pipeline.
+
+### 7.2 Side-by-side comparison per inventory record
+
+The table below shows, for the 19 matched records, what a raw-report assessment produces versus what the building-block assessment produces. The columns are:
+
+- **Report guidance** — the best-practice text that applies, as a direct quote or paraphrase
+- **BB property** — the specific schema property that encodes that requirement
+- **What changes** — the concrete difference in output
+
+| Row | Dataset | Report guidance | BB property | What changes |
+|-----|---------|----------------|-------------|--------------|
+| 12 | Bathymetrie | BP1: "record datum, epoch, transformation method" | `vertical-datum-reference.datumName`, `.verticalOrientation` (required), `.transformationMethod` | Report → note in spreadsheet. BB → JSON Schema `required` constraint; validation fails at ingest if absent |
+| 46 | EMODnet bathymetry | BP3: "interpolation assumptions must be clearly documented; introduced artefacts or assumptions must be clearly documented" | `oim-coastal-feature.dataLineage.gapFilled=true` → conditionally requires `.interpolationMethod` | Report → reviewer checks PDF lineage. BB → machine-enforced: `gapFilled=true` without `interpolationMethod` fails schema validation |
+| 47 | Kartverket/GeoNorge | BP1: "prefer the geoid as the zero-height reference; use national models" | `vertical-datum-reference.separationSurface.modelReference` | Report → analyst must know that Norwegian Chart Datum ≠ MSL and look up UKHO VORF equivalent. BB → field explicitly requires model name at publish time |
+| 45 | MAREANO | BP2: "provide data quality indicators associated with observation datasets" | `oim-coastal-feature.dataLineage.captureMethod`, `.resolutionInfo.horizontalResolution` | Report → ISO 19115 quality report (separate document). BB → inline properties in each GeoJSON feature; queryable via OGC API Features filter |
+| 39/40 | Ports | BP1: "always record the datum, epoch, transformation method, and vertical orientation convention" | `vertical-datum-reference.verticalOrientation` (required enum `up`/`down`) | Report → "document the datum". BB → forces an explicit choice between land convention (up) and hydrographic convention (down); cannot publish without it |
+| 15 | Norkyst800 | BP1: "use a gravity-based vertical datum as the baseline zero-height reference surface" | `vertical-datum-reference.datumEpoch`, `.crsIdentifier` (EPSG URI) | Report → human reads CMEMS documentation and notes "MSL". BB → machine-readable EPSG URI; epoch makes temporal drift in dynamic frame explicit |
+| 25 | Utsira Nord polygon | BP1: "common Geodetic Reference Frame"; BP3 (implicit — polygon boundary = gap boundary) | `dynamic-shoreline.shorelineType`, `.tidalDatumReference` | Report → no specific guidance for area polygons. BB → identifies the polygon boundary as a `tidalDatumContour` requiring `tidalDatumReference=MHWS`, making the legal shoreline definition explicit |
+| 2 | CMEMS NW Shelf BGC L3 | BP2: "include metadata… including spatial reference systems, vertical datums, accuracy" | `vertical-datum-reference` embedded in observation feature | Report → check ISO 19115 metadata record (separate). BB → datum embedded in each feature; present regardless of whether ISO metadata record exists |
+| 11/73 | Ocean Physics products | BP1: "sea surface height and depth fields require unambiguous vertical datum" | `vertical-datum-reference.datumName`, `.crsIdentifier` | Report → "check the product documentation". BB → fails validation if crsIdentifier not an EPSG URI with valid format |
+| 71/81/82 | MPAs / Marine Spatial Plan | BP4: "multi-agency data frameworks" (governance, not technical) | `oim-coastal-feature.featureDomain` | Report → no schema-level guidance; BP4 is governance only. BB → `featureDomain=marine` annotation enables SPARQL queries across federated datasets regardless of source agency |
+| 61/74/90 | Map layers (low confidence) | BP2: "register datasets in federated catalogs using GeoDCAT-AP or OGC API Records" | `oim-coastal-feature.featureDomain` (structural benefit only) | Report → "publish to catalog". BB → featureDomain annotation is a prerequisite for cross-domain feature queries; report does not identify this as a per-feature requirement |
+
+### 7.3 Precision
+
+The raw reports use vocabulary that is precise in intent but imprecise in operationalisation. BP1 says to record "vertical orientation convention" — but does not define the canonical terms, does not specify where in the metadata this should appear, and does not distinguish it from the CRS orientation already encoded in the EPSG definition. The `verticalOrientation` enum (`up`/`down`) in the building block resolves all three ambiguities: it is a named field, at feature level, with exactly two legal values, independent of the EPSG CRS string.
+
+Similarly, BP3's mandate to document interpolation assumptions is open-ended. The building block narrows it to a specific boolean flag (`gapFilled`) and a schema `if/then` rule that makes the interpolation method field required when that flag is true. The report cannot enforce this; the building block can.
+
+### 7.4 Coverage differences
+
+Some inventory records that are directly affected by the FMSDI requirements were not identified by a raw-report reading but were identified by the building-block analysis:
+
+**Records the report would not flag but the BB analysis does:**
+
+- **Rows 39/40 (Ports):** BP1 is framed around elevation datasets and topo-bathymetric surveys. A port location dataset is not the obvious target of BP1 prose. However, berthing depths are depth values, and the building-block analysis flags them because `oim-coastal-feature` includes `tideContext.tidalState` — making the tidal window constraint on harbour access a required field rather than an implicit assumption.
+
+- **Row 82 (Swedish Marine Spatial Plan):** BP4 addresses governance but not schema. The building-block analysis adds `featureDomain=marine` classification that is not prompted by any BP prose, but that enables the cross-agency federated queries BP4 is trying to facilitate.
+
+- **Row 25 (Utsira Nord polygon):** The FMSDI reports address shoreline data in the context of survey products and satellite observations. A static polygon from a development tender is not discussed. The building-block analysis identifies it as a `tidalDatumContour` candidate because the seaward boundary of a development zone is legally a tidal datum line — a connection the report does not make explicitly.
+
+**Records the report flags that the BB analysis rates low:**
+
+- **All BP2 records (FAIR metadata):** BP2 requires ISO 19115 metadata for every dataset. Applied to the inventory, every record (88/88) should be flagged. The building-block analysis deliberately excludes this: the STAC/DCAT metadata generation workflow in ILIAD covers BP2 separately, and including it here would dilute the signal. The reports do not make this distinction — BP2 appears co-equal with BP1.
+
+- **BP4 governance records:** The reports apply BP4 broadly, including to fisheries statistics (e.g., rows 58–67, 75–89). The building-block analysis rates these out of scope because no schema BB operationalises governance. The reports give no basis for making this distinction.
+
+### 7.5 False positives: what formalization prevents
+
+The keyword-matching phase of the building-block analysis produced false positives that manual curation removed:
+
+- "Offshore" matching "shore" → rows 3, 16, 55 wrongly scored for `dynamic-shoreline`
+- "Coastal infrastructure" matching economic reports → rows 75–78 wrongly scored for `oim-coastal-feature`
+
+The raw-report analysis would produce the same false positives — BP1 applies to "all observations" and BP3 to "all coastal data" — but without a schema to test against, there is no mechanism to detect them. The building-block analysis surfaced them because the schema required specific property types (LineString geometry, numeric elevation values) that economic tabular data does not have.
+
+### 7.6 What formalization does not provide
+
+**Temporal change:** the inventory records are snapshots. A building-block schema cannot flag that EMODnet bathymetry (row 46) was last updated in 2022 and may have an outdated datum definition. BP2 addresses this through `datumEpoch` and `temporalCoverage` in metadata, but only a human reviewer with knowledge of the dataset's history would know to check.
+
+**Confidence in absence:** the `dynamic-shoreline` building block found only 3 indirect matches. This correctly identifies a data gap — but the building-block analysis cannot determine whether the gap is because shoreline data does not exist for Utsira, or because it exists but was not included in the inventory. That distinction requires domain knowledge about what data providers hold.
+
+**Governance and legal context:** BP4 requirements — which agency is responsible, what data-sharing agreements exist, how funding affects availability — are entirely outside schema formalization. The building blocks produced here address BP1, BP3, and BP5. BP2 is partially covered (metadata properties embedded in features). BP4 is not covered.
+
+### 7.7 Summary assessment
+
+| Dimension | Raw FMSDI reports | Formalized building blocks |
+|-----------|-------------------|---------------------------|
+| **Precision of requirement** | Prose; multiple valid interpretations | Named properties with types, enums, and schema conditionals |
+| **Machine-enforceability** | None — manual checklist only | JSON Schema validation at ingest; fails at publish without required fields |
+| **Analyst consistency** | Dependent on individual knowledge | Deterministic: same schema, same result |
+| **Coverage (true positives)** | All 5 BPs, 88 records in scope | 3 BPs operationalised; 19 records matched |
+| **False positive rate** | High for tabular/economic data (no geometry filter) | Reduced by schema type constraints; residual false positives caught by curation |
+| **Gap detection** | Identifies missing survey coverage (BP3) | Identifies missing *schema types* — the absence of any `dynamic-shoreline` record is machine-detectable |
+| **Novel connections** | Reports context = intertidal surveys and products | BBs extend to ports, development zone polygons, marine spatial plans — not discussed in reports |
+| **BP2 (FAIR metadata)** | Applies to all 88 records | Deferred to STAC/DCAT pipeline; not in scope for feature-level BBs |
+| **BP4 (Governance)** | Applies broadly | Out of scope for schema formalization |
+| **Speed of assessment** | Days per dataset (ISO 19115 audit) | Seconds per dataset (schema validation) |
+
+The core finding is that formalization trades coverage for precision and speed. The raw reports apply to everything and say something about everything. The building blocks apply to a defined subset and say something machine-enforceable about that subset. Both are needed: the reports establish intent and scope; the building blocks provide the computable layer that makes compliance verifiable at the point of data publication rather than in a separate audit.
+
+---
+
+## 8. References
 
 | Reference | URI |
 |-----------|-----|
