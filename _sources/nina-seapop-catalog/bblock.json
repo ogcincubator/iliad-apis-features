@@ -1,0 +1,32 @@
+{
+  "id": "ogc.hosted.iliad.api.features.nina-seapop-catalog",
+  "name": "NINA SEAPOP — Catalog / Discovery Metadata",
+  "abstract": "OGC API Records and STAC Collection metadata record for the NINA SEAPOP seabird colony observation dataset. Encodes discovery metadata including spatial coverage (Norway + Svalbard), temporal extent (2014–present), provider (NINA), license (CC-BY 4.0), and links to both the raw OBIS occurrence API (source mode) and the OIM GeoJSON Features endpoint (target mode). Implements OGC Records with relevant STAC extensions.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-05-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2026-05-05",
+  "tags": ["iliad", "stac", "ogc-records", "seabird", "seapop", "nina", "catalog", "metadata", "discovery"],
+  "sources": [
+    {
+      "title": "OBIS dataset — NINA SEAPOP",
+      "link": "https://obis.org/dataset/561441ab-128b-4be7-8fce-de1ef79855da"
+    },
+    {
+      "title": "GBIF dataset — SEAPOP Seabird colonies of Norway",
+      "link": "https://doi.org/10.15468/gk9xqd"
+    },
+    {
+      "title": "OGC API Records specification",
+      "link": "https://ogcapi.ogc.org/records/"
+    },
+    {
+      "title": "STAC Specification",
+      "link": "https://stacspec.org/"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable"
+}

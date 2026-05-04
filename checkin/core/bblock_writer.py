@@ -511,9 +511,15 @@ def _synthetic_example(source_properties: list[dict[str, Any]]) -> dict[str, Any
         node = example
         for i, part in enumerate(parts):
             if i == len(parts) - 1:
-                node[part] = vals[0]
+                if isinstance(node, dict):
+                    node[part] = vals[0]
             else:
-                node = node.setdefault(part, {})
+                if not isinstance(node, dict):
+                    break
+                existing = node.get(part)
+                if not isinstance(existing, dict):
+                    node[part] = {}
+                node = node[part]
     return example or None
 
 

@@ -1,0 +1,237 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: NINA SEAPOP OBIS Occurrence Record
+description: >
+  A single occurrence record as returned by the OBIS v3 occurrence API.
+  The top-level envelope has total (integer) and results (array of records).
+  Each record is a flat object with Darwin Core fields, WoRMS taxonomy IDs,
+  and OBIS-derived enrichment fields. Note: eventDate, individualCount, and
+  samplingProtocol are NOT present in the OBIS API response — use the GBIF
+  dataset (d0e09c39) if those fields are required.
+type: object
+required:
+  - occurrenceID
+  - scientificName
+  - decimalLatitude
+  - decimalLongitude
+  - basisOfRecord
+properties:
+
+  # --- Darwin Core core fields (from original source) ---
+  occurrenceID:
+    type: string
+    description: Unique identifier for the occurrence record.
+    examples: ["urn:catalog:NINA:S:301378"]
+
+  basisOfRecord:
+    type: string
+    description: Nature of the evidence for the occurrence.
+    examples: ["Occurrence"]
+
+  catalogNumber:
+    type: string
+    examples: ["301378"]
+
+  collectionCode:
+    type: string
+    examples: ["S"]
+
+  institutionCode:
+    type: string
+    examples: ["NINA"]
+
+  datasetID:
+    type: string
+    description: URI of the authoritative dataset record.
+    examples: ["https://marineinfo.org/id/dataset/4549"]
+
+  occurrenceStatus:
+    type: string
+    enum: [present, absent]
+
+  # --- Taxonomy (Darwin Core fields) ---
+  scientificName:
+    type: string
+    examples: ["Anser anser", "Larus argentatus"]
+
+  scientificNameID:
+    type: string
+    description: LSID from WoRMS.
+    examples: ["urn:lsid:marinespecies.org:taxname:416682"]
+
+  originalScientificName:
+    type: string
+
+  kingdom:
+    type: string
+    examples: ["Animalia"]
+
+  phylum:
+    type: string
+
+  class:
+    type: string
+    examples: ["Aves"]
+
+  order:
+    type: string
+
+  family:
+    type: string
+
+  genus:
+    type: string
+
+  species:
+    type: string
+
+  # --- Taxonomy hierarchy IDs (WoRMS AphiaIDs resolved by OBIS) ---
+  kingdomid:
+    type: integer
+  phylumid:
+    type: integer
+  classid:
+    type: integer
+  orderid:
+    type: integer
+  familyid:
+    type: integer
+  genusid:
+    type: integer
+  speciesid:
+    type: integer
+  subphylum:
+    type: string
+  subphylumid:
+    type: integer
+  infraphylum:
+    type: string
+  infraphylumid:
+    type: integer
+  megaclass:
+    type: string
+  megaclassid:
+    type: integer
+  superclass:
+    type: string
+  superclassid:
+    type: integer
+
+  # --- Location (Darwin Core) ---
+  decimalLatitude:
+    type: number
+    minimum: -90
+    maximum: 90
+
+  decimalLongitude:
+    type: number
+    minimum: -180
+    maximum: 180
+
+  coordinateUncertaintyInMeters:
+    type: number
+    minimum: 0
+
+  country:
+    type: string
+    examples: ["NORWAY"]
+
+  stateProvince:
+    type: string
+    examples: ["Møre og Romsdal"]
+
+  locality:
+    type: string
+    description: Free-text name of the nesting colony or site.
+    examples: ["Saltkjelsvikholman", "Higerholmen I"]
+
+  # --- Record provenance ---
+  modified:
+    type: string
+    description: ISO 8601 datetime of last modification in the source system.
+    examples: ["2014-04-30 15:24:32"]
+
+  # --- OBIS internal fields ---
+  id:
+    type: string
+    format: uuid
+    description: OBIS internal UUID for this occurrence record.
+
+  dataset_id:
+    type: string
+    format: uuid
+    description: OBIS internal dataset UUID.
+
+  node_id:
+    type: array
+    items:
+      type: string
+      format: uuid
+    description: OBIS node(s) holding this record.
+
+  dropped:
+    type: boolean
+    description: Whether OBIS has flagged this record as dropped from the index.
+
+  absence:
+    type: boolean
+    description: True if this is an absence record.
+
+  flags:
+    type: array
+    items:
+      type: string
+    description: >
+      OBIS quality flags. Common values:
+      NO_DEPTH (no depth recorded — expected for seabird colonies),
+      ON_LAND (observation point plots on land — expected for coastal colonies).
+    examples: [["NO_DEPTH"], ["NO_DEPTH", "ON_LAND"]]
+
+  category:
+    type: string
+
+  unaccepted:
+    type: string
+    description: Non-null if WoRMS considers the taxon name unaccepted.
+
+  marine:
+    type: boolean
+    description: Whether WoRMS classifies this taxon as marine.
+
+  brackish:
+    type: boolean
+    description: Whether WoRMS classifies this taxon as brackish.
+
+  # --- OBIS enrichment fields (NOT from the original data collector) ---
+  aphiaID:
+    type: integer
+    description: >
+      WoRMS AphiaID resolved by OBIS from scientificNameID.
+      Added by OBIS pipeline — not a source field.
+    examples: [416682]
+
+  bathymetry:
+    type: [number, "null"]
+    description: >
+      Water depth (m) at the observation point from EMODnet/GEBCO.
+      OBIS enrichment — not a source measurement.
+
+  shoredistance:
+    type: [number, "null"]
+    description: >
+      Distance to nearest shoreline (m) from GSHHS coastline model.
+      Negative values indicate the point is inland.
+      OBIS enrichment — not a source measurement.
+
+  sst:
+    type: [number, "null"]
+    description: >
+      Sea surface temperature (°C) climatological mean from WOA.
+      OBIS enrichment — not a source measurement.
+
+  sss:
+    type: [number, "null"]
+    description: >
+      Sea surface salinity (PSU) climatological mean from WOA.
+      OBIS enrichment — not a source measurement.
+
+additionalProperties: true

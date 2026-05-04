@@ -1,0 +1,10 @@
+- title: OBIS API response — two SEAPOP occurrence records
+  abstract: >
+    Representative raw response from the OBIS v3 occurrence API for the NINA SEAPOP
+    dataset. Record 1 (Greylag Goose, Saltkjelsvikholman) has shoredistance > 0.
+    Record 2 (Herring Gull, Higerholmen I) has shoredistance < 0 (colony on land) and
+    the ON_LAND flag — expected for coastal seabird colonies.
+    Fields bathymetry, shoredistance, sst, sss, and aphiaID are OBIS enrichment —
+    not from the original NINA data collector.
+  content: examples/obis-occurrence-record.json
+  mediaType: application/json

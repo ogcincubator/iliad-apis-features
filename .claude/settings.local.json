@@ -14,7 +14,8 @@
       "Bash(mkdir -p /Users/piotr/repos/Iliad/iliad-apis-features/_sources/dynamic-shoreline/examples /Users/piotr/repos/Iliad/iliad-apis-features/_sources/dynamic-shoreline/tests)",
       "Bash(docker run *)",
       "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(list\\(d.keys\\(\\)\\)\\)\")",
-      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\('usageGuidance',''\\)[:600]\\)\")"
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\('usageGuidance',''\\)[:600]\\)\")",
+      "WebFetch(domain:api.obis.org)"
     ]
   }
 }

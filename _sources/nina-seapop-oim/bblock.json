@@ -1,0 +1,35 @@
+{
+  "id": "ogc.hosted.iliad.api.features.nina-seapop-oim",
+  "name": "NINA SEAPOP — OIM Target Model",
+  "abstract": "OIM-aligned GeoJSON Feature representation of NINA SEAPOP seabird colony observations, extending oim-bio-tdwg (Darwin Core). Adds colonyID as a persistent URI identifying the nesting site (derived from the source locality field), enabling time-series queries per colony as sosa:hasFeatureOfInterest. Only source-derived fields are added; OBIS enrichment fields (bathymetry, shoredistance, sst, sss, aphiaID) are excluded from the schema.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-05-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2026-05-05",
+  "dependsOn": [
+    "ogc.hosted.iliad.api.features.oim-bio-tdwg"
+  ],
+  "tags": ["iliad", "oim", "seabird", "seapop", "nina", "darwin-core", "colony", "biodiversity"],
+  "sources": [
+    {
+      "title": "SEAPOP — Norwegian Seabird Population Monitoring",
+      "link": "https://seapop.no/"
+    },
+    {
+      "title": "OBIS dataset — NINA SEAPOP",
+      "link": "https://obis.org/dataset/561441ab-128b-4be7-8fce-de1ef79855da"
+    },
+    {
+      "title": "Darwin Core Terms",
+      "link": "https://dwc.tdwg.org/terms/"
+    },
+    {
+      "title": "SOSA/SSN Ontology",
+      "link": "https://www.w3.org/TR/vocab-ssn/"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable"
+}

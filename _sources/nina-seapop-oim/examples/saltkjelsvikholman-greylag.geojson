@@ -1,0 +1,37 @@
+{
+  "type": "Feature",
+  "id": "urn:catalog:NINA:S:301378",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [7.7222, 63.0547]
+  },
+  "properties": {
+    "colonyID": "https://seapop.no/colony/saltkjelsvikholman",
+
+    "basisOfRecord": "Occurrence",
+    "occurrenceID": "urn:catalog:NINA:S:301378",
+    "occurrenceStatus": "present",
+    "catalogNumber": "301378",
+    "collectionCode": "S",
+    "institutionCode": "NINA",
+    "datasetID": "https://marineinfo.org/id/dataset/4549",
+
+    "scientificName": "Anser anser",
+    "scientificNameID": "urn:lsid:marinespecies.org:taxname:416682",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Aves",
+    "order": "Anseriformes",
+    "family": "Anatidae",
+    "genus": "Anser",
+    "species": "Anser anser",
+
+    "decimalLatitude": 63.0547,
+    "decimalLongitude": 7.7222,
+    "coordinateUncertaintyInMeters": 3535,
+    "geodeticDatum": "WGS84",
+    "country": "Norway",
+    "stateProvince": "Møre og Romsdal",
+    "locality": "Saltkjelsvikholman"
+  }
+}

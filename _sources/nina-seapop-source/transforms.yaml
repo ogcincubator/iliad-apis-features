@@ -1,0 +1,29 @@
+transforms:
+  - id: obis-to-oim
+    description: |
+      Convert the raw OBIS v3 occurrence API response for the NINA SEAPOP dataset
+      into an OIM-aligned GeoJSON FeatureCollection conforming to nina-seapop-oim.
+
+      Mapping:
+        geometry       ← [decimalLongitude, decimalLatitude] (GeoJSON Point)
+        id             ← occurrenceID
+        colonyID       ← locality slugified to https://seapop.no/colony/<slug>
+        properties     ← source Darwin Core fields only
+
+      Excluded (OBIS enrichment / pipeline fields, not original source data):
+        aphiaID, bathymetry, shoredistance, sst, sss,
+        id, dataset_id, node_id, dropped, absence, flags,
+        marine, brackish, category, unaccepted,
+        kingdomid, phylumid, classid, orderid, familyid, genusid, speciesid,
+        subphylum, subphylumid, infraphylum, infraphylumid,
+        megaclass, megaclassid, superclass, superclassid
+    type: jq
+    inputs:
+      mediaTypes:
+        - application/json
+    outputs:
+      mediaTypes:
+        - application/geo+json
+      profiles:
+        - bblocks://ogc.hosted.iliad.api.features.nina-seapop-oim
+    ref: transforms/obis-to-oim.jq

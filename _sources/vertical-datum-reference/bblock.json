@@ -8,7 +8,7 @@
   "register": "iliad-apis",
   "version": "0.1",
   "dateOfLastChange": "2026-05-04",
-  "tags": ["iliad", "fmsdi", "vertical-datum", "coastal", "geodesy"],
+  "tags": ["iliad", "fmsdi", "vertical-datum", "coastal", "geodesy", "best-practices"],
   "sources": [
     {
       "title": "OGC FMSDI 2024 Pilot Summary Report (24-061)",

@@ -1,0 +1,10 @@
+{
+  "title": "NINA SEAPOP — Catalog / Discovery Metadata",
+  "abstract": "OGC API Records and STAC Collection metadata for the NINA SEAPOP seabird dataset. Links to both the raw OBIS source (BB1) and OIM target model (BB2).",
+  "description": "## Dataset summary\n\n| Field | Value |\n|---|---|\n| Programme | SEAPOP — Norwegian Seabird Population Monitoring |\n| Institution | Norwegian Institute for Nature Research (NINA) |\n| Records | 279,170 |\n| Coverage | Norway + Svalbard (3.4°–31.2°E, 5.9°–71.2°N) |\n| Temporal | 2014–present (updated 2025-09-22) |\n| Taxa | Seabirds (class Aves) |\n| License | CC-BY 4.0 |\n| DOI | 10.15468/gk9xqd |\n\n## Linked distributions\n\n| Role | Endpoint | Building Block |\n|---|---|---|\n| Source (OBIS, enriched) | `https://api.obis.org/v3/occurrence?datasetid=561441ab-128b-4be7-8fce-de1ef79855da` | BB1: nina-seapop-source |\n| Source (GBIF, clean DwC) | `https://api.gbif.org/v1/occurrence/search?datasetKey=4c7a13a5-72b1-41ff-ad7c-8af40d3cc3cc` | BB1: nina-seapop-source |\n| Target (OIM GeoJSON Features) | TBD — OGC API Features endpoint | BB2: nina-seapop-oim |\n\n## STAC extensions applied\n\n- **scientific** (`sci:doi`, `sci:citation`) — DOI and full citation\n- **prov** (`prov:wasGeneratedBy`) — activity provenance back to NINA\n\n## Metadata gaps\n\nThe following metadata is not automatically extractable and requires manual input:\n- OGC API Features endpoint URL (when deployed)\n- Contact email for dataset queries\n- Funding/project references (SEAPOP partner list)\n- Full temporal extent per colony (varies by locality)",
+  "usageGuidance": [
+    "Use this record as the OGC API Records item for the NINA SEAPOP dataset in a federated catalog.",
+    "Update the links array with the OGC API Features endpoint URL once the BB2 endpoint is deployed.",
+    "The GBIF distribution should be preferred over OBIS for workflows requiring eventDate or individualCount."
+  ]
+}

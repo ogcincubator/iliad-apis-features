@@ -1,0 +1,9 @@
+- title: NINA SEAPOP — STAC/OGC Records Collection metadata
+  abstract: >
+    Discovery metadata record for the full NINA SEAPOP dataset.
+    Encodes spatial bbox (Norway + Svalbard), open temporal extent (2014–present),
+    provider (NINA), CC-BY 4.0 license, and links to both the raw OBIS source API
+    (BB1 distribution) and the OIM target model schema (BB2).
+    Includes STAC scientific extension (DOI, citation) and prov:wasGeneratedBy.
+  content: examples/nina-seapop-collection.json
+  mediaType: application/json

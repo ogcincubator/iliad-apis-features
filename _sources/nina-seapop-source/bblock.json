@@ -1,0 +1,28 @@
+{
+  "id": "ogc.hosted.iliad.api.features.nina-seapop-source",
+  "name": "NINA SEAPOP Source — OBIS Occurrence Record",
+  "abstract": "Source-faithful representation of a single occurrence record as returned by the OBIS v3 occurrence API for the NINA SEAPOP seabird colony monitoring dataset (dataset ID 561441ab-128b-4be7-8fce-de1ef79855da). Encodes the raw flat JSON structure including both original Darwin Core fields and OBIS-enrichment fields (bathymetry, shoredistance, sst, sss, aphiaID). Intended as the source-side contract in a source→target transformation pipeline.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-05-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2026-05-05",
+  "tags": ["iliad", "obis", "seabird", "seapop", "nina", "darwin-core", "occurrence", "source"],
+  "sources": [
+    {
+      "title": "OBIS v3 occurrence API — NINA SEAPOP dataset",
+      "link": "https://api.obis.org/v3/occurrence?datasetid=561441ab-128b-4be7-8fce-de1ef79855da"
+    },
+    {
+      "title": "OBIS dataset record — SEAPOP NINA",
+      "link": "https://obis.org/dataset/561441ab-128b-4be7-8fce-de1ef79855da"
+    },
+    {
+      "title": "Darwin Core Terms",
+      "link": "https://dwc.tdwg.org/terms/"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable"
+}

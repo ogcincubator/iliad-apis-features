@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "colonyID": {
+      "@id": "sosa:hasFeatureOfInterest",
+      "@type": "@id"
+    }
+  }
+}

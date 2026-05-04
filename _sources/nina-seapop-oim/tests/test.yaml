@@ -1,0 +1,4 @@
+- file: ../examples/saltkjelsvikholman-greylag.geojson
+  mediaType: application/geo+json
+  validate-schema: true
+  validate-json-ld: true

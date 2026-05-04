@@ -1,0 +1,12 @@
+- title: Saltkjelsvikholman — Greylag Goose colony observation (OIM GeoJSON Feature)
+  abstract: >
+    OIM-aligned GeoJSON Feature form of a SEAPOP occurrence record.
+    The OBIS flat JSON record has been wrapped in GeoJSON Feature structure
+    with decimalLatitude/decimalLongitude promoted to geometry.
+    colonyID is a persistent URI derived from the locality field, acting as
+    sosa:hasFeatureOfInterest for the nesting site.
+    OBIS enrichment fields (aphiaID, bathymetry, shoredistance, sst, sss) are
+    excluded — only source-derived fields are retained.
+  content: examples/saltkjelsvikholman-greylag.geojson
+  mediaType: application/geo+json
+  base-uri: https://w3id.org/iliad/nina-seapop-oim/

@@ -11,7 +11,7 @@
   "dependsOn": [
     "ogc.hosted.iliad.api.features.oim-coastal-feature"
   ],
-  "tags": ["iliad", "fmsdi", "shoreline", "tidal", "coastal", "satellite", "dynamic"],
+  "tags": ["iliad", "fmsdi", "shoreline", "tidal", "coastal", "satellite", "dynamic", "best-practices"],
   "sources": [
     {
       "title": "OGC FMSDI 2024 Pilot Summary Report (24-061)",

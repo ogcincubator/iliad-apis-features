@@ -1,0 +1,150 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: NINA SEAPOP — Catalog Record
+description: >
+  OGC API Records / STAC Collection metadata record for the NINA SEAPOP
+  seabird monitoring dataset. Encodes discovery metadata with links to
+  both the raw OBIS source endpoint and the OIM-aligned Features endpoint.
+type: object
+required:
+  - type
+  - id
+  - title
+  - description
+  - links
+  - extent
+  - license
+properties:
+
+  type:
+    type: string
+    enum: [Collection]
+
+  id:
+    type: string
+    description: Identifier for this catalog record.
+    examples: ["nina-seapop"]
+
+  title:
+    type: string
+    examples: ["NINA SEAPOP Seabird Colony Observations"]
+
+  description:
+    type: string
+
+  license:
+    type: string
+    description: SPDX expression or URI.
+    examples: ["CC-BY-4.0"]
+
+  extent:
+    type: object
+    required: [spatial, temporal]
+    properties:
+      spatial:
+        type: object
+        required: [bbox]
+        properties:
+          bbox:
+            type: array
+            items:
+              type: array
+              minItems: 4
+              maxItems: 6
+              items:
+                type: number
+            description: >
+              One or more bounding boxes [west, south, east, north].
+              Full dataset covers Norway and Svalbard.
+      temporal:
+        type: object
+        required: [interval]
+        properties:
+          interval:
+            type: array
+            items:
+              type: array
+              minItems: 2
+              maxItems: 2
+              items:
+                type: [string, "null"]
+            description: >
+              Start/end instants as ISO 8601 strings; null means open.
+
+  providers:
+    type: array
+    items:
+      type: object
+      required: [name, roles]
+      properties:
+        name:
+          type: string
+        roles:
+          type: array
+          items:
+            type: string
+        url:
+          type: string
+          format: uri
+
+  keywords:
+    type: array
+    items:
+      type: string
+
+  links:
+    type: array
+    items:
+      type: object
+      required: [href, rel]
+      properties:
+        href:
+          type: string
+          format: uri
+        rel:
+          type: string
+        type:
+          type: string
+        title:
+          type: string
+
+  assets:
+    type: object
+    additionalProperties:
+      type: object
+      required: [href]
+      properties:
+        href:
+          type: string
+          format: uri
+        title:
+          type: string
+        type:
+          type: string
+        roles:
+          type: array
+          items:
+            type: string
+
+  sci:doi:
+    type: string
+    description: "STAC scientific extension: DOI for this dataset."
+    examples: ["10.15468/gk9xqd"]
+
+  sci:citation:
+    type: string
+    description: "STAC scientific extension: full citation string."
+
+  prov:wasGeneratedBy:
+    type: object
+    description: "STAC prov extension: activity that produced this dataset."
+    properties:
+      type:
+        type: string
+      startedAtTime:
+        type: string
+      endedAtTime:
+        type: string
+      wasAssociatedWith:
+        type: object
+
+additionalProperties: true

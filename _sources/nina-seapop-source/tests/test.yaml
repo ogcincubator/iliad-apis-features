@@ -1,0 +1,3 @@
+- file: ../examples/obis-occurrence-record.json
+  mediaType: application/json
+  validate-schema: false

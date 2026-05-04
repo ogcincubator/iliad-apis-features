@@ -1,0 +1,115 @@
+{
+  "type": "Collection",
+  "id": "nina-seapop",
+  "title": "NINA SEAPOP Seabird Colony Observations Norway",
+  "description": "Long-term monitoring and mapping of Norwegian seabirds by the Norwegian Institute for Nature Research (NINA) under the SEAPOP programme. Covers Norway, Svalbard, and adjacent marine areas. 279,170 occurrence records of marine and coastal seabird species. Published through OBIS (EurOBIS/VLIZ node) and GBIF. Note: the OBIS API view includes synthetic environmental enrichment fields (bathymetry, shoredistance, sst, sss) added by the OBIS pipeline; the GBIF distribution preserves original source fields including eventDate and individualCount.",
+  "license": "CC-BY-4.0",
+
+  "sci:doi": "10.15468/gk9xqd",
+  "sci:citation": "Norwegian Institute for Nature Research: SEAPOP NINA, 2014-02-08. https://doi.org/10.15468/gk9xqd",
+
+  "extent": {
+    "spatial": {
+      "bbox": [[3.4, 57.0, 31.2, 80.0]],
+      "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    },
+    "temporal": {
+      "interval": [["2014-01-01T00:00:00Z", null]],
+      "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+    }
+  },
+
+  "providers": [
+    {
+      "name": "Norwegian Institute for Nature Research (NINA)",
+      "roles": ["producer", "licensor"],
+      "url": "https://www.nina.no/"
+    },
+    {
+      "name": "OBIS / EurOBIS",
+      "roles": ["host"],
+      "url": "https://obis.org/"
+    },
+    {
+      "name": "GBIF",
+      "roles": ["host"],
+      "url": "https://gbif.org/"
+    }
+  ],
+
+  "keywords": [
+    "seabirds", "colony monitoring", "Norway", "Svalbard",
+    "long-term monitoring", "SEAPOP", "NINA", "Aves",
+    "biodiversity", "Darwin Core", "OBIS", "GBIF", "marine"
+  ],
+
+  "assets": {
+    "obis-source": {
+      "href": "https://api.obis.org/v3/occurrence?datasetid=561441ab-128b-4be7-8fce-de1ef79855da",
+      "title": "OBIS occurrence API — source (flat JSON, includes OBIS enrichment)",
+      "type": "application/json",
+      "roles": ["data", "source"]
+    },
+    "gbif-source": {
+      "href": "https://api.gbif.org/v1/occurrence/search?datasetKey=4c7a13a5-72b1-41ff-ad7c-8af40d3cc3cc",
+      "title": "GBIF occurrence API — source (preserves eventDate, individualCount)",
+      "type": "application/json",
+      "roles": ["data", "source"]
+    },
+    "obis-dataset-page": {
+      "href": "https://obis.org/dataset/561441ab-128b-4be7-8fce-de1ef79855da",
+      "title": "OBIS dataset landing page",
+      "type": "text/html",
+      "roles": ["about"]
+    },
+    "gbif-dataset-page": {
+      "href": "https://doi.org/10.15468/gk9xqd",
+      "title": "GBIF dataset DOI",
+      "type": "text/html",
+      "roles": ["about"]
+    }
+  },
+
+  "links": [
+    {
+      "href": "https://api.obis.org/v3/occurrence?datasetid=561441ab-128b-4be7-8fce-de1ef79855da",
+      "rel": "enclosure",
+      "type": "application/json",
+      "title": "OBIS occurrence API — BB1 source distribution"
+    },
+    {
+      "href": "bblocks://ogc.hosted.iliad.api.features.nina-seapop-source",
+      "rel": "describedby",
+      "type": "application/json",
+      "title": "BB1: Source data building block schema"
+    },
+    {
+      "href": "bblocks://ogc.hosted.iliad.api.features.nina-seapop-oim",
+      "rel": "describedby",
+      "type": "application/json",
+      "title": "BB2: OIM target model building block schema"
+    },
+    {
+      "href": "https://seapop.no/",
+      "rel": "related",
+      "type": "text/html",
+      "title": "SEAPOP programme homepage"
+    },
+    {
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "rel": "license",
+      "type": "text/html",
+      "title": "CC-BY 4.0"
+    }
+  ],
+
+  "prov:wasGeneratedBy": {
+    "type": "prov:Activity",
+    "prov:startedAtTime": "2014-02-08",
+    "prov:wasAssociatedWith": {
+      "type": "prov:Agent",
+      "schema:name": "Norwegian Institute for Nature Research (NINA)",
+      "schema:url": "https://www.nina.no/"
+    }
+  }
+}

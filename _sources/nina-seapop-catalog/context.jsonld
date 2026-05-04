@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "dct": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "schema": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sci": "https://stac-extensions.github.io/scientific/v1.0.0/schema.json#",
+
+    "type":        { "@id": "dct:type" },
+    "id":          { "@id": "dct:identifier" },
+    "title":       { "@id": "dct:title" },
+    "description": { "@id": "dct:description" },
+    "license":     { "@id": "dct:license", "@type": "@id" },
+    "keywords":    { "@id": "dcat:keyword" },
+    "providers":   { "@id": "dct:publisher" },
+    "links":       { "@id": "dcat:distribution" },
+    "assets":      { "@id": "dcat:distribution" },
+    "extent":      { "@id": "dct:spatial" },
+
+    "sci:doi":      { "@id": "dct:identifier" },
+    "sci:citation": { "@id": "dct:bibliographicCitation" },
+
+    "prov:wasGeneratedBy": { "@id": "prov:wasGeneratedBy", "@type": "@id" }
+  }
+}

@@ -1,0 +1,28 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: NINA SEAPOP — OIM Feature
+description: >
+  OIM-aligned GeoJSON Feature for a NINA SEAPOP seabird colony observation.
+  Extends oim-bio-tdwg (Darwin Core) with colonyID, a persistent URI
+  identifying the nesting colony derived from the source locality field.
+  Only fields present in the original source data are modelled here.
+  OBIS enrichment fields (bathymetry, shoredistance, sst, sss, aphiaID)
+  are excluded.
+allOf:
+  - $ref: bblocks://ogc.hosted.iliad.api.features.oim-bio-tdwg
+
+properties:
+
+  colonyID:
+    type: string
+    format: uri
+    description: >
+      Persistent URI for the nesting colony or breeding site.
+      Derived from the source locality field by minting a URI per colony.
+      For SEAPOP data use https://seapop.no/colony/<locality-slug>.
+      Mapped to sosa:hasFeatureOfInterest — the place being monitored,
+      distinct from the taxon (scientificName) being counted.
+    examples:
+      - "https://seapop.no/colony/saltkjelsvikholman"
+      - "https://seapop.no/colony/higerholmen-i"
+
+additionalProperties: true

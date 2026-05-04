@@ -180,11 +180,21 @@ def _collect_params(spec: transformer_runner.TransformerSpec, prof: profile_mod.
     schema = spec.params_schema
     required = schema.get("required", [])
     names = {p.name for p in prof.properties}
+
+    def _leaf(name: str) -> str:
+        """Return the last dotted/bracketed path segment, lowercased."""
+        import re
+        seg = re.split(r"[.\[\]]+", name)
+        return next((s for s in reversed(seg) if s and not s.isdigit()), name).lower()
+
+    def _first_match(targets: set[str]) -> str:
+        return next((n for n in names if n.lower() in targets or _leaf(n) in targets), "")
+
     defaults = {
-        "lon_field": next((n for n in names if n.lower() in {"lon", "long", "longitude", "x"}), ""),
-        "lat_field": next((n for n in names if n.lower() in {"lat", "latitude", "y"}), ""),
-        "time_field": next((n for n in names if n.lower() in {"time", "datetime", "date", "timestamp", "eventdate", "observedon"}), ""),
-        "id_field": next((n for n in names if n.lower() in {"id", "uuid", "identifier"}), "id"),
+        "lon_field": _first_match({"lon", "long", "longitude", "decimallongitude", "x"}),
+        "lat_field": _first_match({"lat", "latitude", "decimallatitude", "y"}),
+        "time_field": _first_match({"time", "datetime", "date", "timestamp", "eventdate", "observedon"}),
+        "id_field": _first_match({"id", "uuid", "identifier"}) or "id",
     }
     for key, psp in (schema.get("properties") or {}).items():
         default = defaults.get(key, psp.get("default", ""))

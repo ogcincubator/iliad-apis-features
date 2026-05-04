@@ -12,7 +12,7 @@
     "ogc.hosted.iliad.api.features.vertical-datum-reference",
     "ogc.hosted.iliad.api.features.oim-obs"
   ],
-  "tags": ["iliad", "fmsdi", "coastal", "intertidal", "oim", "elevation", "white-ribbon"],
+  "tags": ["iliad", "fmsdi", "coastal", "intertidal", "oim", "elevation", "white-ribbon", "best-practices"],
   "sources": [
     {
       "title": "OGC FMSDI 2024 Pilot Summary Report (24-061)",
