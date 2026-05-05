@@ -1,0 +1,99 @@
+{
+  "@context": {
+    "xsd":      "http://www.w3.org/2001/XMLSchema#",
+    "sh":       "http://www.w3.org/ns/shacl",
+    "dct":      "http://purl.org/dc/terms/",
+    "dcat":     "http://www.w3.org/ns/dcat#",
+    "time":     "http://www.w3.org/2006/time#",
+    "schema":   "https://schema.org/",
+    "apkg":     "http://purl.org/apkg/terms/",
+    "cwl":      "https://w3id.org/cwl/cwl#",
+    "cwltool":  "http://commonwl.org/cwltool#",
+    "geojson":  "https://purl.org/geojson/vocab#",
+
+    "type": { "@id": "@type" },
+    "id":   { "@id": "@id" },
+
+    "geometry": {
+      "@id": "apkg:hasGeometry",
+      "@context": {
+        "type":        { "@id": "geojson:type" },
+        "coordinates": { "@id": "geojson:coordinates", "@container": "@list" }
+      }
+    },
+
+    "properties": {
+      "@id": "@nest",
+      "@context": {
+        "identifier": { "@id": "dct:identifier", "@type": "xsd:anyURI" },
+        "id":         { "@id": "schema:identifier" },
+        "family":     { "@id": "apkg:family", "@type": "xsd:anyURI" },
+        "latest":     { "@id": "apkg:latest", "@type": "xsd:boolean" },
+        "class":      { "@id": "dct:type" },
+
+        "name":                 { "@id": "schema:name" },
+        "description":          { "@id": "schema:description" },
+        "keywords":             { "@id": "schema:keywords", "@container": "@set" },
+        "software_version":     { "@id": "schema:softwareVersion" },
+        "programming_language": { "@id": "schema:programmingLanguage" },
+
+        "cwl": { "@id": "apkg:cwl" },
+
+        "url":              { "@id": "schema:url", "@type": "xsd:anyURI" },
+        "registration_url": { "@id": "apkg:originalURL", "@type": "xsd:anyURI" },
+        "code_repository":  { "@id": "schema:codeRepository", "@type": "xsd:anyURI" },
+
+        "license":      { "@id": "schema:license", "@type": "xsd:anyURI" },
+        "citation":     { "@id": "schema:citation" },
+        "date_created": { "@id": "schema:dateCreated" },
+        "sdDatePublished": {
+          "@id": "schema:sdDatePublished",
+          "@type": "xsd:dateTime"
+        },
+
+        "author":              { "@id": "schema:author", "@container": "@set", "@context": { "@vocab": "https://schema.org/", "class": { "@id": "@type", "@type": "@vocab" }, "name": "schema:name", "email": "schema:email", "url": { "@id": "schema:url", "@type": "xsd:anyURI" } } },
+        "contributor":         { "@id": "schema:contributor", "@container": "@set", "@context": { "@vocab": "https://schema.org/", "class": { "@id": "@type", "@type": "@vocab" }, "name": "schema:name", "email": "schema:email", "url": { "@id": "schema:url", "@type": "xsd:anyURI" } } },
+        "maintainer":          { "@id": "schema:maintainer", "@container": "@set", "@context": { "@vocab": "https://schema.org/", "class": { "@id": "@type", "@type": "@vocab" }, "name": "schema:name", "email": "schema:email", "url": { "@id": "schema:url", "@type": "xsd:anyURI" } } },
+        "producer":            { "@id": "schema:producer", "@container": "@set", "@context": { "@vocab": "https://schema.org/", "class": { "@id": "@type", "@type": "@vocab" }, "name": "schema:name", "url": { "@id": "schema:url", "@type": "xsd:anyURI" }, "address": { "@id": "schema:address", "@context": { "address_country": "schema:addressCountry" } } } },
+        "source_organization": { "@id": "schema:sourceOrganization", "@container": "@set", "@context": { "@vocab": "https://schema.org/", "class": { "@id": "@type", "@type": "@vocab" }, "name": "schema:name", "url": { "@id": "schema:url", "@type": "xsd:anyURI" }, "address": { "@id": "schema:address", "@context": { "address_country": "schema:addressCountry" } } } },
+        "sdPublisher":         { "@id": "schema:sdPublisher", "@container": "@set", "@context": { "@vocab": "https://schema.org/", "class": { "@id": "@type", "@type": "@vocab" }, "name": "schema:name", "url": { "@id": "schema:url", "@type": "xsd:anyURI" }, "address": { "@id": "schema:address", "@context": { "address_country": "schema:addressCountry" } } } },
+        "publisher":           { "@id": "schema:publisher", "@container": "@set", "@context": { "@vocab": "https://schema.org/", "class": { "@id": "@type", "@type": "@vocab" }, "name": "schema:name", "url": { "@id": "schema:url", "@type": "xsd:anyURI" } } },
+
+        "spatial_coverage": {
+          "@id": "schema:spatialCoverage",
+          "@context": {
+            "@vocab": "https://schema.org/",
+            "class": { "@id": "@type", "@type": "@vocab" },
+            "geo":   { "@id": "schema:geo" },
+            "box":   { "@id": "schema:box" }
+          }
+        },
+        "temporal_coverage": { "@id": "apkg:hasTemporalCoverage" },
+        "inXSDDateTime":     { "@id": "time:inXSDDateTime", "@type": "xsd:dateTime" },
+        "hasBeginning":      { "@id": "time:hasBeginning" },
+        "hasEnd":            { "@id": "time:hasEnd" },
+
+        "inputs":  { "@id": "apkg:hasInput", "@container": "@set", "@context": { "id": "schema:identifier", "doc": "apkg:doc", "label": "apkg:label", "type": "cwl:type", "format": "cwl:format", "fileFormat": "schema:fileFormat", "file_format": "schema:fileFormat", "default": "cwl:default", "keywords": { "@id": "schema:keywords", "@container": "@set" }, "loadContents": { "@id": "cwl:loadContents", "@type": "xsd:boolean" }, "loadListing": "cwl:loadListing" } },
+        "outputs": { "@id": "apkg:hasOutput", "@container": "@set", "@context": { "id": "schema:identifier", "doc": "apkg:doc", "label": "apkg:label", "type": "cwl:type", "format": "cwl:format", "fileFormat": "schema:fileFormat", "file_format": "schema:fileFormat", "default": "cwl:default", "keywords": { "@id": "schema:keywords", "@container": "@set" }, "loadContents": { "@id": "cwl:loadContents", "@type": "xsd:boolean" }, "loadListing": "cwl:loadListing" } },
+
+        "links": {
+          "@id": "apkg:hasLink",
+          "@container": "@set",
+          "@context": {
+            "title": { "@id": "dct:title" },
+            "rel":   { "@id": "dct:type" },
+            "type":  { "@id": "dcat:mediaType" },
+            "href":  { "@id": "schema:url", "@type": "xsd:anyURI" }
+          }
+        },
+
+        "Secrets": {
+          "@id": "cwltool:Secrets",
+          "@context": {
+            "secrets": { "@id": "cwltool:secrets", "@container": "@set" }
+          }
+        }
+      }
+    }
+  }
+}

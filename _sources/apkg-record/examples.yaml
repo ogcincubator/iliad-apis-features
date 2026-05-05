@@ -1,0 +1,31 @@
+- title: APKG registry — wo-data-filter (CommandLineTool)
+  description: >
+    Minimal CommandLineTool from MELOA — CSV filter for ocean datasets.
+    Drawn directly from the live ILIAD APKG registry.
+  source: https://iliad-registry.inesctec.pt/collections/apkg/items/urn:apkg:tool:inesctec:pt:wo-data-filter:0.1.0
+  snippets:
+    - language: json
+      ref: examples/commandlinetool-wo-data-filter.json
+
+- title: APKG registry — Sentinel-1 oil-spill detection pipeline (Workflow)
+  description: >
+    Multi-step CWL Workflow with five embedded CommandLineTools (data-search,
+    preprocessing, object-detection, segmentation, MEDSLIK). Demonstrates
+    temporal_coverage, license, multi-organisation source_organization, and
+    a CWL block containing cwltool:Secrets hints. Drawn directly from the
+    live ILIAD APKG registry.
+  source: https://iliad-registry.inesctec.pt/collections/apkg/items/urn:apkg:workflow:meeo_srl:it:oilspill_pipeline_medslik_156:1.0.0
+  snippets:
+    - language: json
+      ref: examples/workflow-oilspill-pipeline.json
+
+- title: APKG registry — virtual-choreographies-generator (CommandLineTool)
+  description: >
+    INESC TEC tool with both maintainer and contributor populated.
+    Demonstrates the full provenance chain (author + contributor + maintainer
+    + producer + source_organization + sdPublisher). Drawn directly from the
+    live ILIAD APKG registry.
+  source: https://iliad-registry.inesctec.pt/collections/apkg/items/urn:apkg:tool:inesctec:pt:virtual-choreographies-generator:0.2.1
+  snippets:
+    - language: json
+      ref: examples/commandlinetool-virtual-choreographies.json

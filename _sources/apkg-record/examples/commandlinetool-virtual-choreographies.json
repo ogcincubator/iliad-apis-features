@@ -1,0 +1,134 @@
+{
+  "geometry": {
+    "coordinates": [
+      [
+        [
+          -180.0,
+          -90.0
+        ],
+        [
+          180.0,
+          -90.0
+        ],
+        [
+          180.0,
+          90.0
+        ],
+        [
+          -180.0,
+          90.0
+        ],
+        [
+          -180.0,
+          -90.0
+        ]
+      ]
+    ],
+    "type": "Polygon"
+  },
+  "type": "Feature",
+  "properties": {
+    "outputs": [
+      {
+        "format": "edam:format_3464",
+        "id": "vc",
+        "type": "File"
+      },
+      {
+        "format": "edam:format_3464",
+        "id": "recipe",
+        "type": "File"
+      }
+    ],
+    "programming_language": "python",
+    "keywords": [
+      "wp6-tools",
+      "choreographies",
+      "virtual-choreographies"
+    ],
+    "inputs": [
+      {
+        "id": "template",
+        "type": "File?"
+      },
+      {
+        "id": "template_url",
+        "type": "string?"
+      },
+      {
+        "id": "dataset",
+        "type": "File"
+      }
+    ],
+    "description": "Generator of virtual choreographies",
+    "maintainer": [
+      {
+        "name": "Vitor Cavaleiro",
+        "email": "vitor.cavaleiro@inesctec.pt"
+      }
+    ],
+    "sdPublisher": [
+      {
+        "name": "Application Package Registry",
+        "class": "Organization",
+        "url": "https://iliad-registry.inesctec.pt"
+      }
+    ],
+    "temporal_coverage": null,
+    "contributor": [
+      {
+        "name": "Miguel Correia",
+        "email": "miguel.r.correia@inesctec.pt"
+      }
+    ],
+    "spatial_coverage": {
+      "geo": {
+        "box": "-90 -180 90 180"
+      },
+      "class": "schema:GeoShape"
+    },
+    "id": "virtual-choreographies-generator",
+    "software_version": "0.2.1",
+    "class": "CommandLineTool",
+    "latest": true,
+    "identifier": "urn:apkg:tool:inesctec:pt:virtual-choreographies-generator:0.2.1",
+    "citation": null,
+    "date_created": "2025-05-26T10:06:27Z",
+    "author": [
+      {
+        "name": "Fernando Cassola",
+        "email": "fernando.c.marques@inesctec.pt"
+      },
+      {
+        "name": "Vitor Cavaleiro",
+        "email": "vitor.cavaleiro@inesctec.pt"
+      }
+    ],
+    "sdDatePublished": "2025-06-11T14:23:07.233541Z",
+    "url": "https://iliad-registry.inesctec.pt/collections/apkg/items/urn:apkg:tool:inesctec:pt:virtual-choreographies-generator:0.2.1?f=cwl",
+    "license": null,
+    "code_repository": "https://pipe-drive.inesctec.pt/application-packages/tools/virtual-choreographies-generator/virtual_choreographies_generator_0_2_1.cwl",
+    "source_organization": [
+      {
+        "address": {
+          "address_country": "PT"
+        },
+        "name": "INESCTEC",
+        "url": "https://inesctec.pt"
+      }
+    ],
+    "name": "virtual-choreographies-generator",
+    "cwl": "cwlVersion: v1.2\n$namespaces:\n  s: https://schema.org/\n  edam: http://edamontology.org/\n$graph:\n- class: CommandLineTool\n  id: virtual-choreographies-generator\n  baseCommand: python\n  arguments:\n  - /opt/src/command.py\n  - valueFrom: $( inputs.dataset )\n  - valueFrom: $( inputs.template || inputs.template_url || '/opt/templates/template.json')\n  inputs:\n    template:\n      type: File?\n    template_url:\n      type: string?\n    dataset:\n      type: File\n  outputs:\n    vc:\n      format: edam:format_3464\n      type: File\n      outputBinding:\n        glob: vc.json\n    recipe:\n      format: edam:format_3464\n      type: File\n      outputBinding:\n        glob: recipe.json\n  requirements:\n    NetworkAccess:\n      networkAccess: true\n    ResourceRequirement: {}\n    InlineJavascriptRequirement: {}\n    DockerRequirement:\n      dockerPull: iliad-repository.inesctec.pt/virtual-choreographies-generator:0.2.1\n  s:name: virtual-choreographies-generator\n  s:description: Generator of virtual choreographies\n  s:keywords:\n  - wp6-tools\n  - choreographies\n  - virtual-choreographies\n  s:programmingLanguage: python\n  s:softwareVersion: 0.2.1\n  s:producer:\n    class: s:Organization\n    s:name: INESCTEC\n    s:url: https://inesctec.pt\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: PT\n  s:sourceOrganization:\n  - class: s:Organization\n    s:name: INESCTEC\n    s:url: https://inesctec.pt\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: PT\n  s:author:\n  - class: s:Person\n    s:name: Fernando Cassola\n    s:email: fernando.c.marques@inesctec.pt\n  - class: s:Person\n    s:name: Vitor Cavaleiro\n    s:email: vitor.cavaleiro@inesctec.pt\n  s:maintainer:\n  - class: s:Person\n    s:name: Vitor Cavaleiro\n    s:email: vitor.cavaleiro@inesctec.pt\n  s:contributor:\n  - class: s:Person\n    s:name: Miguel Correia\n    s:email: miguel.r.correia@inesctec.pt\n  s:codeRepository: https://pipe-drive.inesctec.pt/application-packages/tools/virtual-choreographies-generator/virtual_choreographies_generator_0_2_1.cwl\n  s:dateCreated: '2025-05-26T10:06:27Z'\n  s:sdDatePublished: '2025-06-11T14:23:07.233541Z'\n  s:sdPublisher:\n    class: Organization\n    name: Application Package Registry\n    url: https://iliad-registry.inesctec.pt\n  s:identifier: urn:apkg:tool:inesctec:pt:virtual-choreographies-generator:0.2.1\n",
+    "producer": [
+      {
+        "address": {
+          "address_country": "PT"
+        },
+        "name": "INESCTEC",
+        "url": "https://inesctec.pt"
+      }
+    ],
+    "family": "urn:apkg:tool:inesctec:pt:virtual-choreographies-generator"
+  },
+  "id": "urn:apkg:tool:inesctec:pt:virtual-choreographies-generator:0.2.1"
+}

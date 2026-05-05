@@ -1,0 +1,55 @@
+{
+  "name": "ILIAD APKG Registry Record",
+  "abstract": "OGC API Records profile for the ILIAD Application Package registry hosted at https://iliad-registry.inesctec.pt. Each register item is a GeoJSON Feature describing one Application Package (CWL CommandLineTool or Workflow) with metadata covering identifier and family, software version, authors and organisations, programming language, inputs and outputs as CWL parameters, embedded CWL document, spatial and temporal coverage, license, citation, and provenance. Extends the GeoDCAT mapping for OGC API Records and reuses the APKG metadata profile (apkg:) for ApplicationPackage, Process, Parameter, Geometry and TemporalCoverage terms.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-05-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2026-05-05",
+  "dependsOn": [
+    "ogc.hosted.iliad.api.features.apkg",
+    "ogc.geo.geodcat.dcat-records"
+  ],
+  "tags": [
+    "iliad",
+    "apkg",
+    "application-package",
+    "cwl",
+    "ogc-records",
+    "catalog",
+    "registry"
+  ],
+  "sources": [
+    {
+      "title": "ILIAD APKG registry — apkg collection",
+      "link": "https://iliad-registry.inesctec.pt/collections/apkg"
+    },
+    {
+      "title": "ILIAD APKG registry — items endpoint",
+      "link": "https://iliad-registry.inesctec.pt/collections/apkg/items"
+    },
+    {
+      "title": "ILIAD APKG registry — collection schema",
+      "link": "https://iliad-registry.inesctec.pt/collections/apkg/schema"
+    },
+    {
+      "title": "APKG metadata terms (Turtle)",
+      "link": "https://github.com/ILIAD-ocean-twin/APKG/blob/main/terms/apkg-ms.ttl"
+    },
+    {
+      "title": "OGC API Records specification",
+      "link": "https://ogcapi.ogc.org/records/"
+    },
+    {
+      "title": "GeoDCAT mapping for OGC API Records",
+      "link": "https://ogcincubator.github.io/geodcat-ogcapi-records/bblock/ogc.geo.geodcat.geodcat-records/"
+    },
+    {
+      "title": "Common Workflow Language (CWL)",
+      "link": "https://www.commonwl.org/"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable"
+}

@@ -1,0 +1,274 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: ILIAD APKG Registry Record
+description: >
+  GeoJSON Feature representing one Application Package entry in the ILIAD
+  APKG registry (https://iliad-registry.inesctec.pt/collections/apkg).
+  Conforms to OGC API Records record envelope (type, id, geometry, properties)
+  with the properties payload following the APKG Metadata Profile.
+type: object
+required:
+  - type
+  - id
+  - geometry
+  - properties
+properties:
+
+  type:
+    type: string
+    enum: [Feature]
+
+  id:
+    type: string
+    description: APKG URN, identical to properties.identifier.
+    examples: ["urn:apkg:tool:inesctec:pt:wo-data-filter:0.1.0"]
+
+  geometry:
+    description: Spatial coverage of the application package as a GeoJSON geometry.
+    oneOf:
+      - $ref: https://geojson.org/schema/Geometry.json
+      - type: "null"
+
+  properties:
+    type: object
+    required:
+      - identifier
+      - id
+      - class
+      - name
+      - family
+      - latest
+      - sdDatePublished
+      - sdPublisher
+    properties:
+
+      identifier:
+        type: string
+        description: URN-form identifier of this application package (versioned).
+        examples: ["urn:apkg:tool:inesctec:pt:wo-data-filter:0.1.0"]
+
+      id:
+        type: string
+        description: Short, unversioned identifier within the URN.
+        examples: ["wo-data-filter"]
+
+      family:
+        type: string
+        description: Family identifier (URN without version) grouping all versions.
+        examples: ["urn:apkg:tool:inesctec:pt:wo-data-filter"]
+
+      latest:
+        type: boolean
+        description: True when this is the latest published version of the family.
+
+      class:
+        type: string
+        description: CWL process class.
+        enum: [CommandLineTool, Workflow]
+
+      name:
+        type: string
+
+      description:
+        type: string
+
+      keywords:
+        type: array
+        items:
+          type: string
+
+      software_version:
+        type: string
+
+      programming_language:
+        type: [string, "null"]
+
+      cwl:
+        type: string
+        description: Full CWL document (YAML) as a string.
+
+      url:
+        type: string
+        format: uri
+        description: Self-link to the registry entry.
+
+      registration_url:
+        type: [string, "null"]
+        format: uri
+        description: Original URL where the application package was registered.
+
+      code_repository:
+        type: [string, "null"]
+        format: uri
+
+      license:
+        type: [string, "null"]
+        description: SPDX expression, license URI, or null when undeclared.
+
+      citation:
+        type: [string, "null"]
+
+      date_created:
+        type: [string, "null"]
+        description: Creation date (ISO 8601 date or date-time).
+
+      sdDatePublished:
+        type: string
+        format: date-time
+
+      author:
+        type: array
+        items:
+          $ref: "#/$defs/Agent"
+
+      contributor:
+        oneOf:
+          - type: array
+            items:
+              $ref: "#/$defs/Agent"
+          - type: "null"
+
+      maintainer:
+        oneOf:
+          - type: array
+            items:
+              $ref: "#/$defs/Agent"
+          - type: "null"
+
+      producer:
+        type: array
+        items:
+          $ref: "#/$defs/Organization"
+
+      source_organization:
+        type: array
+        items:
+          $ref: "#/$defs/Organization"
+
+      sdPublisher:
+        type: array
+        items:
+          $ref: "#/$defs/Organization"
+
+      spatial_coverage:
+        $ref: "#/$defs/GeoShape"
+
+      temporal_coverage:
+        type: [string, "null"]
+        description: ISO 8601 time interval (e.g. "2014-01-01T00:00:00Z/").
+
+      inputs:
+        type: array
+        description: CWL input parameters.
+        items:
+          $ref: "#/$defs/Parameter"
+
+      outputs:
+        type: array
+        description: CWL output parameters.
+        items:
+          $ref: "#/$defs/Parameter"
+
+      Secrets:
+        oneOf:
+          - $ref: "#/$defs/Secrets"
+          - type: "null"
+        description: CWL cwltool:Secrets block when present.
+
+    additionalProperties: true
+
+$defs:
+
+  Agent:
+    type: object
+    description: Person or organisation associated with the application package.
+    properties:
+      name:
+        type: string
+      email:
+        type: string
+        format: email
+      class:
+        type: string
+        description: schema.org class hint (Person / Organization).
+      url:
+        type: string
+        format: uri
+    additionalProperties: true
+
+  Organization:
+    type: object
+    properties:
+      name:
+        type: string
+      url:
+        type: string
+        format: uri
+      class:
+        type: string
+      address:
+        type: object
+        properties:
+          address_country:
+            type: string
+        additionalProperties: true
+    additionalProperties: true
+
+  GeoShape:
+    type: object
+    description: schema:GeoShape bounding-box description.
+    properties:
+      class:
+        type: string
+        examples: ["schema:GeoShape"]
+      box:
+        type: string
+        description: "Bounding box as 'south west north east' (schema:box)."
+      geo:
+        type: object
+        properties:
+          box:
+            type: string
+        additionalProperties: true
+    additionalProperties: true
+
+  Parameter:
+    type: object
+    description: CWL input or output parameter.
+    properties:
+      id:
+        type: string
+      doc:
+        type: [string, "null"]
+      type:
+        type: string
+        description: CWL type expression (e.g. "string", "string?", "float", "File", "Directory").
+      label:
+        type: [string, "null"]
+      format:
+        type: [string, "null"]
+        description: EDAM format URI or CWL format reference.
+      fileFormat:
+        type: [string, "null"]
+        description: schema:fileFormat (MIME type when a File).
+      default:
+        description: Default value (any JSON type) for the parameter.
+      keywords:
+        type: array
+        items:
+          type: string
+      loadContents:
+        type: [boolean, "null"]
+      loadListing:
+        type: [string, "null"]
+    additionalProperties: true
+
+  Secrets:
+    type: object
+    properties:
+      secrets:
+        type: array
+        items:
+          type: string
+    additionalProperties: true
+
+additionalProperties: true

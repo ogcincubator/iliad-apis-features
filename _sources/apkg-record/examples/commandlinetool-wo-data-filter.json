@@ -1,0 +1,129 @@
+{
+  "geometry": {
+    "coordinates": [
+      [
+        [
+          -180.0,
+          -90.0
+        ],
+        [
+          180.0,
+          -90.0
+        ],
+        [
+          180.0,
+          90.0
+        ],
+        [
+          -180.0,
+          90.0
+        ],
+        [
+          -180.0,
+          -90.0
+        ]
+      ]
+    ],
+    "type": "Polygon"
+  },
+  "type": "Feature",
+  "properties": {
+    "outputs": [
+      {
+        "format": "edam:format_3752",
+        "doc": "result file",
+        "id": "results",
+        "type": "File",
+        "fileFormat": "text/csv"
+      },
+      {
+        "format": "edam:format_3464",
+        "doc": "metadata description",
+        "id": "metadata",
+        "type": "File"
+      }
+    ],
+    "programming_language": "python",
+    "keywords": [
+      "meloa",
+      "wavy",
+      "ocean",
+      "dataset",
+      "filter"
+    ],
+    "inputs": [
+      {
+        "doc": "CSV endpoint",
+        "id": "url",
+        "type": "string"
+      },
+      {
+        "doc": "baseline",
+        "id": "base",
+        "type": "float"
+      },
+      {
+        "default": "gt",
+        "doc": "operation to apply",
+        "id": "op",
+        "type": "string?"
+      }
+    ],
+    "description": "WO csv filter",
+    "maintainer": null,
+    "sdPublisher": [
+      {
+        "name": "Application Package Registry",
+        "class": "Organization",
+        "url": "https://iliad-registry.inesctec.pt"
+      }
+    ],
+    "temporal_coverage": null,
+    "contributor": null,
+    "spatial_coverage": {
+      "geo": {
+        "box": "-90 -180 90 180"
+      },
+      "class": "schema:GeoShape"
+    },
+    "id": "wo-data-filter",
+    "software_version": "0.1.0",
+    "class": "CommandLineTool",
+    "latest": true,
+    "identifier": "urn:apkg:tool:inesctec:pt:wo-data-filter:0.1.0",
+    "citation": null,
+    "date_created": "2025-05-12T15:28:16Z",
+    "author": [
+      {
+        "name": "Miguel Correia",
+        "email": "miguel.r.correia@inesctec.pt"
+      }
+    ],
+    "sdDatePublished": "2025-06-11T14:22:57.804762Z",
+    "url": "https://iliad-registry.inesctec.pt/collections/apkg/items/urn:apkg:tool:inesctec:pt:wo-data-filter:0.1.0?f=cwl",
+    "license": null,
+    "code_repository": "https://pipe-drive.inesctec.pt/application-packages/tools/wo-data-processing/wo_data_processing_0_1_0.cwl",
+    "source_organization": [
+      {
+        "address": {
+          "address_country": "PT"
+        },
+        "name": "INESCTEC",
+        "url": "https://inesctec.pt"
+      }
+    ],
+    "name": "wo-data-filter",
+    "cwl": "cwlVersion: v1.2\n$namespaces:\n  s: https://schema.org/\n  edam: http://edamontology.org/\n$graph:\n- class: CommandLineTool\n  id: wo-data-filter\n  baseCommand: python\n  arguments:\n  - /opt/script.py\n  - --url\n  - valueFrom: $( inputs.url )\n  - --base\n  - valueFrom: $( inputs.base )\n  - valueFrom: $( function () { if (inputs.op) { return [\"--op\", inputs.op]; } else\n      { return []; } }())\n  inputs:\n    url:\n      type: string\n      doc: CSV endpoint\n    base:\n      type: float\n      doc: baseline\n    op:\n      type: string?\n      doc: operation to apply\n      default: gt\n  outputs:\n    results:\n      format: edam:format_3752\n      type: File\n      outputBinding:\n        glob: result/result.csv\n      doc: result file\n      s:fileFormat: text/csv\n    metadata:\n      format: edam:format_3464\n      type: File\n      outputBinding:\n        glob: result/metadata.json\n      doc: metadata description\n  requirements:\n    ResourceRequirement: {}\n    NetworkAccess:\n      networkAccess: true\n    InlineJavascriptRequirement: {}\n    DockerRequirement:\n      dockerPull: iliad-repository.inesctec.pt/wo-data-processing:0.1.0\n  s:name: wo-data-filter\n  s:description: WO csv filter\n  s:keywords:\n  - meloa\n  - wavy\n  - ocean\n  - dataset\n  - filter\n  s:programmingLanguage: python\n  s:softwareVersion: 0.1.0\n  s:producer:\n    class: s:Organization\n    s:name: INESCTEC\n    s:url: https://inesctec.pt\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: PT\n  s:sourceOrganization:\n  - class: s:Organization\n    s:name: INESCTEC\n    s:url: https://inesctec.pt\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: PT\n  s:author:\n  - class: s:Person\n    s:name: Miguel Correia\n    s:email: miguel.r.correia@inesctec.pt\n  s:codeRepository: https://pipe-drive.inesctec.pt/application-packages/tools/wo-data-processing/wo_data_processing_0_1_0.cwl\n  s:dateCreated: '2025-05-12T15:28:16Z'\n  s:sdDatePublished: '2025-06-11T14:22:57.804762Z'\n  s:sdPublisher:\n    class: Organization\n    name: Application Package Registry\n    url: https://iliad-registry.inesctec.pt\n  s:identifier: urn:apkg:tool:inesctec:pt:wo-data-filter:0.1.0\n",
+    "producer": [
+      {
+        "address": {
+          "address_country": "PT"
+        },
+        "name": "INESCTEC",
+        "url": "https://inesctec.pt"
+      }
+    ],
+    "family": "urn:apkg:tool:inesctec:pt:wo-data-filter"
+  },
+  "id": "urn:apkg:tool:inesctec:pt:wo-data-filter:0.1.0"
+}

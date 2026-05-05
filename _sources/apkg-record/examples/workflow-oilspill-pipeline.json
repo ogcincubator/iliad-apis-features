@@ -1,0 +1,256 @@
+{
+  "geometry": {
+    "coordinates": [
+      [
+        [
+          -180.0,
+          -90.0
+        ],
+        [
+          180.0,
+          -90.0
+        ],
+        [
+          180.0,
+          90.0
+        ],
+        [
+          -180.0,
+          90.0
+        ],
+        [
+          -180.0,
+          -90.0
+        ]
+      ]
+    ],
+    "type": "Polygon"
+  },
+  "type": "Feature",
+  "properties": {
+    "outputs": [
+      {
+        "id": "pipeline_output",
+        "type": "Directory"
+      }
+    ],
+    "programming_language": "python",
+    "keywords": [
+      "oil spill",
+      "SAR",
+      "Sentinel-1",
+      "deep learning",
+      "object detection"
+    ],
+    "inputs": [
+      {
+        "doc": "Path to directory as a string where to find input files and where to store outputs",
+        "id": "use_case_directory",
+        "type": "string"
+      },
+      {
+        "doc": "Bounding box for image search",
+        "id": "bbox",
+        "type": "string?"
+      },
+      {
+        "doc": "Start date for data search",
+        "id": "start_date",
+        "type": "string?"
+      },
+      {
+        "doc": "Time interval (n of days) for data search",
+        "id": "time_interval",
+        "type": "int?"
+      },
+      {
+        "doc": "End date for data search",
+        "id": "end_date",
+        "type": "string?"
+      },
+      {
+        "doc": "Enable verbose logging",
+        "id": "verbose",
+        "type": "boolean?"
+      },
+      {
+        "doc": "Enable debug mode",
+        "id": "debug",
+        "type": "boolean?"
+      },
+      {
+        "id": "asf_username",
+        "type": "string"
+      },
+      {
+        "id": "asf_password",
+        "type": "string"
+      },
+      {
+        "default": "NO",
+        "id": "cont_slick",
+        "type": "string"
+      },
+      {
+        "default": "NO",
+        "id": "sat",
+        "type": "string"
+      },
+      {
+        "default": "NO",
+        "id": "use_high_res",
+        "type": "string"
+      },
+      {
+        "default": 24.069118741783797,
+        "id": "min_lon",
+        "type": "float?"
+      },
+      {
+        "default": 24.990341065648366,
+        "id": "max_lon",
+        "type": "float?"
+      },
+      {
+        "default": 35.09663196120557,
+        "id": "min_lat",
+        "type": "float?"
+      },
+      {
+        "default": 35.990635331961315,
+        "id": "max_lat",
+        "type": "float?"
+      },
+      {
+        "default": 35.496,
+        "id": "lat_point",
+        "type": "float?"
+      },
+      {
+        "default": -15.7433,
+        "id": "lon_point",
+        "type": "float?"
+      },
+      {
+        "default": "2024-11-07T06:22:00Z",
+        "id": "date_spill",
+        "type": "string?"
+      },
+      {
+        "id": "spill_dur",
+        "type": "string"
+      },
+      {
+        "id": "spill_res",
+        "type": "string"
+      },
+      {
+        "default": 1.4,
+        "id": "spill_tons",
+        "type": "float"
+      },
+      {
+        "id": "username",
+        "type": "string"
+      },
+      {
+        "id": "password",
+        "type": "string"
+      },
+      {
+        "id": "ftp_server",
+        "type": "string"
+      },
+      {
+        "id": "ftp_user",
+        "type": "string"
+      },
+      {
+        "id": "ftp_password",
+        "type": "string"
+      },
+      {
+        "id": "remote_dir",
+        "type": "string"
+      },
+      {
+        "id": "cds_token",
+        "type": "string?"
+      }
+    ],
+    "description": "Sentinel-1 Oil Spill Object Detection Pipeline using Deep Learning tecniques",
+    "maintainer": null,
+    "sdPublisher": [
+      {
+        "name": "Application Package Registry",
+        "class": "Organization",
+        "url": "https://iliad-registry.inesctec.pt"
+      }
+    ],
+    "temporal_coverage": "2014-01-01T00:00:00Z/",
+    "contributor": null,
+    "spatial_coverage": {
+      "geo": {
+        "box": "-90 -180 90 180"
+      },
+      "class": "schema:GeoShape"
+    },
+    "id": "oilspill_pipeline_medslik_156",
+    "software_version": "1.0.0",
+    "class": "Workflow",
+    "latest": true,
+    "identifier": "urn:apkg:workflow:meeo_srl:it:oilspill_pipeline_medslik_156:1.0.0",
+    "citation": "",
+    "date_created": "2024-12-01",
+    "author": [
+      {
+        "name": "Sabrina Outmani",
+        "email": "outmani@meeo.it"
+      },
+      {
+        "name": "Noemi Fazzini",
+        "email": "fazzini@meeo.it"
+      }
+    ],
+    "sdDatePublished": "2025-06-11T14:23:13.531113Z",
+    "url": "https://iliad-registry.inesctec.pt/collections/apkg/items/urn:apkg:workflow:meeo_srl:it:oilspill_pipeline_medslik_156:1.0.0?f=cwl",
+    "license": "https://opensource.org/licenses/MIT",
+    "code_repository": null,
+    "source_organization": [
+      {
+        "address": {
+          "address_country": "IT"
+        },
+        "name": "MEEO SRL",
+        "url": "https://meeo.it/"
+      },
+      {
+        "address": {
+          "address_country": "GR"
+        },
+        "name": "FORTH",
+        "url": "https://www.forth.gr/"
+      },
+      {
+        "address": {
+          "address_country": "PT"
+        },
+        "name": "INESCTEC",
+        "url": "https://inesctec.pt"
+      }
+    ],
+    "name": "Sentinel-1 Oil Spill Object Detection Pipeline 1-2-3-5",
+    "cwl": "cwlVersion: v1.2\n$namespaces:\n  s: https://schema.org/\n  cwltool: http://commonwl.org/cwltool\n$graph:\n- class: Workflow\n  id: oilspill_pipeline_medslik_156\n  doc: Oil Spill Detection and Analysis Pipeline 1-2-3-5, Medslik forecasting\n  inputs:\n    use_case_directory:\n      doc: Path to directory as a string where to find input files and where to store\n        outputs\n      type: string\n    bbox:\n      doc: Bounding box for image search\n      type: string?\n    start_date:\n      doc: Start date for data search\n      type: string?\n    time_interval:\n      doc: Time interval (n of days) for data search\n      type: int?\n    end_date:\n      doc: End date for data search\n      type: string?\n    verbose:\n      doc: Enable verbose logging\n      type: boolean?\n    debug:\n      doc: Enable debug mode\n      type: boolean?\n    asf_username:\n      type: string\n    asf_password:\n      type: string\n    cont_slick:\n      type: string\n      default: 'NO'\n    sat:\n      type: string\n      default: 'NO'\n    use_high_res:\n      type: string\n      default: 'NO'\n    min_lon:\n      type: float?\n      default: 24.069118741783797\n    max_lon:\n      type: float?\n      default: 24.990341065648366\n    min_lat:\n      type: float?\n      default: 35.09663196120557\n    max_lat:\n      type: float?\n      default: 35.990635331961315\n    lat_point:\n      type: float?\n      default: 35.496\n    lon_point:\n      type: float?\n      default: -15.7433\n    date_spill:\n      type: string?\n      default: '2024-11-07T06:22:00Z'\n    spill_dur:\n      type: string\n    spill_res:\n      type: string\n    spill_tons:\n      type: float\n      default: 1.4\n    username:\n      type: string\n    password:\n      type: string\n    ftp_server:\n      type: string\n    ftp_user:\n      type: string\n    ftp_password:\n      type: string\n    remote_dir:\n      type: string\n    cds_token:\n      type: string?\n  steps:\n    step_data_search:\n      in:\n        bbox: bbox\n        use_case_directory: use_case_directory\n        start_date: start_date\n        time_interval: time_interval\n        end_date: end_date\n        verbose: verbose\n        debug: debug\n        asf_username: asf_username\n        asf_password: asf_password\n      run: '#datasearch_tool'\n      out:\n      - results\n      - sentinel_list\n    step_preprocessing:\n      in:\n        use_case_directory: step_data_search/results\n        sentinel_list: step_data_search/sentinel_list\n        verbose: verbose\n        debug: debug\n      run: '#preprocessing_tool'\n      out:\n      - results\n      - db_list\n    step_object_detection:\n      in:\n        use_case_directory: step_preprocessing/results\n        db_list: step_preprocessing/db_list\n        verbose: verbose\n        debug: debug\n      run: '#object_detection_tool'\n      out:\n      - results\n      - png_output_path\n      - csv_output_path\n    step_segmentation:\n      in:\n        use_case_directory: step_object_detection/results\n        sentinel_list: step_data_search/sentinel_list\n        png_output_path: step_object_detection/png_output_path\n        csv_output_path: step_object_detection/csv_output_path\n        verbose: verbose\n        debug: debug\n      run: '#segmentation_tool'\n      out:\n      - results\n    step_medslik:\n      in:\n        use_case_directory: step_segmentation/results\n        cont_slick: cont_slick\n        sat: sat\n        use_high_res: use_high_res\n        min_lon: min_lon\n        max_lon: max_lon\n        min_lat: min_lat\n        max_lat: max_lat\n        lat_point: lat_point\n        lon_point: lon_point\n        date_spill: date_spill\n        spill_dur: spill_dur\n        spill_res: spill_res\n        spill_tons: spill_tons\n        username: username\n        password: password\n        ftp_server: ftp_server\n        ftp_password: ftp_password\n        ftp_user: ftp_user\n        remote_dir: remote_dir\n        cds_token: cds_token\n        results: step_segmentation/results\n      run: '#medslik_tool'\n      out:\n      - results\n  outputs:\n    pipeline_output:\n      type: Directory\n      outputSource: step_medslik/results\n  s:name: Sentinel-1 Oil Spill Object Detection Pipeline 1-2-3-5\n  s:description: Sentinel-1 Oil Spill Object Detection Pipeline using Deep Learning\n    tecniques\n  s:keywords:\n  - oil spill\n  - SAR\n  - Sentinel-1\n  - deep learning\n  - object detection\n  s:programmingLanguage: python\n  s:softwareVersion: 1.0.0\n  s:producer:\n    class: s:Organization\n    s:name: MEEO SRL\n    s:url: https://meeo.it/\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: IT\n  s:sourceOrganization:\n  - class: s:Organization\n    s:name: MEEO SRL\n    s:url: https://meeo.it/\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: IT\n  - class: s:Organization\n    s:name: FORTH\n    s:url: https://www.forth.gr/\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: GR\n  - class: s:Organization\n    s:name: INESCTEC\n    s:url: https://inesctec.pt\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: PT\n  s:author:\n  - class: s:Person\n    s:email: outmani@meeo.it\n    s:name: Sabrina Outmani\n  - class: s:Person\n    s:email: fazzini@meeo.it\n    s:name: Noemi Fazzini\n  s:dateCreated: '2024-12-01'\n  s:temporalCoverage: 2014-01-01T00:00:00Z/\n  s:spatialCoverage:\n    class: s:GeoShape\n    s:box: -90 -180 90 180\n  s:license: https://opensource.org/licenses/MIT\n  s:citation: ''\n  s:sdDatePublished: '2025-06-11T14:23:13.531113Z'\n  s:sdPublisher:\n    class: Organization\n    name: Application Package Registry\n    url: https://iliad-registry.inesctec.pt\n  s:identifier: urn:apkg:workflow:meeo_srl:it:oilspill_pipeline_medslik_156:1.0.0\n- class: CommandLineTool\n  id: datasearch_tool\n  baseCommand:\n  - /srv/miniconda3/envs/oilspill001/bin/python\n  - -m\n  - oilspill001.main\n  arguments:\n  - valueFrom: $(inputs.bbox)\n    prefix: --bbox\n  - --use-case-directory\n  - valueFrom: $(inputs.use_case_directory)\n  - --start-date\n  - valueFrom: $(inputs.start_date)\n  - valueFrom: $(inputs.time_interval)\n    prefix: --time-interval\n  - valueFrom: $(inputs.end_date)\n    prefix: --end-date\n  - valueFrom: $(inputs.verbose)\n    prefix: --verbose\n  - valueFrom: $(inputs.debug)\n    prefix: --debug\n  - --asf-username\n  - valueFrom: $(inputs.asf_username)\n  - --asf-password\n  - valueFrom: $(inputs.asf_password)\n  inputs:\n    bbox:\n      type: string?\n      doc: Bounding box for image search\n      s:name: Bounding Box\n      s:description: Optional bounding box to restrict the image search.\n    use_case_directory:\n      type: string\n      doc: Directory where to find input files and store outputs\n      s:name: Use Case Directory\n      s:description: Directory to store input and output files.\n    start_date:\n      type: string?\n      doc: Start date for data search\n      s:name: Start Date\n      s:description: The start date to search for data.\n    time_interval:\n      type: int?\n      doc: Time interval (n of days) for data search\n      s:name: Time Interval\n      s:description: Number of days for the data search interval.\n    end_date:\n      type: string?\n      doc: End date for data search\n      s:name: End Date\n      s:description: The end date for data search (optional).\n    verbose:\n      type: boolean?\n      doc: Enable verbose logging\n      s:name: Verbose Logging\n      s:description: Flag to enable verbose logging.\n    debug:\n      type: boolean?\n      doc: Enable debug mode\n      s:name: Debug Mode\n      s:description: Flag to enable debug mode for additional logging.\n    asf_username:\n      type: string\n      doc: Username for ASF\n      s:name: ASF Username\n      s:description: Username for the ASF platform authentication.\n    asf_password:\n      type: string\n      doc: Password for ASF\n      s:name: ASF Password\n      s:description: Password for the ASF platform authentication.\n  outputs:\n    results:\n      type: Directory\n      outputBinding:\n        glob: $(inputs.use_case_directory)\n    sentinel_list:\n      type: File\n      outputBinding:\n        glob: $(inputs.use_case_directory)/raw_sentinel/sentinel_paths.txt\n  requirements:\n  - class: DockerRequirement\n    dockerPull: registry.services.meeo.it/outmani/iliad_oil_spill_pilot/oilspill001:1.0.0\n  - class: NetworkAccess\n    networkAccess: true\n  - class: InlineJavascriptRequirement\n  s:name: Sentinel-1 Oil Spill Detection Data Search\n  s:description: ASF search for SAR images from Sentinel-1\n  s:keywords:\n  - oil spill\n  - SAR\n  - Sentinel-1\n  - ASF\n  s:programmingLanguage: python\n  s:softwareVersion: 1.0.0\n  s:producer:\n    class: s:Organization\n    s:name: MEEO SRL\n    s:url: https://meeo.it/\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: IT\n  s:sourceOrganization:\n  - class: s:Organization\n    s:name: MEEO SRL\n    s:url: https://meeo.it/\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: IT\n  - class: s:Organization\n    s:name: FORTH\n    s:url: https://www.forth.gr/\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: GR\n  - class: s:Organization\n    s:name: INESCTEC\n    s:url: https://inesctec.pt\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: PT\n  s:author:\n  - class: s:Person\n    s:name: Sabrina Outmani\n    s:email: outmani@meeo.it\n  - class: s:Person\n    s:name: Noemi Fazzini\n    s:email: fazzini@meeo.it\n  s:dateCreated: '2024-12-01'\n  s:temporalCoverage: 2014-01-01T00:00:00Z/\n  s:spatialCoverage:\n    class: s:GeoShape\n    s:box: -90 -180 90 180\n  s:codeRepository: null\n  s:license: https://opensource.org/licenses/MIT\n  s:citation: ''\n- class: CommandLineTool\n  id: preprocessing_tool\n  baseCommand:\n  - /srv/miniconda3/envs/oilspill002/bin/python\n  - -m\n  - oilspill002.main\n  arguments:\n  - --use-case-directory\n  - valueFrom: $(inputs.use_case_directory.path)\n  - --sentinel-list\n  - valueFrom: $(inputs.sentinel_list.path)\n  - valueFrom: '${ return inputs.verbose ? ''--verbose'' : ''''; }\n\n      '\n    shellQuote: false\n  - valueFrom: '${ return inputs.debug ? ''--debug'' : ''''; }\n\n      '\n    shellQuote: false\n  inputs:\n    use_case_directory:\n      type: Directory\n      doc: Directory where to find input files and store outputs\n      s:name: Use Case Directory\n      s:description: Directory to store input and output files.\n    sentinel_list:\n      type: File\n      doc: .txt file containing sentinel data paths (output from application package\n        1) - sentinel_paths.txt\n      s:name: Sentinel list file\n      s:description: Text file containing sentinel data paths (output from application\n        package 1) - sentinel_paths.txt\n    verbose:\n      type: boolean?\n      doc: Enable verbose logging\n      s:name: Verbose Logging\n      s:description: Flag to enable verbose logging.\n    debug:\n      type: boolean?\n      doc: Enable debug mode\n      s:name: Debug Mode\n      s:description: Flag to enable debug mode for additional logging.\n  outputs:\n    results:\n      type: Directory\n      outputBinding:\n        glob: $(inputs.use_case_directory.path)\n    db_list:\n      type: File\n      outputBinding:\n        glob: $(inputs.use_case_directory.path)/intermediate_dir/db_paths.txt\n  requirements:\n  - class: InitialWorkDirRequirement\n    listing:\n    - entryname: $(inputs.use_case_directory.basename)\n      entry: $(inputs.use_case_directory)\n      writable: true\n  - class: DockerRequirement\n    dockerPull: registry.services.meeo.it/outmani/iliad_oil_spill_pilot/oilspill002:1.0.0\n  - class: NetworkAccess\n    networkAccess: true\n  - class: InlineJavascriptRequirement\n  s:name: Sentinel-1 Oil Spill Detection Pipeline Preprocessing Tool\n  s:description: Pre-processing of SAR images from Sentinel-1\n  s:keywords:\n  - oil spill\n  - SAR\n  - Sentinel-1\n  - snappy\n  s:programmingLanguage: python\n  s:softwareVersion: 1.0.0\n  s:producer:\n    class: s:Organization\n    s:name: MEEO SRL\n    s:url: https://meeo.it/\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: IT\n  s:sourceOrganization:\n    s:sourceOrganization:\n    - class: s:Organization\n      s:name: MEEO SRL\n      s:url: https://meeo.it/\n      s:address:\n        class: s:PostalAddress\n        s:addressCountry: IT\n    - class: s:Organization\n      s:name: FORTH\n      s:url: https://www.forth.gr/\n      s:address:\n        class: s:PostalAddress\n        s:addressCountry: GR\n    - class: s:Organization\n      s:name: INESCTEC\n      s:url: https://inesctec.pt\n      s:address:\n        class: s:PostalAddress\n        s:addressCountry: PT\n  s:author:\n  - class: s:Person\n    s:email: outmani@meeo.it\n    s:name: Sabrina Outmani\n  - class: s:Person\n    s:email: fazzini@meeo.it\n    s:name: Noemi Fazzini\n  s:dateCreated: '2024-12-01'\n  s:temporalCoverage: 2014-01-01T00:00:00Z/\n  s:spatialCoverage:\n    class: s:GeoShape\n    s:box: -90 -180 90 180\n  s:license: https://opensource.org/licenses/MIT\n  s:citation: ''\n- class: CommandLineTool\n  id: object_detection_tool\n  baseCommand:\n  - /srv/miniconda3/envs/oilspill003/bin/python\n  - -m\n  - oilspill003.main\n  arguments:\n  - --use-case-directory\n  - valueFrom: $(inputs.use_case_directory.path)\n  - --db-list\n  - valueFrom: $(inputs.db_list.path)\n  - valueFrom: '${ return inputs.range ? ''--range'' : ''''; }\n\n      '\n    shellQuote: false\n  - valueFrom: '${ return inputs.verbose ? ''--verbose'' : ''''; }\n\n      '\n    shellQuote: false\n  - valueFrom: '${ return inputs.debug ? ''--debug'' : ''''; }\n\n      '\n    shellQuote: false\n  inputs:\n    use_case_directory:\n      type: Directory\n      doc: Directory where to find input files and store outputs\n      s:name: Use Case Directory\n      s:description: Directory to store input and output files.\n    db_list:\n      type: File\n      doc: .txt file containing paths of preprocessed sentinel-1 images (output from\n        application package 2) - db_paths.txt\n      s:name: Db list file\n      s:description: .txt file containing paths of preprocessed sentinel-1 images\n        (output from application package 2) - db_paths.txt\n    range:\n      type: string?\n      doc: optional range 0-100 for image contrast enhancement\n      s:name: Range\n      s:description: optional range 0-100 for image contrast enhancement\n    verbose:\n      type: boolean?\n      doc: Enable verbose logging\n      s:name: Verbose Logging\n      s:description: Flag to enable verbose logging.\n    debug:\n      type: boolean?\n      doc: Enable debug mode\n      s:name: Debug Mode\n      s:description: Flag to enable debug mode for additional logging.\n  outputs:\n    results:\n      type: Directory\n      outputBinding:\n        glob: $(inputs.use_case_directory.path)\n    png_output_path:\n      type: File\n      outputBinding:\n        glob: $(inputs.use_case_directory.path)/intermediate_dir/png_paths.txt\n    csv_output_path:\n      type: File\n      outputBinding:\n        glob: $(inputs.use_case_directory.path)/intermediate_dir/csv_paths.txt\n  requirements:\n  - class: InitialWorkDirRequirement\n    listing:\n    - entryname: $(inputs.use_case_directory.basename)\n      entry: $(inputs.use_case_directory)\n      writable: true\n  - class: DockerRequirement\n    dockerPull: registry.services.meeo.it/outmani/iliad_oil_spill_pilot/oilspill003:2.0.0\n  - class: NetworkAccess\n    networkAccess: true\n  - class: InlineJavascriptRequirement\n  s:name: Sentinel-1 Oil Spill Object Detection Pipeline\n  s:description: Deep learning model designed for detecting oil spill signals globally\n    from pre-processedSAR images from Sentinel-1.\n  s:keywords:\n  - oil spill\n  - SAR\n  - Sentinel-1\n  - deep learning\n  - object detection\n  s:programmingLanguage: python\n  s:softwareVersion: 1.0.0\n  s:producer:\n    class: s:Organization\n    s:name: MEEO SRL\n    s:url: https://meeo.it/\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: IT\n  s:sourceOrganization:\n  - class: s:Organization\n    s:name: MEEO SRL\n    s:url: https://meeo.it/\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: IT\n  - class: s:Organization\n    s:name: FORTH\n    s:url: https://www.forth.gr/\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: GR\n  - class: s:Organization\n    s:name: INESCTEC\n    s:url: https://inesctec.pt\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: PT\n  s:author:\n  - class: s:Person\n    s:email: outmani@meeo.it\n    s:name: Sabrina Outmani\n  - class: s:Person\n    s:email: fazzini@meeo.it\n    s:name: Noemi Fazzini\n  s:dateCreated: '2024-12-01'\n  s:temporalCoverage: 2014-01-01T00:00:00Z/\n  s:spatialCoverage:\n    class: s:GeoShape\n    s:box: -90 -180 90 180\n  s:license: https://opensource.org/licenses/MIT\n  s:citation: ''\n- class: CommandLineTool\n  id: segmentation_tool\n  baseCommand:\n  - /srv/miniconda3/envs/oilspill005/bin/python\n  - -m\n  - oilspill005.main\n  arguments:\n  - --use-case-directory\n  - valueFrom: $(inputs.use_case_directory.path)\n  - --sentinel-list\n  - valueFrom: $(inputs.sentinel_list.path)\n  - --png-output-path\n  - valueFrom: $(inputs.png_output_path.path)\n  - --csv-output-path\n  - valueFrom: $(inputs.csv_output_path.path)\n  - valueFrom: '${ return inputs.delete ? ''--delete'' : ''''; }\n\n      '\n    shellQuote: false\n  - valueFrom: '${ return inputs.verbose ? ''--verbose'' : ''''; }\n\n      '\n    shellQuote: false\n  - valueFrom: '${ return inputs.debug ? ''--debug'' : ''''; }\n\n      '\n    shellQuote: false\n  inputs:\n    use_case_directory:\n      type: Directory\n      doc: Directory where to find input files and store outputs\n      s:name: Use Case Directory\n      s:description: Directory to store input and output files.\n    sentinel_list:\n      type: File\n      doc: .txt file containing sentinel data paths (output from application package\n        1) - sentinel_paths.txt\n      s:name: Sentinel list file\n      s:description: Text file containing sentinel data paths (output from application\n        package 1) - sentinel_paths.txt\n    png_output_path:\n      type: File\n      doc: .txt file containing png data paths (output from application package 3)\n        - png_paths.txt\n      s:name: Png list file\n      s:description: Text file containing sentinel data paths (output from application\n        package 3) - png_paths.txt\n    csv_output_path:\n      type: File\n      doc: .txt file containing csv data paths (output from application package 3)\n        - csv_paths.txt\n      s:name: Csv list file\n      s:description: Text file containing sentinel data paths (output from application\n        package 3) - csv_paths.txt\n    delete:\n      type: boolean?\n      doc: Enable deletion of generated auxiliary files\n      s:name: null\n      s:description: Enable deletion of generated auxiliary files\n    verbose:\n      type: boolean?\n      doc: Enable verbose logging\n      s:name: Verbose Logging\n      s:description: Flag to enable verbose logging.\n    debug:\n      type: boolean?\n      doc: Enable debug mode\n      s:name: Debug Mode\n      s:description: Flag to enable debug mode for additional logging.\n  outputs:\n    results:\n      type: Directory\n      outputBinding:\n        glob: $(inputs.use_case_directory.path)\n  requirements:\n  - class: InitialWorkDirRequirement\n    listing:\n    - entryname: $(inputs.use_case_directory.basename)\n      entry: $(inputs.use_case_directory)\n      writable: true\n  - class: DockerRequirement\n    dockerPull: registry.services.meeo.it/outmani/iliad_oil_spill_pilot/oilspill005:1.0.0\n  - class: NetworkAccess\n    networkAccess: true\n  - class: InlineJavascriptRequirement\n  s:name: Sentinel-1 Oil Spill Detection and Segmentation Pipeline\n  s:description: Deep learning model for detection and segmentation oil spills in\n    Sentinel-1 SAR images.\n  s:keywords:\n  - oil spill\n  - SAR\n  - Sentinel-1\n  - deep learning\n  - segmentation\n  s:programmingLanguage: python\n  s:softwareVersion: 1.0.0\n  s:producer:\n    class: s:Organization\n    s:name: MEEO SRL\n    s:url: https://meeo.it/\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: IT\n  s:sourceOrganization:\n  - class: s:Organization\n    s:name: MEEO SRL\n    s:url: https://meeo.it/\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: IT\n  - class: s:Organization\n    s:name: FORTH\n    s:url: https://www.forth.gr/\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: GR\n  - class: s:Organization\n    s:name: INESCTEC\n    s:url: https://inesctec.pt\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: PT\n  s:author:\n  - class: s:Person\n    s:email: outmani@meeo.it\n    s:name: Sabrina Outmani\n  - class: s:Person\n    s:email: fazzini@meeo.it\n    s:name: Noemi Fazzini\n  s:dateCreated: '2024-12-01'\n  s:temporalCoverage: 2014-01-01T00:00:00Z/\n  s:spatialCoverage:\n    class: s:GeoShape\n    s:box: -90 -180 90 180\n  s:license: https://opensource.org/licenses/MIT\n  s:citation: ''\n- class: CommandLineTool\n  id: medslik_tool\n  baseCommand:\n  - /opt/miniconda3/envs/application/bin/python\n  - /opt/MEDSLIK/RUN_medslik.py\n  arguments:\n  - --use_case_directory\n  - valueFrom: $(inputs.use_case_directory.path)\n  - --cont_slick\n  - $(inputs.cont_slick)\n  - --sat\n  - $(inputs.sat)\n  - --use_high_res\n  - $(inputs.use_high_res)\n  - --min_lon\n  - $(inputs.min_lon)\n  - --max_lon\n  - $(inputs.max_lon)\n  - --min_lat\n  - $(inputs.min_lat)\n  - --max_lat\n  - $(inputs.max_lat)\n  - --lat_point\n  - $(inputs.lat_point)\n  - --lon_point\n  - $(inputs.lon_point)\n  - --date_spill\n  - $(inputs.date_spill)\n  - --spill_dur\n  - $(inputs.spill_dur)\n  - --spill_res\n  - $(inputs.spill_res)\n  - --spill_tons\n  - $(inputs.spill_tons)\n  - --username\n  - $(inputs.username)\n  - --password\n  - $(inputs.password)\n  - --ftp_server\n  - $(inputs.ftp_server)\n  - --ftp_user\n  - $(inputs.ftp_user)\n  - --ftp_password\n  - $(inputs.ftp_password)\n  - --remote_dir\n  - $(inputs.remote_dir)\n  - --cds_token\n  - $(inputs.cds_token)\n  inputs:\n    use_case_directory:\n      type: Directory\n      doc: Directory where to find input files and store outputs\n      s:name: Use Case Directory\n      s:description: Directory to store input and output files.\n    cont_slick:\n      type: string\n      default: 'NO'\n    sat:\n      type: string\n      default: 'NO'\n    use_high_res:\n      type: string\n      default: 'NO'\n    min_lon:\n      type: float?\n      default: 24.069118741783797\n    max_lon:\n      type: float?\n      default: 24.990341065648366\n    min_lat:\n      type: float?\n      default: 35.09663196120557\n    max_lat:\n      type: float?\n      default: 35.990635331961315\n    lat_point:\n      type: float?\n      default: 35.496\n    lon_point:\n      type: float?\n      default: -15.7433\n    date_spill:\n      type: string?\n      default: '2024-11-07T06:22:00Z'\n    spill_dur:\n      type: string\n    spill_res:\n      type: string\n    spill_tons:\n      type: float\n      default: 1.4\n    username:\n      type: string\n    password:\n      type: string\n    ftp_server:\n      type: string\n    ftp_user:\n      type: string\n    ftp_password:\n      type: string\n    remote_dir:\n      type: string\n    cds_token:\n      type: string?\n    results:\n      type: Directory\n      inputBinding:\n        position: 1\n  outputs:\n    results:\n      outputBinding:\n        glob: $(runtime.outdir)/OUT/\n      type: Directory\n      doc: All results\n  requirements:\n  - class: InlineJavascriptRequirement\n  - class: DockerRequirement\n    dockerPull: antonisparasyris/iliad:medslik-1.0\n  - class: EnvVarRequirement\n    envDef:\n      PATH: /opt/miniconda3/envs/application/bin:/opt/conda/bin:/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\n  - class: NetworkAccess\n    networkAccess: true\n  hints:\n    cwltool:Secrets:\n      secrets:\n      - username\n      - password\n      - ftp_server\n      - ftp_password\n  s:name: medslik\n  s:softwareVersion: 0.1.0\n  s:description: medslik\n  s:keywords:\n  - medslik\n  - oil spill\n  s:programmingLanguage: python\n  s:producer:\n    class: s:Organization\n    s:name: FORTH\n    s:url: https://forth.gr\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: GR\n  s:sourceOrganization:\n  - class: s:Organization\n    s:name: FORTH\n    s:url: https://www.forth.gr/\n    s:address:\n      class: s:PostalAddress\n      s:addressCountry: GR\n  s:author:\n  - class: s:Person\n    s:email: antonisparasyris@iacm.forth.gr\n    s:name: Antonios Parasyris\n  s:mantainer:\n  - class: s:Person\n    s:email: vasmeth@iacm.forth.gr\n    s:name: Vassiliki Metheniti\n  s:contributor:\n  - class: s:Person\n    s:name: Miguel Correia\n    s:email: miguel.r.correia@inesctec.pt\n  s:codeRepository: null\n  s:dateCreated: '2025-01-27T16:00:00Z'\n",
+    "producer": [
+      {
+        "address": {
+          "address_country": "IT"
+        },
+        "name": "MEEO SRL",
+        "url": "https://meeo.it/"
+      }
+    ],
+    "family": "urn:apkg:workflow:meeo_srl:it:oilspill_pipeline_medslik_156"
+  },
+  "id": "urn:apkg:workflow:meeo_srl:it:oilspill_pipeline_medslik_156:1.0.0"
+}
