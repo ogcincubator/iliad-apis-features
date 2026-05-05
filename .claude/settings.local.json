@@ -15,7 +15,8 @@
       "Bash(docker run *)",
       "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(list\\(d.keys\\(\\)\\)\\)\")",
       "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\('usageGuidance',''\\)[:600]\\)\")",
-      "WebFetch(domain:api.obis.org)"
+      "WebFetch(domain:api.obis.org)",
+      "Read(//Users/piotr/repos/seadots/data_framework/**)"
     ]
   }
 }

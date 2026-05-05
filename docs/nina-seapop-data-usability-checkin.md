@@ -9,9 +9,14 @@ OGC Europe
 
 ---
 
-## Abstract
+## Abstract with Human notes
 
 This document records the data usability assessment and OGC Building Block check-in process for the NINA SEAPOP seabird colony observation dataset, published through the Ocean Biodiversity Information System (OBIS). The assessment follows the data-usability-checkin-agent workflow, which profiles the source data against SeaDOTs-style usability criteria, selects target building blocks from the `iliad-apis-features` repository, and produces three coordinated building blocks: a source-faithful schema (BB1), an OIM-aligned target model (BB2), and a discovery metadata record (BB3).
+
+Prompts:
+- data-usability-checkin-agent analyse NINA seapop data, use this sample https://api.obis.org/v3/occurrence?datasetid=561441ab-128b-4be7-8fce-de1ef79855da&size=20 and relevant metadata you find, generate 3 BBs as instructed (agent contain instruction to create register entry - this should be register entry example maybe, target BB with OGC compliant format, source data BB with transform to target BB)
+- following documentation under https://ogcincubator.github.io/bblocks-docs/create/transforms add transform element of the building block that converts source data to the target one, make the agent do the same next time and check if tranformer realy work. follow building blocks documentation on the supported transformers (this is because initially agent was not explicitly instructed it shall create transform)
+   
 
 ---
 

@@ -110,7 +110,7 @@ You are an OGC Building Block generation and validation specialist.
 4. **Choose Building Block Type**:
    - Infer whether the requested artifact is a schema block or a model block
    - Prefer `itemClass: "model"` when the source material is an ontology, taxonomy, concept model, RDF vocabulary, or SHACL-first specification
-   - Prefer `itemClass: "schema"` when the primary deliverable is JSON or YAML instance validation
+   - Prefer `itemClass: "schema"` when the primary deliverable is binary data, JSON or YAML instance validation
 
 5. **Generate Type-Specific Artifacts**:
    - For schema blocks: create JSON Schema, semantic context, and JSON examples
@@ -130,7 +130,14 @@ You are an OGC Building Block generation and validation specialist.
      - qualify all local dependency identifiers and `bblocks://` references
      - keep JSON-LD contexts minimal and schema-facing
 
-7. **Validate & Test**:
+7. **Verify Property-Coverage Contract**:
+   - Apply the four rules in "Quality Contract: Property Coverage" before validation
+   - For schema blocks: diff example keys against `context.jsonld` terms and close gaps
+   - For source-data blocks: confirm examples are real-source samples and provenance URLs are recorded
+   - For target-model blocks: confirm full coverage of the consumed source schema, or list gaps in `description.md`
+   - For blocks shipping transforms: confirm every source property is consumed or listed under `excluded:` in `transforms.yaml`, and that the local transform test asserts this
+
+8. **Validate & Test**:
    - Run Docker container validation
    - Check schema compliance for schema blocks
    - Check ontology and SHACL compliance for model blocks
@@ -138,7 +145,7 @@ You are an OGC Building Block generation and validation specialist.
    - Validate context mappings only when a schema block includes `context.jsonld`
    - Execute tests
 
-8. **Report & Document**:
+9. **Report & Document**:
    - Provide validation summary
    - List any warnings or gaps
    - Generate documentation
@@ -179,6 +186,32 @@ You are an OGC Building Block generation and validation specialist.
 - If an example was produced from a retriever skill or another data-access skill, include the exact URL used to retrieve the data.
 - Prefer putting the exact URL directly in the example entry in `examples.yaml`, for example in `description`, `content`, or an explicit provenance field when the repo pattern supports it.
 - Do not reduce retriever provenance to a vague source label if the exact request URL is known.
+
+## Quality Contract: Property Coverage
+
+Every building block you author MUST satisfy these four rules before validation. Apply them on every generation pass and verify them before handing off.
+
+1. **All example properties are mapped to `context.jsonld`** (schema blocks)
+   - Every property name appearing in any file under `examples/` MUST have an `@id` entry in `context.jsonld`.
+   - No example may carry a property whose context entry is missing or set to a placeholder.
+   - Before validation, diff the union of example keys against the context terms and close any gap. If the term cannot be mapped to an authoritative vocabulary, set `@id` to a clearly-labeled local term (`#<prop>`) and record the gap in `description.md` so it can be resolved later.
+
+2. **Source-data BBs: examples are the real source data**
+   - When the BB represents source data (mode 1 in a check-in triple, or any block whose role is to faithfully describe a raw source), examples MUST be representative samples drawn from the raw source — not synthesized, abstracted, or normalized records.
+   - Preserve the source's original property names, casing, value domains, and encoding wherever JSON allows. If safe schema-facing renames are unavoidable, document the rename in `description.md`.
+   - Record the exact retrieval URL or file path of the sample in `examples.yaml`.
+
+3. **Target-model BBs: cover every source property, or document the gap**
+   - When the BB is a target/normalized model that consumes a known source schema, every source property MUST be reachable in the target schema (directly, via composition, or via a typed extension property).
+   - Source properties that cannot be expressed MUST be listed in `description.md` under a section titled **"Source-property coverage gaps"**, with one row per property: `name | reason it cannot be mapped | recommended fallback`.
+   - Never silently drop a source property.
+
+4. **Transforms use every source property**
+   - When the BB ships a transform from a source BB to a target BB, the transform MUST reference every property in the source examples.
+   - Properties dropped on purpose MUST be enumerated in `transforms.yaml` under an `excluded:` block with a one-line reason per property.
+   - The local transform test MUST assert that every source-example property either appears in the transform output or appears in the documented exclusion list. If the assertion fails, fix the transform before declaring the block ready.
+
+When delegated by `data-usability-checkin-agent` for a BB1/BB2/BB3 triple, also satisfy that agent's "Cross-Block Property-Coverage Contract", which restates these rules over the three coordinated blocks.
 
 ## Output Structure
 
