@@ -1,13 +1,15 @@
-@prefix ses: <http://https://project-seadots-definition-server.lab.dive.edito.eu/ds/ses#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
-@prefix indo: <https://project-seadots-definition-server.lab.dive.edito.eu/ds/indicator/obs/> .
-@prefix ind: <https://project-seadots-definition-server.lab.dive.edito.eu/ds/indicator/> .
-@prefix inda: <https://project-seadots-definition-server.lab.dive.edito.eu/ds/indicator/activity> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix indo: <https://w3id.org/indicators/marine/obs/> .
+@prefix ind: <https://w3id.org/indicators/marine/> .
+@prefix inda: <https://w3id.org/indicators/marine/activity> .
+@prefix indrel: <https://w3id.org/indicators/marine/relationship/> .
+@prefix prop-rel: <https://w3id.org/ogc/hosted/seadots/prop-rel/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -30,7 +32,7 @@ ind:indicators-scheme a skos:ConceptScheme ;
     skos:prefLabel "SEADOTS Indicator Scheme"@en ;
     skos:definition "A concept scheme for SEADOTS indicator concepts and observed properties."@en ;
     # --- TOP CONCEPTS (added for VocPrez/Prez UI visibility) ---
-    skos:hasTopConcept ind:cdi , 
+    skos:hasTopConcept indo:cdi , 
                        indo:rainfall-anomaly , 
                        indo:soil-moisture-anomaly , 
                        indo:vegetation-condition-anomaly ,
@@ -42,7 +44,7 @@ ind:indicators-scheme a skos:ConceptScheme ;
                        indo:bird-tourism .
 
 # Instances
-ind:cdi a prov:Entity, skos:Concept ;
+indo:cdi a prov:Entity, skos:Concept ;
     rdfs:label "Composite Drought Indicator" ;
     skos:prefLabel "Composite Drought Indicator"@en ;
     skos:inScheme ind:indicators-scheme ;
@@ -107,102 +109,119 @@ indo:fisheries-production a sosa:observedProperty, skos:Concept ;
 ind:ind-rel-scheme a skos:ConceptScheme ;
     dcterms:isPartOf ind:catalog ; # Backlink for discovery
     skos:prefLabel "SEADOTS Indicator relationships Scheme"@en ;
-    skos:definition "A concept scheme for SEADOTS relationships between indicator concepts and observed properties."@en ;
+    skos:definition "A concept scheme for SEADOTS relationships between indicator concepts and observed properties, using the SeaDOTs PropertyRelationship building block."@en ;
+    rdfs:seeAlso <https://defs-hosted.opengis.net/prez-hosted/catalogs/bblocksseadots> ;
     # --- TOP CONCEPTS (added for VocPrez/Prez UI visibility) ---
-    skos:hasTopConcept ses:Edge ,
-                       ses:PositiveInfluence ,
-                       ses:NegativeInfluence ,
-                       ses:FeedbackInfluence ,
-                       ses:weight .
-# Properties
+    skos:hasTopConcept prop-rel:PropertyRelationship ,
+                       prop-rel:fromProperty ,
+                       prop-rel:toProperty ,
+                       prop-rel:hasWeight ,
+                       ind:crossImpact-v1 ,
+                       indrel:edge1 ,
+                       indrel:edge2 ,
+                       indrel:edge3 ,
+                       indrel:edge4 ,
+                       indrel:edge5 ,
+                       indrel:edge6 ,
+                       indrel:edge7 ,
+                       indrel:edge8 .
 
-ses:hasEdge a rdf:Property ;
-    rdfs:domain sosa:observedProperty ;
-    rdfs:range ses:Edge ;
-    skos:prefLabel "In relationship"@en ;
+# SeaDOTs property relationship model.
+# Canonical model: https://defs-hosted.opengis.net/prez-hosted/catalogs/bblocksseadots
+
+prop-rel:PropertyRelationship a skos:Concept ;
+    skos:prefLabel "Property relationship"@en ;
+    skos:definition "Directed, weighted relationship between two observed properties or indicators."@en ;
+    skos:inScheme ind:ind-rel-scheme ;
+    rdfs:isDefinedBy <https://defs-hosted.opengis.net/prez-hosted/catalogs/bblocksseadots> .
+
+prop-rel:fromProperty a rdf:Property, skos:Concept ;
+    skos:prefLabel "from property"@en ;
+    skos:definition "Source observed property in a SeaDOTs property relationship."@en ;
+    skos:inScheme ind:ind-rel-scheme ;
+    rdfs:isDefinedBy <https://defs-hosted.opengis.net/prez-hosted/catalogs/bblocksseadots> .
+
+prop-rel:toProperty a rdf:Property, skos:Concept ;
+    skos:prefLabel "to property"@en ;
+    skos:definition "Target observed property in a SeaDOTs property relationship."@en ;
+    skos:inScheme ind:ind-rel-scheme ;
+    rdfs:isDefinedBy <https://defs-hosted.opengis.net/prez-hosted/catalogs/bblocksseadots> .
+
+prop-rel:hasWeight a rdf:Property, skos:Concept ;
+    skos:prefLabel "has weight"@en ;
+    skos:definition "Quantified strength of a SeaDOTs property relationship, expressed as a QUDT numeric value."@en ;
+    skos:inScheme ind:ind-rel-scheme ;
+    rdfs:isDefinedBy <https://defs-hosted.opengis.net/prez-hosted/catalogs/bblocksseadots> .
+
+ind:crossImpact-v1 a prov:Agent, skos:Concept ;
+    rdfs:label "Cross-impact analysis model v1"@en ;
+    skos:prefLabel "Cross-impact analysis model v1"@en ;
+    skos:definition "Model that generated the Utsira indicator relationship weights."@en ;
+    dcterms:identifier "crossImpact-v1" ;
     skos:inScheme ind:ind-rel-scheme .
 
-ses:Edge a rdfs:Class, skos:Concept ;
-    rdfs:label "Edge" ;
-    prov:wasGeneratedBy inda:edge-computation ;
-    rdfs:subClassOf prov:Entity ;
-    rdfs:comment "A reified, directed, weighted influence between observed variables." ;
-    skos:prefLabel "Relationship"@en ;
-    skos:inScheme ind:ind-rel-scheme .
+# Property relationships
 
+indrel:edge1 a prop-rel:PropertyRelationship, skos:Concept ;
+    skos:prefLabel "Fisheries production to number of turbines"@en ;
+    skos:inScheme ind:ind-rel-scheme ;
+    prop-rel:fromProperty indo:fisheries-production ;
+    prop-rel:toProperty indo:number-of-turbines ;
+    prop-rel:hasWeight [ qudt:numericValue 0.5 ] ;
+    prov:wasAttributedTo ind:crossImpact-v1 .
 
-ses:influenceType a rdf:Property ;
-    rdfs:domain ses:Edge ;
-    rdfs:range skos:Concept .
+indrel:edge2 a prop-rel:PropertyRelationship, skos:Concept ;
+    skos:prefLabel "Fisheries production to area use by wind park"@en ;
+    skos:inScheme ind:ind-rel-scheme ;
+    prop-rel:fromProperty indo:fisheries-production ;
+    prop-rel:toProperty indo:area-use-by-wind-park ;
+    prop-rel:hasWeight [ qudt:numericValue -0.5 ] ;
+    prov:wasAttributedTo ind:crossImpact-v1 .
 
-ses:PositiveInfluence a skos:Concept ;
-    skos:prefLabel "Positive Influence"@en ;
-    skos:inScheme ind:ind-rel-scheme .
+indrel:edge3 a prop-rel:PropertyRelationship, skos:Concept ;
+    skos:prefLabel "Fisheries production to number of jobs"@en ;
+    skos:inScheme ind:ind-rel-scheme ;
+    prop-rel:fromProperty indo:fisheries-production ;
+    prop-rel:toProperty indo:number-of-jobs ;
+    prop-rel:hasWeight [ qudt:numericValue 1 ] ;
+    prov:wasAttributedTo ind:crossImpact-v1 .
 
-ses:NegativeInfluence a skos:Concept ;
-    skos:prefLabel "Negative Influence"@en ;
-    skos:inScheme ind:ind-rel-scheme .
+indrel:edge4 a prop-rel:PropertyRelationship, skos:Concept ;
+    skos:prefLabel "Number of turbines to area use by wind park"@en ;
+    skos:inScheme ind:ind-rel-scheme ;
+    prop-rel:fromProperty indo:number-of-turbines ;
+    prop-rel:toProperty indo:area-use-by-wind-park ;
+    prop-rel:hasWeight [ qudt:numericValue 0.49 ] ;
+    prov:wasAttributedTo ind:crossImpact-v1 .
 
-ses:FeedbackInfluence a skos:Concept ;
-    skos:prefLabel "Feedback Influence"@en ;
-    skos:inScheme ind:ind-rel-scheme .
+indrel:edge5 a prop-rel:PropertyRelationship, skos:Concept ;
+    skos:prefLabel "Area use by wind park to fisheries production"@en ;
+    skos:inScheme ind:ind-rel-scheme ;
+    prop-rel:fromProperty indo:area-use-by-wind-park ;
+    prop-rel:toProperty indo:fisheries-production ;
+    prop-rel:hasWeight [ qudt:numericValue 1 ] ;
+    prov:wasAttributedTo ind:crossImpact-v1 .
 
-ses:from a rdf:Property ;
-    rdfs:domain ses:Edge ;
-    rdfs:range sosa:observedProperty ;
-    rdfs:subPropertyOf prov:wasInfluencedBy .
+indrel:edge6 a prop-rel:PropertyRelationship, skos:Concept ;
+    skos:prefLabel "Number of jobs to bird tourism"@en ;
+    skos:inScheme ind:ind-rel-scheme ;
+    prop-rel:fromProperty indo:number-of-jobs ;
+    prop-rel:toProperty indo:bird-tourism ;
+    prop-rel:hasWeight [ qudt:numericValue 0.52 ] ;
+    prov:wasAttributedTo ind:crossImpact-v1 .
 
-ses:to a rdf:Property ;
-    rdfs:domain ses:Edge ;
-    rdfs:range sosa:observedProperty ;
-    rdfs:subPropertyOf prov:influenced .
+indrel:edge7 a prop-rel:PropertyRelationship, skos:Concept ;
+    skos:prefLabel "Bird tourism to number of jobs"@en ;
+    skos:inScheme ind:ind-rel-scheme ;
+    prop-rel:fromProperty indo:bird-tourism ;
+    prop-rel:toProperty indo:number-of-jobs ;
+    prop-rel:hasWeight [ qudt:numericValue 0.7 ] ;
+    prov:wasAttributedTo ind:crossImpact-v1 .
 
-ses:weight a rdf:Property, skos:Concept ;
-    rdfs:comment "Signed influence strength (dimensionless); positive = reinforcing, negative = inhibiting." ;
-    rdfs:domain ses:Edge ;
-    rdfs:range xsd:decimal ;
-    skos:prefLabel "Weight"@en ;
-    skos:inScheme ind:ind-rel-scheme .
-
-
-
-# Edges
-ses:edge1 a ses:Edge ;
-    ses:from indo:fisheries-production ;
-    ses:to indo:number-of-turbines ;
-    ses:weight 0.5 .
-
-ses:edge2 a ses:Edge ;
-    ses:from indo:fisheries-production ;
-    ses:to indo:area-use-by-wind-park ;
-    ses:weight -0.5 .
-
-ses:edge3 a ses:Edge ;
-    ses:from indo:fisheries-production ;
-    ses:to indo:number-of-jobs ;
-    ses:weight 1 .
-
-ses:edge4 a ses:Edge ;
-    ses:from indo:number-of-turbines ;
-    ses:to indo:area-use-by-wind-park ;
-    ses:weight 0.49 .
-
-ses:edge5 a ses:Edge ;
-    ses:from indo:area-use-by-wind-park ;
-    ses:to indo:fisheries-production ;
-    ses:weight 1 .
-
-ses:edge6 a ses:Edge ;
-    ses:from indo:number-of-jobs ;
-    ses:to indo:bird-tourism ;
-    ses:weight 0.52 .
-
-ses:edge7 a ses:Edge ;
-    ses:from indo:bird-tourism ;
-    ses:to indo:number-of-jobs ;
-    ses:weight 0.7 .
-
-ses:edge8 a ses:Edge ;
-    ses:from indo:bird-tourism ;
-    ses:to indo:bird-tourism ;
-    ses:weight 1 .
+indrel:edge8 a prop-rel:PropertyRelationship, skos:Concept ;
+    skos:prefLabel "Bird tourism self-reinforcing relationship"@en ;
+    skos:inScheme ind:ind-rel-scheme ;
+    prop-rel:fromProperty indo:bird-tourism ;
+    prop-rel:toProperty indo:bird-tourism ;
+    prop-rel:hasWeight [ qudt:numericValue 1 ] ;
+    prov:wasAttributedTo ind:crossImpact-v1 .
