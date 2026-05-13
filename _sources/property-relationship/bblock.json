@@ -1,0 +1,37 @@
+{
+  "name": "SeaDOTs Property Relationship",
+  "abstract": "Schema profile for a directed, weighted relationship between two observed properties or indicators. Used by SeaDOTs impact-assessment models to encode cross-impact links, evidence, provenance, and human-readable explanations.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-05-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2026-05-05",
+  "dependsOn": [
+    "ogc.hosted.iliad.api.features.oim-variables"
+  ],
+  "ldContext": "context.jsonld",
+  "tags": [
+    "seadots",
+    "indicator",
+    "relationship",
+    "cross-impact",
+    "provenance"
+  ],
+  "sources": [
+    {
+      "title": "SeaDOTs interoperability framework",
+      "link": "https://github.com/ILIAD-ocean-twin/seadots"
+    },
+    {
+      "title": "W3C PROV-O",
+      "link": "https://www.w3.org/TR/prov-o/"
+    },
+    {
+      "title": "QUDT",
+      "link": "https://www.qudt.org/"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable"
+}

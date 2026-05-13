@@ -1,0 +1,197 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: SeaDOTs SES Impact Assessment
+description: >
+  Socio-ecological-system impact-assessment case. The schema keeps a traceable
+  path from model to indicators, from indicators to quality specifications, and
+  from quality specifications to input and output data products.
+type: object
+required:
+  - id
+  - type
+  - name
+  - assessmentModel
+  - indicators
+  - proposedInputData
+  - proposedOutputData
+properties:
+  "@context":
+    description: JSON-LD context when embedded.
+  id:
+    type: string
+    format: uri-reference
+  type:
+    oneOf:
+      - type: string
+      - type: array
+        items:
+          type: string
+  name:
+    type: string
+  description:
+    type: string
+  assessmentModel:
+    type: string
+    format: uri-reference
+  informsAssessment:
+    type: string
+    format: uri-reference
+  buildingBlocks:
+    type: array
+    items:
+      type: string
+      format: uri-reference
+  proposedBuildingBlocks:
+    type: array
+    items:
+      $ref: "#/$defs/BuildingBlockProposal"
+  extent:
+    type: object
+    additionalProperties: true
+  indicators:
+    type: array
+    minItems: 1
+    items:
+      $ref: "#/$defs/Indicator"
+  qualitySpecifications:
+    type: array
+    items:
+      type: object
+      additionalProperties: true
+  odd:
+    type: object
+    additionalProperties: true
+  proposedInputData:
+    type: array
+    minItems: 1
+    items:
+      $ref: "#/$defs/DataProductAssessment"
+  proposedOutputData:
+    type: array
+    minItems: 1
+    items:
+      $ref: "#/$defs/DataProductAssessment"
+  experiments:
+    type: array
+    items:
+      type: object
+      additionalProperties: true
+  relationships:
+    type: array
+    items:
+      type: object
+      required:
+        - fromProperty
+        - toProperty
+        - weight
+      additionalProperties: true
+additionalProperties: true
+
+$defs:
+  BuildingBlockProposal:
+    type: object
+    required:
+      - block
+      - role
+    properties:
+      block:
+        type: string
+        format: uri-reference
+      name:
+        type: string
+      role:
+        type: string
+      implementsPath:
+        type: string
+      helpsBy:
+        type: string
+    additionalProperties: true
+
+  Indicator:
+    type: object
+    required:
+      - id
+      - indicator
+      - qualitySpecification
+    properties:
+      id:
+        type: string
+        format: uri-reference
+      type:
+        oneOf:
+          - type: string
+          - type: array
+            items:
+              type: string
+      indicator:
+        type: string
+        format: uri-reference
+      name:
+        type: string
+      description:
+        type: string
+      geospatialRequirements:
+        type: object
+        additionalProperties: true
+      qualitySpecification:
+        oneOf:
+          - type: object
+            additionalProperties: true
+          - type: string
+            format: uri-reference
+      qualitySpecificationRef:
+        type: string
+        format: uri-reference
+      oimVariableLayer:
+        type: array
+        items:
+          type: object
+          additionalProperties: true
+    additionalProperties: true
+
+  DataProductAssessment:
+    type: object
+    required:
+      - id
+      - name
+      - dataRole
+      - assessment
+    properties:
+      id:
+        type: string
+        format: uri-reference
+      type:
+        oneOf:
+          - type: string
+          - type: array
+            items:
+              type: string
+      inventoryRow:
+        oneOf:
+          - type: integer
+          - type: string
+      sourceInventory:
+        type: string
+        format: uri-reference
+      name:
+        type: string
+      dataRole:
+        type: string
+      description:
+        type: string
+      supportsIndicators:
+        type: array
+        items:
+          type: string
+          format: uri-reference
+      recommendedBuildingBlocks:
+        type: array
+        items:
+          type: string
+          format: uri-reference
+      assessment:
+        type: string
+      suitability:
+        type: string
+      limitations:
+        type: string
+    additionalProperties: true

@@ -1,0 +1,86 @@
+{
+  "id": "https://example.org/reference-cases/windfloat-atlantic/norwegian-floating-wind-biodiversity-reference-impact-assessment",
+  "type": ["dcat:Dataset", "ses:ImpactAssessment", "prov:Entity"],
+  "name": "WindFloat Atlantic biodiversity reference case for Norwegian floating-wind impact assessment",
+  "description": "Small example showing the model-to-indicator-to-quality path and a proposed input/output data assessment.",
+  "assessmentModel": "https://example.org/reference-cases/windfloat-atlantic/floating-wind-biodiversity-impact-model-v1",
+  "informsAssessment": "https://example.org/norwegian-ses/instances/utsira-impact-assessment",
+  "buildingBlocks": [
+    "bblocks://ogc.hosted.iliad.api.features.ses-impact-assessment",
+    "bblocks://ogc.hosted.seadots.odd-protocol",
+    "bblocks://ogc.hosted.iliad.api.features.oim-variables",
+    "bblocks://ogc.hosted.iliad.api.features.indicator-quality-requirement",
+    "bblocks://ogc.hosted.iliad.api.features.property-relationship"
+  ],
+  "proposedBuildingBlocks": [
+    {
+      "block": "bblocks://ogc.hosted.iliad.api.features.indicator-quality-requirement",
+      "name": "Indicator quality requirement",
+      "role": "Data-quality requirement profile for each indicator",
+      "implementsPath": "indicators[].qualitySpecification -> proposedInputData[]"
+    }
+  ],
+  "indicators": [
+    {
+      "id": "https://example.org/reference-cases/windfloat-atlantic/indicator/fish-abundance",
+      "type": ["sosa:ObservableProperty"],
+      "indicator": "https://id3.seadots.eu/indicator/obs/floating-wind-fish-abundance",
+      "name": "Fish abundance around floating infrastructure",
+      "qualitySpecification": {
+        "id": "https://example.org/reference-cases/windfloat-atlantic/quality/fish-abundance",
+        "type": "dqv:QualityMeasurement",
+        "thresholds": [
+          "survey method recorded",
+          "observation effort recorded",
+          "control/reference site stated"
+        ]
+      },
+      "oimVariableLayer": [
+        {
+          "id": "https://example.org/reference-cases/windfloat-atlantic/variables/fish-abundance-index",
+          "type": "oim:Variable",
+          "sosa:observedProperty": "https://id3.seadots.eu/indicator/obs/floating-wind-fish-abundance"
+        }
+      ]
+    }
+  ],
+  "proposedInputData": [
+    {
+      "id": "https://example.org/reference-cases/windfloat-atlantic/inventory-input/obis",
+      "type": ["dcat:Dataset", "prov:Entity"],
+      "inventoryRow": 22,
+      "name": "OBIS marine biodiversity occurrence data",
+      "dataRole": "marine species occurrence input",
+      "supportsIndicators": [
+        "https://id3.seadots.eu/indicator/obs/floating-wind-fish-abundance"
+      ],
+      "recommendedBuildingBlocks": [
+        "bblocks://ogc.hosted.iliad.api.features.oim-bio-tdwg",
+        "bblocks://ogc.hosted.iliad.api.features.oim-obs"
+      ],
+      "assessment": "Useful marine-focused complement to GBIF for offshore biodiversity baselines, but effort metadata are needed before abundance use.",
+      "suitability": "medium"
+    }
+  ],
+  "proposedOutputData": [
+    {
+      "id": "https://example.org/reference-cases/windfloat-atlantic/outputs/ecological-impact-score",
+      "type": ["dcat:Dataset", "prov:Entity"],
+      "name": "Ecological impact score and uncertainty",
+      "dataRole": "decision-support output",
+      "assessment": "Final synthesis product, meaningful only after quality gates and relationship confidence checks have run."
+    }
+  ],
+  "relationships": [
+    {
+      "id": "https://example.org/reference-cases/windfloat-atlantic/relationship/refuge-to-fish-abundance",
+      "type": "PropertyRelationship",
+      "fromProperty": "https://id3.seadots.eu/indicator/obs/floating-wind-reef-refuge-effect",
+      "toProperty": "https://id3.seadots.eu/indicator/obs/floating-wind-fish-abundance",
+      "weight": {
+        "value": 0.75
+      },
+      "explanation": "Refuge and feeding opportunities may increase local fish abundance where disturbance is reduced."
+    }
+  ]
+}

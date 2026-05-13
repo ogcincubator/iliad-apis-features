@@ -1,0 +1,47 @@
+@prefix :     <https://w3id.org/iliad/oim-bio-tdwg#> .
+@prefix oim:  <https://w3id.org/iliad/oim/> .
+@prefix odd:  <https://w3id.org/iliad/odd#> .
+@prefix tc:   <http://rs.tdwg.org/ontology/voc/TaxonConcept#> .
+@prefix dwc:  <http://rs.tdwg.org/dwc/terms/> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix worms:<urn:lsid:marinespecies.org:taxname:> .
+
+# ── TaxonGroup alignment ──────────────────────────────────────────
+# Bridges the local ODD entity class odd:TaxonGroup, used as the
+# `indexedBy` target for taxon-indexed equation symbols (e.g. AF_i,
+# D_{pre,i}), to established TDWG and OBO terms so downstream tools
+# (OBIS, GBIF, WoRMS, OLS-aware reasoners) can interpret it directly.
+
+odd:TaxonGroup
+    a owl:Class, skos:Concept ;
+    skos:prefLabel "Taxon group"@en ;
+    skos:definition "Entity class whose instances are taxonomic concepts iterated over by an equation index. One TaxonConcept per index value."@en ;
+    rdfs:subClassOf tc:TaxonConcept ;
+    skos:exactMatch tc:TaxonConcept ;          # canonical: concept-level semantics (TDWG TCS)
+    skos:closeMatch dwc:Taxon ;                 # Darwin Core record class — for OBIS/GBIF/WoRMS exchange
+    skos:closeMatch obo:PCO_0000017 ;           # PCO "species as a collection of organisms" — material reading
+    skos:scopeNote "Per-taxon bindings carry a Rainbow IRI in `bindings[].variable`. The human-readable `indexValue` (e.g. \"Mytilus edulis\") is a dwc:scientificName. The optional `indexValueIri` (recommended) is a WoRMS Aphia LSID such as urn:lsid:marinespecies.org:taxname:140480, providing a machine-resolvable taxon identifier independent of name-string variation."@en ;
+    rdfs:seeAlso <http://www.marinespecies.org/> ,
+                 <https://obis.org/> ,
+                 <https://www.gbif.org/> .
+
+# Convenience local-namespace alias for downstream consumers that prefer the
+# oim-bio-tdwg namespace.
+:TaxonGroup
+    a owl:Class, skos:Concept ;
+    owl:sameAs odd:TaxonGroup ;
+    skos:prefLabel "Taxon group"@en .
+
+# ── Encoded `indexValue` / `indexValueIri` semantics ──────────────
+# In the equation-property-relationship binding shape (seadots),
+#   bindings[].indexValue     ≈ dwc:scientificName
+#   bindings[].indexValueIri  ≈ dwc:taxonConceptID (preferred) or dwc:taxonID
+# These mappings are advisory; the equation-property-relationship schema
+# stays the authority for field-level structure.
+
+odd:bindingIndexValue       skos:closeMatch dwc:scientificName .
+odd:bindingIndexValueIri    skos:closeMatch dwc:taxonConceptID ;
+                            skos:relatedMatch dwc:taxonID .

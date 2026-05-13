@@ -1,0 +1,21 @@
+{
+  "id": "https://example.org/reference-cases/windfloat-atlantic/relationship/refuge-to-fish-abundance",
+  "type": "PropertyRelationship",
+  "name": "Reef/refuge effect to fish abundance",
+  "fromProperty": "https://id3.seadots.eu/indicator/obs/floating-wind-reef-refuge-effect",
+  "toProperty": "https://id3.seadots.eu/indicator/obs/floating-wind-fish-abundance",
+  "weight": {
+    "value": 0.75
+  },
+  "explanation": "Refuge and feeding opportunities may increase local fish abundance where disturbance is reduced.",
+  "evidence": "https://www.windfloat-atlantic.com/",
+  "model": {
+    "id": "quality-aware-cross-impact-v1",
+    "uri": "https://example.org/seadots/models/quality-aware-cross-impact-v1"
+  },
+  "experiment": {
+    "id": "ecological-impact-synthesis",
+    "uri": "https://example.org/reference-cases/windfloat-atlantic/experiment/ecological-impact-synthesis",
+    "start": "2026-06-15T00:00:00Z"
+  }
+}

@@ -1,0 +1,96 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: SeaDOTs Indicator Quality Requirement
+description: >
+  Requirement profile attached to an indicator. Captures spatial support,
+  temporal support, method metadata, uncertainty, controlled-vocabulary needs,
+  access requirements, and pass/fail thresholds.
+type: object
+required:
+  - id
+  - type
+  - indicator
+  - thresholds
+properties:
+  id:
+    type: string
+    format: uri-reference
+  type:
+    oneOf:
+      - type: string
+      - type: array
+        items:
+          type: string
+  name:
+    type: string
+  indicator:
+    type: string
+    format: uri-reference
+  description:
+    type: string
+  geospatialRequirements:
+    type: object
+    properties:
+      requiredGeometry:
+        type: string
+      crs:
+        type: string
+        format: uri-reference
+      bbox:
+        type: array
+        minItems: 4
+        items:
+          type: number
+      minimumSpatialResolution:
+        type: string
+      requiredSpatialRelations:
+        type: array
+        items:
+          type: string
+    additionalProperties: true
+  temporalRequirements:
+    type: object
+    properties:
+      minimumTemporalCoverage:
+        type: string
+      minimumTemporalResolution:
+        type: string
+      requiredBaseline:
+        type: string
+    additionalProperties: true
+  methodRequirements:
+    type: array
+    items:
+      type: string
+  uncertaintyRequirements:
+    type: array
+    items:
+      type: string
+  vocabularyRequirements:
+    type: array
+    items:
+      type: string
+      format: uri-reference
+  accessRequirements:
+    type: array
+    items:
+      type: string
+  thresholds:
+    type: array
+    items:
+      type: string
+  readiness:
+    type: string
+    enum:
+      - pass
+      - conditional
+      - planned
+      - blocked
+  evidence:
+    oneOf:
+      - type: string
+        format: uri-reference
+      - type: array
+        items:
+          type: string
+          format: uri-reference
+additionalProperties: true

@@ -1,0 +1,34 @@
+{
+  "name": "SeaDOTs Indicator Quality Requirement",
+  "abstract": "Schema profile for declaring the data-quality and geospatial requirements that must be satisfied before an indicator can be used in a SeaDOTs impact assessment.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-05-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2026-05-05",
+  "dependsOn": [
+    "ogc.hosted.iliad.api.features.oim-variables"
+  ],
+  "ldContext": "context.jsonld",
+  "tags": [
+    "seadots",
+    "indicator",
+    "quality",
+    "dqv",
+    "requirements",
+    "geospatial"
+  ],
+  "sources": [
+    {
+      "title": "W3C Data Quality Vocabulary",
+      "link": "https://www.w3.org/TR/vocab-dqv/"
+    },
+    {
+      "title": "OGC GeoSPARQL",
+      "link": "https://www.ogc.org/standard/geosparql/"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable"
+}

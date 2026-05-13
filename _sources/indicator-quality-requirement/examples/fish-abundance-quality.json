@@ -1,0 +1,34 @@
+{
+  "id": "https://example.org/reference-cases/windfloat-atlantic/quality/fish-abundance",
+  "type": "dqv:QualityMeasurement",
+  "indicator": "https://id3.seadots.eu/indicator/obs/floating-wind-fish-abundance",
+  "name": "Fish abundance quality requirement",
+  "description": "Quality gate for using fish abundance as an ecological-impact indicator in a floating-wind assessment.",
+  "geospatialRequirements": {
+    "requiredGeometry": "Survey transects or station points, with distance to floater, mooring line and exclusion-zone boundary.",
+    "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+    "requiredSpatialRelations": [
+      "distance to project infrastructure",
+      "inside or outside project/control area"
+    ]
+  },
+  "temporalRequirements": {
+    "minimumTemporalCoverage": "multi-year operation series or before/after comparison",
+    "requiredBaseline": "control or reference site"
+  },
+  "methodRequirements": [
+    "survey method recorded",
+    "observation effort recorded",
+    "gear or method bias documented"
+  ],
+  "uncertaintyRequirements": [
+    "effect-size uncertainty stated"
+  ],
+  "thresholds": [
+    "method recorded",
+    "observation effort recorded",
+    "control/reference site stated"
+  ],
+  "readiness": "conditional",
+  "evidence": "https://obis.org/data/access/"
+}

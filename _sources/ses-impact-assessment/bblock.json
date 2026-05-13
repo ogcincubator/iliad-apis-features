@@ -1,0 +1,41 @@
+{
+  "name": "SeaDOTs SES Impact Assessment",
+  "abstract": "Schema profile for an impact-assessment case built around a socio-ecological-system model. It binds model documentation, indicators, quality specifications, OIM variables, proposed input and output datasets, experiments, and predefined indicator relationships.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-05-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "iliad-apis",
+  "version": "0.1",
+  "dateOfLastChange": "2026-05-05",
+  "dependsOn": [
+    "ogc.hosted.seadots.odd-protocol",
+    "ogc.hosted.iliad.api.features.oim-variables",
+    "ogc.hosted.iliad.api.features.indicator-quality-requirement",
+    "ogc.hosted.iliad.api.features.property-relationship"
+  ],
+  "ldContext": "context.jsonld",
+  "tags": [
+    "seadots",
+    "ses",
+    "impact-assessment",
+    "indicator",
+    "quality",
+    "offshore-wind"
+  ],
+  "sources": [
+    {
+      "title": "SeaDOTs WindFloat Atlantic reference case",
+      "link": "https://github.com/ILIAD-ocean-twin/seadots"
+    },
+    {
+      "title": "Ostrom SES framework",
+      "link": "https://doi.org/10.1126/science.1172133"
+    },
+    {
+      "title": "ODD Protocol",
+      "link": "https://doi.org/10.18564/jasss.4259"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable"
+}

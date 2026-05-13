@@ -1,0 +1,43 @@
+{
+  "@context": {
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "dct": "http://purl.org/dc/terms/",
+    "schema": "https://schema.org/",
+    "geojson": "https://purl.org/geojson/vocab#",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "id": "@id",
+    "type": "@type",
+    "name": "schema:name",
+    "description": "schema:description",
+    "indicator": { "@id": "sosa:observedProperty", "@type": "@id" },
+    "geospatialRequirements": {
+      "@id": "geosparql:hasGeometry",
+      "@context": {
+        "requiredGeometry": "schema:additionalType",
+        "crs": { "@id": "dct:conformsTo", "@type": "@id" },
+        "bbox": { "@id": "geojson:bbox", "@container": "@list" },
+        "minimumSpatialResolution": "schema:spatialResolution",
+        "requiredSpatialRelations": { "@id": "schema:measurementTechnique", "@container": "@set" }
+      }
+    },
+    "temporalRequirements": {
+      "@id": "dct:temporal",
+      "@context": {
+        "minimumTemporalCoverage": "schema:temporalCoverage",
+        "minimumTemporalResolution": "schema:temporalCoverage",
+        "requiredBaseline": "schema:measurementTechnique"
+      }
+    },
+    "methodRequirements": { "@id": "schema:measurementTechnique", "@container": "@set" },
+    "uncertaintyRequirements": { "@id": "dqv:hasQualityAnnotation", "@container": "@set" },
+    "vocabularyRequirements": { "@id": "dct:conformsTo", "@container": "@set", "@type": "@id" },
+    "accessRequirements": { "@id": "schema:conditionsOfAccess", "@container": "@set" },
+    "thresholds": { "@id": "schema:threshold", "@container": "@set" },
+    "readiness": "schema:reviewRating",
+    "evidence": { "@id": "prov:wasDerivedFrom", "@type": "@id", "@container": "@set" }
+  }
+}

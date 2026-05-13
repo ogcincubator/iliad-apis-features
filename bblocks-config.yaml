@@ -18,6 +18,7 @@ imports:
   - https://ogcincubator.github.io/bblocks-sta/
   - https://ogcincubator.github.io/bblocks-stac/
   - https://ogcincubator.github.io/bblocks-openscience/
+  - https://ogcincubator.github.io/bblocks-seadots/
 
 sparql:
   push: http://defs-hosted.opengis.net/fuseki-hosted/data

@@ -1,0 +1,82 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: SeaDOTs Property Relationship
+description: >
+  Directed, weighted relationship between two observed properties or indicators.
+  The relationship is evidence-bearing: every link can carry a weight, model,
+  experiment, evidence URI, and explanation.
+type: object
+required:
+  - id
+  - type
+  - fromProperty
+  - toProperty
+  - weight
+properties:
+  id:
+    type: string
+    format: uri-reference
+  type:
+    oneOf:
+      - type: string
+        const: PropertyRelationship
+      - type: array
+        contains:
+          const: PropertyRelationship
+  name:
+    type: string
+  fromProperty:
+    type: string
+    format: uri-reference
+  toProperty:
+    type: string
+    format: uri-reference
+  weight:
+    type: object
+    required:
+      - value
+    properties:
+      value:
+        type: number
+        minimum: -1
+        maximum: 1
+      unit:
+        type: string
+        default: "dimensionless"
+    additionalProperties: true
+  explanation:
+    type: string
+  evidence:
+    oneOf:
+      - type: string
+        format: uri-reference
+      - type: array
+        items:
+          type: string
+          format: uri-reference
+  model:
+    type: object
+    properties:
+      id:
+        type: string
+      uri:
+        type: string
+        format: uri-reference
+      name:
+        type: string
+    additionalProperties: true
+  experiment:
+    type: object
+    properties:
+      id:
+        type: string
+      uri:
+        type: string
+        format: uri-reference
+      start:
+        type: string
+        format: date-time
+      end:
+        type: string
+        format: date-time
+    additionalProperties: true
+additionalProperties: true
