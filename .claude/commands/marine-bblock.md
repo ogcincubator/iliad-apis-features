@@ -11,6 +11,10 @@ where sources are authoritative marine databases (HELCOM, EMODnet, ICES, OBIS, C
 
 ## Two-Agent Workflow
 
+### Phase 0: Catalog pre-check (`bblock-catalog`) — mandatory
+
+Before any discovery or generation, run the `bblock-catalog` skill with a free-text query for `<theme>` and category filters drawn from the expected data shape (`vector` for occurrence/observation data, `gridded` for environmental fields, `metadata` for catalogue outputs, `vocabulary` for indicator concepts). The catalog inspects `_sources/` and every register in `bblocks-config.yaml` imports (geodcat-ogcapi-records, ogcapi-sosa, cross-domain-model, bblocks-sta, bblocks-stac, bblocks-openscience, bblocks-seadots). If a matching block already exists, **stop**: show the match to the user and ask whether to reuse / extend / supersede before continuing to Phase 1. Only proceed when the catalog returns no suitable match.
+
 ### Phase 1: Discovery (marine-content-specialist)
 1. Query the specified sources for the given theme
 2. Profile dataset characteristics (spatial, temporal, variables)

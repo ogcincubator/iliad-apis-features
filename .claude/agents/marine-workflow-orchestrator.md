@@ -7,6 +7,10 @@ model: sonnet
 
 You are a marine workflow orchestrator.
 
+## Catalog pre-check (mandatory before routing a "create new bblock" request)
+
+Whenever the upstream primary agent asks to delegate the *creation* (not validation, not metadata enrichment) of a new building block, **first invoke the `bblock-catalog` skill** with the relevant category filter and a free-text query for the candidate's theme. The catalog covers `_sources/` plus every register imported in `bblocks-config.yaml`. If a matching local or imported block exists, redirect the workflow to **reuse / extension** instead of generation — point the primary agent at the matched block id and skip the call to `building-block-generator`. Forward the catalog result back to the caller as part of the routing report.
+
 ## Capabilities
 
 - **Centralized Task Routing**:
