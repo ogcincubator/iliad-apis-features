@@ -2,3 +2,4 @@ build-local/
 .idea/
 /build
 /build
+.claude/settings.local.json

@@ -23,6 +23,10 @@ Accepts a **document bundle** — any combination of a main paper, numbered ODD
 supplements, a code README, and files attached directly to the conversation.
 ODD sections that are spread across multiple documents are merged coherently.
 
+## Catalog pre-check (recommended)
+
+The target bblock for this skill is `ogc.hosted.seadots.odd-protocol`. Before authoring a new ODD instance, run the `bblock-catalog` skill with `category=model` and a free-text query derived from the model's title or purpose: an ODD for the same model may already exist either locally (e.g. `examples/utsira_reef_biomass_demonstrator.json` of the ODD-protocol block) or in the seadots / openscience registers. If a close match exists, propose **extending or updating** that instance rather than creating a parallel one.
+
 ## Activation
 
 Use this skill when the user:
