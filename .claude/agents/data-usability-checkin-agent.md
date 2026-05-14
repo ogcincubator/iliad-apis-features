@@ -53,7 +53,7 @@ If the user does not provide a reference set:
 
 1. Propose repository defaults first: STAC-aligned source/asset blocks, OGC API Records / GeoDCAT discovery blocks, domain-specific OIM / observation / feature blocks already in `_sources/`.
 2. Search imported repositories declared in `bblocks-config.yaml`. Use the `bblock-register-resolution` skill to resolve published URLs to machine-readable register endpoints.
-3. Rank candidate target blocks by: property overlap, geometry/coverage compatibility, vocabulary overlap, best-practice tags.
+3. Rank candidate target blocks via the `bblock-relevance` skill (call it with the dataset's example file + documentation + any service endpoint). The skill returns top-k per group (schema vs. schemaless × data vs. metadata) over six weighted dimensions: type, properties, model, vocabulary, themes/keywords, embeddings. Use the `schema/data` group for BB1, `schemaless/data` (model/ontology/vocabulary) for BB2, and `schema/metadata` for BB3. Quote the ranking table in the BB-selection rationale.
 4. Ask the user to confirm BB2 only when the tradeoff is material.
 
 Defaults to suggest when no better match exists: `STAC`, `OGC API Records`, STAC extensions `cf`, `datacube`, `proj`, `prov`.

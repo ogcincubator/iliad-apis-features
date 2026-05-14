@@ -1,0 +1,52 @@
+# Default configuration for the bblock-relevance skill.
+#
+# Resolution order (first match wins):
+#   1. <workspace>/.claude/bblock-relevance.yaml
+#   2. ~/.claude/bblock-relevance.yaml
+#   3. this file (skill defaults)
+
+weights:
+  type_match:            0.20
+  properties_match:      0.20
+  model_match:           0.20
+  vocabulary_match:      0.15
+  themes_keywords_match: 0.10
+  embeddings_similarity: 0.15
+
+embeddings:
+  default: local-chroma
+  backends:
+    local-chroma:
+      type: chromadb
+      path: ./build-local/.embeddings/chroma
+      collection: bblocks
+      embed_with: sentence-transformers/all-MiniLM-L6-v2
+    qdrant:
+      type: qdrant
+      url: http://localhost:6333
+      collection: bblocks
+      embed_with: openai:text-embedding-3-small
+    pinecone:
+      type: pinecone
+      api_key_env: PINECONE_API_KEY
+      index: bblocks
+      embed_with: openai:text-embedding-3-small
+    openai:
+      type: openai
+      api_key_env: OPENAI_API_KEY
+      model: text-embedding-3-small
+      cache: ./build-local/.embeddings/openai.parquet
+    precomputed:
+      type: precomputed
+      path: ./build-local/.embeddings/bblocks.parquet
+
+cache:
+  dir: ./build-local/.relevance
+  ttl_hours: 24
+
+grouping:
+  axes: [itemClass, intent]
+  intent_rules:
+    data:     [vector, gridded, model, vocabulary]
+    metadata: [metadata]
+    ontology: [ontology]

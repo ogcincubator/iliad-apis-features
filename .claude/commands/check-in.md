@@ -26,7 +26,7 @@ iliad-checkin-server   # http://127.0.0.1:8000/
 1. Sniffs the source (NetCDF / CSV / GeoParquet / GeoJSON / OGC WFS/WMS/EDR / OPeNDAP).
 2. Profiles properties, dimensions, spatial/temporal extent.
 3. Invokes the `bblock-catalog` skill with the inferred category filter (`vector` / `gridded` / `metadata`) and a free-text query built from the profile, covering local `_sources/` **and** every register imported in `bblocks-config.yaml`. Catalog matches are surfaced alongside the local-only ranking in step 4.
-4. Ranks candidate bblocks in `_sources/*` by property-name + context-vocab + format-tag overlap (top 5).
+4. Ranks candidate bblocks using the `bblock-relevance` skill against the profiled source. The skill scores six dimensions (type, properties, model, vocabulary, themes/keywords, embeddings) with weights and grouping (schema vs. schemaless, data vs. metadata) read from `.claude/bblock-relevance.yaml`. Returns top-k per group; top 5 of `schema/data` are surfaced inline.
 5. Proposes related bblocks (OGC standard pairings — STAC + Coverage, EDR + Features, JSON-FG + GeoJSON).
 6. Builds a vocab index and surfaces per-property candidates for user acknowledgement. External candidates (NERC / CF / Darwin Core / WoRMS) are linked out; external lookups proper are delegated to the `web-browsing-mcp` skill.
 7. Picks or generates a transformer, executes it on a sample, and validates the output against the transformer's `canonical.schema.json`.
