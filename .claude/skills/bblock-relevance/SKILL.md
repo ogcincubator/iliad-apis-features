@@ -1,6 +1,6 @@
 ---
 name: bblock-relevance
-description: Use when ranking existing OGC building blocks by their relevance to a candidate input — an example data file, free-text documentation, a service endpoint, and/or a metadata record. Computes six similarity dimensions (data/service type, property names, data-model structure, vocabulary IRIs, themes/keywords, vector-embedding cosine), aggregates them with configurable weights, and returns ranked bblocks grouped by `itemClass` (schema vs. schemaless) × intent (data vs. metadata). Pluggable vector backends (Chroma, Qdrant, Pinecone, OpenAI, local precomputed) declared in `.claude/bblock-relevance.yaml`. Extracts the relevance-ranking step previously embedded in the `check-in` command and the `data-usability-checkin-agent`.
+description: Use when ranking existing OGC building blocks by their relevance to a candidate input — an example data file, free-text documentation, a service endpoint, and/or a metadata record. Computes six similarity dimensions (data/service type, property names, data-model structure, vocabulary IRIs, themes/keywords, vector-embedding cosine), aggregates them with configurable weights, and returns ranked bblocks grouped by `itemClass` (schema vs. schemaless) × intent (data vs. metadata). Vector-DB access is delegated to the `embedding-store` skill (backends configured in `.claude/embedding-store.yaml`); this skill only declares the backend name and the weight assigned to the embedding dimension. Extracts the relevance-ranking step previously embedded in the `check-in` command and the `data-usability-checkin-agent`.
 ---
 
 # OGC Building Block Relevance Scorer
@@ -55,7 +55,7 @@ Looked up in priority order:
 2. `~/.claude/bblock-relevance.yaml`
 3. `.claude/skills/bblock-relevance/config.example.yaml` (defaults shipped with the skill)
 
-Format:
+Format — note that **backend configuration lives in `.claude/embedding-store.yaml`**, not here. This file only carries weights, grouping rules, cache settings, and the name of the embedding backend to use (by reference):
 
 ```yaml
 weights:
@@ -67,31 +67,8 @@ weights:
   embeddings_similarity: 0.15
 
 embeddings:
-  default: local-chroma          # which backend the skill uses unless overridden
-  backends:
-    local-chroma:
-      type: chromadb
-      path: ./build-local/.embeddings/chroma
-      collection: bblocks
-      embed_with: sentence-transformers/all-MiniLM-L6-v2
-    qdrant:
-      type: qdrant
-      url: http://localhost:6333
-      collection: bblocks
-      embed_with: openai:text-embedding-3-small
-    pinecone:
-      type: pinecone
-      api_key_env: PINECONE_API_KEY
-      index: bblocks
-      embed_with: openai:text-embedding-3-small
-    openai:
-      type: openai
-      api_key_env: OPENAI_API_KEY
-      model: text-embedding-3-small
-      cache: ./build-local/.embeddings/openai.parquet
-    precomputed:
-      type: precomputed
-      path: ./build-local/.embeddings/bblocks.parquet
+  backend: local-chroma          # name resolved by the embedding-store skill;
+                                 # omit to use embedding-store's own default.
 
 cache:
   dir: ./build-local/.relevance
@@ -177,15 +154,14 @@ Compute **TF–IDF cosine** across the corpus = all `_sources/` + imported bbloc
 
 ### 6. `embeddings_similarity` (0–1)
 
-Embed input documentation and bblock descriptions using the configured backend; compute cosine similarity. Backends:
+Delegated to the `embedding-store` skill. This skill never opens a backend connection directly — it issues two calls:
 
-- **chromadb** — local on-disk persistent collection
-- **qdrant** — remote, fast nearest-neighbour
-- **pinecone** — hosted vector DB
-- **openai** — direct embedding API (no DB; cosine in-memory with a parquet cache)
-- **precomputed** — load a parquet of `{id, embedding}` pairs and skip live embedding
+1. `embedding-store upsert items=[{id: "__candidate-input__", text: <input documentation>}] backend=<configured>` — to embed the input documentation using the backend's `embed_with` model and cache the result.
+2. `embedding-store query text=<input documentation> top_k=<N>` — returns the top-N bblock ids with cosine scores against the input. Alternatively, `embedding-store get ids=<all-bblock-ids>` returns vectors which this skill cosines in-memory against the input embedding.
 
-If no backend is configured / reachable, set `embeddings_similarity = null` and redistribute its weight to the other dimensions.
+The backend used is `embeddings` (parameter override) or the `embedding-store` default. Configuration of the backends themselves — Chroma / Qdrant / Pinecone / OpenAI parquet / precomputed parquet — lives in `.claude/embedding-store.yaml`; this skill knows backends only by name.
+
+If no backend is configured or reachable (the `embedding-store health` probe fails), set `embeddings_similarity = null` and redistribute its weight to the other dimensions.
 
 ## Aggregation
 
@@ -286,6 +262,7 @@ The skill always surfaces:
 ## Interactions with other skills
 
 - **`bblock-catalog`** — source of the bblock list and the classification.
+- **`embedding-store`** — dispatcher for every vector-DB call this skill makes (`upsert` to index, `query`/`get` to score). All backend-specific code (Chroma / Qdrant / Pinecone / OpenAI / precomputed) lives in that skill, not here.
 - **`metadata-extraction`** — used to normalise non-JSON example inputs into a schema-shaped object.
 - **`bblock-register-resolution`** — fetches imported registers when a bblock-catalog cache miss requires it.
 - **`web-browsing-mcp`** — used when `endpoint` is supplied and capabilities must be fetched live.

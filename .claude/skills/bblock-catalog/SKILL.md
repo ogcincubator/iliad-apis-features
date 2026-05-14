@@ -1,6 +1,6 @@
 ---
 name: bblock-catalog
-description: Use when answering questions about the OGC building-block structure of this repository and the registers it imports — what blocks exist, what each one is for, which are vector vs. gridded vs. ontology vs. metadata, what is locally hosted vs. imported, what depends on what. Walks _sources/ for local blocks, reads bblocks-config.yaml for imports, fetches each imported repo's register.json, classifies blocks by category, and answers ad-hoc natural-language queries with a compact tabular summary plus optional drill-downs.
+description: Use when answering questions about the OGC building-block structure of this repository and the registers it imports — what blocks exist, what each one is for, which are vector vs. gridded vs. ontology vs. metadata, what is locally hosted vs. imported, what depends on what. Walks _sources/ for local blocks, reads bblocks-config.yaml for imports, fetches each imported repo's register.json, classifies blocks by category, and answers ad-hoc natural-language queries with a compact tabular summary plus optional drill-downs. With `include_embeddings=true` also returns embedding coordinates per matched block (looked up in the vector backends configured for the `bblock-relevance` skill), for downstream clustering / projection / similarity tooling.
 ---
 
 # OGC Building Block Catalog Skill
@@ -43,6 +43,8 @@ A free-text question OR one or more structured filters:
 | `itemClass` | `schema` or `model` |
 | `id` | exact bblock identifier — returns full record + dependants |
 | `depends_on` | bblock identifier — returns the set of blocks depending on it |
+| `include_embeddings` | `false` (default) / `true` — when true, call the `embedding-store` skill to attach embedding coordinates per matched block |
+| `embeddings_backend` | optional backend name (e.g. `local-chroma`, `qdrant`, `pinecone`, `openai`, `precomputed`) overriding the `default` declared in `.claude/embedding-store.yaml` |
 
 ## Process
 
@@ -109,6 +111,18 @@ unclassified   ← everything else
 
 A block can carry multiple labels. The primary one is the first match; secondaries are also collected.
 
+### Phase 3b — embedding-coordinate lookup (only when `include_embeddings=true`)
+
+Call the `embedding-store` skill once with the surviving block ids:
+
+```
+embedding-store get  ids=[id1, id2, …]  backend=${embeddings_backend or default}
+```
+
+The `embedding-store` dispatcher resolves the configured backend (Chroma / Qdrant / Pinecone / OpenAI parquet cache / precomputed parquet) and returns a normalised list of `{id, embedding | null, metadata}`. Attach each result to the matching block record; misses keep `embedding: null` and feed into the "missing ids" summary at the foot of the run.
+
+This skill never writes to the store; it only reads. Indexing is the responsibility of `bblock-relevance` (which calls `embedding-store upsert`). That keeps `bblock-catalog` cheap and side-effect-free for navigation queries.
+
 ### Phase 4 — answer
 
 For the active query:
@@ -122,7 +136,7 @@ For the active query:
 
 ### Output formats
 
-**Tabular summary** (default):
+**Tabular summary** (default — no embedding column shown unless `include_embeddings=true`):
 
 ```
 Source                                     Category     ID                                  Name                           Status
@@ -136,6 +150,39 @@ imported (bblocks-seadots)                 model        ogc.hosted.seadots
                                                           .equation-property-relationship   Equation property relationship under-development
 imported (bblocks-seadots)                 ontology     ogc.hosted.seadots.ontology         Property relationship ontology under-development
 ...
+```
+
+**Embedding-augmented row shape** (when `include_embeddings=true`):
+
+For consumers that need machine-readable output (e.g. a 2-D projection plot or a downstream similarity job), the skill also emits a JSON Lines stream alongside the table, one block per line:
+
+```json
+{
+  "id":            "ogc.hosted.seadots.equation-property-relationship",
+  "source":        "imported (bblocks-seadots)",
+  "category":      "model",
+  "secondary":     ["vocabulary"],
+  "itemClass":     "schema",
+  "name":          "Equation property relationship",
+  "embedding": {
+    "backend":  "local-chroma",
+    "model":    "sentence-transformers/all-MiniLM-L6-v2",
+    "dim":      384,
+    "vector":   [-0.0123, 0.0456, …]
+  }
+}
+```
+
+Blocks without an embedding hit get `"embedding": null`. The default text rendering truncates the vector to the first three components plus a count, e.g. `[-0.012, 0.046, -0.118, … (384d)]`; the full vector is in the JSONL stream.
+
+A short header line declares the backend, model and total hit-rate:
+
+```
+embeddings   backend=local-chroma   model=sentence-transformers/all-MiniLM-L6-v2   dim=384   hits=18/24   missing=6
+missing ids:
+  ogc.hosted.iliad.api.features.zarr_attrs_sdn
+  ogc.hosted.iliad.api.features.iliad-jellyfish-ontology
+  …
 ```
 
 **Counts per category** (always printed at the end):
@@ -248,11 +295,16 @@ Returns substring matches on name, abstract, and tags across local + imported, r
 | Two registers expose the same id | Surface both with their source registers; preference goes to local source. |
 | Block has empty `tags[]` and an ambiguous name | Mark `unclassified`; surface for the user to triage. |
 | User asks about a block that doesn't exist | Suggest closest matches by name / abstract distance. |
+| `include_embeddings=true` but no vector backend configured | Skip Phase 3b with a warning; surface `embeddings: null` on every row and a one-line hint pointing at `.claude/bblock-relevance.yaml`. |
+| `include_embeddings=true` but backend reachable, partial hits | Surface coordinates for hits, `null` for misses, and a `missing ids` list at the foot of the run. |
+| Backend embeds at a different model than expected | Annotate every row's `embedding.model` field; consumers can detect mismatch. |
 
 ## How this skill cooperates with others
 
 - **`bblock-register-resolution`** — used internally to normalise external URLs to register endpoints.
 - **`web-browsing-mcp`** — used to fetch registers when the resolver can't determine them statically.
+- **`embedding-store`** — sole dispatcher this skill calls for the `include_embeddings=true` lookup. Hides Chroma / Qdrant / Pinecone / OpenAI / precomputed backends behind one interface.
+- **`bblock-relevance`** — the *writer* of the same embedding store (`upsert` after generation/reindexing). `bblock-catalog` only reads. The two skills share the backend pool declared in `.claude/embedding-store.yaml`.
 - **`validation-agent`** / **`bblock-container-validation`** — referenced from this skill's output ("Want to validate the missing block? Run `/validate-bblock` on…").
 - **`pygeoapi-test-harness`** — referenced when the user asks "can I serve this block locally?"
 - **`marine-bblock`** / **`building-block-generator`** — referenced when the catalog answer is "nothing yet — would you like to generate one?".

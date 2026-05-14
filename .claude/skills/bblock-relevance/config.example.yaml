@@ -4,6 +4,10 @@
 #   1. <workspace>/.claude/bblock-relevance.yaml
 #   2. ~/.claude/bblock-relevance.yaml
 #   3. this file (skill defaults)
+#
+# Backend configuration (Chroma, Qdrant, Pinecone, OpenAI parquet cache,
+# precomputed parquet) is owned by the embedding-store skill and lives in
+# .claude/embedding-store.yaml. This file references a backend by name only.
 
 weights:
   type_match:            0.20
@@ -14,31 +18,8 @@ weights:
   embeddings_similarity: 0.15
 
 embeddings:
-  default: local-chroma
-  backends:
-    local-chroma:
-      type: chromadb
-      path: ./build-local/.embeddings/chroma
-      collection: bblocks
-      embed_with: sentence-transformers/all-MiniLM-L6-v2
-    qdrant:
-      type: qdrant
-      url: http://localhost:6333
-      collection: bblocks
-      embed_with: openai:text-embedding-3-small
-    pinecone:
-      type: pinecone
-      api_key_env: PINECONE_API_KEY
-      index: bblocks
-      embed_with: openai:text-embedding-3-small
-    openai:
-      type: openai
-      api_key_env: OPENAI_API_KEY
-      model: text-embedding-3-small
-      cache: ./build-local/.embeddings/openai.parquet
-    precomputed:
-      type: precomputed
-      path: ./build-local/.embeddings/bblocks.parquet
+  backend: local-chroma             # resolved by the embedding-store skill;
+                                    # omit to use embedding-store's own default.
 
 cache:
   dir: ./build-local/.relevance
