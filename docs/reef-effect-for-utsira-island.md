@@ -6,13 +6,14 @@ There are several potential setups with different number of turbines, their size
 The whole model is complex one that tries to estimate interactions between environmental, social and economic variables.
 ![alt text](windpark-impact-fisheries.png)
 
- - I want to expose it as an application others can use.
+ - I will calculate the reef effect for my potential farm setups, it is not complex exuation but I can wire later into the wider model
+ - I may want to expose it as an application others can use. I could also ask AI crystal bowl where to give me the answer but at least I want to knwo 
  - For simulations based on the 'models' of the application, i want to collect all the outputs so machine learning models will be able to train on and 'understand' relationships between variables.
  - Since there is many potential inputs, I want to create it wireable to the existing data sources.
  - in effect it will create trusful register of simulation outputs, their source and control parameters others can use directly or tune accoridng to their needs and data availability.
 
 I will use OGC building blocks to define Interface to the application:
- - what is the model about: what aprameters it takes, what are fixed and flexibility points
+ - what is the model about: what parameters it takes, what are fixed and flexibility points
  - 
 
 ## Good practice of ODD protocol
@@ -32,11 +33,33 @@ I can use AI tools with agents and MCP to wire model to the data, but I need to 
 This exercise focuses on resolving one of the elements which is 'Reef effect'.
 Studies show, that solid elements of the windparks and O&G platforms create environment simlar to natural conservation. Truely protected by law and operations area free from fishing trawling, together with solid elements of the setup effect in the biomass growth.
 
+I'd like to estimate reef effect on the Utsira island windpark setup using equation known from research/policy.
 
+### step 1 - model type
 
+for the reef effect, there is known equation that allows to calculate the effect. It can be used as one-shot but often it is calculated in turns after each the model is updated.
 
-I'd like to estimate reef effect on the Utsira island windpark setup using [URI]
-it is part of the larger model but already here i have following vairables;
+We will use template like this:
+https://ogcincubator.github.io/bblocks-seadots/bblock/ogc.hosted.seadots.equation-property-relationship/examples
+to capture what it takes:
+
+Key element is here:
+```
+"wasDerivedFrom": [
+      "indo:submerged-infrastructure-area",
+      "indo:baseline-benthic-biomass-density",
+      "indo:reef-aggregation-index",
+      "indo:colonisation-time-factor"
+    ],
+    ...
+    "equation": "B_{reef} = \\sum_i (A_{sub} \\cdot D_{pre,i} \\cdot AF_i \\cdot C_t)",
+```
+Mind you do not have to define your own equation. in many cases it is a blackbox/3rd party application.
+What is needed are the variables it consumes.
+Next, format it must be put forward.
+ 
+In our case, it is part of the larger model but already here it need follwing vairables;
+
 "indo:submerged-infrastructure-area",
       "indo:baseline-benthic-biomass-density",
       "indo:reef-aggregation-index",
@@ -51,13 +74,20 @@ There are follwing types:
 *indo:baseline-benthic-biomass-density* - this I should take from the observations - I need to recognise what is relevant input and wire it into the model
 *indo:reef-aggregation-index* - this is factor I need to anticipate given other experiments in the similar areas or model output. fortunately it was calculated by the other project and I have reference numbers 
 *indo:colonisation-time-factor*
+The factor is related to the reef aggregation index, time extent of the simulations. It is also a period other models can influence or read the current state.
 
+## execution frames
 
+I have application that can calculate the equation or develop one, it is simple equation in current conditions. Will take above mentioned variables but need to fix how to wire data in for each execution.
 
 ```
-in the odd-protocol example of the building block, there is en example of reef effect, propose the pipeline of the data execution and using template from -                                               
-  https://ogcincubator.github.io/bblocks-openscience/ propose the experiment desciritpion linked to input and output that later you can load to estimate reef effect for souroundings of the utsira island
+@bblocks-builder : in the odd-protocol example of the building block, there is en equation of reef effect, propose the pipeline of the data execution and using template from                                             https://ogcincubator.github.io/bblocks-openscience/ propose the experiment desciritpion linked to input and output that later you can load to estimate reef effect for souroundings of the utsira island
   ```
+
+
+Now, it has not made up any values, but created structured inputs for the execution, execution is wired to the 'protocol'. Well, it has made up values but called them examples.
+
+I can create an OGC Process with that easily or extent it with additional parameters. But before that, I will check if all the data is available.
 
 
 # Creating own data input
@@ -69,7 +99,11 @@ It will be related to the sensible values of the next variables.
 
 ## Reef Aggregation Index
 
-For the Reef Aggregation Index, I need to look up literature. will capture.
+For the Reef Aggregation Index, I need to look up literature. I will capture some of the values and add here 
+https://raw.githubusercontent.com/ogcincubator/iliad-apis-features/refs/heads/master/_sources/oim-variables/examples/indicators.ttl
+and load to my vocabulary service deployed on EDITO
+https://datalab.dive.edito.eu/launcher/service-playground/definitions-server?name=definitions-server&shared=false&version=0.0.24
+
 
 ```
 @building-block-generator add bblock for variable observation based on the best matching /Users/piotr/repos/Iliad/iliad-apis-features and including following data as an example and value mapped to the indo:reef-aggregation-index - [data from AUX1]
@@ -93,8 +127,14 @@ It is not sophisticated calculation but due to complexity of the detailed calcul
 
 ## baseline-benthic-biomass-density
 
-biomass density, defined in tons per sq km is data available in several sources.
+Biomass density, defined in tons per sq km is data available in several sources.
 We need to see which one is most reliable/recent/accurate.
+
+I see in the the AI output ir proposes
+https://www.hi.no/api/benthic-biomass-baseline
+
+It is fine if cover my area and key species I am interested in, maybe there is something in EDITO/EMODnet but this one 
+
 
 # fully autonomous calculations
 
