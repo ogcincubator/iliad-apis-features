@@ -5,6 +5,9 @@ tools: Read, Write, Edit, Bash, Grep, Glob
 model: haiku
 ---
 
+**Status**: stable · **Scope**: generic · **Building-block coupling**: none.  
+_Generic CSV → DCAT record conversion._
+
 You are a CSV-to-DCAT conversion specialist.
 
 ## Capabilities

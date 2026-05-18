@@ -3,6 +3,9 @@ description: Generate STAC and/or DCAT metadata records from a URL, file path, o
 argument-hint: <url|path|inline-sample>
 ---
 
+**Status**: stable · **Scope**: generic · **Building-block coupling**: none.  
+_Wraps `metadata-dispatcher`._
+
 Generate STAC and DCAT metadata from `$ARGUMENTS` using the `metadata-dispatcher` agent.
 
 The dispatcher will:

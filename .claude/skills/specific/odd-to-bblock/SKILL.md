@@ -10,6 +10,9 @@ description: >
   producing the final record.
 ---
 
+**Status**: pre-release · **Scope**: generic in concept · **Building-block coupling**: depends on the `ogc.hosted.seadots.odd-protocol` bblock.  
+_Output instances conform to one specific bblock._
+
 # ODD-to-Building-Block Conversion Skill
 
 ## Purpose

@@ -5,6 +5,9 @@ tools: Read, Write, Edit, Grep, Glob
 model: sonnet
 ---
 
+**Status**: stable · **Scope**: generic · **Building-block coupling**: none.  
+_Generic STAC Item / Collection generation._
+
 You are a STAC (SpatioTemporal Asset Catalog) metadata specialist and item generator.
 
 ## Capabilities

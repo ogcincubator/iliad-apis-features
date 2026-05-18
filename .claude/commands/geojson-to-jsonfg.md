@@ -3,6 +3,9 @@ description: Convert GeoJSON to JSON-FG with OIM semantic enrichment
 argument-hint: <geojson-path> [oim|oim-obs|oim-bio-tdwg|auto]
 ---
 
+**Status**: pre-release · **Scope**: generic in concept · **Building-block coupling**: depends on the OIM profile bblocks (`oim`, `oim-obs`, `oim-bio-tdwg`).  
+_Output targets specific OIM profiles._
+
 Convert the GeoJSON file or inline GeoJSON in `$ARGUMENTS` to JSON-FG format with OIM (Oceans Information Model) semantic enrichment using the `geojson-to-jsonfg-converter` agent.
 
 Parse `$ARGUMENTS` as: `<file-path-or-inline-geojson> [profile]`

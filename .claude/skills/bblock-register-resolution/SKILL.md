@@ -3,6 +3,9 @@ name: bblock-register-resolution
 description: Use when resolving OGC Building Block dependencies or repository imports from a published URL. Normalizes a human-facing site URL to machine-readable register endpoints by trying `<url>/build/register.json` first, then `<url>/register.json`, and only treating the base URL as documentation unless it already returns JSON.
 ---
 
+**Status**: stable · **Scope**: generic · **Building-block coupling**: none.  
+_Normalises register URLs._
+
 # Building Block Register Resolution Skill
 
 Use this skill when a building block dependency, `imports:` entry, or external bblock reference is given as a site URL and you need the actual machine-readable register.

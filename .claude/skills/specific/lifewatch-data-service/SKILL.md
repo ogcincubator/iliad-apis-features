@@ -3,6 +3,9 @@ name: lifewatch-data-service
 description: Use when querying the LifeWatch Data Service API / Data Explorer for biodiversity, environmental, or tracking datasets. Prompts the user to select one of the available datasets, asks only for the parameters needed for that dataset, checks the workspace root .env for LifeWatch credentials or API key settings, and maps the selected parameters programmatically to the LifeWatch API.
 ---
 
+**Status**: pre-release · **Scope**: generic (provider-bound to LifeWatch) · **Building-block coupling**: none.  
+_Provider-specific API client._
+
 # LifeWatch Data Service Skill
 
 ## Purpose

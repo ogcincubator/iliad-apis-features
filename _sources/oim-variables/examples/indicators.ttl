@@ -5,6 +5,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
 @prefix indo: <https://w3id.org/indicators/marine/obs/> .
 @prefix ind: <https://w3id.org/indicators/marine/> .
 @prefix inda: <https://w3id.org/indicators/marine/activity> .
@@ -41,7 +42,12 @@ ind:indicators-scheme a skos:ConceptScheme ;
                        indo:area-use-by-wind-park ,
                        indo:number-of-jobs ,
                        indo:fisheries-production ,
-                       indo:bird-tourism .
+                       indo:bird-tourism ,
+                       indo:submerged-infrastructure-area ,
+                       indo:baseline-benthic-biomass-density ,
+                       indo:reef-aggregation-index ,
+                       indo:colonisation-time-factor ,
+                       ind:floating-wind-reef-biomass .
 
 # Instances
 indo:cdi a prov:Entity, skos:Concept ;
@@ -105,6 +111,117 @@ indo:fisheries-production a sosa:observedProperty, skos:Concept ;
     prov:providedBy "http://seadots.eu" .
 
 
+
+# Reef-biomass equation property and variables.
+
+ind:floating-wind-reef-biomass a prov:Entity, sosa:observedProperty, skos:Concept ;
+    rdfs:label "Floating-wind reef biomass"@en ;
+    skos:prefLabel "Floating-wind reef biomass"@en ;
+    skos:definition "Reef-associated biomass on submerged floating-wind infrastructure, calculated as B_reef = sum_i (A_sub * D_pre,i * AF_i * C_t)."@en ;
+    skos:inScheme ind:indicators-scheme ;
+    qudt:hasQuantityKind quantitykind:Mass ;
+    prov:wasDerivedFrom indo:submerged-infrastructure-area,
+        indo:baseline-benthic-biomass-density,
+        indo:reef-aggregation-index,
+        indo:colonisation-time-factor ;
+    rdfs:seeAlso <https://w3id.org/ogc/hosted/seadots/equation-property-relationship/examples/reef-biomass-equation> .
+
+indo:submerged-infrastructure-area a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Submerged infrastructure area"@en ;
+    skos:prefLabel "Submerged infrastructure area"@en ;
+    skos:definition "Wetted submerged hard-substrate area of floating-wind infrastructure available for colonisation."@en ;
+    skos:inScheme ind:indicators-scheme ;
+    skos:narrower indo:submerged-infrastructure-area-utsira-design ;
+    qudt:hasQuantityKind quantitykind:Area .
+
+indo:baseline-benthic-biomass-density a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Baseline benthic biomass density"@en ;
+    skos:prefLabel "Baseline benthic biomass density"@en ;
+    skos:definition "Baseline benthic biomass per seabed area before installation or in a matched control area, indexed by taxon."@en ;
+    skos:inScheme ind:indicators-scheme ;
+    skos:narrower indo:benthic-biomass-density-mareano,
+        indo:benthic-biomass-density-imr-baseline ;
+    qudt:hasQuantityKind quantitykind:SurfaceDensity .
+
+indo:reef-aggregation-index a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Reef aggregation index"@en ;
+    skos:prefLabel "Reef aggregation index"@en ;
+    skos:definition "Dimensionless per-taxon coefficient representing aggregation or enhancement on artificial reef infrastructure relative to a baseline habitat."@en ;
+    skos:inScheme ind:indicators-scheme ;
+    skos:narrower indo:reef-aggregation-index-mytilus,
+        indo:reef-aggregation-index-buccinum,
+        indo:reef-aggregation-index-asterias ;
+    qudt:hasQuantityKind quantitykind:Dimensionless .
+
+indo:colonisation-time-factor a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Colonisation time factor"@en ;
+    skos:prefLabel "Colonisation time factor"@en ;
+    skos:definition "Dimensionless coefficient representing the development of colonisation through time."@en ;
+    skos:inScheme ind:indicators-scheme ;
+    skos:narrower indo:colonisation-time-factor-default ;
+    qudt:hasQuantityKind quantitykind:Dimensionless .
+
+indo:submerged-infrastructure-area-utsira-design a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Submerged infrastructure area, Utsira design"@en ;
+    skos:prefLabel "Submerged infrastructure area, Utsira design"@en ;
+    skos:definition "Utsira Nord engineering-design binding for submerged infrastructure area, covering wetted hull, mooring and anchor surfaces."@en ;
+    skos:broader indo:submerged-infrastructure-area ;
+    skos:inScheme ind:indicators-scheme ;
+    qudt:hasQuantityKind quantitykind:Area ;
+    example <https://veiledere.nve.no/havvind/strategisk-konsekvensutredning-av-vindkraft-til-havs/> .
+
+indo:benthic-biomass-density-mareano a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Benthic biomass density, MAREANO"@en ;
+    skos:prefLabel "Benthic biomass density, MAREANO"@en ;
+    skos:definition "Primary MAREANO binding for baseline benthic biomass density on the Norwegian shelf."@en ;
+    skos:broader indo:baseline-benthic-biomass-density ;
+    skos:inScheme ind:indicators-scheme ;
+    qudt:hasQuantityKind quantitykind:SurfaceDensity ;
+    dct:seeAlso <https://mareano.no/> .
+
+indo:benthic-biomass-density-imr-baseline a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Benthic biomass density, IMR baseline"@en ;
+    skos:prefLabel "Benthic biomass density, IMR baseline"@en ;
+    skos:definition "Fallback regional baseline binding for benthic biomass density where MAREANO lacks taxon coverage."@en ;
+    skos:broader indo:baseline-benthic-biomass-density ;
+    skos:inScheme ind:indicators-scheme ;
+    qudt:hasQuantityKind quantitykind:SurfaceDensity ;
+    dct:seeAlso <https://www.hi.no/> .
+
+indo:reef-aggregation-index-mytilus a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Reef aggregation index for Mytilus edulis"@en ;
+    skos:prefLabel "Reef aggregation index for Mytilus edulis"@en ;
+    skos:definition "Per-taxon reef aggregation index binding for Mytilus edulis."@en ;
+    skos:broader indo:reef-aggregation-index ;
+    skos:inScheme ind:indicators-scheme ;
+    qudt:hasQuantityKind quantitykind:Dimensionless ;
+    dct:seeAlso <https://doi.org/10.5670/oceanog.2020.405> .
+
+indo:reef-aggregation-index-buccinum a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Reef aggregation index for Buccinum undatum"@en ;
+    skos:prefLabel "Reef aggregation index for Buccinum undatum"@en ;
+    skos:definition "Per-taxon reef aggregation index binding for Buccinum undatum."@en ;
+    skos:broader indo:reef-aggregation-index ;
+    skos:inScheme ind:indicators-scheme ;
+    qudt:hasQuantityKind quantitykind:Dimensionless ;
+    dct:seeAlso <https://www.windfloat-atlantic.com/> .
+
+indo:reef-aggregation-index-asterias a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Reef aggregation index for Asterias rubens"@en ;
+    skos:prefLabel "Reef aggregation index for Asterias rubens"@en ;
+    skos:definition "Per-taxon reef aggregation index binding for Asterias rubens."@en ;
+    skos:broader indo:reef-aggregation-index ;
+    skos:inScheme ind:indicators-scheme ;
+    qudt:hasQuantityKind quantitykind:Dimensionless .
+
+indo:colonisation-time-factor-default a sosa:observedProperty, skos:Concept ;
+    rdfs:label "Colonisation time factor, default"@en ;
+    skos:prefLabel "Colonisation time factor, default"@en ;
+    skos:definition "Default sigmoid colonisation-time coefficient, saturating at 24 months."@en ;
+    skos:broader indo:colonisation-time-factor ;
+    skos:inScheme ind:indicators-scheme ;
+    qudt:hasQuantityKind quantitykind:Dimensionless ;
+    dct:seeAlso <https://doi.org/10.5670/oceanog.2020.405> .
 
 ind:ind-rel-scheme a skos:ConceptScheme ;
     dcterms:isPartOf ind:catalog ; # Backlink for discovery

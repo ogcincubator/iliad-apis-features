@@ -1,259 +1,128 @@
 # Agents, Skills, and Commands
 
-Canonical reference for the automation layer of `iliad-apis-features`: the Claude Code subagents under `.claude/agents/`, skills under `.claude/skills/`, and slash commands under `.claude/commands/` that drive marine data discovery, OGC building block generation, metadata generation, validation, and the data-usability check-in workflow.
+Canonical reference for the automation layer of `iliad-apis-features`: Claude agents under `.claude/agents/`, skills under `.claude/skills/`, and slash commands under `.claude/commands/`.
 
-For conceptual background see [`README.md`](../README.md), [`USAGE.md`](../USAGE.md) (generic OGC building block template), and [`PROFILES.md`](../PROFILES.md). For in-IDE orientation see [`CLAUDE.md`](../CLAUDE.md). Worked examples live under [`docs/`](../docs/).
+For in-IDE orientation see [`CLAUDE.md`](../CLAUDE.md). The agent-only index is [`../.claude/agents/README.md`](../.claude/agents/README.md).
 
 ## Layout
 
-```
+```text
 .claude/
-├── agents/        # 13 subagents — autonomous workers, one .md file each
-├── skills/        # 12 skills — focused capabilities loaded on demand
-└── commands/      # 6 slash commands — user-facing entry points
+├── agents/
+│   ├── integrator/     # workflow coordination, marine discovery, cross-block alignment
+│   ├── converters/     # STAC/DCAT/CSV/JSON-FG conversion
+│   ├── generators/     # building block authoring
+│   └── validators/     # static and runtime validation
+├── skills/             # focused capabilities loaded on demand
+└── commands/           # user-facing slash-command entry points
 ```
 
-The frontmatter in each agent / skill / command file is the source of truth for *when* to use it. This document covers *how the pieces fit together*.
+## Slash Commands
 
-## Slash commands
-
-| Command | Invokes | Purpose |
+| Command | Primary agent | Purpose |
 |---|---|---|
-| `/check-in <path-or-url>` | `data-usability-checkin-agent` (or interactive `iliad-checkin` CLI) | Profile a source, match against existing blocks, stage a triple of source / target / metadata blocks |
-| `/marine-bblock <theme> [sources]` | `marine-content-specialist` → `building-block-generator` | Discover marine data and build a complete OGC block |
-| `/generate-metadata <url|path>` | `metadata-dispatcher` | Generate STAC and / or DCAT records |
-| `/geojson-to-jsonfg <path> [profile]` | `geojson-to-jsonfg-converter` | Convert GeoJSON to JSON-FG with OIM enrichment |
-| `/validate-bblock <path>` | `validation-agent` | Validate a block via the Docker postprocessor |
-| `/vocprez-annotation <path-or-ttl>` | inline (Read / Edit) | Add DCAT / SKOS annotations to RDF for VocPrez |
+| `/check-in <path-or-url>` | `.claude/agents/integrator/data-usability-checkin-agent.md` | Profile a source, match blocks, and stage BB1/BB2/BB3. |
+| `/marine-bblock <theme> [sources]` | `.claude/agents/integrator/marine-content-specialist.md` + `.claude/agents/generators/building-block-generator.md` | Discover marine data and build an OGC block. |
+| `/generate-metadata <url|path>` | `.claude/agents/converters/metadata-dispatcher.md` | Generate STAC and/or DCAT records. |
+| `/geojson-to-jsonfg <path> [profile]` | `.claude/agents/converters/geojson-to-jsonfg-converter.md` | Convert GeoJSON to JSON-FG with OIM enrichment. |
+| `/validate-bblock <path>` | `.claude/agents/validators/validation-agent.md` | Validate a block via Docker postprocessor. |
+| `/test-bblock-rendering <path>` | `.claude/agents/validators/pygeoapi-test-harness.md` | Serve a block through pygeoapi and validate runtime responses. |
+| `/vocprez-annotation <path-or-ttl>` | inline command | Add DCAT/SKOS annotations for VocPrez. |
 
 ## Agents
 
-Thirteen agents in three roles.
+### Integrator
 
-### Primary / orchestrating
-
-Accept user requests directly and delegate.
-
-| Agent | Model | Drives |
+| Agent | Path | Purpose |
 |---|---|---|
-| `marine-content-specialist` | opus | Marine theme → BB pipeline; calls `marine-data-agent` and `building-block-generator` |
-| `metadata-dispatcher` | sonnet | Format detection + STAC / DCAT routing entry point |
-| `data-usability-checkin-agent` | sonnet | Source intake → BB1 / BB2 / BB3 triple with usability assessment and a process report |
-| `marine-workflow-orchestrator` | sonnet | Pure router for metadata, validation, and enrichment requests; reduces direct agent-to-agent coupling |
+| `marine-workflow-orchestrator` | `.claude/agents/integrator/marine-workflow-orchestrator.md` | Routes metadata, validation, and enrichment requests across workflows. |
+| `marine-content-specialist` | `.claude/agents/integrator/marine-content-specialist.md` | Discovers marine content and prepares bblock specifications. |
+| `marine-data-agent` | `.claude/agents/integrator/marine-data-agent.md` | Retrieves samples from marine data services with provenance. |
+| `gis-marine-data-specialist` | `.claude/agents/integrator/gis-marine-data-specialist.md` | Models geospatial vector data with semantic annotations. |
+| `data-usability-checkin-agent` | `.claude/agents/integrator/data-usability-checkin-agent.md` | Runs source usability assessment and BB1/BB2/BB3 alignment. |
 
-### Authoring
+### Converters
 
-| Agent | Model | Produces |
+| Agent | Path | Purpose |
 |---|---|---|
-| `building-block-generator` | sonnet | Complete OGC building block packages (schema or model `itemClass`). Owns the **Quality Contract: Property Coverage**. |
-| `gis-marine-data-specialist` | sonnet | JSON Schema, JSON-LD context, GeoJSON / GeoParquet examples for vector data already in hand |
+| `metadata-dispatcher` | `.claude/agents/converters/metadata-dispatcher.md` | Detects input format and routes STAC/DCAT work. |
+| `stac-metadata-generator` | `.claude/agents/converters/stac-metadata-generator.md` | Generates STAC Items and Collections. |
+| `dcat-metadata-generator` | `.claude/agents/converters/dcat-metadata-generator.md` | Generates DCAT and GeoDCAT records. |
+| `csv-to-stac-converter` | `.claude/agents/converters/csv-to-stac-converter.md` | Converts CSV/tabular sources to STAC metadata. |
+| `csv-to-dcat-converter` | `.claude/agents/converters/csv-to-dcat-converter.md` | Converts CSV/tabular sources to DCAT metadata. |
+| `geojson-to-jsonfg-converter` | `.claude/agents/converters/geojson-to-jsonfg-converter.md` | Converts GeoJSON examples to JSON-FG. |
 
-### Format / output specialists
+### Generators
 
-Invoked by orchestrating agents.
-
-| Agent | Model | Purpose |
+| Agent | Path | Purpose |
 |---|---|---|
-| `stac-metadata-generator` | sonnet | STAC Items / Collections with extension auto-selection |
-| `dcat-metadata-generator` | sonnet | DCAT records (JSON-LD / Turtle / RDF/XML), GeoDCAT-AP profile |
-| `csv-to-stac-converter` | haiku | CSV / TSV → STAC Items with table extension |
-| `csv-to-dcat-converter` | haiku | CSV / TSV → DCAT records |
-| `geojson-to-jsonfg-converter` | haiku | GeoJSON → JSON-FG with OIM profile (`oim`, `oim-obs`, `oim-bio-tdwg`) |
+| `building-block-generator` | `.claude/agents/generators/building-block-generator.md` | Creates OGC building block source packages. |
 
-### Discovery and validation
+### Validators
 
-| Agent | Model | Purpose |
+| Agent | Path | Purpose |
 |---|---|---|
-| `marine-data-agent` | sonnet | Live querying of HELCOM / EMODnet / ICES / OBIS / CMEMS, sample retrieval with provenance |
-| `validation-agent` | sonnet | Docker-based postprocessor validation; structure / schema / context / example / test checks |
+| `validation-agent` | `.claude/agents/validators/validation-agent.md` | Runs static/container building block validation. |
+| `pygeoapi-test-harness` | `.claude/agents/validators/pygeoapi-test-harness.md` | Serves blocks through pygeoapi and validates runtime responses. |
 
-## Skills
+## Current Skills
 
-Loaded on demand by agents.
+| Skill | Purpose |
+|---|---|
+| `bblock-catalog` | Catalog and classify local/imported building blocks. |
+| `bblock-container-validation` | Run Docker-based building block validation. |
+| `bblock-register-resolution` | Resolve imported building block registers. |
+| `bblock-relevance` | Rank candidate blocks by relevance to data/examples/docs. |
+| `context-completeness-checker` | Check JSON-LD context coverage for response/example properties. |
+| `csv-to-metadata` | Profile CSV columns, schema, and geometry hints. |
+| `dataset-qa` | Assess dataset usability and quality constraints. |
+| `embedding-store` | Provide vector index operations for relevance ranking. |
+| `jsonfg-conversion` | Convert GeoJSON examples to JSON-FG. |
+| `metadata-extraction` | Extract metadata from files, URLs, and service descriptions. |
+| `netcdf-to-stac` | Build STAC datacube/scientific metadata from NetCDF. |
+| `ogc-web-services-client` | Query OGC service capabilities and data. |
+| `pygeoapi-config-generator` | Generate local pygeoapi harness config. |
+| `pygeoapi-jsonld-template` | Generate JSON-LD/context support for pygeoapi harnesses. |
+| `pygeoapi-local-runner` | Start/stop local pygeoapi Docker harness. |
+| `response-schema-validator` | Validate HTTP JSON responses against JSON Schema. |
+| `web-browsing-mcp` | Fetch web resources for discovery and vocabulary/service checks. |
+| `specific/esri-client` | Query ArcGIS REST services. |
+| `specific/odd-to-bblock` | Convert ODD protocol material to building block examples. |
 
-| Skill | Used by | Purpose |
-|---|---|---|
-| `metadata-extraction` | `metadata-dispatcher`, `building-block-generator` | Detect format, pull title / description / spatial / temporal / vocabulary hints |
-| `csv-to-metadata` | `csv-to-stac-converter`, `csv-to-dcat-converter`, `metadata-dispatcher` | CSV column schema, geometry detection |
-| `netcdf-to-stac` | `stac-metadata-generator`, `metadata-dispatcher` | NetCDF dimensions / variables / CF conventions → STAC datacube + scientific |
-| `jsonfg-conversion` | `geojson-to-jsonfg-converter` | OIM-aware GeoJSON → JSON-FG conversion template |
-| `bblock-container-validation` | `validation-agent`, `building-block-generator` | Docker `ogcincubator/bblocks-postprocess` runner |
-| `bblock-register-resolution` | `building-block-generator`, `data-usability-checkin-agent` | Resolve published BB site URLs to register endpoints |
-| `web-browsing-mcp` | `marine-data-agent`, `marine-content-specialist` | HTTP fetches for catalogues, vocabularies, services |
-| `ogc-web-services-client` | `marine-data-agent` | OGC WMS / WFS / WMTS / CSW / API clients |
-| `esri-client` | `marine-data-agent` | ArcGIS REST FeatureServer / MapServer / ImageServer |
-| `lifewatch-data-service` | `marine-data-agent` | LifeWatch Data Service API |
-| `global-fishing-watch-data-service` | `marine-data-agent` | Global Fishing Watch v3 API |
-| `odd-to-bblock` | interactive | ODD Protocol text → ODD building block JSON |
+## Core Workflows
 
-## Architecture
+### Marine Theme to Building Block
 
-```
-                                ┌──────────────┐
-                                │     User     │
-                                └──────┬───────┘
-                                       │  /command or @agent
-        ┌──────────────────────────────┼──────────────────────────────┐
-        ↓                              ↓                              ↓
-┌──────────────────────┐  ┌────────────────────────┐  ┌──────────────────────────┐
-│ marine-content-      │  │ metadata-dispatcher    │  │ data-usability-          │
-│ specialist           │  │  (URL / file →         │  │ checkin-agent            │
-│  (theme → BB)        │  │   STAC / DCAT)         │  │  (source → BB1/BB2/BB3)  │
-└──────────┬───────────┘  └───────────┬────────────┘  └──────────┬───────────────┘
-           │                          │                          │
-           │   ┌──────────────────────┼──────────────────────────┘
-           ↓   ↓                      ↓
-┌──────────────────────────┐  ┌────────────────────────┐
-│ building-block-generator │  │ marine-workflow-       │
-│  (BB authoring;          │  │ orchestrator (router)  │
-│   property-coverage      │  └─────┬──────────────────┘
-│   contract owner)        │        │
-└──────────┬───────────────┘        ├─→ stac-metadata-generator
-           │                        ├─→ dcat-metadata-generator
-           ├─→ marine-data-agent    ├─→ csv-to-{stac,dcat}-converter
-           │   (sample retrieval)   ├─→ geojson-to-jsonfg-converter
-           │                        └─→ validation-agent
-           ├─→ validation-agent
-           │   (Docker postproc)
-           │
-           └─→ gis-marine-data-specialist
-               (semantic vector modeling)
+```text
+/marine-bblock
+  -> integrator/marine-content-specialist
+      -> integrator/marine-data-agent
+      -> generators/building-block-generator
+      -> validators/validation-agent
 ```
 
-Skills are loaded by individual agents per the Skills table above.
+### Source to STAC/DCAT
 
-## Workflows
-
-### W1 — Marine theme → OGC Building Block (`/marine-bblock`)
-
-```
-user → marine-content-specialist
-         │
-         ├─→ marine-data-agent           (sample data + provenance)
-         ├─→ web-browsing-mcp /          (vocabulary lookups)
-         │   ogc-web-services-client
-         ├─→ metadata-extraction         (profile)
-         │
-         └─→ building-block-generator
-                ├─→ creates _sources/<name>/ tree
-                ├─→ enforces Quality Contract: Property Coverage
-                ├─→ runs bblock-container-validation
-                └─→ returns block + validation report
+```text
+/generate-metadata
+  -> converters/metadata-dispatcher
+      -> converters/stac-metadata-generator
+      -> converters/dcat-metadata-generator
+      -> converters/csv-to-stac-converter
+      -> converters/csv-to-dcat-converter
 ```
 
-### W2 — Source intake → BB1 / BB2 / BB3 triple (`/check-in`)
+### Building Block Runtime Check
 
-```
-user → data-usability-checkin-agent
-         │
-         ├─→ metadata-dispatcher              (profile + format detection)
-         ├─→ score against usability matrix
-         ├─→ rank candidate BB2 from
-         │   _sources/ + imported registers
-         │   (uses bblock-register-resolution)
-         │
-         ├─→ building-block-generator × 3
-         │      BB1 source-data block (real source examples)
-         │      BB2 target-model block (or import)
-         │      BB3 metadata / catalog block (links BB1 + BB2)
-         │
-         ├─→ building-block-generator (BB1 → BB2 transform)
-         │
-         ├─→ validation-agent                 (or marine-workflow-orchestrator
-         │                                     for batched validation)
-         │
-         └─→ writes process report to
-             docs/<slug>-data-usability-checkin.md
+```text
+/test-bblock-rendering
+  -> validators/pygeoapi-test-harness
+      -> pygeoapi-config-generator
+      -> pygeoapi-local-runner
+      -> response-schema-validator
+      -> context-completeness-checker
 ```
 
-The triple must satisfy the **Cross-Block Property-Coverage Contract** — every source property reaches `context.jsonld`, BB2 either maps it or documents it as a gap, and the transform either uses it or excludes it explicitly.
+## Vocabulary Priority
 
-### W3 — Data source → STAC / DCAT (`/generate-metadata`)
-
-```
-user → metadata-dispatcher
-         │
-         ├─→ metadata-extraction              (auto fields)
-         ├─→ ask user for missing required fields
-         │
-         └─→ route by format / intent
-                CSV     → csv-to-stac-converter / csv-to-dcat-converter
-                NetCDF  → stac-metadata-generator (uses netcdf-to-stac)
-                GeoJSON / COG / OGC services
-                        → stac-metadata-generator / dcat-metadata-generator
-```
-
-### W4 — GeoJSON → JSON-FG (`/geojson-to-jsonfg`)
-
-```
-user → geojson-to-jsonfg-converter
-         │
-         ├─→ jsonfg-conversion skill (Python template)
-         ├─→ select OIM profile (oim | oim-obs | oim-bio-tdwg | auto)
-         ├─→ add @context, links (conformsTo), place reference
-         └─→ output JSON-FG
-```
-
-### W5 — Validate building block (`/validate-bblock`)
-
-```
-user → validation-agent
-         │
-         └─→ bblock-container-validation (Docker)
-               structure check
-               schema validity
-               context completeness        (rule 1 of property-coverage contract)
-               example compliance
-               test execution
-```
-
-### W6 — VocPrez annotation (`/vocprez-annotation`)
-
-Inline transformation of an RDF / Turtle file: ensure a `dcat:Catalog` exists, link the `skos:ConceptScheme`, declare `skos:hasTopConcept`, ensure every concept has `skos:inScheme` and `skos:prefLabel`, and emit Prez-compatible output.
-
-## Quality contracts
-
-Two contracts govern outputs. Both are enforced before validation; failures loop back to `building-block-generator`.
-
-1. **Quality Contract: Property Coverage** — defined in `building-block-generator`. Every example property maps to `context.jsonld`; source-data blocks use real source samples with recorded provenance URLs; target-model blocks document coverage gaps in `description.md` under "Source-property coverage gaps"; transforms use every source property or list exclusions in `transforms.yaml`.
-2. **Cross-Block Property-Coverage Contract** — defined in `data-usability-checkin-agent`. Restates the four rules over the BB1 / BB2 / BB3 triple and additionally requires BB3 to surface BB2's gap section.
-
-## Vocabulary priority
-
-When mapping properties to semantic vocabularies, agents apply this order:
-
-NERC → CF Convention → Darwin Core → OBIS / WoRMS → ICES → EMODnet → SOSA / SSN → OIM → OGC / ISO → schema.org (fallback).
-
-## Portability across coding agents
-
-Most of the content in `.claude/` is platform-agnostic Markdown; the *frontmatter* and *invocation semantics* are not portable.
-
-| Concern | Claude Code | GitHub Copilot | OpenAI Codex |
-|---|---|---|---|
-| Repo-level guidance | `CLAUDE.md` (also reads `AGENTS.md`) | `.github/copilot-instructions.md` | `AGENTS.md` |
-| Subagent files | `.claude/agents/*.md` | `.github/chatmodes/*.chatmode.md` | none — nested `AGENTS.md` |
-| Skills | `.claude/skills/<name>/SKILL.md` | none | none |
-| Slash commands | `.claude/commands/*.md` (`$ARGUMENTS`) | `.github/prompts/*.prompt.md` (`{{selection}}`) | none |
-| Tool allowlist | `tools: Read, Write, Bash` | `tools: ['read', 'edit', 'terminal']` | sandbox policy |
-
-What ports cleanly: agent body Markdown, examples, JSON snippets. What does not: frontmatter, templating, tool allowlists, the skill loader (Claude-only). For multi-agent-platform repos consider [Ruler](https://github.com/intellectronica/ruler) or a small generator script over a single source of truth.
-
-The legacy `.prompt.md` and `.prompts/*.md` files are Copilot-style standalone prompts kept for portability with non-Claude tooling; they duplicate the slash-command bodies under `.claude/commands/`.
-
-## Worked examples
-
-Case-study reports under [`docs/`](../docs/):
-
-- [`fmsdi-coastal-bblocks-process.md`](../docs/fmsdi-coastal-bblocks-process.md) — FMSDI 2024 best practices encoded as building blocks
-- [`nina-seapop-data-usability-checkin.md`](../docs/nina-seapop-data-usability-checkin.md) — Norwegian seabird tracking dataset, BB1 / BB2 / BB3 walkthrough
-- [`seadots-dt-interoperability-framework.md`](../docs/seadots-dt-interoperability-framework.md) — three-layer DT interoperability framework
-
-## References
-
-- [OGC Building Blocks Specification](https://opengeospatial.github.io/bblocks/)
-- [Building Block Structure](https://ogcincubator.github.io/bblocks-docs/create/structure)
-- [STAC Specification](https://stacspec.org/) and [STAC extensions](https://stac-extensions.github.io/)
-- [DCAT 3.0](https://www.w3.org/TR/vocab-dcat-3/) and [GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/)
-- [OGC API Records](https://ogcapi.ogc.org/records/)
-- [JSON-FG](https://docs.ogc.org/per/23-068.html)
-- [OIM (Oceans Information Model)](https://github.com/ILIAD-ocean-twin/OIM)
+NERC -> CF Convention -> Darwin Core -> OBIS/WoRMS -> ICES -> EMODnet -> SOSA/SSN -> OIM -> OGC/ISO -> schema.org fallback.

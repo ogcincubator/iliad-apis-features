@@ -3,6 +3,9 @@ name: metadata-extraction
 description: Use when extracting STAC/DCAT metadata from a data source — NetCDF, CSV/TSV, GeoJSON, COG, OGC services. Detects format, extracts title/description/spatial/temporal/vocabulary hints, and identifies missing required fields. Returns structured metadata ready to feed into STAC or DCAT generation agents.
 ---
 
+**Status**: stable · **Scope**: generic · **Building-block coupling**: none.  
+_Generic metadata extraction from data sources._
+
 # STAC and DCAT Metadata Extraction Skill
 
 ## Purpose

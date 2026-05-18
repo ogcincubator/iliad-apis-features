@@ -3,6 +3,9 @@ name: bblock-relevance
 description: Use when ranking existing OGC building blocks by their relevance to a candidate input — an example data file, free-text documentation, a service endpoint, and/or a metadata record. Computes six similarity dimensions (data/service type, property names, data-model structure, vocabulary IRIs, themes/keywords, vector-embedding cosine), aggregates them with configurable weights, and returns ranked bblocks grouped by `itemClass` (schema vs. schemaless) × intent (data vs. metadata). Vector-DB access is delegated to the `embedding-store` skill (backends configured in `.claude/embedding-store.yaml`); this skill only declares the backend name and the weight assigned to the embedding dimension. Extracts the relevance-ranking step previously embedded in the `check-in` command and the `data-usability-checkin-agent`.
 ---
 
+**Status**: pre-release · **Scope**: generic · **Building-block coupling**: none — uses `bblock-catalog` as the corpus.  
+_Just authored; six-dimension similarity scorer._
+
 # OGC Building Block Relevance Scorer
 
 ## Purpose
@@ -285,7 +288,7 @@ dimensions skipped  (none)
 
 - `bblock-catalog` skill — `.claude/skills/bblock-catalog/SKILL.md`
 - `check-in` command (delegates ranking here) — `.claude/commands/check-in.md`
-- `data-usability-checkin-agent` (delegates BB-selection ranking here) — `.claude/agents/data-usability-checkin-agent.md`
+- `data-usability-checkin-agent` (delegates BB-selection ranking here) — `.claude/agents/integrator/data-usability-checkin-agent.md`
 - ChromaDB — https://docs.trychroma.com/
 - Qdrant — https://qdrant.tech/documentation/
 - Pinecone — https://docs.pinecone.io/

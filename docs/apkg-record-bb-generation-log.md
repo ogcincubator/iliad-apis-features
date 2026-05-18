@@ -39,8 +39,8 @@ None. Proposed placement before editing; the user accepted by not redirecting.
 
 | File | Change |
 |---|---|
-| `.claude/agents/building-block-generator.md` | +35 lines — new "Quality Contract: Property Coverage" section; new workflow step 7 "Verify Property-Coverage Contract"; renumbered subsequent steps |
-| `.claude/agents/data-usability-checkin-agent.md` | 351 → 201 lines — replaced inline implementation with delegations to `metadata-dispatcher`, `building-block-generator`, `validation-agent`; added "Cross-Block Property-Coverage Contract" section; report template gained "Section 6 — Property-Coverage Contract Check" table |
+| `.claude/agents/generators/building-block-generator.md` | +35 lines — new "Quality Contract: Property Coverage" section; new workflow step 7 "Verify Property-Coverage Contract"; renumbered subsequent steps |
+| `.claude/agents/integrator/data-usability-checkin-agent.md` | 351 → 201 lines — replaced inline implementation with delegations to `metadata-dispatcher`, `building-block-generator`, `validation-agent`; added "Cross-Block Property-Coverage Contract" section; report template gained "Section 6 — Property-Coverage Contract Check" table |
 
 The four rules:
 
@@ -230,8 +230,8 @@ Sparsely populated registry properties (`temporal_coverage`, `license`, `maintai
 
 | File / dir | Action |
 |---|---|
-| `.claude/agents/building-block-generator.md` | modified — new property-coverage contract, workflow step 7 |
-| `.claude/agents/data-usability-checkin-agent.md` | modified — trimmed by 150 lines, delegations replace inline steps, cross-block contract added |
+| `.claude/agents/generators/building-block-generator.md` | modified — new property-coverage contract, workflow step 7 |
+| `.claude/agents/integrator/data-usability-checkin-agent.md` | modified — trimmed by 150 lines, delegations replace inline steps, cross-block contract added |
 | `.docs/AGENT-ECOSYSTEM.md` | created — canonical agent/skill/command reference (≈290 lines) |
 | `.metadata-generation-ecosystem.md` | removed (`git rm`) — stale subset of ecosystem |
 | `.docs/AGENT-ECOSYSTEM-ARCHITECTURE.md` | removed |

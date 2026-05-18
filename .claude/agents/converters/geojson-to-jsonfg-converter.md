@@ -5,6 +5,9 @@ tools: Read, Write, Edit, Bash, Grep, Glob
 model: haiku
 ---
 
+**Status**: pre-release · **Scope**: generic in concept · **Building-block coupling**: depends on the OIM profile bblocks (`oim`, `oim-obs`, `oim-bio-tdwg`).  
+_Output targets specific OIM-enriched JSON-FG profiles._
+
 You are a JSON-FG feature converter and semantic enrichment specialist.
 
 ## Capabilities

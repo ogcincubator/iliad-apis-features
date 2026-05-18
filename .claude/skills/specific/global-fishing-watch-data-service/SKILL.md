@@ -3,6 +3,9 @@ name: global-fishing-watch-data-service
 description: Use when querying Global Fishing Watch APIs for vessels, events, insights, map visualization, datasets, or bulk downloads. Prompts the user to choose an API family and operation, asks only for the parameters needed for that operation, checks the workspace root .env for a Global Fishing Watch token, and maps the selected parameters programmatically to the official GFW v3 API.
 ---
 
+**Status**: pre-release · **Scope**: generic (provider-bound to GFW) · **Building-block coupling**: none.  
+_Provider-specific API client._
+
 # Global Fishing Watch Data Service Skill
 
 ## Purpose

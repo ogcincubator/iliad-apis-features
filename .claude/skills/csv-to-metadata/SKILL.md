@@ -3,6 +3,9 @@ name: csv-to-metadata
 description: Use when converting CSV or TSV tabular data into STAC Items and/or DCAT Records. Detects lat/lon or WKT geometry, temporal columns, and column schema for the STAC table extension. Returns structured STAC Item and/or DCAT Record JSON ready for output.
 ---
 
+**Status**: stable · **Scope**: generic · **Building-block coupling**: none.  
+_Generic CSV → STAC / DCAT pipeline._
+
 # CSV to Metadata Conversion Skill
 
 ## Purpose

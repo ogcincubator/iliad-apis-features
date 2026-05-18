@@ -3,6 +3,9 @@ name: context-completeness-checker
 description: Use when checking whether every property key in a JSON-LD instance has a corresponding @id mapping in its @context. Walks the instance recursively, lists unmapped properties, ambiguous mappings (multiple @ids), and context terms that are declared but never used. Catches the silent "property without semantic mapping" failure that JSON Schema validation alone misses.
 ---
 
+**Status**: pre-release · **Scope**: generic · **Building-block coupling**: none.  
+_Just authored; works on any JSON-LD instance + context._
+
 # Context Completeness Checker Skill
 
 ## Purpose

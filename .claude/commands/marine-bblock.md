@@ -3,6 +3,9 @@ description: Discover marine data and generate a complete OGC building block fro
 argument-hint: <theme> [sources...]
 ---
 
+**Status**: stable · **Scope**: domain-specific (marine) · **Building-block coupling**: none.  
+_Marine bblock generation orchestrator._
+
 Discover marine datasets for `$ARGUMENTS` and generate a complete, validated OGC Building Block package using the `marine-content-specialist` and `building-block-generator` agents.
 
 Parse `$ARGUMENTS` as: `<marine-data-theme> [optional-sources]`

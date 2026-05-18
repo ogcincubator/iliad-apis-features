@@ -3,6 +3,9 @@ name: response-schema-validator
 description: Use when validating a JSON HTTP response body against a JSON Schema. Fetches the URL, parses the body, runs jsonschema validation, and returns a structured pass/fail report with the path and message of every error. Generic enough for STAC Items, DCAT Records, OGC API responses, or any other JSON output; used by pygeoapi-test-harness to validate rendered features against a bblock schema.
 ---
 
+**Status**: pre-release · **Scope**: generic · **Building-block coupling**: none.  
+_Just authored; JSON / JSON-Schema response validator._
+
 # Response Schema Validator Skill
 
 ## Purpose

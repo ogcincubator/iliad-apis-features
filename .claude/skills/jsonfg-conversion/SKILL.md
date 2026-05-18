@@ -3,6 +3,9 @@ name: jsonfg-conversion
 description: Use when converting GeoJSON features or FeatureCollections to JSON-FG with OIM semantic enrichment (links, place, conformsTo). Supports oim, oim-bio-tdwg, oim-obs profiles. Provides the Python conversion template used by the geojson-to-jsonfg-converter agent.
 ---
 
+**Status**: stable · **Scope**: generic in concept · **Building-block coupling**: depends on the OIM profile bblocks (`oim`, `oim-obs`, `oim-bio-tdwg`).  
+_Output targets specific OIM profiles._
+
 # GeoJSON to JSON-FG Conversion Skill
 
 ## Purpose

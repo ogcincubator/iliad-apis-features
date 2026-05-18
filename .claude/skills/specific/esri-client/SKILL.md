@@ -3,6 +3,9 @@ name: esri-client
 description: Use when the task involves ArcGIS REST services (FeatureServer, MapServer, ImageServer). Builds queries with where/outFields/bbox, handles tokens, and returns executed URLs for provenance. Use when marine or coastal data providers expose data via ArcGIS Online or ArcGIS Server.
 ---
 
+**Status**: stable · **Scope**: generic · **Building-block coupling**: none.  
+_ArcGIS REST queries._
+
 # ESRI Client MCP Skill
 
 ## Overview

@@ -3,6 +3,9 @@ name: bblock-catalog
 description: Use when answering questions about the OGC building-block structure of this repository and the registers it imports — what blocks exist, what each one is for, which are vector vs. gridded vs. ontology vs. metadata, what is locally hosted vs. imported, what depends on what. Walks _sources/ for local blocks, reads bblocks-config.yaml for imports, fetches each imported repo's register.json, classifies blocks by category, and answers ad-hoc natural-language queries with a compact tabular summary plus optional drill-downs. With `include_embeddings=true` also returns embedding coordinates per matched block (looked up in the vector backends configured for the `bblock-relevance` skill), for downstream clustering / projection / similarity tooling.
 ---
 
+**Status**: pre-release · **Scope**: generic · **Building-block coupling**: none — reads `bblocks-config.yaml` + imported registers.  
+_Inventory + classification + (optional) embedding-coordinate lookup._
+
 # OGC Building Block Catalog Skill
 
 ## Purpose

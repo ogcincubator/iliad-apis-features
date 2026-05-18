@@ -3,6 +3,9 @@ name: web-browsing-mcp
 description: Use for HTTP fetches and API browsing during data discovery — marine data catalogues, vocabulary services (NERC, CF, Darwin Core, OBIS, ICES), and OGC service endpoints. Returns executed URLs for provenance. Use for any task requiring web-based data retrieval, API calls, or vocabulary lookups from authoritative marine sources.
 ---
 
+**Status**: stable · **Scope**: generic but marine vocabs priorised · **Building-block coupling**: none.  
+_Generic web fetch helper._
+
 # Web Browsing MCP Skill
 
 ## Overview

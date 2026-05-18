@@ -3,6 +3,9 @@ description: Spin up a local pygeoapi serving one OGC building block, render its
 argument-hint: <path-to-_sources/block-name> [--collection-id <id>] [--keep-running]
 ---
 
+**Status**: pre-release · **Scope**: generic · **Building-block coupling**: none.  
+_Just authored; runs the pygeoapi test harness._
+
 Run the pygeoapi test harness against the OGC building block at `$ARGUMENTS` using the `pygeoapi-test-harness` agent.
 
 The harness:

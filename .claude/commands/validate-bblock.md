@@ -3,6 +3,9 @@ description: Validate an OGC building block via Docker container (schema, contex
 argument-hint: <path-to-_sources/block-name>
 ---
 
+**Status**: stable · **Scope**: generic · **Building-block coupling**: none.  
+_Wraps `validation-agent`._
+
 Validate the OGC building block at `$ARGUMENTS` using the `validation-agent`.
 
 Run a full validation including:

@@ -5,6 +5,9 @@ tools: Read, Write, Edit, Bash, WebFetch, Grep, Glob
 model: sonnet
 ---
 
+**Status**: stable · **Scope**: generic · **Building-block coupling**: none.  
+_Routes to STAC / DCAT generators by format._
+
 You are a metadata generation workflow dispatcher and orchestrator.
 
 ## Capabilities

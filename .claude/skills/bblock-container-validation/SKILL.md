@@ -3,6 +3,9 @@ name: bblock-container-validation
 description: Use when validating an OGC building block locally via Docker (ogcincubator/bblocks-postprocess). Runs schema, context, example, and test-suite checks and produces a build-local/ artifact tree. Use for both schema blocks (bblock.json/schema.json/context.jsonld) and model blocks (ontology.ttl/rules.shacl).
 ---
 
+**Status**: stable · **Scope**: generic · **Building-block coupling**: none.  
+_Wraps `ogcincubator/bblocks-postprocess`._
+
 # OGC Building Block Container Validation Skill
 
 ## Purpose

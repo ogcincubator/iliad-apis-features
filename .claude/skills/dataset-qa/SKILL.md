@@ -3,6 +3,9 @@ name: dataset-qa
 description: Use when assessing a candidate dataset against the SeaDOTs QualityMeasures framework. Accepts a URL or a free-text/markdown data description, scores the seven framework dimensions (1, 2a, 2b, 2c, 3, 4, 5), derives the six QI scores (lineage, representativeness, temporal, spatial, method, uncertainty), computes U_data and readiness, and emits two artefacts — a STAC-compliant Item JSON and a markdown table. Use for SES impact-assessment input registers, indicator-quality-requirement evidence, and digital-twin dataset acceptance.
 ---
 
+**Status**: experimental (PoC, limited functionality) · **Scope**: repo / project-specific (SeaDOTs QualityMeasures framework) · **Building-block coupling**: conceptually depends on `indicator-quality-requirement` and `ses-impact-assessment` bblocks.  
+_Outputs reference SeaDOTs bblock identifiers and the QualityMeasures framework._
+
 # Dataset QA Skill — SeaDOTs QualityMeasures
 
 ## Purpose

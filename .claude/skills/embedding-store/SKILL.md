@@ -3,6 +3,9 @@ name: embedding-store
 description: Use when reading, writing, or querying vector embeddings for OGC building blocks (or any other corpus) against a configurable set of vector-database backends — Chroma, Qdrant, Pinecone, OpenAI (parquet-cached), and precomputed parquet. Single dispatch layer that hides backend-specific calls behind a normalised interface (`get`, `upsert`, `query`, `delete`, `list-backends`, `health`). Called by `bblock-catalog` (read-only lookups) and `bblock-relevance` (read + write + similarity). Embeds text on the fly using each backend's configured model when only text is supplied.
 ---
 
+**Status**: pre-release · **Scope**: generic · **Building-block coupling**: none.  
+_Just authored; vector-DB dispatcher (Chroma / Qdrant / Pinecone / OpenAI / precomputed)._
+
 # Embedding Store Dispatcher Skill
 
 ## Purpose

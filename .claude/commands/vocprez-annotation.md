@@ -3,6 +3,9 @@ description: Add DCAT and SKOS annotations to RDF/Turtle for VocPrez/Prez UI vis
 argument-hint: <turtle-content-or-path>
 ---
 
+**Status**: stable · **Scope**: generic in concept · **Building-block coupling**: none (uses SKOS / DCAT vocabularies, not a specific bblock).  
+_Annotates Turtle for VocPrez / Prez rendering._
+
 Add DCAT and SKOS annotations to the RDF/Turtle in `$ARGUMENTS` so it is fully browsable in the VocPrez UI.
 
 `$ARGUMENTS` may be a file path to a `.ttl` file, or inline Turtle content.

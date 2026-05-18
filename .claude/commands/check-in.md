@@ -3,6 +3,9 @@ description: Register a new data source and stage an ILIAD OGC building block fo
 argument-hint: <path-or-url> [--name=<bb-id>] [--title="..."]
 ---
 
+**Status**: experimental (PoC, limited functionality) · **Scope**: repo-specific to iliad-apis-features · **Building-block coupling**: depends on `_sources/_staging/` and the transformers under `checkin/`.  
+_Bound to this repo's check-in wizard._
+
 Run the check-in wizard for `$ARGUMENTS`. The tool sniffs the data, profiles it, matches against existing building blocks in `_sources/`, proposes related blocks, auto-maps properties to locally-known vocabularies (`_sources/**/context.jsonld` + `OIM/*.ttl`), lets the user acknowledge mappings, picks a transformer from `checkin/transformers/`, executes it, validates the output against the transformer's canonical schema, and writes a staged bblock to `_sources/_staging/<bb-id>/`.
 
 ## How to run

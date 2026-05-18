@@ -3,6 +3,9 @@ name: ogc-web-services-client
 description: Use whenever the task involves querying OGC web services (WMS, WFS, WMTS, CSW, OGC API). Handles GetCapabilities, GetMap, GetFeature, bbox/CRS parameters, and returns executed URLs for provenance. Ideal for marine data agent tasks accessing HELCOM, EMODnet, ICES, and other OGC-compliant geospatial services.
 ---
 
+**Status**: stable · **Scope**: generic · **Building-block coupling**: none.  
+_OGC web-service client (WMS / WFS / OGC API)._
+
 # OGC Web Services Client MCP Skill
 
 ## Overview

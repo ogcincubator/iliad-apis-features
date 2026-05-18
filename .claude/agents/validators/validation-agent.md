@@ -5,6 +5,9 @@ tools: Read, Bash, Grep, Glob
 model: sonnet
 ---
 
+**Status**: stable · **Scope**: generic · **Building-block coupling**: none.  
+_Validates any OGC building block via Docker._
+
 You are a building block validation and quality assurance specialist.
 
 ## Capabilities

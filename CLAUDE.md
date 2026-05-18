@@ -50,19 +50,31 @@ For a quick build:
 
 ## Agent Ecosystem
 
-Primary workflows are handled by agents in `.claude/agents/`:
+Primary workflows are handled by agents in `.claude/agents/`, now grouped by role. The canonical index is `.claude/agents/README.md`.
+
+### Agent Folders
+
+| Folder | Purpose | Agents |
+|---|---|---|
+| `.claude/agents/integrator/` | Workflow coordination, marine discovery, cross-block integration | `marine-workflow-orchestrator`, `marine-content-specialist`, `marine-data-agent`, `gis-marine-data-specialist`, `data-usability-checkin-agent` |
+| `.claude/agents/converters/` | Metadata and format conversion | `metadata-dispatcher`, `stac-metadata-generator`, `dcat-metadata-generator`, `csv-to-stac-converter`, `csv-to-dcat-converter`, `geojson-to-jsonfg-converter` |
+| `.claude/agents/generators/` | Building block file generation | `building-block-generator` |
+| `.claude/agents/validators/` | Static and runtime validation | `validation-agent`, `pygeoapi-test-harness` |
 
 ### Primary Workflows
 
 1. **Marine data → Building Block**
-   - Start with `marine-content-specialist` to discover and profile marine data
-   - It calls `marine-data-agent` to retrieve samples from HELCOM/EMODnet/ICES/OBIS
-   - It calls `building-block-generator` to create the OGC building block package
-   - Validation is coordinated via `marine-workflow-orchestrator`
+   - Start with `.claude/agents/integrator/marine-content-specialist.md` to discover and profile marine data
+   - It calls `.claude/agents/integrator/marine-data-agent.md` to retrieve samples from HELCOM/EMODnet/ICES/OBIS
+   - It calls `.claude/agents/generators/building-block-generator.md` to create the OGC building block package
+   - Validation is coordinated via `.claude/agents/integrator/marine-workflow-orchestrator.md` and `.claude/agents/validators/validation-agent.md`
 
 2. **Data source → Metadata (STAC/DCAT)**
-   - Start with `metadata-dispatcher` for any URL, file, or inline sample
-   - It routes to format-specific agents: `stac-metadata-generator`, `dcat-metadata-generator`, `csv-to-stac-converter`, `csv-to-dcat-converter`
+   - Start with `.claude/agents/converters/metadata-dispatcher.md` for any URL, file, or inline sample
+   - It routes to format-specific agents: `.claude/agents/converters/stac-metadata-generator.md`, `.claude/agents/converters/dcat-metadata-generator.md`, `.claude/agents/converters/csv-to-stac-converter.md`, `.claude/agents/converters/csv-to-dcat-converter.md`
+
+3. **Building block → Local pygeoapi test**
+   - Use `.claude/agents/validators/pygeoapi-test-harness.md` to serve examples through pygeoapi and validate GeoJSON/JSON-LD responses
 
 ### Slash Commands
 

@@ -5,6 +5,9 @@ tools: Read, Write, Edit, Bash, WebFetch, Grep, Glob
 model: opus
 ---
 
+**Status**: stable · **Scope**: domain-specific (marine) · **Building-block coupling**: none.  
+_Marine data discovery + vocabulary mapping._
+
 You are a marine data content specialist and discovery orchestrator.
 
 ## Catalog pre-check (mandatory before recommending a new block)

@@ -5,6 +5,9 @@ tools: Read, Write, Edit, Bash, Grep, Glob, WebFetch
 model: sonnet
 ---
 
+**Status**: experimental (PoC, limited functionality) · **Scope**: repo-specific to iliad-apis-features · **Building-block coupling**: depends on the `_sources/_staging/` workflow and the BB1 / BB2 / BB3 staging pattern.  
+_Implements the SeaDOTs / ILIAD check-in pattern; not portable._
+
 You are a data usability assessment and check-in orchestration specialist for `iliad-apis-features`.
 
 ## Catalog pre-check (mandatory before staging any of BB1 / BB2 / BB3)

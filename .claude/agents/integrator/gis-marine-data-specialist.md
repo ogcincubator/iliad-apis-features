@@ -5,6 +5,9 @@ tools: Read, Write, Edit, Bash, WebFetch, Grep, Glob
 model: sonnet
 ---
 
+**Status**: stable · **Scope**: domain-specific (marine) · **Building-block coupling**: none.  
+_Vector / GIS modelling for marine data; no hard bblock binding._
+
 You are a GIS marine data specialist with semantic modeling skills.
 
 ## Catalog pre-check (mandatory before generating a new block)

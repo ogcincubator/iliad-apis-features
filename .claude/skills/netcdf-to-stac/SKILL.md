@@ -3,6 +3,9 @@ name: netcdf-to-stac
 description: Use when converting a NetCDF file to a STAC Item with the datacube, scientific, projection, and (when applicable) eo/raster/processing extensions. Extracts dimensions, variables, CF-convention metadata (standard_name, long_name, units, time bounds), and spatial extent. Returns a standards-compliant STAC Item JSON.
 ---
 
+**Status**: stable · **Scope**: generic · **Building-block coupling**: none.  
+_Generic NetCDF → STAC Item conversion._
+
 # NetCDF to STAC Conversion Skill
 
 ## Purpose

@@ -3,11 +3,14 @@ name: pygeoapi-jsonld-template
 description: Use when generating Jinja2 templates that render a pygeoapi feature collection as JSON-LD using a specific OGC building block's context.jsonld. Produces minimal template overrides for the items endpoint only (single feature + feature collection); leaves all other pygeoapi pages untouched. Use after pygeoapi-config-generator; not for non-bblock pygeoapi customisation.
 ---
 
+**Status**: pre-release · **Scope**: generic · **Building-block coupling**: none.  
+_Just authored; Jinja2 templates per bblock context._
+
 # pygeoapi JSON-LD Template Skill
 
 ## Purpose
 
-Generate Jinja2 templates that override the default pygeoapi JSON-LD output for one collection so that:
+Generate harness JSON-LD support files for one collection. Prefer pygeoapi's built-in `linked-data.context` support when available; generate Jinja2 templates only as a fallback/diagnostic artefact, because `geopython/pygeoapi:latest` handles `f=jsonld` before the items templates in the tested path.
 
 - the `@context` is the bblock's own `context.jsonld` (not pygeoapi's generic GeoSPARQL/Schema.org one),
 - every feature property is rendered as-is (the context drives the semantics), and
@@ -48,7 +51,7 @@ Read `<block>/context.jsonld`. Validate it parses as JSON. If the file is missin
 
 ### Phase 2 — emit template tree
 
-Write the **minimal** override tree (paths match pygeoapi's template loader; everything else falls back to defaults):
+Write the **minimal** override tree as a fallback/diagnostic artefact (paths match pygeoapi's template loader; everything else falls back to defaults):
 
 ```
 build-local/test-harness/<block>/templates/
@@ -117,32 +120,66 @@ build-local/test-harness/<block>/templates/
 }
 ```
 
-### Phase 4 — injection helper
+### Phase 4 — optional local patch helper
 
-pygeoapi templates receive `data` from the renderer but not arbitrary file content. Emit a small Python startup hook `pygeoapi_jsonld_context.py` alongside the templates that exposes `bblock_context` via Jinja's `globals`:
+The tested `geopython/pygeoapi:latest` Docker image does **not** execute `PYGEOAPI_STARTUP_SCRIPT`. Do not emit instructions that depend on that environment variable.
+
+When the harness needs to patch local response behaviour, emit `build-local/test-harness/<block>/sitecustomize.py` and have `pygeoapi-local-runner` mount it to `/etc/python3.10/sitecustomize.py`. Preserve the image's default apport hook at the top of this file.
+
+For APKG/Records-style collections, use this helper to add a harness-only `itemSchema` member to `/collections/<collection_id>?f=json` and append a `rel=describedby` link. The schema should be loaded from `/pygeoapi/data/schema.json`. Record values remain under `/collections/<collection_id>/items`; the collection endpoint should expose schema/description, not duplicate all item values.
 
 ```python
-# Loaded by pygeoapi-local-runner via PYGEOAPI_STARTUP_SCRIPT
-import json, os
-from pygeoapi.flask_app import APP
+import json
 
-_ctx_path = os.environ.get("BBLOCK_CONTEXT", "/pygeoapi/data/context.jsonld")
-with open(_ctx_path) as f:
-    APP.jinja_env.globals["bblock_context"] = json.load(f)
+try:
+    import apport_python_hook
+except ImportError:
+    pass
+else:
+    apport_python_hook.install()
+
+from pygeoapi.api import API
+
+SCHEMA_PATH = "/pygeoapi/data/schema.json"
+COLLECTION_ID = "<collection_id>"
+
+with open(SCHEMA_PATH) as schema_file:
+    ITEM_SCHEMA = json.load(schema_file)
+
+_describe_collections = API.describe_collections
+
+def describe_collections_with_item_schema(self, request, dataset=None):
+    headers, status, content = _describe_collections(self, request, dataset)
+    try:
+        body = json.loads(content)
+    except (TypeError, json.JSONDecodeError):
+        return headers, status, content
+
+    if dataset == COLLECTION_ID:
+        body["itemSchema"] = ITEM_SCHEMA
+        body.setdefault("links", []).append({
+            "type": "application/schema+json",
+            "rel": "describedby",
+            "title": "Full item schema",
+            "href": f"{self.config['server']['url']}/collections/{dataset}?f=json#itemSchema",
+        })
+        return headers, status, json.dumps(body, indent=4)
+
+    return headers, status, content
+
+API.describe_collections = describe_collections_with_item_schema
 ```
-
-`pygeoapi-local-runner` mounts this script and sets `BBLOCK_CONTEXT` to the bblock's `context.jsonld` path.
 
 ## Outputs
 
 - template tree at `${out}`
-- `pygeoapi_jsonld_context.py` startup hook
+- optional `sitecustomize.py` local patch helper
 - manifest:
 
 ```json
 {
   "templates": "build-local/test-harness/<block>/templates",
-  "startup_hook": "build-local/test-harness/<block>/pygeoapi_jsonld_context.py",
+  "sitecustomize": "build-local/test-harness/<block>/sitecustomize.py",
   "collection_id": "<block-name>",
   "format_aliases": ["jsonld"]
 }
@@ -151,8 +188,8 @@ with open(_ctx_path) as f:
 ## Notes
 
 - Templates use `tojson` for safe JSON escaping — no manual string interpolation of feature values.
-- The `@context` is embedded **inline** as the parsed JSON object, not as a URL — this lets the harness validate the rendered output offline without pygeoapi needing internet access.
-- pygeoapi's default templates for HTML / GeoJSON / OpenAPI remain untouched. Only `index.jsonld.j2` and `item.jsonld.j2` are added.
+- The `@context` is embedded **inline** in `pygeoapi-config.yml` as the parsed JSON object/list, not as a URL or file path — this lets the harness validate the rendered output offline and avoids pygeoapi `.copy()` failures on string paths.
+- pygeoapi's default templates for HTML / GeoJSON / OpenAPI remain untouched. `index.jsonld.j2` and `item.jsonld.j2` are fallback artefacts, not the primary JSON-LD path for the tested Docker image.
 
 ## References
 
