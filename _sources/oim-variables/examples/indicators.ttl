@@ -8,7 +8,7 @@
 @prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
 @prefix indo: <https://w3id.org/indicators/marine/obs/> .
 @prefix ind: <https://w3id.org/indicators/marine/> .
-@prefix inda: <https://w3id.org/indicators/marine/activity> .
+@prefix inda: <https://w3id.org/indicators/marine/activity/> .
 @prefix indrel: <https://w3id.org/indicators/marine/relationship/> .
 @prefix prop-rel: <https://w3id.org/ogc/hosted/seadots/prop-rel/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -37,7 +37,6 @@ ind:indicators-scheme a skos:ConceptScheme ;
                        indo:rainfall-anomaly , 
                        indo:soil-moisture-anomaly , 
                        indo:vegetation-condition-anomaly ,
-                       indo:fisheries-production1 ,
                        indo:number-of-turbines ,
                        indo:area-use-by-wind-park ,
                        indo:number-of-jobs ,
@@ -106,9 +105,8 @@ indo:fisheries-production a sosa:observedProperty, skos:Concept ;
     rdfs:comment "The amount of fish caught in a given area over a specific period of time." ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/Fisheries_production> ;
     owl:sameAs <http://aims.fao.org/aos/agrovoc/c_2934> ;
-    prov:wasGeneratedBy "description of th action" ;
-    prov:wasGeneratedBy "source of the concept definition" ;
-    prov:providedBy "http://seadots.eu" .
+    skos:scopeNote "Concept definition adapted from AGROVOC and the SeaDOTs cross-impact model." ;
+    prov:wasAttributedTo <http://seadots.eu> .
 
 
 
@@ -168,7 +166,7 @@ indo:submerged-infrastructure-area-utsira-design a sosa:observedProperty, skos:C
     skos:broader indo:submerged-infrastructure-area ;
     skos:inScheme ind:indicators-scheme ;
     qudt:hasQuantityKind quantitykind:Area ;
-    example <https://veiledere.nve.no/havvind/strategisk-konsekvensutredning-av-vindkraft-til-havs/> .
+    skos:example <https://veiledere.nve.no/havvind/strategisk-konsekvensutredning-av-vindkraft-til-havs/> .
 
 indo:benthic-biomass-density-mareano a sosa:observedProperty, skos:Concept ;
     rdfs:label "Benthic biomass density, MAREANO"@en ;
@@ -177,7 +175,7 @@ indo:benthic-biomass-density-mareano a sosa:observedProperty, skos:Concept ;
     skos:broader indo:baseline-benthic-biomass-density ;
     skos:inScheme ind:indicators-scheme ;
     qudt:hasQuantityKind quantitykind:SurfaceDensity ;
-    dct:seeAlso <https://mareano.no/> .
+    rdfs:seeAlso <https://mareano.no/> .
 
 indo:benthic-biomass-density-imr-baseline a sosa:observedProperty, skos:Concept ;
     rdfs:label "Benthic biomass density, IMR baseline"@en ;
@@ -186,7 +184,7 @@ indo:benthic-biomass-density-imr-baseline a sosa:observedProperty, skos:Concept 
     skos:broader indo:baseline-benthic-biomass-density ;
     skos:inScheme ind:indicators-scheme ;
     qudt:hasQuantityKind quantitykind:SurfaceDensity ;
-    dct:seeAlso <https://www.hi.no/> .
+    rdfs:seeAlso <https://www.hi.no/> .
 
 indo:reef-aggregation-index-mytilus a sosa:observedProperty, skos:Concept ;
     rdfs:label "Reef aggregation index for Mytilus edulis"@en ;
@@ -195,7 +193,7 @@ indo:reef-aggregation-index-mytilus a sosa:observedProperty, skos:Concept ;
     skos:broader indo:reef-aggregation-index ;
     skos:inScheme ind:indicators-scheme ;
     qudt:hasQuantityKind quantitykind:Dimensionless ;
-    dct:seeAlso <https://doi.org/10.5670/oceanog.2020.405> .
+    rdfs:seeAlso <https://doi.org/10.5670/oceanog.2020.405> .
 
 indo:reef-aggregation-index-buccinum a sosa:observedProperty, skos:Concept ;
     rdfs:label "Reef aggregation index for Buccinum undatum"@en ;
@@ -204,7 +202,7 @@ indo:reef-aggregation-index-buccinum a sosa:observedProperty, skos:Concept ;
     skos:broader indo:reef-aggregation-index ;
     skos:inScheme ind:indicators-scheme ;
     qudt:hasQuantityKind quantitykind:Dimensionless ;
-    dct:seeAlso <https://www.windfloat-atlantic.com/> .
+    rdfs:seeAlso <https://www.windfloat-atlantic.com/> .
 
 indo:reef-aggregation-index-asterias a sosa:observedProperty, skos:Concept ;
     rdfs:label "Reef aggregation index for Asterias rubens"@en ;
@@ -221,7 +219,7 @@ indo:colonisation-time-factor-default a sosa:observedProperty, skos:Concept ;
     skos:broader indo:colonisation-time-factor ;
     skos:inScheme ind:indicators-scheme ;
     qudt:hasQuantityKind quantitykind:Dimensionless ;
-    dct:seeAlso <https://doi.org/10.5670/oceanog.2020.405> .
+    rdfs:seeAlso <https://doi.org/10.5670/oceanog.2020.405> .
 
 ind:ind-rel-scheme a skos:ConceptScheme ;
     dcterms:isPartOf ind:catalog ; # Backlink for discovery
