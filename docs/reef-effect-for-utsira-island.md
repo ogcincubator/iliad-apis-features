@@ -153,7 +153,7 @@ Once you add it:
 Itt will generate you the baoundaries of the calculation in the following form
 
 Three new bblocks added to _sources/
-
+```
   _sources/
   ├── experiment/                              ← experiment record (1 example)
   │   ├── bblock.json                          → ogc.hosted.seadots.experiment
@@ -196,7 +196,8 @@ Three new bblocks added to _sources/
           ├── reef_biomass_ge parqupt.json     rol =pcimary result   aggregation=sum-over-i
           ├── sdac_catalog.jDon m              role=catalog
           └── prov_record.json            r   rrole=provenance URI   conformsTo CWLProv 0.6
-  
+```
+
   Composition pattern
   Each experiment-input carries its own equationBinding and parameterBinding.cwlInput, so a consumer can resolve any one input independently and know both which equation symbol it parameterises and which
   The experiment record         no input/output payload — it references each as a Link:
