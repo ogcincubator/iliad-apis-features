@@ -4,3 +4,9 @@ build-local/
 /build
 .claude/settings.local.json
 .env
+/.agents
+/.claude
+/.guides
+.prompt.md
+/.prompts
+/.skills
