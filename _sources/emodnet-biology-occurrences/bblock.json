@@ -1,0 +1,47 @@
+{
+  "id": "ogc.hosted.iliad.api.features.emodnet-biology-occurrences",
+  "name": "EMODnet Biology Occurrences (GeoParquet)",
+  "abstract": "Darwin Core occurrence records of marine biodiversity from EMODnet Biology, packaged as GeoParquet 1.0.0, accessed via the EDITO STAC catalog. Covers global marine species observations with WoRMS Aphia identifiers, taxon hierarchy, sampling metadata, and WKB-encoded Point geometries.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-05-22T00:00:00Z",
+  "dateOfLastChange": "2026-05-22",
+  "version": "0.1.0",
+  "itemClass": "schema",
+  "tags": [
+    "marine",
+    "biodiversity",
+    "darwin-core",
+    "emodnet",
+    "edito",
+    "occurrence",
+    "geoparquet",
+    "worms",
+    "obis"
+  ],
+  "sources": [
+    {
+      "title": "EMODnet Biology marine biodiversity observations (EDITO STAC)",
+      "link": "https://api.dive.edito.eu/data/collections/emodnet-occurrence_data"
+    },
+    {
+      "title": "EMODnet Biology GeoParquet on EDITO/CloudFerro S3",
+      "link": "https://s3.waw3-1.cloudferro.com/emodnet/emodnet_biology/12639/"
+    },
+    {
+      "title": "Darwin Core Terms",
+      "link": "https://dwc.tdwg.org/terms/"
+    },
+    {
+      "title": "World Register of Marine Species (WoRMS)",
+      "link": "https://www.marinespecies.org/"
+    }
+  ],
+  "links": [
+    {
+      "href": "https://api.dive.edito.eu/data/collections/emodnet-occurrence_data",
+      "rel": "related",
+      "type": "application/json",
+      "title": "EDITO STAC collection"
+    }
+  ]
+}

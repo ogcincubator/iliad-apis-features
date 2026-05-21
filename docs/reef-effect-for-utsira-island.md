@@ -133,8 +133,7 @@ We need to see which one is most reliable/recent/accurate.
 I see in the the AI output ir proposes
 https://www.hi.no/api/benthic-biomass-baseline
 
-It is fine if cover my area and key species I am interested in, maybe there is something in EDITO/EMODnet but this one 
-
+It is fine if cover my area and key species I am interested in, is quite recent (2024)
 
 # fully autonomous calculations
 

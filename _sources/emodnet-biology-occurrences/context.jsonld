@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "dwc": "http://rs.tdwg.org/dwc/terms/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "geojson": "https://purl.org/geojson/vocab#",
+    "worms": "http://marinespecies.org/aphia.php?p=taxdetails&id=",
+    "emodnet": "http://www.emodnet-biology.eu/data/",
+
+    "id": "@id",
+    "type": "@type",
+    "geometry": "geojson:geometry",
+    "properties": "@nest",
+
+    "IMISDatasetURI": {
+      "@id": "dcterms:source",
+      "@type": "@id"
+    },
+    "IMISDatasetId": "dcterms:identifier",
+    "occurrenceID": {
+      "@id": "dwc:occurrenceID"
+    },
+    "acceptedScientificName": {
+      "@id": "dwc:acceptedNameUsage"
+    },
+    "aphiaid": {
+      "@id": "dwc:taxonID"
+    },
+    "aphia_uri": {
+      "@id": "dwc:taxonConceptID",
+      "@type": "@id"
+    },
+    "aphia_urn": {
+      "@id": "dwc:nameAccordingToID"
+    },
+    "aphiaidaccepted": {
+      "@id": "emodnet:aphiaidaccepted"
+    },
+    "aphiaidaccepted_uri": {
+      "@id": "emodnet:aphiaidaccepted_uri",
+      "@type": "@id"
+    },
+    "basisOfRecord": {
+      "@id": "dwc:basisOfRecord"
+    },
+    "catalogNumber": {
+      "@id": "dwc:catalogNumber"
+    },
+    "collectionCode": {
+      "@id": "dwc:collectionCode"
+    },
+    "collectiondate": {
+      "@id": "dcterms:date",
+      "@type": "xsd:dateTime"
+    },
+    "kingdom": {
+      "@id": "dwc:kingdom"
+    },
+    "phylum": {
+      "@id": "dwc:phylum"
+    },
+    "class": {
+      "@id": "dwc:class"
+    },
+    "order": {
+      "@id": "dwc:order"
+    },
+    "family": {
+      "@id": "dwc:family"
+    },
+    "genus": {
+      "@id": "dwc:genus"
+    },
+    "species": {
+      "@id": "dwc:specificEpithet"
+    },
+    "scientificName": {
+      "@id": "dwc:scientificName"
+    },
+    "scientificNameAuthorship": {
+      "@id": "dwc:scientificNameAuthorship"
+    },
+    "decimalLatitude": {
+      "@id": "dwc:decimalLatitude",
+      "@type": "xsd:double"
+    },
+    "decimalLongitude": {
+      "@id": "dwc:decimalLongitude",
+      "@type": "xsd:double"
+    },
+    "coordinatePrecision": {
+      "@id": "dwc:coordinatePrecision",
+      "@type": "xsd:double"
+    },
+    "geodeticDatum": {
+      "@id": "dwc:geodeticDatum"
+    },
+    "eventDate": {
+      "@id": "dwc:eventDate"
+    },
+    "eventID": {
+      "@id": "dwc:eventID"
+    },
+    "eventType": {
+      "@id": "dwc:eventType"
+    },
+    "institutionCode": {
+      "@id": "dwc:institutionCode"
+    },
+    "country": {
+      "@id": "dwc:country"
+    },
+    "continentocean": {
+      "@id": "dwc:continent"
+    },
+    "stateProvince": {
+      "@id": "dwc:stateProvince"
+    },
+    "occurrenceStatus": {
+      "@id": "dwc:occurrenceStatus"
+    },
+    "individualCount": {
+      "@id": "dwc:individualCount",
+      "@type": "xsd:double"
+    },
+    "minimumdepth": {
+      "@id": "dwc:minimumDepthInMeters",
+      "@type": "xsd:double"
+    },
+    "maximumdepth": {
+      "@id": "dwc:maximumDepthInMeters",
+      "@type": "xsd:double"
+    },
+    "minimumelevation": {
+      "@id": "dwc:minimumElevationInMeters",
+      "@type": "xsd:double"
+    },
+    "maximumelevation": {
+      "@id": "dwc:maximumElevationInMeters",
+      "@type": "xsd:double"
+    },
+    "samplingProtocol": {
+      "@id": "dwc:samplingProtocol"
+    },
+    "samplingEffort": {
+      "@id": "dwc:samplingEffort"
+    },
+    "sampleSizeValue": {
+      "@id": "dwc:sampleSizeValue",
+      "@type": "xsd:float"
+    },
+    "sampleSizeUnit": {
+      "@id": "dwc:sampleSizeUnit"
+    },
+    "organismQuantity": {
+      "@id": "dwc:organismQuantity"
+    },
+    "organismQuantityType": {
+      "@id": "dwc:organismQuantityType"
+    },
+    "taxonID": {
+      "@id": "dwc:taxonID"
+    },
+    "taxonConceptID": {
+      "@id": "dwc:taxonConceptID"
+    },
+    "taxonrankid": {
+      "@id": "emodnet:taxonrankid",
+      "@type": "xsd:integer"
+    },
+    "identifiedBy": {
+      "@id": "dwc:identifiedBy"
+    },
+    "identificationVerificationStatus": {
+      "@id": "dwc:identificationVerificationStatus"
+    },
+    "typeStatus": {
+      "@id": "dwc:typeStatus"
+    },
+    "dynamicProperties": {
+      "@id": "dwc:dynamicProperties"
+    },
+    "dataGeneralizations": {
+      "@id": "dwc:dataGeneralizations"
+    },
+    "verbatimDepth": {
+      "@id": "dwc:verbatimDepth"
+    },
+    "verbatimIdentification": {
+      "@id": "dwc:verbatimIdentification"
+    }
+  }
+}

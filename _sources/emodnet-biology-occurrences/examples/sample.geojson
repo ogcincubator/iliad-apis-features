@@ -1,0 +1,411 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "108518916",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.597816696,
+          40.61729997
+        ]
+      },
+      "properties": {
+        "id": 108518916,
+        "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
+        "occurrenceID": "IRTA-PSQAM-ALFACS-PA-2019-11-25_urn:lsid:marinespecies.org:taxname:162748",
+        "acceptedScientificName": "Pyrodinium",
+        "aphiaid": 162748,
+        "aphia_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=162748",
+        "aphia_urn": "urn:lsid:marinespecies.org:taxname:162748",
+        "aphiaidaccepted": 162748,
+        "aphiaidaccepted_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=162748",
+        "basisOfRecord": "MaterialSample",
+        "catalogNumber": "IRTA-PSQAM-ALFACS-PA-2019-11-25_urn:lsid:marinespecies.org:taxname:162748",
+        "kingdom": "Chromista",
+        "phylum": "Myzozoa",
+        "class": "Dinophyceae",
+        "order": "Gonyaulacales",
+        "family": "Pyrocystaceae",
+        "genus": "Pyrodinium",
+        "scientificName": "Pyrodinium",
+        "scientificNameAuthorship": "L.Plate, 1906",
+        "decimalLatitude": 40.61729997,
+        "decimalLongitude": 0.597816696,
+        "collectiondate": "2019-11-25T00:00:00+00:00",
+        "institutionCode": "IRTA",
+        "occurrenceStatus": "absent",
+        "minimumdepth": 0.5,
+        "maximumdepth": 0.5,
+        "IMISDatasetId": 6456
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "106756722",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.602466641,
+          40.60760002
+        ]
+      },
+      "properties": {
+        "id": 106756722,
+        "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
+        "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149553",
+        "acceptedScientificName": "Gomphonema",
+        "aphiaid": 149553,
+        "aphia_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=149553",
+        "aphia_urn": "urn:lsid:marinespecies.org:taxname:149553",
+        "aphiaidaccepted": 149553,
+        "aphiaidaccepted_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=149553",
+        "basisOfRecord": "MaterialSample",
+        "catalogNumber": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149553",
+        "kingdom": "Chromista",
+        "phylum": "Heterokontophyta",
+        "class": "Bacillariophyceae",
+        "order": "Cymbellales",
+        "family": "Gomphonemataceae",
+        "genus": "Gomphonema",
+        "scientificName": "Gomphonema",
+        "scientificNameAuthorship": "C.G. Ehrenberg, 1832",
+        "decimalLatitude": 40.60760002,
+        "decimalLongitude": 0.602466641,
+        "collectiondate": "1994-12-27T00:00:00+00:00",
+        "institutionCode": "IRTA",
+        "occurrenceStatus": "absent",
+        "minimumdepth": 0.5,
+        "maximumdepth": 0.5,
+        "IMISDatasetId": 6456
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "106756723",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.602466641,
+          40.60760002
+        ]
+      },
+      "properties": {
+        "id": 106756723,
+        "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
+        "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149619",
+        "acceptedScientificName": "Cerataulina pelagica",
+        "aphiaid": 149619,
+        "aphia_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=149619",
+        "aphia_urn": "urn:lsid:marinespecies.org:taxname:149619",
+        "aphiaidaccepted": 149619,
+        "aphiaidaccepted_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=149619",
+        "basisOfRecord": "MaterialSample",
+        "catalogNumber": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149619",
+        "kingdom": "Chromista",
+        "phylum": "Heterokontophyta",
+        "class": "Bacillariophyceae",
+        "order": "Hemiaulales",
+        "family": "Hemiaulaceae",
+        "genus": "Cerataulina",
+        "species": "pelagica",
+        "scientificName": "Cerataulina pelagica",
+        "scientificNameAuthorship": "(Cleve) Hendey, 1937",
+        "decimalLatitude": 40.60760002,
+        "decimalLongitude": 0.602466641,
+        "collectiondate": "1994-12-27T00:00:00+00:00",
+        "institutionCode": "IRTA",
+        "occurrenceStatus": "present",
+        "minimumdepth": 0.5,
+        "maximumdepth": 0.5,
+        "IMISDatasetId": 6456
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "106756724",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.602466641,
+          40.60760002
+        ]
+      },
+      "properties": {
+        "id": 106756724,
+        "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
+        "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149629",
+        "acceptedScientificName": "Rhizosolenia styliformis",
+        "aphiaid": 149629,
+        "aphia_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=149629",
+        "aphia_urn": "urn:lsid:marinespecies.org:taxname:149629",
+        "aphiaidaccepted": 149629,
+        "aphiaidaccepted_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=149629",
+        "basisOfRecord": "MaterialSample",
+        "catalogNumber": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149629",
+        "kingdom": "Chromista",
+        "phylum": "Heterokontophyta",
+        "class": "Bacillariophyceae",
+        "order": "Rhizosoleniales",
+        "family": "Rhizosoleniaceae",
+        "genus": "Rhizosolenia",
+        "species": "styliformis",
+        "scientificName": "Rhizosolenia styliformis",
+        "scientificNameAuthorship": "T.Brightwell, 1858",
+        "decimalLatitude": 40.60760002,
+        "decimalLongitude": 0.602466641,
+        "collectiondate": "1994-12-27T00:00:00+00:00",
+        "institutionCode": "IRTA",
+        "occurrenceStatus": "absent",
+        "minimumdepth": 0.5,
+        "maximumdepth": 0.5,
+        "IMISDatasetId": 6456
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "106756725",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.602466641,
+          40.60760002
+        ]
+      },
+      "properties": {
+        "id": 106756725,
+        "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
+        "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149630",
+        "acceptedScientificName": "Stephanopyxis",
+        "aphiaid": 149630,
+        "aphia_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=149630",
+        "aphia_urn": "urn:lsid:marinespecies.org:taxname:149630",
+        "aphiaidaccepted": 149630,
+        "aphiaidaccepted_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=149630",
+        "basisOfRecord": "MaterialSample",
+        "catalogNumber": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149630",
+        "kingdom": "Chromista",
+        "phylum": "Heterokontophyta",
+        "class": "Bacillariophyceae",
+        "order": "Melosirales",
+        "family": "Stephanopyxidaceae",
+        "genus": "Stephanopyxis",
+        "scientificName": "Stephanopyxis",
+        "scientificNameAuthorship": "(C.G. Ehrenberg) C.G. Ehrenberg, 1845",
+        "decimalLatitude": 40.60760002,
+        "decimalLongitude": 0.602466641,
+        "collectiondate": "1994-12-27T00:00:00+00:00",
+        "institutionCode": "IRTA",
+        "occurrenceStatus": "absent",
+        "minimumdepth": 0.5,
+        "maximumdepth": 0.5,
+        "IMISDatasetId": 6456
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "106756726",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.602466641,
+          40.60760002
+        ]
+      },
+      "properties": {
+        "id": 106756726,
+        "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
+        "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149647",
+        "acceptedScientificName": "Detonula pumila",
+        "aphiaid": 149647,
+        "aphia_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=149647",
+        "aphia_urn": "urn:lsid:marinespecies.org:taxname:149647",
+        "aphiaidaccepted": 163226,
+        "aphiaidaccepted_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=163226",
+        "basisOfRecord": "MaterialSample",
+        "catalogNumber": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149647",
+        "kingdom": "Chromista",
+        "phylum": "Heterokontophyta",
+        "class": "Bacillariophyceae",
+        "order": "Thalassiosirales",
+        "family": "Skeletonemaceae",
+        "genus": "Detonula",
+        "species": "pumila",
+        "scientificName": "Detonula pumila",
+        "scientificNameAuthorship": "(Castracane) Gran, 1900",
+        "decimalLatitude": 40.60760002,
+        "decimalLongitude": 0.602466641,
+        "collectiondate": "1994-12-27T00:00:00+00:00",
+        "institutionCode": "IRTA",
+        "occurrenceStatus": "absent",
+        "minimumdepth": 0.5,
+        "maximumdepth": 0.5,
+        "IMISDatasetId": 6456
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "106756727",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.602466641,
+          40.60760002
+        ]
+      },
+      "properties": {
+        "id": 106756727,
+        "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
+        "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149655",
+        "acceptedScientificName": "Biddulphia alternans",
+        "aphiaid": 149655,
+        "aphia_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=149655",
+        "aphia_urn": "urn:lsid:marinespecies.org:taxname:149655",
+        "aphiaidaccepted": 699394,
+        "aphiaidaccepted_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=699394",
+        "basisOfRecord": "MaterialSample",
+        "catalogNumber": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149655",
+        "kingdom": "Chromista",
+        "phylum": "Heterokontophyta",
+        "class": "Bacillariophyceae",
+        "order": "Biddulphiales",
+        "family": "Biddulphiaceae",
+        "genus": "Biddulphia",
+        "species": "alternans",
+        "scientificName": "Biddulphia alternans",
+        "scientificNameAuthorship": "(Bailey) Van Heurck, 1885",
+        "decimalLatitude": 40.60760002,
+        "decimalLongitude": 0.602466641,
+        "collectiondate": "1994-12-27T00:00:00+00:00",
+        "institutionCode": "IRTA",
+        "occurrenceStatus": "absent",
+        "minimumdepth": 0.5,
+        "maximumdepth": 0.5,
+        "IMISDatasetId": 6456
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "106756728",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.602466641,
+          40.60760002
+        ]
+      },
+      "properties": {
+        "id": 106756728,
+        "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
+        "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:156505",
+        "acceptedScientificName": "Phalacroma rotundatum",
+        "aphiaid": 156505,
+        "aphia_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=156505",
+        "aphia_urn": "urn:lsid:marinespecies.org:taxname:156505",
+        "aphiaidaccepted": 156505,
+        "aphiaidaccepted_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=156505",
+        "basisOfRecord": "MaterialSample",
+        "catalogNumber": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:156505",
+        "kingdom": "Chromista",
+        "phylum": "Myzozoa",
+        "class": "Dinophyceae",
+        "order": "Dinophysales",
+        "family": "Oxyphysaceae",
+        "genus": "Phalacroma",
+        "species": "rotundatum",
+        "scientificName": "Phalacroma rotundatum",
+        "scientificNameAuthorship": "(Clapar\u00e9de & Lachmann) Kofoid & J.R.Michener, 1911",
+        "decimalLatitude": 40.60760002,
+        "decimalLongitude": 0.602466641,
+        "collectiondate": "1994-12-27T00:00:00+00:00",
+        "institutionCode": "IRTA",
+        "occurrenceStatus": "absent",
+        "minimumdepth": 0.5,
+        "maximumdepth": 0.5,
+        "IMISDatasetId": 6456
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "106756729",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.602466641,
+          40.60760002
+        ]
+      },
+      "properties": {
+        "id": 106756729,
+        "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
+        "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:156533",
+        "acceptedScientificName": "Achnanthes longipes",
+        "aphiaid": 156533,
+        "aphia_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=156533",
+        "aphia_urn": "urn:lsid:marinespecies.org:taxname:156533",
+        "aphiaidaccepted": 156533,
+        "aphiaidaccepted_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=156533",
+        "basisOfRecord": "MaterialSample",
+        "catalogNumber": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:156533",
+        "kingdom": "Chromista",
+        "phylum": "Heterokontophyta",
+        "class": "Bacillariophyceae",
+        "order": "Achnanthales",
+        "family": "Achnanthaceae",
+        "genus": "Achnanthes",
+        "species": "longipes",
+        "scientificName": "Achnanthes longipes",
+        "scientificNameAuthorship": "C.Agardh, 1824",
+        "decimalLatitude": 40.60760002,
+        "decimalLongitude": 0.602466641,
+        "collectiondate": "1994-12-27T00:00:00+00:00",
+        "institutionCode": "IRTA",
+        "occurrenceStatus": "absent",
+        "minimumdepth": 0.5,
+        "maximumdepth": 0.5,
+        "IMISDatasetId": 6456
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "106756730",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.602466641,
+          40.60760002
+        ]
+      },
+      "properties": {
+        "id": 106756730,
+        "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
+        "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:156598",
+        "acceptedScientificName": "Entomoneis",
+        "aphiaid": 156598,
+        "aphia_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=156598",
+        "aphia_urn": "urn:lsid:marinespecies.org:taxname:156598",
+        "aphiaidaccepted": 156598,
+        "aphiaidaccepted_uri": "http://marinespecies.org/aphia.php?p=taxdetails&id=156598",
+        "basisOfRecord": "MaterialSample",
+        "catalogNumber": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:156598",
+        "kingdom": "Chromista",
+        "phylum": "Heterokontophyta",
+        "class": "Bacillariophyceae",
+        "order": "Surirellales",
+        "family": "Entomoneidaceae",
+        "genus": "Entomoneis",
+        "scientificName": "Entomoneis",
+        "scientificNameAuthorship": "Ehrenberg, 1845",
+        "decimalLatitude": 40.60760002,
+        "decimalLongitude": 0.602466641,
+        "collectiondate": "1994-12-27T00:00:00+00:00",
+        "institutionCode": "IRTA",
+        "occurrenceStatus": "absent",
+        "minimumdepth": 0.5,
+        "maximumdepth": 0.5,
+        "IMISDatasetId": 6456
+      }
+    }
+  ]
+}

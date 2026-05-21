@@ -1,0 +1,221 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: EMODnet Biology Occurrence Feature
+description: >-
+  A GeoJSON Feature representing a single marine biodiversity occurrence record
+  from EMODnet Biology. Properties follow Darwin Core terms with WoRMS Aphia
+  identifiers for taxon resolution.
+type: object
+required:
+  - type
+  - geometry
+  - properties
+properties:
+  type:
+    type: string
+    enum: [Feature]
+  id:
+    type: string
+    description: Feature identifier (EMODnet internal row id)
+  geometry:
+    description: WGS 84 Point geometry of the occurrence location
+    oneOf:
+      - type: object
+        required: [type, coordinates]
+        properties:
+          type:
+            type: string
+            enum: [Point]
+          coordinates:
+            type: array
+            minItems: 2
+            maxItems: 3
+            items:
+              type: number
+      - type: "null"
+  properties:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: EMODnet internal record identifier
+      IMISDatasetURI:
+        type: string
+        format: uri
+        description: URI of the source dataset in MarineInfo/IMIS
+      IMISDatasetId:
+        type: integer
+        description: Numeric IMIS dataset identifier
+      occurrenceID:
+        type: string
+        description: "DwC occurrenceID: globally unique identifier for the occurrence"
+      acceptedScientificName:
+        type: string
+        description: WoRMS-accepted scientific name for the taxon
+      aphiaid:
+        type: integer
+        description: WoRMS AphiaID of the observed taxon
+      aphia_uri:
+        type: string
+        format: uri
+        description: WoRMS URI for the observed taxon
+      aphia_urn:
+        type: string
+        description: "WoRMS LSID URN, e.g. urn:lsid:marinespecies.org:taxname:<id>"
+      aphiaidaccepted:
+        type: integer
+        description: WoRMS AphiaID of the accepted taxon (may differ from aphiaid if synonym)
+      aphiaidaccepted_uri:
+        type: string
+        format: uri
+        description: WoRMS URI of the accepted taxon
+      basisOfRecord:
+        type: string
+        description: "DwC basisOfRecord: nature of the evidence"
+        examples:
+          - HumanObservation
+          - MaterialSample
+          - PreservedSpecimen
+          - MachineObservation
+      catalogNumber:
+        type: string
+        description: "DwC catalogNumber: identifier for the record within the dataset"
+      collectionCode:
+        type: string
+        description: "DwC collectionCode: name or acronym of the collection"
+      collectiondate:
+        type: string
+        format: date-time
+        description: Date of collection (UTC timestamp)
+      kingdom:
+        type: string
+        description: "DwC kingdom: highest taxonomic rank of the classified name"
+      phylum:
+        type: string
+        description: "DwC phylum"
+      class:
+        type: string
+        description: "DwC class"
+      order:
+        type: string
+        description: "DwC order"
+      family:
+        type: string
+        description: "DwC family"
+      genus:
+        type: string
+        description: "DwC genus"
+      species:
+        type: string
+        description: "DwC specificEpithet (epithet only)"
+      scientificName:
+        type: string
+        description: "DwC scientificName: full taxon name as submitted"
+      scientificNameAuthorship:
+        type: string
+        description: "DwC scientificNameAuthorship"
+      decimalLatitude:
+        type: number
+        minimum: -90
+        maximum: 90
+        description: "DwC decimalLatitude: WGS84 latitude in decimal degrees"
+      decimalLongitude:
+        type: number
+        minimum: -180
+        maximum: 180
+        description: "DwC decimalLongitude: WGS84 longitude in decimal degrees"
+      coordinatePrecision:
+        type: number
+        description: "DwC coordinatePrecision: decimal representation of coordinate uncertainty"
+      geodeticDatum:
+        type: string
+        description: "DwC geodeticDatum: spatial reference system for coordinates"
+        examples:
+          - WGS84
+      eventDate:
+        type: string
+        description: "DwC eventDate: date or date range of the occurrence event"
+      eventID:
+        type: string
+        description: "DwC eventID: identifier for the sampling event"
+      eventType:
+        type: string
+        description: "DwC eventType: type of the event (e.g. sample, survey)"
+      institutionCode:
+        type: string
+        description: "DwC institutionCode: name or acronym of the custodian institution"
+      country:
+        type: string
+        description: "DwC country"
+      continentocean:
+        type: string
+        description: Continent or ocean name (EMODnet extension)
+      stateProvince:
+        type: string
+        description: "DwC stateProvince"
+      occurrenceStatus:
+        type: string
+        description: "DwC occurrenceStatus: presence or absence"
+        enum: [present, absent]
+      individualCount:
+        type: number
+        description: "DwC individualCount: count of individuals"
+      minimumdepth:
+        type: number
+        description: "DwC minimumDepthInMeters"
+      maximumdepth:
+        type: number
+        description: "DwC maximumDepthInMeters"
+      minimumelevation:
+        type: number
+        description: "DwC minimumElevationInMeters"
+      maximumelevation:
+        type: number
+        description: "DwC maximumElevationInMeters"
+      samplingProtocol:
+        type: string
+        description: "DwC samplingProtocol"
+      samplingEffort:
+        type: string
+        description: "DwC samplingEffort"
+      sampleSizeValue:
+        type: number
+        description: "DwC sampleSizeValue"
+      sampleSizeUnit:
+        type: string
+        description: "DwC sampleSizeUnit"
+      organismQuantity:
+        type: string
+        description: "DwC organismQuantity"
+      organismQuantityType:
+        type: string
+        description: "DwC organismQuantityType"
+      taxonID:
+        type: string
+        description: "DwC taxonID: identifier for the taxon concept"
+      taxonConceptID:
+        type: string
+        description: "DwC taxonConceptID"
+      taxonrankid:
+        type: integer
+        description: "WoRMS taxon rank identifier"
+      identifiedBy:
+        type: string
+        description: "DwC identifiedBy"
+      identificationVerificationStatus:
+        type: string
+        description: "DwC identificationVerificationStatus"
+      typeStatus:
+        type: string
+        description: "DwC typeStatus"
+      dynamicProperties:
+        type: string
+        description: "DwC dynamicProperties: additional data as JSON or key=value"
+      dataGeneralizations:
+        type: string
+        description: "DwC dataGeneralizations: actions taken to make data less specific"
+      verbatimDepth:
+        type: string
+        description: "DwC verbatimDepth: original depth text"
+      verbatimIdentification:
+        type: string
+        description: "DwC verbatimIdentification: taxon identification as originally provided"
