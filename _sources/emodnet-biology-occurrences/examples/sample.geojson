@@ -12,7 +12,6 @@
         ]
       },
       "properties": {
-        "id": 108518916,
         "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
         "occurrenceID": "IRTA-PSQAM-ALFACS-PA-2019-11-25_urn:lsid:marinespecies.org:taxname:162748",
         "acceptedScientificName": "Pyrodinium",
@@ -52,7 +51,6 @@
         ]
       },
       "properties": {
-        "id": 106756722,
         "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
         "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149553",
         "acceptedScientificName": "Gomphonema",
@@ -92,7 +90,6 @@
         ]
       },
       "properties": {
-        "id": 106756723,
         "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
         "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149619",
         "acceptedScientificName": "Cerataulina pelagica",
@@ -133,7 +130,6 @@
         ]
       },
       "properties": {
-        "id": 106756724,
         "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
         "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149629",
         "acceptedScientificName": "Rhizosolenia styliformis",
@@ -174,7 +170,6 @@
         ]
       },
       "properties": {
-        "id": 106756725,
         "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
         "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149630",
         "acceptedScientificName": "Stephanopyxis",
@@ -214,7 +209,6 @@
         ]
       },
       "properties": {
-        "id": 106756726,
         "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
         "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149647",
         "acceptedScientificName": "Detonula pumila",
@@ -255,7 +249,6 @@
         ]
       },
       "properties": {
-        "id": 106756727,
         "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
         "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:149655",
         "acceptedScientificName": "Biddulphia alternans",
@@ -296,7 +289,6 @@
         ]
       },
       "properties": {
-        "id": 106756728,
         "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
         "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:156505",
         "acceptedScientificName": "Phalacroma rotundatum",
@@ -337,7 +329,6 @@
         ]
       },
       "properties": {
-        "id": 106756729,
         "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
         "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:156533",
         "acceptedScientificName": "Achnanthes longipes",
@@ -378,7 +369,6 @@
         ]
       },
       "properties": {
-        "id": 106756730,
         "IMISDatasetURI": "https://marineinfo.org/id/dataset/6456",
         "occurrenceID": "IRTA-PSQAM-ALFACS-EA-1994-12-27_urn:lsid:marinespecies.org:taxname:156598",
         "acceptedScientificName": "Entomoneis",

@@ -1,0 +1,49 @@
+{
+  "id": "ogc.hosted.iliad.api.features.emodnet-biology-occurrences",
+  "title": "EMODnet Biology Occurrences (GeoParquet)",
+  "abstract": "Darwin Core occurrence records of marine biodiversity from EMODnet Biology, packaged as GeoParquet 1.0.0, accessed via the EDITO STAC catalog.",
+  "description": "EMODnet Biology marine biodiversity occurrence data distributed as GeoParquet 1.0.0. Each record is a Darwin Core occurrence with WoRMS Aphia identifiers, full taxon hierarchy (kingdom through species), sampling event metadata, depth ranges, and WGS84 point geometry. The full dataset (2026-05-13 release) contains 65.4 million rows. Accessed via the EDITO Digital Twin Ocean infrastructure on CloudFerro S3.",
+  "keywords": [
+    "marine biodiversity",
+    "EMODnet Biology",
+    "Darwin Core",
+    "occurrence",
+    "WoRMS",
+    "OBIS",
+    "GeoParquet",
+    "EDITO",
+    "CloudFerro"
+  ],
+  "license": "CC-BY-4.0",
+  "attribution": "EMODnet Biology consortium / VLIZ",
+  "sources": [
+    {
+      "title": "Full GeoParquet dataset",
+      "url": "https://s3.waw3-1.cloudferro.com/emodnet/emodnet_biology/12639/marine_biodiversity_observations_occurrence_2026-05-13.parquet"
+    },
+    {
+      "title": "EDITO STAC collection",
+      "url": "https://api.dive.edito.eu/data/collections/emodnet-occurrence_data"
+    }
+  ],
+  "spatial": {
+    "bbox": [-180, -81.9953, 180, 90],
+    "crs": "EPSG:4326"
+  },
+  "schema": {
+    "format": "GeoParquet 1.0.0",
+    "rows_full_dataset": 65400000,
+    "rows_sample": 1000,
+    "columns": 81,
+    "geometry": {
+      "column": "geometry",
+      "encoding": "WKB",
+      "type": "Point"
+    }
+  },
+  "vocabularies": [
+    "http://rs.tdwg.org/dwc/terms/",
+    "http://www.marinespecies.org/",
+    "http://purl.org/dc/terms/"
+  ]
+}

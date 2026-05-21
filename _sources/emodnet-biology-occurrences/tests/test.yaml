@@ -1,0 +1,5 @@
+- type: file
+  ref: examples/sample.geojson
+  expect:
+    validates: true
+  description: GeoJSON sample must validate against schema

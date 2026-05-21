@@ -1,0 +1,18 @@
+- title: EMODnet Biology Occurrences — GeoJSON sample (10 features)
+  abstract: >-
+    Ten occurrence records from the EMODnet Biology GeoParquet dataset, converted
+    to GeoJSON. Records are from the IRTA marine biology dataset (IMIS 6456),
+    sampled from the first 1000-row slice of the 2026-05-13 full dataset.
+    Source parquet: https://s3.waw3-1.cloudferro.com/emodnet/emodnet_biology/12639/marine_biodiversity_observations_occurrence_2026-05-13.parquet
+    EDITO STAC collection: https://api.dive.edito.eu/data/collections/emodnet-occurrence_data
+  content: examples/sample.geojson
+  contentMediaType: application/geo+json
+
+- title: EMODnet Biology Occurrences — GeoParquet source sample (1000 rows)
+  abstract: >-
+    Representative 1000-row slice of the EMODnet Biology full GeoParquet file.
+    GeoParquet 1.0.0, WKB-encoded Point geometries, 81 Darwin Core columns.
+    Sliced from: https://s3.waw3-1.cloudferro.com/emodnet/emodnet_biology/12639/marine_biodiversity_observations_occurrence_2026-05-13.parquet
+    via EDITO STAC collection: https://api.dive.edito.eu/data/collections/emodnet-occurrence_data
+  content: examples/sample.parquet
+  contentMediaType: application/x-parquet

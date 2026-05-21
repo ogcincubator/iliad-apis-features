@@ -35,9 +35,6 @@ properties:
   properties:
     type: object
     properties:
-      id:
-        type: integer
-        description: EMODnet internal record identifier
       IMISDatasetURI:
         type: string
         format: uri
