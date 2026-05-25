@@ -8,7 +8,6 @@
   "buildingBlocks": [
     "bblocks://ogc.hosted.iliad.api.features.ses-impact-assessment",
     "bblocks://ogc.hosted.seadots.odd-protocol",
-    "bblocks://ogc.hosted.iliad.api.features.oim-variables",
     "bblocks://ogc.hosted.iliad.api.features.indicator-quality-requirement",
     "bblocks://ogc.hosted.iliad.api.features.property-relationship"
   ],

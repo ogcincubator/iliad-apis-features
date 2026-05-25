@@ -7,9 +7,6 @@
   "register": "iliad-apis",
   "version": "0.1",
   "dateOfLastChange": "2026-05-05",
-  "dependsOn": [
-    "ogc.hosted.iliad.api.features.oim-variables"
-  ],
   "ldContext": "context.jsonld",
   "tags": [
     "seadots",

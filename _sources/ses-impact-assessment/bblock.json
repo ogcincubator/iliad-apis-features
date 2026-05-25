@@ -9,7 +9,6 @@
   "dateOfLastChange": "2026-05-05",
   "dependsOn": [
     "ogc.hosted.seadots.odd-protocol",
-    "ogc.hosted.iliad.api.features.oim-variables",
     "ogc.hosted.iliad.api.features.indicator-quality-requirement",
     "ogc.hosted.iliad.api.features.property-relationship"
   ],
