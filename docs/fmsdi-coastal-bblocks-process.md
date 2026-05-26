@@ -30,7 +30,7 @@ Land-sea data integration failures in the intertidal zone are rarely caused by a
 
 The FMSDI-2024 pilot documented these failures in detail across three demonstrator platforms — Compusult, Pangaea Innovations, and TCarta — and distilled them into five best practices. Those best practices exist as prose in an OGC Engineering Report and Best Practices document. Converting them into machine-enforceable JSON Schema with vocabulary-aligned JSON-LD context transforms them from guidelines into computable artefacts that can validate data and drive automated metadata pipelines.
 
-The ILIAD Ocean Digital Twin APIs repository already hosts OGC Building Blocks for marine observations (`oim-obs`), biodiversity (`oim-bio-tdwg`), and semantic variables (`oim-variables`). The coastal physical domain — elevation, tidal datums, shoreline dynamics — was absent. The FMSDI-2024 requirements fill that gap.
+The ILIAD Ocean Digital Twin APIs repository already hosts OGC Building Blocks for marine observations (`oim-obs`), biodiversity (`oim-bio-tdwg`), and semantic variables (`bblocks-seadots/oim-variables`). The coastal physical domain — elevation, tidal datums, shoreline dynamics — was absent. The FMSDI-2024 requirements fill that gap.
 
 ---
 

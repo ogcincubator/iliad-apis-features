@@ -3,6 +3,18 @@
 I try to provide description of the model that will calculate impact of the windpark deployment next to the Utsira Island (Norway)/ north to Gottland/Sweden on fishing.
 There are several potential setups with different number of turbines, their size, cables wiring, they are floating but anchored.
 
+## Related policies
+
+
+| Regulation | Biomass / Biodiversity Indicator Covered |
+| :--- | :--- |
+| **[Offshore Energy Act](https://regjeringen.no)** | * **Species Richness & Abundance**: Counts of sessile benthic species and artificial reef colonization rates<br>* **Avian Collision Rates**: Annual migratory bird and seabird mortality counts<br>* **Fish Stock Biomass**: Population density and localized biomass metrics of commercial target fish |
+| **[Nature Diversity Act](https://wiley.com)** | * **Ecological Status Index**: Aggregate score of target ecosystem vitality compared to baseline references<br>* **Threatened Species Population**: Population health/viability metrics for red-listed marine mammals, fish, and birds<br>* **Benthic Habitat Footprint**: Acreage/percentage of loss or degradation to selected and prioritized subsea habitat types |
+| **[Marine Resources Act](https://pnnl.gov)** | * **Marine Trophic Index**: Metric tracking shifts in the average trophic levels of caught and observed seafood species<br>* **Spawning Stock Biomass (SSB)**: Measurement of the total weight of sexually mature fish within the farm footprint<br>* **Aquaculture Kelp/Algae Biomass**: Total organic matter yields and structural changes in neighboring marine farming zones |
+| **[Planning and Building Act](https://wiley.com)** | * **Direct Habitat Loss (Acreage)**: Spatial calculation of physical seabed occupation by turbine foundations and cables<br>* **Potentially Disappeared Fraction (PDF)**: Modeling of species lost per gigawatt-hour (GWh) due to physical disturbance and barrier effects |
+| **[Pollution Control Act](https://wiley.com)** | * **Acoustic Disturbance Thresholds**: Underwater noise levels (in decibels) affecting marine mammal communication and migration paths<br>* **Turbidity & Sedimentation Load**: Concentration of suspended particulate matter affecting filter-feeding benthic biomass during cabling |
+
+
 The whole model is complex one that tries to estimate interactions between environmental, social and economic variables.
 ![alt text](windpark-impact-fisheries.png)
 
