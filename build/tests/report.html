@@ -64,9 +64,9 @@
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2026-05-04T11:58:15.217703+00:00</small>
+            <small class="datetime">Generated at 2026-05-26T13:51:45.010058+00:00</small>
                 <p class="summary fw-semibold text-danger">
-                    Number of passing building blocks: 16 / 28 (57.14%)
+                    Number of passing building blocks: 23 / 33 (69.7%)
                 </p>
             <div class="text-end small" id="expand-collapse">
                 <a href="#" class="expand-all">Expand all</a>
@@ -231,11 +231,11 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/apkg/rules.shacl:
- - Shape :LinkShape: ex:link
- - Shape :TemporalCoverageShape: ex:temporal
- - Shape :ProcessShape: ex:process
- - Shape :ParameterShape: ex:inputParam,ex:outputParam
  - Shape :ApplicationPackageShape: ex:pkg
+ - Shape :LinkShape: ex:link
+ - Shape :ProcessShape: ex:process
+ - Shape :ParameterShape: ex:outputParam,ex:inputParam
+ - Shape :TemporalCoverageShape: ex:temporal
 </div>
                                                     </div>
                                                 </div>
@@ -268,12 +268,6 @@
   Validation Report
   Conforms: False
   Results (14):
-  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: [ sh:maxCount Literal(&quot;1&quot;, datatype=xsd:integer) ; sh:minCount Literal(&quot;1&quot;, datatype=xsd:integer) ; sh:path schema1:url ]
-  	Focus Node: ex:brokenLink
-  	Result Path: schema1:url
-  	Message: Less than 1 values on ex:brokenLink-&gt;schema1:url
   Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: [ sh:maxCount Literal(&quot;1&quot;, datatype=xsd:integer) ; sh:minCount Literal(&quot;1&quot;, datatype=xsd:integer) ; sh:path schema1:description ]
@@ -352,13 +346,19 @@
   	Focus Node: ex:brokenPkg
   	Result Path: apkg:hasGeometry
   	Message: Less than 1 values on ex:brokenPkg-&gt;apkg:hasGeometry
+  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:maxCount Literal(&quot;1&quot;, datatype=xsd:integer) ; sh:minCount Literal(&quot;1&quot;, datatype=xsd:integer) ; sh:path schema1:url ]
+  	Focus Node: ex:brokenLink
+  	Result Path: schema1:url
+  	Message: Less than 1 values on ex:brokenLink-&gt;schema1:url
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/apkg/rules.shacl:
+ - Shape :ApplicationPackageShape: ex:brokenPkg
  - Shape :LinkShape: ex:brokenLink
- - Shape :TemporalCoverageShape: *none*
  - Shape :ProcessShape: *none*
  - Shape :ParameterShape: *none*
- - Shape :ApplicationPackageShape: ex:brokenPkg
+ - Shape :TemporalCoverageShape: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -563,6 +563,29 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.hosted.iliad.api.features.emodnet-biology-occurrences" id="bblock-ogc.hosted.iliad.api.features.emodnet-biology-occurrences">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.hosted\.iliad\.api\.features\.emodnet-biology-occurrences">
+                                    <div class="flex-fill">
+                                        EMODnet Biology Occurrences (GeoParquet)
+                                        <small class="ms-2 bblock-id">ogc.hosted.iliad.api.features.emodnet-biology-occurrences</small>
+                                        <a class="anchor" href="#bblock-ogc.hosted.iliad.api.features.emodnet-biology-occurrences">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-success me-2">
+                                            Passed
+                                            (no tests)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.hosted.iliad.api.features.emodnet-biology-occurrences">
+                                <div class="accordion-body">
+                                        <div class="alert alert-info mb-0">No tests were found for this building block.</div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.hosted.iliad.api.features.oim-bio-tdwg" id="bblock-ogc.hosted.iliad.api.features.oim-bio-tdwg">
                             <h2 class="accordion-header bblock-title anchor-container">
                                 <button class="accordion-button collapsed" type="button"
@@ -586,6 +609,75 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.hosted.iliad.api.features.indicator-quality-requirement" id="bblock-ogc.hosted.iliad.api.features.indicator-quality-requirement">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.hosted\.iliad\.api\.features\.indicator-quality-requirement">
+                                    <div class="flex-fill">
+                                        SeaDOTs Indicator Quality Requirement
+                                        <small class="ms-2 bblock-id">ogc.hosted.iliad.api.features.indicator-quality-requirement</small>
+                                        <a class="anchor" href="#bblock-ogc.hosted.iliad.api.features.indicator-quality-requirement">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-success me-2">
+                                            Passed
+                                            (no tests)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.hosted.iliad.api.features.indicator-quality-requirement">
+                                <div class="accordion-body">
+                                        <div class="alert alert-info mb-0">No tests were found for this building block.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.hosted.iliad.api.features.nina-seapop-catalog" id="bblock-ogc.hosted.iliad.api.features.nina-seapop-catalog">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.hosted\.iliad\.api\.features\.nina-seapop-catalog">
+                                    <div class="flex-fill">
+                                        NINA SEAPOP — Catalog / Discovery Metadata
+                                        <small class="ms-2 bblock-id">ogc.hosted.iliad.api.features.nina-seapop-catalog</small>
+                                        <a class="anchor" href="#bblock-ogc.hosted.iliad.api.features.nina-seapop-catalog">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-success me-2">
+                                            Passed
+                                            (no tests)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.hosted.iliad.api.features.nina-seapop-catalog">
+                                <div class="accordion-body">
+                                        <div class="alert alert-info mb-0">No tests were found for this building block.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.hosted.iliad.api.features.nina-seapop-source" id="bblock-ogc.hosted.iliad.api.features.nina-seapop-source">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.hosted\.iliad\.api\.features\.nina-seapop-source">
+                                    <div class="flex-fill">
+                                        NINA SEAPOP Source — OBIS Occurrence Record
+                                        <small class="ms-2 bblock-id">ogc.hosted.iliad.api.features.nina-seapop-source</small>
+                                        <a class="anchor" href="#bblock-ogc.hosted.iliad.api.features.nina-seapop-source">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-success me-2">
+                                            Passed
+                                            (no tests)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.hosted.iliad.api.features.nina-seapop-source">
+                                <div class="accordion-body">
+                                        <div class="alert alert-info mb-0">No tests were found for this building block.</div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.hosted.iliad.api.features.vertical-datum-reference" id="bblock-ogc.hosted.iliad.api.features.vertical-datum-reference">
                             <h2 class="accordion-header bblock-title anchor-container">
                                 <button class="accordion-button collapsed" type="button"
@@ -604,6 +696,29 @@
                                 </button>
                             </h2>
                             <div class="accordion-collapse collapse " id="bblock-collapse-ogc.hosted.iliad.api.features.vertical-datum-reference">
+                                <div class="accordion-body">
+                                        <div class="alert alert-info mb-0">No tests were found for this building block.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.hosted.iliad.api.features.property-relationship" id="bblock-ogc.hosted.iliad.api.features.property-relationship">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.hosted\.iliad\.api\.features\.property-relationship">
+                                    <div class="flex-fill">
+                                        SeaDOTs Property Relationship
+                                        <small class="ms-2 bblock-id">ogc.hosted.iliad.api.features.property-relationship</small>
+                                        <a class="anchor" href="#bblock-ogc.hosted.iliad.api.features.property-relationship">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-success me-2">
+                                            Passed
+                                            (no tests)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.hosted.iliad.api.features.property-relationship">
                                 <div class="accordion-body">
                                         <div class="alert alert-info mb-0">No tests were found for this building block.</div>
                                 </div>
@@ -1303,6 +1418,29 @@ On instance[&#x27;parameters&#x27;][&#x27;PLE_fishing_suitability&#x27;][&#x27;d
                                 </div>
                             </div>
                         </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.hosted.iliad.api.features.nina-seapop-oim" id="bblock-ogc.hosted.iliad.api.features.nina-seapop-oim">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.hosted\.iliad\.api\.features\.nina-seapop-oim">
+                                    <div class="flex-fill">
+                                        NINA SEAPOP — OIM Target Model
+                                        <small class="ms-2 bblock-id">ogc.hosted.iliad.api.features.nina-seapop-oim</small>
+                                        <a class="anchor" href="#bblock-ogc.hosted.iliad.api.features.nina-seapop-oim">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-success me-2">
+                                            Passed
+                                            (no tests)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.hosted.iliad.api.features.nina-seapop-oim">
+                                <div class="accordion-body">
+                                        <div class="alert alert-info mb-0">No tests were found for this building block.</div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.hosted.iliad.api.features.marine-protected-area-emodnet" id="bblock-ogc.hosted.iliad.api.features.marine-protected-area-emodnet">
                             <h2 class="accordion-header bblock-title anchor-container">
                                 <button class="accordion-button " type="button"
@@ -1694,11 +1832,11 @@ On instance:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
+ - Shape geojson:FeatureShape: _:N2e7778ff4cee40f588baafff7fe1be51
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: _:Nfb4273d84714435babc3876c2cb8e24c
+ - Shape geojson:GeometryShape: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -2580,11 +2718,11 @@ On instance:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
+ - Shape geojson:FeatureShape: _:Nb9f99e22cbc94aa1b70b6c27d5d868e0,_:N870aa459af6740048a7a78a6e3589f4a
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: _:N53088014bb1046cbbce1556a3e976347,_:N78bb2207dc12438b9c1d41d54c979cfb
+ - Shape geojson:GeometryShape: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -24261,11 +24399,11 @@ On instance:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
+ - Shape geojson:FeatureShape: _:N0af8b542b58e428f90dee968ca358739,_:Nedf043b4ce4a47c3b1fa58c9ad0add33,_:N11c6c612e28e40f8a89be9717d62512a
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: _:Nb7f8008b9bc44299b92d74f362e23ea9,_:Nda0a6fbd57ae435d80d14f7370b753da,_:N4fec2af812d449958865b6e088d13638
+ - Shape geojson:GeometryShape: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -24312,11 +24450,216 @@ On instance[&#x27;type&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: _:N9d644086ceac4139ac9646864cf7541c
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.hosted.iliad.api.features.apkg-record" id="bblock-ogc.hosted.iliad.api.features.apkg-record">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.hosted\.iliad\.api\.features\.apkg-record">
+                                    <div class="flex-fill">
+                                        ILIAD APKG Registry Record
+                                        <small class="ms-2 bblock-id">ogc.hosted.iliad.api.features.apkg-record</small>
+                                        <a class="anchor" href="#bblock-ogc.hosted.iliad.api.features.apkg-record">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-success me-2">
+                                            Passed
+                                            (100% passed)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.hosted.iliad.api.features.apkg-record">
+                                <div class="accordion-body">
+                                        <p class="summary fw-semibold text-success">
+                                            Test passed: 3 / 3
+                                        </p>
+                                        <div class="card mb-2 validation-item " id="item-ogc.hosted.iliad.api.features.apkg-record-1">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-29"
+                                                            aria-expanded="false" aria-controls="uid-29"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="hosted/iliad/api/features/apkg-record/example_1_1.json" target="_blank">example_1_1.json</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.hosted.iliad.api.features.apkg-record-1">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-29">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                    <div class="font-monospace entry-message section-files ">Using examples/commandlinetool-wo-data-filter.json from examples</div>
+                                                                    <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
+                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                    <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:
+ - Shape rec:testAllVarsInTemplate: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:FeatureShape: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/apkg/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/apkg/rules.shacl:
+ - Shape :ApplicationPackageShape: *none*
+ - Shape :LinkShape: *none*
+ - Shape :ProcessShape: *none*
+ - Shape :ParameterShape: *none*
+ - Shape :TemporalCoverageShape: *none*
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-2 validation-item " id="item-ogc.hosted.iliad.api.features.apkg-record-2">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-30"
+                                                            aria-expanded="false" aria-controls="uid-30"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="hosted/iliad/api/features/apkg-record/example_2_1.json" target="_blank">example_2_1.json</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.hosted.iliad.api.features.apkg-record-2">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-30">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                    <div class="font-monospace entry-message section-files ">Using examples/workflow-oilspill-pipeline.json from examples</div>
+                                                                    <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output JSON-LD example_2_1.jsonld created</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_2_1.ttl created</div>
+                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                    <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:
+ - Shape rec:testAllVarsInTemplate: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:FeatureShape: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: _:N9f7e8848aed34db9acc208a102976810
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/apkg/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/apkg/rules.shacl:
+ - Shape :ApplicationPackageShape: *none*
+ - Shape :LinkShape: *none*
+ - Shape :ProcessShape: *none*
+ - Shape :ParameterShape: *none*
+ - Shape :TemporalCoverageShape: *none*
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-2 validation-item " id="item-ogc.hosted.iliad.api.features.apkg-record-3">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-31"
+                                                            aria-expanded="false" aria-controls="uid-31"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="hosted/iliad/api/features/apkg-record/example_3_1.json" target="_blank">example_3_1.json</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.hosted.iliad.api.features.apkg-record-3">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-31">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                    <div class="font-monospace entry-message section-files ">Using examples/commandlinetool-virtual-choreographies.json from examples</div>
+                                                                    <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output JSON-LD example_3_1.jsonld created</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_3_1.ttl created</div>
+                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                    <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:
+ - Shape rec:testAllVarsInTemplate: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:FeatureShape: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/apkg/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/apkg/rules.shacl:
+ - Shape :ApplicationPackageShape: *none*
+ - Shape :LinkShape: *none*
+ - Shape :ProcessShape: *none*
+ - Shape :ParameterShape: *none*
+ - Shape :TemporalCoverageShape: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -24374,8 +24717,8 @@ On instance[&#x27;type&#x27;]:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-29"
-                                                            aria-expanded="false" aria-controls="uid-29"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-32"
+                                                            aria-expanded="false" aria-controls="uid-32"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -24387,7 +24730,7 @@ On instance[&#x27;type&#x27;]:
                                                             <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-29">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-32">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using examples/sample.ttl from examples</div>
@@ -24400,124 +24743,131 @@ On instance[&#x27;type&#x27;]:
   Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: [ sh:datatype xsd:anyURI ; sh:maxCount Literal(&quot;1&quot;, datatype=xsd:integer) ; sh:minCount Literal(&quot;1&quot;, datatype=xsd:integer) ; sh:path ncf:authoritativeConceptURI ]
-  	Focus Node: &lt;http://vocab.nerc.ac.uk/standard_name/air_pressure/&gt;
-  	Value Node: Literal(&quot;http://vocab.nerc.ac.uk/standard_name/air_pressure/&quot;)
+  	Focus Node: &lt;http://vocab.nerc.ac.uk/standard_name/sea_water_temperature/&gt;
+  	Value Node: Literal(&quot;http://vocab.nerc.ac.uk/standard_name/sea_water_temperature/&quot;)
   	Result Path: ncf:authoritativeConceptURI
   	Message: Value is not Literal with datatype xsd:anyURI
   Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: [ sh:datatype xsd:anyURI ; sh:maxCount Literal(&quot;1&quot;, datatype=xsd:integer) ; sh:minCount Literal(&quot;1&quot;, datatype=xsd:integer) ; sh:path ncf:authoritativeConceptURI ]
-  	Focus Node: &lt;http://vocab.nerc.ac.uk/standard_name/sea_water_temperature/&gt;
-  	Value Node: Literal(&quot;http://vocab.nerc.ac.uk/standard_name/sea_water_temperature/&quot;)
+  	Focus Node: &lt;http://vocab.nerc.ac.uk/standard_name/air_pressure/&gt;
+  	Value Node: Literal(&quot;http://vocab.nerc.ac.uk/standard_name/air_pressure/&quot;)
   	Result Path: ncf:authoritativeConceptURI
   	Message: Value is not Literal with datatype xsd:anyURI
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/nerc-cf-standard-names/rules.shacl:
  - Shape ncf:CFCollectionShape: ncf:P07
- - Shape ncf:CFStandardNameShape: &lt;http://vocab.nerc.ac.uk/standard_name/air_pressure/&gt;,&lt;http://vocab.nerc.ac.uk/standard_name/sea_water_temperature/&gt;
+ - Shape ncf:CFStandardNameShape: &lt;http://vocab.nerc.ac.uk/standard_name/sea_water_temperature/&gt;,&lt;http://vocab.nerc.ac.uk/standard_name/air_pressure/&gt;
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for http://qudt.org/2.1/schema/shacl/qudt:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for http://qudt.org/2.1/schema/shacl/qudt:
- - Shape qudt:QuantityKindDimensionVector_ISO: *none*
- - Shape qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first: *none*
- - Shape qudt:QuantityKindDimensionVector_SI: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS: *none*
- - Shape qudt:IntervalScale: *none*
- - Shape qudt:Rule: *none*
- - Shape qudt:Enumeration: *none*
- - Shape qudt:Figure: *none*
- - Shape qudt:PhysicalConstant: *none*
- - Shape qudt:LogarithmicUnit: *none*
- - Shape qudt:QuantityKind: *none*
- - Shape qudt:QuantityKindDimensionVector_Imperial: *none*
- - Shape qudt:Organization: *none*
- - Shape qudt:AbstractQuantityKind: *none*
- - Shape qudt:Concept: *none*
- - Shape qudt:Unit: *none*
- - Shape _:n7c826d5bd15144db9c78e21aa25c8f06b16: *none*
- - Shape qudt:ScalarDatatype: *none*
- - Shape qudt:Scale: *none*
- - Shape _:n7c826d5bd15144db9c78e21aa25c8f06b8: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-EMU: *none*
- - Shape qudt:NIST_SP811_Comment: *none*
- - Shape qudt:EnumeratedQuantity: *none*
- - Shape qudt:LatexString: *none*
- - Shape qudt:QuantityType: *none*
- - Shape qudt:CurrencyUnit: *none*
- - Shape qudt:Datatype: *none*
- - Shape qudt:QuantityKindDimensionVector: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-GAUSS: *none*
- - Shape _:n7c826d5bd15144db9c78e21aa25c8f06b14: *none*
- - Shape qudt:Statement: *none*
- - Shape qudt:NumericListShape/sh:property/sh:or/rdf:first: *none*
- - Shape qudt:SymmetricRelation: *none*
- - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:first: *none*
- - Shape qudt:ConstantValue: *none*
- - Shape _:n7c826d5bd15144db9c78e21aa25c8f06b33: *none*
- - Shape qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first: *none*
- - Shape qudt:SystemOfQuantityKinds: *none*
- - Shape qudt:AngleUnit: *none*
- - Shape qudt:Quantity: *none*
- - Shape qudt:RatioScale: *none*
- - Shape qudt:DerivedUnit: *none*
- - Shape qudt:Discipline: *none*
- - Shape qudt:DimensionlessUnit: *none*
- - Shape qudt:EnumeratedValue: *none*
- - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape _:n7c826d5bd15144db9c78e21aa25c8f06b18: *none*
- - Shape qudt:NumericListShape: *none*
- - Shape qudt:UserQuantityKind: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-LH: *none*
  - Shape qudt:ScalarDataItem: *none*
- - Shape qudt:OrdinalScale: *none*
- - Shape qudt:Comment: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-ESU: *none*
+ - Shape _:n9f200ce6706848a4b7c31b1c793a0f40b14: *none*
+ - Shape qudt:AspectClass: *none*
  - Shape qudt:NumericTypeUnion/rdf:first: *none*
+ - Shape qudt:CountingUnit: *none*
+ - Shape qudt:Enumeration: *none*
+ - Shape qudt:Discipline: *none*
+ - Shape qudt:PlaneAngleUnit: *none*
+ - Shape qudt:QuantityKindDimensionVector: *none*
+ - Shape qudt:PhysicalConstant: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-GAUSS: *none*
+ - Shape qudt:RatioScale: *none*
+ - Shape qudt:RuleType: *none*
+ - Shape qudt:DataItem: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-ESU: *none*
+ - Shape qudt:QuantityValue: *none*
+ - Shape qudt:ConstantValue: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-LH: *none*
+ - Shape _:n9f200ce6706848a4b7c31b1c793a0f40b17: *none*
+ - Shape qudt:DerivedUnit: *none*
+ - Shape qudt:BaseDimensionMagnitude: *none*
+ - Shape qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first: *none*
+ - Shape qudt:UserQuantityKind: *none*
+ - Shape qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:QuantityKindDimensionVector_SI: *none*
+ - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:first: *none*
+ - Shape qudt:Figure: *none*
+ - Shape qudt:NIST_SP811_Comment: *none*
+ - Shape qudt:Scale: *none*
+ - Shape qudt:UCUMcs: *none*
+ - Shape qudt:BinaryPrefix: *none*
+ - Shape _:n9f200ce6706848a4b7c31b1c793a0f40b33: *none*
+ - Shape _:n9f200ce6706848a4b7c31b1c793a0f40b16: *none*
+ - Shape qudt:Prefix: *none*
+ - Shape qudt:SystemOfQuantityKinds: *none*
+ - Shape qudt:ScalarDataItem-value/sh:or/rdf:first: *none*
+ - Shape qudt:LogarithmicUnit: *none*
+ - Shape _:n9f200ce6706848a4b7c31b1c793a0f40b8: *none*
+ - Shape qudt:CurrencyUnit: *none*
+ - Shape qudt:QuantityType: *none*
+ - Shape qudt:Quantifiable-datatype/sh:or/rdf:first: *none*
+ - Shape qudt:NominalScale: *none*
+ - Shape qudt:NumericTypeUnion/rdf:rest/rdf:first: *none*
+ - Shape qudt:OrdinalScale: *none*
+ - Shape qudt:QuantityKind: *none*
+ - Shape qudt:NumericListShape: *none*
+ - Shape qudt:SystemOfUnits: *none*
+ - Shape qudt:QuantityKindDimensionVector_ISO: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS: *none*
+ - Shape qudt:Concept: *none*
+ - Shape qudt:Statement: *none*
+ - Shape qudt:Datatype: *none*
+ - Shape rdf:nil: *none*
+ - Shape qudt:Symbol: *none*
+ - Shape qudt:Quantity: *none*
+ - Shape qudt:Aspect: *none*
+ - Shape qudt:QuantityKindDimensionVector_Imperial: *none*
+ - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:Organization: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-EMU: *none*
+ - Shape qudt:ScaleType: *none*
+ - Shape qudt:ScalarDatatype: *none*
+ - Shape qudt:SymmetricRelation: *none*
  - Shape qudt:Verifiable: *none*
  - Shape qudt:Quantifiable: *none*
- - Shape rdf:nil: *none*
- - Shape qudt:ScaleType: *none*
- - Shape _:n7c826d5bd15144db9c78e21aa25c8f06b17: *none*
- - Shape qudt:NominalScale: *none*
- - Shape qudt:BinaryPrefix: *none*
- - Shape qudt:Citation: *none*
- - Shape qudt:ScalarDataItem-value/sh:or/rdf:first: *none*
- - Shape qudt:CountingUnit: *none*
- - Shape qudt:SystemOfUnits: *none*
- - Shape qudt:PlaneAngleUnit: *none*
- - Shape qudt:RuleType: *none*
- - Shape qudt:Prefix: *none*
- - Shape qudt:DecimalPrefix: *none*
- - Shape qudt:Quantifiable-datatype/sh:or/rdf:first: *none*
- - Shape qudt:QuantityValue: *none*
- - Shape qudt:AspectClass: *none*
  - Shape qudt:SolidAngleUnit: *none*
- - Shape qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first: *none*
- - Shape qudt:BaseDimensionMagnitude: *none*
+ - Shape qudt:AbstractQuantityKind: *none*
+ - Shape qudt:DecimalPrefix: *none*
+ - Shape qudt:NumericListShape/sh:property/sh:or/rdf:first: *none*
+ - Shape qudt:Rule: *none*
+ - Shape qudt:Comment: *none*
+ - Shape qudt:IntervalScale: *none*
+ - Shape qudt:Unit: *none*
+ - Shape qudt:EnumeratedQuantity: *none*
+ - Shape qudt:Citation: *none*
+ - Shape qudt:EnumeratedValue: *none*
+ - Shape qudt:DimensionlessUnit: *none*
  - Shape qudt:Quantifiable-value/sh:node: *none*
- - Shape qudt:DataItem: *none*
- - Shape qudt:Aspect: *none*
- - Shape qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first: *none*
- - Shape qudt:Symbol: *none*
- - Shape qudt:UCUMcs: *none*
- - Shape _:n7c826d5bd15144db9c78e21aa25c8f06b15: *none*
+ - Shape _:n9f200ce6706848a4b7c31b1c793a0f40b15: *none*
  - Shape qudt:TransformType: *none*
- - Shape qudt:NumericTypeUnion/rdf:rest/rdf:first: *none*
+ - Shape qudt:AngleUnit: *none*
+ - Shape _:n9f200ce6706848a4b7c31b1c793a0f40b18: *none*
+ - Shape qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first: *none*
+ - Shape qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:LatexString: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
+ - Shape :singlePrefLabel: &lt;http://vocab.nerc.ac.uk/standard_name/sea_water_temperature/&gt;,&lt;http://vocab.nerc.ac.uk/standard_name/air_pressure/&gt;,ncf:P07
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
   Validation Report
@@ -24525,13 +24875,6 @@ On instance[&#x27;type&#x27;]:
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
  - Shape :relatedDisjointWithBroaderTransitive: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
- - Shape :singlePrefLabel: &lt;http://vocab.nerc.ac.uk/standard_name/air_pressure/&gt;,&lt;http://vocab.nerc.ac.uk/standard_name/sea_water_temperature/&gt;,ncf:P07
 </div>
                                                     </div>
                                                 </div>
@@ -24541,8 +24884,8 @@ On instance[&#x27;type&#x27;]:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-30"
-                                                            aria-expanded="false" aria-controls="uid-30"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-33"
+                                                            aria-expanded="false" aria-controls="uid-33"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -24554,7 +24897,7 @@ On instance[&#x27;type&#x27;]:
                                                             <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-30">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-33">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using tests/example-fail.ttl from examples</div>
@@ -24598,110 +24941,103 @@ On instance[&#x27;type&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for http://qudt.org/2.1/schema/shacl/qudt:
- - Shape qudt:QuantityKindDimensionVector_ISO: *none*
- - Shape qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first: *none*
- - Shape qudt:QuantityKindDimensionVector_SI: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS: *none*
- - Shape qudt:IntervalScale: *none*
- - Shape qudt:Rule: *none*
- - Shape qudt:Enumeration: *none*
- - Shape qudt:Figure: *none*
- - Shape qudt:PhysicalConstant: *none*
- - Shape qudt:LogarithmicUnit: *none*
- - Shape qudt:QuantityKind: *none*
- - Shape qudt:QuantityKindDimensionVector_Imperial: *none*
- - Shape qudt:Organization: *none*
- - Shape qudt:AbstractQuantityKind: *none*
- - Shape qudt:Concept: *none*
- - Shape qudt:Unit: *none*
- - Shape _:n7c826d5bd15144db9c78e21aa25c8f06b16: *none*
- - Shape qudt:ScalarDatatype: *none*
- - Shape qudt:Scale: *none*
- - Shape _:n7c826d5bd15144db9c78e21aa25c8f06b8: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-EMU: *none*
- - Shape qudt:NIST_SP811_Comment: *none*
- - Shape qudt:EnumeratedQuantity: *none*
- - Shape qudt:LatexString: *none*
- - Shape qudt:QuantityType: *none*
- - Shape qudt:CurrencyUnit: *none*
- - Shape qudt:Datatype: *none*
- - Shape qudt:QuantityKindDimensionVector: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-GAUSS: *none*
- - Shape _:n7c826d5bd15144db9c78e21aa25c8f06b14: *none*
- - Shape qudt:Statement: *none*
- - Shape qudt:NumericListShape/sh:property/sh:or/rdf:first: *none*
- - Shape qudt:SymmetricRelation: *none*
- - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:first: *none*
- - Shape qudt:ConstantValue: *none*
- - Shape _:n7c826d5bd15144db9c78e21aa25c8f06b33: *none*
- - Shape qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first: *none*
- - Shape qudt:SystemOfQuantityKinds: *none*
- - Shape qudt:AngleUnit: *none*
- - Shape qudt:Quantity: *none*
- - Shape qudt:RatioScale: *none*
- - Shape qudt:DerivedUnit: *none*
- - Shape qudt:Discipline: *none*
- - Shape qudt:DimensionlessUnit: *none*
- - Shape qudt:EnumeratedValue: *none*
- - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape _:n7c826d5bd15144db9c78e21aa25c8f06b18: *none*
- - Shape qudt:NumericListShape: *none*
- - Shape qudt:UserQuantityKind: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-LH: *none*
  - Shape qudt:ScalarDataItem: *none*
- - Shape qudt:OrdinalScale: *none*
- - Shape qudt:Comment: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-ESU: *none*
+ - Shape _:n9f200ce6706848a4b7c31b1c793a0f40b14: *none*
+ - Shape qudt:AspectClass: *none*
  - Shape qudt:NumericTypeUnion/rdf:first: *none*
+ - Shape qudt:CountingUnit: *none*
+ - Shape qudt:Enumeration: *none*
+ - Shape qudt:Discipline: *none*
+ - Shape qudt:PlaneAngleUnit: *none*
+ - Shape qudt:QuantityKindDimensionVector: *none*
+ - Shape qudt:PhysicalConstant: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-GAUSS: *none*
+ - Shape qudt:RatioScale: *none*
+ - Shape qudt:RuleType: *none*
+ - Shape qudt:DataItem: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-ESU: *none*
+ - Shape qudt:QuantityValue: *none*
+ - Shape qudt:ConstantValue: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-LH: *none*
+ - Shape _:n9f200ce6706848a4b7c31b1c793a0f40b17: *none*
+ - Shape qudt:DerivedUnit: *none*
+ - Shape qudt:BaseDimensionMagnitude: *none*
+ - Shape qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first: *none*
+ - Shape qudt:UserQuantityKind: *none*
+ - Shape qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:QuantityKindDimensionVector_SI: *none*
+ - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:first: *none*
+ - Shape qudt:Figure: *none*
+ - Shape qudt:NIST_SP811_Comment: *none*
+ - Shape qudt:Scale: *none*
+ - Shape qudt:UCUMcs: *none*
+ - Shape qudt:BinaryPrefix: *none*
+ - Shape _:n9f200ce6706848a4b7c31b1c793a0f40b33: *none*
+ - Shape _:n9f200ce6706848a4b7c31b1c793a0f40b16: *none*
+ - Shape qudt:Prefix: *none*
+ - Shape qudt:SystemOfQuantityKinds: *none*
+ - Shape qudt:ScalarDataItem-value/sh:or/rdf:first: *none*
+ - Shape qudt:LogarithmicUnit: *none*
+ - Shape _:n9f200ce6706848a4b7c31b1c793a0f40b8: *none*
+ - Shape qudt:CurrencyUnit: *none*
+ - Shape qudt:QuantityType: *none*
+ - Shape qudt:Quantifiable-datatype/sh:or/rdf:first: *none*
+ - Shape qudt:NominalScale: *none*
+ - Shape qudt:NumericTypeUnion/rdf:rest/rdf:first: *none*
+ - Shape qudt:OrdinalScale: *none*
+ - Shape qudt:QuantityKind: *none*
+ - Shape qudt:NumericListShape: *none*
+ - Shape qudt:SystemOfUnits: *none*
+ - Shape qudt:QuantityKindDimensionVector_ISO: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS: *none*
+ - Shape qudt:Concept: *none*
+ - Shape qudt:Statement: *none*
+ - Shape qudt:Datatype: *none*
+ - Shape rdf:nil: *none*
+ - Shape qudt:Symbol: *none*
+ - Shape qudt:Quantity: *none*
+ - Shape qudt:Aspect: *none*
+ - Shape qudt:QuantityKindDimensionVector_Imperial: *none*
+ - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:Organization: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-EMU: *none*
+ - Shape qudt:ScaleType: *none*
+ - Shape qudt:ScalarDatatype: *none*
+ - Shape qudt:SymmetricRelation: *none*
  - Shape qudt:Verifiable: *none*
  - Shape qudt:Quantifiable: *none*
- - Shape rdf:nil: *none*
- - Shape qudt:ScaleType: *none*
- - Shape _:n7c826d5bd15144db9c78e21aa25c8f06b17: *none*
- - Shape qudt:NominalScale: *none*
- - Shape qudt:BinaryPrefix: *none*
- - Shape qudt:Citation: *none*
- - Shape qudt:ScalarDataItem-value/sh:or/rdf:first: *none*
- - Shape qudt:CountingUnit: *none*
- - Shape qudt:SystemOfUnits: *none*
- - Shape qudt:PlaneAngleUnit: *none*
- - Shape qudt:RuleType: *none*
- - Shape qudt:Prefix: *none*
- - Shape qudt:DecimalPrefix: *none*
- - Shape qudt:Quantifiable-datatype/sh:or/rdf:first: *none*
- - Shape qudt:QuantityValue: *none*
- - Shape qudt:AspectClass: *none*
  - Shape qudt:SolidAngleUnit: *none*
- - Shape qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first: *none*
- - Shape qudt:BaseDimensionMagnitude: *none*
+ - Shape qudt:AbstractQuantityKind: *none*
+ - Shape qudt:DecimalPrefix: *none*
+ - Shape qudt:NumericListShape/sh:property/sh:or/rdf:first: *none*
+ - Shape qudt:Rule: *none*
+ - Shape qudt:Comment: *none*
+ - Shape qudt:IntervalScale: *none*
+ - Shape qudt:Unit: *none*
+ - Shape qudt:EnumeratedQuantity: *none*
+ - Shape qudt:Citation: *none*
+ - Shape qudt:EnumeratedValue: *none*
+ - Shape qudt:DimensionlessUnit: *none*
  - Shape qudt:Quantifiable-value/sh:node: *none*
- - Shape qudt:DataItem: *none*
- - Shape qudt:Aspect: *none*
- - Shape qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first: *none*
- - Shape qudt:Symbol: *none*
- - Shape qudt:UCUMcs: *none*
- - Shape _:n7c826d5bd15144db9c78e21aa25c8f06b15: *none*
+ - Shape _:n9f200ce6706848a4b7c31b1c793a0f40b15: *none*
  - Shape qudt:TransformType: *none*
- - Shape qudt:NumericTypeUnion/rdf:rest/rdf:first: *none*
+ - Shape qudt:AngleUnit: *none*
+ - Shape _:n9f200ce6706848a4b7c31b1c793a0f40b18: *none*
+ - Shape qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first: *none*
+ - Shape qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:LatexString: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
- - Shape :relatedDisjointWithBroaderTransitive: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
   Validation Report
@@ -24709,6 +25045,13 @@ On instance[&#x27;type&#x27;]:
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
  - Shape :singlePrefLabel: &lt;http://vocab.nerc.ac.uk/standard_name/sea_water_temperature/&gt;
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
+ - Shape :relatedDisjointWithBroaderTransitive: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -24737,100 +25080,6 @@ On instance[&#x27;type&#x27;]:
                             <div class="accordion-collapse collapse " id="bblock-collapse-ogc.hosted.iliad.api.features.oim">
                                 <div class="accordion-body">
                                         <div class="alert alert-info mb-0">No tests were found for this building block.</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.hosted.iliad.api.features.oim-variables" id="bblock-ogc.hosted.iliad.api.features.oim-variables">
-                            <h2 class="accordion-header bblock-title anchor-container">
-                                <button class="accordion-button " type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#bblock-collapse-ogc\.hosted\.iliad\.api\.features\.oim-variables">
-                                    <div class="flex-fill">
-                                        OIM Variables
-                                        <small class="ms-2 bblock-id">ogc.hosted.iliad.api.features.oim-variables</small>
-                                        <a class="anchor" href="#bblock-ogc.hosted.iliad.api.features.oim-variables">¶</a>
-                                    </div>
-
-                                    <span class="badge text-bg-danger me-2">
-                                            Tests Failed
-                                            (0% passed)
-                                    </span>
-                                </button>
-                            </h2>
-                            <div class="accordion-collapse collapse show" id="bblock-collapse-ogc.hosted.iliad.api.features.oim-variables">
-                                <div class="accordion-body">
-                                        <p class="summary fw-semibold text-danger">
-                                            Test passed: 0 / 2
-                                        </p>
-                                        <div class="card mb-2 global-validation-item validation-item">
-                                            <div class="card-body">
-                                                <div class="card-title">
-                                                    Building block global validation errors
-                                                    <div class="float-end">
-                                                        <span class="badge text-bg-danger me-2">Failed</span>
-                                                    </div>
-                                                </div>
-                                                <div class="card-text text-danger">
-                                                        <div class="font-monospace entry-message section-shacl">Error processing _sources/oim-variables/rules.shacl: at line 10 of &lt;&gt;:
-Bad syntax (Prefix &quot;:&quot; not bound) at ^ in:
-&quot;...b&#x27;ses#&gt; .\n@prefix ind: &lt;https://id3.seadots.eu/indicator/&gt; .\n\n&#x27;^b&#x27;:ObservedPropertyShape\n    a sh:NodeShape ;\n    sh:targetCla&#x27;...&quot;</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card mb-2 validation-item require-fail" id="item-ogc.hosted.iliad.api.features.oim-variables-1">
-                                            <div class="card-body">
-                                                <div class="card-title mb-0 anchor-container">
-                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-31"
-                                                            aria-expanded="false" aria-controls="uid-31"
-                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                                        <i class="bi bi-caret-right-fill caret"></i>
-                                                        Details
-                                                    </button>
-                                                    <a href="../../_sources/oim-variables/tests/example-fail.ttl" target="_blank">example-fail.ttl</a>
-                                                    <span class="badge bg-secondary test_resource">Test resource</span>
-                                                        <span class="badge text-bg-info">Requires fail</span>
-                                                    <a class="anchor" href="#item-ogc.hosted.iliad.api.features.oim-variables-1">¶</a>
-                                                    <div class="float-end">
-                                                            <span class="badge text-bg-danger me-2">Failed</span>
-                                                    </div>
-                                                </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-31">
-                                                    <div class="validation-text-inner">
-                                                            <div class="font-monospace entry-message text-danger">Note: Test failed because there are global validation errors.</div>
-                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                    <div class="font-monospace entry-message section-files ">Using example-fail.ttl from test resources</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card mb-2 validation-item " id="item-ogc.hosted.iliad.api.features.oim-variables-2">
-                                            <div class="card-body">
-                                                <div class="card-title mb-0 anchor-container">
-                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-32"
-                                                            aria-expanded="false" aria-controls="uid-32"
-                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                                        <i class="bi bi-caret-right-fill caret"></i>
-                                                        Details
-                                                    </button>
-                                                    <a href="hosted/iliad/api/features/oim-variables/example_1_1.ttl" target="_blank">example_1_1.ttl</a>
-                                                    <span class="badge bg-secondary example">Example</span>
-                                                    <a class="anchor" href="#item-ogc.hosted.iliad.api.features.oim-variables-2">¶</a>
-                                                    <div class="float-end">
-                                                            <span class="badge text-bg-danger me-2">Failed</span>
-                                                    </div>
-                                                </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-32">
-                                                    <div class="validation-text-inner">
-                                                            <div class="font-monospace entry-message text-danger">Note: Test failed because there are global validation errors.</div>
-                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                    <div class="font-monospace entry-message section-files ">Using examples/indicators.ttl from examples</div>
-                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -24929,8 +25178,8 @@ Bad syntax (Prefix &quot;:&quot; not bound) at ^ in:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-33"
-                                                            aria-expanded="false" aria-controls="uid-33"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-34"
+                                                            aria-expanded="false" aria-controls="uid-34"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -24942,7 +25191,7 @@ Bad syntax (Prefix &quot;:&quot; not bound) at ^ in:
                                                             <span class="badge text-bg-danger me-2">Failed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-33">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-34">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using examples/oilspill_record_example_wth_netcdf_data.json from examples</div>
@@ -25318,218 +25567,23 @@ On instance:
               &#x27;resolution&#x27;: &#x27;P1D&#x27;},
      &#x27;type&#x27;: &#x27;Feature&#x27;}</div>
                                                                     <div class="font-monospace subsection-title mt-2">SHACL</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:
- - Shape rec:testAllVarsInTemplate: *none*
-</div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:FeatureShape: &lt;http://w3id.org/ogcincubator/simulation&gt;
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
 </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="ogc.hosted.iliad.api.features.odd-protocol" id="bblock-ogc.hosted.iliad.api.features.odd-protocol">
-                            <h2 class="accordion-header bblock-title anchor-container">
-                                <button class="accordion-button " type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#bblock-collapse-ogc\.hosted\.iliad\.api\.features\.odd-protocol">
-                                    <div class="flex-fill">
-                                        ODD Protocol Description Record
-                                        <small class="ms-2 bblock-id">ogc.hosted.iliad.api.features.odd-protocol</small>
-                                        <a class="anchor" href="#bblock-ogc.hosted.iliad.api.features.odd-protocol">¶</a>
-                                    </div>
-
-                                    <span class="badge text-bg-danger me-2">
-                                            Tests Failed
-                                            (0% passed)
-                                    </span>
-                                </button>
-                            </h2>
-                            <div class="accordion-collapse collapse show" id="bblock-collapse-ogc.hosted.iliad.api.features.odd-protocol">
-                                <div class="accordion-body">
-                                        <p class="summary fw-semibold text-danger">
-                                            Test passed: 0 / 2
-                                        </p>
-                                        <div class="card mb-2 validation-item " id="item-ogc.hosted.iliad.api.features.odd-protocol-1">
-                                            <div class="card-body">
-                                                <div class="card-title mb-0 anchor-container">
-                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-34"
-                                                            aria-expanded="false" aria-controls="uid-34"
-                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                                        <i class="bi bi-caret-right-fill caret"></i>
-                                                        Details
-                                                    </button>
-                                                    <a href="hosted/iliad/api/features/odd-protocol/example_1_1.json" target="_blank">example_1_1.json</a>
-                                                    <span class="badge bg-secondary example">Example</span>
-                                                    <a class="anchor" href="#item-ogc.hosted.iliad.api.features.odd-protocol-1">¶</a>
-                                                    <div class="float-end">
-                                                            <span class="badge text-bg-danger me-2">Failed</span>
-                                                    </div>
-                                                </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-34">
-                                                    <div class="validation-text-inner">
-                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                    <div class="font-monospace entry-message section-files ">Using examples/jasss_odd_protocol_2020.json from examples</div>
-                                                                    <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                                    <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
-                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
-                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
-                                                                    <div class="font-monospace entry-message section-json_schema text-danger">ValidationError: &#x27;en&#x27; is not of type &#x27;object&#x27;
-
-Failed validating &#x27;type&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][0][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;language&#x27;]:
-    {&#x27;description&#x27;: &#x27;The language used for textual values in this record.&#x27;,
-     &#x27;properties&#x27;: {&#x27;alternate&#x27;: {&#x27;description&#x27;: &#x27;The name of the language &#x27;
-                                                 &#x27;in another &#x27;
-                                                 &#x27;well-understood &#x27;
-                                                 &#x27;language,\n&#x27;
-                                                 &#x27;usually English.&#x27;,
-                                  &#x27;type&#x27;: &#x27;string&#x27;},
-                    &#x27;code&#x27;: {&#x27;description&#x27;: &#x27;The language tag as per &#x27;
-                                            &#x27;RFC-5646.&#x27;,
-                             &#x27;type&#x27;: &#x27;string&#x27;},
-                    &#x27;dir&#x27;: {&#x27;default&#x27;: &#x27;ltr&#x27;,
-                            &#x27;description&#x27;: &#x27;The direction for text in this &#x27;
-                                           &#x27;language. The default, `ltr`\n&#x27;
-                                           &#x27;(left-to-right), represents &#x27;
-                                           &#x27;the most common situation.\n&#x27;
-                                           &#x27;However, care should be taken &#x27;
-                                           &#x27;to set the value of `dir`\n&#x27;
-                                           &#x27;appropriately if the language &#x27;
-                                           &#x27;direction is not `ltr`.\n&#x27;
-                                           &#x27;Other values supported are &#x27;
-                                           &#x27;`rtl` (right-to-left), `ttb`\n&#x27;
-                                           &#x27;(top-to-bottom), and `btt` &#x27;
-                                           &#x27;(bottom-to-top).&#x27;,
-                            &#x27;enum&#x27;: [&#x27;ltr&#x27;, &#x27;rtl&#x27;, &#x27;ttb&#x27;, &#x27;btt&#x27;],
-                            &#x27;type&#x27;: &#x27;string&#x27;},
-                    &#x27;name&#x27;: {&#x27;description&#x27;: &#x27;The untranslated name of the &#x27;
-                                            &#x27;language.&#x27;,
-                             &#x27;minLength&#x27;: 1,
-                             &#x27;type&#x27;: &#x27;string&#x27;}},
-     &#x27;required&#x27;: [&#x27;code&#x27;],
-     &#x27;type&#x27;: &#x27;object&#x27;}
-
-On instance[&#x27;properties&#x27;][&#x27;language&#x27;]:
-    &#x27;en&#x27;</div>
-                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:
  - Shape rec:testAllVarsInTemplate: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:LinkShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:FeatureShape: &lt;doi:10.18564/jasss.4259&gt;
-</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card mb-2 validation-item " id="item-ogc.hosted.iliad.api.features.odd-protocol-2">
-                                            <div class="card-body">
-                                                <div class="card-title mb-0 anchor-container">
-                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-35"
-                                                            aria-expanded="false" aria-controls="uid-35"
-                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                                        <i class="bi bi-caret-right-fill caret"></i>
-                                                        Details
-                                                    </button>
-                                                    <a href="hosted/iliad/api/features/odd-protocol/example_2_1.json" target="_blank">example_2_1.json</a>
-                                                    <span class="badge bg-secondary example">Example</span>
-                                                    <a class="anchor" href="#item-ogc.hosted.iliad.api.features.odd-protocol-2">¶</a>
-                                                    <div class="float-end">
-                                                            <span class="badge text-bg-danger me-2">Failed</span>
-                                                    </div>
-                                                </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-35">
-                                                    <div class="validation-text-inner">
-                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                    <div class="font-monospace entry-message section-files ">Using examples/osmose_odd.json from examples</div>
-                                                                    <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                                    <div class="font-monospace entry-message section-files ">Output JSON-LD example_2_1.jsonld created</div>
-                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_2_1.ttl created</div>
-                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
-                                                                    <div class="font-monospace entry-message section-json_schema text-danger">ValidationError: &#x27;en&#x27; is not of type &#x27;object&#x27;
-
-Failed validating &#x27;type&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][0][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;language&#x27;]:
-    {&#x27;description&#x27;: &#x27;The language used for textual values in this record.&#x27;,
-     &#x27;properties&#x27;: {&#x27;alternate&#x27;: {&#x27;description&#x27;: &#x27;The name of the language &#x27;
-                                                 &#x27;in another &#x27;
-                                                 &#x27;well-understood &#x27;
-                                                 &#x27;language,\n&#x27;
-                                                 &#x27;usually English.&#x27;,
-                                  &#x27;type&#x27;: &#x27;string&#x27;},
-                    &#x27;code&#x27;: {&#x27;description&#x27;: &#x27;The language tag as per &#x27;
-                                            &#x27;RFC-5646.&#x27;,
-                             &#x27;type&#x27;: &#x27;string&#x27;},
-                    &#x27;dir&#x27;: {&#x27;default&#x27;: &#x27;ltr&#x27;,
-                            &#x27;description&#x27;: &#x27;The direction for text in this &#x27;
-                                           &#x27;language. The default, `ltr`\n&#x27;
-                                           &#x27;(left-to-right), represents &#x27;
-                                           &#x27;the most common situation.\n&#x27;
-                                           &#x27;However, care should be taken &#x27;
-                                           &#x27;to set the value of `dir`\n&#x27;
-                                           &#x27;appropriately if the language &#x27;
-                                           &#x27;direction is not `ltr`.\n&#x27;
-                                           &#x27;Other values supported are &#x27;
-                                           &#x27;`rtl` (right-to-left), `ttb`\n&#x27;
-                                           &#x27;(top-to-bottom), and `btt` &#x27;
-                                           &#x27;(bottom-to-top).&#x27;,
-                            &#x27;enum&#x27;: [&#x27;ltr&#x27;, &#x27;rtl&#x27;, &#x27;ttb&#x27;, &#x27;btt&#x27;],
-                            &#x27;type&#x27;: &#x27;string&#x27;},
-                    &#x27;name&#x27;: {&#x27;description&#x27;: &#x27;The untranslated name of the &#x27;
-                                            &#x27;language.&#x27;,
-                             &#x27;minLength&#x27;: 1,
-                             &#x27;type&#x27;: &#x27;string&#x27;}},
-     &#x27;required&#x27;: [&#x27;code&#x27;],
-     &#x27;type&#x27;: &#x27;object&#x27;}
-
-On instance[&#x27;properties&#x27;][&#x27;language&#x27;]:
-    &#x27;en&#x27;</div>
-                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:
- - Shape rec:testAllVarsInTemplate: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:LinkShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:FeatureShape: &lt;https://osmose-model.org/&gt;
 </div>
                                                     </div>
                                                 </div>
@@ -25587,8 +25641,8 @@ On instance[&#x27;properties&#x27;][&#x27;language&#x27;]:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-36"
-                                                            aria-expanded="false" aria-controls="uid-36"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-35"
+                                                            aria-expanded="false" aria-controls="uid-35"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -25600,7 +25654,7 @@ On instance[&#x27;properties&#x27;][&#x27;language&#x27;]:
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-36">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-35">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using examples/example.json from examples</div>
@@ -25610,6 +25664,123 @@ On instance[&#x27;properties&#x27;][&#x27;language&#x27;]:
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
                                                                     <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
                                                                     <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for http://qudt.org/2.1/schema/shacl/qudt:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for http://qudt.org/2.1/schema/shacl/qudt:
+ - Shape qudt:ScalarDataItem: *none*
+ - Shape qudt:AspectClass: *none*
+ - Shape qudt:CountingUnit: *none*
+ - Shape qudt:NumericListShape/sh:property/sh:or/rdf:first: *none*
+ - Shape qudt:NumericTypeUnion/rdf:first: *none*
+ - Shape qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first: *none*
+ - Shape qudt:Enumeration: *none*
+ - Shape qudt:Discipline: *none*
+ - Shape qudt:PlaneAngleUnit: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb33: *none*
+ - Shape qudt:QuantityKindDimensionVector: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb18: *none*
+ - Shape qudt:PhysicalConstant: *none*
+ - Shape qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-GAUSS: *none*
+ - Shape qudt:RatioScale: *none*
+ - Shape qudt:RuleType: *none*
+ - Shape qudt:Quantifiable-value/sh:node: *none*
+ - Shape qudt:DataItem: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-ESU: *none*
+ - Shape qudt:QuantityValue: *none*
+ - Shape qudt:ConstantValue: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-LH: *none*
+ - Shape qudt:DerivedUnit: *none*
+ - Shape qudt:BaseDimensionMagnitude: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb8: *none*
+ - Shape qudt:UserQuantityKind: *none*
+ - Shape qudt:QuantityKindDimensionVector_SI: *none*
+ - Shape qudt:Figure: *none*
+ - Shape qudt:NIST_SP811_Comment: *none*
+ - Shape qudt:Scale: *none*
+ - Shape qudt:UCUMcs: *none*
+ - Shape qudt:BinaryPrefix: *none*
+ - Shape qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first: *none*
+ - Shape qudt:Prefix: *none*
+ - Shape qudt:SystemOfQuantityKinds: *none*
+ - Shape qudt:LogarithmicUnit: *none*
+ - Shape qudt:CurrencyUnit: *none*
+ - Shape qudt:QuantityType: *none*
+ - Shape qudt:NominalScale: *none*
+ - Shape qudt:Quantifiable-datatype/sh:or/rdf:first: *none*
+ - Shape qudt:OrdinalScale: *none*
+ - Shape qudt:QuantityKind: *none*
+ - Shape qudt:NumericListShape: *none*
+ - Shape qudt:SystemOfUnits: *none*
+ - Shape qudt:QuantityKindDimensionVector_ISO: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS: *none*
+ - Shape qudt:Concept: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb14: *none*
+ - Shape qudt:ScalarDataItem-value/sh:or/rdf:first: *none*
+ - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:Statement: *none*
+ - Shape qudt:Datatype: *none*
+ - Shape qudt:NumericTypeUnion/rdf:rest/rdf:first: *none*
+ - Shape rdf:nil: *none*
+ - Shape qudt:Symbol: *none*
+ - Shape qudt:Quantity: *none*
+ - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:first: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb17: *none*
+ - Shape qudt:Aspect: *none*
+ - Shape qudt:QuantityKindDimensionVector_Imperial: *none*
+ - Shape qudt:Organization: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-EMU: *none*
+ - Shape qudt:ScaleType: *none*
+ - Shape qudt:ScalarDatatype: *none*
+ - Shape qudt:SymmetricRelation: *none*
+ - Shape qudt:Verifiable: *none*
+ - Shape qudt:Quantifiable: *none*
+ - Shape qudt:SolidAngleUnit: *none*
+ - Shape qudt:AbstractQuantityKind: *none*
+ - Shape qudt:DecimalPrefix: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb15: *none*
+ - Shape qudt:Rule: *none*
+ - Shape qudt:Comment: *none*
+ - Shape qudt:IntervalScale: *none*
+ - Shape qudt:Unit: *none*
+ - Shape qudt:EnumeratedQuantity: *none*
+ - Shape qudt:Citation: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb16: *none*
+ - Shape qudt:EnumeratedValue: *none*
+ - Shape qudt:DimensionlessUnit: *none*
+ - Shape qudt:TransformType: *none*
+ - Shape qudt:AngleUnit: *none*
+ - Shape qudt:LatexString: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
+ - Shape :singlePrefLabel: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
+ - Shape :relatedDisjointWithBroaderTransitive: *none*
+</div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/oim-obs/rules.shacl:
   Validation Report
   Conforms: True
@@ -25623,13 +25794,13 @@ On instance[&#x27;properties&#x27;][&#x27;language&#x27;]:
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyPresent&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyPresent&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
@@ -25637,140 +25808,23 @@ On instance[&#x27;properties&#x27;][&#x27;language&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;/sosa:hasFeatureOfInterest,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape geojson:LinkShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape: *none*
- - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;/sosa:hasFeatureOfInterest
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:FeatureCollectionShape: *none*
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:LinkShape: *none*
  - Shape geojson:FeatureShape: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for http://qudt.org/2.1/schema/shacl/qudt:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for http://qudt.org/2.1/schema/shacl/qudt:
- - Shape qudt:QuantityKindDimensionVector_ISO: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b14: *none*
- - Shape qudt:QuantityKindDimensionVector_SI: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b33: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS: *none*
- - Shape qudt:ScalarDataItem-value/sh:or/rdf:first: *none*
- - Shape qudt:IntervalScale: *none*
- - Shape qudt:Rule: *none*
- - Shape qudt:NumericListShape/sh:property/sh:or/rdf:first: *none*
- - Shape qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first: *none*
- - Shape qudt:Enumeration: *none*
- - Shape qudt:Figure: *none*
- - Shape qudt:PhysicalConstant: *none*
- - Shape qudt:LogarithmicUnit: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b18: *none*
- - Shape qudt:QuantityKind: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b16: *none*
- - Shape qudt:QuantityKindDimensionVector_Imperial: *none*
- - Shape qudt:Organization: *none*
- - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:first: *none*
- - Shape qudt:AbstractQuantityKind: *none*
- - Shape qudt:Concept: *none*
- - Shape qudt:Unit: *none*
- - Shape qudt:ScalarDatatype: *none*
- - Shape qudt:Scale: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-EMU: *none*
- - Shape qudt:NIST_SP811_Comment: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b8: *none*
- - Shape qudt:EnumeratedQuantity: *none*
- - Shape qudt:LatexString: *none*
- - Shape qudt:QuantityType: *none*
- - Shape qudt:CurrencyUnit: *none*
- - Shape qudt:Datatype: *none*
- - Shape qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first: *none*
- - Shape qudt:QuantityKindDimensionVector: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-GAUSS: *none*
- - Shape qudt:Statement: *none*
- - Shape qudt:SymmetricRelation: *none*
- - Shape qudt:ConstantValue: *none*
- - Shape qudt:Quantifiable-value/sh:node: *none*
- - Shape qudt:SystemOfQuantityKinds: *none*
- - Shape qudt:AngleUnit: *none*
- - Shape qudt:Quantity: *none*
- - Shape qudt:RatioScale: *none*
- - Shape qudt:NumericTypeUnion/rdf:first: *none*
- - Shape qudt:DerivedUnit: *none*
- - Shape qudt:Discipline: *none*
- - Shape qudt:DimensionlessUnit: *none*
- - Shape qudt:EnumeratedValue: *none*
- - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape qudt:NumericListShape: *none*
- - Shape qudt:UserQuantityKind: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b15: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-LH: *none*
- - Shape qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first: *none*
- - Shape qudt:ScalarDataItem: *none*
- - Shape qudt:OrdinalScale: *none*
- - Shape qudt:Comment: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-ESU: *none*
- - Shape qudt:Verifiable: *none*
- - Shape qudt:Quantifiable: *none*
- - Shape rdf:nil: *none*
- - Shape qudt:ScaleType: *none*
- - Shape qudt:NominalScale: *none*
- - Shape qudt:BinaryPrefix: *none*
- - Shape qudt:Citation: *none*
- - Shape qudt:CountingUnit: *none*
- - Shape qudt:SystemOfUnits: *none*
- - Shape qudt:PlaneAngleUnit: *none*
- - Shape qudt:Quantifiable-datatype/sh:or/rdf:first: *none*
- - Shape qudt:RuleType: *none*
- - Shape qudt:Prefix: *none*
- - Shape qudt:DecimalPrefix: *none*
- - Shape qudt:NumericTypeUnion/rdf:rest/rdf:first: *none*
- - Shape qudt:QuantityValue: *none*
- - Shape qudt:AspectClass: *none*
- - Shape qudt:SolidAngleUnit: *none*
- - Shape qudt:BaseDimensionMagnitude: *none*
- - Shape qudt:DataItem: *none*
- - Shape qudt:Aspect: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b17: *none*
- - Shape qudt:Symbol: *none*
- - Shape qudt:UCUMcs: *none*
- - Shape qudt:TransformType: *none*
- - Shape qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
- - Shape :relatedDisjointWithBroaderTransitive: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
- - Shape :singlePrefLabel: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:FeatureCollectionShape: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -25780,8 +25834,8 @@ On instance[&#x27;properties&#x27;][&#x27;language&#x27;]:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-37"
-                                                            aria-expanded="false" aria-controls="uid-37"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-36"
+                                                            aria-expanded="false" aria-controls="uid-36"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -25793,7 +25847,7 @@ On instance[&#x27;properties&#x27;][&#x27;language&#x27;]:
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-37">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-36">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using examples/collection.json from examples</div>
@@ -25803,153 +25857,115 @@ On instance[&#x27;properties&#x27;][&#x27;language&#x27;]:
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
                                                                     <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
                                                                     <div class="font-monospace subsection-title mt-2">SHACL</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/oim-obs/rules.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/oim-obs/rules.shacl:
- - Shape :force-linked-data-observedProperty: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;: _:N90094c2276814b33adc0ec75d85a3674
- - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval&gt;: _:N90094c2276814b33adc0ec75d85a3674
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyPresent&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;,jfsites:18,jfsites:19
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:FeatureCollectionShape: *none*
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: *none*
-</div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for http://qudt.org/2.1/schema/shacl/qudt:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for http://qudt.org/2.1/schema/shacl/qudt:
- - Shape qudt:QuantityKindDimensionVector_ISO: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b14: *none*
- - Shape qudt:QuantityKindDimensionVector_SI: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b33: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS: *none*
- - Shape qudt:ScalarDataItem-value/sh:or/rdf:first: *none*
- - Shape qudt:IntervalScale: *none*
- - Shape qudt:Rule: *none*
+ - Shape qudt:ScalarDataItem: *none*
+ - Shape qudt:AspectClass: *none*
+ - Shape qudt:CountingUnit: *none*
  - Shape qudt:NumericListShape/sh:property/sh:or/rdf:first: *none*
- - Shape qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:NumericTypeUnion/rdf:first: *none*
+ - Shape qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first: *none*
  - Shape qudt:Enumeration: *none*
- - Shape qudt:Figure: *none*
+ - Shape qudt:Discipline: *none*
+ - Shape qudt:PlaneAngleUnit: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb33: *none*
+ - Shape qudt:QuantityKindDimensionVector: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb18: *none*
  - Shape qudt:PhysicalConstant: *none*
+ - Shape qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-GAUSS: *none*
+ - Shape qudt:RatioScale: *none*
+ - Shape qudt:RuleType: *none*
+ - Shape qudt:Quantifiable-value/sh:node: *none*
+ - Shape qudt:DataItem: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-ESU: *none*
+ - Shape qudt:QuantityValue: *none*
+ - Shape qudt:ConstantValue: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-LH: *none*
+ - Shape qudt:DerivedUnit: *none*
+ - Shape qudt:BaseDimensionMagnitude: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb8: *none*
+ - Shape qudt:UserQuantityKind: *none*
+ - Shape qudt:QuantityKindDimensionVector_SI: *none*
+ - Shape qudt:Figure: *none*
+ - Shape qudt:NIST_SP811_Comment: *none*
+ - Shape qudt:Scale: *none*
+ - Shape qudt:UCUMcs: *none*
+ - Shape qudt:BinaryPrefix: *none*
+ - Shape qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first: *none*
+ - Shape qudt:Prefix: *none*
+ - Shape qudt:SystemOfQuantityKinds: *none*
  - Shape qudt:LogarithmicUnit: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b18: *none*
+ - Shape qudt:CurrencyUnit: *none*
+ - Shape qudt:QuantityType: *none*
+ - Shape qudt:NominalScale: *none*
+ - Shape qudt:Quantifiable-datatype/sh:or/rdf:first: *none*
+ - Shape qudt:OrdinalScale: *none*
  - Shape qudt:QuantityKind: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b16: *none*
+ - Shape qudt:NumericListShape: *none*
+ - Shape qudt:SystemOfUnits: *none*
+ - Shape qudt:QuantityKindDimensionVector_ISO: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS: *none*
+ - Shape qudt:Concept: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb14: *none*
+ - Shape qudt:ScalarDataItem-value/sh:or/rdf:first: *none*
+ - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:Statement: *none*
+ - Shape qudt:Datatype: *none*
+ - Shape qudt:NumericTypeUnion/rdf:rest/rdf:first: *none*
+ - Shape rdf:nil: *none*
+ - Shape qudt:Symbol: *none*
+ - Shape qudt:Quantity: *none*
+ - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:first: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb17: *none*
+ - Shape qudt:Aspect: *none*
  - Shape qudt:QuantityKindDimensionVector_Imperial: *none*
  - Shape qudt:Organization: *none*
- - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:first: *none*
- - Shape qudt:AbstractQuantityKind: *none*
- - Shape qudt:Concept: *none*
- - Shape qudt:Unit: *none*
- - Shape qudt:ScalarDatatype: *none*
- - Shape qudt:Scale: *none*
  - Shape qudt:QuantityKindDimensionVector_CGS-EMU: *none*
- - Shape qudt:NIST_SP811_Comment: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b8: *none*
- - Shape qudt:EnumeratedQuantity: *none*
- - Shape qudt:LatexString: *none*
- - Shape qudt:QuantityType: *none*
- - Shape qudt:CurrencyUnit: *none*
- - Shape qudt:Datatype: *none*
- - Shape qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first: *none*
- - Shape qudt:QuantityKindDimensionVector: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-GAUSS: *none*
- - Shape qudt:Statement: *none*
+ - Shape qudt:ScaleType: *none*
+ - Shape qudt:ScalarDatatype: *none*
  - Shape qudt:SymmetricRelation: *none*
- - Shape qudt:ConstantValue: *none*
- - Shape qudt:Quantifiable-value/sh:node: *none*
- - Shape qudt:SystemOfQuantityKinds: *none*
- - Shape qudt:AngleUnit: *none*
- - Shape qudt:Quantity: *none*
- - Shape qudt:RatioScale: *none*
- - Shape qudt:NumericTypeUnion/rdf:first: *none*
- - Shape qudt:DerivedUnit: *none*
- - Shape qudt:Discipline: *none*
- - Shape qudt:DimensionlessUnit: *none*
- - Shape qudt:EnumeratedValue: *none*
- - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape qudt:NumericListShape: *none*
- - Shape qudt:UserQuantityKind: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b15: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-LH: *none*
- - Shape qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first: *none*
- - Shape qudt:ScalarDataItem: *none*
- - Shape qudt:OrdinalScale: *none*
- - Shape qudt:Comment: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-ESU: *none*
  - Shape qudt:Verifiable: *none*
  - Shape qudt:Quantifiable: *none*
- - Shape rdf:nil: *none*
- - Shape qudt:ScaleType: *none*
- - Shape qudt:NominalScale: *none*
- - Shape qudt:BinaryPrefix: *none*
- - Shape qudt:Citation: *none*
- - Shape qudt:CountingUnit: *none*
- - Shape qudt:SystemOfUnits: *none*
- - Shape qudt:PlaneAngleUnit: *none*
- - Shape qudt:Quantifiable-datatype/sh:or/rdf:first: *none*
- - Shape qudt:RuleType: *none*
- - Shape qudt:Prefix: *none*
- - Shape qudt:DecimalPrefix: *none*
- - Shape qudt:NumericTypeUnion/rdf:rest/rdf:first: *none*
- - Shape qudt:QuantityValue: *none*
- - Shape qudt:AspectClass: *none*
  - Shape qudt:SolidAngleUnit: *none*
- - Shape qudt:BaseDimensionMagnitude: *none*
- - Shape qudt:DataItem: *none*
- - Shape qudt:Aspect: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b17: *none*
- - Shape qudt:Symbol: *none*
- - Shape qudt:UCUMcs: *none*
+ - Shape qudt:AbstractQuantityKind: *none*
+ - Shape qudt:DecimalPrefix: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb15: *none*
+ - Shape qudt:Rule: *none*
+ - Shape qudt:Comment: *none*
+ - Shape qudt:IntervalScale: *none*
+ - Shape qudt:Unit: *none*
+ - Shape qudt:EnumeratedQuantity: *none*
+ - Shape qudt:Citation: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb16: *none*
+ - Shape qudt:EnumeratedValue: *none*
+ - Shape qudt:DimensionlessUnit: *none*
  - Shape qudt:TransformType: *none*
- - Shape qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first: *none*
+ - Shape qudt:AngleUnit: *none*
+ - Shape qudt:LatexString: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
+ - Shape :singlePrefLabel: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
   Validation Report
@@ -25958,12 +25974,50 @@ On instance[&#x27;properties&#x27;][&#x27;language&#x27;]:
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
  - Shape :relatedDisjointWithBroaderTransitive: *none*
 </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/oim-obs/rules.shacl:
   Validation Report
   Conforms: True
   </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
- - Shape :singlePrefLabel: *none*
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/oim-obs/rules.shacl:
+ - Shape :force-linked-data-observedProperty: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyPresent&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;: _:N2f808968d7bd498691a83987fe96ba00
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval&gt;: _:N2f808968d7bd498691a83987fe96ba00
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:FeatureShape: jfsites:19,jfsites:18,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333&gt;,&lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:FeatureShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:FeatureCollectionShape: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -25973,8 +26027,8 @@ On instance[&#x27;properties&#x27;][&#x27;language&#x27;]:
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-38"
-                                                            aria-expanded="false" aria-controls="uid-38"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-37"
+                                                            aria-expanded="false" aria-controls="uid-37"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -25986,12 +26040,129 @@ On instance[&#x27;properties&#x27;][&#x27;language&#x27;]:
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-38">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-37">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using examples/example.ttl from examples</div>
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle example_3_1.ttl created</div>
                                                                     <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for http://qudt.org/2.1/schema/shacl/qudt:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for http://qudt.org/2.1/schema/shacl/qudt:
+ - Shape qudt:ScalarDataItem: *none*
+ - Shape qudt:AspectClass: *none*
+ - Shape qudt:CountingUnit: *none*
+ - Shape qudt:NumericListShape/sh:property/sh:or/rdf:first: *none*
+ - Shape qudt:NumericTypeUnion/rdf:first: *none*
+ - Shape qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first: *none*
+ - Shape qudt:Enumeration: *none*
+ - Shape qudt:Discipline: *none*
+ - Shape qudt:PlaneAngleUnit: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb33: *none*
+ - Shape qudt:QuantityKindDimensionVector: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb18: *none*
+ - Shape qudt:PhysicalConstant: *none*
+ - Shape qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-GAUSS: *none*
+ - Shape qudt:RatioScale: *none*
+ - Shape qudt:RuleType: *none*
+ - Shape qudt:Quantifiable-value/sh:node: *none*
+ - Shape qudt:DataItem: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-ESU: *none*
+ - Shape qudt:QuantityValue: *none*
+ - Shape qudt:ConstantValue: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-LH: *none*
+ - Shape qudt:DerivedUnit: *none*
+ - Shape qudt:BaseDimensionMagnitude: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb8: *none*
+ - Shape qudt:UserQuantityKind: *none*
+ - Shape qudt:QuantityKindDimensionVector_SI: *none*
+ - Shape qudt:Figure: *none*
+ - Shape qudt:NIST_SP811_Comment: *none*
+ - Shape qudt:Scale: *none*
+ - Shape qudt:UCUMcs: *none*
+ - Shape qudt:BinaryPrefix: *none*
+ - Shape qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first: *none*
+ - Shape qudt:Prefix: *none*
+ - Shape qudt:SystemOfQuantityKinds: *none*
+ - Shape qudt:LogarithmicUnit: *none*
+ - Shape qudt:CurrencyUnit: *none*
+ - Shape qudt:QuantityType: *none*
+ - Shape qudt:NominalScale: *none*
+ - Shape qudt:Quantifiable-datatype/sh:or/rdf:first: *none*
+ - Shape qudt:OrdinalScale: *none*
+ - Shape qudt:QuantityKind: *none*
+ - Shape qudt:NumericListShape: *none*
+ - Shape qudt:SystemOfUnits: *none*
+ - Shape qudt:QuantityKindDimensionVector_ISO: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS: *none*
+ - Shape qudt:Concept: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb14: *none*
+ - Shape qudt:ScalarDataItem-value/sh:or/rdf:first: *none*
+ - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first: *none*
+ - Shape qudt:Statement: *none*
+ - Shape qudt:Datatype: *none*
+ - Shape qudt:NumericTypeUnion/rdf:rest/rdf:first: *none*
+ - Shape rdf:nil: *none*
+ - Shape qudt:Symbol: *none*
+ - Shape qudt:Quantity: *none*
+ - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:first: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb17: *none*
+ - Shape qudt:Aspect: *none*
+ - Shape qudt:QuantityKindDimensionVector_Imperial: *none*
+ - Shape qudt:Organization: *none*
+ - Shape qudt:QuantityKindDimensionVector_CGS-EMU: *none*
+ - Shape qudt:ScaleType: *none*
+ - Shape qudt:ScalarDatatype: *none*
+ - Shape qudt:SymmetricRelation: *none*
+ - Shape qudt:Verifiable: *none*
+ - Shape qudt:Quantifiable: *none*
+ - Shape qudt:SolidAngleUnit: *none*
+ - Shape qudt:AbstractQuantityKind: *none*
+ - Shape qudt:DecimalPrefix: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb15: *none*
+ - Shape qudt:Rule: *none*
+ - Shape qudt:Comment: *none*
+ - Shape qudt:IntervalScale: *none*
+ - Shape qudt:Unit: *none*
+ - Shape qudt:EnumeratedQuantity: *none*
+ - Shape qudt:Citation: *none*
+ - Shape _:na195dd99a4a6406b9a0a8abd0305b11eb16: *none*
+ - Shape qudt:EnumeratedValue: *none*
+ - Shape qudt:DimensionlessUnit: *none*
+ - Shape qudt:TransformType: *none*
+ - Shape qudt:AngleUnit: *none*
+ - Shape qudt:LatexString: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
+ - Shape :singlePrefLabel: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
+ - Shape :relatedDisjointWithBroaderTransitive: *none*
+</div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for _sources/oim-obs/rules.shacl:
   Validation Report
   Conforms: True
@@ -26005,13 +26176,13 @@ On instance[&#x27;properties&#x27;][&#x27;language&#x27;]:
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyPresent&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyPresent&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
@@ -26019,140 +26190,23 @@ On instance[&#x27;properties&#x27;][&#x27;language&#x27;]:
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;/sosa:hasFeatureOfInterest
+ - Shape geojson:LinkShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape: *none*
- - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;/sosa:hasFeatureOfInterest
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:FeatureCollectionShape: *none*
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:LinkShape: *none*
  - Shape geojson:FeatureShape: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for http://qudt.org/2.1/schema/shacl/qudt:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for http://qudt.org/2.1/schema/shacl/qudt:
- - Shape qudt:QuantityKindDimensionVector_ISO: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b14: *none*
- - Shape qudt:QuantityKindDimensionVector_SI: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b33: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS: *none*
- - Shape qudt:ScalarDataItem-value/sh:or/rdf:first: *none*
- - Shape qudt:IntervalScale: *none*
- - Shape qudt:Rule: *none*
- - Shape qudt:NumericListShape/sh:property/sh:or/rdf:first: *none*
- - Shape qudt:ScalarDataItem-value/sh:or/rdf:rest/rdf:first: *none*
- - Shape qudt:Enumeration: *none*
- - Shape qudt:Figure: *none*
- - Shape qudt:PhysicalConstant: *none*
- - Shape qudt:LogarithmicUnit: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b18: *none*
- - Shape qudt:QuantityKind: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b16: *none*
- - Shape qudt:QuantityKindDimensionVector_Imperial: *none*
- - Shape qudt:Organization: *none*
- - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:first: *none*
- - Shape qudt:AbstractQuantityKind: *none*
- - Shape qudt:Concept: *none*
- - Shape qudt:Unit: *none*
- - Shape qudt:ScalarDatatype: *none*
- - Shape qudt:Scale: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-EMU: *none*
- - Shape qudt:NIST_SP811_Comment: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b8: *none*
- - Shape qudt:EnumeratedQuantity: *none*
- - Shape qudt:LatexString: *none*
- - Shape qudt:QuantityType: *none*
- - Shape qudt:CurrencyUnit: *none*
- - Shape qudt:Datatype: *none*
- - Shape qudt:Quantifiable-datatype/sh:or/rdf:rest/rdf:first: *none*
- - Shape qudt:QuantityKindDimensionVector: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-GAUSS: *none*
- - Shape qudt:Statement: *none*
- - Shape qudt:SymmetricRelation: *none*
- - Shape qudt:ConstantValue: *none*
- - Shape qudt:Quantifiable-value/sh:node: *none*
- - Shape qudt:SystemOfQuantityKinds: *none*
- - Shape qudt:AngleUnit: *none*
- - Shape qudt:Quantity: *none*
- - Shape qudt:RatioScale: *none*
- - Shape qudt:NumericTypeUnion/rdf:first: *none*
- - Shape qudt:DerivedUnit: *none*
- - Shape qudt:Discipline: *none*
- - Shape qudt:DimensionlessUnit: *none*
- - Shape qudt:EnumeratedValue: *none*
- - Shape qudt:InformativeReferencePropertyShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape qudt:NumericListShape: *none*
- - Shape qudt:UserQuantityKind: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b15: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-LH: *none*
- - Shape qudt:NumericTypeUnion/rdf:rest/rdf:rest/rdf:first: *none*
- - Shape qudt:ScalarDataItem: *none*
- - Shape qudt:OrdinalScale: *none*
- - Shape qudt:Comment: *none*
- - Shape qudt:QuantityKindDimensionVector_CGS-ESU: *none*
- - Shape qudt:Verifiable: *none*
- - Shape qudt:Quantifiable: *none*
- - Shape rdf:nil: *none*
- - Shape qudt:ScaleType: *none*
- - Shape qudt:NominalScale: *none*
- - Shape qudt:BinaryPrefix: *none*
- - Shape qudt:Citation: *none*
- - Shape qudt:CountingUnit: *none*
- - Shape qudt:SystemOfUnits: *none*
- - Shape qudt:PlaneAngleUnit: *none*
- - Shape qudt:Quantifiable-datatype/sh:or/rdf:first: *none*
- - Shape qudt:RuleType: *none*
- - Shape qudt:Prefix: *none*
- - Shape qudt:DecimalPrefix: *none*
- - Shape qudt:NumericTypeUnion/rdf:rest/rdf:first: *none*
- - Shape qudt:QuantityValue: *none*
- - Shape qudt:AspectClass: *none*
- - Shape qudt:SolidAngleUnit: *none*
- - Shape qudt:BaseDimensionMagnitude: *none*
- - Shape qudt:DataItem: *none*
- - Shape qudt:Aspect: *none*
- - Shape _:nee1a71eae4e24a129638c47f04f39ea8b17: *none*
- - Shape qudt:Symbol: *none*
- - Shape qudt:UCUMcs: *none*
- - Shape qudt:TransformType: *none*
- - Shape qudt:Quantifiable-value/sh:node/rdf:rest/rdf:first: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedProperty&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: &lt;https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2&gt;
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
- - Shape :relatedDisjointWithBroaderTransitive: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
- - Shape :singlePrefLabel: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:FeatureCollectionShape: *none*
 </div>
                                                     </div>
                                                 </div>

@@ -194,12 +194,12 @@
   "name": "Building Blocks - Marine API Profiles",
   "abstract": "(Under construction) - defines and demonstrates a reusable mechanism for specialisation of OGC APIs using the Oceans Information Model (OIM) for semantic interoperability.",
   "description": "Each building block defines a profile of a data exchange schema based on OGC API responses, mapped to the OIM using JSON-LD contexts. Common patterns are factored into reusable foundations to simplify development and maximise interoperability of such profiles, in a way which is scalable across future application requirements. \n\nThus, a pilot project to monitor Jellyfish swarms using Citizen Science will reuse common patterns for Citizen Science observations, which in turn we reuse a common pattern for observations, using an underlying component of the OIM - the OGC Observations model (SOSA ontology). \n",
-  "modified": "2026-05-04T11:57:24.645821",
+  "modified": "2026-05-26T13:50:56.408746",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"e7a962626cb1b8416eac2178e4b7326d31314fcd",
-      "shortCommitId": "\"e7a962",
-      "date": "2026-04-28T10:25:15+00:00\""
+      "commitId": "\"ccc2722ff09e6ff35b4415d9a62b15eb66c2dc45",
+      "shortCommitId": "\"ccc272",
+      "date": "2026-05-26T10:12:47+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/iliad-apis-features",
@@ -253,7 +253,7 @@
       "status": "under-development",
       "itemClass": "schema",
       "register": "ogc-incubator",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "abstract": "A source-level building block for HELCOM macroobservation point data within the Swedish EEZ, including provenance-aware marine observation properties and linked-data context.",
       "license": "https://creativecommons.org/licenses/by/4.0/",
       "tags": [
@@ -359,7 +359,7 @@
       "status": "under-development",
       "itemClass": "schema",
       "register": "ogc-incubator",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "abstract": "A source-level schema building block for recent Global Fishing Watch apparent fishing events returned by the GFW Events API for a Gulf of Gdansk polygon query.",
       "license": "https://globalfishingwatch.org/our-apis/",
       "tags": [
@@ -458,7 +458,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "dependsOn": null,
       "sources": [
         {
@@ -551,7 +551,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "link": "https://github.com/opengeospatial/CoverageJSON",
       "sources": [
         {
@@ -643,7 +643,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "link": "https://github.com/opengeospatial/coverage-implementation-schema",
       "sources": [
         {
@@ -722,6 +722,110 @@
       }
     },
     {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.emodnet-biology-occurrences",
+      "id": "ogc.hosted.iliad.api.features.emodnet-biology-occurrences",
+      "name": "EMODnet Biology Occurrences (GeoParquet)",
+      "abstract": "Darwin Core occurrence records of marine biodiversity from EMODnet Biology, packaged as GeoParquet 1.0.0, accessed via the EDITO STAC catalog. Covers global marine species observations with WoRMS Aphia identifiers, taxon hierarchy, sampling metadata, and WKB-encoded Point geometries.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-05-22T00:00:00Z",
+      "dateOfLastChange": "2026-05-26",
+      "version": "0.1.0",
+      "itemClass": "schema",
+      "tags": [
+        "marine",
+        "biodiversity",
+        "darwin-core",
+        "emodnet",
+        "edito",
+        "occurrence",
+        "geoparquet",
+        "worms",
+        "obis"
+      ],
+      "sources": [
+        {
+          "title": "EMODnet Biology marine biodiversity observations (EDITO STAC)",
+          "link": "https://api.dive.edito.eu/data/collections/emodnet-occurrence_data"
+        },
+        {
+          "title": "EMODnet Biology GeoParquet on EDITO/CloudFerro S3",
+          "link": "https://s3.waw3-1.cloudferro.com/emodnet/emodnet_biology/12639/"
+        },
+        {
+          "title": "Darwin Core Terms",
+          "link": "https://dwc.tdwg.org/terms/"
+        },
+        {
+          "title": "World Register of Marine Species (WoRMS)",
+          "link": "https://www.marinespecies.org/"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://api.dive.edito.eu/data/collections/emodnet-occurrence_data",
+          "rel": "related",
+          "type": "application/json",
+          "title": "EDITO STAC collection"
+        }
+      ],
+      "shaclShapes": null,
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/emodnet-biology-occurrences/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/emodnet-biology-occurrences/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/emodnet-biology-occurrences/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/emodnet-biology-occurrences/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/emodnet-biology-occurrences/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/emodnet-biology-occurrences/resolvedProperties.json",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/emodnet-biology-occurrences/",
+      "validationPassed": true,
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/emodnet-biology-occurrences/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/emodnet-biology-occurrences/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.emodnet-biology-occurrences"
+        }
+      },
+      "@id": "bblocks://ogc.hosted.iliad.api.features.emodnet-biology-occurrences",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "EMODnet Biology Occurrences (GeoParquet)",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/iliad-apis-features/"
+      }
+    },
+    {
       "itemIdentifier": "ogc.hosted.iliad.api.features.oim-bio-tdwg",
       "name": "OIM Biodiversity - TDWG",
       "abstract": "Defines JSON schema properties mapped to the Taxonomic Database Working Group data model. This is based on Darwin Core.",
@@ -730,7 +834,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -752,6 +856,12 @@
         "prof:hasRole": "role:mapping",
         "dct:format": "application/ld+json",
         "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "ontology": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-bio-tdwg/ontology.ttl",
+        "prof:hasRole": "role:specification",
+        "dct:format": "text/turtle",
+        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "schema": [
         {
@@ -795,6 +905,315 @@
       ],
       "skos:prefLabel": "OIM Biodiversity - TDWG",
       "openAPIDocument": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/iliad-apis-features/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.indicator-quality-requirement",
+      "name": "SeaDOTs Indicator Quality Requirement",
+      "abstract": "Schema profile for declaring the data-quality and geospatial requirements that must be satisfied before an indicator can be used in a SeaDOTs impact assessment.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-05-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "iliad-apis",
+      "version": "0.1",
+      "dateOfLastChange": "2026-05-26",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/indicator-quality-requirement/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "tags": [
+        "seadots",
+        "indicator",
+        "quality",
+        "dqv",
+        "requirements",
+        "geospatial"
+      ],
+      "sources": [
+        {
+          "title": "W3C Data Quality Vocabulary",
+          "link": "https://www.w3.org/TR/vocab-dqv/"
+        },
+        {
+          "title": "OGC GeoSPARQL",
+          "link": "https://www.ogc.org/standard/geosparql/"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/indicator-quality-requirement/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/indicator-quality-requirement/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/indicator-quality-requirement/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/indicator-quality-requirement/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/indicator-quality-requirement/resolvedProperties.json",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/indicator-quality-requirement/",
+      "validationPassed": true,
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/indicator-quality-requirement/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/indicator-quality-requirement/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.indicator-quality-requirement"
+        }
+      },
+      "@id": "bblocks://ogc.hosted.iliad.api.features.indicator-quality-requirement",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "SeaDOTs Indicator Quality Requirement",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/iliad-apis-features/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.nina-seapop-catalog",
+      "id": "ogc.hosted.iliad.api.features.nina-seapop-catalog",
+      "name": "NINA SEAPOP \u2014 Catalog / Discovery Metadata",
+      "abstract": "OGC API Records and STAC Collection metadata record for the NINA SEAPOP seabird colony observation dataset. Encodes discovery metadata including spatial coverage (Norway + Svalbard), temporal extent (2014\u2013present), provider (NINA), license (CC-BY 4.0), and links to both the raw OBIS occurrence API (source mode) and the OIM GeoJSON Features endpoint (target mode). Implements OGC Records with relevant STAC extensions.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-05-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "iliad-apis",
+      "version": "0.1",
+      "dateOfLastChange": "2026-05-26",
+      "tags": [
+        "iliad",
+        "stac",
+        "ogc-records",
+        "seabird",
+        "seapop",
+        "nina",
+        "catalog",
+        "metadata",
+        "discovery"
+      ],
+      "sources": [
+        {
+          "title": "OBIS dataset \u2014 NINA SEAPOP",
+          "link": "https://obis.org/dataset/561441ab-128b-4be7-8fce-de1ef79855da"
+        },
+        {
+          "title": "GBIF dataset \u2014 SEAPOP Seabird colonies of Norway",
+          "link": "https://doi.org/10.15468/gk9xqd"
+        },
+        {
+          "title": "OGC API Records specification",
+          "link": "https://ogcapi.ogc.org/records/"
+        },
+        {
+          "title": "STAC Specification",
+          "link": "https://stacspec.org/"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "shaclShapes": null,
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/nina-seapop-catalog/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/nina-seapop-catalog/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/nina-seapop-catalog/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/nina-seapop-catalog/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/nina-seapop-catalog/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/nina-seapop-catalog/resolvedProperties.json",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/nina-seapop-catalog/",
+      "validationPassed": true,
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/nina-seapop-catalog/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/nina-seapop-catalog/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.nina-seapop-catalog"
+        }
+      },
+      "@id": "bblocks://ogc.hosted.iliad.api.features.nina-seapop-catalog",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "NINA SEAPOP \u2014 Catalog / Discovery Metadata",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/iliad-apis-features/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.nina-seapop-source",
+      "id": "ogc.hosted.iliad.api.features.nina-seapop-source",
+      "name": "NINA SEAPOP Source \u2014 OBIS Occurrence Record",
+      "abstract": "Source-faithful representation of a single occurrence record as returned by the OBIS v3 occurrence API for the NINA SEAPOP seabird colony monitoring dataset (dataset ID 561441ab-128b-4be7-8fce-de1ef79855da). Encodes the raw flat JSON structure including both original Darwin Core fields and OBIS-enrichment fields (bathymetry, shoredistance, sst, sss, aphiaID). Intended as the source-side contract in a source\u2192target transformation pipeline.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-05-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "iliad-apis",
+      "version": "0.1",
+      "dateOfLastChange": "2026-05-26",
+      "tags": [
+        "iliad",
+        "obis",
+        "seabird",
+        "seapop",
+        "nina",
+        "darwin-core",
+        "occurrence",
+        "source"
+      ],
+      "sources": [
+        {
+          "title": "OBIS v3 occurrence API \u2014 NINA SEAPOP dataset",
+          "link": "https://api.obis.org/v3/occurrence?datasetid=561441ab-128b-4be7-8fce-de1ef79855da"
+        },
+        {
+          "title": "OBIS dataset record \u2014 SEAPOP NINA",
+          "link": "https://obis.org/dataset/561441ab-128b-4be7-8fce-de1ef79855da"
+        },
+        {
+          "title": "Darwin Core Terms",
+          "link": "https://dwc.tdwg.org/terms/"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "shaclShapes": null,
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/nina-seapop-source/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/nina-seapop-source/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/nina-seapop-source/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/nina-seapop-source/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/nina-seapop-source/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/nina-seapop-source/resolvedProperties.json",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/nina-seapop-source/",
+      "validationPassed": true,
+      "transforms": [
+        {
+          "id": "obis-to-oim",
+          "description": "Convert the raw OBIS v3 occurrence API response for the NINA SEAPOP dataset\ninto an OIM-aligned GeoJSON FeatureCollection conforming to nina-seapop-oim.\n\nMapping:\n  geometry       \u2190 [decimalLongitude, decimalLatitude] (GeoJSON Point)\n  id             \u2190 occurrenceID\n  colonyID       \u2190 locality slugified to https://seapop.no/colony/<slug>\n  properties     \u2190 source Darwin Core fields only\n\nExcluded (OBIS enrichment / pipeline fields, not original source data):\n  aphiaID, bathymetry, shoredistance, sst, sss,\n  id, dataset_id, node_id, dropped, absence, flags,\n  marine, brackish, category, unaccepted,\n  kingdomid, phylumid, classid, orderid, familyid, genusid, speciesid,\n  subphylum, subphylumid, infraphylum, infraphylumid,\n  megaclass, megaclassid, superclass, superclassid\n",
+          "type": "jq",
+          "inputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "application/json",
+                "label": "JSON",
+                "defaultExtension": "json"
+              }
+            ]
+          },
+          "outputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "application/geo+json",
+                "label": "GeoJSON",
+                "defaultExtension": "geojson"
+              }
+            ],
+            "profiles": [
+              "bblocks://ogc.hosted.iliad.api.features.nina-seapop-oim"
+            ]
+          },
+          "ref": "https://ogcincubator.github.io/iliad-apis-features/_sources/nina-seapop-source/transforms/obis-to-oim.jq",
+          "code": "# Transform: OBIS flat JSON occurrence response \u2192 OIM GeoJSON FeatureCollection\n#\n# Input:  { total: N, results: [ <flat OBIS occurrence record>, ... ] }\n# Output: GeoJSON FeatureCollection conforming to nina-seapop-oim\n#\n# Mapping rules:\n#   geometry       \u2190 decimalLongitude, decimalLatitude (Point)\n#   id             \u2190 occurrenceID\n#   colonyID       \u2190 locality (slugified to https://seapop.no/colony/<slug>)\n#   properties     \u2190 source Darwin Core fields only; OBIS enrichment excluded\n#\n# Excluded fields (OBIS enrichment / pipeline \u2014 not original source data):\n#   aphiaID, bathymetry, shoredistance, sst, sss,\n#   id, dataset_id, node_id, dropped, absence, flags,\n#   marine, brackish, category, unaccepted,\n#   *id (taxonomy WoRMS IDs: kingdomid, phylumid, classid, ...)\n\n{\n  type: \"FeatureCollection\",\n  features: [\n    .results[]\n    | select(.decimalLatitude != null and .decimalLongitude != null)\n    | {\n        type: \"Feature\",\n        id: .occurrenceID,\n        geometry: {\n          type: \"Point\",\n          coordinates: [.decimalLongitude, .decimalLatitude]\n        },\n        properties: {\n          colonyID: (\n            \"https://seapop.no/colony/\" +\n            (\n              (.locality // \"unknown\")\n              | ascii_downcase\n              | gsub(\"[^a-z0-9]+\"; \"-\")\n              | ltrimstr(\"-\")\n              | rtrimstr(\"-\")\n            )\n          ),\n          basisOfRecord:                  .basisOfRecord,\n          catalogNumber:                  .catalogNumber,\n          collectionCode:                 .collectionCode,\n          institutionCode:                .institutionCode,\n          datasetID:                      .datasetID,\n          occurrenceID:                   .occurrenceID,\n          occurrenceStatus:               .occurrenceStatus,\n          scientificName:                 .scientificName,\n          scientificNameID:               .scientificNameID,\n          originalScientificName:         .originalScientificName,\n          kingdom:                        .kingdom,\n          phylum:                         .phylum,\n          class:                          .class,\n          order:                          .order,\n          family:                         .family,\n          genus:                          .genus,\n          species:                        .species,\n          decimalLatitude:                .decimalLatitude,\n          decimalLongitude:               .decimalLongitude,\n          coordinateUncertaintyInMeters:  .coordinateUncertaintyInMeters,\n          country:                        .country,\n          stateProvince:                  .stateProvince,\n          locality:                       .locality,\n          modified:                       .modified\n        }\n      }\n  ]\n}\n"
+        }
+      ],
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/nina-seapop-source/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/nina-seapop-source/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.nina-seapop-source"
+        }
+      },
+      "@id": "bblocks://ogc.hosted.iliad.api.features.nina-seapop-source",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "NINA SEAPOP Source \u2014 OBIS Occurrence Record",
+      "openAPIDocument": null,
       "ontology": null,
       "rdfData": [],
       "dependsOn": null,
@@ -813,13 +1232,14 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "tags": [
         "iliad",
         "fmsdi",
         "vertical-datum",
         "coastal",
-        "geodesy"
+        "geodesy",
+        "best-practices"
       ],
       "sources": [
         {
@@ -903,6 +1323,96 @@
       }
     },
     {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.property-relationship",
+      "name": "SeaDOTs Property Relationship",
+      "abstract": "Schema profile for a directed, weighted relationship between two observed properties or indicators. Used by SeaDOTs impact-assessment models to encode cross-impact links, evidence, provenance, and human-readable explanations.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-05-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "iliad-apis",
+      "version": "0.1",
+      "dateOfLastChange": "2026-05-26",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/property-relationship/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "tags": [
+        "seadots",
+        "indicator",
+        "relationship",
+        "cross-impact",
+        "provenance"
+      ],
+      "sources": [
+        {
+          "title": "SeaDOTs interoperability framework",
+          "link": "https://github.com/ILIAD-ocean-twin/seadots"
+        },
+        {
+          "title": "W3C PROV-O",
+          "link": "https://www.w3.org/TR/prov-o/"
+        },
+        {
+          "title": "QUDT",
+          "link": "https://www.qudt.org/"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/property-relationship/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/property-relationship/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/property-relationship/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/property-relationship/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/property-relationship/resolvedProperties.json",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/property-relationship/",
+      "validationPassed": true,
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/property-relationship/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/property-relationship/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.property-relationship"
+        }
+      },
+      "@id": "bblocks://ogc.hosted.iliad.api.features.property-relationship",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "SeaDOTs Property Relationship",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/iliad-apis-features/"
+      }
+    },
+    {
       "itemIdentifier": "ogc.hosted.iliad.api.features.zarr_array_metadata",
       "name": "GeoZarr Array description metadata",
       "abstract": "based on the https://zarr.readthedocs.io/en/v2.1.2/spec/v2.html and Iliad requiremnts",
@@ -911,7 +1421,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_array_metadata",
       "sources": [
         {
@@ -999,7 +1509,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_attrs_metadata",
       "sources": [
         {
@@ -1087,7 +1597,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_attrs_metadata",
       "sources": [
         {
@@ -1175,7 +1685,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "link": "https://github.com/opengeospatial/iliad-api-features/oim-sta-obs",
       "sources": [
         {
@@ -1258,7 +1768,7 @@
       "status": "under-development",
       "itemClass": "schema",
       "register": "ogc-incubator",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "abstract": "Auto-generated bblock from a csv source.",
       "license": "https://creativecommons.org/licenses/by/4.0/",
       "tags": [
@@ -1340,7 +1850,7 @@
       "status": "under-development",
       "itemClass": "schema",
       "register": "ogc-incubator",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "abstract": "Auto-generated bblock from a csv source.",
       "license": "https://creativecommons.org/licenses/by/4.0/",
       "tags": [
@@ -1467,7 +1977,7 @@
       "status": "under-development",
       "itemClass": "schema",
       "register": "ogc-incubator",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "abstract": "Auto-generated bblock from a csv source.",
       "license": "https://creativecommons.org/licenses/by/4.0/",
       "tags": [
@@ -1548,7 +2058,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "link": "https://github.com/opengeospatial/CoverageJSON",
       "sources": [
         {
@@ -1639,6 +2149,106 @@
       }
     },
     {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.nina-seapop-oim",
+      "id": "ogc.hosted.iliad.api.features.nina-seapop-oim",
+      "name": "NINA SEAPOP \u2014 OIM Target Model",
+      "abstract": "OIM-aligned GeoJSON Feature representation of NINA SEAPOP seabird colony observations, extending oim-bio-tdwg (Darwin Core). Adds colonyID as a persistent URI identifying the nesting site (derived from the source locality field), enabling time-series queries per colony as sosa:hasFeatureOfInterest. Only source-derived fields are added; OBIS enrichment fields (bathymetry, shoredistance, sst, sss, aphiaID) are excluded from the schema.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-05-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "iliad-apis",
+      "version": "0.1",
+      "dateOfLastChange": "2026-05-26",
+      "dependsOn": [
+        "bblocks://ogc.hosted.iliad.api.features.oim-bio-tdwg"
+      ],
+      "tags": [
+        "iliad",
+        "oim",
+        "seabird",
+        "seapop",
+        "nina",
+        "darwin-core",
+        "colony",
+        "biodiversity"
+      ],
+      "sources": [
+        {
+          "title": "SEAPOP \u2014 Norwegian Seabird Population Monitoring",
+          "link": "https://seapop.no/"
+        },
+        {
+          "title": "OBIS dataset \u2014 NINA SEAPOP",
+          "link": "https://obis.org/dataset/561441ab-128b-4be7-8fce-de1ef79855da"
+        },
+        {
+          "title": "Darwin Core Terms",
+          "link": "https://dwc.tdwg.org/terms/"
+        },
+        {
+          "title": "SOSA/SSN Ontology",
+          "link": "https://www.w3.org/TR/vocab-ssn/"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "shaclShapes": null,
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/nina-seapop-oim/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/nina-seapop-oim/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/nina-seapop-oim/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/nina-seapop-oim/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/nina-seapop-oim/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/nina-seapop-oim/resolvedProperties.json",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/nina-seapop-oim/",
+      "validationPassed": true,
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/nina-seapop-oim/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/nina-seapop-oim/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.nina-seapop-oim"
+        }
+      },
+      "@id": "bblocks://ogc.hosted.iliad.api.features.nina-seapop-oim",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "NINA SEAPOP \u2014 OIM Target Model",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/iliad-apis-features/"
+      }
+    },
+    {
       "itemIdentifier": "ogc.hosted.iliad.api.features.marine-protected-area-emodnet",
       "name": "Marine Protected Area FeatureType Building Block",
       "abstract": "Defines a composable Building Block view of the MPA aligned with the Oceans Information Model.",
@@ -1647,7 +2257,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "dependsOn": [
         "bblocks://ogc.geo.features.feature"
       ],
@@ -1737,6 +2347,146 @@
       }
     },
     {
+      "itemIdentifier": "ogc.hosted.iliad.api.features.apkg-record",
+      "name": "ILIAD APKG Registry Record",
+      "abstract": "OGC API Records profile for the ILIAD Application Package registry hosted at https://iliad-registry.inesctec.pt. Each register item is a GeoJSON Feature describing one Application Package (CWL CommandLineTool or Workflow) with metadata covering identifier and family, software version, authors and organisations, programming language, inputs and outputs as CWL parameters, embedded CWL document, spatial and temporal coverage, license, citation, and provenance. Extends the GeoDCAT mapping for OGC API Records and reuses the APKG metadata profile (apkg:) for ApplicationPackage, Process, Parameter, Geometry and TemporalCoverage terms.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-05-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "iliad-apis",
+      "version": "0.1",
+      "dateOfLastChange": "2026-05-26",
+      "dependsOn": [
+        "bblocks://ogc.geo.geodcat.dcat-records",
+        "bblocks://ogc.hosted.iliad.api.features.apkg"
+      ],
+      "tags": [
+        "iliad",
+        "apkg",
+        "application-package",
+        "cwl",
+        "ogc-records",
+        "catalog",
+        "registry"
+      ],
+      "sources": [
+        {
+          "title": "ILIAD APKG registry \u2014 apkg collection",
+          "link": "https://iliad-registry.inesctec.pt/collections/apkg"
+        },
+        {
+          "title": "ILIAD APKG registry \u2014 items endpoint",
+          "link": "https://iliad-registry.inesctec.pt/collections/apkg/items"
+        },
+        {
+          "title": "ILIAD APKG registry \u2014 collection schema",
+          "link": "https://iliad-registry.inesctec.pt/collections/apkg/schema"
+        },
+        {
+          "title": "APKG metadata terms (Turtle)",
+          "link": "https://github.com/ILIAD-ocean-twin/APKG/blob/main/terms/apkg-ms.ttl"
+        },
+        {
+          "title": "OGC API Records specification",
+          "link": "https://ogcapi.ogc.org/records/"
+        },
+        {
+          "title": "GeoDCAT mapping for OGC API Records",
+          "link": "https://ogcincubator.github.io/geodcat-ogcapi-records/bblock/ogc.geo.geodcat.geodcat-records/"
+        },
+        {
+          "title": "Common Workflow Language (CWL)",
+          "link": "https://www.commonwl.org/"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.api.records.v1.schemas.linkTemplate",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.geo.features.feature",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/iliad-apis-features/_sources/apkg/rules.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.hosted.iliad.api.features.apkg",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/apkg-record/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/apkg-record/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/apkg-record/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/apkg-record/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/apkg-record/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/apkg-record/resolvedProperties.json",
+      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/apkg-record/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/apkg-record/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/apkg-record/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/apkg-record/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.apkg-record"
+        }
+      },
+      "@id": "bblocks://ogc.hosted.iliad.api.features.apkg-record",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "ILIAD APKG Registry Record",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/iliad-apis-features/"
+      }
+    },
+    {
       "itemIdentifier": "ogc.hosted.iliad.api.features.oim-obs",
       "name": "OIM Observations",
       "abstract": "Defines observations and collections to implement the OIM SOSA cross-domain model in a form compatible with ILIAD and other digital twins using this model.",
@@ -1745,7 +2495,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -1800,10 +2550,10 @@
         }
       ],
       "dependsOn": [
-        "bblocks://ogc.ogc-utils.iri-or-curie",
         "bblocks://ogc.sosa.features.observation",
+        "bblocks://ogc.sosa.features.observationCollection",
         "bblocks://ogc.sosa.properties.observation",
-        "bblocks://ogc.sosa.features.observationCollection"
+        "bblocks://ogc.ogc-utils.iri-or-curie"
       ],
       "ldContext": {
         "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/context.jsonld",
@@ -1869,7 +2619,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "dependsOn": [
         "bblocks://ogc.model.cross-domain.all"
       ],
@@ -1935,18 +2685,18 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+            "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.skos.concept",
+          "rdfs:seeAlso": "bblocks://ogc.skos.common",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+            "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.skos.common",
+          "rdfs:seeAlso": "bblocks://ogc.skos.concept",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -2001,7 +2751,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "dependsOn": [
         "bblocks://ogc.model.cross-domain.all"
       ],
@@ -2044,18 +2794,18 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+            "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.skos.concept",
+          "rdfs:seeAlso": "bblocks://ogc.skos.common",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+            "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.skos.common",
+          "rdfs:seeAlso": "bblocks://ogc.skos.concept",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -2102,124 +2852,6 @@
       }
     },
     {
-      "itemIdentifier": "ogc.hosted.iliad.api.features.oim-variables",
-      "name": "OIM Variables",
-      "abstract": "Defines the OIM variable and indicator concept model for SEADOTS and ILIAD variable observations.",
-      "status": "under-development",
-      "dateTimeAddition": "2026-04-20T00:00:00Z",
-      "itemClass": "model",
-      "register": "ogc-incubator",
-      "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
-      "dependsOn": [
-        "bblocks://ogc.model.cross-domain.all"
-      ],
-      "sources": [
-        {
-          "title": "SEADOTS Indicator Vocabulary",
-          "link": "https://id3.seadots.eu/indicator/"
-        },
-        {
-          "title": "OIM Oceans Information Model",
-          "link": "https://github.com/ILIAD-ocean-twin/OIM"
-        }
-      ],
-      "scope": "dev",
-      "tags": [
-        "iliad",
-        "oim",
-        "variables",
-        "indicators",
-        "model"
-      ],
-      "shaclShapes": [
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-variables/rules.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.hosted.iliad.api.features.oim-variables",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "http://qudt.org/2.1/schema/shacl/qudt"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.qudt",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.sosa",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.skos.concept",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.skos.common",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        }
-      ],
-      "ontology": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-variables/ontology.ttl",
-        "prof:hasRole": "role:specification",
-        "dct:format": "text/turtle",
-        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
-      },
-      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-variables/",
-      "validationPassed": false,
-      "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/oim-variables/",
-      "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/oim-variables/index.json"
-        },
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/oim-variables/index.md"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.oim-variables"
-        }
-      },
-      "@id": "bblocks://ogc.hosted.iliad.api.features.oim-variables",
-      "@type": [
-        "bblocks:Model",
-        "skos:Concept",
-        "dcat:Dataset",
-        "bblocks:BBlock"
-      ],
-      "skos:prefLabel": "OIM Variables",
-      "ldContext": null,
-      "schema": null,
-      "openAPIDocument": null,
-      "rdfData": [],
-      "isProfileOf": null,
-      "skos:topConceptOf": {
-        "@id": "https://ogcincubator.github.io/iliad-apis-features/"
-      }
-    },
-    {
       "itemIdentifier": "ogc.hosted.iliad.api.features.oim-coastal-feature",
       "id": "ogc.hosted.iliad.api.features.oim-coastal-feature",
       "name": "OIM Coastal Feature",
@@ -2229,11 +2861,11 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "dependsOn": [
+        "bblocks://ogc.hosted.iliad.api.features.vertical-datum-reference",
         "bblocks://ogc.hosted.iliad.api.features.oim-obs",
-        "bblocks://ogc.geo.features.feature",
-        "bblocks://ogc.hosted.iliad.api.features.vertical-datum-reference"
+        "bblocks://ogc.geo.features.feature"
       ],
       "tags": [
         "iliad",
@@ -2242,7 +2874,8 @@
         "intertidal",
         "oim",
         "elevation",
-        "white-ribbon"
+        "white-ribbon",
+        "best-practices"
       ],
       "sources": [
         {
@@ -2370,7 +3003,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "link": "https://github.com/opengeospatial/bblock-tehttps://ogcincubator.github.io/cross-domain-model/mplate",
       "sources": [
         {
@@ -2492,10 +3125,10 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "1.0",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "dependsOn": [
-        "bblocks://ogc.hosted.iliad.api.features.oim",
-        "bblocks://ogc.hosted.iliad.api.features.oim-bio-tdwg"
+        "bblocks://ogc.hosted.iliad.api.features.oim-bio-tdwg",
+        "bblocks://ogc.hosted.iliad.api.features.oim"
       ],
       "shaclRules": [],
       "sources": [
@@ -2532,18 +3165,18 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+            "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.skos.concept",
+          "rdfs:seeAlso": "bblocks://ogc.skos.common",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+            "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.skos.common",
+          "rdfs:seeAlso": "bblocks://ogc.skos.concept",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -2598,7 +3231,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "dependsOn": [
         "bblocks://ogc.geo.geodcat.stac.geodcat-stac-item"
       ],
@@ -2621,18 +3254,18 @@
       "shaclShapes": [
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl"
+            "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.api.records.v1.schemas.linkTemplate",
+          "rdfs:seeAlso": "bblocks://ogc.geo.features.feature",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
         },
         {
           "prof:hasArtifact": [
-            "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+            "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.geo.features.feature",
+          "rdfs:seeAlso": "bblocks://ogc.api.records.v1.schemas.linkTemplate",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -2695,137 +3328,6 @@
       }
     },
     {
-      "itemIdentifier": "ogc.hosted.iliad.api.features.odd-protocol",
-      "name": "ODD Protocol Description Record",
-      "abstract": "OGC API Records profile for simulation model publications using the ODD Protocol (Overview, Design concepts, Details). Provides a structured, open-ended scaffold for describing agent-based and individual-based models; domain-specific vocabularies (NERC, CF, Darwin Core, ICES) are injected at the entity and variable level by domain profiles.",
-      "status": "under-development",
-      "dateTimeAddition": "2026-04-29T00:00:00Z",
-      "itemClass": "schema",
-      "register": "iliad-apis",
-      "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
-      "license": "https://creativecommons.org/licenses/by/4.0/",
-      "tags": [
-        "ODD",
-        "simulation",
-        "agent-based-model",
-        "ABM",
-        "IBM",
-        "model-documentation",
-        "open-science",
-        "records"
-      ],
-      "authors": [
-        {
-          "name": "ILIAD Marine Data Team",
-          "organization": "ILIAD Ocean Digital Twin"
-        }
-      ],
-      "sources": [
-        {
-          "title": "The ODD Protocol for Describing Agent-Based and Other Simulation Models: A Second Update",
-          "link": "https://doi.org/10.18564/jasss.4259"
-        },
-        {
-          "title": "GeoDCAT mapping for OGC API Records",
-          "link": "https://ogcincubator.github.io/geodcat-ogcapi-records/"
-        },
-        {
-          "title": "Open Science Building Blocks",
-          "link": "https://ogcincubator.github.io/bblocks-openscience/"
-        }
-      ],
-      "dependsOn": [
-        "bblocks://ogc.osc.ontology.openscience",
-        "bblocks://ogc.geo.geodcat.geodcat-records-prov",
-        "bblocks://ogc.geo.geodcat.geodcat-records"
-      ],
-      "ldContext": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/odd-protocol/context.jsonld",
-        "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json",
-        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
-      },
-      "shaclRules": [],
-      "standards": [
-        "https://doi.org/10.18564/jasss.4259",
-        "http://www.w3.org/TR/vocab-dcat-3/",
-        "http://www.w3.org/TR/prov-o/",
-        "https://ogcincubator.github.io/geodcat-ogcapi-records/"
-      ],
-      "maturity": "development",
-      "scope": "dev",
-      "shaclShapes": [
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.api.records.v1.schemas.linkTemplate",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.geo.features.feature",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        }
-      ],
-      "schema": [
-        {
-          "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/odd-protocol/schema.yaml",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        },
-        {
-          "prof:hasArtifact": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/odd-protocol/schema.json",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/json",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        }
-      ],
-      "sourceSchema": "https://ogcincubator.github.io/iliad-apis-features/_sources/odd-protocol/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/iliad-apis-features/_sources/odd-protocol/context.jsonld",
-      "resolvedSchemaProperties": "https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/odd-protocol/resolvedProperties.json",
-      "sourceFiles": "https://ogcincubator.github.io/iliad-apis-features/_sources/odd-protocol/",
-      "validationPassed": false,
-      "testOutputs": "https://github.com/ogcincubator/iliad-apis-features/blob/master/build/tests/hosted/iliad/api/features/odd-protocol/",
-      "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/json-full/hosted/iliad/api/features/odd-protocol/index.json"
-        },
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/build/generateddocs/markdown/hosted/iliad/api/features/odd-protocol/index.md"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/iliad-apis-features/bblock/ogc.hosted.iliad.api.features.odd-protocol"
-        }
-      },
-      "@id": "bblocks://ogc.hosted.iliad.api.features.odd-protocol",
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset",
-        "bblocks:BBlock"
-      ],
-      "skos:prefLabel": "ODD Protocol Description Record",
-      "openAPIDocument": null,
-      "ontology": null,
-      "rdfData": [],
-      "isProfileOf": null,
-      "skos:topConceptOf": {
-        "@id": "https://ogcincubator.github.io/iliad-apis-features/"
-      }
-    },
-    {
       "itemIdentifier": "ogc.hosted.iliad.api.features.dynamic-shoreline",
       "id": "ogc.hosted.iliad.api.features.dynamic-shoreline",
       "name": "Dynamic Shoreline Feature",
@@ -2835,7 +3337,7 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "dependsOn": [
         "bblocks://ogc.hosted.iliad.api.features.oim-coastal-feature",
         "bblocks://ogc.geo.features.feature"
@@ -2847,7 +3349,8 @@
         "tidal",
         "coastal",
         "satellite",
-        "dynamic"
+        "dynamic",
+        "best-practices"
       ],
       "sources": [
         {
@@ -2980,12 +3483,12 @@
       "itemClass": "schema",
       "register": "iliad-apis",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "link": "https://github.com/opengeospatial/bblock-template",
       "dependsOn": [
-        "bblocks://ogc.hosted.iliad.api.features.oim-obs-cs",
+        "bblocks://ogc.hosted.iliad.api.features.oim-bio-tdwg",
         "bblocks://ogc.hosted.iliad.api.features.iliad-jellyfish-ontology",
-        "bblocks://ogc.hosted.iliad.api.features.oim-bio-tdwg"
+        "bblocks://ogc.hosted.iliad.api.features.oim-obs-cs"
       ],
       "sources": [
         {
@@ -3004,6 +3507,42 @@
         "project"
       ],
       "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "http://qudt.org/2.1/schema/shacl/qudt"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.qudt",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.sosa",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.skos.common",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.skos.concept",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
         {
           "prof:hasArtifact": [
             "https://ogcincubator.github.io/iliad-apis-features/_sources/oim-obs/rules.shacl"
@@ -3036,42 +3575,6 @@
             "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.features.featureCollection",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "http://qudt.org/2.1/schema/shacl/qudt"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.qudt",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.sosa",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.skos.concept",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.skos.common",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -3141,7 +3644,7 @@
       "status": "under-development",
       "itemClass": "schema",
       "register": "ogc-incubator",
-      "dateOfLastChange": "2026-05-04",
+      "dateOfLastChange": "2026-05-26",
       "abstract": "Auto-generated bblock from a csv source.",
       "license": "https://creativecommons.org/licenses/by/4.0/",
       "tags": [
@@ -3177,18 +3680,18 @@
       "shaclShapes": [
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl"
+            "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.api.records.v1.schemas.linkTemplate",
+          "rdfs:seeAlso": "bblocks://ogc.geo.features.feature",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
         },
         {
           "prof:hasArtifact": [
-            "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+            "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.geo.features.feature",
+          "rdfs:seeAlso": "bblocks://ogc.api.records.v1.schemas.linkTemplate",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -3261,10 +3764,25 @@
       "@id": "bblocks://ogc.hosted.iliad.api.features.coverage_information_model"
     },
     {
+      "@id": "bblocks://ogc.hosted.iliad.api.features.emodnet-biology-occurrences"
+    },
+    {
       "@id": "bblocks://ogc.hosted.iliad.api.features.oim-bio-tdwg"
     },
     {
+      "@id": "bblocks://ogc.hosted.iliad.api.features.indicator-quality-requirement"
+    },
+    {
+      "@id": "bblocks://ogc.hosted.iliad.api.features.nina-seapop-catalog"
+    },
+    {
+      "@id": "bblocks://ogc.hosted.iliad.api.features.nina-seapop-source"
+    },
+    {
       "@id": "bblocks://ogc.hosted.iliad.api.features.vertical-datum-reference"
+    },
+    {
+      "@id": "bblocks://ogc.hosted.iliad.api.features.property-relationship"
     },
     {
       "@id": "bblocks://ogc.hosted.iliad.api.features.zarr_array_metadata"
@@ -3291,7 +3809,13 @@
       "@id": "bblocks://ogc.hosted.iliad.api.features.coverageJSONFisheries"
     },
     {
+      "@id": "bblocks://ogc.hosted.iliad.api.features.nina-seapop-oim"
+    },
+    {
       "@id": "bblocks://ogc.hosted.iliad.api.features.marine-protected-area-emodnet"
+    },
+    {
+      "@id": "bblocks://ogc.hosted.iliad.api.features.apkg-record"
     },
     {
       "@id": "bblocks://ogc.hosted.iliad.api.features.oim-obs"
@@ -3301,9 +3825,6 @@
     },
     {
       "@id": "bblocks://ogc.hosted.iliad.api.features.oim"
-    },
-    {
-      "@id": "bblocks://ogc.hosted.iliad.api.features.oim-variables"
     },
     {
       "@id": "bblocks://ogc.hosted.iliad.api.features.oim-coastal-feature"
@@ -3316,9 +3837,6 @@
     },
     {
       "@id": "bblocks://ogc.hosted.iliad.api.features.stac_multidim_data"
-    },
-    {
-      "@id": "bblocks://ogc.hosted.iliad.api.features.odd-protocol"
     },
     {
       "@id": "bblocks://ogc.hosted.iliad.api.features.dynamic-shoreline"

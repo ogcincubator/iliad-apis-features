@@ -9,10 +9,10 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "1.0",
-  "dateOfLastChange": "2026-05-04",
+  "dateOfLastChange": "2026-05-26",
   "dependsOn": [
-    "ogc.hosted.iliad.api.features.oim",
-    "ogc.hosted.iliad.api.features.oim-bio-tdwg"
+    "ogc.hosted.iliad.api.features.oim-bio-tdwg",
+    "ogc.hosted.iliad.api.features.oim"
   ],
   "shaclRules": [],
   "sources": [
@@ -35,11 +35,11 @@
     "ogc.model.cross-domain.sosa": [
       "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
     ],
-    "ogc.skos.concept": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
-    ],
     "ogc.skos.common": [
       "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+    ],
+    "ogc.skos.concept": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
     ]
   },
   "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",
