@@ -9,7 +9,7 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "1.0",
-  "dateOfLastChange": "2026-05-26",
+  "dateOfLastChange": "2026-09-16",
   "dependsOn": [
     "ogc.hosted.iliad.api.features.oim",
     "ogc.hosted.iliad.api.features.oim-bio-tdwg"
@@ -29,17 +29,20 @@
     "project"
   ],
   "shaclShapes": {
+    "ogc.skos.concept": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+    ],
+    "ogc.skos.common": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ],
     "ogc.model.cross-domain.qudt": [
       "http://qudt.org/2.1/schema/shacl/qudt"
     ],
     "ogc.model.cross-domain.sosa": [
       "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
-    ],
-    "ogc.skos.common": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
-    ],
-    "ogc.skos.concept": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
     ]
   },
   "ontology": "https://raw.githubusercontent.com/ILIAD-ocean-twin/OIM/refs/heads/main/extensions/jellyfish.ttl",

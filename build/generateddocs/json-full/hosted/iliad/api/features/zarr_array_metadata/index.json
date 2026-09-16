@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "iliad-apis",
   "version": "0.1",
-  "dateOfLastChange": "2026-05-26",
+  "dateOfLastChange": "2026-09-16",
   "link": "https://github.com/opengeospatial/iliad_apis_features/zarr_array_metadata",
   "sources": [
     {
@@ -52,17 +52,20 @@
           "language": "json",
           "ref": "https://ogcincubator.github.io/iliad-apis-features/_sources/zarr_array_metadata/examples/.zarray",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_array_metadata/example_1_1.json",
+          "sizeBytes": 343,
           "code": "{\n  \"chunks\": [\n      1000,\n      1000\n  ],\n  \"compressor\": {\n      \"id\": \"blosc\",\n      \"cname\": \"lz4\",\n      \"clevel\": 5,\n      \"shuffle\": 1\n  },\n  \"dtype\": \"<f8\",\n  \"fill_value\": \"NaN\",\n  \"filters\": [\n      {\"id\": \"delta\", \"dtype\": \"<f8\", \"astype\": \"<f4\"}\n  ],\n  \"order\": \"C\",\n  \"shape\": [\n      10000,\n      10000\n  ],\n  \"zarr_format\": 2\n}"
         },
         {
           "language": "jsonld",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_array_metadata/example_1_1.jsonld",
+          "sizeBytes": 494,
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/zarr_array_metadata/context.jsonld\",\n  \"chunks\": [\n    1000,\n    1000\n  ],\n  \"compressor\": {\n    \"id\": \"blosc\",\n    \"cname\": \"lz4\",\n    \"clevel\": 5,\n    \"shuffle\": 1\n  },\n  \"dtype\": \"<f8\",\n  \"fill_value\": \"NaN\",\n  \"filters\": [\n    {\n      \"id\": \"delta\",\n      \"dtype\": \"<f8\",\n      \"astype\": \"<f4\"\n    }\n  ],\n  \"order\": \"C\",\n  \"shape\": [\n    10000,\n    10000\n  ],\n  \"zarr_format\": 2\n}"
         },
         {
           "language": "ttl",
           "url": "https://ogcincubator.github.io/iliad-apis-features/build/tests/hosted/iliad/api/features/zarr_array_metadata/example_1_1.ttl",
-          "code": "@prefix ns1: <http:/w3id.org/iliad/zarr/> .\n@prefix ns2: <http:/w3id.org/iliad/zarr/compressor/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] ns1:chunks 1000 ;\n    ns1:compressor [ ns2:clevel 5 ;\n            ns2:cname \"lz4\"^^xsd:string ;\n            ns2:id \"blosc\"^^xsd:string ;\n            ns2:shuffle 1 ] ;\n    ns1:dtype \"<f8\"^^xsd:string ;\n    ns1:fill_value \"NaN\"^^xsd:string ;\n    ns1:filters [ ns2:id \"delta\"^^xsd:string ;\n            ns1:dtype \"<f8\"^^xsd:string ] ;\n    ns1:order \"C\"^^xsd:string ;\n    ns1:shape 10000 ;\n    ns1:zarr_format 2 .\n\n"
+          "sizeBytes": 564,
+          "code": "@prefix ns1: <http:/w3id.org/iliad/zarr/compressor/> .\n@prefix ns2: <http:/w3id.org/iliad/zarr/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] ns2:chunks 1000 ;\n    ns2:compressor [ ns1:clevel 5 ;\n            ns1:cname \"lz4\"^^xsd:string ;\n            ns1:id \"blosc\"^^xsd:string ;\n            ns1:shuffle 1 ] ;\n    ns2:dtype \"<f8\"^^xsd:string ;\n    ns2:fill_value \"NaN\"^^xsd:string ;\n    ns2:filters [ ns1:id \"delta\"^^xsd:string ;\n            ns2:dtype \"<f8\"^^xsd:string ] ;\n    ns2:order \"C\"^^xsd:string ;\n    ns2:shape 10000 ;\n    ns2:zarr_format 2 .\n\n"
         }
       ]
     }

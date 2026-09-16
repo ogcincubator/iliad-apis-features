@@ -1,14 +1,18 @@
 path	@id	schema
-/_anyOf/0/resultTime	http://www.w3.org/ns/sosa/resultTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
-/_anyOf/0/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
-/_anyOf/0/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
+/_anyOf/0/resultTime	http://www.w3.org/ns/sosa/resultTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.yaml
+/_anyOf/0/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.yaml
+/_anyOf/0/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.yaml
+/_anyOf/0/hasUltimateFeatureOfInterest	http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.yaml
+/_anyOf/0/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.yaml
+/_anyOf/0/startTime	http://www.w3.org/ns/sosa/startTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.yaml
+/_anyOf/0/endTime	http://www.w3.org/ns/sosa/endTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.yaml
+/_anyOf/0/hasResult	http://www.w3.org/ns/sosa/hasResult	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.yaml
+/_anyOf/0/result		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.yaml
+/_anyOf/0/result@links		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.yaml
+/_anyOf/0/hasSimpleResult	http://www.w3.org/ns/sosa/hasSimpleResult	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.yaml
+/_anyOf/0/hasInputValue	http://www.w3.org/ns/sosa/hasInputValue	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.yaml
 /_anyOf/0/observedProperty	http://www.w3.org/ns/sosa/observedProperty	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
-/_anyOf/0/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
 /_anyOf/0/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
-/_anyOf/0/hasResult		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
-/_anyOf/0/result		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
-/_anyOf/0/result@links		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
-/_anyOf/0/hasSimpleResult		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
 /_anyOf/0/label	http://www.w3.org/2000/01/rdf-schema#label	https://ogcincubator.github.io/iliad-apis-features/build/annotated/hosted/iliad/api/features/oim-obs/schema.yaml
 /_anyOf/0/sampleSizeValue	https://w3id.org/iliad/property/sampleSizeValue	/github/workspace/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml
 /_anyOf/0/scientificName		/github/workspace/build/annotated/hosted/iliad/api/features/oim-obs-cs/schema.yaml
@@ -222,10 +226,7 @@ path	@id	schema
 /_anyOf/2/numberMatched		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml
 /_anyOf/2/numberReturned		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml
 /_anyOf/2/properties	@nest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observationCollection/schema.yaml
-/_anyOf/2/properties/resultTime	http://www.w3.org/ns/sosa/resultTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml
-/_anyOf/2/properties/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml
-/_anyOf/2/properties/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml
 /_anyOf/2/properties/observedProperty	http://www.w3.org/ns/sosa/observedProperty	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml
-/_anyOf/2/properties/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml
 /_anyOf/2/properties/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml
 /_anyOf/2/properties/hasMember	http://www.w3.org/ns/sosa/hasMember	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml
+/_anyOf/2/features/_oneOf/1/properties	@nest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observationCollection/schema.yaml

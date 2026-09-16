@@ -170,9 +170,12 @@
     "stac_extensions": "stac:hasExtension",
     "assets": {
       "@context": {
+        "@vocab": "https://w3id.org/ogc/stac/assets/",
+        "href": "@id",
         "type": "dct:format",
         "roles": {
-          "@id": "stac:roles",
+          "@id": "stac:hasAssetroles",
+          "@type": "xsd:string",
           "@container": "@set"
         }
       },
@@ -183,6 +186,19 @@
       "@id": "dct:date",
       "@type": "xsd:dateTime"
     },
+    "start_datetime": {
+      "@id": "stac:start_datetime",
+      "@type": "xsd:dateTime"
+    },
+    "end_datetime": {
+      "@id": "stac:end_datetime",
+      "@type": "xsd:dateTime"
+    },
+    "unit": {
+      "@id": "http://qudt.org/schema/qudt/unit",
+      "@type": "@id"
+    },
+    "providers": "stac:hasProvider",
     "stac_version": "stac:version",
     "media_type": "dct:format",
     "extent": "dct:extent",

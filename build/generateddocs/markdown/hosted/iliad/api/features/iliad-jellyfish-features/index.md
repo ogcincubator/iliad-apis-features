@@ -620,7 +620,7 @@ jfsites:19 a sosa:FeatureOfInterest,
     ns1:distanceFromShore "0-200" .
 
 [] a geojson:FeatureCollection ;
-    sosa:hasMember <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>,
+    geojson:features <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e27333>,
         <https://w3id.org/iliad/jellyfish/observation/63dc376df84bda32b6bbf78ed3e279e2> .
 
 
@@ -845,8 +845,16 @@ Links to the schema:
       "@id": "sosa:System",
       "@type": "@id"
     },
+    "actsOn": {
+      "@id": "sosa:actsOn",
+      "@type": "@id"
+    },
     "actsOnProperty": {
       "@id": "sosa:actsOnProperty",
+      "@type": "@id"
+    },
+    "deployedAsset": {
+      "@id": "sosa:deployedAsset",
       "@type": "@id"
     },
     "deployedOnPlatform": {
@@ -862,10 +870,15 @@ Links to the schema:
       "@type": "@id"
     },
     "features": {
-      "@id": "sosa:hasMember",
+      "@id": "geojson:features",
       "@type": "@id",
       "@container": "@set",
       "@context": {
+        "features": {
+          "@container": "@set",
+          "@id": "sosa:hasMember",
+          "@type": "@id"
+        },
         "Prism": {
           "@id": "geojson:Prism",
           "@context": {
@@ -899,7 +912,7 @@ Links to the schema:
       "@type": "@id",
       "@context": {
         "features": {
-          "@id": "geojson:features",
+          "@id": "sosa:hasMember",
           "@type": "@id",
           "@container": "@set"
         }
@@ -917,13 +930,6 @@ Links to the schema:
       "@id": "sosa:hasProperty",
       "@type": "@id"
     },
-    "hasResult": {
-      "@id": "sosa:hasResult",
-      "@type": "@id",
-      "@context": {
-        "stingByJellyFish": "https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish"
-      }
-    },
     "hasResultQuality": {
       "@id": "sosa:hasResultQuality",
       "@type": "@id"
@@ -936,18 +942,10 @@ Links to the schema:
       "@id": "sosa:hasSampledFeature",
       "@type": "@id"
     },
-    "hasSimpleResult": {
-      "@id": "sosa:hasSimpleResult",
-      "@type": "@id"
-    },
     "hasSubSystem": {
       "@id": "sosa:hasSubSystem",
       "@type": "@id",
       "@container": "@set"
-    },
-    "hasUltimateFeatureOfInterest": {
-      "@id": "sosa:hasUltimateFeatureOfInterest",
-      "@type": "@id"
     },
     "hosts": {
       "@id": "sosa:hosts",
@@ -982,6 +980,10 @@ Links to the schema:
       "@id": "sosa:isObservedBy",
       "@type": "@id"
     },
+    "isOriginalSampleOf": {
+      "@id": "sosa:isOriginalSampleOf",
+      "@type": "@id"
+    },
     "isPropertyOf": {
       "@id": "sosa:isPropertyOf",
       "@type": "@id"
@@ -1006,6 +1008,14 @@ Links to the schema:
       "@id": "sosa:isSampleOf",
       "@type": "@id"
     },
+    "isSampleOfUltimateFOI": {
+      "@id": "sosa:isSampleOfUltimateFOI",
+      "@type": "@id"
+    },
+    "isSubSystemOf": {
+      "@id": "sosa:isSubSystemOf",
+      "@type": "@id"
+    },
     "madeActuation": {
       "@id": "sosa:madeActuation",
       "@type": "@id"
@@ -1018,6 +1028,18 @@ Links to the schema:
       "@id": "sosa:madeBySampler",
       "@type": "@id"
     },
+    "madeBySensor": {
+      "@id": "sosa:madeBySensor",
+      "@type": "@id"
+    },
+    "madeBySystem": {
+      "@id": "sosa:madeBySystem",
+      "@type": "@id"
+    },
+    "madeExecution": {
+      "@id": "sosa:madeExecution",
+      "@type": "@id"
+    },
     "madeObservation": {
       "@id": "sosa:madeObservation",
       "@type": "@id"
@@ -1025,6 +1047,13 @@ Links to the schema:
     "madeSampling": {
       "@id": "sosa:madeSampling",
       "@type": "@id"
+    },
+    "observedProperty": {
+      "@id": "sosa:observedProperty",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://w3id.org/iliad/jellyfish/property/"
+      }
     },
     "observes": {
       "@id": "sosa:observes",
@@ -1163,19 +1192,29 @@ Links to the schema:
       "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
     },
-    "observedProperty": {
-      "@context": {
-        "@base": "https://w3id.org/iliad/jellyfish/property/"
-      },
-      "@id": "sosa:observedProperty",
+    "hasUltimateFeatureOfInterest": {
+      "@id": "sosa:hasUltimateFeatureOfInterest",
       "@type": "@id"
     },
     "usedProcedure": {
       "@id": "sosa:usedProcedure",
       "@type": "@id"
     },
-    "madeBySensor": {
-      "@id": "sosa:madeBySensor",
+    "startTime": "sosa:startTime",
+    "endTime": "sosa:endTime",
+    "hasResult": {
+      "@context": {
+        "stingByJellyFish": "https://w3id.org/iliad/oim/ext/jellyfish/stingByJellyFish"
+      },
+      "@id": "sosa:hasResult",
+      "@type": "@id"
+    },
+    "hasSimpleResult": {
+      "@id": "sosa:hasSimpleResult",
+      "@type": "@id"
+    },
+    "hasInputValue": {
+      "@id": "sosa:hasInputValue",
       "@type": "@id"
     },
     "label": {
