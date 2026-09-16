@@ -12,12 +12,12 @@ schema-mapping:
 
 imports:
   - default
-  - https://opengeospatial.github.io/ogcapi-sosa/
-  - https://ogcincubator.github.io/geodcat-ogcapi-records/
-  - https://ogcincubator.github.io/cross-domain-model/
-  - https://ogcincubator.github.io/bblocks-sta/
-  - https://ogcincubator.github.io/bblocks-stac/
-  - https://ogcincubator.github.io/bblocks-openscience/
+  - '@ogc/ogcapi-sosa'
+  - '@ogc/geodcat-ogcapi-records'
+  - '@ogc/cross-domain-model'
+  - '@ogc/sta'
+  - '@ogc/stac'
+  - '@ogc/openscience'
 
 sparql:
   push: http://defs-hosted.opengis.net/fuseki-hosted/data
