@@ -1,4 +1,4 @@
-@prefix apkg: <http://purl.org/apkg#> .
+@prefix apkg: <http://w3id.org/apkg/terms#> .
 @prefix ex: <https://w3id.org/iliad/apkg/examples/> .
 @prefix schema: <http://schema.org/> .
 

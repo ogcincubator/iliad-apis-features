@@ -6,7 +6,7 @@
     "dcat":     "http://www.w3.org/ns/dcat#",
     "time":     "http://www.w3.org/2006/time#",
     "schema":   "https://schema.org/",
-    "apkg":     "http://purl.org/apkg/terms/",
+    "apkg":     "http://w3id.org/apkg/terms#",
     "cwl":      "https://w3id.org/cwl/cwl#",
     "class":    "dct:type",
     "cwltool":  "http://commonwl.org/cwltool#",

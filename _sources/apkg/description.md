@@ -10,4 +10,4 @@ It models:
 - temporal coverage and spatial geometry
 - distribution links and secret input declarations
 
-The ontology and SHACL constraints in this block are aligned as closely as possible to the upstream `terms/apkg-ms.ttl` vocabulary, while reusing standard RDF properties already referenced by that profile.
+This block does not define its own ontology. It reuses the upstream APKG vocabulary (`terms/apkg-ms.ttl`, namespace `http://w3id.org/apkg/terms#`) together with standard schema.org, Dublin Core, DCAT and OWL-Time properties, and adds SHACL constraints on top of it.

@@ -6,7 +6,7 @@
   "itemClass": "model",
   "register": "ogc-incubator",
   "version": "1.0",
-  "dateOfLastChange": "2026-04-28",
+  "dateOfLastChange": "2026-11-24",
   "dependsOn": [],
   "shaclRules": [
     "rules.shacl"
@@ -27,8 +27,8 @@
   ],
   "vocabularies": [
     {
-      "title": "APKG metadata terms Turtle",
-      "url": "https://raw.githubusercontent.com/ILIAD-ocean-twin/APKG/main/terms/apkg-ms.ttl",
+      "title": "APKG metadata terms Turtle (namespace http://w3id.org/apkg/terms#)",
+      "url": "https://raw.githubusercontent.com/ILIAD-ocean-twin/APKG/7ac4239fe2628612c144128e52d69181324739ef/terms/apkg-ms.ttl",
       "format": "text/turtle",
       "role": "authoritative"
     }
